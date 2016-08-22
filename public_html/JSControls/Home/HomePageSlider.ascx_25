@@ -1,0 +1,22 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HomePageSlider.ascx.cs" EnableViewState="false" Inherits="JSControls_Home_HomePageSlider" %>
+
+
+<div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="demo">
+        <div class="item">
+            <ul id="image-gallery" class="gallery list-unstyled cS-hidden clearfix">               
+                <asp:Repeater ID="rptHomeSlide" runat="server">
+                     <ItemTemplate>
+                    <li data-thumb="" class="team-grids"><a  href='<%#Eval("RedirectLink")%>'>
+                        <img alt='<%#Eval("ImageAlternateText")%>' title='<%#Eval("Title")%>' class="facility_slidr"  src='<%#Eval("ImageUrl")%>'/>
+                        <div class="captn">
+                            <h4><%#Eval("Title")%></h4>
+                            <button class="btn know_more">KNOW MORE ></button>
+                        </div>
+                    </a></li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+    </div>
+</div>

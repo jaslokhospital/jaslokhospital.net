@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="secGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="plImageWidth.Text" xml:space="preserve">
+    <value>Image Width</value>
+  </data>
+  <data name="plImageWidth.Help" xml:space="preserve">
+    <value>Set article image width(px),it works when "Force image width" option is checked.</value>
+  </data>
+  <data name="plListTemplate.Text" xml:space="preserve">
+    <value>List Template </value>
+  </data>
+  <data name="plListTemplate.Help" xml:space="preserve">
+    <value>Select which template is used to display article list</value>
+  </data>
+  <data name="plShowImageOnly.Text" xml:space="preserve">
+    <value>Records with image only</value>
+  </data>
+  <data name="plShowImageOnly.Help" xml:space="preserve">
+    <value>Check to only show articles which has image specified</value>
+  </data>
+  <data name="plShowImage.Text" xml:space="preserve">
+    <value>Show article image</value>
+  </data>
+  <data name="plShowImage.Help" xml:space="preserve">
+    <value>show article image in list</value>
+  </data>
+  <data name="plMoreArticlesLink.Help" xml:space="preserve">
+    <value>Select link page when more articles link clicked.</value>
+  </data>
+  <data name="plCategory.Help" xml:space="preserve">
+    <value>Specifies the categories from which articles are displayed. Select "All" to display articles from all categories,select "customize" to display articles from certain categories.</value>
+  </data>
+  <data name="plMoreArticlesLink.Text" xml:space="preserve">
+    <value>More articles link</value>
+  </data>
+  <data name="plFeatured.Text" xml:space="preserve">
+    <value>Featured articles only</value>
+  </data>
+  <data name="plFeatured.Help" xml:space="preserve">
+    <value>Check to display only Articles for which the featured checkbox has been checked</value>
+  </data>
+  <data name="plMoreArticlesText.Help" xml:space="preserve">
+    <value>Enter the text you want displayed for the More Articles Link (e.g. Archived Articles, ...)</value>
+  </data>
+  <data name="plCategory.Text" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="plPaging.Text" xml:space="preserve">
+    <value>Paging</value>
+  </data>
+  <data name="plPaging.Help" xml:space="preserve">
+    <value>Display paging navigation</value>
+  </data>
+  <data name="plRowCount.Text" xml:space="preserve">
+    <value>Rows per page</value>
+  </data>
+  <data name="plRowCount.Help" xml:space="preserve">
+    <value>Rows per page</value>
+  </data>
+  <data name="plColCount.Text" xml:space="preserve">
+    <value>Columns per row</value>
+  </data>
+  <data name="plColCount.Help" xml:space="preserve">
+    <value>Columns per row</value>
+  </data>
+  <data name="plPageSpan.Text" xml:space="preserve">
+    <value>Paging navigate span</value>
+  </data>
+  <data name="plPageSpan.Help" xml:space="preserve">
+    <value>Paging navigate span</value>
+  </data>
+  <data name="plRoll.Text" xml:space="preserve">
+    <value>Roll</value>
+  </data>
+  <data name="plRoll.Help" xml:space="preserve">
+    <value>Roll</value>
+  </data>
+  <data name="plMarHeight.Text" xml:space="preserve">
+    <value>Marquee Height</value>
+  </data>
+  <data name="plMarHeight.Help" xml:space="preserve">
+    <value>Marquee Height</value>
+  </data>
+  <data name="plScrollAmount.Text" xml:space="preserve">
+    <value>Scroll Amount</value>
+  </data>
+  <data name="plScrollAmount.Help" xml:space="preserve">
+    <value>Set Scroll Amount,high value reprent high speed</value>
+  </data>
+  <data name="plDirection.Text" xml:space="preserve">
+    <value>Roll Directiont</value>
+  </data>
+  <data name="plDirection.Help" xml:space="preserve">
+    <value>Roll Directiont</value>
+  </data>
+  <data name="li_Direction_Up.Text" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="li_Direction_Down.Text" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="li_Direction_Left.Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="li_Direction_Right.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="plMoreArticles.Text" xml:space="preserve">
+    <value>Display more articles link</value>
+  </data>
+  <data name="plMoreArticlesText.Text" xml:space="preserve">
+    <value>More articles text</value>
+  </data>
+  <data name="plShowSearch.Help" xml:space="preserve">
+    <value>Check to display the search box at the top of the article list.</value>
+  </data>
+  <data name="plShowSearch.Text" xml:space="preserve">
+    <value>Show Search</value>
+  </data>
+  <data name="plShowTitle.Text" xml:space="preserve">
+    <value>Show Title</value>
+  </data>
+  <data name="plShowTitle.Help" xml:space="preserve">
+    <value>Check to show article title</value>
+  </data>
+  <data name="li_SortField_CreationDate.Text" xml:space="preserve">
+    <value>Creation Date</value>
+  </data>
+  <data name="li_SortField_PublishDate.Text" xml:space="preserve">
+    <value>Publish Date</value>
+  </data>
+  <data name="li_SortField_LastModifiedDate.Text" xml:space="preserve">
+    <value>Last modified date</value>
+  </data>
+  <data name="li_SortField_Views.Text" xml:space="preserve">
+    <value>Views</value>
+  </data>
+  <data name="plSortField.Text" xml:space="preserve">
+    <value>Sort By</value>
+  </data>
+  <data name="plSortField.Help" xml:space="preserve">
+    <value>Sort Fields</value>
+  </data>
+  <data name="plMoreArticles.Help" xml:space="preserve">
+    <value>Check to display a "more articles" link at the bottom of the articles list. The link will link go to  the page specified in the "more articles link".</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Article List Settings</value>
+  </data>
+  <data name="secCategory.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="secImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="secPaging.Text" xml:space="preserve">
+    <value>Paging</value>
+  </data>
+  <data name="secRoll.Text" xml:space="preserve">
+    <value>Roll</value>
+  </data>
+  <data name="secContent.Text" xml:space="preserve">
+    <value>Display Content</value>
+  </data>
+  <data name="secMoreArticles.Text" xml:space="preserve">
+    <value>More Articles</value>
+  </data>
+  <data name="plLinkTarget.Text" xml:space="preserve">
+    <value>Link Target</value>
+  </data>
+  <data name="plLinkTarget.Help" xml:space="preserve">
+    <value>Set how to display article detail.</value>
+  </data>
+  <data name="li_LinkTarget_Blank.Text" xml:space="preserve">
+    <value>_Blank (New Page)</value>
+  </data>
+  <data name="li_LinkTarget_Self.Text" xml:space="preserve">
+    <value>_Self (Same Page)</value>
+  </data>
+  <data name="li_ListStyle_Freeform.Text" xml:space="preserve">
+    <value>Freeform</value>
+  </data>
+  <data name="li_ListStyle_Grid.Text" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="li_ListStyle_List.Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="plListType.Help" xml:space="preserve">
+    <value>Select article list style</value>
+  </data>
+  <data name="plListType.Text" xml:space="preserve">
+    <value>List Style</value>
+  </data>
+  <data name="plShowCreatedDate.Text" xml:space="preserve">
+    <value>Show created date</value>
+  </data>
+  <data name="plShowFeaturedField.Text" xml:space="preserve">
+    <value>Show featured status</value>
+  </data>
+  <data name="plShowViews.Text" xml:space="preserve">
+    <value>Show Views</value>
+  </data>
+  <data name="chkForceImageHeight.Text" xml:space="preserve">
+    <value>Force Image Height</value>
+  </data>
+  <data name="chkForceImageWidth.Text" xml:space="preserve">
+    <value>Force Image Width</value>
+  </data>
+  <data name="plImageHeight.Help" xml:space="preserve">
+    <value>Set article image height(px),it works when "Force image height" option is checked.</value>
+  </data>
+  <data name="plImageHeight.Text" xml:space="preserve">
+    <value>Image Height</value>
+  </data>
+  <data name="plUseLightBoxEffect.Help" xml:space="preserve">
+    <value>When click small image ,Popup the big image instead of open new window using the light box effect.</value>
+  </data>
+  <data name="plUseLightBoxEffect.Text" xml:space="preserve">
+    <value>Light box effect popup</value>
+  </data>
+  <data name="plShowUserName.Help" xml:space="preserve">
+    <value>Check to show create user name in article list</value>
+  </data>
+  <data name="plShowUserName.Text" xml:space="preserve">
+    <value>Show user name</value>
+  </data>
+  <data name="plShowAuthor.Help" xml:space="preserve">
+    <value>Check to show article author in list</value>
+  </data>
+  <data name="plShowAuthor.Text" xml:space="preserve">
+    <value>Show Author</value>
+  </data>
+  <data name="plShowSummary.Help" xml:space="preserve">
+    <value>Check to show summary in article list</value>
+  </data>
+  <data name="plShowSummary.Text" xml:space="preserve">
+    <value>Show Summary</value>
+  </data>
+  <data name="MustBeInteger.Text" xml:space="preserve">
+    <value>Value must be integer</value>
+  </data>
+  <data name="plShowCreatedDate.Help" xml:space="preserve">
+    <value>Show article created date</value>
+  </data>
+  <data name="plShowFeaturedField.Help" xml:space="preserve">
+    <value>Show article featured status</value>
+  </data>
+  <data name="plShowViews.Help" xml:space="preserve">
+    <value>Show number of views in list</value>
+  </data>
+  <data name="Required.Text" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="plShowSource.Help" xml:space="preserve">
+    <value>Show article source in list</value>
+  </data>
+  <data name="plShowSource.Text" xml:space="preserve">
+    <value>Show Source</value>
+  </data>
+  <data name="plRatingImage.Help" xml:space="preserve">
+    <value>Choose rating image.</value>
+  </data>
+  <data name="plRatingImage.Text" xml:space="preserve">
+    <value>Rating Image</value>
+  </data>
+  <data name="plShowRating.Help" xml:space="preserve">
+    <value>Show article rating result.</value>
+  </data>
+  <data name="plShowRating.Text" xml:space="preserve">
+    <value>Show Rating</value>
+  </data>
+  <data name="MoreArticles.Text" xml:space="preserve">
+    <value>More..</value>
+  </data>
+  <data name="plShowPageInfo.Help" xml:space="preserve">
+    <value>Check this option to show paging detail information(like record counts,page size,page count,page counts.</value>
+  </data>
+  <data name="plShowPageInfo.Text" xml:space="preserve">
+    <value>Show page info</value>
+  </data>
+  <data name="plDetailTab.Help" xml:space="preserve">
+    <value>Select which page to display article detail,that page should have a CrossArticle_Detail module instance on it.If you don't specify it,module will use the default detail tab to display.</value>
+  </data>
+  <data name="plDetailTab.Text" xml:space="preserve">
+    <value>Article detail page</value>
+  </data>
+  <data name="li_Category_All.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="li_Category_Customize.Text" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="plShowRecommend.Help" xml:space="preserve">
+    <value>Show recommend information in list.</value>
+  </data>
+  <data name="plShowRecommend.Text" xml:space="preserve">
+    <value>Show Recommend</value>
+  </data>
+  <data name="plSummaryLength.Help" xml:space="preserve">
+    <value>Enter sumary length while display,enter 0 to display full summary.</value>
+  </data>
+  <data name="plSummaryLength.Text" xml:space="preserve">
+    <value>Summary Length</value>
+  </data>
+  <data name="plAcceptSearchParm.Help" xml:space="preserve">
+    <value>Select whether to response url parameter like ArticleSearchTerm/ArticleCategoryId/ArticleTagId.For example,if this option is checked and user pass a "ArticleSearchTerm" like http://www.dnnmodules.cn/tabid/23/default.aspx?ArticleSearchTerm=dnn. Then module will display article list which title contains "dnn".</value>
+  </data>
+  <data name="plAcceptSearchParm.Text" xml:space="preserve">
+    <value>Accept search parm</value>
+  </data>
+  <data name="plTitleLength.Help" xml:space="preserve">
+    <value>Enter article title length while display,enter 0 to display full title.</value>
+  </data>
+  <data name="plTitleLength.Text" xml:space="preserve">
+    <value>Title Length</value>
+  </data>
+  <data name="plPrefixImage.Help" xml:space="preserve">
+    <value>Prefix image locates under Desktopmodules/CrossArticle/Images/Prefix folder,you can upload your own prefix image under it.</value>
+  </data>
+  <data name="plPrefixImage.Text" xml:space="preserve">
+    <value>Prefix Image</value>
+  </data>
+  <data name="plShowPrefixImage.Help" xml:space="preserve">
+    <value>Check to show prefix image before article title.</value>
+  </data>
+  <data name="plShowPrefixImage.Text" xml:space="preserve">
+    <value>Show prefix image</value>
+  </data>
+  <data name="plDisplayRss.Help" xml:space="preserve">
+    <value>Display rss link below artilce list.</value>
+  </data>
+  <data name="plDisplayRss.Text" xml:space="preserve">
+    <value>Display Rss</value>
+  </data>
+  <data name="plRssItemCounts.Help" xml:space="preserve">
+    <value>Enter how many items are displayed to rss feeds</value>
+  </data>
+  <data name="plRssItemCounts.Text" xml:space="preserve">
+    <value>Rss item counts</value>
+  </data>
+  <data name="secRss.Text" xml:space="preserve">
+    <value>Rss</value>
+  </data>
+</root>

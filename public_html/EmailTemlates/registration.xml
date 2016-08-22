@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Successfully registered on Jaslok</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    Hi [Username], <br/><br/>
+    Thanks for regirstering with Jaslok.<br/><br/>
+    Thanks,<br/>
+    Jaslok
+    ]]>
+  </content>
+</emailcontent>

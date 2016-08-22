@@ -1,0 +1,1080 @@
+2016-04-30 00:11:54,884 [JaslokHo19521][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 00:53:25,763 [JaslokHo19521][Thread:27][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 00:55:51,436 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 03:19:57,859 [JaslokHo19521][Thread:33][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 04:37:53,633 [JaslokHo19521][Thread:15][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: f690af3f60fb42e023582934b8670ef2 ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:34:33,569 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 06:36:38,585 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: b89742c0e718529668510be907a4762d ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:36:38,616 [JaslokHo19521][Thread:11][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: 3a5b0e9732341ee5d1528db53503ee57 ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:36:38,632 [JaslokHo19521][Thread:12][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: dce1aec4f8ec5f71f9b1946a493b5ffe ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:36:43,991 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: 3a5b0e9732341ee5d1528db53503ee57 ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:36:43,991 [JaslokHo19521][Thread:11][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: dce1aec4f8ec5f71f9b1946a493b5ffe ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:36:44,007 [JaslokHo19521][Thread:12][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: b89742c0e718529668510be907a4762d ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 06:42:27,804 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 07:08:54,870 [JaslokHo19521][Thread:20][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 07:09:57,339 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 07:10:35,370 [JaslokHo19521][Thread:21][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path, Boolean checkAdditional)
+   at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+   at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+   at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String path)
+   at System.Web.HttpRequest.get_PhysicalPath()
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForInstall(HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.RewriteUrl(Object sender, EventArgs e)
+2016-04-30 07:10:35,417 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.Handle404OrException(FriendlyUrlSettings settings, HttpContext context, Exception ex, UrlAction result, Boolean transfer, Boolean showDebug)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.RewriteUrl(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 08:35:06,880 [JaslokHo19521][Thread:27][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): This is an invalid script resource request.
+   at System.Web.Handlers.ScriptResourceHandler.ProcessRequest(HttpContextBase context, VirtualFileReader fileReader, Action`2 logAction, Boolean validatePath)
+   at System.Web.Handlers.ScriptResourceHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 09:10:54,509 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 09:17:41,401 [JaslokHo19521][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 09:19:57,854 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 09:20:47,276 [JaslokHo19521][Thread:18][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 60.243.108.182
+	Port: 46939
+	Referer: http://jaslokhospital.net/fix-appointment/ajit-desai/236
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G920I Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.89 Mobile Safari/537.36
+	ViewState: TZIuT2tdNLY/qCGNSZvzwpKUGRQIkxSSNyYTtU8pKjMX6zV8E2vHYMe9Xwa/w8zNDxj8YjBO6nMlLk9KAdX9ohnZCd9g6iYjJgSsJPmNPQYKaJZ6gTnrHvHm1EVxlXRDK8a/25jgO7fAVpQAWT7bZvjFfGt3Xq4tvFKKFNvw3VhJlXV3OFFsSh/4itKtfqzEc7s/Ocgz52p2QTo+O9NCwhLQb0aJSMvCAyUX/+CHQE+2m7eTeAP2tZX61SI8wlPidQaMW7K/X43bnUcSMnTWh4t5Bbby91Xk8ZY3+dfyoc24gT9bCQE7ywAj6o9nBaUhmu6o8q/B318X3P+9n0jxwbR1oS688qrwPjGWzngzQsRlXy4gXsfKugAhS7gMgIgrH1ECo+ZGqNvlkCDfpPQJJIyLBQPy+zoWnq/lpeQdZYSYb6nenChO4fGZUGlPrn6NzFg4N3lhKSrmDrXmaMJ9ye2eVaJeVLrwtu49nAIUv+woBxGlm+DLMJ9uY8AhQwed3PzngK37G1MRIP4uLZIaWT3gyNV0f2ckCbVZwWSWnWVW3J3rdry34iBMof8tOWnPkOKLgJq0JLbsUozdJODifILHLgsx2VqHwVNRiuvkAALp89/DHBXA8EewExwiGsY8Dxnw6a1m9I0ALT3Ez2MUi7zZUCtzOkiOq+miqfJmRf0iC4I7ADRmTqzJCxr0RNwjMeP1tD0/Vu1MNR7Hr70... ---> System.Web.HttpException: The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 60.243.108.182
+	Port: 46939
+	Referer: http://jaslokhospital.net/fix-appointment/ajit-desai/236
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G920I Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.89 Mobile Safari/537.36
+	ViewState: TZIuT2tdNLY/qCGNSZvzwpKUGRQIkxSSNyYTtU8pKjMX6zV8E2vHYMe9Xwa/w8zNDxj8YjBO6nMlLk9KAdX9ohnZCd9g6iYjJgSsJPmNPQYKaJZ6gTnrHvHm1EVxlXRDK8a/25jgO7fAVpQAWT7bZvjFfGt3Xq4tvFKKFNvw3VhJlXV3OFFsSh/4itKtfqzEc7s/Ocgz52p2QTo+O9NCwhLQb0aJSMvCAyUX/+CHQE+2m7eTeAP2tZX61SI8wlPidQaMW7K/X43bnUcSMnTWh4t5Bbby91Xk8ZY3+dfyoc24gT9bCQE7ywAj6o9nBaUhmu6o8q/B318X3P+9n0jxwbR1oS688qrwPjGWzngzQsRlXy4gXsfKugAhS7gMgIgrH1ECo+ZGqNvlkCDfpPQJJIyLBQPy+zoWnq/lpeQdZYSYb6nenChO4fGZUGlPrn6NzFg4N3lhKSrmDrXmaMJ9ye2eVaJeVLrwtu49nAIUv+woBxGlm+DLMJ9uY8AhQwed3PzngK37G1MRIP4uLZIaWT3gyNV0f2ckCbVZwWSWnWVW3J3rdry34iBMof8tOWnPkOKLgJq0JLbsUozdJODifILHLgsx2VqHwVNRiuvkAALp89/DHBXA8EewExwiGsY8Dxnw6a1m9I0ALT3Ez2MUi7zZUCtzOkiOq+miqfJmRf0iC4I7ADRmTqzJCxr0RNwjMeP1tD0/Vu1MNR7Hr70...
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 09:20:47,292 [JaslokHo19521][Thread:18][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=120&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 60.243.108.182
+	Port: 46939
+	Referer: http://jaslokhospital.net/fix-appointment/ajit-desai/236
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G920I Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.89 Mobile Safari/537.36
+	ViewState: TZIuT2tdNLY/qCGNSZvzwpKUGRQIkxSSNyYTtU8pKjMX6zV8E2vHYMe9Xwa/w8zNDxj8YjBO6nMlLk9KAdX9ohnZCd9g6iYjJgSsJPmNPQYKaJZ6gTnrHvHm1EVxlXRDK8a/25jgO7fAVpQAWT7bZvjFfGt3Xq4tvFKKFNvw3VhJlXV3OFFsSh/4itKtfqzEc7s/Ocgz52p2QTo+O9NCwhLQb0aJSMvCAyUX/+CHQE+2m7eTeAP2tZX61SI8wlPidQaMW7K/X43bnUcSMnTWh4t5Bbby91Xk8ZY3+dfyoc24gT9bCQE7ywAj6o9nBaUhmu6o8q/B318X3P+9n0jxwbR1oS688qrwPjGWzngzQsRlXy4gXsfKugAhS7gMgIgrH1ECo+ZGqNvlkCDfpPQJJIyLBQPy+zoWnq/lpeQdZYSYb6nenChO4fGZUGlPrn6NzFg4N3lhKSrmDrXmaMJ9ye2eVaJeVLrwtu49nAIUv+woBxGlm+DLMJ9uY8AhQwed3PzngK37G1MRIP4uLZIaWT3gyNV0f2ckCbVZwWSWnWVW3J3rdry34iBMof8tOWnPkOKLgJq0JLbsUozdJODifILHLgsx2VqHwVNRiuvkAALp89/DHBXA8EewExwiGsY8Dxnw6a1m9I0ALT3Ez2MUi7zZUCtzOkiOq+miqfJmRf0iC4I7ADRmTqzJCxr0RNwjMeP1tD0/Vu1MNR7Hr70... ---> System.Web.HttpException: The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 60.243.108.182
+	Port: 46939
+	Referer: http://jaslokhospital.net/fix-appointment/ajit-desai/236
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G920I Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.89 Mobile Safari/537.36
+	ViewState: TZIuT2tdNLY/qCGNSZvzwpKUGRQIkxSSNyYTtU8pKjMX6zV8E2vHYMe9Xwa/w8zNDxj8YjBO6nMlLk9KAdX9ohnZCd9g6iYjJgSsJPmNPQYKaJZ6gTnrHvHm1EVxlXRDK8a/25jgO7fAVpQAWT7bZvjFfGt3Xq4tvFKKFNvw3VhJlXV3OFFsSh/4itKtfqzEc7s/Ocgz52p2QTo+O9NCwhLQb0aJSMvCAyUX/+CHQE+2m7eTeAP2tZX61SI8wlPidQaMW7K/X43bnUcSMnTWh4t5Bbby91Xk8ZY3+dfyoc24gT9bCQE7ywAj6o9nBaUhmu6o8q/B318X3P+9n0jxwbR1oS688qrwPjGWzngzQsRlXy4gXsfKugAhS7gMgIgrH1ECo+ZGqNvlkCDfpPQJJIyLBQPy+zoWnq/lpeQdZYSYb6nenChO4fGZUGlPrn6NzFg4N3lhKSrmDrXmaMJ9ye2eVaJeVLrwtu49nAIUv+woBxGlm+DLMJ9uY8AhQwed3PzngK37G1MRIP4uLZIaWT3gyNV0f2ckCbVZwWSWnWVW3J3rdry34iBMof8tOWnPkOKLgJq0JLbsUozdJODifILHLgsx2VqHwVNRiuvkAALp89/DHBXA8EewExwiGsY8Dxnw6a1m9I0ALT3Ez2MUi7zZUCtzOkiOq+miqfJmRf0iC4I7ADRmTqzJCxr0RNwjMeP1tD0/Vu1MNR7Hr70...
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 09:26:05,480 [JaslokHo19521][Thread:23][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.UnauthorizedAccessException: Access to the path 'E:\websites\jaslokhospital.net\App_Data\Search\write.lock' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalDelete(String path, Boolean checkHost)
+   at DotNetNuke.Services.Search.Internals.LuceneControllerImpl.get_Writer()
+   at DotNetNuke.Services.Search.Internals.LuceneControllerImpl.Delete(Query query)
+   at DotNetNuke.Services.Search.UserIndexer.PerformDelete(Int32 portalId, String keyword)
+   at DotNetNuke.Services.Search.UserIndexer.DeleteDocuments(Int32 portalId, IList`1 usersList)
+   at DotNetNuke.Services.Search.UserIndexer.GetSearchDocuments(Int32 portalId, DateTime startDateLocal)
+2016-04-30 09:26:05,542 [JaslokHo19521][Thread:23][ERROR] DotNetNuke.Services.Search.Internals.LuceneControllerImpl - Search Document error: Portal ID: 0, Tab ID: 0, Module ID: 0, Mod. Def.ID: 0, Url: , Unique Key: 52_allusers, Last Modified: 2016-04-30T03:55:17.9800000Z, Culture: , Search Type: 3
+System.UnauthorizedAccessException: Access to the path 'E:\websites\jaslokhospital.net\App_Data\Search\write.lock' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalDelete(String path, Boolean checkHost)
+   at DotNetNuke.Services.Search.Internals.LuceneControllerImpl.get_Writer()
+   at DotNetNuke.Services.Search.Internals.LuceneControllerImpl.Delete(Query query)
+   at DotNetNuke.Services.Search.Internals.InternalSearchControllerImpl.DeleteSearchDocumentInternal(SearchDocument searchDocument, Boolean autoCommit)
+   at DotNetNuke.Services.Search.Internals.InternalSearchControllerImpl.AddSearchDocumentInternal(SearchDocument searchDocument, Boolean autoCommit)
+   at DotNetNuke.Services.Search.Internals.InternalSearchControllerImpl.AddSearchDocuments(IEnumerable`1 searchDocuments)
+2016-04-30 09:26:05,542 [JaslokHo19521][Thread:23][ERROR] DotNetNuke.Services.Search.Internals.LuceneControllerImpl - Search Document error: Portal ID: 0, Tab ID: 0, Module ID: 0, Mod. Def.ID: 0, Url: , Unique Key: 52_adminonly, Last Modified: 2016-04-30T03:55:17.9800000Z, Culture: , Search Type: 3
+System.UnauthorizedAccessException: Access to the path 'E:\websites\jaslokhospital.net\App_Data\Search\write.lock' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalDelete(String path, Boolean checkHost)
+   at DotNetNuke.Services.Search.Internals.LuceneControllerImpl.get_Writer()
+   at DotNetNuke.Services.Search.Internals.LuceneControllerImpl.Delete(Query query)
+   at DotNetNuke.Services.Search.Internals.InternalSearchControllerImpl.DeleteSearchDocumentInternal(SearchDocument searchDocument, Boolean autoCommit)
+   at DotNetNuke.Services.Search.Internals.InternalSearchControllerImpl.AddSearchDocumentInternal(SearchDocument searchDocument, Boolean autoCommit)
+   at DotNetNuke.Services.Search.Internals.InternalSearchControllerImpl.AddSearchDocuments(IEnumerable`1 searchDocuments)
+2016-04-30 09:36:47,059 [JaslokHo19521][Thread:30][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 09:42:48,060 [JaslokHo19521][Thread:14][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 09:45:47,576 [JaslokHo19521][Thread:28][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 09:57:36,858 [JaslokHo19521][Thread:20][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 70.39.157.197
+	Port: 1815
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: ep/OSTpUCoSIQJA mayY4LkqC7DbxHOFTIe2cclDnd7IR67DuQOgg pqdh0xyVkodCn4Ph2fIgbjvnle6jh4vwE5xYowVmLocEAyTzGozBucxD4jIsgCezh6lIAk694oLZC98H AAyd0OOZr1Qiv1j74dp0BMMKwbN7ji5HzrCwIus2KMJltJ3SMPuNSakMZ5UqteFopApi3zVLWh2WY18NbaGIGVrDJpLFQZL3WrYmuo/cN4lJ1bhjvBSLN4G0DehQa8x0rPIdZTQ9WyTEX1mXwVxMPWTe/O3usA /ketdQaK19q3sZ73Hay7EA8 UxVl5v NU8hh3w LdmL0LZ19qN0idygEahssRWulx/1r3E4JQSOwDO89SUyO8ewHdnpFxpPeL42n0kI/Am2bVUGRarSuO2FBiG0G3DqQuSxpbop A35lAIripsIonlI7HFek0tL3wPoOxYtCqkl87mZcpUOxA8qSrVNFG3UdDl1TKgG3uNkzhYnaxKBnby1TcTVIUop9CWqs/vZvudK9R6Wa1aQ1fm9DhY87SkXLwQhxGwrLbGtUIyWDM7Kibp82pcZyrWLzJTrRFxTE8A YddRHJVdFdxSs2qIcC0Dgcd/zCS2 dVOyRqKPYvDPMBV9oweYw8jRiKLtzzfgu1Ab1EKv4qT6fixRahO3Lgzf/R6K7TFfghLPoc xVUG CwCYkp3/AxGWZp45CzYARQdW5f06wHiZEMVt3ZpdXNRHfnJ61Bsz7prw545hO6YhYdlj8wIFUrD1AhpgztwEFoPezWVGSZaCqZXJAwyrs 6sU9Nafi50G/4njdERitGjSi053ne7VbD5OmzpWyihEM... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 09:57:36,858 [JaslokHo19521][Thread:20][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 70.39.157.197
+	Port: 1815
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: ep/OSTpUCoSIQJA mayY4LkqC7DbxHOFTIe2cclDnd7IR67DuQOgg pqdh0xyVkodCn4Ph2fIgbjvnle6jh4vwE5xYowVmLocEAyTzGozBucxD4jIsgCezh6lIAk694oLZC98H AAyd0OOZr1Qiv1j74dp0BMMKwbN7ji5HzrCwIus2KMJltJ3SMPuNSakMZ5UqteFopApi3zVLWh2WY18NbaGIGVrDJpLFQZL3WrYmuo/cN4lJ1bhjvBSLN4G0DehQa8x0rPIdZTQ9WyTEX1mXwVxMPWTe/O3usA /ketdQaK19q3sZ73Hay7EA8 UxVl5v NU8hh3w LdmL0LZ19qN0idygEahssRWulx/1r3E4JQSOwDO89SUyO8ewHdnpFxpPeL42n0kI/Am2bVUGRarSuO2FBiG0G3DqQuSxpbop A35lAIripsIonlI7HFek0tL3wPoOxYtCqkl87mZcpUOxA8qSrVNFG3UdDl1TKgG3uNkzhYnaxKBnby1TcTVIUop9CWqs/vZvudK9R6Wa1aQ1fm9DhY87SkXLwQhxGwrLbGtUIyWDM7Kibp82pcZyrWLzJTrRFxTE8A YddRHJVdFdxSs2qIcC0Dgcd/zCS2 dVOyRqKPYvDPMBV9oweYw8jRiKLtzzfgu1Ab1EKv4qT6fixRahO3Lgzf/R6K7TFfghLPoc xVUG CwCYkp3/AxGWZp45CzYARQdW5f06wHiZEMVt3ZpdXNRHfnJ61Bsz7prw545hO6YhYdlj8wIFUrD1AhpgztwEFoPezWVGSZaCqZXJAwyrs 6sU9Nafi50G/4njdERitGjSi053ne7VbD5OmzpWyihEM... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 09:57:45,077 [JaslokHo19521][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 70.39.157.197
+	Port: 1815
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: yIKS4T0FQInEtcf1gAhyEVM/VjjksAZ0ZkOYzhhhHrY/Wus2JrDE1uiYA5wKNP0WOefRrhLnLLHgNnd0k96qvEAynIiuomDtLEui3T3XWoJV/dn 7D4/QJBu2MitdHywXmRVT2Ld8SEjM9Hwz/nV4daQbvbwsZWXXSbQ4RrIMHpsBgjy/3m6awGjN9rEkUTTmVFITpwdBvA7YO3H3TlQbmSwzgWYnf4ClvykKJw0mauuD8PZCIWBwl2NuzsKbniuRF613F IQ6Dc9UzqcsWpwqFV8aHMFynHbZjH/ymLe a C3cOEYw6i00j2hp8TdmPq8DBL8jsMfT9OL3/adFYgPEgAM5wAh2G7CIFvxk9 4I0lgdEyXr5B2GgyqvZvbdBOugoVrY81V/dQ32uOytVvaZ AmvZ1ypADrJCFue 4i gvcHxz0lnshkcBrVFoBNIBFDubZRPMwHV1MpZ5BdveJW3s5dI95vR1LXbH8CSXoLOfgNbkik1sMaNdsnDxRdBomZFOUZ7MYik3B1D9Usqc2HD8VDNVSJQHSyQ30lxNO5DmBHpMQs4dp07E03lvHdA7J2qa51LXwBfp 9UX5NHn/ORgFrh5p cVd//a6CvA4ygG0fMMVVdZhkk8Fd4yLi661vKmX4YO2pvhCvirf0cEKiTypgRZlteiP7edKs eVBVH6t/iDOCgIK2QswBJZgayNNTn67e6vpd9jAjxa5j9nTWHARYQfv Ui4otlsSAKIoFfh2JqZ5Ze2bawQGS7krF61HRIpA2BFOeQs/BO/SzhkBVq2A0cViJkuHvNtg2ATFexpUnHQwAUEd6YTxkvQ q/HJuPQXL4u6reuh... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 09:57:45,077 [JaslokHo19521][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=terminate
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 70.39.157.197
+	Port: 1815
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: yIKS4T0FQInEtcf1gAhyEVM/VjjksAZ0ZkOYzhhhHrY/Wus2JrDE1uiYA5wKNP0WOefRrhLnLLHgNnd0k96qvEAynIiuomDtLEui3T3XWoJV/dn 7D4/QJBu2MitdHywXmRVT2Ld8SEjM9Hwz/nV4daQbvbwsZWXXSbQ4RrIMHpsBgjy/3m6awGjN9rEkUTTmVFITpwdBvA7YO3H3TlQbmSwzgWYnf4ClvykKJw0mauuD8PZCIWBwl2NuzsKbniuRF613F IQ6Dc9UzqcsWpwqFV8aHMFynHbZjH/ymLe a C3cOEYw6i00j2hp8TdmPq8DBL8jsMfT9OL3/adFYgPEgAM5wAh2G7CIFvxk9 4I0lgdEyXr5B2GgyqvZvbdBOugoVrY81V/dQ32uOytVvaZ AmvZ1ypADrJCFue 4i gvcHxz0lnshkcBrVFoBNIBFDubZRPMwHV1MpZ5BdveJW3s5dI95vR1LXbH8CSXoLOfgNbkik1sMaNdsnDxRdBomZFOUZ7MYik3B1D9Usqc2HD8VDNVSJQHSyQ30lxNO5DmBHpMQs4dp07E03lvHdA7J2qa51LXwBfp 9UX5NHn/ORgFrh5p cVd//a6CvA4ygG0fMMVVdZhkk8Fd4yLi661vKmX4YO2pvhCvirf0cEKiTypgRZlteiP7edKs eVBVH6t/iDOCgIK2QswBJZgayNNTn67e6vpd9jAjxa5j9nTWHARYQfv Ui4otlsSAKIoFfh2JqZ5Ze2bawQGS7krF61HRIpA2BFOeQs/BO/SzhkBVq2A0cViJkuHvNtg2ATFexpUnHQwAUEd6YTxkvQ q/HJuPQXL4u6reuh... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 09:57:45,124 [JaslokHo19521][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: The state information is invalid for this page and might be corrupted. ---> System.Web.HttpException: The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 70.39.157.197
+	Port: 1815
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: yIKS4T0FQInEtcf1gAhyEVM/VjjksAZ0ZkOYzhhhHrY/Wus2JrDE1uiYA5wKNP0WOefRrhLnLLHgNnd0k96qvEAynIiuomDtLEui3T3XWoJV/dn 7D4/QJBu2MitdHywXmRVT2Ld8SEjM9Hwz/nV4daQbvbwsZWXXSbQ4RrIMHpsBgjy/3m6awGjN9rEkUTTmVFITpwdBvA7YO3H3TlQbmSwzgWYnf4ClvykKJw0mauuD8PZCIWBwl2NuzsKbniuRF613F IQ6Dc9UzqcsWpwqFV8aHMFynHbZjH/ymLe a C3cOEYw6i00j2hp8TdmPq8DBL8jsMfT9OL3/adFYgPEgAM5wAh2G7CIFvxk9 4I0lgdEyXr5B2GgyqvZvbdBOugoVrY81V/dQ32uOytVvaZ AmvZ1ypADrJCFue 4i gvcHxz0lnshkcBrVFoBNIBFDubZRPMwHV1MpZ5BdveJW3s5dI95vR1LXbH8CSXoLOfgNbkik1sMaNdsnDxRdBomZFOUZ7MYik3B1D9Usqc2HD8VDNVSJQHSyQ30lxNO5DmBHpMQs4dp07E03lvHdA7J2qa51LXwBfp 9UX5NHn/ORgFrh5p cVd//a6CvA4ygG0fMMVVdZhkk8Fd4yLi661vKmX4YO2pvhCvirf0cEKiTypgRZlteiP7edKs eVBVH6t/iDOCgIK2QswBJZgayNNTn67e6vpd9jAjxa5j9nTWHARYQfv Ui4otlsSAKIoFfh2JqZ5Ze2bawQGS7krF61HRIpA2BFOeQs/BO/SzhkBVq2A0cViJkuHvNtg2ATFexpUnHQwAUEd6YTxkvQ q/HJuPQXL4u6reuh... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2016-04-30 10:04:14,297 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:04:51,125 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:05:25,828 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:06:09,656 [JaslokHo19521][Thread:18][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:06:47,156 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:07:36,719 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:53:34,943 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 10:56:19,631 [JaslokHo19521][Thread:22][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 11:14:24,180 [JaslokHo19521][Thread:24][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 11:37:59,464 [JaslokHo19521][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 4.79.123.0
+	Port: 30652
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: eAb1Mu/fH26r761dMZPGdcVFjHKwpPcbGN MCbyUIYupskLuSDIPWXiKpOdkmYmDC4gwhriL/f93wCxlLIq/PwgWN3J15e7BcdEg22TIuhQSu0siL7Tu5T2XymuoamWlnx7CekP7xKD8/xy6P4wBzkZnerDIat0QI11JM BfwzSDT4ozsouRk849FiGun7u33u7PZ8FcKtbcannHrAuVaZwUXy2nM9qRmRmt3VOiELioP3yeew6QmFap1gVCt7aFxhdTrIZiOXOxQhl4X/YqSBSmnpzdWg399iyxCJeikNdJ0oI9Eo5wvBrQYsHKy1YnLTTe3W0L2hGzOEbOAOOLbvOHRGWKWO59bFZP PO2vrdAVYDmGbOans/5QA RqK7VZb qy8JuHXmZdN37gPpNKeDY1iqqWOlFIFb8 KayossassLMMNEiqc6OTXzWpz0k/JhiZPqevrsU9z cLwgoAOiEP7FGIe8fOv6srdMFKGdvJxj45XW4zMBrgkzxW/yQMvQSIQ6lFzsG3q7JmoMeFI2watN V4fLTOu9DxPxbglUOxi/ioUwY9 r7qDAYPA5/olDLZqcz8nJIxJZEuf m mnwKd5H6KjWxvE lz34qHVXkQyF5L1rhvZdGVQ64eC39km6Cifx7cTBFIMk57YJzNSEZKrfbG5LF/Rgc8H7WbBENnfqkgBk8tm6fCLLi2sA3Jvqju3cygyNqK3TmizCzqhuHjhFhHtHb  Um QoxCPwji9ruga3vq2T5M5GGcEZqWYxDgEaunU4S1RLrc7jDoDxAlx7lUnLiKlFVAj/6vi4FrTBUpbmN1nN R7H7F5b1bfyLX0TyrQoSibfz... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:37:59,464 [JaslokHo19521][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 4.79.123.0
+	Port: 30652
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: eAb1Mu/fH26r761dMZPGdcVFjHKwpPcbGN MCbyUIYupskLuSDIPWXiKpOdkmYmDC4gwhriL/f93wCxlLIq/PwgWN3J15e7BcdEg22TIuhQSu0siL7Tu5T2XymuoamWlnx7CekP7xKD8/xy6P4wBzkZnerDIat0QI11JM BfwzSDT4ozsouRk849FiGun7u33u7PZ8FcKtbcannHrAuVaZwUXy2nM9qRmRmt3VOiELioP3yeew6QmFap1gVCt7aFxhdTrIZiOXOxQhl4X/YqSBSmnpzdWg399iyxCJeikNdJ0oI9Eo5wvBrQYsHKy1YnLTTe3W0L2hGzOEbOAOOLbvOHRGWKWO59bFZP PO2vrdAVYDmGbOans/5QA RqK7VZb qy8JuHXmZdN37gPpNKeDY1iqqWOlFIFb8 KayossassLMMNEiqc6OTXzWpz0k/JhiZPqevrsU9z cLwgoAOiEP7FGIe8fOv6srdMFKGdvJxj45XW4zMBrgkzxW/yQMvQSIQ6lFzsG3q7JmoMeFI2watN V4fLTOu9DxPxbglUOxi/ioUwY9 r7qDAYPA5/olDLZqcz8nJIxJZEuf m mnwKd5H6KjWxvE lz34qHVXkQyF5L1rhvZdGVQ64eC39km6Cifx7cTBFIMk57YJzNSEZKrfbG5LF/Rgc8H7WbBENnfqkgBk8tm6fCLLi2sA3Jvqju3cygyNqK3TmizCzqhuHjhFhHtHb  Um QoxCPwji9ruga3vq2T5M5GGcEZqWYxDgEaunU4S1RLrc7jDoDxAlx7lUnLiKlFVAj/6vi4FrTBUpbmN1nN R7H7F5b1bfyLX0TyrQoSibfz... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:38:05,527 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.
+
+See http://go.microsoft.com/fwlink/?LinkID=314055 for more information. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 4.79.123.0
+	Port: 30652
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: t48Po/sez5CkutD4DBNWAIcZH/o/JREhX9GJJ1 kfWSK85kMnFaHGh3nHlysdwyAZ856RfoHL/EH/QWFLM7RYfIz073Z AO03h0/j9cXC3pulw4mja1EV 98RWJoJY526fcS2SmwsV51p8FINrapS/BGJTxkz2JRPwFMqmWuxaySXuOR1MKI6yOL/HWMQqA7DxYkV tKAaOWdqeI/s0INUiL2OAt3Ew3TKnoS2eZurQckJFt1G5rfEcwDpeAmMdddUTkql2SrqOIu2Rq9nUXfxYcX7FHcaNGJQHJdI5h6l9Wgida46xy3SWCL lHGyCrSHjOonLf4OicAvOJ 4DvScRzDWTh5sjN5l5MhBSxicW8BGqkAgRc10DC9GQHKMhMBTmEySXuCzZwFPG/kHEcAletto6pkghYi5E69gwBqP1cWPAWeBbQPijm5ZBeUf2/EXLPhie0VFz5YIoY8DRt1cgGUyvY5n evFE7XdAZUe6UlwZUuCiIyB0Hc2I9F mNU67ii7FQZmWd/2dh5nbo493pwaynz3WPHYIpSsf9ppi9Un1FufjxAkd584HmJDNGZqkE6tei/fBPQAjuZkqwdYeCCXtfZ57mwCqFEKDHpNM/KwjQDRJwTtlXaQ4UwmFJ6kIOdc1G/uLufugpKj 8uy6N6k3X thMvbK ZndJFELqrF4QLJ0XHGgxw9nSe/iNc4MSbe2mJuBPLdf P2ANu6KwEJ6lMpXscGfL4KaucmMrN5t33TrXZgvDkfzhP9r3MPhXF3jk/UWpsmE P rhJ7UTPMS6BsWz3Ti2JRlj9SUoX2adGoou96LHGQahbhqefxSosRaz2QSIYmkief...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:38:05,527 [JaslokHo19521][Thread:21][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=terminate
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.
+
+See http://go.microsoft.com/fwlink/?LinkID=314055 for more information. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 4.79.123.0
+	Port: 30652
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: t48Po/sez5CkutD4DBNWAIcZH/o/JREhX9GJJ1 kfWSK85kMnFaHGh3nHlysdwyAZ856RfoHL/EH/QWFLM7RYfIz073Z AO03h0/j9cXC3pulw4mja1EV 98RWJoJY526fcS2SmwsV51p8FINrapS/BGJTxkz2JRPwFMqmWuxaySXuOR1MKI6yOL/HWMQqA7DxYkV tKAaOWdqeI/s0INUiL2OAt3Ew3TKnoS2eZurQckJFt1G5rfEcwDpeAmMdddUTkql2SrqOIu2Rq9nUXfxYcX7FHcaNGJQHJdI5h6l9Wgida46xy3SWCL lHGyCrSHjOonLf4OicAvOJ 4DvScRzDWTh5sjN5l5MhBSxicW8BGqkAgRc10DC9GQHKMhMBTmEySXuCzZwFPG/kHEcAletto6pkghYi5E69gwBqP1cWPAWeBbQPijm5ZBeUf2/EXLPhie0VFz5YIoY8DRt1cgGUyvY5n evFE7XdAZUe6UlwZUuCiIyB0Hc2I9F mNU67ii7FQZmWd/2dh5nbo493pwaynz3WPHYIpSsf9ppi9Un1FufjxAkd584HmJDNGZqkE6tei/fBPQAjuZkqwdYeCCXtfZ57mwCqFEKDHpNM/KwjQDRJwTtlXaQ4UwmFJ6kIOdc1G/uLufugpKj 8uy6N6k3X thMvbK ZndJFELqrF4QLJ0XHGgxw9nSe/iNc4MSbe2mJuBPLdf P2ANu6KwEJ6lMpXscGfL4KaucmMrN5t33TrXZgvDkfzhP9r3MPhXF3jk/UWpsmE P rhJ7UTPMS6BsWz3Ti2JRlj9SUoX2adGoou96LHGQahbhqefxSosRaz2QSIYmkief...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:38:06,120 [JaslokHo19521][Thread:21][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.
+
+See http://go.microsoft.com/fwlink/?LinkID=314055 for more information. ---> System.Web.HttpException: Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.
+
+See http://go.microsoft.com/fwlink/?LinkID=314055 for more information. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 4.79.123.0
+	Port: 30652
+	Referer: 
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+	ViewState: t48Po/sez5CkutD4DBNWAIcZH/o/JREhX9GJJ1 kfWSK85kMnFaHGh3nHlysdwyAZ856RfoHL/EH/QWFLM7RYfIz073Z AO03h0/j9cXC3pulw4mja1EV 98RWJoJY526fcS2SmwsV51p8FINrapS/BGJTxkz2JRPwFMqmWuxaySXuOR1MKI6yOL/HWMQqA7DxYkV tKAaOWdqeI/s0INUiL2OAt3Ew3TKnoS2eZurQckJFt1G5rfEcwDpeAmMdddUTkql2SrqOIu2Rq9nUXfxYcX7FHcaNGJQHJdI5h6l9Wgida46xy3SWCL lHGyCrSHjOonLf4OicAvOJ 4DvScRzDWTh5sjN5l5MhBSxicW8BGqkAgRc10DC9GQHKMhMBTmEySXuCzZwFPG/kHEcAletto6pkghYi5E69gwBqP1cWPAWeBbQPijm5ZBeUf2/EXLPhie0VFz5YIoY8DRt1cgGUyvY5n evFE7XdAZUe6UlwZUuCiIyB0Hc2I9F mNU67ii7FQZmWd/2dh5nbo493pwaynz3WPHYIpSsf9ppi9Un1FufjxAkd584HmJDNGZqkE6tei/fBPQAjuZkqwdYeCCXtfZ57mwCqFEKDHpNM/KwjQDRJwTtlXaQ4UwmFJ6kIOdc1G/uLufugpKj 8uy6N6k3X thMvbK ZndJFELqrF4QLJ0XHGgxw9nSe/iNc4MSbe2mJuBPLdf P2ANu6KwEJ6lMpXscGfL4KaucmMrN5t33TrXZgvDkfzhP9r3MPhXF3jk/UWpsmE P rhJ7UTPMS6BsWz3Ti2JRlj9SUoX2adGoou96LHGQahbhqefxSosRaz2QSIYmkief...
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2016-04-30 11:52:53,919 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 11:55:27,357 [JaslokHo19521][Thread:29][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 11:56:50,794 [JaslokHo19521][Thread:24][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 59.94.34.18
+	Port: 49653
+	Referer: http://jaslokhospital.net/specialties
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+	ViewState: EhPbKu/kl8Q9UKWeODoIFhFZor0JE9PuJtAhfQ5StqJCEX2MjI6oyP1J/EN76W0PfIUSbCag49qxtZ8ewlR3URROMOqHOCfPMEt+6gKUdMb38edOByKKj2e1xSFn4NKqqx1858DWjcZMaQSLW/XxKA4OoFveG4HOvAGqzEz2bd09zCQOmnlnCjvHtiz/25xmWdLmmM3LmGR69o3sqUKg5r3kgxXC5Z7gT1zZuO/+IXWf8nRonVqkOXzRwKs8h9hAHUfDx+qsl/Lq7tdZlve8LeHj/KcK2ZQcYQx9YX5/0rTMVSWYNZudaHVecIf5P7sMVBDQ98Ao66nOxyCqq/sTVT747a4ANkVwP0xvkm0+DxgVxL0L8zYzy33jMSMZO7X8V2rpmfcV11wkZ64LLIB5VFnxBFPo28LhiOqoPow1YEWxLJzGQsfHyyzJ2tnfbvNFuDkY788P0Mh3rAHsWNLIGGKMfURdbYau+MMggP8+r0+2tQozDzj96HK7y0LBoHTVKKfBfWeuCkke7KA9wyvxYz+Cl5eHhYExv6i13rOJfOEplkBQow/qhPmh2s5ngOHCcf1fmqPWAW199WUt+rUAsFwcgE3JTfOYyKg5gpZ2uGMwoIaVS2IH+5Zv6YqRcpRtlu/NSlUwoGBl+Tyvt0rfQmOD4Bk7b02XY9WKbSYahef3DrXUbWqkFFftEClR1Df7sFD/uQC/r8GFSlCN3Hf2+AMPLBy/3/NdFCWjR4Usdeh1Wgw4l2E4lzqTRkXsIMwNwxSODQHYG2ZY4YxnycqoCaP7fQracVkLFyL5nZiJSONpe... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:56:50,794 [JaslokHo19521][Thread:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=132&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 59.94.34.18
+	Port: 49653
+	Referer: http://jaslokhospital.net/specialties
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+	ViewState: EhPbKu/kl8Q9UKWeODoIFhFZor0JE9PuJtAhfQ5StqJCEX2MjI6oyP1J/EN76W0PfIUSbCag49qxtZ8ewlR3URROMOqHOCfPMEt+6gKUdMb38edOByKKj2e1xSFn4NKqqx1858DWjcZMaQSLW/XxKA4OoFveG4HOvAGqzEz2bd09zCQOmnlnCjvHtiz/25xmWdLmmM3LmGR69o3sqUKg5r3kgxXC5Z7gT1zZuO/+IXWf8nRonVqkOXzRwKs8h9hAHUfDx+qsl/Lq7tdZlve8LeHj/KcK2ZQcYQx9YX5/0rTMVSWYNZudaHVecIf5P7sMVBDQ98Ao66nOxyCqq/sTVT747a4ANkVwP0xvkm0+DxgVxL0L8zYzy33jMSMZO7X8V2rpmfcV11wkZ64LLIB5VFnxBFPo28LhiOqoPow1YEWxLJzGQsfHyyzJ2tnfbvNFuDkY788P0Mh3rAHsWNLIGGKMfURdbYau+MMggP8+r0+2tQozDzj96HK7y0LBoHTVKKfBfWeuCkke7KA9wyvxYz+Cl5eHhYExv6i13rOJfOEplkBQow/qhPmh2s5ngOHCcf1fmqPWAW199WUt+rUAsFwcgE3JTfOYyKg5gpZ2uGMwoIaVS2IH+5Zv6YqRcpRtlu/NSlUwoGBl+Tyvt0rfQmOD4Bk7b02XY9WKbSYahef3DrXUbWqkFFftEClR1Df7sFD/uQC/r8GFSlCN3Hf2+AMPLBy/3/NdFCWjR4Usdeh1Wgw4l2E4lzqTRkXsIMwNwxSODQHYG2ZY4YxnycqoCaP7fQracVkLFyL5nZiJSONpe... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:57:04,279 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 59.94.34.18
+	Port: 49652
+	Referer: http://jaslokhospital.net/specialties
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+	ViewState: EhPbKu/kl8Q9UKWeODoIFhFZor0JE9PuJtAhfQ5StqJCEX2MjI6oyP1J/EN76W0PfIUSbCag49qxtZ8ewlR3URROMOqHOCfPMEt+6gKUdMb38edOByKKj2e1xSFn4NKqqx1858DWjcZMaQSLW/XxKA4OoFveG4HOvAGqzEz2bd09zCQOmnlnCjvHtiz/25xmWdLmmM3LmGR69o3sqUKg5r3kgxXC5Z7gT1zZuO/+IXWf8nRonVqkOXzRwKs8h9hAHUfDx+qsl/Lq7tdZlve8LeHj/KcK2ZQcYQx9YX5/0rTMVSWYNZudaHVecIf5P7sMVBDQ98Ao66nOxyCqq/sTVT747a4ANkVwP0xvkm0+DxgVxL0L8zYzy33jMSMZO7X8V2rpmfcV11wkZ64LLIB5VFnxBFPo28LhiOqoPow1YEWxLJzGQsfHyyzJ2tnfbvNFuDkY788P0Mh3rAHsWNLIGGKMfURdbYau+MMggP8+r0+2tQozDzj96HK7y0LBoHTVKKfBfWeuCkke7KA9wyvxYz+Cl5eHhYExv6i13rOJfOEplkBQow/qhPmh2s5ngOHCcf1fmqPWAW199WUt+rUAsFwcgE3JTfOYyKg5gpZ2uGMwoIaVS2IH+5Zv6YqRcpRtlu/NSlUwoGBl+Tyvt0rfQmOD4Bk7b02XY9WKbSYahef3DrXUbWqkFFftEClR1Df7sFD/uQC/r8GFSlCN3Hf2+AMPLBy/3/NdFCWjR4Usdeh1Wgw4l2E4lzqTRkXsIMwNwxSODQHYG2ZY4YxnycqoCaP7fQracVkLFyL5nZiJSONpe... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:57:04,279 [JaslokHo19521][Thread:17][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=132&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 59.94.34.18
+	Port: 49652
+	Referer: http://jaslokhospital.net/specialties
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+	ViewState: EhPbKu/kl8Q9UKWeODoIFhFZor0JE9PuJtAhfQ5StqJCEX2MjI6oyP1J/EN76W0PfIUSbCag49qxtZ8ewlR3URROMOqHOCfPMEt+6gKUdMb38edOByKKj2e1xSFn4NKqqx1858DWjcZMaQSLW/XxKA4OoFveG4HOvAGqzEz2bd09zCQOmnlnCjvHtiz/25xmWdLmmM3LmGR69o3sqUKg5r3kgxXC5Z7gT1zZuO/+IXWf8nRonVqkOXzRwKs8h9hAHUfDx+qsl/Lq7tdZlve8LeHj/KcK2ZQcYQx9YX5/0rTMVSWYNZudaHVecIf5P7sMVBDQ98Ao66nOxyCqq/sTVT747a4ANkVwP0xvkm0+DxgVxL0L8zYzy33jMSMZO7X8V2rpmfcV11wkZ64LLIB5VFnxBFPo28LhiOqoPow1YEWxLJzGQsfHyyzJ2tnfbvNFuDkY788P0Mh3rAHsWNLIGGKMfURdbYau+MMggP8+r0+2tQozDzj96HK7y0LBoHTVKKfBfWeuCkke7KA9wyvxYz+Cl5eHhYExv6i13rOJfOEplkBQow/qhPmh2s5ngOHCcf1fmqPWAW199WUt+rUAsFwcgE3JTfOYyKg5gpZ2uGMwoIaVS2IH+5Zv6YqRcpRtlu/NSlUwoGBl+Tyvt0rfQmOD4Bk7b02XY9WKbSYahef3DrXUbWqkFFftEClR1Df7sFD/uQC/r8GFSlCN3Hf2+AMPLBy/3/NdFCWjR4Usdeh1Wgw4l2E4lzqTRkXsIMwNwxSODQHYG2ZY4YxnycqoCaP7fQracVkLFyL5nZiJSONpe... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:59:15,998 [JaslokHo19521][Thread:29][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 59.94.34.18
+	Port: 49657
+	Referer: http://jaslokhospital.net/specialties
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+	ViewState: EhPbKu/kl8Q9UKWeODoIFhFZor0JE9PuJtAhfQ5StqJCEX2MjI6oyP1J/EN76W0PfIUSbCag49qxtZ8ewlR3URROMOqHOCfPMEt+6gKUdMb38edOByKKj2e1xSFn4NKqqx1858DWjcZMaQSLW/XxKA4OoFveG4HOvAGqzEz2bd09zCQOmnlnCjvHtiz/25xmWdLmmM3LmGR69o3sqUKg5r3kgxXC5Z7gT1zZuO/+IXWf8nRonVqkOXzRwKs8h9hAHUfDx+qsl/Lq7tdZlve8LeHj/KcK2ZQcYQx9YX5/0rTMVSWYNZudaHVecIf5P7sMVBDQ98Ao66nOxyCqq/sTVT747a4ANkVwP0xvkm0+DxgVxL0L8zYzy33jMSMZO7X8V2rpmfcV11wkZ64LLIB5VFnxBFPo28LhiOqoPow1YEWxLJzGQsfHyy ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 11:59:15,998 [JaslokHo19521][Thread:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=132&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 59.94.34.18
+	Port: 49657
+	Referer: http://jaslokhospital.net/specialties
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+	ViewState: EhPbKu/kl8Q9UKWeODoIFhFZor0JE9PuJtAhfQ5StqJCEX2MjI6oyP1J/EN76W0PfIUSbCag49qxtZ8ewlR3URROMOqHOCfPMEt+6gKUdMb38edOByKKj2e1xSFn4NKqqx1858DWjcZMaQSLW/XxKA4OoFveG4HOvAGqzEz2bd09zCQOmnlnCjvHtiz/25xmWdLmmM3LmGR69o3sqUKg5r3kgxXC5Z7gT1zZuO/+IXWf8nRonVqkOXzRwKs8h9hAHUfDx+qsl/Lq7tdZlve8LeHj/KcK2ZQcYQx9YX5/0rTMVSWYNZudaHVecIf5P7sMVBDQ98Ao66nOxyCqq/sTVT747a4ANkVwP0xvkm0+DxgVxL0L8zYzy33jMSMZO7X8V2rpmfcV11wkZ64LLIB5VFnxBFPo28LhiOqoPow1YEWxLJzGQsfHyy ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 12:02:00,826 [JaslokHo19521][Thread:20][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 12:13:07,453 [JaslokHo19521][Thread:25][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 12:47:55,972 [JaslokHo19521][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:10:44,553 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:10:48,037 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:13:43,460 [JaslokHo19521][Thread:18][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:14:26,694 [JaslokHo19521][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:25:26,711 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:47:57,151 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:47:57,151 [JaslokHo19521][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:04,651 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:04,651 [JaslokHo19521][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:09,026 [JaslokHo19521][Thread:18][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:09,026 [JaslokHo19521][Thread:18][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:24,604 [JaslokHo19521][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:24,604 [JaslokHo19521][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:46,151 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:48:46,151 [JaslokHo19521][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 13:50:01,480 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 13:55:52,777 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 14:20:41,421 [JaslokHo19521][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 14:21:09,905 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 14:58:09,503 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 15:14:24,302 [JaslokHo19521][Thread:30][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:14:24,302 [JaslokHo19521][Thread:30][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:18:49,365 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at JSControls_MiddleContent_ApplyJaslokCareer.Page_Load(Object sender, EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:18:49,365 [JaslokHo19521][Thread:23][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=164&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at JSControls_MiddleContent_ApplyJaslokCareer.Page_Load(Object sender, EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:21:04,100 [JaslokHo19521][Thread:27][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:21:04,100 [JaslokHo19521][Thread:27][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:22:20,537 [JaslokHo19521][Thread:29][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at JSControls_MiddleContent_ApplyJaslokCareer.Page_Load(Object sender, EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 15:22:20,537 [JaslokHo19521][Thread:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=164&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at JSControls_MiddleContent_ApplyJaslokCareer.Page_Load(Object sender, EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 16:14:30,918 [JaslokHo19521][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 16:36:08,390 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 16:40:18,156 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 16:40:18,156 [JaslokHo19521][Thread:23][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 17:07:01,706 [JaslokHo19521][Thread:23][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 17:07:01,706 [JaslokHo19521][Thread:23][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 17:46:13,648 [JaslokHo19521][Thread:31][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:05:05,931 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 18:05:05,931 [JaslokHo19521][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 18:10:19,510 [JaslokHo19521][Thread:29][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:10:20,526 [JaslokHo19521][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:17:57,448 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:21:51,871 [JaslokHo19521][Thread:24][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:26:28,137 [JaslokHo19521][Thread:14][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:29:40,903 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:37:36,060 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 18:38:37,685 [JaslokHo19521][Thread:27][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 19:03:55,157 [JaslokHo19521][Thread:27][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 19:06:03,845 [JaslokHo19521][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 19:09:59,908 [JaslokHo19521][Thread:26][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 19:09:59,908 [JaslokHo19521][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 19:10:36,986 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 19:10:36,986 [JaslokHo19521][Thread:17][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 19:11:35,783 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 19:11:35,783 [JaslokHo19521][Thread:17][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 20:47:28,903 [JaslokHo19521][Thread:20][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 20:47:52,075 [JaslokHo19521][Thread:27][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 20:48:03,216 [JaslokHo19521][Thread:39][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 21:08:57,484 [JaslokHo19521][Thread:32][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 21:11:55,406 [JaslokHo19521][Thread:32][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_SpecialtiesDetailsSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 21:11:55,406 [JaslokHo19521][Thread:32][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=133&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_SpecialtiesDetailsSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 21:43:09,035 [JaslokHo19521][Thread:24][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 22:13:17,101 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:13:17,101 [JaslokHo19521][Thread:17][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:38:22,713 [JaslokHo19521][Thread:17][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 22:42:01,917 [JaslokHo19521][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 22:43:02,464 [JaslokHo19521][Thread:22][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 22:43:32,151 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: b89742c0e718529668510be907a4762d ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 22:43:32,151 [JaslokHo19521][Thread:22][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: dce1aec4f8ec5f71f9b1946a493b5ffe ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 22:43:32,167 [JaslokHo19521][Thread:25][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: 3a5b0e9732341ee5d1528db53503ee57 ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 22:43:40,792 [JaslokHo19521][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:43:40,792 [JaslokHo19521][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:44:45,777 [JaslokHo19521][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 22:46:05,777 [JaslokHo19521][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:46:05,777 [JaslokHo19521][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=120&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:54:20,965 [JaslokHo19521][Thread:12][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 22:55:55,919 [JaslokHo19521][Thread:26][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:55:55,919 [JaslokHo19521][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FindDoctorSkin.Page_Load(Object sender, EventArgs e)
+   at DotNetNuke.UI.Skins.Skin.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:56:15,903 [JaslokHo19521][Thread:22][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 120.61.187.26
+	Port: 53563
+	Referer: http://jaslokhospital.net/find-doctor/mehul-bhansali/192
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13D15 Safari/601.1
+	ViewState: VvDdOWLkzATSGngZohvWe7y9npDKAaX/nwz4OxA259vF8Iqh874jidEuwxe2j8JJP1Od338W0OQAgy6DksWozcm6mm06GgIHaDOKgYhl3fXEunZuzVmOH4f9zrhI2iUtMDJiDLwkRQifJhW8HGejuPKqVrbmc7PAOV1EjfuJl/0Q+LIYHB6FSw1HglxbPri4HCAgobCh8SYC4z5qUMfjkFXWLBlirZIJW5kl612z2imogfmmx3hBb0pdhs/BVmiQhEU2UC6EU9GyeDQFPXGnR4TGafY/W98zWDAAkU9sCrgNNFKAKSHK4FX0LCZREeu6ARxfTd8lbq3MHDpbD1UsTVv5lsX44O6ZwNmKQwZ2cIOQh9QfK7V/PayoVyCY/vVkHxXsvIe3TVuTG9FJRgBLMbFIjqH9vjx2JurWW9rP4FVhrv1E8FjN2ZDd0U4gDn91xwkQNMUODX3JOmA7KFrQu3YI0U23TVyEuGT4HGrfC7sLWtiuExsb9kjTqsR5zqQZu6X4J90azZjpvq8645vu0T4xYQaNPvjwQ87XR1rMw2jsGhbJnUHPFX3E7Vtq8OCddh9o3OQkRuTzUTXvCDV4qXhOBHVt0W6HtQB/Y8v7kZBABOykEQAHgYMrYvfvqyyd7KFgRQWJkvTNULzTODURlRf/UWgXKUooT/D5x3JW4N4/SKoeq1MCiFSZdkFlGxwLGy2CBKSizI0sCcdKI9yIbO2... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 22:56:15,903 [JaslokHo19521][Thread:22][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=115&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): The client disconnected. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 120.61.187.26
+	Port: 53563
+	Referer: http://jaslokhospital.net/find-doctor/mehul-bhansali/192
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13D15 Safari/601.1
+	ViewState: VvDdOWLkzATSGngZohvWe7y9npDKAaX/nwz4OxA259vF8Iqh874jidEuwxe2j8JJP1Od338W0OQAgy6DksWozcm6mm06GgIHaDOKgYhl3fXEunZuzVmOH4f9zrhI2iUtMDJiDLwkRQifJhW8HGejuPKqVrbmc7PAOV1EjfuJl/0Q+LIYHB6FSw1HglxbPri4HCAgobCh8SYC4z5qUMfjkFXWLBlirZIJW5kl612z2imogfmmx3hBb0pdhs/BVmiQhEU2UC6EU9GyeDQFPXGnR4TGafY/W98zWDAAkU9sCrgNNFKAKSHK4FX0LCZREeu6ARxfTd8lbq3MHDpbD1UsTVv5lsX44O6ZwNmKQwZ2cIOQh9QfK7V/PayoVyCY/vVkHxXsvIe3TVuTG9FJRgBLMbFIjqH9vjx2JurWW9rP4FVhrv1E8FjN2ZDd0U4gDn91xwkQNMUODX3JOmA7KFrQu3YI0U23TVyEuGT4HGrfC7sLWtiuExsb9kjTqsR5zqQZu6X4J90azZjpvq8645vu0T4xYQaNPvjwQ87XR1rMw2jsGhbJnUHPFX3E7Vtq8OCddh9o3OQkRuTzUTXvCDV4qXhOBHVt0W6HtQB/Y8v7kZBABOykEQAHgYMrYvfvqyyd7KFgRQWJkvTNULzTODURlRf/UWgXKUooT/D5x3JW4N4/SKoeq1MCiFSZdkFlGxwLGy2CBKSizI0sCcdKI9yIbO2... ---> System.FormatException: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-04-30 23:03:39,685 [JaslokHo19521][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 23:04:43,279 [JaslokHo19521][Thread:29][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: 5fd3ee5e60ac97ca7207d45806dc1153 ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 23:04:53,795 [JaslokHo19521][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Collections.Generic.KeyNotFoundException: no map was found for the dependency key: 2d4f6bcbc16a0cc70da0f587456384f9 ,CompositeUrlType.MappedId requires that a map is found
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.ProcessRequestInternal(HttpContextBase context, String fileset, ClientDependencyType type, Int32 version, Byte[] outputBytes)
+   at ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-04-30 23:16:33,921 [JaslokHo19521][Thread:18][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 23:39:22,221 [JaslokHo19521][Thread:22][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-04-30 23:39:22,846 [JaslokHo19521][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)

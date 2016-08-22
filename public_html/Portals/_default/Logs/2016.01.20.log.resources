@@ -1,0 +1,51 @@
+2016-01-20 00:51:38,624 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 00:51:45,587 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 00:51:46,492 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 01:07:46,392 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 01:07:47,321 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 01:08:18,673 [AUXAWEB][Thread:14][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 01:08:22,547 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-20 17:56:36,337 [AUXAWEB][Thread:7][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 172.16.12.196
+	Port: 61231
+	Referer: http://jaslok.stage.asentechllc.net/complaint
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0
+	ViewState: +YwB7vDz58qiXNKsroPpCPI2+iYBO+xAozcaXoGJqMANbYyV2jhuPnKgdwlBsdr+5kRogbJIy57dXBKB17svqWiyx31BLKwx3t3KQV1v4JOp9Ch+EDqRz8TLBcsfF4v4PEnxmQyKVfS9wVTxLGIvtRCwPeL6cQD6dAyjzbZXcR5ZXQTI3lgo6H9QcW1OqB/MD/1oZrUnO2i3dk8DvVGY8/qj82Ebbs6d6eDP1tRhTwVhF8Cs/VXMjL/G1D+SVkbVlm0grBKaTXIc7oM2zTurM7bAO1MmMKSNBSDmtgIO+FAB0xqFmZNcldQ/+QNqkXLr65yPDQ9WQeJsgnSgzS55WOgxaztdm2ze7epBagtPXMd4viKVG1gGFpdzuQsYwRinq5TBCJ2PqohMh15WOAbK7Ig4z3b4x4DcaQbCbcps/2+L/bseEXbpcLVrXyySCjWrwYBtq4vodISAj9dPzIxKPDvZbiTs/M0k4zWFatbtR5dqSWxXxwkg+fJ7D1eiaFwwcnwchbSUcwNErL8kOdTP53D2ohUd9+1BdO6zjKDOjSz/VLuITthPM6V8xazcmB0a8Um73IcrFHtywdXyZK32+riEySuxP4PaN+7PiZ3PzSRs4jeap+z58tXUqdU3cm+1hJIXsKaIqluH/d3oi8xtNlZ790+1UYOm7OELacie9IwB/2bGMQ6YfYWml48LJfV9bgyU4erxuNKnepspNDXmuZxQBI5eHn5SE7aO8Ead9I1OrO3XBxaDRMAY4Cm5Hk/JL8qzHpXV+YuXk7Yl4J4ZIrsbeMqGYD7u...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-01-20 17:56:36,634 [AUXAWEB][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=131&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 172.16.12.196
+	Port: 61231
+	Referer: http://jaslok.stage.asentechllc.net/complaint
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0
+	ViewState: +YwB7vDz58qiXNKsroPpCPI2+iYBO+xAozcaXoGJqMANbYyV2jhuPnKgdwlBsdr+5kRogbJIy57dXBKB17svqWiyx31BLKwx3t3KQV1v4JOp9Ch+EDqRz8TLBcsfF4v4PEnxmQyKVfS9wVTxLGIvtRCwPeL6cQD6dAyjzbZXcR5ZXQTI3lgo6H9QcW1OqB/MD/1oZrUnO2i3dk8DvVGY8/qj82Ebbs6d6eDP1tRhTwVhF8Cs/VXMjL/G1D+SVkbVlm0grBKaTXIc7oM2zTurM7bAO1MmMKSNBSDmtgIO+FAB0xqFmZNcldQ/+QNqkXLr65yPDQ9WQeJsgnSgzS55WOgxaztdm2ze7epBagtPXMd4viKVG1gGFpdzuQsYwRinq5TBCJ2PqohMh15WOAbK7Ig4z3b4x4DcaQbCbcps/2+L/bseEXbpcLVrXyySCjWrwYBtq4vodISAj9dPzIxKPDvZbiTs/M0k4zWFatbtR5dqSWxXxwkg+fJ7D1eiaFwwcnwchbSUcwNErL8kOdTP53D2ohUd9+1BdO6zjKDOjSz/VLuITthPM6V8xazcmB0a8Um73IcrFHtywdXyZK32+riEySuxP4PaN+7PiZ3PzSRs4jeap+z58tXUqdU3cm+1hJIXsKaIqluH/d3oi8xtNlZ790+1UYOm7OELacie9IwB/2bGMQ6YfYWml48LJfV9bgyU4erxuNKnepspNDXmuZxQBI5eHn5SE7aO8Ead9I1OrO3XBxaDRMAY4Cm5Hk/JL8qzHpXV+YuXk7Yl4J4ZIrsbeMqGYD7u...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

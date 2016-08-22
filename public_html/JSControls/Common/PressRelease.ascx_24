@@ -1,0 +1,28 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PressRelease.ascx.cs" Inherits="JSControls_Common_PressRelease" %>
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 foot hidden-xs">
+    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#fade-quote-carousel" data-slide-to="0" class=""></li>
+            <li data-target="#fade-quote-carousel" data-slide-to="1" class="active"></li>
+            <li data-target="#fade-quote-carousel" data-slide-to="2" class=""></li>
+            <li data-target="#fade-quote-carousel" data-slide-to="3" class=""></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <asp:Repeater ID="rptPressRelease" runat="server">
+                <ItemTemplate>
+                   <div runat="server" class='<%#Container.ItemIndex==0?"active item":"item"%>'>
+                        <a id="A1" href='<%#"/newsdetail.aspx?newsid="+ Eval("NewsId")%>' runat="server">
+                            <div class="title"><%#Eval("NewsTitle")%></div>
+                        </a>
+                        <address>
+                            <%#Eval("NewsContent")%>
+                        </address>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1655 @@
+2015-11-10 15:18:56,146 [ASEN-POD079][Thread:4][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:18:56,162 [ASEN-POD079][Thread:4][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:18:56,240 [ASEN-POD079][Thread:4][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:18:56,240 [ASEN-POD079][Thread:4][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:18:56,302 [ASEN-POD079][Thread:4][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 15:34:21,368 [ASEN-POD079][Thread:44][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs(34): error CS1061: 'BusinessDataLayer.BusinessLogic' does not contain a definition for 'GetDoctorById' and no extension method 'GetDoctorById' accepting a first argument of type 'BusinessDataLayer.BusinessLogic' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-10 15:34:21,629 [ASEN-POD079][Thread:44][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorMappingModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs(34): error CS1061: 'BusinessDataLayer.BusinessLogic' does not contain a definition for 'GetDoctorById' and no extension method 'GetDoctorById' accepting a first argument of type 'BusinessDataLayer.BusinessLogic' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-10 15:34:58,105 [ASEN-POD079][Thread:45][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:34:58,221 [ASEN-POD079][Thread:45][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'. ---> System.Web.HttpException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 15:38:24,228 [ASEN-POD079][Thread:44][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:38:24,235 [ASEN-POD079][Thread:44][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'. ---> System.Web.HttpException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 15:40:52,667 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:40:52,674 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'. ---> System.Web.HttpException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 15:59:21,224 [ASEN-POD079][Thread:65][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 15:59:21,230 [ASEN-POD079][Thread:65][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'. ---> System.Web.HttpException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 16:00:59,099 [ASEN-POD079][Thread:52][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 16:00:59,105 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'. ---> System.Web.HttpException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 18:01:08,896 [ASEN-POD079][Thread:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Procedure JH_GetDoctorById has no parameters and arguments were supplied.
+   at BusinessDataLayer.BusinessLogic.GetDoctorById(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 1075
+   at DesktopModules_JaslokAdmin_ManageDoctorTabMapping.bindDoctor() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs:line 36
+   at DesktopModules_JaslokAdmin_ManageDoctorTabMapping.Page_Load(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs:line 21
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:34815c77-4619-4cb2-b8ce-e0f3caf2fdab
+2015-11-10 18:01:08,934 [ASEN-POD079][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=102&error=An unexpected error has occurred&content=0
+System.Data.SqlClient.SqlException (0x80131904): Procedure JH_GetDoctorById has no parameters and arguments were supplied.
+   at BusinessDataLayer.BusinessLogic.GetDoctorById(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 1075
+   at DesktopModules_JaslokAdmin_ManageDoctorTabMapping.bindDoctor() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs:line 36
+   at DesktopModules_JaslokAdmin_ManageDoctorTabMapping.Page_Load(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs:line 21
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:34815c77-4619-4cb2-b8ce-e0f3caf2fdab
+2015-11-10 18:01:25,723 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:01:25,807 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'. ---> System.Web.HttpException: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   at System.Web.UI.WebControls.ListControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   at System.Web.UI.WebControls.ListControl.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 18:02:11,724 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:11,745 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:11,813 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:11,816 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:11,840 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 18:02:55,235 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:55,237 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:55,255 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:55,257 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:02:55,267 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 18:06:39,400 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs(127): error CS0103: The name 'dgDoctortab' does not exist in the current context
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-10 18:08:55,488 [ASEN-POD079][Thread:21][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs(127): error CS0103: The name 'dgDoctortab' does not exist in the current context
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-10 18:09:18,764 [ASEN-POD079][Thread:33][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs(154): error CS0103: The name 'dgDoctortab' does not exist in the current context
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-10 18:09:34,797 [ASEN-POD079][Thread:33][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageDoctorTabMapping.ascx.cs(89): error CS0103: The name 'BindPage' does not exist in the current context
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-10 18:10:01,799 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:10:01,802 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:10:01,823 [ASEN-POD079][Thread:18][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:10:01,826 [ASEN-POD079][Thread:18][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:10:01,836 [ASEN-POD079][Thread:18][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 18:43:49,268 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.UnauthorizedAccessException: Access to the path 'PathDoctor' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at DesktopModules_JaslokAdmin_ManageUsers.Upload() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 146
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 184
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:43:49,408 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.UnauthorizedAccessException: Access to the path 'PathDoctor' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at DesktopModules_JaslokAdmin_ManageUsers.Upload() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 146
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 184
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:49:28,456 [ASEN-POD079][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.UnauthorizedAccessException: Access to the path 'PathDoctor' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at DesktopModules_JaslokAdmin_ManageUsers.Upload() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 146
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 184
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 18:49:28,462 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.UnauthorizedAccessException: Access to the path 'PathDoctor' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at DesktopModules_JaslokAdmin_ManageUsers.Upload() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 146
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 184
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:17:12,624 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:17:12,642 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:17:12,678 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:17:12,681 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:17:12,714 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:18:01,921 [ASEN-POD079][Thread:17][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.UnauthorizedAccessException: Access to the path 'PathUsers' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at DesktopModules_JaslokAdmin_ManageUsers.Upload() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 146
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 184
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:18:01,957 [ASEN-POD079][Thread:17][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.UnauthorizedAccessException: Access to the path 'PathUsers' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at DesktopModules_JaslokAdmin_ManageUsers.Upload() in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 146
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 184
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:21:39,557 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:21:39,557 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:21:39,588 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:21:39,588 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:21:39,604 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:22:14,942 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:22:14,945 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:22:14,969 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:22:14,971 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:22:14,983 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:24:32,435 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:24:32,439 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:24:32,459 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:24:32,462 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:24:32,475 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:26:40,496 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:26:40,528 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:29:22,930 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:29:22,930 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:29:22,961 [ASEN-POD079][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:29:22,961 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:29:22,961 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:39:59,910 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:39:59,948 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:39:59,950 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:39:59,982 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:42:31,119 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:42:31,123 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:42:31,143 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:42:31,146 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:42:31,157 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:43:00,078 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:43:00,081 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:43:00,162 [ASEN-POD079][Thread:16][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:43:00,165 [ASEN-POD079][Thread:16][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:43:00,201 [ASEN-POD079][Thread:16][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 19:57:01,627 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:57:01,713 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:57:01,816 [ASEN-POD079][Thread:27][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:57:01,831 [ASEN-POD079][Thread:27][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 19:57:01,883 [ASEN-POD079][Thread:27][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 20:08:22,122 [ASEN-POD079][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 20:08:22,142 [ASEN-POD079][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 20:08:22,332 [ASEN-POD079][Thread:26][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 20:08:22,335 [ASEN-POD079][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 20:08:22,352 [ASEN-POD079][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 20:15:51,748 [ASEN-POD079][Thread:42][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:51,922 [ASEN-POD079][Thread:42][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:51,929 [ASEN-POD079][Thread:42][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:51,944 [ASEN-POD079][Thread:42][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:52,112 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Host.ServerController.GetServersCallBack(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+2015-11-10 20:15:52,164 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.BasePortalException - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Framework.Providers.ProviderConfiguration.GetProviderConfiguration(String strProvider)
+   at DotNetNuke.Services.Exceptions.BasePortalException.InitializePrivateVariables()
+2015-11-10 20:15:52,169 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:52,199 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Host.ServerController.GetServersCallBack(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+2015-11-10 20:15:52,204 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.BasePortalException - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Framework.Providers.ProviderConfiguration.GetProviderConfiguration(String strProvider)
+   at DotNetNuke.Services.Exceptions.BasePortalException.InitializePrivateVariables()
+2015-11-10 20:15:52,207 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:52,215 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddScheduleHistory(Int32 ScheduleID, DateTime StartDate, String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.AddScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+2015-11-10 20:15:52,220 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.BasePortalException - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Framework.Providers.ProviderConfiguration.GetProviderConfiguration(String strProvider)
+   at DotNetNuke.Services.Exceptions.BasePortalException.InitializePrivateVariables()
+2015-11-10 20:15:52,223 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:52,231 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:52,239 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.UpdateScheduleHistory(Int32 ScheduleHistoryID, DateTime EndDate, Boolean Succeeded, String LogNotes, DateTime NextStart)
+   at DotNetNuke.Services.Scheduling.SchedulingController.UpdateScheduleHistory(ScheduleHistoryItem objScheduleHistoryItem)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.UpdateScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+2015-11-10 20:15:52,243 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Exceptions.BasePortalException - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Framework.Providers.ProviderConfiguration.GetProviderConfiguration(String strProvider)
+   at DotNetNuke.Services.Exceptions.BasePortalException.InitializePrivateVariables()
+2015-11-10 20:15:52,246 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 20:15:52,253 [ASEN-POD079][Thread:52][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Configuration.ConfigurationErrorsException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2. (D:\Jaslok\Website\web.config line 71) ---> System.Xml.XmlException: Name cannot begin with the '<' character, hexadecimal value 0x3C. Line 71, position 2.
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   at System.Xml.XmlTextReaderImpl.ParseElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Configuration.XmlUtil.CopyXmlNode(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopyElement(XmlUtilWriter utilWriter)
+   at System.Configuration.XmlUtil.CopySection()
+   at System.Configuration.BaseConfigurationRecord.ScanSectionsRecursive(XmlUtil xmlUtil, String parentConfigKey, Boolean inLocation, String locationSubPath, OverrideModeSetting overrideMode, Boolean skipInChildApps)
+   at System.Configuration.BaseConfigurationRecord.ScanSections(XmlUtil xmlUtil)
+   at System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- End of inner exception stack trace ---
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at DotNetNuke.Common.Utilities.Config.GetConnectionString()
+   at DotNetNuke.Data.DataProvider.get_ConnectionString()
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-11-10 21:05:59,454 [ASEN-POD079][Thread:Scheduler Thread][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Access is denied
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.LoadQueueFromTimer()
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.Start()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2015-11-10 21:05:59,658 [ASEN-POD079][Thread:Scheduler Thread][ERROR] DotNetNuke.Services.Log.EventLog.DBLoggingProvider - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Access is denied
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.AddLog(String logGUID, String logTypeKey, Int32 logUserID, String logUserName, Int32 logPortalID, String logPortalName, DateTime logCreateDate, String logServerName, String logProperties, Int32 logConfigID, ExceptionInfo exception)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.WriteLog(LogQueueItem logQueueItem)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2015-11-10 21:10:42,008 [ASEN-POD079][Thread:27][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NotSupportedException: The given path's format is not supported.
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at BusinessDataLayer.CommonFn.UploadFile(FileUpload UploadImages, String fileName, String type, String path) in d:\Jaslok\Website\BusinessDataLayer\CommonFn.cs:line 35
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 173
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:10:42,066 [ASEN-POD079][Thread:27][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.NotSupportedException: The given path's format is not supported.
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at BusinessDataLayer.CommonFn.UploadFile(FileUpload UploadImages, String fileName, String type, String path) in d:\Jaslok\Website\BusinessDataLayer\CommonFn.cs:line 35
+   at DesktopModules_JaslokAdmin_ManageUsers.btnUpload_Click(Object sender, EventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 173
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:19:25,139 [ASEN-POD079][Thread:21][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:19:25,157 [ASEN-POD079][Thread:21][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:19:25,183 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:19:25,185 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:19:25,202 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 21:20:21,816 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:20:21,819 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:20:21,846 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:20:21,849 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 21:20:21,863 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 22:50:48,870 [ASEN-POD079][Thread:27][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx(130): error CS1061: 'ASP.desktopmodules_jaslokadmin_manageusers_ascx' does not contain a definition for 'dgUsers_ItemCommand' and no extension method 'dgUsers_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_manageusers_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-10 22:54:03,255 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:03,273 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:03,301 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:03,304 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:03,343 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 22:54:16,550 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:16,553 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:16,569 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:16,572 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:54:16,584 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 22:55:21,364 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:55:21,369 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:55:21,393 [ASEN-POD079][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:55:21,396 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 22:55:21,406 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2015-11-10 23:29:14,963 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 108
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:29:14,999 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 108
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:31:04,775 [ASEN-POD079][Thread:16][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:31:04,782 [ASEN-POD079][Thread:16][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:32:41,795 [ASEN-POD079][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:32:41,800 [ASEN-POD079][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:36:43,579 [ASEN-POD079][Thread:29][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentOutOfRangeException: 'ddlUserType' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+   at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 104
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:36:43,585 [ASEN-POD079][Thread:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.ArgumentOutOfRangeException: 'ddlUserType' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+   at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 104
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:40:48,149 [ASEN-POD079][Thread:54][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:40:48,153 [ASEN-POD079][Thread:54][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:42:01,036 [ASEN-POD079][Thread:56][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:42:01,039 [ASEN-POD079][Thread:56][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 103
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:46:27,932 [ASEN-POD079][Thread:11][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 109
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:46:27,938 [ASEN-POD079][Thread:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=101&error=An unexpected error has occurred&content=0
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at DesktopModules_JaslokAdmin_ManageUsers.dgUsers_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageUsers.ascx.cs:line 109
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-10 23:50:56,302 [ASEN-POD079][Thread:Scheduler Thread][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Access is denied
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.LoadQueueFromTimer()
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.Start()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2015-11-10 23:50:56,438 [ASEN-POD079][Thread:Scheduler Thread][ERROR] DotNetNuke.Services.Log.EventLog.DBLoggingProvider - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Access is denied
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.AddLog(String logGUID, String logTypeKey, Int32 logUserID, String logUserName, Int32 logPortalID, String logPortalName, DateTime logCreateDate, String logServerName, String logProperties, Int32 logConfigID, ExceptionInfo exception)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.WriteLog(LogQueueItem logQueueItem)
+ClientConnectionId:00000000-0000-0000-0000-000000000000

@@ -1,0 +1,1906 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+  <item key="62a709970fe895ee9deb32dbbe31e6e1" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="c55f73bf8c39fc0a3b236359f912e9f8" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="76dbd8199d83607d35827b0a669d147b" file="" compression="" version="39">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="1ed77da3b5d5bf6f013df92d95c51a93" file="" compression="" version="39">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="62a709970fe895ee9deb32dbbe31e6e1" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_ceffe9253a3f46c4a053e3c7eff7667b.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="c55f73bf8c39fc0a3b236359f912e9f8" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_27184a714283449089f944d712edc533.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="76dbd8199d83607d35827b0a669d147b" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_a8f76579c7eb41d0be3e55588b56f431.cdJ" compression="gzip" version="39">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="1ed77da3b5d5bf6f013df92d95c51a93" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_2863330915cf4403ba487752d628cdca.cdJ" compression="gzip" version="39">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="58e5ff292d36d3cec407eb5d61e01348" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="8cc0d79d5833804bd7eaa2c79e9bf6aa" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="bcbc6a746e061cfea9dd373be75affe6" file="" compression="" version="39">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/js/dnncore.js" />
+    </files>
+  </item>
+  <item key="58e5ff292d36d3cec407eb5d61e01348" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_a172b181dadd4d9b8a83638ff66f6414.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="8cc0d79d5833804bd7eaa2c79e9bf6aa" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_f315aa0351784c0d99c39b0129b0ddfa.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="bcbc6a746e061cfea9dd373be75affe6" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_c0bfa0271a2b4a7b8bea6923c0900e74.cdJ" compression="gzip" version="39">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/js/dnncore.js" />
+    </files>
+  </item>
+  <item key="6a11376cb640e28c44bcb5796150c649" file="" compression="" version="39">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+    </files>
+  </item>
+  <item key="6a11376cb640e28c44bcb5796150c649" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_32b1e383cb70497a9178418a47679a2f.cdJ" compression="gzip" version="39">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+    </files>
+  </item>
+  <item key="b10f4e996d40e28380a889e3aac496d3" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="d8f226589fe809e4bce253e69b8404f5" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="717ffc8f4bcc55ce4d2b26db2d9f41d3" file="" compression="" version="39">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="b10f4e996d40e28380a889e3aac496d3" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_1d00b6324afd43adb76ae70b4b27837a.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="d8f226589fe809e4bce253e69b8404f5" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_488b961b2c79434ebc5a90c49b0fc4aa.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="717ffc8f4bcc55ce4d2b26db2d9f41d3" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_e6d2851bfbf84797a99a10b2cb0d674b.cdJ" compression="gzip" version="39">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="745346020aa5609a1b23b3903f5ada97" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="46335eb65af91fcd1d6bf91c02df0a89" file="" compression="" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="4680ab76575b8a40c17bf4ef8040fd19" file="" compression="" version="39">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="745346020aa5609a1b23b3903f5ada97" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_cf8b74126c0047fb900f342c8afd7091.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="46335eb65af91fcd1d6bf91c02df0a89" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_3e9f120a645d43f884d8b438f3b75a0d.cdC" compression="gzip" version="39">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="4680ab76575b8a40c17bf4ef8040fd19" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\39_f06a00d7508d44c1ba5f2104bd29b8b0.cdJ" compression="gzip" version="39">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="ecb9200cbc7770d129f44b597fff68ed" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="78a725320faaa45b72fe8e51be42d701" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="97276867a9f9e9b4e136dd2992e16826" file="" compression="" version="40">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="20c5afcc9805c5461367d8f0af513b17" file="" compression="" version="40">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="ecb9200cbc7770d129f44b597fff68ed" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_0fa767473f244a8eb651c9dbaa7474c5.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="97276867a9f9e9b4e136dd2992e16826" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_e7a35bca268647dbb314179f40c9a7a0.cdJ" compression="gzip" version="40">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="78a725320faaa45b72fe8e51be42d701" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_7d039d43123644e6bfe1fa5271d5ea48.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="20c5afcc9805c5461367d8f0af513b17" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_1d0c994ffe594440b2674404e07ee3de.cdJ" compression="gzip" version="40">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="2ae52ea596bd4641e6ca30fef4603c70" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="1248be817f2fc0e98bd9b41e53817d42" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="39e4134fc3170d363d6723718c2c99b9" file="" compression="" version="40">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="2ae52ea596bd4641e6ca30fef4603c70" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_40946f55f88c4a1e89060cc44e87599c.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="1248be817f2fc0e98bd9b41e53817d42" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_ff1abe27394b497f979c88af5eda398e.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="39e4134fc3170d363d6723718c2c99b9" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_5d715e7b3a264b828ece1874027b0905.cdJ" compression="gzip" version="40">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="b19a95fbcc343ce44abf2bbfa10ba886" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="77b2a9c17de3fa915bb812963e5a3b9c" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="72f0f8e802c07c003880832c4a44c037" file="" compression="" version="40">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/js/dnncore.js" />
+    </files>
+  </item>
+  <item key="370b4755512ed2f38a503cfe19d8e2d6" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="76829b1cb42151e324eed5587b38661d" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="3c12e4f2c99e547a8052f29898a2ea3b" file="" compression="" version="40">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="370b4755512ed2f38a503cfe19d8e2d6" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_98415b8cce4442e09501dd963a0ced35.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="76829b1cb42151e324eed5587b38661d" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_35306d0a586943cc903dcfce02c736d0.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="3c12e4f2c99e547a8052f29898a2ea3b" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_9fe4af49467346e7918542d777786b3b.cdJ" compression="gzip" version="40">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="d7f5433a7509153b70b23ab4272d6ad0" file="" compression="" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Resources/Shared/components/CountriesRegions/dnn.CountriesRegions.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="e4fc1c2e9006aa54b23e97ed73a1d85d" file="" compression="" version="40">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/DesktopModules/Admin/RadEditorProvider/js/overrideCSS.js" />
+      <file name="/DesktopModules/Admin/RadEditorProvider/js/RegisterDialogs.js" />
+      <file name="/DesktopModules/Admin/RadEditorProvider/js/ClientScripts.js" />
+      <file name="/Resources/Shared/components/CountriesRegions/dnn.CountriesRegions.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+    </files>
+  </item>
+  <item key="d7f5433a7509153b70b23ab4272d6ad0" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_f25dd2b6f22b421d8becc5eff5c6dca9.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Resources/Shared/components/CountriesRegions/dnn.CountriesRegions.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="77b2a9c17de3fa915bb812963e5a3b9c" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_6a0fa1eab76a4720902b160acb620185.cdC" compression="gzip" version="40">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="e4fc1c2e9006aa54b23e97ed73a1d85d" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\40_1910666d81ed41c887d965a30b07bde4.cdJ" compression="gzip" version="40">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/DesktopModules/Admin/RadEditorProvider/js/overrideCSS.js" />
+      <file name="/DesktopModules/Admin/RadEditorProvider/js/RegisterDialogs.js" />
+      <file name="/DesktopModules/Admin/RadEditorProvider/js/ClientScripts.js" />
+      <file name="/Resources/Shared/components/CountriesRegions/dnn.CountriesRegions.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+    </files>
+  </item>
+  <item key="0709b83bbdf88cfc6d2e0e41e9b274de" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="1f2ed39cd7c5b30459443a1f04494201" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="c5af8ae0886043bf0d42193857334c7f" file="" compression="" version="41">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="a186a84987d8fd66c580f1681b90b6f1" file="" compression="" version="41">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="0709b83bbdf88cfc6d2e0e41e9b274de" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_eedc7400a4874516847abb931bc59c37.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="1f2ed39cd7c5b30459443a1f04494201" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_b341eb038af54fdb99e60edcb2c4b100.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="c5af8ae0886043bf0d42193857334c7f" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_f9a5d88be03e4285aaf75977d1e92fc9.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="a186a84987d8fd66c580f1681b90b6f1" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_a5f5ecaa114a49d7b9bf854c8e017770.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="b052791e626a5c5d06685ac389788c5f" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="bfc3c854c309cd99ea37bee661fd81ed" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="479a91c50ce6138d408a4dc96b5ec0df" file="" compression="" version="41">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="b052791e626a5c5d06685ac389788c5f" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_9bea536220004f3d93c9f3cd1b397940.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="bfc3c854c309cd99ea37bee661fd81ed" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_9210319bb1424fdb8238d3217b1ce6e7.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="479a91c50ce6138d408a4dc96b5ec0df" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_8203b297a0944e32a85b2888c995a3c7.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="5c17e632f4b6afd9a18a1b9f0958b0fb" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="41341e69063c82a857d95ab0776fde0f" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="53393075224a61aad2fd833c8a4b5182" file="" compression="" version="41">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/js/dnncore.js" />
+    </files>
+  </item>
+  <item key="c5364c6fb152bb76ad9489e6674ee93c" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="6ad0bea8bca3b83ed4c7b353697d009f" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="3bb8ba3ea2dbcfef4910feaf8e93005b" file="" compression="" version="41">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="c5364c6fb152bb76ad9489e6674ee93c" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_0c1389820b6947389698273ec72e242c.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="6ad0bea8bca3b83ed4c7b353697d009f" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_b83172f2f59d47e4a963220e8b751506.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="3bb8ba3ea2dbcfef4910feaf8e93005b" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_677e1fa85ccb4ff0a12853636eb7679a.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="d921512f0cff6774a8f9e7bfb294529c" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/SQL/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="55ccd6a0014ca6638f426473494f07aa" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="f4823a2dcfe3c9cc7786112d858a475f" file="" compression="" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/theme/dnn-sql.css" />
+    </files>
+  </item>
+  <item key="db682aa330913ad65c48a5f85cbd073c" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="321b681b3666ceaa0f115d156efc37ec" file="" compression="" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/lib/codemirror.css" />
+    </files>
+  </item>
+  <item key="14cf9c5fdb243880c7b060fad6ee7ba3" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+    </files>
+  </item>
+  <item key="f71340810320e39b67b2205a3860a331" file="" compression="" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/lib/codemirror.js" />
+      <file name="/Resources/Shared/components/CodeEditor/mode/sql/sql.js" />
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="55ccd6a0014ca6638f426473494f07aa" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_7b18c334c4f9434a9458090509aca7c4.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="d921512f0cff6774a8f9e7bfb294529c" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_3ca250b3d13d4146bb3587475ee5f5b3.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/SQL/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="f4823a2dcfe3c9cc7786112d858a475f" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_44fc12293b324d09b544605c1dd0671d.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/theme/dnn-sql.css" />
+    </files>
+  </item>
+  <item key="db682aa330913ad65c48a5f85cbd073c" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_a88c31ba69564634b7fce0baf26a5bc1.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="14cf9c5fdb243880c7b060fad6ee7ba3" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_6f299ec4e76d42e5b7be60ed8102123a.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+    </files>
+  </item>
+  <item key="321b681b3666ceaa0f115d156efc37ec" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_0083ca8912a44d9eb2b2323c583e936e.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/lib/codemirror.css" />
+    </files>
+  </item>
+  <item key="f71340810320e39b67b2205a3860a331" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_dab9dc267095456da764a30f27ebb47c.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/lib/codemirror.js" />
+      <file name="/Resources/Shared/components/CodeEditor/mode/sql/sql.js" />
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="eef6033f93a993cb494728498d39fcab" file="" compression="" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/lib/codemirror.js" />
+      <file name="/Resources/Shared/components/CodeEditor/mode/sql/sql.js" />
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="eef6033f93a993cb494728498d39fcab" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_f8df1a3f9b87488cae1a1dfaffbd7e1c.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/Resources/Shared/components/CodeEditor/lib/codemirror.js" />
+      <file name="/Resources/Shared/components/CodeEditor/mode/sql/sql.js" />
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="cf579bf5cb42864dffa91547324ed9ec" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Authentication/module.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="8ea00a40fe6f652f35006d9452822a0e" file="" compression="" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="8ceaa7ade461c6d2524204471474228b" file="" compression="" version="41">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+    </files>
+  </item>
+  <item key="cf579bf5cb42864dffa91547324ed9ec" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_24a1a9e475f04cdfadb58b486c1d7473.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Authentication/module.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="8ceaa7ade461c6d2524204471474228b" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_041b0d31765b4014ae5636996794d089.cdJ" compression="gzip" version="41">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+    </files>
+  </item>
+  <item key="8ea00a40fe6f652f35006d9452822a0e" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\41_bd4381c03fb244549848f5f986d0204c.cdC" compression="gzip" version="41">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="0fc945482f50bacb3aaa4b697b9448c0" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="e82a33900f806439f730fe9f05d174eb" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="adac11e6a43c7dc0d39b6b816ae5ec1f" file="" compression="" version="42">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="4b4833e34c665c61b4436d91c657c2d9" file="" compression="" version="42">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="0fc945482f50bacb3aaa4b697b9448c0" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_438ad9fb65bc4a6dac7d0a4cdf27fac0.cdC" compression="gzip" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+    </files>
+  </item>
+  <item key="adac11e6a43c7dc0d39b6b816ae5ec1f" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_2b642ddbe6d74754a05c975abdd8bddb.cdJ" compression="gzip" version="42">
+    <files>
+      <file name="/Resources/libraries/jQuery/01_09_01/jquery.js" />
+      <file name="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js" />
+      <file name="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js" />
+    </files>
+  </item>
+  <item key="e82a33900f806439f730fe9f05d174eb" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_36d7e5aba0114619b78707f127eba934.cdC" compression="gzip" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+    </files>
+  </item>
+  <item key="4b4833e34c665c61b4436d91c657c2d9" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_f1ab5109e6f04f6fbcefbbe2d01b49cc.cdJ" compression="gzip" version="42">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+  <item key="ed8804cd0e7dbc1cdb517fe8257c4b33" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="62d2eee75c2f7808843b4026da091af0" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="2e8a94865890436fbd433fac84d86199" file="" compression="" version="42">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="7cb7aaf54b14f4f32fb80829a4cc28e8" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="880b918f608d65e9f6d2ae8c65400549" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="d573244ed1940989dd2709a19648c584" file="" compression="" version="42">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="7cb7aaf54b14f4f32fb80829a4cc28e8" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_b46152c7956842649a68f5995cb96802.cdC" compression="gzip" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/admin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/admin/ControlPanel/ControlBar.css" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.css" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.css" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.DnnBlack.css" />
+      <file name="/Resources/Shared/components/DropDownList/dnn.DropDownList.css" />
+    </files>
+  </item>
+  <item key="880b918f608d65e9f6d2ae8c65400549" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_7a1666af304a4d2287ccf19a6cc26725.cdC" compression="gzip" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+    </files>
+  </item>
+  <item key="d573244ed1940989dd2709a19648c584" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_1f8e3c7b092c4c018f8a4e5b7dbc9eef.cdJ" compression="gzip" version="42">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+    </files>
+  </item>
+  <item key="7e44d0be2ec84b01d043ae3bdb0ebf12" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/Gravity/skin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="f35c1d6ec325bb141ae2ec0badfbf489" file="" compression="" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="8517fd983d8b01d083998e36bad782ab" file="" compression="" version="42">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/js/dnncore.js" />
+    </files>
+  </item>
+  <item key="ed8804cd0e7dbc1cdb517fe8257c4b33" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_eaae3979549c41168aa0af62cb485e5b.cdC" compression="gzip" version="42">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="62d2eee75c2f7808843b4026da091af0" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_124b27e681db48b4a3c866e7972af4c6.cdC" compression="gzip" version="42">
+    <files>
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carouseller.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/fonts.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/specialties-style.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/datetimepicker.min.css" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css" />
+    </files>
+  </item>
+  <item key="2e8a94865890436fbd433fac84d86199" file="E:\websites\stg.jaslokhospital.net\public_html\App_Data\ClientDependency\42_785e89354be04fa2b3ab6d3ed8824dc2.cdJ" compression="gzip" version="42">
+    <files>
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+    </files>
+  </item>
+  <item key="969f85df4609c3341319f40d7499f38a" file="" compression="" version="42">
+    <files>
+      <file name="/js/dnn.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.DynamicTreeView.js" />
+      <file name="/Resources/Shared/scripts/dnn.DataStructures.js" />
+      <file name="/Resources/Shared/scripts/jquery/jquery.mousewheel.js" />
+      <file name="/Resources/Shared/scripts/jquery/dnn.jScrollBar.js" />
+      <file name="/Resources/Shared/scripts/TreeView/dnn.TreeView.js" />
+      <file name="/Resources/Shared/Components/DropDownList/dnn.DropDownList.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/carouseller.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.jcarousel.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery.scrollto.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/lightslider.js" />
+      <file name="/Portals/_default/Skins/JaslokSkin/Styles/js/datetimepicker.min.js" />
+      <file name="/Resources/Shared/scripts/dnn.jquery.extensions.js" />
+      <file name="/resources/shared/scripts/dnn.controlBar.js" />
+      <file name="/Resources/Search/SearchSkinObjectPreview.js" />
+      <file name="/Portals/_default/Skins/Gravity/bootstrap/js/bootstrap.min.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/scripts.js" />
+      <file name="/Portals/_default/Skins/Gravity/js/doubletaptogo.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.iframe-transport.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/Resources/Shared/Scripts/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.fileupload.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/scripts/dnn.extensions.js" />
+      <file name="/Resources/Shared/scripts/dnn.WebResourceUrl.js" />
+      <file name="/Resources/Shared/Components/GettingStarted/dnn.GettingStarted.js" />
+      <file name="/Resources/Shared/Components/FileUpload/dnn.FileUpload.js" />
+    </files>
+  </item>
+</map>

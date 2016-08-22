@@ -1,0 +1,2 @@
+2015-09-25 03:05:16,672 [AUXAWEB][Thread:11][ERROR] DotNetNuke.Services.Installer.InstallerInfo - File load failed, aborting
+System.Exception: File load failed, aborting

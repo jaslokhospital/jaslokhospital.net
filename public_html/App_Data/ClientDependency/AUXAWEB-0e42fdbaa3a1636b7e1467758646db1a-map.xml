@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+  <item key="6102841ba2ba0201cb88ec7639ba6157" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+    </files>
+  </item>
+  <item key="ba6870a7077bec8a681ce0e7ff8cc2dd" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="bd6aa8816804b0b1771dc4556e35d5aa" file="" compression="" version="35">
+    <files>
+      <file name="/Resources/Shared/Scripts/jquery/jquery.min.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery-ui.min.js" />
+    </files>
+  </item>
+  <item key="8a78b6ddee7b58ae00603d66841f71e5" file="" compression="" version="35">
+    <files>
+      <file name="/Resources/Search/Search.js" />
+    </files>
+  </item>
+  <item key="ba6870a7077bec8a681ce0e7ff8cc2dd" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_78a0dd918242459bba4390ffb6f2326d.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/HostSettings/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="bd6aa8816804b0b1771dc4556e35d5aa" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_fe795e66dfbc4dd4861e79095068ce6e.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/Resources/Shared/Scripts/jquery/jquery.min.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery-ui.min.js" />
+    </files>
+  </item>
+  <item key="6102841ba2ba0201cb88ec7639ba6157" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_c8967fe2ab6243c3bb54c4c7c8034ce2.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+    </files>
+  </item>
+  <item key="8a78b6ddee7b58ae00603d66841f71e5" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_674f825a8f8f4124854105d3ad84de29.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/Resources/Search/Search.js" />
+    </files>
+  </item>
+  <item key="de15fca31e963ad470f5c18646e80cb6" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="82a209f08de78f2b1fa9e5d0a745d695" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/Banner.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="82a209f08de78f2b1fa9e5d0a745d695" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_66a395cc7f0e4e7ea177e5d417f7c84f.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/Banner.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="de15fca31e963ad470f5c18646e80cb6" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_e19b0d401e154e6d924b765d93006293.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="584c9a73622bae0945fb242ca33b3ae1" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+      <file name="/DesktopModules/Admin/Extensions/Scripts/Gallery.js" />
+      <file name="/Resources/Shared/Scripts/json2.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.tmpl.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+    </files>
+  </item>
+  <item key="a6ed9c58bc80bd582187cef32d2ee112" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Extensions/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="a6ed9c58bc80bd582187cef32d2ee112" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_b5ae9d3dd2274af0a99c7cdb5da49a19.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Extensions/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="584c9a73622bae0945fb242ca33b3ae1" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_7ae9bc5f766644edbf54e00080f29409.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+      <file name="/DesktopModules/Admin/Extensions/Scripts/Gallery.js" />
+      <file name="/Resources/Shared/Scripts/json2.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.tmpl.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+    </files>
+  </item>
+  <item key="e41bcead0260607abead41df62dda68c" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="2c7b42363abcc0ae52ff0f47d62220dd" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Extensions/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="2c7b42363abcc0ae52ff0f47d62220dd" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_7a5e77dcb6ae4e23834b5d5ff202f843.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Extensions/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="e41bcead0260607abead41df62dda68c" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_b7d96990eb474bbf85cad2e314338a31.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="4ebaf84c557405cffa1be5e81ff38670" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="68509c13dc2f200f7b720a0cfe8323fb" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Authentication/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="68509c13dc2f200f7b720a0cfe8323fb" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_42fae5ede38a4f9fbeded3fbddc74668.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Authentication/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="4ebaf84c557405cffa1be5e81ff38670" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_f02cfa5888bd4e628b87d0fcfddc122a.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="49e0e550277bd5320da47668ae36e388" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+    </files>
+  </item>
+  <item key="7bfda8ab2a3623af6860dd7abbc1901b" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/RecycleBin/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="7bfda8ab2a3623af6860dd7abbc1901b" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_26f4a62664d94c92b7884c2de3a3eade.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/RecycleBin/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="49e0e550277bd5320da47668ae36e388" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_91ba4fb2721b4f7699c57afdff6fddd3.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+    </files>
+  </item>
+  <item key="ed653135135c3cf28a54922d5db822fe" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Authentication/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="ed653135135c3cf28a54922d5db822fe" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_73c47f22296e4781a24fbb2e8b49806f.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Authentication/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="2f64c3cb1f4409eec95227713e51eb3b" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/desktopmodules/admin/console/jquery.console.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+    </files>
+  </item>
+  <item key="4adc594abed0af624ae1a3a6dde909c5" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Console/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="4adc594abed0af624ae1a3a6dde909c5" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_e2b932d33a36444e81436266ce24c6ec.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Console/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="2f64c3cb1f4409eec95227713e51eb3b" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_7699eca1b0e749d4bb8a6f488fe4ab82.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/desktopmodules/admin/console/jquery.console.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+    </files>
+  </item>
+  <item key="c135163dc4ea70fc168c84eae71db7b9" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="c135163dc4ea70fc168c84eae71db7b9" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_cd354cea84c34ab29a655b0764908cbb.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="779e3a4e007044960ce2bc230b4a10b5" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnn.util.tablereorder.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Resources/Shared/Components/Tokeninput/jquery.tokeninput.js" />
+    </files>
+  </item>
+  <item key="cbd9edbe6cc269f820ff39a37c60b5ad" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Portals/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/Tokeninput/Themes/token-input-facebook.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="cbd9edbe6cc269f820ff39a37c60b5ad" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_fd5a7022b8f54e40b516cf29c3264d7b.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Portals/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Resources/Shared/Components/Tokeninput/Themes/token-input-facebook.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="779e3a4e007044960ce2bc230b4a10b5" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_ff7689a7677d41e6a098ea0a424305a7.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnn.util.tablereorder.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Resources/Shared/Components/Tokeninput/jquery.tokeninput.js" />
+    </files>
+  </item>
+  <item key="6c861339b3b09d221f03dfd25c3670f7" file="" compression="" version="35">
+    <files>
+      <file name="/js/dnn.xmlhttp.js" />
+      <file name="/js/dnn.xmlhttp.jsxmlhttprequest.js" />
+      <file name="/js/dnn.controls.js" />
+      <file name="/js/dnn.controls.dnnlabeledit.js" />
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+      <file name="/Resources/Shared/Scripts/initTooltips.js" />
+      <file name="/js/dnn.servicesframework.js" />
+      <file name="/js/dnn.dom.positioning.js" />
+      <file name="/Resources/Shared/Components/Tokeninput/jquery.tokeninput.js" />
+    </files>
+  </item>
+  <item key="06f607bd638b626df9b552066d3e5b5e" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Scheduler/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="06f607bd638b626df9b552066d3e5b5e" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_1e76b3d69ffc40a094ff626fb17bb98e.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Scheduler/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="a5895b5022eb14050eb176188c8515c8" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Scheduler/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="a5895b5022eb14050eb176188c8515c8" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_62474fb39f9c46e284115c76530c956d.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Scheduler/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="fed3e8f8f01c7bdb385a925041d6eedc" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Portals/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="fed3e8f8f01c7bdb385a925041d6eedc" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_d1a57991fea949a293c5ae596b2df233.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Portals/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="0ae4b221f6126044de8939bb533cd6d4" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="0ae4b221f6126044de8939bb533cd6d4" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_2a63d4432b6340bbbce4b37e28bd952e.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="bc4b304847bd059f607e5c82f0bf3e99" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Dashboard/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="bc4b304847bd059f607e5c82f0bf3e99" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_38b8ec8b6bd843c0b5c82ede31481647.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/Dashboard/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="f42b22a2a8389fa4f12a7f21b48758ad" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/LogViewer/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="f42b22a2a8389fa4f12a7f21b48758ad" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_1bdaf48a10db47f0ae113306ea7c73d7.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/LogViewer/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Containers/DarkKnight/container.css" />
+      <file name="/Portals/0/portal.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/dnnmega.css" />
+      <file name="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css" />
+      <file name="/admin/ControlPanel/module.css" />
+    </files>
+  </item>
+  <item key="a7731f73e796283c061023c24595611d" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/LogViewer/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="a7731f73e796283c061023c24595611d" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_93a0f5b672eb46a198b1cec0e7bd6724.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/LogViewer/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="6d731c7f5141924478249a532afb8217" file="" compression="" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/LogViewer/module.css" />
+      <file name="/Admin/Modules/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="6d731c7f5141924478249a532afb8217" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_01f1d12d920340e6aefd60a166e26871.cdC" compression="gzip" version="35">
+    <files>
+      <file name="/Portals/_default/default.css" />
+      <file name="/DesktopModules/Admin/LogViewer/module.css" />
+      <file name="/Admin/Modules/module.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/skin.css" />
+      <file name="/Portals/_default/Skins/DarkKnight/popUpSkin.css" />
+      <file name="/Portals/0/portal.css" />
+    </files>
+  </item>
+  <item key="68f6255f6e11613be58954f7c417a336" file="" compression="" version="35">
+    <files>
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="68f6255f6e11613be58954f7c417a336" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_3f5d70ef41ee465ea07ed19c734b5dbe.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="4e97313e0c41c58684fca593a050dcf9" file="" compression="" version="35">
+    <files>
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/desktopmodules/admin/console/jquery.console.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+  <item key="4e97313e0c41c58684fca593a050dcf9" file="D:\Web Sites\jaslok.dev.asentechllc.net\App_Data\ClientDependency\35_7896462b149c466bbda9a4579b655c69.cdJ" compression="gzip" version="35">
+    <files>
+      <file name="/admin/menus/dnnactions/dnnactions.debug.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/jquery.cycle.min.js" />
+      <file name="/Portals/_default/Skins/DarkKnight/DNNMega/jquery.dnnmega.debug.js" />
+      <file name="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
+      <file name="/js/dnncore.js" />
+      <file name="/js/dnn.modalpopup.js" />
+      <file name="/desktopmodules/admin/console/jquery.console.js" />
+      <file name="/Resources/ControlPanel/ControlPanel.debug.js" />
+      <file name="/js/dnn.jquery.js" />
+    </files>
+  </item>
+</map>

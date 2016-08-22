@@ -1,0 +1,548 @@
+2015-12-19 00:46:11,670 [ASEN-POD079][Thread:8][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 00:46:12,192 [ASEN-POD079][Thread:14][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 00:46:12,362 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 00:48:07,985 [ASEN-POD079][Thread:15][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 00:48:08,028 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 00:48:24,865 [ASEN-POD079][Thread:15][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 00:48:25,023 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 02:12:34,795 [ASEN-POD079][Thread:15][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 02:53:20,949 [ASEN-POD079][Thread:24][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 02:53:21,040 [ASEN-POD079][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 03:01:29,913 [ASEN-POD079][Thread:39][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15043;  ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetUserByUsername(Int32 portalId, String username)
+   at DotNetNuke.Security.Membership.AspNetMembershipProvider.GetUserByUserName(Int32 portalId, String username)
+   at DotNetNuke.Entities.Users.UserController.GetCachedUserByPortalCallBack(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:a38c3d23-b737-48d7-9b93-1cdcd7d1e103
+2015-12-19 03:01:29,979 [ASEN-POD079][Thread:39][ERROR] DotNetNuke.Services.Log.EventLog.DBLoggingProvider - System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15043;  ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.AddLog(String logGUID, String logTypeKey, Int32 logUserID, String logUserName, Int32 logPortalID, String logPortalName, DateTime logCreateDate, String logServerName, String logProperties, Int32 logConfigID, ExceptionInfo exception)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.WriteLog(LogQueueItem logQueueItem)
+ClientConnectionId:a38c3d23-b737-48d7-9b93-1cdcd7d1e103
+2015-12-19 03:01:29,997 [ASEN-POD079][Thread:39][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.WriteLog(LogQueueItem logQueueItem)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2015-12-19 03:02:03,313 [ASEN-POD079][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=14997;  ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.AddScheduleHistory(Int32 ScheduleID, DateTime StartDate, String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.AddScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:8c40c5cf-5c8b-42ba-80a3-135f9d337af0
+2015-12-19 03:13:58,629 [ASEN-POD079][Thread:39][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\HomePageSkin.ascx(14): error CS0433: The type 'ASP.jscontrols_common_header_ascx' exists in both 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_pko5sp4a.dll' and 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_hndtgpuf.dll'
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-19 03:14:01,769 [ASEN-POD079][Thread:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\HomePageSkin.ascx(14): error CS0433: The type 'ASP.jscontrols_common_header_ascx' exists in both 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_pko5sp4a.dll' and 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_hndtgpuf.dll'
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-19 03:14:03,509 [ASEN-POD079][Thread:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\HomePageSkin.ascx(14): error CS0433: The type 'ASP.jscontrols_common_header_ascx' exists in both 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_pko5sp4a.dll' and 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_hndtgpuf.dll'
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-19 03:14:04,878 [ASEN-POD079][Thread:39][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\HomePageSkin.ascx(14): error CS0433: The type 'ASP.jscontrols_common_header_ascx' exists in both 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_pko5sp4a.dll' and 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_hndtgpuf.dll'
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-19 03:14:08,474 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\HomePageSkin.ascx(14): error CS0433: The type 'ASP.jscontrols_common_header_ascx' exists in both 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_pko5sp4a.dll' and 'c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\ddafbcb6\75dc6027\App_Web_hndtgpuf.dll'
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-19 06:11:48,351 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 06:35:26,678 [ASEN-POD079][Thread:39][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Age', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2331
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 115
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:d780cd6f-bbbf-4e8e-bd5b-050145864f39
+2015-12-19 06:35:26,725 [ASEN-POD079][Thread:39][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=An unexpected error has occurred&content=0
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Age', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2331
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 115
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:d780cd6f-bbbf-4e8e-bd5b-050145864f39
+2015-12-19 07:07:07,721 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:07:40,987 [ASEN-POD079][Thread:18][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:07:41,159 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:09:26,495 [ASEN-POD079][Thread:14][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:09:26,645 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:15:08,049 [ASEN-POD079][Thread:24][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:15:08,223 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:15:08,822 [ASEN-POD079][Thread:24][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 07:15:09,005 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:10:51,044 [ASEN-POD079][Thread:15][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:10:51,159 [ASEN-POD079][Thread:35][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:14:54,947 [ASEN-POD079][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:14:54,995 [ASEN-POD079][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:15:06,237 [ASEN-POD079][Thread:39][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:15:06,290 [ASEN-POD079][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:15:12,606 [ASEN-POD079][Thread:39][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:15:12,740 [ASEN-POD079][Thread:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:36:07,056 [ASEN-POD079][Thread:35][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:36:07,118 [ASEN-POD079][Thread:36][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:36:14,931 [ASEN-POD079][Thread:21][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:36:15,109 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:36:15,556 [ASEN-POD079][Thread:16][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:36:15,772 [ASEN-POD079][Thread:32][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:38:17,202 [ASEN-POD079][Thread:31][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:38:17,246 [ASEN-POD079][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-19 08:48:29,450 [ASEN-POD079][Thread:37][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpParseException: The tag contains duplicate 'MaxLength' attributes. ---> System.Web.HttpParseException: The tag contains duplicate 'MaxLength' attributes. ---> System.Web.HttpException: The tag contains duplicate 'MaxLength' attributes.
+   at System.Web.UI.TemplateParser.ProcessError(String message)
+   at System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-19 08:49:21,749 [ASEN-POD079][Thread:43][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Comments', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:556e01dc-35e3-46d7-913e-c38b9cb1f681
+2015-12-19 08:49:21,788 [ASEN-POD079][Thread:43][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Procedure+or+function+%27jh_Forms_SaveEstimate%27+expects+parameter+%27%40Comments%27%2c+which+was+not+supplied.&content=0
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Comments', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:556e01dc-35e3-46d7-913e-c38b9cb1f681
+2015-12-19 08:51:31,260 [ASEN-POD079][Thread:26][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Comments', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:b5cffe65-9233-4a6f-86b1-bb0f5b520eac
+2015-12-19 08:51:31,263 [ASEN-POD079][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Procedure+or+function+%27jh_Forms_SaveEstimate%27+expects+parameter+%27%40Comments%27%2c+which+was+not+supplied.&content=0
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Comments', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:b5cffe65-9233-4a6f-86b1-bb0f5b520eac
+2015-12-19 08:51:46,057 [ASEN-POD079][Thread:34][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Error converting data type nvarchar to int.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:450284f3-370a-4465-a262-f9634d09977f
+2015-12-19 08:51:46,061 [ASEN-POD079][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Error+converting+data+type+nvarchar+to+int.&content=0
+System.Data.SqlClient.SqlException (0x80131904): Error converting data type nvarchar to int.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:450284f3-370a-4465-a262-f9634d09977f
+2015-12-19 08:53:28,726 [ASEN-POD079][Thread:34][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Failed to convert parameter value from a String to a Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:53:28,781 [ASEN-POD079][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Failed+to+convert+parameter+value+from+a+String+to+a+Int32.&content=0
+System.OverflowException: Failed to convert parameter value from a String to a Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:55:45,522 [ASEN-POD079][Thread:34][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Failed to convert parameter value from a String to a Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:55:45,527 [ASEN-POD079][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Failed+to+convert+parameter+value+from+a+String+to+a+Int32.&content=0
+System.OverflowException: Failed to convert parameter value from a String to a Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:58:03,663 [ASEN-POD079][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:58:03,699 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Value+was+either+too+large+or+too+small+for+an+Int32.&content=0
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:58:37,903 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 08:58:37,907 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Value+was+either+too+large+or+too+small+for+an+Int32.&content=0
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:00:50,293 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:00:50,329 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Value+was+either+too+large+or+too+small+for+an+Int32.&content=0
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:01:35,271 [ASEN-POD079][Thread:21][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:01:35,275 [ASEN-POD079][Thread:21][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Value+was+either+too+large+or+too+small+for+an+Int32.&content=0
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:02:33,253 [ASEN-POD079][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Value+was+either+too+large+or+too+small+for+an+Int32.&content=0
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 111
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:12:44,266 [ASEN-POD079][Thread:15][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.ValidateCaptcha(Object sender, ServerValidateEventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 78
+   at System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   at System.Web.UI.WebControls.BaseValidator.Validate()
+   at System.Web.UI.Page.Validate(String validationGroup)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:12:44,303 [ASEN-POD079][Thread:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.ValidateCaptcha(Object sender, ServerValidateEventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 78
+   at System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   at System.Web.UI.WebControls.BaseValidator.Validate()
+   at System.Web.UI.Page.Validate(String validationGroup)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:13:54,679 [ASEN-POD079][Thread:34][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.OverflowException: Failed to convert parameter value from a String to a Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:13:54,684 [ASEN-POD079][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Failed+to+convert+parameter+value+from+a+String+to+a+Int32.&content=0
+System.OverflowException: Failed to convert parameter value from a String to a Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 09:16:42,877 [ASEN-POD079][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Comments', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:fcad815f-4450-41c1-a7d4-63effe0ee611
+2015-12-19 09:16:42,915 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=165&error=Procedure+or+function+%27jh_Forms_SaveEstimate%27+expects+parameter+%27%40Comments%27%2c+which+was+not+supplied.&content=0
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'jh_Forms_SaveEstimate' expects parameter '@Comments', which was not supplied.
+   at BusinessDataLayer.BusinessLogic.SaveEstimate(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 2347
+   at Portals__default_Skins_JaslokSkin_FormsEstimateSkin.btnSubmitEstimateS_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FormsEstimateSkin.ascx.cs:line 118
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:fcad815f-4450-41c1-a7d4-63effe0ee611
+2015-12-19 23:10:10,079 [AUXAWEB][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:10:10,222 [AUXAWEB][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=161&error=An unexpected error has occurred&content=0
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:10:46,082 [AUXAWEB][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:10:46,084 [AUXAWEB][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=161&error=An unexpected error has occurred&content=0
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:11:51,422 [AUXAWEB][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:11:51,428 [AUXAWEB][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=161&error=An unexpected error has occurred&content=0
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:12:08,509 [AUXAWEB][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:12:08,517 [AUXAWEB][Thread:13][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=161&error=An unexpected error has occurred&content=0
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:12:28,268 [AUXAWEB][Thread:15][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-19 23:12:28,271 [AUXAWEB][Thread:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=161&error=An unexpected error has occurred&content=0
+System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at JSControls_MiddleContent_JaslokCareer.GetPositionsForListing(Int32 i) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 103
+   at JSControls_MiddleContent_JaslokCareer.btnSearch_Click(Object sender, EventArgs e) in d:\Web Sites\jaslok.dev.asentechllc.net\JSControls\MiddleContent\JaslokCareer.ascx.cs:line 55
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

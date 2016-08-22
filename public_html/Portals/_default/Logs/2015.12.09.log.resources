@@ -1,0 +1,206 @@
+2015-12-09 01:54:52,478 [ASEN-POD079][Thread:35][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.
+
+See http://go.microsoft.com/fwlink/?LinkID=314055 for more information. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 127.0.0.1
+	Port: 57412
+	Referer: http://local.newjaslok.com/
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36
+	ViewState: 5NKjPbdMXDNBwBZH9f1CCfNC5eQaBJ8PPX77D1Rn4D+3TCYbQLpBONRciQ2hsfDLgmWAFpXo2N7ttbm2daN5RUchTJOCTus3CDEsiTZY5THEJ+jcO0Te0WDBgZdnBqlVcDX2yVrd4g1d5iQAZa4T/wNNQ1rkVXrHBJ97UPYPsb+nn+QR7CPr5TuOjM0rNHFiMqnTeeRAKYSsr+CC0M6/PtS18o64VLfZ/Hhzcq7G9VyHf8OkUIICn2mLp5BC4H5IpfwcTrNSFbtGn247QfPOWY5Jz0BIZ3Fu1I0aF6gOWFDTHXhAgtwxrnWWUx3WPtl+tOlwD3Gsx/7VqatUtzxUe2O1uMzSyjPgR+cfsfPwj8nl7CrbfbQsRpRsx/uphC9lqShCKEz6conyulCHzBAIJCm4ND77/Io/c2N9cH8lIi/Hkq8lS6NSFqBvwQVyKBwLPwFPuWFhEk0uBpS0WVMe0x5zZffFG9u+4uG0aAVPQ9x8UCnepas1LjYL9B1dIln2aiJ+Turt5k5NqmHEt3QRYuS0NXsTFsajpcEZRMWD/q/zfy5oNHg2uGsYn0xp9ncQFajj8RYylrYAMwiGTq81KBAebo7USGxS0SIEGkkljxO6iPSUlgv5fFCxHcYKZ0NoSr85MwlxwsPikjENEkjXjYqgJlG/YkNlcLjlmD6KwLP41Qbcpow1aZmhTMr5GWHg0WnQAYV4N0nniGN6BH1ZVGl52WyFmttLjgDUhESYctXi6v504O/wXWbFicWFdKFZIF+TVo82RRMnQQA2n...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 01:54:52,507 [ASEN-POD079][Thread:35][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.
+
+See http://go.microsoft.com/fwlink/?LinkID=314055 for more information. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 127.0.0.1
+	Port: 57412
+	Referer: http://local.newjaslok.com/
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36
+	ViewState: 5NKjPbdMXDNBwBZH9f1CCfNC5eQaBJ8PPX77D1Rn4D+3TCYbQLpBONRciQ2hsfDLgmWAFpXo2N7ttbm2daN5RUchTJOCTus3CDEsiTZY5THEJ+jcO0Te0WDBgZdnBqlVcDX2yVrd4g1d5iQAZa4T/wNNQ1rkVXrHBJ97UPYPsb+nn+QR7CPr5TuOjM0rNHFiMqnTeeRAKYSsr+CC0M6/PtS18o64VLfZ/Hhzcq7G9VyHf8OkUIICn2mLp5BC4H5IpfwcTrNSFbtGn247QfPOWY5Jz0BIZ3Fu1I0aF6gOWFDTHXhAgtwxrnWWUx3WPtl+tOlwD3Gsx/7VqatUtzxUe2O1uMzSyjPgR+cfsfPwj8nl7CrbfbQsRpRsx/uphC9lqShCKEz6conyulCHzBAIJCm4ND77/Io/c2N9cH8lIi/Hkq8lS6NSFqBvwQVyKBwLPwFPuWFhEk0uBpS0WVMe0x5zZffFG9u+4uG0aAVPQ9x8UCnepas1LjYL9B1dIln2aiJ+Turt5k5NqmHEt3QRYuS0NXsTFsajpcEZRMWD/q/zfy5oNHg2uGsYn0xp9ncQFajj8RYylrYAMwiGTq81KBAebo7USGxS0SIEGkkljxO6iPSUlgv5fFCxHcYKZ0NoSr85MwlxwsPikjENEkjXjYqgJlG/YkNlcLjlmD6KwLP41Qbcpow1aZmhTMr5GWHg0WnQAYV4N0nniGN6BH1ZVGl52WyFmttLjgDUhESYctXi6v504O/wXWbFicWFdKFZIF+TVo82RRMnQQA2n...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 15:57:23,037 [ASEN-POD079][Thread:82][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 16:11:02,489 [ASEN-POD079][Thread:51][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:11:14,677 [ASEN-POD079][Thread:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:11:51,896 [ASEN-POD079][Thread:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:12:02,449 [ASEN-POD079][Thread:62][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:12:05,943 [ASEN-POD079][Thread:40][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:12:12,579 [ASEN-POD079][Thread:73][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:12:17,060 [ASEN-POD079][Thread:58][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:12:23,682 [ASEN-POD079][Thread:57][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:12:30,683 [ASEN-POD079][Thread:57][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 16:44:01,376 [ASEN-POD079][Thread:73][ERROR] DotNetNuke.Services.Scheduling.SchedulerClient - System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetSearchModules(Int32 portalId)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent(DateTime startDate)
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:2637b46d-78ed-4f2e-a438-d310e1668534
+2015-12-09 16:44:01,407 [ASEN-POD079][Thread:73][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetSearchModules(Int32 portalId)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent(DateTime startDate)
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:2637b46d-78ed-4f2e-a438-d310e1668534
+2015-12-09 16:44:06,174 [ASEN-POD079][Thread:73][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetSearchModules(Int32 portalId)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent(DateTime startDate)
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:2637b46d-78ed-4f2e-a438-d310e1668534
+2015-12-09 16:54:06,193 [ASEN-POD079][Thread:49][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FeedBackSkin.btnSubmitFeedbck_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FeedBackSkin.ascx.cs:line 91
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 16:54:06,225 [ASEN-POD079][Thread:49][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=121&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FeedBackSkin.btnSubmitFeedbck_Click(Object sender, EventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FeedBackSkin.ascx.cs:line 91
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 18:36:13,369 [ASEN-POD079][Thread:28][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 18:37:22,721 [ASEN-POD079][Thread:28][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 18:37:27,667 [ASEN-POD079][Thread:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 18:48:59,229 [ASEN-POD079][Thread:55][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FeedBackSkin.ValidateCaptcha(Object sender, ServerValidateEventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FeedBackSkin.ascx.cs:line 73
+   at System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   at System.Web.UI.WebControls.BaseValidator.Validate()
+   at System.Web.UI.Page.Validate(String validationGroup)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 18:48:59,369 [ASEN-POD079][Thread:55][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=121&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FeedBackSkin.ValidateCaptcha(Object sender, ServerValidateEventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FeedBackSkin.ascx.cs:line 73
+   at System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   at System.Web.UI.WebControls.BaseValidator.Validate()
+   at System.Web.UI.Page.Validate(String validationGroup)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 18:49:22,784 [ASEN-POD079][Thread:27][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FeedBackSkin.ValidateCaptcha(Object sender, ServerValidateEventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FeedBackSkin.ascx.cs:line 73
+   at System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   at System.Web.UI.WebControls.BaseValidator.Validate()
+   at System.Web.UI.Page.Validate(String validationGroup)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 18:49:22,834 [ASEN-POD079][Thread:27][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=121&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSCaptcha.CaptchaControl.ValidateCaptcha(String userEntry)
+   at Portals__default_Skins_JaslokSkin_FeedBackSkin.ValidateCaptcha(Object sender, ServerValidateEventArgs e) in d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FeedBackSkin.ascx.cs:line 73
+   at System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   at System.Web.UI.WebControls.BaseValidator.Validate()
+   at System.Web.UI.Page.Validate(String validationGroup)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 19:28:31,637 [ASEN-POD079][Thread:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.ModuleLoadException: Cannot locate ContentPane for Theme
+2015-12-09 21:10:16,619 [ASEN-POD079][Thread:40][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: d:\Jaslok\Website\Portals\_default\Skins\JaslokSkin\FixAnAppointmentSkin.ascx(346): error CS1061: 'ASP.portals__default_skins_jaslokskin_fixanappointmentskin_ascx' does not contain a definition for 'btnResetComp_Click1' and no extension method 'btnResetComp_Click1' accepting a first argument of type 'ASP.portals__default_skins_jaslokskin_fixanappointmentskin_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2015-12-09 21:15:50,200 [ASEN-POD079][Thread:34][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 21:15:50,219 [ASEN-POD079][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=114&error=An unexpected error has occurred&content=0
+System.ArgumentException: Invalid postback or callback argument.  Event validation is enabled using <pages enableEventValidation="true"/> in configuration or <%@ Page EnableEventValidation="true" %> in a page.  For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them.  If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-09 21:20:16,760 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 21:20:32,521 [ASEN-POD079][Thread:16][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 21:20:33,011 [ASEN-POD079][Thread:16][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 21:21:11,663 [ASEN-POD079][Thread:11][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 21:21:11,684 [ASEN-POD079][Thread:37][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 22:03:46,615 [ASEN-POD079][Thread:43][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2015-12-09 22:03:46,716 [ASEN-POD079][Thread:17][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Fix an appointment acknowledge</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    Hi [Username], <br/><br/>
+    Acknowkledged appointment Email
+    <br/><br/>
+    Thanks,<br/>
+    Jaslok
+    ]]>
+  </content>
+</emailcontent>

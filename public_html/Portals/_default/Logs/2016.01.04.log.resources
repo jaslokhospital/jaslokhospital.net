@@ -1,0 +1,120 @@
+2016-01-04 15:32:06,583 [AUXAWEB][Thread:22][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 15:34:12,323 [AUXAWEB][Thread:35][ERROR] DotNetNuke.Services.Scheduling.SchedulerClient - System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetSearchModules(Int32 portalId)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent(DateTime startDate)
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:b63a6399-bae6-4fae-931a-70c0912be36d
+2016-01-04 15:34:12,355 [AUXAWEB][Thread:35][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetSearchModules(Int32 portalId)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent(DateTime startDate)
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:b63a6399-bae6-4fae-931a-70c0912be36d
+2016-01-04 15:34:20,833 [AUXAWEB][Thread:35][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetSearchModules(Int32 portalId)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent(DateTime startDate)
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:b63a6399-bae6-4fae-931a-70c0912be36d
+2016-01-04 22:04:43,961 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 22:04:48,959 [AUXAWEB][Thread:6][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 22:08:56,935 [AUXAWEB][Thread:3][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 22:09:58,208 [AUXAWEB][Thread:3][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 22:32:05,899 [AUXAWEB][Thread:47][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 172.16.12.146
+	Port: 53043
+	Referer: http://jaslok.stage.asentechllc.net/specialtiesdetail/sid/24
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36
+	ViewState: KCCnR2nJV6rLetAY18blRlFB7HacGKICLayIoncliXhhSIupvWTojp9dWCiTVnGcE/98G50nKrG1SbAWRrwRkDShVdp+xGcy/uH0jeHH663bHc1J7nlUwaGyBrR2tkKSGjYVqAhacdjHpV4JrfSU0216JYH20LMCH2kEB3yT6jiq7Gey8KTEio/+hdYMalB0Mcu3WZC7ODs50nGFE4DnTx/bPG7F4QucMHYR5MFWjiLm2/9MNC2/l9vFv9P47mcvt7wmoDb5Dix/VbpjZ0hwG3JRKrK+1+cutAysYIlGZX/h4jVsAqlTy8hwIepNW3hC5vol4oAJkTxwlsty/2AwojrXa2IkaEpJnG8zFl72IXlJhRXRWwUOgck7bzpGpD5HVRbihoUZ3bqtdH7xa3IeSLl2EPsrXmgjY/sgigLGXwooMhBFzaLNA3XAi4XmYpy2+FDQFvxk1xQkomXlMN5JzYJoGc/Ob41LD9YE6TDX14t5Aon4JQ17nCq2UNGJVyVrIjsbtj0nrMljFk7XVlr0wpkoyFg6CoGbqplkCfMDYWoA/3Vp3VMVo2fCaO1ED1+TA3vbDNjbIqKRDHGmYzTVwZ6a+KKwikNXc6bmg0sekxd/4bKAET2K2y2tZ8esKjWuIzm3fRGJnb2DHjiVrnLdNy+gGiZItkLwn4W3Yy9ovK1qbFTSsY6byyEumrkqjGAcHkmHfLQ1cr9TTzrLXtieb0VYd3MMRzp1JnJjUpxMFZiR...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-01-04 22:32:06,372 [AUXAWEB][Thread:47][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=133&error=An unexpected error has occurred&content=0
+System.Web.HttpException (0x80004005): Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 172.16.12.146
+	Port: 53043
+	Referer: http://jaslok.stage.asentechllc.net/specialtiesdetail/sid/24
+	Path: /Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36
+	ViewState: KCCnR2nJV6rLetAY18blRlFB7HacGKICLayIoncliXhhSIupvWTojp9dWCiTVnGcE/98G50nKrG1SbAWRrwRkDShVdp+xGcy/uH0jeHH663bHc1J7nlUwaGyBrR2tkKSGjYVqAhacdjHpV4JrfSU0216JYH20LMCH2kEB3yT6jiq7Gey8KTEio/+hdYMalB0Mcu3WZC7ODs50nGFE4DnTx/bPG7F4QucMHYR5MFWjiLm2/9MNC2/l9vFv9P47mcvt7wmoDb5Dix/VbpjZ0hwG3JRKrK+1+cutAysYIlGZX/h4jVsAqlTy8hwIepNW3hC5vol4oAJkTxwlsty/2AwojrXa2IkaEpJnG8zFl72IXlJhRXRWwUOgck7bzpGpD5HVRbihoUZ3bqtdH7xa3IeSLl2EPsrXmgjY/sgigLGXwooMhBFzaLNA3XAi4XmYpy2+FDQFvxk1xQkomXlMN5JzYJoGc/Ob41LD9YE6TDX14t5Aon4JQ17nCq2UNGJVyVrIjsbtj0nrMljFk7XVlr0wpkoyFg6CoGbqplkCfMDYWoA/3Vp3VMVo2fCaO1ED1+TA3vbDNjbIqKRDHGmYzTVwZ6a+KKwikNXc6bmg0sekxd/4bKAET2K2y2tZ8esKjWuIzm3fRGJnb2DHjiVrnLdNy+gGiZItkLwn4W3Yy9ovK1qbFTSsY6byyEumrkqjGAcHkmHfLQ1cr9TTzrLXtieb0VYd3MMRzp1JnJjUpxMFZiR...
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016-01-04 23:30:55,915 [AUXAWEB][Thread:9][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 23:59:19,193 [AUXAWEB][Thread:41][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+2016-01-04 23:59:19,705 [AUXAWEB][Thread:39][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (<).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)

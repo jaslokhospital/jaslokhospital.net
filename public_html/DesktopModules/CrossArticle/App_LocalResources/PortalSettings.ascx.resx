@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plDetailTab.Text" xml:space="preserve">
+    <value>Detail Tab</value>
+  </data>
+  <data name="plDetailTab.Help" xml:space="preserve">
+    <value>Select which page to dispaly article detail.You should put a CrossArticle_Detail  module instance on that page. </value>
+  </data>
+  <data name="plViewRoles.Text" xml:space="preserve">
+    <value>Article view roles</value>
+  </data>
+  <data name="plViewRoles.Help" xml:space="preserve">
+    <value>You can control which roles can view articles by default.Note,each article can has its own view roles.</value>
+  </data>
+  <data name="plCommentManageRoles.Text" xml:space="preserve">
+    <value>Comment manage roles</value>
+  </data>
+  <data name="plCommentManageRoles.Help" xml:space="preserve">
+    <value>Select roles which can manage article comment list.He can delete/approve to all article comment list.</value>
+  </data>
+  <data name="plArticleEditRoles.Text" xml:space="preserve">
+    <value>Article post roles</value>
+  </data>
+  <data name="plArticleEditRoles.Help" xml:space="preserve">
+    <value>Select roles which can post his own articles.He can also manage his own files.</value>
+  </data>
+  <data name="plRequireApproval.Text" xml:space="preserve">
+    <value>Require Approval</value>
+  </data>
+  <data name="plRequireApproval.Help" xml:space="preserve">
+    <value>Check this to require articles to be approved before being displayed to users.</value>
+  </data>
+  <data name="secRating.Text" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="plAllowRating.Text" xml:space="preserve">
+    <value>Allow Rating</value>
+  </data>
+  <data name="plAllowRating.Help" xml:space="preserve">
+    <value>Allow visitors to rating article.If this option is not checked, user can't rating to all articles.
+If this option is checked, visitors can rating by default, but each article can disable its own rating if necessary.</value>
+  </data>
+  <data name="plRatingRoles.Text" xml:space="preserve">
+    <value>Rating Roles</value>
+  </data>
+  <data name="plRatingRoles.Help" xml:space="preserve">
+    <value>Select roles which can ratings by default.Note, each article can has its own rating roles.</value>
+  </data>
+  <data name="secComment.Text" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="plAllowComment.Text" xml:space="preserve">
+    <value>Allow Comment</value>
+  </data>
+  <data name="plAllowComment.Help" xml:space="preserve">
+    <value>Allow visitors to post comment.If this option is not checked, user can't post comments to all articles.
+If this option is checked, visitors can post comments by default, but each article can disable its own comments if necessary.</value>
+  </data>
+  <data name="plCommentRoles.Text" xml:space="preserve">
+    <value>Comment Roles</value>
+  </data>
+  <data name="plCommentRoles.Help" xml:space="preserve">
+    <value>Select roles which can post comments by default.Note,each article can has its own comment roles.</value>
+  </data>
+  <data name="plAutoAuthComment.Text" xml:space="preserve">
+    <value>Auto authorize comment</value>
+  </data>
+  <data name="plAutoAuthComment.Help" xml:space="preserve">
+    <value>Auto authorize user comment.Unauthorized comments will not display to normal visitors.</value>
+  </data>
+  <data name="plCategoryManageRoles.Text" xml:space="preserve">
+    <value>Category manage roles</value>
+  </data>
+  <data name="plCategoryManageRoles.Help" xml:space="preserve">
+    <value>Select roles which can manage article category</value>
+  </data>
+  <data name="plArticleManageRoles.Text" xml:space="preserve">
+    <value>Article manage roles</value>
+  </data>
+  <data name="plArticleManageRoles.Help" xml:space="preserve">
+    <value>Select roles which can manage article list.He can delete/update/approve/set feature/set active to articles which create by all users.</value>
+  </data>
+  <data name="secDetailSettings.Text" xml:space="preserve">
+    <value>Article Detail</value>
+  </data>
+  <data name="secGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="plCategorySelectCount.Help" xml:space="preserve">
+    <value>Enter how many article categories a article can belong to.Value must between 1 and 10.</value>
+  </data>
+  <data name="plCategorySelectCount.Text" xml:space="preserve">
+    <value>Category selection counts</value>
+  </data>
+  <data name="plGenerateThumb.Help" xml:space="preserve">
+    <value>If this option is checked, module will automatic generate article thubmnail image.For example,if article image is Cpu.jpg,then module will generate a thunbmail named thumb_Cpu.jpg. It will improve performance greatly while display article list.</value>
+  </data>
+  <data name="plGenerateThumb.Text" xml:space="preserve">
+    <value>Generate thumbnail?</value>
+  </data>
+  <data name="plThumbnailSize.Help" xml:space="preserve">
+    <value>Enter thumbnail image size to be generated.</value>
+  </data>
+  <data name="plThumbnailSize.Text" xml:space="preserve">
+    <value>Thumbnail Size</value>
+  </data>
+  <data name="MustBeInteger.Text" xml:space="preserve">
+    <value>Value must be integer</value>
+  </data>
+  <data name="plUserDiskQuote.Help" xml:space="preserve">
+    <value>Enter max quote(mb) each user can upload.If user reach his limitation,he can't upload files anymore.Enter 0 to not limit user file quote.</value>
+  </data>
+  <data name="plUserDiskQuote.Text" xml:space="preserve">
+    <value>User disk quote(mb)</value>
+  </data>
+  <data name="valFileExtensions.Error" xml:space="preserve">
+    <value>Invalid file extensions,please check it.</value>
+  </data>
+  <data name="ControlTitle_portalsettings.Text" xml:space="preserve">
+    <value>Cross Article Admin_Protal Settings</value>
+  </data>
+  <data name="MustBetween1To10.Text" xml:space="preserve">
+    <value>Please input a value between 1 and 10.</value>
+  </data>
+  <data name="plAllowRecommend.Help" xml:space="preserve">
+    <value>Allow visitors to recommend article.If this option is not checked, user can't recommend to all articles.
+If this option is checked, visitors can recommend by default, but each article can disable its own recommend if necessary.</value>
+  </data>
+  <data name="plAllowRecommend.Text" xml:space="preserve">
+    <value>Allow Recommend</value>
+  </data>
+  <data name="plDownloadRoles.Help" xml:space="preserve">
+    <value>Select roles which can download article attached files by default.Note,each article can has its own download roles.</value>
+  </data>
+  <data name="plDownloadRoles.Text" xml:space="preserve">
+    <value>Download Roles</value>
+  </data>
+  <data name="plRecommendRoles.Help" xml:space="preserve">
+    <value>Select roles which can post comments by default.Note,each article can has its own recommend roles.</value>
+  </data>
+  <data name="plRecommendRoles.Text" xml:space="preserve">
+    <value>Recommend Roles</value>
+  </data>
+  <data name="plTagManageRoles.Help" xml:space="preserve">
+    <value>Select roles which can manage article tag</value>
+  </data>
+  <data name="plTagManageRoles.Text" xml:space="preserve">
+    <value>Tag manage roles</value>
+  </data>
+  <data name="plTagSelectCount.Help" xml:space="preserve">
+    <value>Enter how many tags a article can belong to.Value must between 1 and 10.</value>
+  </data>
+  <data name="plTagSelectCount.Text" xml:space="preserve">
+    <value>Tag selection counts</value>
+  </data>
+  <data name="secDownload.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="secRecommend.Text" xml:space="preserve">
+    <value>Recommend</value>
+  </data>
+  <data name="plListTab.Help" xml:space="preserve">
+    <value>Select which page to dispaly article list when user search article or click article category.You should put a CrossArticle_List  module instance on that page and check on its "Accept search parm" option.</value>
+  </data>
+  <data name="plListTab.Text" xml:space="preserve">
+    <value>Article list tab</value>
+  </data>
+  <data name="secListSettings.Text" xml:space="preserve">
+    <value>Article List</value>
+  </data>
+  <data name="plAuthorManageRoles.Help" xml:space="preserve">
+    <value>Select roles which can manage article authors, he can edit/delete author information.</value>
+  </data>
+  <data name="plAuthorManageRoles.Text" xml:space="preserve">
+    <value>Author manage roles</value>
+  </data>
+</root>

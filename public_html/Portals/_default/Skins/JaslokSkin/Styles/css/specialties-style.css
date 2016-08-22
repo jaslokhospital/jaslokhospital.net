@@ -1,0 +1,401 @@
+.specialties {
+    background-image: url(../images/specialties-spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.specialties-accupressure {
+    width: 30px;
+    height: 30px;
+    background-position: 0 0;
+}
+
+.specialties-anesthesia {
+    width: 30px;
+    height: 30px;
+    background-position: -30px 0;
+}
+
+.specialties-assisted-reproduction-and-genetics-ivf {
+    width: 30px;
+    height: 30px;
+    background-position: -60px 0;
+}
+
+.specialties-assisted-reproduction-ivf-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -90px 0;
+}
+
+.specialties-bariatric {
+    width: 30px;
+    height: 30px;
+    background-position: -120px 0;
+}
+
+.specialties-bladder-clinic-for-children {
+    width: 30px;
+    height: 30px;
+    background-position: -150px 0;
+}
+
+.specialties-cardiac-surgery {
+    width: 30px;
+    height: 30px;
+    background-position: -180px 0;
+}
+
+.specialties-cardiology {
+    width: 30px;
+    height: 30px;
+    background-position: -210px 0;
+}
+
+.specialties-critical-care {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -30px;
+}
+
+.specialties-daycare {
+    width: 34px;
+    height: 33px;
+    background-position: -30px -30px;
+}
+
+.specialties-dental {
+    width: 30px;
+    height: 30px;
+    background-position: -64px -30px;
+}
+
+.specialties-dermatology {
+    width: 30px;
+    height: 30px;
+    background-position: -94px -30px;
+}
+
+.specialties-diagnostic {
+    width: 30px;
+    height: 32px;
+    background-position: -124px -30px;
+}
+
+.specialties-discharge {
+    width: 38px;
+    height: 34px;
+    background-position: -154px -30px;
+}
+
+.specialties-emergency {
+    width: 40px;
+    height: 40px;
+    background-position: -192px -30px;
+}
+
+.specialties-endocrinology-diabetology {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -70px;
+}
+
+.specialties-ent {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -70px;
+}
+
+.specialties-epilepsy-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -70px;
+}
+
+.specialties-footcare-and-co2-laser-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -70px;
+}
+
+.specialties-gastroenterology {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -70px;
+}
+
+.specialties-gastrointestinal-surgery {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -70px;
+}
+
+.specialties-general-surgery {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -70px;
+}
+
+.specialties-haematology {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -70px;
+}
+
+.specialties-headache-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -100px;
+}
+
+.specialties-heart-failure-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -100px;
+}
+
+.specialties-hepatology-gastroenterology-and-liver-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -100px;
+}
+
+.specialties-hospital {
+    width: 30px;
+    height: 33px;
+    background-position: -90px -100px;
+}
+
+.specialties-hyperbaric-oxygen-treatment-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -100px;
+}
+
+.specialties-internal-medicine {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -100px;
+}
+
+.specialties-medical-oncology {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -100px;
+}
+
+.specialties-molecular-medicine-and-biology {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -100px;
+}
+
+.specialties-nephrology {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -130px;
+}
+
+.specialties-neurology {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -130px;
+}
+
+.specialties-neuropsychiatry-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -130px;
+}
+
+.specialties-neurosurgery {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -130px;
+}
+
+.specialties-nuclear-medicine {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -130px;
+}
+
+.specialties-obstetric-and-gynaecology {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -130px;
+}
+
+.specialties-opd {
+    width: 30px;
+    height: 33px;
+    background-position: -210px -130px;
+}
+
+.specialties-ophthalmology {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -163px;
+}
+
+.specialties-orthopedic {
+    width: 30px;
+    height: 30px;
+    background-position: -30px -163px;
+}
+
+.specialties-paediatric {
+    width: 30px;
+    height: 30px;
+    background-position: -60px -163px;
+}
+
+.specialties-paediatric-liver-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -163px;
+}
+
+.specialties-paediatric-nephrology-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -120px -163px;
+}
+
+.specialties-paediatric-surgery {
+    width: 30px;
+    height: 30px;
+    background-position: -150px -163px;
+}
+
+.specialties-pain-management {
+    width: 30px;
+    height: 30px;
+    background-position: -180px -163px;
+}
+
+.specialties-pathology {
+    width: 30px;
+    height: 30px;
+    background-position: -210px -163px;
+}
+
+.specialties-patient-rights {
+    width: 29px;
+    height: 37px;
+    background-position: 0 -193px;
+}
+
+.specialties-pediatric-rheumatology-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -29px -193px;
+}
+
+.specialties-pelvic-floor-clinic-urology-colorectal-surgery-gynaecology {
+    width: 30px;
+    height: 30px;
+    background-position: -59px -193px;
+}
+
+.specialties-plastic-surgery {
+    width: 30px;
+    height: 30px;
+    background-position: -89px -193px;
+}
+
+.specialties-psychiatry {
+    width: 30px;
+    height: 30px;
+    background-position: -119px -193px;
+}
+
+.specialties-pulmonology {
+    width: 30px;
+    height: 30px;
+    background-position: -149px -193px;
+}
+
+.specialties-radiation-oncologists {
+    width: 30px;
+    height: 30px;
+    background-position: -179px -193px;
+}
+
+.specialties-radiology-and-imaging {
+    width: 30px;
+    height: 30px;
+    background-position: -209px -193px;
+}
+
+.specialties-rheumatism-and-arthritis-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -240px 0;
+}
+
+.specialties-rheumatology {
+    width: 30px;
+    height: 30px;
+    background-position: -232px -30px;
+}
+
+.specialties-sonology {
+    width: 30px;
+    height: 30px;
+    background-position: -240px -60px;
+}
+
+.specialties-spasticity-clinic {
+    width: 25px;
+    height: 25px;
+    background-position: -240px -90px;
+}
+
+.specialties-speech-therapy {
+    width: 25px;
+    height: 25px;
+    background-position: -240px -115px;
+}
+
+.specialties-sports-injury-clinic {
+    width: 25px;
+    height: 25px;
+    background-position: -240px -140px;
+}
+
+.specialties-surgical-oncology {
+    width: 30px;
+    height: 30px;
+    background-position: -240px -165px;
+}
+
+.specialties-tariffs {
+    width: 36px;
+    height: 32px;
+    background-position: -239px -195px;
+}
+
+.specialties-types-of-rooms {
+    width: 34px;
+    height: 25px;
+    background-position: -29px -227px;
+}
+
+.specialties-urology {
+    width: 30px;
+    height: 30px;
+    background-position: -63px -227px;
+}
+
+.specialties-varicose-vein-clinic {
+    width: 30px;
+    height: 30px;
+    background-position: -93px -227px;
+}
+
+.specialties-visitors-timing {
+    width: 29px;
+    height: 25px;
+    background-position: -123px -227px;
+}

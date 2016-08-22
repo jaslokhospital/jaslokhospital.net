@@ -1,0 +1,54 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftNavigation.ascx.cs" Inherits="JSControls_Common_LeftNavigation" %>
+<div class="dropdown chairmans_desk" id="lefnavDropdown" runat="server">
+    <a href="void{0};" data-toggle="dropdown" id="anchSelectedMenu" class="dropdown-toggle">
+        <asp:Label ID="lblCurrentItem" runat="server"></asp:Label>
+        <i class="fa fa-chevron-down"></i></a>
+
+    <ul class="dropdown-menu" style="width: 100%">
+        <asp:Repeater ID="rptMenus" runat="server" OnItemDataBound="rptMenus_ItemDataBound">
+            <ItemTemplate>
+                <li><a href='<%# Eval("MenuLink") %>'><%# Eval("MenuText") %></a></li>
+                <asp:PlaceHolder ID="plcDivider" runat="server">
+                    <li class="divider"></li>
+                </asp:PlaceHolder>
+            </ItemTemplate>
+        </asp:Repeater>
+    </ul>
+</div>
+
+
+<asp:PlaceHolder ID="plcCorporate" runat="server" Visible="false">
+<div class="dropdown chairmans_desk visible-xs" id="lefnNavCorporate" runat="server">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Chairman’s Desk <i class="fa fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Select the Options</a></li><li class="divider"></li>
+                                <li class="active"><a href="/corporate-profile/from-the-chairmans-desk">From The Chairman's Desk</a></li><li class="divider"></li>
+                                <li><a href="/corporate-profile/vision-and-mission">Vission And Mission</a></li><li class="divider"></li>
+                                  <li><a href="/corporate-profile/trustees">Trustees</a></li><li class="divider"></li>
+                                  <li><a href="/corporate-profile/management-team">Management</a></li><li class="divider"></li>
+                                  <li><a href="/corporate-profile/hospital-facilities">Hospital Facilities</a></li><li class="divider"></li>
+                                 <li><a href="/corporate-profile/certifications">Certifications</a></li><li class="divider"></li>
+                                   <li><a href="/corporate-profile/jaslok-news">Jaslok Times</a></li><li class="divider"></li>
+                                <li><a href="/corporate-profile/scope-of-services">Scope Of Services</a></li><li class="divider"></li>
+                                <li><a href="/corporate-profile/frequently-asked-questions">FAQ</a></li>
+                             <li><a href="/corporate-profile/quality-corner">Quality Corner</a></li><li class="divider"></li>                                
+                            </ul>
+                        </div>
+                      <div class="span3 bs-docs-sidebar hidden-xs" id="lefnNavMobileCorporate" runat="server">
+                            <ul class="nav nav-list bs-docs-sidenav">
+                              <li class="active"><a href="/corporate-profile/from-the-chairmans-desk"><i class="glyphicon glyphicon-chevron-right"></i>From The Chairman's Desk</a></li>
+                              <li><a href="/corporate-profile/vision-and-mission"><i class="glyphicon glyphicon-chevron-right"></i>Vission And Mission</a></li>
+                                  <li><a href="/corporate-profile/trustees"><i class="glyphicon glyphicon-chevron-right"></i> Trustees</a></li>
+                              <li><a href="/corporate-profile/management-team"><i class="glyphicon glyphicon-chevron-right"></i> Management</a></li>
+                                 <li><a href="/corporate-profile/hospital-facilities"><i class="glyphicon glyphicon-chevron-right"></i> Hospital Facilities</a></li>
+                                 <li><a href="/corporate-profile/certifications"><i class="glyphicon glyphicon-chevron-right"></i> Certifications</a></li>
+                                 <li><a href="/corporate-profile/jaslok-news"><i class="glyphicon glyphicon-chevron-right"></i> Jaslok Times</a></li>
+                              <li><a href="/corporate-profile/scope-of-services"><i class="glyphicon glyphicon-chevron-right"></i>Scope Of Services</a></li>
+                             <li><a href="/corporate-profile/frequently-asked-questions"><i class="glyphicon glyphicon-chevron-right"></i>FAQ</a></li>
+                              <li><a href="/corporate-profile/quality-corner"><i class="glyphicon glyphicon-chevron-right"></i> Quality Corner</a></li>
+                              
+                            </ul>
+                          </div>
+</asp:PlaceHolder>
+
+

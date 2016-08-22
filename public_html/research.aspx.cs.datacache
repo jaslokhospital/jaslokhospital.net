@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using DotNetNuke.Common.Utilities;
+
+public partial class research : System.Web.UI.Page
+{
+
+	private static string GetContent()
+	{
+		var dCache = DataCache.GetCache("test");
+		if (dCache == null)
+		{
+			DataCache.SetCache("test", "cache content");
+			dCache = DataCache.GetCache("test");
+		}
+		return dCache.ToString();
+	}
+	
+    protected void Page_Load(object sender, EventArgs e)
+    {
+		var dCache = DataCache.GetCache("test");
+		if (dCache == null)
+		{
+			DataCache.SetCache("test", "cache content");
+			dCache = DataCache.GetCache("test");
+			Response.Write("Without Cache");
+		}
+		else
+		{
+			Response.Write("From Cache");
+		}
+		/*if (!String.IsNullOrEmpty(GetContent()))
+		{
+			Response.Write("Cache Call");
+		}
+		else
+		{
+			Response.Write("Database Call");
+		}*/
+    }
+}

@@ -1,0 +1,42 @@
+2015-11-07 05:24:45,195 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Tabs.TabVersions.TabVersionUtils.CanSeeVersionedPages(TabInfo tab)
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at DotNetNuke.Entities.Portals.PortalSettingsController.GetActiveTab(Int32 tabId, PortalSettings portalSettings)
+   at DotNetNuke.Entities.Portals.PortalSettings.BuildPortalSettings(Int32 tabId, PortalInfo portal)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2015-11-07 05:24:45,554 [ASEN-POD079][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-07 05:24:45,682 [ASEN-POD079][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-07 05:24:46,066 [ASEN-POD079][Thread:12][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-07 05:24:46,071 [ASEN-POD079][Thread:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-07 05:24:46,491 [ASEN-POD079][Thread:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage() in d:\Jaslok\Website\Default.aspx.cs:line 201
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 658
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---

@@ -1,0 +1,352 @@
+/* ================================
+    CSS STYLES FOR Module CrossArticle
+   ================================
+*/
+.ArticleInfo 
+{
+    padding-bottom: 10px;   
+}
+
+.SearchOptions 
+{
+	font-family:  Tahoma, Arial, sans-serif;
+	font-size: 10pt;
+} 
+.CreateFrom
+{
+	font-size: 10px;
+	color: #003366;
+}
+.Article_Body {
+	font-family:  Tahoma, Arial, sans-serif;
+	font-size: 10pt;
+}
+.Article_Head
+{
+}
+
+.Article_Description_Heavy 
+{
+	font-family:  Tahoma, Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+.Article_Description 
+{
+	font-family:  Tahoma, Arial, sans-serif;
+	font-size: 10pt;
+}
+.Article_Published {
+	display: block;
+	text-align: center;
+	float:left; 
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 2px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	background:url(images/clip-bottom.png) right top no-repeat;
+	width:2.5em;
+	margin-right: 5px;
+}
+.Article_Pub-Month {
+	display:block;
+	font-size: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	margin:0; 
+	padding:0;
+	padding-top:1px;
+	background:url(images/clip-top.png) center top repeat-x;
+	text-transform:uppercase;
+}
+.Article_Pub-Date { 
+	display:block; 
+	font-size:12px;
+	margin:0; 
+	padding:0;
+}
+.Article_Pub-Year {
+	display:block;
+	font-size: 10px;
+	margin:0; 
+	padding:0;
+}
+.Article_Comments {
+	background-image: url(images/Article_comments.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.Article_Comments_Normal {
+	background-image: url(images/Article_comments.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 11px;
+}
+	
+.Article_topics
+{
+	background-image: url(images/Article_topic.png);
+	font-size: 11px;
+}
+.Article_more_link
+{
+	font-size:11px;
+	/*padding-left: 3px;*/
+	font-weight: bold;
+}
+
+.Article_gravatar
+{
+	float:left;
+	padding:2px;
+	margin:5px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    margin-left:expression("4px");
+    margin-bottom:expression("-5px");
+}
+
+.Article_gravatar_preview
+{
+	padding: 2px;
+    margin: 0px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    float: right;
+}
+
+
+.Article_lefttd 
+{
+	white-space:nowrap;
+	vertical-align:top;
+}
+.Article_tags
+{
+	display: none;
+	visibility: hidden;
+	background-image: url(images/Article_tag_blue.png);
+	font-size: 11px;
+}
+.Article_trackback {
+	background-image: url(images/Article_trackback.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	font-size: 11px;
+}
+.Article_permalink
+{
+	background-image: url(images/Article_permalink.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	font-size: 11px;
+}
+.Article_print
+{
+	background-image: url(images/Article_print.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	margin-left: 8px;
+	font-size: 11px;
+}
+.Article_edit_link
+{
+	background-image: url(images/Article_edit_link.png);
+	margin-left: 8px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	font-size: 11px;
+}
+/*.Article_tags,*/ .Article_topics, .Article_permalink{
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	display: block;
+	clear: both;
+	float: none;
+}
+.Article_date {
+	color: #666666;
+}
+h2.Article_title
+{
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-size: 16pt;
+	margin-bottom: 3px;
+	margin-top: 15px;
+	line-height: 16pt;
+}
+
+h1, .horizontalline
+{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #aaaaaa;
+}
+
+
+.Article_subhead
+{
+	margin-top: 0pt;
+	margin-right: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	padding-top: 0pt;
+	padding-right: 0pt;
+	padding-bottom: 8px;
+	padding-left: 42px;
+	position: relative;
+}
+.Article_subhead .Article_comments
+{
+	position: absolute;
+	top: 0pt;
+	right: 0pt;
+}
+.Article_footer_right {
+
+	float:right;
+	display: inline;
+	position: relative;
+}
+.Article_footer_left {
+	float:left;
+	display: inline;
+}
+.Article_footer {
+	width: 100%;
+	display: block;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #aaaaaa;
+	padding-bottom: 30px;
+}
+.clear { 
+	clear: both;
+}
+.Article_copyright	{
+	font-size: 10px;
+}
+
+.Article_entry_description 
+{
+}
+
+/* Normal Bubble */
+div.Article_bubble, div.Article_bubble_owner {
+	width: auto;
+	font-size: 10pt;
+	margin-bottom: 24px;
+}
+
+div.Article_bubble blockquote {
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #c9c2c1;
+	background-color: #fff;
+	zoom:1;
+	min-height:64px;
+}
+
+div.Article_bubble_owner blockquote 
+{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #aaa;
+	background-color: #e0e0e0;
+	zoom:1;
+	min-height:64px;
+}
+
+div.Article_bubble blockquote p, div.Article_bubble_owner blockquote p {
+	margin: 10px;
+	padding: 0px;
+}
+
+div.Article_bubble cite, div.Article_bubble_owner cite {
+	position: relative;
+	margin: 0px;
+	padding: 7px 0px 0px 15px;
+	top: 6px;
+	background: transparent url(images/Article_comment_tip.gif) no-repeat 20px 0;
+	font-style: normal;
+}
+div.Article_bubble_owner cite 
+{
+	background: transparent url(images/Article_comment_tip_owner.gif) no-repeat 20px 0;
+}
+/* Calendar Styles */
+.Article_Archive_DayHeader{
+	font-size: 11px;
+	background-color: #ccddff;
+}
+
+.Article_Archive_Day{
+	font-size: 11px;
+	background-color: #fff;
+}
+
+.Article_Archive_Day a, .Article_Archive_SelectedDay a, .Article_Archive_WeekendDay a, .Article_Archive_TodayDay a
+{
+	width:100%;
+}
+
+.Article_Archive_NextPrev{
+	font-size: 11px;
+}
+
+.Article_Archive_OtherMonth{
+	font-size: 11px;
+	background-color: #f4f4f4;
+}
+
+.Article_Archive_SelectedDay{
+	border: 1px solid #cccccc;
+	background-color: #FFCC00;
+}
+
+.Article_Archive_Selector{
+	font-size: 11px;
+}
+
+.Article_Archive_Title{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.Article_Archive_TodayDay{
+	border: 1px solid #cccccc;
+	background-color: #FFCC00;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.Article_Archive_WeekendDay{
+	font-size: 11px;
+	background-color: #fffff0;
+}
+
+.Article_image_list{
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.Article_dateline
+{
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 8pt;
+}
+
+div.Article_bubble p
+{
+color: black;
+}
+

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plRatingImage.Text" xml:space="preserve">
+    <value>Rating Image</value>
+  </data>
+  <data name="plRatingImage.Help" xml:space="preserve">
+    <value>Rating Image</value>
+  </data>
+  <data name="plRelatedArticleRows.Text" xml:space="preserve">
+    <value>Related article rows</value>
+  </data>
+  <data name="plRelatedArticleRows.Help" xml:space="preserve">
+    <value>Related article rows</value>
+  </data>
+  <data name="plDisplayRelatedArticles.Text" xml:space="preserve">
+    <value>Display related articles</value>
+  </data>
+  <data name="plDisplayRelatedArticles.Help" xml:space="preserve">
+    <value>Check to display related Articles</value>
+  </data>
+  <data name="plDisplayViews.Help" xml:space="preserve">
+    <value>Check to show article view numbers</value>
+  </data>
+  <data name="plDisplayViews.Text" xml:space="preserve">
+    <value>Display view numbers</value>
+  </data>
+  <data name="plDisplayTags.Help" xml:space="preserve">
+    <value>Check to show article tags</value>
+  </data>
+  <data name="plDisplayTags.Text" xml:space="preserve">
+    <value>Display Tags</value>
+  </data>
+  <data name="plDisplayAuthor.Help" xml:space="preserve">
+    <value>Display article author</value>
+  </data>
+  <data name="plDisplayAuthor.Text" xml:space="preserve">
+    <value>Display author</value>
+  </data>
+  <data name="plDisplaySource.Help" xml:space="preserve">
+    <value>Display article source</value>
+  </data>
+  <data name="plDisplaySource.Text" xml:space="preserve">
+    <value>Display source</value>
+  </data>
+  <data name="plDisplayTitle.Help" xml:space="preserve">
+    <value>Display article title</value>
+  </data>
+  <data name="plDisplayTitle.Text" xml:space="preserve">
+    <value>Display Title</value>
+  </data>
+  <data name="plDisplaySummary.Help" xml:space="preserve">
+    <value>Display article summary</value>
+  </data>
+  <data name="plDisplaySummary.Text" xml:space="preserve">
+    <value>Display Summary</value>
+  </data>
+  <data name="MustBeInteger.Text" xml:space="preserve">
+    <value>Value must be integer</value>
+  </data>
+  <data name="plDisplayUserName.Help" xml:space="preserve">
+    <value>Display article created user</value>
+  </data>
+  <data name="plDisplayUserName.Text" xml:space="preserve">
+    <value>Display created user</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Article detail settings</value>
+  </data>
+  <data name="plCommentRowCount.Help" xml:space="preserve">
+    <value>Enter comment rows which displayed after article detail.</value>
+  </data>
+  <data name="plCommentRowCount.Text" xml:space="preserve">
+    <value>Comment Rows</value>
+  </data>
+  <data name="plImageWidth.Help" xml:space="preserve">
+    <value>Specify the maximum width of article image when display in detail.If article image width is bigger than this value,module will use this value as image width.</value>
+  </data>
+  <data name="plImageWidth.Text" xml:space="preserve">
+    <value>Image width</value>
+  </data>
+  <data name="plDetailTemplate.Help" xml:space="preserve">
+    <value>Detail template locates under desktopmodules/crossarticle/template/detail,you can customize your own.</value>
+  </data>
+  <data name="plDetailTemplate.Text" xml:space="preserve">
+    <value>Detail Template</value>
+  </data>
+  <data name="plDisplayArticle.Help" xml:space="preserve">
+    <value>Display article detail</value>
+  </data>
+  <data name="plDisplayArticle.Text" xml:space="preserve">
+    <value>Display Article</value>
+  </data>
+  <data name="plDisplayCreatedDate.Text" xml:space="preserve">
+    <value>Display created date</value>
+  </data>
+  <data name="plDisplayCreatedDate.Help" xml:space="preserve">
+    <value>Check to display article created date</value>
+  </data>
+  <data name="plDisplaySocialBookmarks.Help" xml:space="preserve">
+    <value>Check to display show social bookmarks</value>
+  </data>
+  <data name="plDisplaySocialBookmarks.Text" xml:space="preserve">
+    <value>Display social bookmarks</value>
+  </data>
+  <data name="plDisplayAuthorAvatar.Help" xml:space="preserve">
+    <value>Check to show author avatar in author information</value>
+  </data>
+  <data name="plDisplayAuthorAvatar.Text" xml:space="preserve">
+    <value>Display author avatar</value>
+  </data>
+  <data name="plDisplayAuthorBiography.Help" xml:space="preserve">
+    <value>Check to display author biography as "About author"</value>
+  </data>
+  <data name="plDisplayCommentAvatar.Help" xml:space="preserve">
+    <value>Display comment avatar using user email.</value>
+  </data>
+  <data name="plDisplayCommentAvatar.Text" xml:space="preserve">
+    <value>Display comment avatar</value>
+  </data>
+  <data name="plDisplayCommentWebLink.Help" xml:space="preserve">
+    <value>Display web link if visitor provide it while post comment.</value>
+  </data>
+  <data name="plDisplayCommentWebLink.Text" xml:space="preserve">
+    <value>Display comment web link</value>
+  </data>
+  <data name="plDisplayImage.Help" xml:space="preserve">
+    <value>Check to show article image in detail.</value>
+  </data>
+  <data name="plDisplayImage.Text" xml:space="preserve">
+    <value>Display Image</value>
+  </data>
+  <data name="plTagsPerRow.Help" xml:space="preserve">
+    <value>Enter tags which will be displayed per row.</value>
+  </data>
+  <data name="plTagsPerRow.Text" xml:space="preserve">
+    <value>Tags per row</value>
+  </data>
+  <data name="plDisplayAuthorBiography.Text" xml:space="preserve">
+    <value>Display author biography</value>
+  </data>
+</root>

@@ -1,0 +1,369 @@
+2015-11-06 15:44:55,191 [ASEN-POD079][Thread:11][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 15:44:55,294 [ASEN-POD079][Thread:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:05:09,147 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:05:09,272 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:04,663 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:04,757 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:12,074 [ASEN-POD079][Thread:10][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:12,371 [ASEN-POD079][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:12,433 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:12,511 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:40,766 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:40,782 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:40,782 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:40,813 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:54,654 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:54,685 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:54,685 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:54,701 [ASEN-POD079][Thread:8][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:08:54,779 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:08:54,810 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:09:42,644 [ASEN-POD079][Thread:24][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:09:42,722 [ASEN-POD079][Thread:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:10:36,439 [ASEN-POD079][Thread:24][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:10:36,450 [ASEN-POD079][Thread:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:11:07,162 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:11:07,184 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:11:35,883 [ASEN-POD079][Thread:21][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:11:35,906 [ASEN-POD079][Thread:21][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:33:22,608 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 16:33:22,725 [ASEN-POD079][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageDoctorModule is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 16:39:55,790 [ASEN-POD079][Thread:54][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BusinessDataLayer.BusinessLogic.UpdateDeleteSpecialties(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 818
+   at DesktopModules_JaslokAdmin_ManageSpecialties.dgSpecialty_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialties.ascx.cs:line 52
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 16:39:55,806 [ASEN-POD079][Thread:54][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1100&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BusinessDataLayer.BusinessLogic.UpdateDeleteSpecialties(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 818
+   at DesktopModules_JaslokAdmin_ManageSpecialties.dgSpecialty_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialties.ascx.cs:line 52
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 16:52:51,341 [ASEN-POD079][Thread:46][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetTabVersions(Int32 tabId)
+   at DotNetNuke.Entities.Tabs.TabVersions.TabVersionController.GetTabVersions(Int32 tabId, Boolean ignoreCache)
+   at DotNetNuke.Entities.Tabs.TabVersions.TabVersionBuilder.GetUnPublishedVersionModules(Int32 tabId)
+   at DotNetNuke.Entities.Tabs.TabModulesController.GetModules(TabInfo tab)
+   at DotNetNuke.Entities.Tabs.TabModulesController.GetTabModules(TabInfo tab)
+   at DotNetNuke.Entities.Portals.PortalSettingsController.GetTabModules(PortalSettings portalSettings)
+   at DotNetNuke.UI.Skins.Skin.ProcessMasterModules()
+   at DotNetNuke.UI.Skins.Skin.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 755
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:a6ddc688-bcb7-4d05-b500-9aee4541effc
+2015-11-06 16:52:51,357 [ASEN-POD079][Thread:46][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=Timeout+expired.++The+timeout+period+elapsed+prior+to+completion+of+the+operation+or+the+server+is+not+responding.&content=0
+System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.GetTabVersions(Int32 tabId)
+   at DotNetNuke.Entities.Tabs.TabVersions.TabVersionController.GetTabVersions(Int32 tabId, Boolean ignoreCache)
+   at DotNetNuke.Entities.Tabs.TabVersions.TabVersionBuilder.GetUnPublishedVersionModules(Int32 tabId)
+   at DotNetNuke.Entities.Tabs.TabModulesController.GetModules(TabInfo tab)
+   at DotNetNuke.Entities.Tabs.TabModulesController.GetTabModules(TabInfo tab)
+   at DotNetNuke.Entities.Portals.PortalSettingsController.GetTabModules(PortalSettings portalSettings)
+   at DotNetNuke.UI.Skins.Skin.ProcessMasterModules()
+   at DotNetNuke.UI.Skins.Skin.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.AddedControl(Control control, Int32 index)
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e) in d:\Jaslok\Website\Default.aspx.cs:line 755
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:a6ddc688-bcb7-4d05-b500-9aee4541effc
+2015-11-06 17:58:13,685 [ASEN-POD079][Thread:13][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx(66): error CS1061: 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' does not contain a definition for 'dgSpecialtyTab_ItemCommand' and no extension method 'dgSpecialtyTab_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 17:58:23,040 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx(66): error CS1061: 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' does not contain a definition for 'dgSpecialtyTab_ItemCommand' and no extension method 'dgSpecialtyTab_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 18:16:42,359 [ASEN-POD079][Thread:33][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx(66): error CS1061: 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' does not contain a definition for 'dgSpecialtyTab_ItemCommand' and no extension method 'dgSpecialtyTab_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 18:16:42,453 [ASEN-POD079][Thread:33][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageSpecialtiesTabMapping is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx(66): error CS1061: 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' does not contain a definition for 'dgSpecialtyTab_ItemCommand' and no extension method 'dgSpecialtyTab_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 18:39:24,302 [ASEN-POD079][Thread:12][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx(66): error CS1061: 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' does not contain a definition for 'dgSpecialtyTab_ItemCommand' and no extension method 'dgSpecialtyTab_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 18:39:24,386 [ASEN-POD079][Thread:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: ManageSpecialtiesTabMapping is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx(66): error CS1061: 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' does not contain a definition for 'dgSpecialtyTab_ItemCommand' and no extension method 'dgSpecialtyTab_ItemCommand' accepting a first argument of type 'ASP.desktopmodules_jaslokadmin_managespecialtytabmapping_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2015-11-06 21:43:58,436 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs(105): error CS0103: The name 'dgSpecialty' does not exist in the current context
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2015-11-06 21:44:47,704 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 112
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:44:47,738 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 112
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:48:21,403 [ASEN-POD079][Thread:18][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 112
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:48:21,406 [ASEN-POD079][Thread:18][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 112
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:55:04,118 [ASEN-POD079][Thread:29][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 112
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:55:04,122 [ASEN-POD079][Thread:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 112
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:58:01,324 [ASEN-POD079][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 105
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:58:01,358 [ASEN-POD079][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 105
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:58:29,671 [ASEN-POD079][Thread:7][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 118
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 21:58:29,706 [ASEN-POD079][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 118
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 22:01:04,710 [ASEN-POD079][Thread:15][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 118
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 22:01:04,720 [ASEN-POD079][Thread:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 118
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-11-06 22:34:48,511 [ASEN-POD079][Thread:26][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_tbl_SpecialtyTabsMapping_SpecialtyId". The conflict occurred in database "JaslokDB", table "dbo.tbl_SpecialtyTabsMapping", column 'SpecialtyId'.
+The statement has been terminated.
+   at BusinessDataLayer.BusinessLogic.UpdateDeleteSpecialties(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 818
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 134
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:265b367e-d146-4571-b481-2aa985c75e2e
+2015-11-06 22:34:48,519 [ASEN-POD079][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=The+DELETE+statement+conflicted+with+the+REFERENCE+constraint+%22FK_tbl_SpecialtyTabsMapping_SpecialtyId%22.+The+conflict+occurred+in+database+%22JaslokDB%22%2c+table+%22dbo.tbl_SpecialtyTabsMapping%22%2c+column+%27SpecialtyId%27.%0d%0aThe+statement+has+been+terminated.&content=0
+System.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_tbl_SpecialtyTabsMapping_SpecialtyId". The conflict occurred in database "JaslokDB", table "dbo.tbl_SpecialtyTabsMapping", column 'SpecialtyId'.
+The statement has been terminated.
+   at BusinessDataLayer.BusinessLogic.UpdateDeleteSpecialties(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 818
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 134
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:265b367e-d146-4571-b481-2aa985c75e2e
+2015-11-06 22:39:31,857 [ASEN-POD079][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_tbl_SpecialtyTabsMapping_SpecialtyId". The conflict occurred in database "JaslokDB", table "dbo.tbl_SpecialtyTabsMapping", column 'SpecialtyId'.
+The statement has been terminated.
+   at BusinessDataLayer.BusinessLogic.UpdateDeleteSpecialties(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 818
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 134
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:9aaa7592-87ba-488f-bd33-71e7af21f3f8
+2015-11-06 22:39:31,858 [ASEN-POD079][Thread:22][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=55876; handshake=0;  ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.UpdateScheduleHistory(Int32 ScheduleHistoryID, DateTime EndDate, Boolean Succeeded, String LogNotes, DateTime NextStart)
+   at DotNetNuke.Services.Scheduling.SchedulingController.UpdateScheduleHistory(ScheduleHistoryItem objScheduleHistoryItem)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.UpdateScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:333ea994-8638-4681-962a-b9e5eb4ed743
+2015-11-06 22:39:31,861 [ASEN-POD079][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=1103&error=The+DELETE+statement+conflicted+with+the+REFERENCE+constraint+%22FK_tbl_SpecialtyTabsMapping_SpecialtyId%22.+The+conflict+occurred+in+database+%22JaslokDB%22%2c+table+%22dbo.tbl_SpecialtyTabsMapping%22%2c+column+%27SpecialtyId%27.%0d%0aThe+statement+has+been+terminated.&content=0
+System.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_tbl_SpecialtyTabsMapping_SpecialtyId". The conflict occurred in database "JaslokDB", table "dbo.tbl_SpecialtyTabsMapping", column 'SpecialtyId'.
+The statement has been terminated.
+   at BusinessDataLayer.BusinessLogic.UpdateDeleteSpecialties(DataAccessEntities SList) in d:\Jaslok\Website\BusinessDataLayer\BusinessLogic.cs:line 818
+   at DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping.dgSpecialtyTab_ItemCommand(Object source, DataGridCommandEventArgs e) in d:\Jaslok\Website\DesktopModules\JaslokAdmin\ManageSpecialtyTabMapping.ascx.cs:line 134
+   at System.Web.UI.WebControls.DataGrid.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.WebControls.DataGridItem.OnBubbleEvent(Object source, EventArgs e)
+   at System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:9aaa7592-87ba-488f-bd33-71e7af21f3f8
