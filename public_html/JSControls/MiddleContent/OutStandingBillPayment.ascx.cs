@@ -20,9 +20,9 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
         try
         {
 
-            DataSet dsMrNumberexist = objBusinessLogic.IsExistMRNumber(user.Username);
+            bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
 
-            if (dsMrNumberexist.Tables[0].Rows.Count <= 0 && user.Username != "host")
+            if (check == false && user.Username != "host")
             {
                 ContentPane.Visible = false;
                 PlaceHolder1.Visible = true;
@@ -74,15 +74,15 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
 
             if (CommonFn.UserID <= 0)
             {
-                
+
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
 
             }
             else
             {
-                //Response.Redirect("/Payment.aspx",false);
-                string pageurl = "/Payment.aspx";
-                Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
+               Response.Redirect("/Payment.aspx",false);
+               // string pageurl = "/Payment.aspx";
+                //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
             }
 
         }

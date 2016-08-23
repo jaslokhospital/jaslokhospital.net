@@ -20,9 +20,9 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        DataSet dsMrNumberexist = objBusinessLogic.IsExistMRNumber(user.Username);
+        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
 
-        if (dsMrNumberexist.Tables[0].Rows.Count <= 0 && user.Username != "host")
+        if (check == false && user.Username != "host")
         {
             contentpane.Visible = false;
             plcDivError.Visible = true;
@@ -128,7 +128,7 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
 
     public void clear()
     {
-        hdnSurgeryFee.Value = null;
+        hdnSurgeryFeeSB.Value = null;
         drpDoctorName.ClearSelection();
         txtdatetime.Clear();
     }
@@ -138,14 +138,14 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
         try
         {
 
-            objDAEntities.FacilityName ="Surgery"+"-"+hdnFacilityName.Value;
+            objDAEntities.FacilityName = "Surgery" + "-" + hdnFacilityNameSB.Value;
             if (Convert.ToInt16(drpDoctorName.SelectedValue) != 0)
             {
                 objDAEntities.DoctorId = Convert.ToInt32(drpDoctorName.SelectedValue);
             }
             objDAEntities.BookinDateTime = Convert.ToDateTime(txtdatetime.SelectedDate);
-            objDAEntities.Category = hdnCategory.Value;
-            objDAEntities.AdmissionCharge = hdnSurgeryFee.Value;
+            objDAEntities.Category = hdnCategorySB.Value;
+            objDAEntities.AdmissionCharge = hdnSurgeryFeeSB.Value;
             objDAEntities.MRNumber = user.Username;
 
             objDAEntities.AdmissionCharge = Convert.ToString(9);
@@ -163,9 +163,9 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
             }
             else
             {
-                //Response.Redirect("/Payment.aspx");
-                string pageurl = "/Payment.aspx";
-                Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
+                Response.Redirect("/Payment.aspx");
+                //string pageurl = "/Payment.aspx";
+               // Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
             }
 
         }

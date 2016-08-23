@@ -464,9 +464,12 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         string lsEmailStatus = string.Empty;
         try
         {
-		UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-            DataSet dsUsername = objBusinessLogic.IsExistMRNumber(objuser.Username);
-            int count = dsUsername.Tables[0].Rows.Count;
+            //UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+            //DataSet dsUsername = objBusinessLogic.IsExistMRNumber(objuser.Username);
+            //int count = dsUsername.Tables[0].Rows.Count;
+            UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+
+            bool check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
             /*if (Captcha1.UserValidated)
             {*/
 
@@ -503,7 +506,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
             }
-			 else if (count > 0)
+            else if (check == true)
             {               
                 PlaceMessage.Visible = true;
                 placeRightPart.Visible = false;

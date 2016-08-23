@@ -10,8 +10,8 @@
 
 
 <script type="text/javascript">
-    function SetCategory() {
-    }
+    //function SetCategory() {
+    //}
 
     function SetUniqueRadioButton(nameregex, current) {
         re = new RegExp(nameregex);
@@ -20,10 +20,7 @@
         for (i = 0; i < document.forms[0].elements.length; i++) {
             elm = document.forms[0].elements[i]
             if (elm.type == 'radio') {
-
-
                 if (re.test(elm.name)) {
-
                     elm.checked = false;
                 }
             }
@@ -149,7 +146,7 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:HiddenField ID="hdnDeposit" runat="server" />
+                    <asp:HiddenField ID="hdnDepositBB" runat="server" />
 
 
 
@@ -188,7 +185,7 @@
 
                         <div class="form-group write-each">
                             <%-- <a onclick="" id="A1" class="btn js-btn-primary3 pull-right">Submit</a>--%>
-                            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="BedBook" OnClientClick="return validate()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
+                            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="BedBook" OnClientClick="return validateBEDB()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
 
                         </div>
                     </div>
@@ -228,7 +225,7 @@
         var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
     }
 
-    function setRadioButton(value, amount) {
+    function setRadioButtonBEDB(value, amount) {
         var radID = value.split(',');
         $('#dnn_txtAdmissionCharge').val(amount);
         $('#' + radID[0]).attr('checked', true);
@@ -239,14 +236,13 @@
         $("[id^=spanPrice]").css("visibility", "hidden");
         $("#spanPrice" + $(this).attr("data-index")).css("visibility", "visible");
 
-        $("#<%=txtAdmissionCharge.ClientID%>").val($(this).attr("aria-valuetext"));
+        $("#<=txtAdmissionCharge.ClientID%>").val($(this).attr("aria-valuetext"));
         //alert($('#dnn_txtAdmissionCharge').val());
 
-        $("#<%=hdnDeposit.ClientID%>").val($(this).attr("id") + "," + $(this).attr("title"));
-        //alert($("#<%=hdnDeposit.ClientID%>").val());
-
+        $("#<=hdnDeposit.ClientID%>").val($(this).attr("id") + "," + $(this).attr("title"));
+        
     });
-    function validate() {
+    function validateBEDB() {
         if ($('#dnn_txtAdmissionCharge').val() == null || $('#dnn_txtAdmissionCharge').val() == "") {
             alert("Please select bed reservation type first");
             return false;
