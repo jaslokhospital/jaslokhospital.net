@@ -11,7 +11,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.Security; 
+using System.Web.Security;
 using BusinessDataLayer;
 using System.Data;
 using System.IO;
@@ -28,10 +28,9 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     BusinessLogic objBusinessLogic = new BusinessLogic();
     DataTable ds = new DataTable();
 
-     UserLoginStatus loginStatus = new UserLoginStatus();
+    UserLoginStatus loginStatus = new UserLoginStatus();
 
     protected void Page_Load(object sender, EventArgs e)
-    
     {
         try
         {
@@ -39,19 +38,19 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 if (Session["IsVisitor"] != null)
                 {
-                   
-					UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+                    UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
                     if (!string.IsNullOrEmpty(objuser.Username))
                     {
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "PermanentRegReminderBox()", true);
                         Session["IsVisitor"] = null;
                     }
-                   
                 }
             }
+
             this.Page.Form.DefaultButton = LoginBtn.UniqueID;
             UserInfo user = UserController.Instance.GetCurrentUserInfo();
             hdnUserId.Value = user.UserID.ToString();
+
             if (user.UserID == -1)
             {
                 //anchlogin.Visible = true;
@@ -77,7 +76,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             //if (Request.RawUrl.Length < 1)
             //{
             //}
-			IsMNumberExist();
+            IsMNumberExist();
         }
         catch (Exception ex)
         {
@@ -92,7 +91,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         {
             secure.SignOut();
             Response.Redirect("/", false);
-			Session["IsVisitor"] = null;
+            Session["IsVisitor"] = null;
         }
     }
 
@@ -120,7 +119,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     }
     protected void lnkSignUp_Click(object sender, EventArgs e)
     {
-		lblSignUp.CssClass = "";
+        lblSignUp.CssClass = "";
         divSignUp.Attributes.Add("style", "display:block;");
         divLoginForm.Attributes.Add("style", "display:none;");
         divOTPVerification.Attributes.Add("style", "display:none;");
@@ -227,6 +226,11 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             return false;
         }
     }
+    protected void sessionclear_Click()
+    {
+        Session["AppointmentDetail"] = null;
+        Session["ConsultationAppointment"] = null;
+    }
 
     protected void LoginBtn_Click(object sender, EventArgs e)
     {
@@ -248,74 +252,13 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         //    Session["IsMR"] = Convert.ToString(AvailableMR);
         //}
         //#endregion
-if (Session["AppointmentDetail"] != null)
+
+
+        if (Session["AppointmentDetail"] != null)
         {
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
             if (IsNum == true)
             {
-                Response.Redirect("/Payment.aspx");
-            }
-            else
-            {
-                lblLoginError.CssClass = "errorText";
-                lblLoginError.Visible = true;
-                lblLoginError.Text = "Please Enter MR Number To Login!";
-                return;
-            }
-        }
-		else if (Session["ConsultationAppointment"] != null)
-        {
-            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-            if (IsNum == true)
-            {
-                Response.Redirect("/Payment.aspx");
-            }
-            else
-            {
-                lblLoginError.CssClass = "errorText";
-                lblLoginError.Visible = true;
-                lblLoginError.Text = "Please Enter MR Number To Login!";
-                return;
-            }
-        }
-        else
-        {
-        JaslokMailer objMailer = new JaslokMailer();
-        List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
-        string lsEmailStatus = string.Empty;
-
-
-        PatIndex objPatIndex = new PatIndex();
-
-
-        bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-
-        if (IsNum == false)
-        {
-
-            // check for visitor id and MRNO
-            string MRNumber;
-            string Username;
-            DataSet ds = objBusinessLogic.GetMRNumberByUserName(txtLoginUsername.Text.Trim());
-
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                 MRNumber = ds.Tables[0].Rows[0]["MRNumber"].ToString();
-                 Username = ds.Tables[0].Rows[0]["Username"].ToString();
-            }
-            else
-            {
-                lblLoginError.CssClass = "errorText";
-                lblLoginError.Visible = true;
-                lblLoginError.Text = "Please enter correct Id and Password!";
-                return;
-
-            }
-            if (string.IsNullOrEmpty(MRNumber) && !string.IsNullOrEmpty(Username))
-            {
-                //loginStatus = UserLoginStatus.LOGIN_SUCCESS;
-
-
                 UserInfo objUser = new UserInfo();
                 objUser.Username = txtLoginUsername.Text.Trim();
                 UserMembership objMembership = new UserMembership(objUser);
@@ -329,18 +272,11 @@ if (Session["AppointmentDetail"] != null)
                 if (objUserInfo != null)
                 {
                     UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-
-                    Session["IsVisitor"] = true;
-
-                    Response.Redirect("/redirect");
-
-                    //Response.Redirect("/redirect");
-                   
+                    Response.Redirect("/Payment.aspx");
                 }
                 else
                 {
-					 if ( loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
-
+                    if (loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
                     {
 
                         lblLoginError.CssClass = "errorText";
@@ -352,137 +288,279 @@ if (Session["AppointmentDetail"] != null)
                         return;
 
                     }
-					
+
                     lblLoginError.CssClass = "errorText";
                     lblLoginError.Visible = true;
                     lblLoginError.Text = "Please enter correct password!";
                     return;
 
-                  
+
                 }
 
             }
-
-            if (!string.IsNullOrEmpty(MRNumber))
+            else
             {
+                Session["AppointmentDetail"] = null;
                 lblLoginError.CssClass = "errorText";
                 lblLoginError.Visible = true;
                 lblLoginError.Text = "Please Enter MR Number To Login!";
                 return;
             }
-
         }
-        if (IsNum == true)
+        else if (Session["ConsultationAppointment"] != null)
         {
-            // check for Mr Number in db
-
-            DataSet ds = objBusinessLogic.IsExistMRNumber(txtLoginUsername.Text.Trim());
-
-            if (ds.Tables[0].Rows.Count > 0)
+            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
+            if (IsNum == true)
             {
-                //loginStatus = UserLoginStatus.LOGIN_SUCCESS;
-
                 UserInfo objUser = new UserInfo();
-                objUser.Username = ds.Tables[0].Rows[0]["Username"].ToString();
-               // objUser.Username = txtLoginUsername.Text.Trim();
+                objUser.Username = txtLoginUsername.Text.Trim();
                 UserMembership objMembership = new UserMembership(objUser);
-                objMembership.Username = objUser.Username.Trim();
+                objMembership.Username = txtLoginUsername.Text.Trim();
                 objMembership.Password = txtLoginPassword.Text;
                 objUser.Membership = objMembership;
-
 
                 PortalSettings po = new PortalSettings();
                 UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
                 UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
                 if (objUserInfo != null)
                 {
-
                     UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-
-                   
-
-                     if (!string.IsNullOrEmpty(hdnRedirectUrl.Value) && hdnRedirectUrl.Value.ToLower() != "patientregistration")
-                    {
-                        Response.Redirect("/" + hdnRedirectUrl.Value);
-                    }
-                    else
-                        Response.Redirect("/redirect");
-                   
+                    Response.Redirect("/Payment.aspx");
                 }
                 else
                 {
+                    if (loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
+                    {
+
+                        lblLoginError.CssClass = "errorText";
+
+                        lblLoginError.Visible = true;
+
+                        lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
+
+                        return;
+
+                    }
+
                     lblLoginError.CssClass = "errorText";
                     lblLoginError.Visible = true;
                     lblLoginError.Text = "Please enter correct password!";
                     return;
+
+
                 }
-
-                //UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-                //Response.Redirect("/redirect");
-
-               
-
             }
-            // If User enters MRNo. which we do not have
             else
             {
-                var PatientDetails = objPatIndex.GetPatientDetails(txtLoginUsername.Text.Trim());
+                Session["ConsultationAppointment"] = null;
+                lblLoginError.CssClass = "errorText";
+                lblLoginError.Visible = true;
+                lblLoginError.Text = "Please Enter MR Number To Login!";
+                return;
+            }
+        }
+        else
+        {
+            JaslokMailer objMailer = new JaslokMailer();
+            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+            string lsEmailStatus = string.Empty;
 
 
-                if (PatientDetails.MRNO !=null)
+            PatIndex objPatIndex = new PatIndex();
+
+
+            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
+
+            if (IsNum == false)
+            {
+
+                // check for visitor id and MRNO
+                string MRNumber;
+                string Username;
+                DataSet ds = objBusinessLogic.GetMRNumberByUserName(txtLoginUsername.Text.Trim());
+
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-
-                   DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
-
-
-                   if (dsVal.Tables[0].Rows.Count == 1)
-                   {
-                       // loginStatus = UserLoginStatus.LOGIN_SUCCESS;
-						
-						Session["IsVisitor"] = null;
-                       UserInfo objUser = new UserInfo();
-                       objUser.Username = txtLoginUsername.Text.Trim();
-                       UserMembership objMembership = new UserMembership(objUser);
-                       objMembership.Username = txtLoginUsername.Text.Trim();
-                       objMembership.Password = txtLoginPassword.Text;
-                       objUser.Membership = objMembership;
-
-                       PortalSettings po = new PortalSettings();
-                       UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                       UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-                       if (objUserInfo != null)
-                       {
-
-                           UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-
-
-                          /* if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
-                           {
-                               Response.Redirect("/" + hdnRedirectUrl.Value);
-                           }
-                           else*/
-                               Response.Redirect("/redirect");
-
-                       }
-                       else
-                       {
-                           lblLoginError.CssClass = "errorText";
-                           lblLoginError.Visible = true;
-                           lblLoginError.Text = "Please enter correct password!";
-                           return;
-                       }
-                   }
+                    MRNumber = ds.Tables[0].Rows[0]["MRNumber"].ToString();
+                    Username = ds.Tables[0].Rows[0]["Username"].ToString();
                 }
                 else
                 {
                     lblLoginError.CssClass = "errorText";
                     lblLoginError.Visible = true;
-                    lblLoginError.Text = "Login Failed! You are not authorized to access Jaslok Portal!";
+                    lblLoginError.Text = "Please enter correct Id and Password!";
+                    return;
+
+                }
+                if (string.IsNullOrEmpty(MRNumber) && !string.IsNullOrEmpty(Username))
+                {
+                    //loginStatus = UserLoginStatus.LOGIN_SUCCESS;
+
+
+                    UserInfo objUser = new UserInfo();
+                    objUser.Username = txtLoginUsername.Text.Trim();
+                    UserMembership objMembership = new UserMembership(objUser);
+                    objMembership.Username = txtLoginUsername.Text.Trim();
+                    objMembership.Password = txtLoginPassword.Text;
+                    objUser.Membership = objMembership;
+
+                    PortalSettings po = new PortalSettings();
+                    UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                    UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+                    if (objUserInfo != null)
+                    {
+                        UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+
+                        Session["IsVisitor"] = true;
+
+                        Response.Redirect("/redirect");
+
+                        //Response.Redirect("/redirect");
+
+                    }
+                    else
+                    {
+                        if (loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
+                        {
+
+                            lblLoginError.CssClass = "errorText";
+
+                            lblLoginError.Visible = true;
+
+                            lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
+
+                            return;
+
+                        }
+
+                        lblLoginError.CssClass = "errorText";
+                        lblLoginError.Visible = true;
+                        lblLoginError.Text = "Please enter correct password!";
+                        return;
+
+
+                    }
+
+                }
+
+                if (!string.IsNullOrEmpty(MRNumber))
+                {
+                    lblLoginError.CssClass = "errorText";
+                    lblLoginError.Visible = true;
+                    lblLoginError.Text = "Please Enter MR Number To Login!";
+                    return;
+                }
+
+            }
+            if (IsNum == true)
+            {
+                // check for Mr Number in db
+                bool check = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());
+
+                if (check == true)
+                {
+                    UserInfo objUser = new UserInfo();
+                    objUser.Username = txtLoginUsername.Text.Trim();
+                    UserMembership objMembership = new UserMembership(objUser);
+                    objMembership.Username = objUser.Username.Trim();
+                    objMembership.Password = txtLoginPassword.Text;
+                    objUser.Membership = objMembership;
+
+
+                    PortalSettings po = new PortalSettings();
+                    UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                    UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+                    if (objUserInfo != null)
+                    {
+
+                        UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+
+
+
+                        if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
+                        {
+                            Response.Redirect("/" + hdnRedirectUrl.Value);
+                        }
+                        else
+                            Response.Redirect("/redirect");
+
+                    }
+                    else
+                    {
+                        lblLoginError.CssClass = "errorText";
+                        lblLoginError.Visible = true;
+                        lblLoginError.Text = "Please enter correct password!";
+                        return;
+                    }
+
+                    //UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+                    //Response.Redirect("/redirect");
+
+
+
+                }
+                // If User enters MRNo. which we do not have
+                else
+                {
+                    var PatientDetails = objPatIndex.GetPatientDetails(txtLoginUsername.Text.Trim());
+
+
+                    if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
+                    {
+
+
+
+                        DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
+
+
+                        if (dsVal.Tables[0].Rows.Count == 1)
+                        {
+                            // loginStatus = UserLoginStatus.LOGIN_SUCCESS;
+
+                            Session["IsVisitor"] = null;
+                            UserInfo objUser = new UserInfo();
+                            objUser.Username = txtLoginUsername.Text.Trim();
+                            UserMembership objMembership = new UserMembership(objUser);
+                            objMembership.Username = txtLoginUsername.Text.Trim();
+                            objMembership.Password = txtLoginPassword.Text;
+                            objUser.Membership = objMembership;
+
+                            PortalSettings po = new PortalSettings();
+                            UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                            UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+                            if (objUserInfo != null)
+                            {
+
+                                UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+
+
+                                //if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
+                                //{
+                                //    Response.Redirect("/" + hdnRedirectUrl.Value);
+                                //}
+                                //else
+                                Response.Redirect("/redirect");
+
+                            }
+                            else
+                            {
+                                lblLoginError.CssClass = "errorText";
+                                lblLoginError.Visible = true;
+                                lblLoginError.Text = "Please enter correct password!";
+                                return;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        lblLoginError.CssClass = "errorText";
+                        lblLoginError.Visible = true;
+                        lblLoginError.Text = "Login Failed! You are not authorized to access Jaslok Portal!";
+                    }
                 }
             }
         }
     }
-}
 
 
     //    #region CSV Updation For User
@@ -550,14 +628,14 @@ if (Session["AppointmentDetail"] != null)
 
 
 
-    public DataSet InsertUpdateUserDetails(string MRNO,string FName, string LName, string Email, string Password, string Telephone, string Gender, string Address, string Age)
+    public DataSet InsertUpdateUserDetails(string MRNO, string FName, string LName, string Email, string Password, string Telephone, string Gender, string Address, string Age)
     {
 
         string lsUserName = string.Empty;
 
         lsUserName = MRNO;
 
-  
+
         //lsUserName = FName.Substring(0, 1).ToLower() + LName.ToLower() + Telephone.Substring(Telephone.Length - 3, 3);
 
         //Password = EncryptPassword(Password);
@@ -566,17 +644,17 @@ if (Session["AppointmentDetail"] != null)
 
         Membership.CreateUser(lsUserName, Password);
 
-        DataSet ds = objBusinessLogic.SaveUserDetails(MRNO,lsUserName, FName, LName, Email, FName, Password, Telephone, Gender, Address, Age, lsOtp);
+        DataSet ds = objBusinessLogic.SaveUserDetails(MRNO, lsUserName, FName, LName, Email, FName, Password, Telephone, Gender, Address, Age, lsOtp);
 
-       return ds;
+        return ds;
 
-       
+
     }
 
 
 
     protected void btnForgotPasword_Click(object sender, EventArgs e)
-    {/*
+    {
         JaslokMailer objMailer = new JaslokMailer();
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
         MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
@@ -614,11 +692,11 @@ if (Session["AppointmentDetail"] != null)
             lblForgotPassError.CssClass = "errorText";
             lblForgotPassError.Text = "Username does not exist.";
             txtForgotPasswordUserName.Text = "";
-        }*/
+        }
     }
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
-		lblSignUp.CssClass = "";
+        lblSignUp.CssClass = "";
         bool userExist = Convert.ToBoolean(objBusinessLogic.CheckUerExistence(ddlCountryCode.SelectedValue + "-" + txtMobileNumber.Text.Trim()).Rows[0]["MobileNumberExists"]);
 
         if (!userExist)
@@ -860,32 +938,26 @@ if (Session["AppointmentDetail"] != null)
     }
 
     #endregion
-    /*protected void btnSubmit_Click(object sender, EventArgs e)
-    {
+    //protected void btnSubmit_Click(object sender, EventArgs e)
+    //{
 
-        objDAEntities.FacilityName = "PermenantRegistration";
-        objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
-        Session["permenantRegistration"] = objDAEntities;
-        Session["Amount"] = 10;
-        Response.Redirect(@"/Payment.aspx");
-		
-		string pageurl = "/Payment.aspx";
-		 Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", "window.open('" + pageurl + "','_blank');", true);
-        //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
-     
-    }*/
-	 public void IsMNumberExist()
-    {
-        UserInfo user = UserController.Instance.GetCurrentUserInfo();
-        DataSet dsMrNumberexist = objBusinessLogic.IsExistMRNumber(user.Username);
+    //    objDAEntities.FacilityName = "PermenantRegistration";
+    //    objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
+    //    Session["permenantRegistration"] = objDAEntities;
+    //    Session["Amount"] = 10;
+    //    //Response.Redirect(@"/Payment.aspx");
 
-        if (dsMrNumberexist.Tables[0].Rows.Count <= 0 && user.Username != "host")
+    //    string pageurl = "/Payment.aspx";
+    //    Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", "window.open('" + pageurl + "','_blank');", true);
+    //    //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
+
+    //}
+    public void IsMNumberExist()
+    {
+        bool check = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());
+        if (check == false)
         {
             hdnMrNumberexist.Value = "NotExist";
-        }
-		 else
-        {
-            drpPatient.Visible = false;
         }
     }
 }

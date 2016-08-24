@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BedBooking.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_BedBooking" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BedBooking.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_BedBooking"%>
 <%@ Register Src="~/JSControls/MiddleContent/LeftPaneBookAppointment.ascx" TagPrefix="JS" TagName="LeftPaneBookAppointment" %>
 <%@ Register Src="~/JSControls/Common/Testimonials.ascx" TagPrefix="JS" TagName="Testimonials" %>
 <%@ Register Src="~/JSControls/Home/WriteToUs.ascx" TagPrefix="JS" TagName="WriteToUs" %>
@@ -149,7 +149,7 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:HiddenField ID="hdnDeposit" runat="server" />
+                    <asp:HiddenField ID="hdnDepositBB" runat="server" />
 
 
 
@@ -188,7 +188,7 @@
 
                         <div class="form-group write-each">
                             <%-- <a onclick="" id="A1" class="btn js-btn-primary3 pull-right">Submit</a>--%>
-                            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="BedBook" OnClientClick="return validate()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
+                            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="BedBook" OnClientClick="return validateBEDB()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
 
                         </div>
                     </div>
@@ -222,7 +222,8 @@
 </div>
 <JS:Testimonials runat="server" ID="Testimonials" />
 <JS:Footer runat="server" ID="Footer" />
-<script type="text/javascript">
+
+<%--<script type="text/javascript">
     var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
         var keyCode = e.which ? e.which : e.keyCode
         var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
@@ -273,5 +274,5 @@
         $("#dnn_Header_pVerifyUser").show();
 
     }
-</script>
+</script>--%>
 

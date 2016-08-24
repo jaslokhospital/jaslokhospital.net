@@ -1,7 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MobileHeader.ascx.cs"
     Inherits="JSControls_Home_MobileHeader" ClientIDMode="Static" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
-<%@ Register Src="~/JSControls/Common/StickyFindDoctor.ascx" TagPrefix="JS" TagName="StickyFindDoctor" %>
 <!--//// FEATURED ARTICLES /////-->
 <style type="text/css">
     .modal-footer p
@@ -52,6 +51,29 @@
         font-size: 12px;
         font-weight: normal;
     }
+    li:hover {
+        cursor: pointer;
+    }
+
+    .pading45 {
+        padding-right: 45px;
+    }
+
+    @media only screen and (max-width:767px) {
+        .pading45 {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+            .pading45 > .collapse {
+                display: block;
+            }
+
+        .container-menu {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
 </style>
 <script type="text/javascript">
     function redirect() {
@@ -90,8 +112,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">1800 221
-                            800</span>
+                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
                     </div>
                 </div>
             </div>
@@ -268,15 +289,15 @@
                             <li data-value="PatientRegistration" runat="server" id="Option1"><a>Patient Registration</a></li>
                             <li>In-Patient</li>
                             <li data-value="bed-booking"><a>Bed Reservation/Admission</a></li>
-                            <li data-value=""><a>View Lab Reports</a></li>
+                            <li data-value="#"><a>View Lab Reports</a></li>
                             <li data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></li>
 
                             <li>Out-Patient</li>
-                            <li data-value="consultationappointment"><a>Consultation Appointment</a></li>
+                            <li data-value="#"><a>Consultation Appointment</a></li>
                             <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>New Appointment</a></li>
                             <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>Follow-up Appointment</a></li>
-                            <li data-value="/"><a>Diagnostics Appointment</a></li>
-                            <li data-value="/"><a>View Lab Reports</a></li>
+                            <li data-value="#"><a>Diagnostics Appointment</a></li>
+                            <li data-value="#"><a>View Lab Reports</a></li>
                             <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
 
 
@@ -287,12 +308,12 @@
                         </a>
                         <ul class="dropdown-menu dropdown-second-menu">
 
-                            <li data-value="/">Admission Deposit</li>
+                            <li data-value="#">Admission Deposit</li>
                             <li data-value="surgery-booking">Surgery Deposit</li>
                             <li data-value="outstandingbillpayment">Outstanding Bill</li>
                             <li>Doctor Consultation</li>
                             <li data-value="bed-booking" style="margin-left: 23px;">Bed Reservation/Admission</li>
-                            <li data-value="/" style="margin-left: 23px;">View Lab Reports</li>
+                            <li data-value="#" style="margin-left: 23px;">View Lab Reports</li>
                             <li data-value="outstandingbillpayment" style="margin-left: 23px;">View Outstanding Bill (Interim Demand Note)</li>
 
                             <li>Diagnostic Services</li>
@@ -310,7 +331,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="padding: 5px 50px;">
-                <button type="button" class="close" data-dismiss="modal">
+                <button type="button" onclick="sessionclear_Click" runat="server" class="close" data-dismiss="modal">
                     &times;</button>
                 <h4>
                     Permanent Registration</h4>
@@ -553,7 +574,8 @@
     </telerik:RadAjaxManager>
 </div>
 <asp:HiddenField ID="hdnMrNumberexist" runat="server" />
-<telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+
+<%--<telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
     <script type="text/javascript">
         $(window).on('resize', function () {
             if ($(window).width() < 1025) {
@@ -740,4 +762,4 @@
         }
    
     </script>
-</telerik:RadCodeBlock>
+</telerik:RadCodeBlock>--%>

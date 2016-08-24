@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="OutStandingBillPayment.ascx.cs" Inherits="JSControls_MiddleContent_OutStandingBillPayment" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="OutStandingBillPayment.ascx.cs" Inherits="JSControls_MiddleContent_OutStandingBillPayment" ClientIDMode="Static" %>
 
 <style>
 
@@ -246,7 +246,7 @@
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 js-zero-padding">
 
                 <div class="form-group write-each">
-                    <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" OnClientClick="return validate();"  ValidationGroup="OBP" OnClick="btnSubmit_Click">Pay</asp:LinkButton>
+                    <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" OnClientClick="return validateOSBPay();"  ValidationGroup="OBP" OnClick="btnSubmit_Click">Pay</asp:LinkButton>
                 
                 </div>
             </div>
@@ -257,7 +257,7 @@
     </div>
     </div>
 
-<script type="text/javascript">
+<%--<script type="text/javascript">
     var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
         var keyCode = e.which ? e.which : e.keyCode
         var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
@@ -285,4 +285,4 @@
         $("#dnn_Header_pVerifyUser").show();
 
     }
-  </script>
+  </script>--%>

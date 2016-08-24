@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftPaneBookAppointment.ascx.cs" Inherits="JSControls_MiddleContent_LeftPaneBookAppointment" EnableViewState="true" ViewStateMode="Enabled" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftPaneBookAppointment.ascx.cs" Inherits="JSControls_MiddleContent_LeftPaneBookAppointment" EnableViewState="true" ViewStateMode="Enabled" ClientIDMode="Static" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <style type="text/css">
     .table-condensed {
@@ -53,7 +53,7 @@
             </div>
 
             <div class="form-group">
-                <asp:LinkButton ID="tbnLPBAppointment" runat="server" ValidationGroup="btnLPBA" class="btn btn_submit" OnClientClick="return Val()" OnClick="tbnLPBAppointment_Click">Submit<i class="glyphicon glyphicon-chevron-right"></i></asp:LinkButton>
+                <asp:LinkButton ID="tbnLPBAppointment" runat="server" ValidationGroup="btnLPBA" class="btn btn_submit" OnClientClick="return ValidationLPBA()" OnClick="tbnLPBAppointment_Click">Submit<i class="glyphicon glyphicon-chevron-right"></i></asp:LinkButton>
             </div>
 
 
@@ -71,7 +71,7 @@
 </telerik:RadAjaxLoadingPanel>
 
 <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
-<script type="text/javascript">
+<%--<script type="text/javascript">
     function Val() {
         if ($(".app_doctor option:selected").index() > 0)
             return true;
@@ -84,5 +84,5 @@
             return false;
         }
     }
-</script>
+</script>--%>
 </telerik:RadCodeBlock>

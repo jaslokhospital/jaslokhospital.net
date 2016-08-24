@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HealthCheckUpComprehensive.ascx.cs" Inherits="JSControls_MiddleContent_HealthCheckUpComprehensive" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HealthCheckUpComprehensive.ascx.cs" Inherits="JSControls_MiddleContent_HealthCheckUpComprehensive" ClientIDMode="Static" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <div class="healthCheckup">
@@ -108,12 +108,13 @@
             </div>
 
         </div>
+        <div class="clearfix"></div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title mypanel-title">
                    <%-- <input type="radio" id="rdoPackageB" title="Package B" name="quality" value="6500" aria-valuetext="6500">--%>
                     <label class="a_idc" for="rdoPackageB">
-                                        <input type="radio" id="rdoPackageB" title="Package B" name="quality" value="6500" aria-valuetext="Price : &#8377; 6,500">
+                                        <input type="radio" id="rdoPackageB" title="Package B" name="quality" value="6500" aria-valuetext="6500">
                          <span class="lable_box"> </span>
                                     </label>
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false">
@@ -180,12 +181,12 @@
                             <input type="radio" id="rdoFemale" title="Female" name="packageb" value="7500" aria-valuetext="7500">
                             7500/- (For Female)--%>
                             <label  for="rdoMale">
-                                       <input type="radio" checked id="rdoMale" title="Male" name="packageb" value="6500" aria-valuetext="Price : &#8377; 6,500">
+                                       <input type="radio" checked id="rdoMale" title="Male" name="packageb" value="6500" aria-valuetext="6500">
                            
                          <span class="lable_box">  &#8377;  6500/- (For Male) </span>
                                     </label>
                             <label class="a_idc" for="rdoFemale">
-                                       <input type="radio" id="rdoFemale" title="Female" name="packageb" value="7500" aria-valuetext="Price : &#8377; 7,500">
+                                       <input type="radio" id="rdoFemale" title="Female" name="packageb" value="7500" aria-valuetext="7500">
                            
                          <span class="lable_box"> &#8377;  7500/- (For Female)</span>
                                     </label>
@@ -196,6 +197,7 @@
                 </div>
             </div>
         </div>
+         <div class="clearfix"></div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title mypanel-title">
@@ -328,7 +330,7 @@ person are also offered at concessional rate, if advised.
 
         <div class="form-group write-each">
             <%-- <a onclick="" id="A1" class="btn js-btn-primary3 pull-right">Submit</a>--%>
-            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="Hcc" OnClientClick="return validate()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
+            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="Hcc" OnClientClick="return validateHCC()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
 
         </div>
     </div>
@@ -338,19 +340,19 @@ person are also offered at concessional rate, if advised.
 <asp:HiddenField ID="hdnDeposit" runat="server" />
 <script type="text/javascript">
    
-    function setRadioButton(value, amount) {
-        var radID = value.split(',');
-        $('#dnn_txtAdmissionCharge').val(amount);
-        $('#' + radID[0]).attr('checked', true);
+    //function setRadioButton(value, amount) {
+    //    var radID = value.split(',');
+    //    $('#dnn_txtAdmissionCharge').val(amount);
+    //    $('#' + radID[0]).attr('checked', true);
 
-    }
+    //}
 
     $(".healthCheckup input[type='radio']").on("change", function () {
      
         //$("[id^=spanPrice]").css("visibility", "hidden");
         //$("#spanPrice" + $(this).attr("data-index")).css("visibility", "visible");
 
-        $("#<%=txtAdmissionCharge.ClientID%>").val($(this).attr("aria-valuetext"));
+        $("#txtAdmissionCharge").val($(this).attr("aria-valuetext"));
 
      
 
@@ -358,11 +360,11 @@ person are also offered at concessional rate, if advised.
 
         //alert($('#dnn_txtAdmissionCharge').val());
 
-        $("#<%=hdnDeposit.ClientID%>").val($(this).attr("id") + "," + $(this).attr("title"));
+        $("#hdnDeposit").val($(this).attr("id") + "," + $(this).attr("title"));
         //alert($("#<%=hdnDeposit.ClientID%>").val());
     });
     $(".healthCheckup input[name='packageb']").on("change", function () {
-        $('#dnn_ctl01_lblPackage').text($(this).attr("aria-valuetext"));
+        $('#lblPackage').text($(this).attr("aria-valuetext"));
         $('#rdoPackageB').attr('checked', true);
     });
     //function validate() {
@@ -373,20 +375,20 @@ person are also offered at concessional rate, if advised.
 
     //}
 
-    function showPopupWindow() {
-        $("#myModal").modal();
-        $("#dnn_Header_litPopUpTitle").html("Login");
-        $("#dnn_Header_divLoginForm").show();
-        $("#dnn_Header_divForgotPassword").hide();
-        $("#dnn_Header_divOTPVerification").hide();
-        $("#dnn_Header_divSignUp").hide();
-        $("#dnn_Header_lblError").empty();
+    //function showPopupWindow() {
+    //    $("#myModal").modal();
+    //    $("#dnn_Header_litPopUpTitle").html("Login");
+    //    $("#dnn_Header_divLoginForm").show();
+    //    $("#dnn_Header_divForgotPassword").hide();
+    //    $("#dnn_Header_divOTPVerification").hide();
+    //    $("#dnn_Header_divSignUp").hide();
+    //    $("#dnn_Header_lblError").empty();
 
-        $("#dnn_Header_pSignUp").show();
-        $("#dnn_Header_pForgotPassWord").show();
-        $("#dnn_Header_pSignIn").hide();
-        $("#dnn_Header_pVerifyUser").show();
+    //    $("#dnn_Header_pSignUp").show();
+    //    $("#dnn_Header_pForgotPassWord").show();
+    //    $("#dnn_Header_pSignIn").hide();
+    //    $("#dnn_Header_pVerifyUser").show();
 
-    }
+    //}
 </script>
 

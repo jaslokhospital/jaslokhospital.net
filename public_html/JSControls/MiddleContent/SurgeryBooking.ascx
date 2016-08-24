@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SurgeryBooking.ascx.cs" Inherits="JSControls_MiddleContent_SurgeryBooking" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SurgeryBooking.ascx.cs" Inherits="JSControls_MiddleContent_SurgeryBooking" ClientIDMode="Static" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
   <asp:PlaceHolder ID="plcDivError" runat="server" Visible="false">                
@@ -88,7 +88,7 @@
                         <div class="col-md-4 col-sm-12 col-xs-12">
                             <asp:Label runat="server" ID="lblSurgeryFee" Text="Deposit Amount"></asp:Label>
                             <asp:TextBox ID="txtSurgeryFee" type="text" class="riEmpty form-control" onkeypress="return Numeric(event);" runat="server"></asp:TextBox>
-                             <asp:HiddenField ID="hdnSurgeryFee" runat="server" />
+                             <asp:HiddenField ID="hdnSurgeryFeeSB" runat="server" />
                         </div>
                     </div>
 
@@ -96,14 +96,14 @@
 
             <div class="form-group write-each">
                 <%-- <a onclick="" id="A1" class="btn js-btn-primary3 pull-right">Submit</a>--%>
-                <asp:LinkButton ID="btnSubmitSB" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="SB" OnClientClick="return validate()" OnClick="btnSubmitSB_Click">Pay</asp:LinkButton>
+                <asp:LinkButton ID="btnSubmitSB" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="SB" OnClientClick="return validateBEDB()" OnClick="btnSubmitSB_Click">Pay</asp:LinkButton>
 
             </div>
 
             <div class="form-group">
                 <div class="col-xs-8 col-md-12 text-right">
-                    <asp:HiddenField ID="hdnFacilityName" runat="server" />
-                    <asp:HiddenField ID="hdnCategory" runat="server" />
+                    <asp:HiddenField ID="hdnFacilityNameSB" runat="server" />
+                    <asp:HiddenField ID="hdnCategorySB" runat="server" />
                 </div>
             </div>
 
@@ -120,7 +120,7 @@
 </div>
 </div>
 
-<script type="text/javascript">
+	<%--<script type="text/javascript">
     var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
         var keyCode = e.which ? e.which : e.keyCode
         var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
@@ -130,7 +130,7 @@
     });
     $("input[type='radio']").on("change", function () {
         $('#dnn_ctl01_txtSurgeryFee').val(this.value)
-        $("#<%=hdnSurgeryFee.ClientID%>").val(this.value);
+      $("#<%=hdnSurgeryFee.ClientID%>").val(this.value);
         $("#<%=hdnFacilityName.ClientID%>").val(this.title);
         $("#<%=hdnCategory.ClientID%>").val(this.getAttribute("aria-valuetext"));
 
@@ -201,22 +201,12 @@
     $('.border3').mouseout(function () {
         $(this).removeClass("hover");
     });
-
-
-
-
 </script>
-
-
-
 <script>
     $('document').ready(function () {
         $('#accordion .panel:first-child a span').addClass("fa fa-chevron-down");
-
     });
-
-
-</script>
+</script>--%>
 
 				
 
