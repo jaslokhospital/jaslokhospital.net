@@ -962,6 +962,7 @@ DOWNLOADCOPYRETURN*/
     .finddoc_left_form { height: auto }
     .finddoc_pt97 { padding-top: 0 }
     .contact-left { padding-bottom: 11px }
+    .trustees-pic {width:100% !important;}
 }
 @media only screen and (max-width:767px) { 
     
@@ -1467,7 +1468,9 @@ DOWNLOADCOPYRETURN*/
     .nav1 {text-align: center;}
     .breadcrumb {padding-left: 15px;}
     .mgt-bg-space { padding: 0px; }
-     .listMobile li {padding:0px;
+     .listMobile li {padding:0px; }
+     .left_part {padding-top: 1%;}
+    .feedback p { margin-bottom:0px;
     }
 }
 @media (max-width:480px) {

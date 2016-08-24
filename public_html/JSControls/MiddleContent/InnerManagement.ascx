@@ -50,7 +50,6 @@
         <li>George Alex (CMO)</li>
         <li>Viloo Williams (CIO)</li>
         <li>Jitendra Haryan (CFO)</li>
-        <li>Mrs. Bobby Ramesh (Director Nursing Service)</li>
       
     </ul>
 
