@@ -576,7 +576,7 @@ if (Session["AppointmentDetail"] != null)
 
 
     protected void btnForgotPasword_Click(object sender, EventArgs e)
-    {/*
+    {
         JaslokMailer objMailer = new JaslokMailer();
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
         MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
@@ -614,7 +614,10 @@ if (Session["AppointmentDetail"] != null)
             lblForgotPassError.CssClass = "errorText";
             lblForgotPassError.Text = "Username does not exist.";
             txtForgotPasswordUserName.Text = "";
-        }*/
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divForgotPassword.Attributes.Add("style", "display:block;");
+            return;
+        }
     }
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
