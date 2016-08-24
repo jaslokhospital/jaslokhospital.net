@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FixAnAppointmentSkin.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FixAnAppointmentSkin.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin"%>
 <%@ Register Src="~/JSControls/MiddleContent/LeftPaneBookAppointment.ascx" TagPrefix="JS" TagName="LeftPaneBookAppointment" %>
 <%@ Register Src="~/JSControls/Common/Testimonials.ascx" TagPrefix="JS" TagName="Testimonials" %>
 <%@ Register Src="~/JSControls/Home/WriteToUs.ascx" TagPrefix="JS" TagName="WriteToUs" %>
@@ -26,34 +26,7 @@
     //}
    // CitrusSubmit();
    
-    function GetSelectedTextValue(drpAppointmentType) {
-       
-        var selectedText = drpAppointmentType.options[drpAppointmentType.selectedIndex].innerHTML;
-        if (selectedText == "Follow-Up") {
-
-            var id = document.getElementById('<%=hdnfollowup.ClientID %>').value;
-
-            if (id != "") {
-
-                divAppointmentType.style.display = 'block';
-                document.getElementById('<%=lblAppointmentType.ClientID%>').innerHTML = id;
-            }
-
-        }
-
-        else if (selectedText == "New") {
-            var id = document.getElementById('<%=hdnconsulting.ClientID %>').value;
-            if (id != "") {
-                divAppointmentType.style.display = 'block';
-
-                document.getElementById('<%=lblAppointmentType.ClientID%>').innerHTML = id;
-            }
-        }
-
-        else {
-            divAppointmentType.style.display = 'none';
-        }
-		}
+    
 </script>
 <style>
     .rbl {
@@ -652,73 +625,3 @@
 </div>
 <JS:Testimonials runat="server" ID="Testimonials" />
 <JS:Footer runat="server" ID="Footer" />
-<script type="text/javascript"> var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
-     var keyCode = e.which ? e.which : e.keyCode
-     var ret = ((keyCode >= 48 && keyCode <= 57) || keyCode == 9 || keyCode == 46 || keyCode == 37 || keyCode == 39 || specialKeys.indexOf(keyCode) != -1); return ret;
- }
-    function getDoctorId(doctorscheduleID) {
-        var hdnDoctorId = document.getElementById('<%=hdnDoctorId.ClientID%>');
-        hdnDoctorId.value = doctorscheduleID;
-    }
-    $(function () {
-        $('[name$="$FixAnApp"]').attr("name", $('[name$="$FixAnApp"]').attr("name"));
-
-        $('[name$="$FixAnApp"]').click(function () {
-            //set name for all to name of clicked 
-            $('[name$="$FixAnApp"]').attr("name", $(this).attr("name"));
-        });
-    });
-    function fillHiddenField() {
-        var ddl = document.getElementById('<%=drpSpecialty.ClientID%>');
-        var hdn = document.getElementById('<%=hdnSpecialty.ClientID%>');
-        hdn.value = ddl.value;
-    }
-
-    function showPopup() {
-        if (Page_ClientValidate('FAP')) {
-            var hdnUserId = document.getElementById('<%=hdnUserId.ClientID%>');
-            if (hdnUserId.value > 0) {
-                return true;
-            }
-            else {
-                $("#myModal").modal();
-                $("#dnn_Header_litPopUpTitle").html("Login");
-                $("#dnn_Header_divLoginForm").show();
-                $("#dnn_Header_divForgotPassword").hide();
-                $("#dnn_Header_divOTPVerification").hide();
-                $("#dnn_Header_divSignUp").hide();
-                $("#dnn_Header_lblError").empty();
-
-                $("#dnn_Header_pSignUp").show();
-                $("#dnn_Header_pForgotPassWord").show();
-                $("#dnn_Header_pSignIn").hide();
-                $("#dnn_Header_pVerifyUser").show();
-                return false;
-            }
-        }
-        else {
-            return false;
-        }
-    }
-
-    function showPopupWindow() {
-        $("#myModal").modal();
-        $("#dnn_Header_litPopUpTitle").html("Login");
-        $("#dnn_Header_divLoginForm").show();
-        $("#dnn_Header_divForgotPassword").hide();
-        $("#dnn_Header_divOTPVerification").hide();
-        $("#dnn_Header_divSignUp").hide();
-        $("#dnn_Header_lblError").empty();
-
-        $("#dnn_Header_pSignUp").show();
-        $("#dnn_Header_pForgotPassWord").show();
-        $("#dnn_Header_pSignIn").hide();
-        $("#dnn_Header_pVerifyUser").show();
-
-    }
-	 function PermanentRegReminderBox() {
-        $(document).ready(function () {
-            $("#permenantRegistration").modal();
-        });
-    }
-</script>

@@ -29,7 +29,7 @@
                 ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
             </asp:RegularExpressionValidator>
             <div class="form-group write-each">
-                <asp:LinkButton ID="lnkbtn" class="btn btn-primary2" runat="server" ValidationGroup="WTU" OnClientClick="return ValWTU();" OnClick="lnkbtn_Click">Submit</asp:LinkButton>
+                <asp:LinkButton ID="lnkbtn" class="btn btn-primary2" runat="server" ValidationGroup="WTU" OnClientClick="return ValidationWTU();" OnClick="lnkbtn_Click">Submit</asp:LinkButton>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                                     <label for="complaint">Complaint</label>
                                 </div>--%>
 
-<script type="text/javascript">
+<%--<script type="text/javascript">
     function ValWTU() {
         
         if ($('#<%=radioWTU.ClientID %> input[type=radio]:checked').val() != 'feedback' && $('#<%=radioWTU.ClientID %> input[type=radio]:checked').val() != 'complaint') {
@@ -54,4 +54,4 @@
         }
         return true;
     }
-</script>
+</script>--%>

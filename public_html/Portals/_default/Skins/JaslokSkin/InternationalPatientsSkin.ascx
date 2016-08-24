@@ -54,7 +54,7 @@
 <JS:Footer runat="server" ID="Footer" />
  <div id="contentpane" runat="server">
                 </div> 
-<script type="text/javascript">
+<%--<script type="text/javascript">
     $(document).ready(function () {
         if (window.location.pathname.includes("/international-patients/hospital-facilities")) {
             $("#liHospitalFacilities").closest("li").addClass("active");
@@ -90,5 +90,5 @@
         }
 
     });
-</script>
+</script>--%>
 

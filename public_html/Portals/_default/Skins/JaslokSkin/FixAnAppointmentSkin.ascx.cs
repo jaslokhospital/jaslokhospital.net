@@ -107,16 +107,16 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             if (dsDoctorDetail.Tables[0].Rows.Count > 0)
             {
                 //imgDoctor.ImageUrl = string.IsNullOrEmpty(ds.Tables[0].Rows[0]["ImageUrl"].ToString()) ? CommonFn.DefaultImagePath : ds.Tables[0].Rows[0]["ImageUrl"].ToString();
-                lblDoctorName.Text = dsDoctorDetail.Tables[0].Rows[0]["Name"].ToString();
+                lblDoctorName.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["Name"]);
                 litDoctormname.Text = lblFixDoctor.Text = lblDoctorName.Text;
                 objDAEntities.dName = litDoctormname.Text;
-                lblDocotrSpecialty.Text = dsDoctorDetail.Tables[0].Rows[0]["Specialization"].ToString();
-                lblDEmail.Text = dsDoctorDetail.Tables[0].Rows[0]["EmailId"].ToString();
-                lblDMobile.Text = dsDoctorDetail.Tables[0].Rows[0]["MobileNo"].ToString() + "  " + dsDoctorDetail.Tables[0].Rows[0]["PhoneNo"].ToString();
-                divDesignation.InnerText = dsDoctorDetail.Tables[0].Rows[0]["Designation"].ToString();
-				
-				 hdnfollowup.Value = dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"].ToString();
-                hdnconsulting.Value = dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"].ToString();
+                lblDocotrSpecialty.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["Specialization"]);
+                lblDEmail.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["EmailId"]);
+                lblDMobile.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["MobileNo"]) + "  " + Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["PhoneNo"]);
+                divDesignation.InnerText = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["Designation"]);
+
+                hdnfollowup.Value = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
+                hdnconsulting.Value = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"]);
                 // FixlabelBookingdate.Text = objDAEntities.Day;
             }
 			bindDoctorSpeciality(dsDoctorDetail.Tables[3]);
@@ -464,11 +464,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         string lsEmailStatus = string.Empty;
         try
         {
-            //UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-            //DataSet dsUsername = objBusinessLogic.IsExistMRNumber(objuser.Username);
-            //int count = dsUsername.Tables[0].Rows.Count;
             UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-
             bool check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
             /*if (Captcha1.UserValidated)
             {*/
@@ -504,7 +500,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             Session["AppointmentDetail"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
             }
             else if (check == true)
             {               

@@ -21,7 +21,7 @@
                     </div>
             
             <div class="form-group finddoc_pt97">
-                <asp:LinkButton ID="btnSubmitLPFD" runat="server" class="btn btn_submit" OnClientClick="return ValLPFD();" OnClick="btnSubmitLPFD_Click">Submit<i class="glyphicon glyphicon-chevron-right"></i></asp:LinkButton>
+                <asp:LinkButton ID="btnSubmitLPFD" runat="server" class="btn btn_submit" OnClientClick="return ValHomeLPFD();" OnClick="btnSubmitLPFD_Click">Submit<i class="glyphicon glyphicon-chevron-right"></i></asp:LinkButton>
             </div>
         </div>
 
@@ -35,12 +35,12 @@
 	</div>
 
 <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
-<script type="text/javascript">
+<%--<script type="text/javascript">
     function ValLPFD() {
         if (document.getElementById('<%=ddlDoctorLPD.ClientID%>').selectedIndex == 0) {
             alert("Please select Doctor");
             return false;
         }     
     }
-</script>
+</script>--%>
 </telerik:RadCodeBlock>

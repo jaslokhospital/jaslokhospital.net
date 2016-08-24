@@ -114,14 +114,11 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             if (CommonFn.UserID <= 0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButtonBEDB('" + hdnDepositBB.Value + "', '" + txtAdmissionCharge.Text + "');", true);
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
-
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
             }
             else
             {
                 Response.Redirect("/Payment.aspx");
-                //string pageurl = "/Payment.aspx";
-                //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
             }
             // Clear();
         }
