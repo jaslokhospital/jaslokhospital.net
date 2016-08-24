@@ -90,8 +90,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">1800 221
-                            800</span>
+                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
                     </div>
                 </div>
             </div>
@@ -141,7 +140,7 @@
                         </li>
                         <li>
                             <button class="btn btn_number">
-                        <img src="/images/car.png" class="" />1800-22-1800</button>
+                        <img src="/images/car.png" class="" />022-2354 2354</button>
                         </li>
                         <li>
                             <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
@@ -266,17 +265,17 @@
                         </a>
                         <ul class="dropdown-menu dropdown-second-menu">
                             <li data-value="PatientRegistration" runat="server" id="Option1"><a>Patient Registration</a></li>
-                            <li>In-Patient</li>
+                            <li style="margin-left: 5px;">In-Patient</li>
                             <li data-value="bed-booking"><a>Bed Reservation/Admission</a></li>
-                            <li data-value=""><a>View Lab Reports</a></li>
+                            <li data-value="#"><a>View Lab Reports</a></li>
                             <li data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></li>
 
-                            <li>Out-Patient</li>
-                            <li data-value="consultationappointment"><a>Consultation Appointment</a></li>
+                            <li style="margin-left: 5px;">Out-Patient</li>
+                            <li data-value="#"><a>Consultation Appointment</a></li>
                             <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>New Appointment</a></li>
                             <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>Follow-up Appointment</a></li>
-                            <li data-value="/"><a>Diagnostics Appointment</a></li>
-                            <li data-value="/"><a>View Lab Reports</a></li>
+                            <li data-value="#"><a>Diagnostics Appointment</a></li>
+                            <li data-value="#"><a>View Lab Reports</a></li>
                             <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
 
 
@@ -287,15 +286,15 @@
                         </a>
                         <ul class="dropdown-menu dropdown-second-menu">
 
-                            <li data-value="/">Admission Deposit</li>
-                            <li data-value="surgery-booking">Surgery Deposit</li>
-                            <li data-value="outstandingbillpayment">Outstanding Bill</li>
-                            <li>Doctor Consultation</li>
-                            <li data-value="bed-booking" style="margin-left: 23px;">Bed Reservation/Admission</li>
-                            <li data-value="/" style="margin-left: 23px;">View Lab Reports</li>
-                            <li data-value="outstandingbillpayment" style="margin-left: 23px;">View Outstanding Bill (Interim Demand Note)</li>
+                            <li data-value="#" style="margin-left: 5px;">Admission Deposit</li>
+                            <li data-value="surgery-booking" style="margin-left: 5px;">Surgery Deposit</li>
+                            <li data-value="outstandingbillpayment" style="margin-left: 5px;">Outstanding Bill</li>
+                            <li style="margin-left: 5px;">Doctor Consultation</li>
+                            <li data-value="bed-booking" style="margin-left: 23px;"><a>Bed Reservation/Admission</a></li>
+                            <li data-value="#" style="margin-left: 23px;"><a>View Lab Reports</a></li>
+                            <li data-value="outstandingbillpayment" style="margin-left: 23px;"><a>View Outstanding Bill (Interim Demand Note)</a></li>
 
-                            <li>Diagnostic Services</li>
+                            <li style="margin-left: 5px;">Diagnostic Services</li>
 
                         </ul>
                     </li>
@@ -661,12 +660,7 @@
 
         }
 
-
-        $(".online-payment ul li").click(function () {
-            var _value = $(this).attr("data-value");
-            selectOption1Change(_value);
-        })
-
+               
         $(".online-facilities ul li").click(function () {
             var _value = $(this).attr("data-value");
             selectOption1Change(_value);
@@ -696,8 +690,10 @@
                     loadUserPopup();
                 }
             }
-            else if (selectControl.indexOf("consultationappointment") != -1) {
+            else if (selectControl == "consultationappointment/new" || selectControl == "consultationappointment/follow-up") {
                 window.location.href = "/" + selectControl;
+            }
+            else if (selectControl == "#") {
             }
             else {
 
