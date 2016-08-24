@@ -19,10 +19,9 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
     UserInfo user = UserController.Instance.GetCurrentUserInfo();
     protected void Page_Load(object sender, EventArgs e)
     {
+        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
 
-        DataSet dsMrNumberexist = objBusinessLogic.IsExistMRNumber(user.Username);
-
-        if (dsMrNumberexist.Tables[0].Rows.Count <= 0 && user.Username != "host")
+        if (check == false && user.Username != "host")
         {
             ContentPane.Visible = false;
             plcDivError.Visible = true;

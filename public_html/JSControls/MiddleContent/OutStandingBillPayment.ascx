@@ -246,7 +246,7 @@
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 js-zero-padding">
 
                 <div class="form-group write-each">
-                    <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" OnClientClick="return validate();"  ValidationGroup="OBP" OnClick="btnSubmit_Click">Pay</asp:LinkButton>
+                    <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" OnClientClick="return validateOSBPay();"  ValidationGroup="OBP" OnClick="btnSubmit_Click">Pay</asp:LinkButton>
                 
                 </div>
             </div>
@@ -262,7 +262,7 @@
         var keyCode = e.which ? e.which : e.keyCode
         var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
     }
-    function validate() {
+    function validateOSBPay() {
         
         if ($('#dnn_ctl01_txtAmount').val() < 1) {
             alert('Amount should not be 0 ₹')

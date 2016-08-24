@@ -669,14 +669,14 @@
         });
     });
     function fillHiddenField() {
-        var ddl = document.getElementById('<%= drpSpecialty.ClientID%>');
-        var hdn = document.getElementById('<%= hdnSpecialty.ClientID%>');
+        var ddl = document.getElementById('<%=drpSpecialty.ClientID%>');
+        var hdn = document.getElementById('<%=hdnSpecialty.ClientID%>');
         hdn.value = ddl.value;
     }
 
     function showPopup() {
         if (Page_ClientValidate('FAP')) {
-            var hdnUserId = document.getElementById('<%= hdnUserId.ClientID%>');
+            var hdnUserId = document.getElementById('<%=hdnUserId.ClientID%>');
             if (hdnUserId.value > 0) {
                 return true;
             }
