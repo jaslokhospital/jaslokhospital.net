@@ -33,14 +33,39 @@
         margin-top: 10px;
         padding: 8px;
     }
+
     #SelectPayment option {
-        font-size:14px;
-        font-weight:bold;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     #SelectPayment optgroup option {
-        font-size:12px;
-        font-weight:normal;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
+
+    .pading45 {
+        padding-right: 45px;
+    }
+
+    @media only screen and (max-width:767px) {
+        .pading45 {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+            .pading45 > .collapse {
+                display: block;
+            }
+
+        .container-menu {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
     }
 </style>
 
@@ -124,8 +149,104 @@
     </div>
 </div>
 <div class="container-fluid header">
-
     <div class="container">
+        <nav id="Nav1" class="navbar navbar-inverse mainnav container-menu" style="margin-bottom: 0%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 pading45">
+                        <div class="collapse navbar-collapse a" id="Div1">
+                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
+
+
+
+                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
+
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-second-menu" style="margin-top: 10px;">
+
+                                        <li data-value="PatientRegistration"><a>Patient Registration</a></li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">In-Patient</li>
+                                        <li data-value="bed-booking"><a>Bed Reservation</a></li>
+                                        <li data-value="#"><a>Lab Reports</a></li>
+                                        <li data-value="outstandingbillpayment"><a>Outstanding Bill (Interim Demand Note)</a></li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Out-Patient</li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Consultation Appointment</li>
+                                        <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
+                                        <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; New Appointment</a></li>
+                                        <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; Follow-up Appointment</a></li>
+                                        <li data-value="#"><a>Diagnostics Appointment</a></li>
+                                        <li data-value="#"><a>Lab Reports</a></li>
+                                        <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
+
+                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-second-menu">
+
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Deposit</li>
+                                        <li data-value="surgery-booking" style="font-weight: bold; padding-left: 6px;">Surgery Deposit</li>
+                                        <li data-value="outstandingbillpayment" style="font-weight: bold; padding-left: 6px;">Outstanding Bill</li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Doctor Consultation</li>
+                                        <li data-value="bed-booking" style="margin-left: 23px;"><a>Bed Reservation/Admission</a></li>
+                                        <li data-value="#" style="margin-left: 23px;"><a>View Lab Reports</a> </li>
+
+                                        <li data-value="outstandingbillpayment" style="margin-left: 23px;"><a>View Outstanding Bill (Interim Demand Note)</a></li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Diagnostic Services </li>
+
+
+
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+
+                            <div class="pull-left" style="padding-left: 10px;">
+                                <ul class="list cl-effect-2">
+                                    <li id="liLogin" visible="false" runat="server">
+                                        <a href="#" id="myBtn">
+                                            <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
+                                    <li id="liLogout" runat="server">
+                                        <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
+                                            <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
+                                    </li>
+
+                                    <li runat="server" id="liAhome">
+                                        <a runat="server" id="anchorAhome">
+                                            <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pull-right header_top  pulls">
+                                <button class="btn btn_number">
+                                    <img src="/images/car.png" class="" />022-2354 2354</button>
+                                <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
+                            </div>
+
+
+
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row closed -->
+
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+
+    <%-- <div class="container">
 
 
         <div class="row">
@@ -133,38 +254,38 @@
                 <div class="pull-left header-top-select" id="divHeaderTopSelect" runat="server">
                     <asp:HiddenField ID="hdnUserId" runat="server" />
                     <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
-                    <div class="headerDropFacility">
-                    <select name="" id="selectOption1" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list1">
-                        <option value="">Online Facilities</option>
-						 <option value="PatientRegistration" runat="server" id="drpPatient">Patient Registration</option>
-                        <optgroup label="In-Patient">
-                            <option value="bed-booking">Bed Reservation/Admission</option>
-                            <option value="">View Lab Reports</option>
-                            <option value="outstandingbillpayment">View Outstanding Bill (Interim Demand Note)</option>
-                            <optgroup label="Out-Patient">
-                                <option value="consultationappointment">Consultation Appointment</option>
-                                <option value="consultationappointment/new" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;New Appointment</option>
-                                <option value="consultationappointment/follow-up" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;Follow-up Appointment</option>
-                                <option value="">Diagnostics Appointment</option>
+                 
+                        <select name="" id="selectOption1" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list1">
+                            <option value="">Online Facilities</option>
+                            <option value="PatientRegistration" runat="server" id="drpPatient">Patient Registration</option>
+                            <optgroup label="In-Patient">
+                                <option value="bed-booking">Bed Reservation/Admission</option>
                                 <option value="">View Lab Reports</option>
-                                <option value="health-check-up-comprehensive">Health Check-up</option>
+                                <option value="outstandingbillpayment">View Outstanding Bill (Interim Demand Note)</option>
+                                <optgroup label="Out-Patient">
+                                    <option value="consultationappointment">Consultation Appointment</option>
+                                    <option value="consultationappointment/new" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;New Appointment</option>
+                                    <option value="consultationappointment/follow-up" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;Follow-up Appointment</option>
+                                    <option value="">Diagnostics Appointment</option>
+                                    <option value="">View Lab Reports</option>
+                                    <option value="health-check-up-comprehensive">Health Check-up</option>
+                                </optgroup>
                             </optgroup>
-                        </optgroup>
-                    </select>
+                        </select>
 
-                    <select name="" id="SelectPayment" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list2">
-                        <option value="">Online Payment</option>
-                        <option value="">Admission Deposit</option>
-                        <option value="surgery-booking">Surgery Deposit</option>
-                        <option value="outstandingbillpayment">Outstanding Bill</option>
+                        <select name="" id="SelectPayment" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list2">
+                            <option value="">Online Payment</option>
+                            <option value="">Admission Deposit</option>
+                            <option value="surgery-booking">Surgery Deposit</option>
+                            <option value="outstandingbillpayment">Outstanding Bill</option>
                             <optgroup label="Doctor Consultation">
                                 <option value="bed-booking" style="margin-left: 23px;">Bed Reservation/Admission</option>
                                 <option value="" style="margin-left: 23px;">View Lab Reports</option>
                                 <option value="outstandingbillpayment" style="margin-left: 23px;">View Outstanding Bill (Interim Demand Note)</option>
                             </optgroup>
                             <optgroup label="Diagnostic Services"></optgroup>
-                    </select>
-                    </div>
+                        </select>
+                   
                 </div>
                 <div class="pull-left">
                     <ul class="list cl-effect-2">
@@ -175,13 +296,7 @@
                             <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
                                 <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
                         </li>
-                       <%-- <li class="dropdown"><a aria-expanded="true" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle"><span data-hover="About">Select Language</span> <span class="caret"></span></a>
-                            <ul class="dropdown-menu ul-lang1">
-                                <li><a href="#">Hindi</a></li>
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">Arabic </a></li>
-                            </ul>
-                        </li>--%>
+                       
                         <li runat="server" id="liAhome">
                             <a runat="server" id="anchorAhome">
                                 <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
@@ -194,13 +309,13 @@
                     <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
                 </div>
 
-                
+
 
 
                 <div class="clearfix"></div>
             </div>
         </div>
-</div>
+    </div>--%>
     <div class="line"></div>
 
     <nav id="header" class="navbar navbar-inverse mainnav container-menu">
@@ -218,6 +333,8 @@
                     </div>
                 </div>
             </div>
+             <asp:HiddenField ID="hdnUserId" runat="server" />
+            <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav menu menu_fr">
 
@@ -313,16 +430,19 @@
         </div>
     </nav>
 </div>
+
+
+
 <JS:StickyFindDoctor runat="server" ID="StickyFindDoctor" />
 <div class="modal fade" id="permenantRegistrationModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="padding: 5px 50px;">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                 <h4>Permanent Registration</h4>
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
-              <p>You have not yet permanently registerd with Jaslok hospital, please go for the permanent registration to get premium benifits.</p>
+                <p>You have not yet permanently registerd with Jaslok hospital, please go for the permanent registration to get premium benifits.</p>
                 Click on Submit Button for permanent registration  <a href="/payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a> <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
             </div>
         </div>
@@ -452,7 +572,7 @@
                                 </div>
                                 <div class="col-md-3 col-xs-8 mob2" style="padding-left: 3px;">
                                     <div class="form-group">
-                                        <label style="color:#fff;" for="PhoneNumber">a</label>
+                                        <label style="color: #fff;" for="PhoneNumber">a</label>
                                         <asp:TextBox ID="txtMobileNumber" onkeypress="return Numeric(event);" runat="server" MaxLength="10" class="form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvMobileNumber" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Mobile Number"
                                             ControlToValidate="txtMobileNumber" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
@@ -709,9 +829,13 @@
         });
 
     }
+    $(".online-facilities ul li").click(function () {
+      
+        var _value = $(this).attr("data-value");
+        selectOption1Change(_value);
+    })
 
     function selectOption1Change(selectControl) {
-        
         var RawUrl = window.location.href.replace("http://" + document.domain + "/", "");
         if (RawUrl.toLowerCase() == "paymentresponse.aspx") {
             var hdnUserId = document.getElementById("hdnUserId");
@@ -722,26 +846,28 @@
                 }
             }
             else {
-                hdnRedirectUrl.value = selectControl.value;
+                hdnRedirectUrl.value = selectControl;
 
                 $("#dnn_Header_lblError").empty();
                 $("#dnn_Header_lblLoginError").empty();
                 $('#dnn_Header_txtLoginUsername').attr("value", "");
                 $('#dnn_Header_txtLoginPassword').attr("value", "");
-                $("#dnn_Header_lblLoginError").hide(); 
+                $("#dnn_Header_lblLoginError").hide();
                 loadUserPopup();
             }
         }
-        else if (selectControl.value.indexOf("consultationappointment") != -1) {
-            window.location.href = "/" + selectControl.value;
+        else if (selectControl=="consultationappointment/new" || selectControl=="consultationappointment/follow-up")  {
+            window.location.href = "/" + selectControl;
+        }
+        else if (selectControl == "#") {
         }
         else {
             var hdnUserId = document.getElementById("hdnUserId");
             var hdnRedirectUrl = document.getElementById("hdnRedirectUrl");
-           
+
             if (hdnUserId.value > 0) {
-                
-                if (selectControl.value == "bed-booking" || selectControl.value == "outstandingbillpayment" || selectControl.value == "health-check-up-comprehensive" || selectControl.value == "surgery-booking" ) {
+
+                if (selectControl == "bed-booking" || selectControl == "outstandingbillpayment" || selectControl == "health-check-up-comprehensive" || selectControl == "surgery-booking") {
                     var MRNumber = document.getElementById("hdnMrNumberexist").value;
                     //alert(MRNumber);
                     if (MRNumber == "NotExist") {
@@ -752,18 +878,18 @@
                         window.location.href = "/" + selectControl.value;
                     }
                 }
-                else if (selectControl.value == "PatientRegistration") {
+                else if (selectControl == "PatientRegistration") {
                     PermanentRegReminderBox();
                     return;
                 }
                 else {
-                    if (selectControl.value != "") {
-                        window.location.href = "/" + selectControl.value;
+                    if (selectControl != "") {
+                        window.location.href = "/" + selectControl;
                     }
                 }
             }
             else {
-                hdnRedirectUrl.value = selectControl.value;
+                hdnRedirectUrl.value = selectControl;
                 $("#dnn_Header_lblError").empty();
                 $("#dnn_Header_lblLoginError").empty();
                 $('#dnn_Header_txtLoginUsername').attr("value", "");
