@@ -693,6 +693,8 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             lblForgotPassError.CssClass = "errorText";
             lblForgotPassError.Text = "Username does not exist.";
             txtForgotPasswordUserName.Text = "";
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divForgotPassword.Attributes.Add("style", "display:block;");
         }
     }
     protected void btnSignUp_Click(object sender, EventArgs e)
