@@ -1466,9 +1466,10 @@ DOWNLOADCOPYRETURN*/
     .testy-p {line-height: 1.2; padding-top: 5px !important;}    
     .nav1 {text-align: center;}
     .breadcrumb {padding-left: 15px;}
-    .mgt-bg-space { padding: 0px; }
-     .listMobile li {padding:0px;
-    }
+    .mgt-bg-space { padding: 0px;  width: 27% !important; }
+    .mgt-info-space {width: 73% !important; }
+     .listMobile li {padding:0px; }
+    
 }
 @media (max-width:480px) {
     .right_part label {margin-bottom:0px;}
@@ -1486,11 +1487,14 @@ DOWNLOADCOPYRETURN*/
     .listMobile li:last-child span a {
     font-size: 11px !important;}
     .list li{padding:0px;}
+   
 }
 @media (max-width:384px) {
     .listMobile li:last-child span a {
     font-size: 10px !important;}
     .quick_connect i {vertical-align:inherit;} 
+     .mgt-bg-space { padding: 0px;  width: 34%; }
+    .mgt-info-space {width: 66%; }
 }
 
 
