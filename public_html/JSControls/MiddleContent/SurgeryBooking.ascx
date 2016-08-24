@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SurgeryBooking.ascx.cs" Inherits="JSControls_MiddleContent_SurgeryBooking" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SurgeryBooking.ascx.cs" Inherits="JSControls_MiddleContent_SurgeryBooking" ClientIDMode="Static" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
   <asp:PlaceHolder ID="plcDivError" runat="server" Visible="false">                
@@ -97,12 +97,11 @@
             <div class="form-group write-each">
                 <%-- <a onclick="" id="A1" class="btn js-btn-primary3 pull-right">Submit</a>--%>
                 <asp:LinkButton ID="btnSubmitSB" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="SB" OnClientClick="return validateSURBooking()" OnClick="btnSubmitSB_Click">Pay</asp:LinkButton>
-
             </div>
 
             <div class="form-group">
                 <div class="col-xs-8 col-md-12 text-right">
-                     <asp:HiddenField ID="hdnFacilityNameSB" runat="server" />
+                    <asp:HiddenField ID="hdnFacilityNameSB" runat="server" />
                     <asp:HiddenField ID="hdnCategorySB" runat="server" />
                 </div>
             </div>
@@ -111,105 +110,3 @@
      
 </div>
 </div>
-
-<script type="text/javascript">
-    var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
-        var keyCode = e.which ? e.which : e.keyCode
-        var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
-    }
-    $('input[type=radio]').on('change', function () {
-        $('input[type=radio]').not(this).prop('checked', false);
-    });
-    $("input[type='radio']").on("change", function () {
-        $('#dnn_ctl01_txtSurgeryFee').val(this.value)
-        $("#<%=hdnSurgeryFeeSB.ClientID%>").val(this.value);
-        $("#<%=hdnFacilityNameSB.ClientID%>").val(this.title);
-        $("#<%=hdnCategorySB.ClientID%>").val(this.getAttribute("aria-valuetext"));
-
-    });
-
-    function validateSURBooking() {
-        if ($('#dnn_ctl01_txtSurgeryFee').val() == null || $('#dnn_ctl01_txtSurgeryFee').val() == "" || $('#dnn_ctl01_txtSurgeryFee').val() == "Please select surgery above type") {
-            alert("Please select surgery type first");
-            return false;
-        }
-        if ($('#dnn_ctl01_txtSurgeryFee').val() < 10000) {
-            alert('Minimum amount should be  10,000 ₹')
-            return false;
-        }
-
-    }
-    function showPopupWindow() {
-        $("#myModal").modal();
-        $("#dnn_Header_litPopUpTitle").html("Login");
-        $("#dnn_Header_divLoginForm").show();
-        $("#dnn_Header_divForgotPassword").hide();
-        $("#dnn_Header_divOTPVerification").hide();
-        $("#dnn_Header_divSignUp").hide();
-        $("#dnn_Header_lblError").empty();
-
-        $("#dnn_Header_pSignUp").show();
-        $("#dnn_Header_pForgotPassWord").show();
-        $("#dnn_Header_pSignIn").hide();
-        $("#dnn_Header_pVerifyUser").show();
-
-    }
-
-
-    //$(".a_idc input[type='radio']").click(function () {
-    //    if ($(".a_idc input[type='radio']").prop('checked') == true) {
-    //        $(this).parent().parent().siblings().removeClass("backg");
-    //        $(this).parent().parent().addClass("backg");
-
-    //    } 
-    //});
-
-
-    //$(".a_idc input[type='radio']").each(function () {
-    //    $(this).find('td input:radio').prop('checked', true);
-    //    $('#sizeOptions tr').removeClass("active");
-    //    $(this).addClass("active");
-    //});
-
-    //$('#sizeOptions tr').mouseover(function () {
-    //    $(this).addClass("hover");
-    //});
-
-    //$('#sizeOptions tr').mouseout(function () {
-    //    $(this).removeClass("hover");
-    //});
-
-   			
-    $('.border3').click(function () {
-        $(this).find('.border3 .a_idc input:radio').prop('checked', true);
-        $('.border3').removeClass("active-surgery");
-        $(this).addClass("active-surgery");
-   });
-
-    $('.border3').mouseover(function () {
-        $(this).addClass("hover");
-    });
-
-    $('.border3').mouseout(function () {
-        $(this).removeClass("hover");
-    });
-
-
-
-
-</script>
-
-
-
-<script>
-    $('document').ready(function () {
-        $('#accordion .panel:first-child a span').addClass("fa fa-chevron-down");
-
-    });
-
-
-</script>
-
-				
-
- 

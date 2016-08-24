@@ -42,31 +42,20 @@
     #SelectPayment optgroup option {
         font-size: 12px;
         font-weight: normal;
+
     }
 
-    li:hover {
-        cursor: pointer;
+   li:hover {
+    cursor: pointer;
+}
+    .pading45 {padding-right:45px;    }
+    @media only screen and (max-width:767px) { 
+        .pading45 {padding-right:0px; padding-left:0px;    }
+        .pading45 > .collapse { display:block; }
+        .container-menu {padding-left: 0px; padding-right: 0px;        }
+
     }
-
-    .pading45 {
-        padding-right: 45px;
-    }
-
-    @media only screen and (max-width:767px) {
-        .pading45 {
-            padding-right: 0px;
-            padding-left: 0px;
-        }
-
-            .pading45 > .collapse {
-                display: block;
-            }
-
-        .container-menu {
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-    }
+   
 </style>
 
 <script type="text/javascript">
@@ -111,7 +100,7 @@
                     </div>
                     <div class="icon-content">
                         <span class="email-line">EMERGENCY NUMBER</span>
-                        <span class="content-line">022-2354 2354</span>
+                        <span class="content-line">022-2354 23540</span>
                     </div>
                 </div>
             </div>
@@ -150,108 +139,107 @@
 </div>
 <div class="container-fluid header">
     <div class="container">
-        <nav id="Nav1" class="navbar navbar-inverse mainnav container-menu" style="margin-bottom: 0%;">
+        <nav id="Nav1" class="navbar navbar-inverse mainnav container-menu" style="margin-bottom:0%;">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 pading45">
-                        <div class="collapse navbar-collapse a" id="Div1">
-                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
+               <div class="row">
+                   <div class="col-sm-12 col-md-12 col-lg-12 pading45"> 
+                <div class="collapse navbar-collapse a" id="Div1">
+                    <ul class="nav navbar-nav menu " style="padding-top:4px;">
 
+                  
 
-
-                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
-
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-second-menu" style="margin-top: 10px;">
-
-                                        <li data-value="PatientRegistration"><a>Patient Registration</a></li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">In-Patient</li>
-                                        <li data-value="bed-booking"><a>Bed Reservation</a></li>
-                                        <li data-value="#"><a>Lab Reports</a></li>
-                                        <li data-value="outstandingbillpayment"><a>Outstanding Bill (Interim Demand Note)</a></li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Out-Patient</li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Consultation Appointment</li>
-                                        <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
-                                        <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; New Appointment</a></li>
-                                        <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; Follow-up Appointment</a></li>
-                                        <li data-value="#"><a>Diagnostics Appointment</a></li>
-                                        <li data-value="#"><a>Lab Reports</a></li>
-                                        <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
-
-                                    </ul>
-                                </li>
+                        <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                              
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-second-menu" style="margin-top:10px;" >
+                              
+                                <li data-value="PatientRegistration"><a >Patient Registration</a></li>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px">In-Patient</li>
+                                <li data-value="bed-booking"><a>Bed Reservation</a></li>
+                                <li data-value="#"><a>Lab Reports</a></li>
+                                <li data-value="outstandingbillpayment"><a> Outstanding Bill (Interim Demand Note)</a></li>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px">Out-Patient</li>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
+                             <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
+                                <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; New Appointment</a></li>
+                                <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; Follow-up Appointment</a></li>
+                                <li data-value="#"><a>Diagnostics Appointment</a></li>
+                                <li data-value="#"><a>Lab Reports</a></li>
+                                <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
 
                             </ul>
+                        </li>
 
-                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
+                    </ul>
 
-                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-second-menu">
+                    <ul class="nav navbar-nav menu " style="padding-top:4px;">
 
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Deposit</li>
-                                        <li data-value="surgery-booking" style="font-weight: bold; padding-left: 6px;">Surgery Deposit</li>
-                                        <li data-value="outstandingbillpayment" style="font-weight: bold; padding-left: 6px;">Outstanding Bill</li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Doctor Consultation</li>
-                                        <li data-value="bed-booking" style="margin-left: 23px;"><a>Bed Reservation/Admission</a></li>
-                                        <li data-value="#" style="margin-left: 23px;"><a>View Lab Reports</a> </li>
+                        <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-second-menu">
+                                
+                                <li data-value="#" style="font-weight:bold;padding-left:6px;">Deposit</li>
+                                <li data-value="surgery-booking" style="font-weight:bold;padding-left:6px;">Surgery Deposit</li>
+                                <li data-value="outstandingbillpayment" style="font-weight:bold;padding-left:6px;">Outstanding Bill</li>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px;">Doctor Consultation</li>
+                                <li data-value="bed-booking" style="margin-left: 23px;"><a>Bed Reservation/Admission</a></li>
+                                <li data-value="#" style="margin-left: 23px;"><a> View Lab Reports</a> </li>
+                                
+                                <li data-value="outstandingbillpayment" style="margin-left: 23px;"><a>View Outstanding Bill (Interim Demand Note)</a></li>
+                                <li data-value="#"  style="font-weight:bold;padding-left:6px;"> Diagnostic Services </li>
 
-                                        <li data-value="outstandingbillpayment" style="margin-left: 23px;"><a>View Outstanding Bill (Interim Demand Note)</a></li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Diagnostic Services </li>
-
-
-
-
-                                    </ul>
-                                </li>
+                               
+                              
 
                             </ul>
+                        </li>
+
+                    </ul>
 
 
-                            <div class="pull-left" style="padding-left: 10px;">
-                                <ul class="list cl-effect-2">
-                                    <li id="liLogin" visible="false" runat="server">
-                                        <a href="#" id="myBtn">
-                                            <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
-                                    <li id="liLogout" runat="server">
-                                        <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
-                                            <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
-                                    </li>
+                    <div class="pull-left" style="padding-left: 10px;">
+                        <ul class="list cl-effect-2">
+                            <li id="liLogin" visible="false" runat="server">
+                                <a href="#" id="myBtn">
+                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
+                            <li id="liLogout" runat="server">
+                                <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
+                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
+                            </li>
 
-                                    <li runat="server" id="liAhome">
-                                        <a runat="server" id="anchorAhome">
-                                            <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pull-right header_top  pulls">
-                                <button class="btn btn_number">
-                                    <img src="/images/car.png" class="" />022-2354 2354</button>
-                                <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
-                            </div>
-
-
-
-
-                            <div class="clearfix"></div>
-                        </div>
+                            <li runat="server" id="liAhome">
+                                <a runat="server" id="anchorAhome">
+                                    <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="pull-right header_top  pulls">
+                        <button class="btn btn_number">
+                            <img src="/images/car.png" class="" />1800-22-1800</button>
+                        <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <!-- row closed -->
-
+                 </div> 
+               </div><!-- row closed -->
                 <!--/.nav-collapse -->
             </div>
         </nav>
     </div>
 
+
     <%-- <div class="container">
+=======
+          <%--  <div class="container">
+>>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
 
 
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 headeronly">
                 <div class="pull-left header-top-select" id="divHeaderTopSelect" runat="server">
+<<<<<<< HEAD
                     <asp:HiddenField ID="hdnUserId" runat="server" />
                     <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
                  
@@ -260,6 +248,25 @@
                             <option value="PatientRegistration" runat="server" id="drpPatient">Patient Registration</option>
                             <optgroup label="In-Patient">
                                 <option value="bed-booking">Bed Reservation/Admission</option>
+=======
+                    <asp:HiddenField ID="HiddenField1" runat="server" />
+                    <asp:HiddenField ID="HiddenField2" runat="server" />
+
+
+                  
+                    <select name="" id="selectOption1" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list1">
+                        <option value="">Online Facilities</option>
+                        <option value="PatientRegistration" runat="server" id="drpPatient">Patient Registration</option>
+                        <optgroup label="In-Patient">
+                            <option value="bed-booking">Bed Reservation/Admission</option>
+                            <option value="">View Lab Reports</option>
+                            <option value="outstandingbillpayment">View Outstanding Bill (Interim Demand Note)</option>
+                            <optgroup label="Out-Patient">
+                                <option value="consultationappointment">Consultation Appointment</option>
+                                <option value="consultationappointment/new" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;New Appointment</option>
+                                <option value="consultationappointment/follow-up" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;Follow-up Appointment</option>
+                                <option value="">Diagnostics Appointment</option>
+>>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
                                 <option value="">View Lab Reports</option>
                                 <option value="outstandingbillpayment">View Outstanding Bill (Interim Demand Note)</option>
                                 <optgroup label="Out-Patient">
@@ -284,6 +291,7 @@
                                 <option value="outstandingbillpayment" style="margin-left: 23px;">View Outstanding Bill (Interim Demand Note)</option>
                             </optgroup>
                             <optgroup label="Diagnostic Services"></optgroup>
+<<<<<<< HEAD
                         </select>
                    
                 </div>
@@ -307,15 +315,35 @@
                     <button class="btn btn_number">
                         <img src="/images/car.png" class="" />022-2354 2354</button>
                     <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
+=======
+                    </select>
+                    
+>>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
                 </div>
+                 <div class="pull-left">
+                        <ul class="list cl-effect-2">
+                            <li id="liLogin" visible="false" runat="server">
+                                <a href="#" id="myBtn">
+                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
+                            <li id="liLogout" runat="server">
+                                <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
+                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
+                            </li>
 
+                            <li runat="server" id="liAhome">
+                                <a runat="server" id="anchorAhome">
+                                    <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pull-right header_top  pulls">
+                        <button class="btn btn_number">
+                            <img src="/images/car.png" class="" />1800-22-1800</button>
+                        <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
+                    </div>
 
+</div>--%>
 
-
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>--%>
     <div class="line"></div>
 
     <nav id="header" class="navbar navbar-inverse mainnav container-menu">
@@ -333,7 +361,7 @@
                     </div>
                 </div>
             </div>
-             <asp:HiddenField ID="hdnUserId" runat="server" />
+            <asp:HiddenField ID="hdnUserId" runat="server" />
             <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav menu menu_fr">
@@ -428,6 +456,10 @@
             </div>
             <!--/.nav-collapse -->
         </div>
+
+
+
+
     </nav>
 </div>
 
@@ -443,7 +475,7 @@
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
                 <p>You have not yet permanently registerd with Jaslok hospital, please go for the permanent registration to get premium benifits.</p>
-                Click on Submit Button for permanent registration  <a href="/payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a> <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
+                Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a> <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
             </div>
         </div>
     </div>
@@ -457,7 +489,7 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                     <h4>
                         <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
                 </div>
@@ -520,6 +552,12 @@
                             <asp:Button CssClass="btn btn-success btn-block" ID="btnOTPVerification" ValidationGroup="otpval" OnClick="btnOTPVerification_Click" runat="server" Text="Submit" />
                             <asp:Label ID="lblOTPError" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
                         </div>
+
+
+
+
+
+
                         <div id="divSignUp" runat="server" style="display: none;">
                             <div class="row">
                                 <div class="col-md-6">
@@ -585,7 +623,7 @@
                                 <label for="psw">Email Address</label>
                                 <asp:TextBox ID="txtEmail" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="reqEmailAddress" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic"
-                                    ErrorMessage="Enter Email Address" ControlToValidate="txtEmail" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Enter Emailaddress" ControlToValidate="txtEmail" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
                                 <asp:RegularExpressionValidator ID="regEmailAddress" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                                     Font-Size="11px" runat="server" Display="Dynamic" ValidationGroup="valSignup" ErrorMessage="Enter Valid Email address" ControlToValidate="txtEmail"></asp:RegularExpressionValidator>
                             </div>
@@ -641,262 +679,3 @@
 
 
 
-
-
-
-<script type="text/javascript">
-    $(window).on('resize', function () {
-        if ($(window).width() < 1025) {
-            $('body').on("click touchstart", "#quick_connect01", function (e) {
-                e.stopPropagation();
-                $(".quick-connect-hover").toggle();
-            });
-        }
-    });
-    if ($(window).width() < 1025) {
-        $('body').on("click touchstart", "#quick_connect01", function (e) {
-            e.stopPropagation();
-            $(".quick-connect-hover").toggle();
-        });
-    }
-    document.getElementById("idHome").className = "";
-    document.getElementById("licorporateProfile").className = "";
-    document.getElementById("lispecialties").className = "";
-    document.getElementById("lipatients").className = "";
-    document.getElementById("liinternational").className = "";
-    document.getElementById("lieducational").className = "";
-
-    if (window.location.pathname == "/")
-        $("#idHome").closest("li").addClass("active");
-    else if (window.location.pathname.indexOf("/corporate-profile") != -1)
-        $("#licorporateProfile").closest("li").addClass("active");
-    else if (window.location.pathname.indexOf("/specialties") != -1)
-        $("#lispecialties").closest("li").addClass("active");
-    else if (window.location.pathname.indexOf("/patients") != -1)
-        $("#lipatients").closest("li").addClass("active");
-    else if (window.location.pathname.indexOf("/international-patients") != -1)
-        $("#liinternational").closest("li").addClass("active");
-    else if (window.location.pathname.indexOf("/education-and-research") != -1)
-        $("#lieducational").closest("li").addClass("active");
-
-    $("#myBtn").click(function () {
-        loadUserPopup();
-    });
-
-
-    function loadUserPopup() {
-        $("#myModal").modal();
-        var RawUrl = window.location.href.replace("http://" + document.domain + "/", "");
-        if (RawUrl.toLowerCase() == "paymentresponse.aspx") {
-            $("#Header_litPopUpTitle").html("Login");
-            $("#Header_divLoginForm").show();
-            $("#Header_divForgotPassword").hide();
-            $("#Header_divOTPVerification").hide();
-            $("#Header_divSignUp").hide();
-            $("#Header_lblError").empty();
-
-            $("#Header_pSignUp").show();
-            $("#Header_pForgotPassWord").show();
-            $("#Header_pSignIn").hide();
-            $("#Header_pVerifyUser").show();
-        }
-        else {
-            $("#dnn_Header_litPopUpTitle").html("Login");
-            $("#dnn_Header_divLoginForm").show();
-            $("#dnn_Header_divForgotPassword").hide();
-            $("#dnn_Header_divOTPVerification").hide();
-            $("#dnn_Header_divSignUp").hide();
-            $("#dnn_Header_lblError").empty();
-
-            $("#dnn_Header_pSignUp").show();
-            $("#dnn_Header_pForgotPassWord").show();
-            $("#dnn_Header_pSignIn").hide();
-            $("#dnn_Header_pVerifyUser").show();
-        }
-    }
-
-
-
-    //var clickedOnBody = true;
-
-    //$("#quick_connect01").click(function () {
-    //    clickedOnBody = false;
-    //});
-
-
-    //$(".quick-connect-hover").hide();
-
-    //$("#quick_connect01").hover(function () {
-    //    clearTimeout(timeout);
-    //    $(".quick-connect-hover").slideDown("slow");
-    //});
-
-    //var timeout;
-
-    //function hidepanel() {
-    //    $('.quick-connect-hover').slideUp();
-    //}
-
-    //$('.quick-connect-hover').mouseleave(doTimeout);
-    //$('#quick_connect01').mouseleave(doTimeout);
-
-    //function doTimeout() {
-    //    clearTimeout(timeout);
-    //    timeout = setTimeout(hidepanel, 700);
-    //}
-
-    //$("html").click(function () {
-    //    if (clickedOnBody) {
-    //        $('.quick-connect-hover').hide();
-    //    }
-    //    clickedOnBody = true;
-    //});
-    var menu = $('.quick-connect-hover')
-    var timeout = 0;
-    var hovering = false;
-    menu.hide();
-    $('#quick_connect01')
-        .on("mouseenter", function () {
-            hovering = true;
-            // Open the menu
-            $('.quick-connect-hover')
-                .stop(true, true)
-                .slideDown(300);
-
-            if (timeout > 0) {
-                clearTimeout(timeout);
-            }
-        })
-        .on("mouseleave", function () {
-            resetHover();
-        });
-
-    $(".quick-connect-hover")
-        .on("mouseenter", function () {
-
-            hovering = true;
-
-            startTimeout();
-        })
-        .on("mouseleave", function () {
-            resetHover();
-        });
-
-    function startTimeout() {
-        timeout = setTimeout(function () {
-            closeMenu();
-        }, 300);
-    };
-
-    function closeMenu() {
-        if (!hovering) {
-            $('.quick-connect-hover').stop(true, true).slideUp(300);
-        }
-    };
-
-    function resetHover() {
-
-        hovering = false;
-
-        startTimeout();
-    };
-</script>
-<script type="text/javascript"> var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
-     var keyCode = e.which ? e.which : e.keyCode
-     var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
- } </script>
-<script>
-    $(function () {
-        // Check the initial Poistion of the Sticky Header
-        var stickyHeaderTop = $('#header').offset().top;
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > stickyHeaderTop) {
-                $('#header').css({ position: 'fixed', top: '0px' });
-                $('#header').addClass("headerBorder");
-                $('#stickyalias').css('display', 'block');
-            } else {
-                $('#header').css({ position: 'static', top: '0px' });
-                $('#header').removeClass("headerBorder");
-                $('#stickyalias').css('display', 'none');
-            }
-        });
-    });
-
-    function PermanentRegReminderBox() {
-        $(document).ready(function () {
-            $("#permenantRegistrationModal").modal();
-        });
-
-    }
-    $(".online-facilities ul li").click(function () {
-      
-        var _value = $(this).attr("data-value");
-        selectOption1Change(_value);
-    })
-
-    function selectOption1Change(selectControl) {
-        var RawUrl = window.location.href.replace("http://" + document.domain + "/", "");
-        if (RawUrl.toLowerCase() == "paymentresponse.aspx") {
-            var hdnUserId = document.getElementById("hdnUserId");
-            var hdnRedirectUrl = document.getElementById("hdnRedirectUrl");
-            if (hdnUserId.value > 0) {
-                if (selectControl.value != "") {
-                    window.location.href = "/" + selectControl.value;
-                }
-            }
-            else {
-                hdnRedirectUrl.value = selectControl;
-
-                $("#dnn_Header_lblError").empty();
-                $("#dnn_Header_lblLoginError").empty();
-                $('#dnn_Header_txtLoginUsername').attr("value", "");
-                $('#dnn_Header_txtLoginPassword').attr("value", "");
-                $("#dnn_Header_lblLoginError").hide();
-                loadUserPopup();
-            }
-        }
-        else if (selectControl=="consultationappointment/new" || selectControl=="consultationappointment/follow-up")  {
-            window.location.href = "/" + selectControl;
-        }
-        else if (selectControl == "#") {
-        }
-        else {
-            var hdnUserId = document.getElementById("hdnUserId");
-            var hdnRedirectUrl = document.getElementById("hdnRedirectUrl");
-
-            if (hdnUserId.value > 0) {
-
-                if (selectControl == "bed-booking" || selectControl == "outstandingbillpayment" || selectControl == "health-check-up-comprehensive" || selectControl == "surgery-booking") {
-                    var MRNumber = document.getElementById("hdnMrNumberexist").value;
-                    //alert(MRNumber);
-                    if (MRNumber == "NotExist") {
-                        PermanentRegReminderBox();
-                        return;
-                    }
-                    else {
-                        window.location.href = "/" + selectControl.value;
-                    }
-                }
-                else if (selectControl == "PatientRegistration") {
-                    PermanentRegReminderBox();
-                    return;
-                }
-                else {
-                    if (selectControl != "") {
-                        window.location.href = "/" + selectControl;
-                    }
-                }
-            }
-            else {
-                hdnRedirectUrl.value = selectControl;
-                $("#dnn_Header_lblError").empty();
-                $("#dnn_Header_lblLoginError").empty();
-                $('#dnn_Header_txtLoginUsername').attr("value", "");
-                $('#dnn_Header_txtLoginPassword').attr("value", "");
-                $("#dnn_Header_lblLoginError").hide();
-                loadUserPopup();
-            }
-        }
-    }
-</script>

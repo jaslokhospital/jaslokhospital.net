@@ -56,7 +56,7 @@
 
 </div>
 
-<script type="text/javascript">
+<%--<script type="text/javascript">
     $(document).ready(function () {
         if (window.location.pathname.includes("/patient-facilities")) {
             document.getElementById("liPatientFacilities").className = "active";
@@ -88,4 +88,4 @@
         }
 
     });
-</script>
+</script>--%>
