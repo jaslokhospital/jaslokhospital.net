@@ -436,14 +436,22 @@ function PermanentRegReminderBox() {
 }
 
 
-$(".online-payment ul li").click(function () {
+$(".online-payment a").click(function () {
     var _value = $(this).attr("data-value");
-    selectOption1Change(_value);
+    if (typeof _value !== typeof undefined && _value !== false) {
+        selectOption1Change(_value);
+        $(".mobile-menu").toggle();
+        $(".mobile-toggle").toggleClass("down");
+    }
 })
 
-$(".online-facilities ul li").click(function () {
+$(".online-facilities a").click(function () {
     var _value = $(this).attr("data-value");
-    selectOption1Change(_value);
+    if (typeof _value !== typeof undefined && _value !== false){
+        selectOption1Change(_value);
+        $(".mobile-menu").toggle();
+        $(".mobile-toggle").toggleClass("down");
+    }
 })
 function selectOption1Change(selectControl, hdnValue) {
 

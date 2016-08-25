@@ -232,18 +232,18 @@
                                 <div><a href="/education-and-research/research-paper">Research Paper</a></div>
                             </div>
                         </li>
-                        <li>
+                        <li class="online-facilities">
                             <a class="SubMenu">ONLINE FACILITIES</a>
                             <div class="sub-nav">
                                 <div><a class="back-btn">Back To Main</a></div>
-                                <div><a>Patient Registration</a></div>
+                                <div><a data-value="PatientRegistration" href="javascript:void(0)">Patient Registration</a></div>
                                 <div>
                                     <a class="SubMenu">In-Patient</a>
                                     <div class="sub-nav2">
                                         <div><a class="back-btn">Back To Main</a></div>
-                                        <div data-value="bed-booking"><a>Bed Reservation/Admission</a></div>
-                                        <div data-value=""><a>View Lab Reports</a></div>
-                                        <div data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></div>
+                                        <div><a data-value="bed-booking" href="javascript:void(0)">Bed Reservation/Admission</a></div>
+                                        <div><a>View Lab Reports</a></div>
+                                        <div><a data-value="outstandingbillpayment" href="javascript:void(0)">View Outstanding Bill (Interim Demand Note)</a></div>
                                     </div>
                                 </div>
                                 <div>
@@ -254,28 +254,27 @@
                                             <a class="SubMenu">Consultation Appointment</a>
                                             <div class="sub-nav3">
                                                 <div><a class="back-btn">Back To Main</a></div>
-                                                <div data-value="consultationappointment/new"><a>New Appointment</a></div>
-                                                <div data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></div>
+                                                <div><a data-value="consultationappointment/new" href="javascript:void(0)">New Appointment</a></div>
+                                                <div><a data-value="consultationappointment/follow-up" href="javascript:void(0)">Follow-up Appointment</a></div>
                                             </div>
                                         </div>
-                                        <div data-value="/"><a>Diagnostics Appointment</a></div>
-                                        <div data-value="/"><a>View Lab Reports</a></div>
-                                        <div data-value="health-check-up-comprehensive"><a>Health Check-up</a></div>
+                                        <div><a>Diagnostics Appointment</a></div>
+                                        <div><a>View Lab Reports</a></div>
+                                        <div><a data-value="health-check-up-comprehensive" href="javascript:void(0)">Health Check-up</a></div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="online-payment">
                             <a class="SubMenu">ONLINE PAYMENT</a>
                             <div class="sub-nav">
                                 <div><a class="back-btn">Back To Main</a></div>
-                                <div data-value="/"><a>Admission Deposit</a></div>
-                                <div data-value="surgery-booking"><a>Surgery Deposit</a></div>
-                                <div data-value="outstandingbillpayment"><a>Outstanding Bill</a></div>
+                                <div><a data-value="surgery-booking" href="javascript:void(0)">Surgery Deposit</a></div>
+                                <div><a data-value="outstandingbillpayment" href="javascript:void(0)">Outstanding Bill</a></div>
                                 <div><a>Doctor Consultation</a></div>
-                                <div data-value="bed-booking"><a>Bed Reservation/Admission</a></div>
-                                <div data-value="/"><a>View Lab Reports</a></div>
-                                <div data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></div>
+                                <div><a data-value="bed-booking" href="javascript:void(0)">Bed Reservation/Admission</a></div>
+                                <div><a>View Lab Reports</a></div>
+                                <div><a data-value="outstandingbillpayment" href="javascript:void(0)">View Outstanding Bill (Interim Demand Note)</a></div>
                                 <div><a>Diagnostic Services</a></div>
                             </div>
                         </li>
