@@ -722,7 +722,7 @@ DOWNLOADCOPYRETURN*/
     .nav.navbar-nav.menu { float: none }
     .navbar-inverse .navbar-collapse,
     .navbar-inverse .navbar-form { background-color: transparent!important }
-    .navbar-toggle { margin-top: 21px!important }
+    /*.navbar-toggle { margin-top: 21px!important }*/
     .navbar-inverse .navbar-toggle:focus,
     .navbar-inverse .navbar-toggle:hover { background-color: #FFF }
     .nav.navbar-nav.menu { padding-left: 0 }
@@ -951,6 +951,18 @@ DOWNLOADCOPYRETURN*/
         background: #fff!important;
         width: 150px!important;
     }
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background-color: #00bcd4 !important;
+    }
+    .navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background:#00bcd4;
+    margin:0px;
+    padding:0px
+}
 }
 @media only screen and (min-width:768px) and (max-width:1199px) { 
     .container { width: 100% }
@@ -962,7 +974,6 @@ DOWNLOADCOPYRETURN*/
     .finddoc_left_form { height: auto }
     .finddoc_pt97 { padding-top: 0 }
     .contact-left { padding-bottom: 11px }
-    .trustees-pic {width:100% !important;}
 }
 @media only screen and (max-width:767px) { 
     
@@ -1025,7 +1036,7 @@ DOWNLOADCOPYRETURN*/
         left: 0!important;
         min-width: auto!important;
     }
-    .header { padding: 0 10px!important }
+    .header { padding: 0 0px!important }
     .navbar.navbar-inverse.mainnav {
         margin-left: -10px;
         margin-right: -10px;
@@ -1468,9 +1479,7 @@ DOWNLOADCOPYRETURN*/
     .nav1 {text-align: center;}
     .breadcrumb {padding-left: 15px;}
     .mgt-bg-space { padding: 0px; }
-     .listMobile li {padding:0px; }
-     .left_part {padding-top: 1%;}
-    .feedback p { margin-bottom:0px;
+     .listMobile li {padding:0px;
     }
 }
 @media (max-width:480px) {
@@ -1489,14 +1498,11 @@ DOWNLOADCOPYRETURN*/
     .listMobile li:last-child span a {
     font-size: 11px !important;}
     .list li{padding:0px;}
-   
 }
 @media (max-width:384px) {
     .listMobile li:last-child span a {
     font-size: 10px !important;}
     .quick_connect i {vertical-align:inherit;} 
-     .mgt-bg-space { padding: 0px;  width: 34%; }
-    .mgt-info-space {width: 66%; }
 }
 
 
