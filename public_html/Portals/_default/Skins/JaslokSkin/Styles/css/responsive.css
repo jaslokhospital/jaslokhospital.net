@@ -1482,8 +1482,8 @@ DOWNLOADCOPYRETURN*/
     .mgt-bg-space { padding: 0px; }
      .listMobile li {padding:0px; }
      .left_part {padding-top: 1%;}
-    .feedback p { margin-bottom:0px;
-    }
+    .feedback p { margin-bottom:0px;}
+     .header_top .btn_number {margin-right:1px; }
 }
 @media (max-width:480px) {
     .right_part label {margin-bottom:0px;}
