@@ -11,7 +11,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.Security; 
+using System.Web.Security;
 using BusinessDataLayer;
 using System.Data;
 using System.IO;
@@ -28,10 +28,9 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     BusinessLogic objBusinessLogic = new BusinessLogic();
     DataTable ds = new DataTable();
 
-     UserLoginStatus loginStatus = new UserLoginStatus();
+    UserLoginStatus loginStatus = new UserLoginStatus();
 
     protected void Page_Load(object sender, EventArgs e)
-    
     {
         try
         {
@@ -39,19 +38,19 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 if (Session["IsVisitor"] != null)
                 {
-                   
-					UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+                    UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
                     if (!string.IsNullOrEmpty(objuser.Username))
                     {
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "PermanentRegReminderBox()", true);
                         Session["IsVisitor"] = null;
                     }
-                   
                 }
             }
+
             this.Page.Form.DefaultButton = LoginBtn.UniqueID;
             UserInfo user = UserController.Instance.GetCurrentUserInfo();
             hdnUserId.Value = user.UserID.ToString();
+
             if (user.UserID == -1)
             {
                 //anchlogin.Visible = true;
@@ -77,7 +76,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             //if (Request.RawUrl.Length < 1)
             //{
             //}
-			IsMNumberExist();
+            IsMNumberExist();
         }
         catch (Exception ex)
         {
@@ -92,7 +91,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         {
             secure.SignOut();
             Response.Redirect("/", false);
-			Session["IsVisitor"] = null;
+            Session["IsVisitor"] = null;
         }
     }
 
@@ -120,7 +119,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     }
     protected void lnkSignUp_Click(object sender, EventArgs e)
     {
-		lblSignUp.CssClass = "";
+        lblSignUp.CssClass = "";
         divSignUp.Attributes.Add("style", "display:block;");
         divLoginForm.Attributes.Add("style", "display:none;");
         divOTPVerification.Attributes.Add("style", "display:none;");
@@ -365,11 +364,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             JaslokMailer objMailer = new JaslokMailer();
             List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
             string lsEmailStatus = string.Empty;
-
-
             PatIndex objPatIndex = new PatIndex();
-
-
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
 
             if (IsNum == false)
@@ -564,92 +559,22 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     }
 
 
-    //    #region CSV Updation For User
-    //    DataSet dsUser = new DataSet();
-    //    DataAccessEntities oEntities = new DataAccessEntities();
-    //    oEntities.Email = "";
-    //    oEntities.MRNumber = txtLoginUsername.Text;
-    //    oEntities.UserName = "";
-    //    dsUser = objBusinessLogic.GetUserNameByMRNumber(oEntities);
-    //    string visitorId = string.Empty;
-    //    string AvailableMR = string.Empty;
-    //    if (dsUser != null && dsUser.Tables[0].Rows.Count > 0)
-    //    {
-    //        visitorId = dsUser.Tables[0].Rows[0]["UserName"].ToString();
-    //        Messege = dsUser.Tables[0].Rows[0]["Messege"].ToString();
-    //        AvailableMR = dsUser.Tables[0].Rows[0]["AvailableMR"].ToString();
-    //        Session["IsMR"] = Convert.ToString(AvailableMR);
-    //    }
-    //    #endregion
-    //    JaslokMailer objMailer = new JaslokMailer();
-    //    List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
-    //    string lsEmailStatus = string.Empty;
-    //    UserInfo objUser = new UserInfo();
-    //    objUser.Username = visitorId.Trim();
-    //    UserMembership objMembership = new UserMembership(objUser);
-    //    objMembership.Username = visitorId.Trim();
-    //    objMembership.Password = txtLoginPassword.Text;
-    //    objUser.Membership = objMembership;
-    //    PortalSettings po = new PortalSettings();
-    //    UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-    //    UserInfo objUserInfo = UserController.ValidateUser(0, visitorId, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-    //    lblLoginError.Text = loginStatus.ToString();
-    //    lblLoginError.Visible = true;
-    //    switch (loginStatus)
-    //    {
-    //        case UserLoginStatus.LOGIN_SUCCESS:
-    //        case UserLoginStatus.LOGIN_SUPERUSER:
-    //            UserController.UserLogin(0,objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-    //            Session["NotPermanentUser"] = true;
-    //            //if (Request.RawUrl.ToLower().Contains("fix-appointment") && Request.QueryString["DI"] != null && Convert.ToInt32(Request.QueryString["DI"]) > 0)
-    //            //{
-    //            //    Response.Redirect("/paynow.aspx");
-    //            //}
-    //            if (Session["Bed"] != null || Session["Surgery"] != null || Session["AppointmentDetail"] != null)
-    //            {
-    //                Response.Redirect("/payment.aspx");
-    //            }
-    //            else
-    //            {
-    //                Response.Redirect("/redirect");
-    //            }
-    //            break;
-    //        case UserLoginStatus.LOGIN_FAILURE:
-    //            lblLoginError.CssClass = "errorText";
-    //            lblLoginError.Visible = true;
-    //            lblLoginError.Text = string.IsNullOrEmpty(Messege) ? "Login Failed. Please remember that passwords are case sensitive" : Messege;
-    //            break;
-    //        case UserLoginStatus.LOGIN_USERNOTAPPROVED:
-    //            lblLoginError.CssClass = "errorText";
-    //            lblLoginError.Visible = true;
-    //            lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
-    //            break;
-    //    }
-    //}
-
-
-
-    public DataSet InsertUpdateUserDetails(string MRNO,string FName, string LName, string Email, string Password, string Telephone, string Gender, string Address, string Age)
+    public DataSet InsertUpdateUserDetails(string MRNO, string FName, string LName, string Email, string Password, string Telephone, string Gender, string Address, string Age)
     {
 
         string lsUserName = string.Empty;
 
         lsUserName = MRNO;
 
-  
-        //lsUserName = FName.Substring(0, 1).ToLower() + LName.ToLower() + Telephone.Substring(Telephone.Length - 3, 3);
-
-        //Password = EncryptPassword(Password);
-
         string lsOtp = Guid.NewGuid().ToString().ToUpper().Split('-')[0];
 
         Membership.CreateUser(lsUserName, Password);
 
-        DataSet ds = objBusinessLogic.SaveUserDetails(MRNO,lsUserName, FName, LName, Email, FName, Password, Telephone, Gender, Address, Age, lsOtp);
+        DataSet ds = objBusinessLogic.SaveUserDetails(MRNO, lsUserName, FName, LName, Email, FName, Password, Telephone, Gender, Address, Age, lsOtp);
 
-       return ds;
+        return ds;
 
-       
+
     }
 
 
@@ -693,11 +618,13 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             lblForgotPassError.CssClass = "errorText";
             lblForgotPassError.Text = "Username does not exist.";
             txtForgotPasswordUserName.Text = "";
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divForgotPassword.Attributes.Add("style", "display:block;");
         }
     }
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
-		lblSignUp.CssClass = "";
+        lblSignUp.CssClass = "";
         bool userExist = Convert.ToBoolean(objBusinessLogic.CheckUerExistence(ddlCountryCode.SelectedValue + "-" + txtMobileNumber.Text.Trim()).Rows[0]["MobileNumberExists"]);
 
         if (!userExist)
@@ -939,20 +866,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     }
 
     #endregion
-    /*protected void btnSubmit_Click(object sender, EventArgs e)
-    {
-
-        objDAEntities.FacilityName = "PermenantRegistration";
-        objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
-        Session["permenantRegistration"] = objDAEntities;
-        Session["Amount"] = 10;
-        Response.Redirect(@"/Payment.aspx");
-		
-		string pageurl = "/Payment.aspx";
-		 Page.ClientScript.RegisterStartupScript(this.GetType(), "Redirect", "window.open('" + pageurl + "','_blank');", true);
-        Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
-     
-    }*/
+    
     public void IsMNumberExist()
     {
         bool check = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());

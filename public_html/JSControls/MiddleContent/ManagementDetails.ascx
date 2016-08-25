@@ -1,11 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ManagementDetails.ascx.cs" Inherits="JSControls_MiddleContent_ManagementDetails" %>
 <div class="media">
-    <div class="media-left media-top col-sm-3 col-xs-12 mgt-bg-space">
+    <div class="media-left media-top col-sm-3 col-xs-5 mgt-bg-space">
         <a data-toggle="collapse" data-parent="#accordion" href="#media-collapse-1" aria-expanded="true" aria-controls="media-collapse-1">
             <asp:Image ID="imgProfile" runat="server" class="media-object media-border img-responsive profile-bg" ImageUrl='<%#Eval("ImageUrl")%>' />
         </a>
     </div>
-    <div class="media-body col-sm-9 col-xs-12 managemant-bg mgt-info-space">
+    <div class="media-body col-sm-9 col-xs-7 managemant-bg mgt-info-space" id="DivDetail" runat="server">
         <footer class="panel-footer ft-space">
            <%-- <img src="../../images/Dicon.png" />--%>
             <span runat="server" id="FindDName" class="s-bold"><%#Eval("Name")%>'</span>
@@ -38,7 +38,7 @@
                             </a>
                         </div>
                     </div>--%>
-                    <div id="" class="panel-collapse collapse in">
+                    <div id="divDescription" class="panel-collapse collapse in">
                         <div class="panel-body managemant-bg panel-brder-lt" style="padding:20px 20px 10px !important;">
                              <p id="pbodyDescription" runat="server"><%#Eval("Description")%></p>
                         </div>
@@ -48,6 +48,9 @@
             </div>
         </div>
     </div>
+     <div class="media-body col-sm-9 col-xs-12" runat="server" id="DivNotfound" visible="false">
+         <p style="color:red">Data not found</p>
+         </div>
 </div>
 
 <%--<script src="/Portals/_default/Skins/JaslokSkin/Styles/js/jquery-1.9.1.min.js"></script>

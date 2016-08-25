@@ -27,8 +27,6 @@
                 <JS:LeftNavigation ID="leftNav" runat="server" />
                 <div class="left_form hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment2" />
-
-
                 </div>
             </div>
         </div>
@@ -70,7 +68,7 @@
                                 <asp:TextBox ID="txtEmail" class="form-control" placeholder="Email Address" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator Display="Dynamic" ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ValidationGroup="vgSubmit" ForeColor="Red" ErrorMessage="Please Enter Email ID"></asp:RequiredFieldValidator>
                                 <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator2" runat="server" ErrorMessage="Please Enter Valid Email Address" ValidationGroup="vgSubmit" ControlToValidate="txtEmail" 
-                                    ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+                                    ForeColor="Red" CssClass="requiredFieldValidateStyle" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
                                 </asp:RegularExpressionValidator>
                             </div>
                         </div>
@@ -79,7 +77,13 @@
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtComplaint" runat="server" placeholder="Complaint Details" class="form-control" TextMode="MultiLine"></asp:TextBox>
                                 <asp:RequiredFieldValidator Display="Dynamic" ID="rfvQues" runat="server" ControlToValidate="txtComplaint" ValidationGroup="vgSubmit" ForeColor="Red" ErrorMessage="Please Enter FeedBack"></asp:RequiredFieldValidator>
-
+                        </div>
+                        </div>
+                       <div class="form-group">
+                            <div class="col-sm-offset-3 col-xs-12 col-sm-9">
+                                <label class="">
+                                    Type out the verification key exactly as it appears in the image below. If you have trouble reading this image, refresh your browser to get a new key
+                                </label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -88,7 +92,6 @@
                                 <telerik:RadCaptcha ID="cptchComplaint" ForeColor="Red" EnableRefreshImage="true" ValidationGroup="vgSubmit" ErrorMessage="Enter valid captcha" runat="server"></telerik:RadCaptcha>
                             </div>
                         </div>
-                        <br>
                         <div class="form-group">
                             <div class="col-xs-offset-0 col-sm-offset-3 col-xs-9">
                                 <asp:LinkButton ID="btnSubmitComp" class="btn btn-primary" runat="server" ValidationGroup="vgSubmit" OnClick="btnSubmitComp_Click1">Submit</asp:LinkButton>

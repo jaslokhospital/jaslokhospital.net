@@ -19,10 +19,8 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
     UserInfo user = UserController.Instance.GetCurrentUserInfo();
     protected void Page_Load(object sender, EventArgs e)
     {
-
-        DataSet dsMrNumberexist = objBusinessLogic.IsExistMRNumber(user.Username);
-
-        if (dsMrNumberexist.Tables[0].Rows.Count <= 0 && user.Username != "host")
+        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+        if (check == false && user.Username != "host")
         {
             ContentPane.Visible = false;
             plcDivError.Visible = true;
@@ -113,15 +111,15 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         //Response.Redirect(@"/Payment.aspx");
         if (CommonFn.UserID <= 0)
         {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButton('" + hdnDeposit.Value + "', '" + txtAdmissionCharge.Text + "');", true);
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButtonBEDB('" + hdnDeposit.Value + "', '" + txtAdmissionCharge.Text + "');", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
 
         }
         else
         {
-            //Response.Redirect("/Payment.aspx");
-            string pageurl = "/Payment.aspx";
-            Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
+            Response.Redirect("/Payment.aspx");
+            //string pageurl = "/Payment.aspx";
+            //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
         }
     }
 }

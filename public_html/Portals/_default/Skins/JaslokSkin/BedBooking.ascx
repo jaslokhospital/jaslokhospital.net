@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BedBooking.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_BedBooking" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BedBooking.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_BedBooking"%>
 <%@ Register Src="~/JSControls/MiddleContent/LeftPaneBookAppointment.ascx" TagPrefix="JS" TagName="LeftPaneBookAppointment" %>
 <%@ Register Src="~/JSControls/Common/Testimonials.ascx" TagPrefix="JS" TagName="Testimonials" %>
 <%@ Register Src="~/JSControls/Home/WriteToUs.ascx" TagPrefix="JS" TagName="WriteToUs" %>
@@ -10,8 +10,8 @@
 
 
 <script type="text/javascript">
-    function SetCategory() {
-    }
+    //function SetCategory() {
+    //}
 
     function SetUniqueRadioButton(nameregex, current) {
         re = new RegExp(nameregex);
@@ -20,10 +20,7 @@
         for (i = 0; i < document.forms[0].elements.length; i++) {
             elm = document.forms[0].elements[i]
             if (elm.type == 'radio') {
-
-
                 if (re.test(elm.name)) {
-
                     elm.checked = false;
                 }
             }
@@ -149,7 +146,7 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <asp:HiddenField ID="hdnDeposit" runat="server" />
+                    <asp:HiddenField ID="hdnDepositBB" runat="server" />
 
 
 
@@ -188,7 +185,7 @@
 
                         <div class="form-group write-each">
                             <%-- <a onclick="" id="A1" class="btn js-btn-primary3 pull-right">Submit</a>--%>
-                            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="BedBook" OnClientClick="return validate()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
+                            <asp:LinkButton ID="btnSubmit" class="btn js-btn-primary3 pull-right" runat="server" ValidationGroup="BedBook" OnClientClick="return validateBEDB()" OnClick="btnSubmit_Click">Submit</asp:LinkButton>
 
                         </div>
                     </div>
@@ -222,13 +219,14 @@
 </div>
 <JS:Testimonials runat="server" ID="Testimonials" />
 <JS:Footer runat="server" ID="Footer" />
-<script type="text/javascript">
+
+<%--<script type="text/javascript">
     var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
         var keyCode = e.which ? e.which : e.keyCode
         var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
     }
 
-    function setRadioButton(value, amount) {
+    function setRadioButtonBEDB(value, amount) {
         var radID = value.split(',');
         $('#dnn_txtAdmissionCharge').val(amount);
         $('#' + radID[0]).attr('checked', true);
@@ -239,14 +237,13 @@
         $("[id^=spanPrice]").css("visibility", "hidden");
         $("#spanPrice" + $(this).attr("data-index")).css("visibility", "visible");
 
-        $("#<%=txtAdmissionCharge.ClientID%>").val($(this).attr("aria-valuetext"));
+        $("#<=txtAdmissionCharge.ClientID%>").val($(this).attr("aria-valuetext"));
         //alert($('#dnn_txtAdmissionCharge').val());
 
-        $("#<%=hdnDeposit.ClientID%>").val($(this).attr("id") + "," + $(this).attr("title"));
-        //alert($("#<%=hdnDeposit.ClientID%>").val());
-
+        $("#<=hdnDeposit.ClientID%>").val($(this).attr("id") + "," + $(this).attr("title"));
+        
     });
-    function validate() {
+    function validateBEDB() {
         if ($('#dnn_txtAdmissionCharge').val() == null || $('#dnn_txtAdmissionCharge').val() == "") {
             alert("Please select bed reservation type first");
             return false;
@@ -273,5 +270,5 @@
         $("#dnn_Header_pVerifyUser").show();
 
     }
-</script>
+</script>--%>
 

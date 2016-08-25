@@ -4,13 +4,11 @@
 <%@ Register Src="~/JSControls/Common/StickyFindDoctor.ascx" TagPrefix="JS" TagName="StickyFindDoctor" %>
 <!--//// FEATURED ARTICLES /////-->
 <style type="text/css">
-    .modal-footer p
-    {
+    .modal-footer p {
         margin-bottom: 2px !important;
     }
-    
-    .close
-    {
+
+    .close {
         position: absolute;
         right: 5px;
         top: 0px;
@@ -18,9 +16,8 @@
         font-size: 40px;
         opacity: 1 !important;
     }
-    
-    .errorText
-    {
+
+    .errorText {
         color: #fff !important;
         font-size: 13px !important;
         display: block;
@@ -29,9 +26,8 @@
         margin-top: 10px;
         padding: 8px;
     }
-    
-    .successText
-    {
+
+    .successText {
         color: #fff !important;
         font-size: 13px !important;
         display: block;
@@ -40,15 +36,13 @@
         margin-top: 10px;
         padding: 8px;
     }
-    
-    #SelectPayment option
-    {
+
+    #SelectPayment option {
         font-size: 14px;
         font-weight: bold;
     }
-    
-    #SelectPayment optgroup option
-    {
+
+    #SelectPayment optgroup option {
         font-size: 12px;
         font-weight: normal;
     }
@@ -90,7 +84,8 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
+                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">1800 221
+                            800</span>
                     </div>
                 </div>
             </div>
@@ -128,7 +123,7 @@
             <asp:HiddenField ID="hdnUserId" runat="server" />
             <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
             <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 headeronly quickheader">
-                
+
                 <div class="header_top">
                     <ul class="list cl-effect-2 listMobile">
                         <li id="liLogin" visible="false" runat="server">
@@ -140,14 +135,14 @@
                         </li>
                         <li>
                             <button class="btn btn_number">
-                        <img src="/images/car.png" class="" />022-2354 2354</button>
+                                <img src="/images/car.png" class="" />022-2354 2354</button>
                         </li>
                         <li>
                             <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
                         </li>
                     </ul>
-                    
-                    
+
+
                 </div>
                 <div class="clearfix">
                 </div>
@@ -156,153 +151,141 @@
     </div>
     <div class="line">
     </div>
-    <nav id="header" class="navbar navbar-inverse mainnav container-menu">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="/">
-                    <img src="/images/logo3.png" alt="Juslok Hospital" class="img-responsive" /></a>
-                <div class="serchi hidden-xs col-sm-8 col-xs-12">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder=" Site Search" name="q">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
+
+
+    <!-- /////// MOBILE HEADER /////// -->
+    <div class="mobile-header mobile-only">
+        <div class="wrapper">
+            <div class="pad clearfix">
+                <div class="main-logo">
+                    <a href="/">
+                        <img src="/images/logo3.png" class="hlogo"></a>
+                </div>
+                <div class="mobile-toggle down"></div>
+                <div class="mobile-menu">
+
+                    <ul class="main-nav">
+                        <li>
+                            <a class="SubMenu">CORPORATE PROFILE</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div><a href="/corporate-profile/from-the-chairmans-desk">From The Chairman's Desk</a></div>
+                                <div><a href="/corporate-profile/vision-and-mission">Vision And Mission</a></div>
+                                <div><a href="/corporate-profile/trustees">Trustees</a></div>
+                                <div><a href="/corporate-profile/management-team">Management</a></div>
+                                <div><a href="/corporate-profile/hospital-facilities">Hospital Facilities</a></div>
+                                <div><a href="/corporate-profile/certifications">Certifications</a></div>
+                                <div><a href="/corporate-profile/jaslok-news">Jaslok in News</a></div>
+                                <div><a href="/corporate-profile/scope-of-services">Scope Of Services</a></div>
+                                <div><a href="/corporate-profile/frequently-asked-questions">Frequently Asked Questions</a></div>
+                                <div><a href="/corporate-profile/quality-corner">Quality Corner</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="SubMenu">SPECIALTIES</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div><a href="/specialties">Specialties</a></div>
+                                <div><a href="/specialties/speciality-clinic">Speciality Clinic</a></div>
+                                <div><a href="/health-check-up">Health Check up</a></div>
+                                <div><a href="/specialitywise-opd">OPD Scheduler</a></div>
+                                <div><a href="/doctorwise-opd">Our Specialists</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="SubMenu">PATIENTS CARE & VISITORS</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div><a href="/patients/patient-facilities">Patient Facilities</a></div>
+                                <div><a href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></div>
+                                <div><a href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></div>
+                                <div><a href="/patients/feedback">Feedback Form</a></div>
+                                <div><a href="/patients/complaint">Complaint Form</a></div>
+                                <div><a href="/patients/quick-enquiry">Quick Inquiry</a></div>
+                                <div><a href="/patients/estimate-request">Estimate request</a></div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <a class="SubMenu">INTERNATIONAL PATIENTS</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div><a href="/international-patients">Hospital Facilities for International patients</a></div>
+                                <div><a href="/international-patients/doctors-availability">Doctors Availability</a></div>
+                                <div><a href="/international-patients/virtual-tour">Virtual Tour</a></div>
+                                <div><a href="/international-patients/feedback">Feedback</a></div>
+                                <div><a href="/international-patients/testimonial">Testimonials</a></div>
+                                <div><a href="/international-patients/estimate-request">Estimate request</a></div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <a class="SubMenu">EDUCATION & RESEARCH</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div><a href="/education-and-research/dnb-program">DNB Program</a></div>
+                                <div><a href="/education-and-research/fellowship">Fellowship</a></div>
+                                <div><a href="/education-and-research/internship">Internship</a></div>
+                                <div><a href="/education-and-research/advance-courses">Advance Courses</a></div>
+                                <div><a href="/education-and-research/nursing-program">Nursing Program</a></div>
+                                <div><a href="/education-and-research/health-tips">Health Tips</a></div>
+                                <div><a href="/education-and-research/research-paper">Research Paper</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="SubMenu">ONLINE FACILITIES</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div><a>Patient Registration</a></div>
+                                <div>
+                                    <a class="SubMenu">In-Patient</a>
+                                    <div class="sub-nav2">
+                                        <div><a class="back-btn">Back To Main</a></div>
+                                        <div data-value="bed-booking"><a>Bed Reservation/Admission</a></div>
+                                        <div data-value=""><a>View Lab Reports</a></div>
+                                        <div data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a class="SubMenu">Out-Patient</a>
+                                    <div class="sub-nav2">
+                                        <div><a class="back-btn">Back To Main</a></div>
+                                        <div>
+                                            <a class="SubMenu">Consultation Appointment</a>
+                                            <div class="sub-nav3">
+                                                <div><a class="back-btn">Back To Main</a></div>
+                                                <div data-value="consultationappointment/new"><a>New Appointment</a></div>
+                                                <div data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></div>
+                                            </div>
+                                        </div>
+                                        <div data-value="/"><a>Diagnostics Appointment</a></div>
+                                        <div data-value="/"><a>View Lab Reports</a></div>
+                                        <div data-value="health-check-up-comprehensive"><a>Health Check-up</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="SubMenu">ONLINE PAYMENT</a>
+                            <div class="sub-nav">
+                                <div><a class="back-btn">Back To Main</a></div>
+                                <div data-value="/"><a>Admission Deposit</a></div>
+                                <div data-value="surgery-booking"><a>Surgery Deposit</a></div>
+                                <div data-value="outstandingbillpayment"><a>Outstanding Bill</a></div>
+                                <div><a>Doctor Consultation</a></div>
+                                <div data-value="bed-booking"><a>Bed Reservation/Admission</a></div>
+                                <div data-value="/"><a>View Lab Reports</a></div>
+                                <div data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></div>
+                                <div><a>Diagnostic Services</a></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav menu menu_fr">
-
-                    <li class="dropdown main-menu-bar" role="presentation">
-                        <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false">HOME
-                        </a>
-                    </li>
-
-                    <li class="dropdown main-menu-bar" role="presentation">
-                        <a class="dropdown-toggle" data-toggle="dropdown" id="licorporateProfile" href="/corporate-profile" role="button" aria-haspopup="true" aria-expanded="false">CORPORATE PROFILE<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/corporate-profile/from-the-chairmans-desk">From The Chairman's Desk</a></li>
-                            <li><a href="/corporate-profile/vision-and-mission">Vision And Mission</a></li>
-                            <li><a href="/corporate-profile/trustees">Trustees</a></li>
-                            <li><a href="/corporate-profile/management-team">Management</a></li>
-                            <li><a href="/corporate-profile/hospital-facilities">Hospital Facilities</a></li>
-                            <li><a href="/corporate-profile/certifications">Certifications</a></li>
-                            <li><a href="/corporate-profile/jaslok-news">Jaslok in News</a></li>
-                            <%--  <li><a href="/jasloktimes">Jaslok Times</a></li>--%>
-                            <li><a href="/corporate-profile/scope-of-services">Scope Of Services</a></li>
-                            <%--  <li><a href="/testimonial">Testimonial</a></li>--%>
-                            <li><a href="/corporate-profile/frequently-asked-questions">Frequently Asked Questions</a></li>
-                            <li><a href="/corporate-profile/quality-corner">Quality Corner</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a class="dropdown-toggle" id="lispecialties" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">SPECIALTIES <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/specialties">Specialties</a></li>
-                            <li><a href="/specialties/speciality-clinic">Speciality Clinic</a></li>
-                            <li><a href="/health-check-up">Health Check up</a></li>
-                            <li><a href="/specialitywise-opd">OPD Scheduler</a></li>
-                            <li><a href="/doctorwise-opd">Our Specialists</a></li>
-                        </ul>
-
-                        <%-- <ul class="dropdown-menu dropdown-second-menu">
-                                        <li><a href="/health-check-up">Health Check up</a></li>
-                                        <li><a href="/specialties">Facilities & Services</a></li>
-                                        <li><a href="/specialties">Doctors in attendance</a></li>
-                                        <li><a href="/specialitywise-opd">Speciality OPD</a></li>
-                                        <li><a href="/doctorwise-opd">Doctor OPD</a></li>
-                                        <li><a href="/speciality-clinic-opd">Speciality Clinic OPD</a></li>
-                                    </ul>--%>
-
-                    </li>
-
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a class="dropdown-toggle" id="lipatients" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PATIENTS CARE & VISITORS <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/patients/patient-facilities">Patient Facilities</a></li>
-                            <li><a href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></li>
-                            <li><a href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                            <li><a href="/patients/feedback">Feedback Form</a></li>
-                            <li><a href="/patients/complaint">Complaint Form</a></li>
-                            <li><a href="/patients/quick-enquiry">Quick Inquiry</a></li>
-                            <li><a href="/patients/estimate-request">Estimate request</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a id="liinternational" class="dropdown-toggle" data-toggle="dropdown" href="/international-patients" role="button" aria-haspopup="true" aria-expanded="false">INTERNATIONAL PATIENTS <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/international-patients">Hospital Facilities for International patients</a></li>
-                            <%--<li><a href="/international-patients/hospital-facilities">Hospital Facilities</a></li>
-                                        <li><a href="/international-patients/facilities-for-international-patients">Hospital Facilities for International patients</a></li>--%>
-                            <li><a href="/international-patients/doctors-availability">Doctors Availability</a></li>
-                            <li><a href="/international-patients/virtual-tour">Virtual Tour</a></li>
-                            <li><a href="/international-patients/feedback">Feedback</a></li>
-                            <li><a href="/international-patients/testimonial">Testimonials</a></li>
-                            <li><a href="/international-patients/estimate-request">Estimate request</a></li>
-                        </ul>
-                    </li>
-
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a id="lieducational" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EDUCATION & RESEARCH <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/education-and-research/dnb-program">DNB Program</a></li>
-                            <li><a href="/education-and-research/fellowship">Fellowship</a></li>
-                            <li><a href="/education-and-research/internship">Internship</a></li>
-                            <li><a href="/education-and-research/advance-courses">Advance Courses</a></li>
-                            <li><a href="/education-and-research/nursing-program">Nursing Program</a></li>
-                            <li><a href="/education-and-research/health-tips">Health Tips</a></li>
-                            <li><a href="/education-and-research/research-paper">Research Paper</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown main-menu-bar online-facilities">
-                        <a id="OnlineFacilities" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ONLINE FACILITIES <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li data-value="PatientRegistration" runat="server" id="Option1"><a>Patient Registration</a></li>
-                            <li style="margin-left: 5px;">In-Patient</li>
-                            <li data-value="bed-booking"><a>Bed Reservation/Admission</a></li>
-                            <li data-value="#"><a>View Lab Reports</a></li>
-                            <li data-value="outstandingbillpayment"><a>View Outstanding Bill (Interim Demand Note)</a></li>
-
-                            <li style="margin-left: 5px;">Out-Patient</li>
-                            <li data-value="#"><a>Consultation Appointment</a></li>
-                            <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>New Appointment</a></li>
-                            <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>Follow-up Appointment</a></li>
-                            <li data-value="#"><a>Diagnostics Appointment</a></li>
-                            <li data-value="#"><a>View Lab Reports</a></li>
-                            <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
-
-
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown main-menu-bar online-facilities">
-                        <a id="OnlinePayment" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ONLINE PAYMENT <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-
-                            <li data-value="#" style="margin-left: 5px;">Admission Deposit</li>
-                            <li data-value="surgery-booking" style="margin-left: 5px;">Surgery Deposit</li>
-                            <li data-value="outstandingbillpayment" style="margin-left: 5px;">Outstanding Bill</li>
-                            <li style="margin-left: 5px;">Doctor Consultation</li>
-                            <li data-value="bed-booking" style="margin-left: 23px;"><a>Bed Reservation/Admission</a></li>
-                            <li data-value="#" style="margin-left: 23px;"><a>View Lab Reports</a></li>
-                            <li data-value="outstandingbillpayment" style="margin-left: 23px;"><a>View Outstanding Bill (Interim Demand Note)</a></li>
-
-                            <li style="margin-left: 5px;">Diagnostic Services</li>
-
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
         </div>
-    </nav>
+    </div>
+
+    <!--========================== /HEADER =============================-->
 </div>
 <%--<JS:StickyFindDoctor runat="server" ID="StickyFindDoctor" />--%>
 <div class="modal fade" id="permenantRegistrationModal" role="dialog">
@@ -311,13 +294,13 @@
             <div class="modal-header" style="padding: 5px 50px;">
                 <button type="button" class="close" data-dismiss="modal">
                     &times;</button>
-                <h4>
-                    Permanent Registration</h4>
+                <h4>Permanent Registration</h4>
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
                 <p>
                     You have not yet permanently registerd with Jaslok hospital, please go for the permanent
-                    registration to get premium benifits.</p>
+                    registration to get premium benifits.
+                </p>
                 Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn"
                     target="_blank">Submit</a>
                 <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
@@ -536,8 +519,7 @@
         </telerik:RadAjaxPanel>
     </div>
     <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Transparency="30">
-        <div class="modal-dialog" style="vertical-align: middle; text-align: center; background-color: white;
-            height: 440px; margin-top: 0px !important;">
+        <div class="modal-dialog" style="vertical-align: middle; text-align: center; background-color: white; height: 440px; margin-top: 0px !important;">
             <img alt="Loading..." src='/images/loading.gif' style="padding-top: 30% !important;" />
         </div>
     </telerik:RadAjaxLoadingPanel>
@@ -553,187 +535,75 @@
 </div>
 <asp:HiddenField ID="hdnMrNumberexist" runat="server" />
 <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
-    <script type="text/javascript">
-        $(window).on('resize', function () {
-            if ($(window).width() < 1025) {
-                $('body').on("click touchstart", "#quick_connect01", function (e) {
-                    e.stopPropagation();
-                    $(".quick-connect-hover").toggle();
+
+    <script>
+        ///////// mobile-nav
+        $('.mobile-header .mobile-menu ul li>a').click(function (e) {
+            if ($(this).parent().find('.sub-nav').length) {
+
+                $('.sub-nav').hide();
+                $(this).parent().find('.sub-nav').show();
+                $(this).parent().parent().animate({
+                    right: '100%'
+                });
+            }
+            // alert($(this).parent().find('.sub-nav').length);
+        });
+
+
+        $('.mobile-header .mobile-menu ul li .sub-nav div>a').click(function (e) {
+            if ($(this).parent().find('.sub-nav2').length) {
+                $('.sub-nav2').hide();
+                $(this).parent().find('.sub-nav2').show();
+                $(this).parent().parent().parent().parent().animate({
+                    right: '200%'
                 });
             }
         });
-        if ($(window).width() < 1025) {
-            $('body').on("click touchstart", "#quick_connect01", function (e) {
-                e.stopPropagation();
-                $(".quick-connect-hover").toggle();
-            });
-        }
-        document.getElementById("idHome").className = "";
-        document.getElementById("licorporateProfile").className = "";
-        document.getElementById("lispecialties").className = "";
-        document.getElementById("lipatients").className = "";
-        document.getElementById("liinternational").className = "";
-        document.getElementById("lieducational").className = "";
 
-        if (window.location.pathname == "/")
-            $("#idHome").closest("li").addClass("active");
-        else if (window.location.pathname.indexOf("/corporate-profile") != -1)
-            $("#licorporateProfile").closest("li").addClass("active");
-        else if (window.location.pathname.indexOf("/specialties") != -1)
-            $("#lispecialties").closest("li").addClass("active");
-        else if (window.location.pathname.indexOf("/patients") != -1)
-            $("#lipatients").closest("li").addClass("active");
-        else if (window.location.pathname.indexOf("/international-patients") != -1)
-            $("#liinternational").closest("li").addClass("active");
-        else if (window.location.pathname.indexOf("/education-and-research") != -1)
-            $("#lieducational").closest("li").addClass("active");
-
-        $("#myBtn").click(function () {
-            loadUserPopup();
+        $('.mobile-header .mobile-menu ul li .sub-nav2 div>a').click(function (e) {
+            if ($(this).parent().find('.sub-nav3').length) {
+                $('.sub-nav3').hide();
+                $(this).parent().find('.sub-nav3').show();
+                $(this).parent().parent().parent().parent().parent().parent().animate({
+                    right: '300%'
+                });
+            }
         });
 
-
-        function loadUserPopup() {
-            $("#myModal").modal();
-            var RawUrl = window.location.href.replace("http://" + document.domain + "/", "");
-            if (RawUrl.toLowerCase() == "paymentresponse.aspx") {
-                $("#Header_litPopUpTitle").html("Login");
-                $("#Header_divLoginForm").show();
-                $("#Header_divForgotPassword").hide();
-                $("#Header_divOTPVerification").hide();
-                $("#Header_divSignUp").hide();
-                $("#Header_lblError").empty();
-
-                $("#Header_pSignUp").show();
-                $("#Header_pForgotPassWord").show();
-                $("#Header_pSignIn").hide();
-                $("#Header_pVerifyUser").show();
+        $('a.back-btn').click(function (e) {
+            if ($(this).parent().parent().hasClass("sub-nav2")) {
+                //alert("sub-nav2 back");
+                $(this).parent().parent().parent().parent().parent().parent().animate({
+                    right: '100%'
+                }, function () {
+                    $('.sub-nav2').hide();
+                });
+            }
+            else if ($(this).parent().parent().hasClass("sub-nav3")) {
+                //alert("sub-nav2 back");
+                $(this).parent().parent().parent().parent().parent().parent().parent().parent().animate({
+                    right: '200%'
+                }, function () {
+                    $('.sub-nav3').hide();
+                });
             }
             else {
-                $("#dnn_Header_litPopUpTitle").html("Login");
-                $("#dnn_Header_divLoginForm").show();
-                $("#dnn_Header_divForgotPassword").hide();
-                $("#dnn_Header_divOTPVerification").hide();
-                $("#dnn_Header_divSignUp").hide();
-                $("#dnn_Header_lblError").empty();
-
-                $("#dnn_Header_pSignUp").show();
-                $("#dnn_Header_pForgotPassWord").show();
-                $("#dnn_Header_pSignIn").hide();
-                $("#dnn_Header_pVerifyUser").show();
+                $(this).parent().parent().parent().parent().animate({
+                    right: '0%'
+                }, function () {
+                    $('.sub-nav').hide();
+                });
             }
-        }
+        });
+        //////// MOBILE MENU
 
-        var menu = $('.quick-connect-hover')
-        menu.hide();
+        $(".mobile-toggle").click(function () {
 
+            $(this).next(".mobile-menu").toggle();
+            $(".mobile-toggle").toggleClass("down");
 
-
-
-
-        var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
-            var keyCode = e.which ? e.which : e.keyCode
-            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
-        }
-
-        $(function () {
-            // Check the initial Poistion of the Sticky Header
-            var stickyHeaderTop = $('#header').offset().top;
-
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > stickyHeaderTop) {
-                    $('#header').css({ position: 'fixed', top: '0px' });
-                    $('#header').addClass("headerBorder");
-                    $('#stickyalias').css('display', 'block');
-                } else {
-                    $('#header').css({ position: 'static', top: '0px' });
-                    $('#header').removeClass("headerBorder");
-                    $('#stickyalias').css('display', 'none');
-                }
-            });
         });
 
-        function PermanentRegReminderBox() {
-            $(document).ready(function () {
-                $("#permenantRegistrationModal").modal();
-            });
-
-        }
-
-               
-        $(".online-facilities ul li").click(function () {
-            var _value = $(this).attr("data-value");
-            selectOption1Change(_value);
-        })
-        function selectOption1Change(selectControl) {
-
-
-            //alert(selectControl);
-
-            var RawUrl = window.location.href.replace("http://" + document.domain + "/", "");
-            if (RawUrl.toLowerCase() == "paymentresponse.aspx") {
-                var hdnUserId = document.getElementById("hdnUserId");
-                var hdnRedirectUrl = document.getElementById("hdnRedirectUrl");
-                if (hdnUserId.value > 0) {
-                    if (selectControl != "") {
-                        window.location.href = "/" + selectControl;
-                    }
-                }
-                else {
-                    hdnRedirectUrl.value = selectControl;
-
-                    $("#dnn_Header_lblError").empty();
-                    $("#dnn_Header_lblLoginError").empty();
-                    $('#dnn_Header_txtLoginUsername').attr("value", "");
-                    $('#dnn_Header_txtLoginPassword').attr("value", "");
-                    $("#dnn_Header_lblLoginError").hide();
-                    loadUserPopup();
-                }
-            }
-            else if (selectControl == "consultationappointment/new" || selectControl == "consultationappointment/follow-up") {
-                window.location.href = "/" + selectControl;
-            }
-            else if (selectControl == "#") {
-            }
-            else {
-
-                var hdnUserId = document.getElementById("hdnUserId");
-                var hdnRedirectUrl = document.getElementById("hdnRedirectUrl");
-
-                if (hdnUserId.value > 0) {
-
-                    if (selectControl == "bed-booking" || selectControl == "outstandingbillpayment" || selectControl == "health-check-up-comprehensive" || selectControl == "surgery-booking") {
-                        var MRNumber = document.getElementById("hdnMrNumberexist").value;
-                        //alert(MRNumber);
-                        if (MRNumber == "NotExist") {
-                            PermanentRegReminderBox();
-                            return;
-                        }
-                        else {
-                            window.location.href = "/" + selectControl;
-                        }
-                    }
-                    else if (selectControl == "PatientRegistration") {
-                        PermanentRegReminderBox();
-                        return;
-                    }
-                    else {
-                        if (selectControl != "") {
-                            window.location.href = "/" + selectControl;
-                        }
-                    }
-                }
-                else {
-                    hdnRedirectUrl.value = selectControl;
-                    $("#dnn_Header_lblError").empty();
-                    $("#dnn_Header_lblLoginError").empty();
-                    $('#dnn_Header_txtLoginUsername').attr("value", "");
-                    $('#dnn_Header_txtLoginPassword').attr("value", "");
-                    $("#dnn_Header_lblLoginError").hide();
-                    loadUserPopup();
-                }
-            }
-        }
-   
     </script>
 </telerik:RadCodeBlock>

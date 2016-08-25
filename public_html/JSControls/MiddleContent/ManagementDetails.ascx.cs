@@ -33,12 +33,21 @@ public partial class JSControls_MiddleContent_ManagementDetails : PortalModuleBa
             DataSet ds = new DataSet();
             ds = null;
             objDAEntities.UserId = uid;
+
             ds = (DataSet)objBusinessLogic.GetUserDetails(objDAEntities);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
             imgProfile.ImageUrl =Convert.ToString(ds.Tables[0].Rows[0]["ImageUrl"]);
             FindDName.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Name"]);
             lblDoctorDesignation.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Designation"]);
             //pbodyDesignation.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Designation"]);
             pbodyDescription.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["Description"]);
+            }
+            else
+            {
+                DivNotfound.Visible = true;
+                DivDetail.Visible = false;
+            }
         }
         catch (Exception ex)
         {
