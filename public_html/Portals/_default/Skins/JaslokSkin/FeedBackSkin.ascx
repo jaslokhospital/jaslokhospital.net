@@ -22,10 +22,10 @@
             <li><a id="rootbreadcrumb" runat="server" class="active" href="/patientfacilities"><span id="MainRoot" runat="server">Patients Care & Visitors</span></a></li>
             <li class="active" id="Subrootbreadcrumb" runat="server"><a id="SubRootAnchor" class="active" href="javascript:void(0);"><span id="SubRootSpan" runat="server">Feedback Form</span></a></li>
         </ul>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
             <div class="left_part">
                 <JS:LeftNavigation ID="leftNav" runat="server" />
-                <div class="left_form hidden-xs">
+                <div class="left_form">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment2" />
 
 
@@ -40,11 +40,9 @@
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
-                <div class="search-form">
-
+                <%--<div class="search-form">
                     <p id="innerParagraph" runat="server"></p>
-
-                </div>
+                </div>--%>
                
                 <asp:Panel ID="divcontentpane" runat="server">
                      <div id="fdback">The fields marked as * are mandatory</div></br>

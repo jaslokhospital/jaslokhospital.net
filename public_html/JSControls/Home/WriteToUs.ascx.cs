@@ -20,11 +20,11 @@ public partial class JSControls_Home_WriteToUs : PortalModuleBase
     {
         if (radioWTU.SelectedValue == "feedback")
         {
-            Response.Redirect("~/Feedback.aspx?Name=" + txtname.Text.Trim() + "&EmailId=" + txtemail.Text.Trim());
+            Response.Redirect("~/Feedback.aspx?name=" + txtname.Text.Trim() + "&email=" + txtemail.Text.Trim());
         }
         else
         {
-            Response.Redirect("~/complaint.aspx?Name=" + txtname.Text.Trim() + "&EmailId=" + txtemail.Text.Trim());
+            Response.Redirect("~/complaint.aspx?name=" + txtname.Text.Trim() + "&email=" + txtemail.Text.Trim());
 
         }
     }
