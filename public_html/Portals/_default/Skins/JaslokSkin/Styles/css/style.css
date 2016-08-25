@@ -583,7 +583,7 @@ select.sort-by {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
-    margin-right: 12px;
+    margin: 5px 12px;
     float: left;
 }
 .header_top .btn_number:hover {
