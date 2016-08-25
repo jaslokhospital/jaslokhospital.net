@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="InnerTrustees.ascx.cs" Inherits="JSControls_MiddleContent_InnerTrustees" %>
-<div style="width:auto;">
-    <img class="img-responsive" style="width: 80%; display: inline;" src="../../Content/UsersGallery/Mp-256-compressor.jpg" />
+<div style="width:auto; text-align:center;">
+    <img class="img-responsive trustees-pic" style="width: 80%; display: inline;" src="../../Content/UsersGallery/Mp-256-compressor.jpg" />
 </div>
 <asp:Repeater ID="rptInnerTrustees" runat="server">
     <ItemTemplate>
