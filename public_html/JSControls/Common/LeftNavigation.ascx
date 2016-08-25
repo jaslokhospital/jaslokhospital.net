@@ -57,7 +57,7 @@ $('#nav-drop').click(function(){
 </div>
 
  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <script>
+        <%--<script>
             $(document).ready(function () {
                 $("#myBtn").click(function () {
                     $("#myModal").modal();
@@ -77,4 +77,4 @@ $('#nav-drop').click(function(){
                 });
 
             });
-        </script>
+        </script>--%>

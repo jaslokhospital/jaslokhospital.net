@@ -144,10 +144,12 @@
 <JS:Testimonials runat="server" ID="Testimonials" />
 <JS:Footer runat="server" ID="Footer" />
 
-<script type="text/javascript"> var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
-     var keyCode = e.which ? e.which : e.keyCode
-     var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
- }
+<script type="text/javascript">
+ //   var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
+ //    var keyCode = e.which ? e.which : e.keyCode
+ //    var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1); return ret;
+ //}
+
     $(window).load(function () {
         equalheight('.equal');
         

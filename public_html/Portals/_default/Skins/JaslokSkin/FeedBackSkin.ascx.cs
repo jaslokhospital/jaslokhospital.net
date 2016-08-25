@@ -18,14 +18,18 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     protected void Page_Load(object sender, EventArgs e)
     {
+        contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
         if (!IsPostBack)
         {
             //FillCapctha();
-            contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
-                BindPageDetail(121);
-                h3header.InnerHtml = "Feedback Form"; 
-                //divcontentpane.Controls.Add(LoadControl("~/JSControls/MiddleContent/Feedback.ascx"));
-           
+            BindPageDetail(121);
+            h3header.InnerHtml = "Feedback Form";
+            if (Request.QueryString["name"] != null && Request.QueryString["email"] != null)
+            {
+                txtName.Text = Convert.ToString(Request.QueryString["name"]);
+                txtEmail.Text = Convert.ToString(Request.QueryString["email"]);
+            }
+
         }
     }
     public void BindPageDetail(int id)
@@ -40,7 +44,7 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
             ds = (DataSet)objBusinessLogic.GetBannerPageContentDetail(id);
             if (ds.Tables[1].Rows.Count > 0)
             {
-                innerParagraph.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
+                //innerParagraph.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
 
                 p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
                 p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();
@@ -49,7 +53,7 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
         }
         catch (Exception ex)
         {
-        }    
+        }
     }
     //void FillCapctha()
     //{
@@ -83,7 +87,7 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
     //}
     protected void btnSubmitFeedbck_Click(object sender, EventArgs e)
     {
-       // Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
+        // Captcha1.ValidateCaptcha(txtCaptcha.Text.Trim());
         if (cptchFeedback.IsValid)
         {
             JaslokMailer objMailer = new JaslokMailer();
@@ -106,7 +110,7 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
             lstParameters.Add(new EmailParaMeters { ShortCodeName = "MobileNo", ShortCodeValue = txtMobile.Text.Trim() });
             lstParameters.Add(new EmailParaMeters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
             lstParameters.Add(new EmailParaMeters { ShortCodeName = "Feedback", ShortCodeValue = txtFeedBack.Text.Trim() });
-            
+
             DataSet ds = new DataSet();
             ds = (DataSet)objBusinessLogic.GetFormsEmailDetail((int)AppGlobal.JaslokEmailHandler.EmailFormFeedBack);
 
@@ -137,7 +141,7 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
         txtMobile.Text = String.Empty;
         txtEmail.Text = String.Empty;
         txtFeedBack.Text = String.Empty;
-       // txtCaptcha.Text = String.Empty;
+        // txtCaptcha.Text = String.Empty;
     }
     protected void btnResetFeedbck_Click(object sender, EventArgs e)
     {

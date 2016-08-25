@@ -782,7 +782,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_UpdateDeleteDoctor", new object[] { Slist.DoctorId, Slist.dName, Slist.dTitle, Slist.Designation, Slist.Specialization, Slist.AreaExpertise, Slist.Briefwrite, Slist.Awards, Slist.dMobileNo, Slist.dEmailId, Slist.dPhno, Slist.dImageUrl, Slist.UpdatedByUserID, Slist.optype, Slist.ConsultingCharge, Slist.FollowUpCharge, Slist.SelectTabId });
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_UpdateDeleteDoctor", new object[] { Slist.DoctorId, Slist.dName, Slist.dTitle, Slist.Designation, Slist.Specialization, Slist.AreaExpertise, Slist.Briefwrite, Slist.Awards, Slist.dMobileNo, Slist.dPhno, Slist.dEmailId, Slist.dImageUrl, Slist.UpdatedByUserID, Slist.ConsultingCharge, Slist.FollowUpCharge, Slist.optype, Slist.SelectTabId });
             }
             catch (Exception ex)
             {

@@ -78,7 +78,7 @@
 
 <JS:Footer runat="server" ID="Footer" />
 
-<script class="secret-source">
+<%--<script class="secret-source">
     jQuery(document).ready(function ($) {
         if (window.location.pathname.toLowerCase() == "/corporate-profile/certifications") {
             $('#certification-banner-slider').bjqs({
@@ -96,6 +96,6 @@
         });
 
     });
-</script>
+</script>--%>
 <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/libs/jquery.secret-source.min.js"></script>
 

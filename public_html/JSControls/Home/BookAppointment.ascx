@@ -45,7 +45,7 @@
                     </div>
                 </telerik:RadAjaxLoadingPanel>
 <telerik:RadCodeBlock ID="jv001" runat="server">
-<script type="text/javascript">
+<%--<script type="text/javascript">
     function ValHBA() {
         if (document.getElementById('<%=ddlDoctor.ClientID%>').selectedIndex == 0) {
             alert("Please select Doctor Name!");
@@ -55,7 +55,7 @@
             document.forms[0].target = "_blank";
         }
     }
-</script>
+</script>--%>
 </telerik:RadCodeBlock>
 
 

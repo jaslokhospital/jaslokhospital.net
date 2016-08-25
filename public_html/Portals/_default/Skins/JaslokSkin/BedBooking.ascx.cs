@@ -25,8 +25,8 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
     protected void Page_Load(object sender, EventArgs e)
     {
         contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
-        DataSet dsMrNumberexist = objBusinessLogic.IsExistMRNumber(user.Username);
-        if (dsMrNumberexist.Tables[0].Rows.Count <= 0 && user.Username != "host")
+        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+        if (check == false && user.Username != "host")
         {
             divContent.Visible = false;
             plcDivError.Visible = true;
@@ -104,7 +104,7 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
 
             objDAEntities.AdmissionCharge = txtAdmissionCharge.Text;
 
-            objDAEntities.Category = hdnDeposit.Value.Split(',')[1];
+            objDAEntities.Category = hdnDepositBB.Value.Split(',')[1];
             objDAEntities.MRNumber = user.Username;
 
             //objDAEntities.AdmissionCharge = Convert.ToString(10);
@@ -113,15 +113,12 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             Session["Bed"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButton('" + hdnDeposit.Value + "', '" + txtAdmissionCharge.Text + "');", true);
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
-
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButtonBEDB('" + hdnDepositBB.Value + "', '" + txtAdmissionCharge.Text + "');", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
             }
             else
             {
-                //Response.Redirect("/Payment.aspx");
-                string pageurl = "/Payment.aspx";
-                Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
+                Response.Redirect("/Payment.aspx");
             }
             // Clear();
         }

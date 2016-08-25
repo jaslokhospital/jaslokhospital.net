@@ -27,7 +27,6 @@ public partial class JSControls_MiddleContent_InnerManagement : PortalModuleBase
         try
         {
             DataSet ds = new DataSet();
-            ds = null;
             objDAEntities.optype = "Management";
             ds = (DataSet)objBusinessLogic.GetUserTypeAllDetails(objDAEntities);
 

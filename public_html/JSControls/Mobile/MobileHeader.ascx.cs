@@ -691,7 +691,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         }
         else
         {
-            Response.Redirect("/");
+            //Response.Redirect("/");
             lblForgotPassError.CssClass = "errorText";
             lblForgotPassError.Text = "Username does not exist.";
             txtForgotPasswordUserName.Text = "";

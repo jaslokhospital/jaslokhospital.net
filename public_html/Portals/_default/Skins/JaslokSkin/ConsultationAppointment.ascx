@@ -21,11 +21,11 @@
         }
     }
 
-    function GetSelectedTextValue(drpAppointmentType) {
+    /*function GetSelectedTextValue(drpAppointmentType) {
         var selectedText = drpAppointmentType.options[drpAppointmentType.selectedIndex].innerHTML;
         if (selectedText == "Follow-Up") {
 
-            var id = document.getElementById('<%= hdnfollowup.ClientID %>').value;
+            var id = document.getElementById('<= hdnfollowup.ClientID %>').value;
 
             if (id != "") {
                 divAppointmentType.style.display = 'block';
@@ -34,7 +34,7 @@
         }
 
         else if (selectedText == "New") {
-            var id = document.getElementById('<%= hdnconsulting.ClientID %>').value;
+            var id = document.getElementById('<= hdnconsulting.ClientID %>').value;
             if (id != "") {
                 divAppointmentType.style.display = 'block';
 
@@ -45,21 +45,21 @@
             divAppointmentType.style.display = 'none';
         }
 
-        $('#<%= lblAppointmentType.ClientID %>').html(id);
+        $('#<= lblAppointmentType.ClientID %>').html(id);
 
-    }
+    }*/
    
 
 
 
-    //function CitrusSubmit() {
-    //   var myForm = document.getElementById("Form");
-    //   console.log(myForm);
-    //   myForm.action = 'https://sandbox.citruspay.com/sslperf/jaslokhospital';
-    //   //myForm.method = "POST";
-    //   myForm.submit();
-    //}
-    // CitrusSubmit();
+   /* function CitrusSubmit() {
+       var myForm = document.getElementById("Form");
+       console.log(myForm);
+       myForm.action = 'https://sandbox.citruspay.com/sslperf/jaslokhospital';
+       //myForm.method = "POST";
+       myForm.submit();
+    }
+     CitrusSubmit();*/
 </script>
 <style>
     .rbl {

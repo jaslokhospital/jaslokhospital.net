@@ -45,18 +45,21 @@ public partial class Portals__default_Skins_JaslokSkin_DoctorOPDSkin : DotNetNuk
             //{
             //    imgbanner.ImageUrl = CommonFn.DefaultInnerpageBanner;
             //}
-            // imgbanner.Visible = (Request.RawUrl == "/corporate-profile") ? true : false;           
-            if (Convert.ToString(ds.Tables[1].Rows[0]["Content"]) != null || Convert.ToString(ds.Tables[1].Rows[0]["Content"]) != "")
+            // imgbanner.Visible = (Request.RawUrl == "/corporate-profile") ? true : false;   
+            if (ds != null)
             {
-                //contentpane.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
+                if (Convert.ToString(ds.Tables[1].Rows[0]["Content"]) != null || Convert.ToString(ds.Tables[1].Rows[0]["Content"]) != "")
+                {
+                    //contentpane.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
 
-                p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
-                p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();
-                p.Description = ds.Tables[1].Rows[0]["PageDescription"].ToString();
-            }
-            else
-            {
-                // contentpane.Visible = false;
+                    p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
+                    p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();
+                    p.Description = ds.Tables[1].Rows[0]["PageDescription"].ToString();
+                }
+                else
+                {
+                    // contentpane.Visible = false;
+                }
             }
 
         }
@@ -78,7 +81,7 @@ public partial class Portals__default_Skins_JaslokSkin_DoctorOPDSkin : DotNetNuk
 
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "hidespeciality('" + ds.Tables[0].Rows[0]["DoctorId"].ToString() + "');", true);
 
-           
+
         }
         catch (Exception ex)
         {
@@ -119,5 +122,5 @@ public partial class Portals__default_Skins_JaslokSkin_DoctorOPDSkin : DotNetNuk
     //        }
     //    }
     //}
-   
+
 }
