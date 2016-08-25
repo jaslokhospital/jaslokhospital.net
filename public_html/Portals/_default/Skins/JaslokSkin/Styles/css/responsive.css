@@ -974,6 +974,7 @@ DOWNLOADCOPYRETURN*/
     .finddoc_left_form { height: auto }
     .finddoc_pt97 { padding-top: 0 }
     .contact-left { padding-bottom: 11px }
+    .trustees-pic {width:100% !important;}
 }
 @media only screen and (max-width:767px) { 
     
@@ -1036,7 +1037,7 @@ DOWNLOADCOPYRETURN*/
         left: 0!important;
         min-width: auto!important;
     }
-    .header { padding: 0 0px!important }
+    .header { padding: 0 10px!important }
     .navbar.navbar-inverse.mainnav {
         margin-left: -10px;
         margin-right: -10px;
@@ -1479,7 +1480,9 @@ DOWNLOADCOPYRETURN*/
     .nav1 {text-align: center;}
     .breadcrumb {padding-left: 15px;}
     .mgt-bg-space { padding: 0px; }
-     .listMobile li {padding:0px;
+     .listMobile li {padding:0px; }
+     .left_part {padding-top: 1%;}
+    .feedback p { margin-bottom:0px;
     }
 }
 @media (max-width:480px) {
@@ -1498,11 +1501,14 @@ DOWNLOADCOPYRETURN*/
     .listMobile li:last-child span a {
     font-size: 11px !important;}
     .list li{padding:0px;}
+   
 }
 @media (max-width:384px) {
     .listMobile li:last-child span a {
     font-size: 10px !important;}
     .quick_connect i {vertical-align:inherit;} 
+     .mgt-bg-space { padding: 0px;  width: 34%; }
+    .mgt-info-space {width: 66%; }
 }
 
 
