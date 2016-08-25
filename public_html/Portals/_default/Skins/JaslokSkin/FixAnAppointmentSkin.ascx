@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FixAnAppointmentSkin.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin"%>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FixAnAppointmentSkin.ascx.cs" Inherits="Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin" %>
 <%@ Register Src="~/JSControls/MiddleContent/LeftPaneBookAppointment.ascx" TagPrefix="JS" TagName="LeftPaneBookAppointment" %>
 <%@ Register Src="~/JSControls/Common/Testimonials.ascx" TagPrefix="JS" TagName="Testimonials" %>
 <%@ Register Src="~/JSControls/Home/WriteToUs.ascx" TagPrefix="JS" TagName="WriteToUs" %>
@@ -18,15 +18,15 @@
     }
 
     //function CitrusSubmit() {
-     //   var myForm = document.getElementById("Form");
-     //   console.log(myForm);
-     //   myForm.action = 'https://sandbox.citruspay.com/sslperf/jaslokhospital';
-     //   //myForm.method = "POST";
-     //   myForm.submit();
+    //   var myForm = document.getElementById("Form");
+    //   console.log(myForm);
+    //   myForm.action = 'https://sandbox.citruspay.com/sslperf/jaslokhospital';
+    //   //myForm.method = "POST";
+    //   myForm.submit();
     //}
-   // CitrusSubmit();
-   
-    
+    // CitrusSubmit();
+
+
 </script>
 <style>
     .rbl {
@@ -60,7 +60,7 @@
         </div>
     </div>
 </div>
- <%-- <div>
+<%-- <div>
   <input type="hidden" id="merchantTxnId" name="merchantTxnId" value="<%=merchantTxnId%>" />
     <input type="hidden" id="orderAmount" name="orderAmount" value="<%=orderAmount%>" />
     <input type="hidden" id="currency" name="currency" value="<%=currency%>" />
@@ -127,7 +127,6 @@
             <asp:PlaceHolder ID="placeRightPart" runat="server">
                 <div class="right_part">
                     <h3>Fix An Appointment</h3>
-                    <p id="divScopeContent" runat="server"></p>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
@@ -176,7 +175,7 @@
 
                                 <div class="col-xs-12 col-sm-9 col-xs-8">
                                     <asp:TextBox ID="txtPhoneNo" class="form-control" runat="server" onkeypress="return Numeric(event);" MaxLength="15" ondrop="return false;" onpaste="return false;"></asp:TextBox>
-                                    
+
                                     <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtPhoneNo" runat="server" ForeColor="Red" ValidationGroup="FAP" ErrorMessage="Please Enter phone Number"></asp:RequiredFieldValidator>--%>
                                 </div>
                             </div>
@@ -456,7 +455,7 @@
                                     <asp:Label ID="lblFixDoctor" Font-Bold="true" runat="server"></asp:Label>
                                 </div>
                             </div>
-                            
+
                             <telerik:RadAjaxPanel ID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel1" runat="server" RestoreOriginalRenderDelegate="false">
                                 <div class="form-group">
                                     <asp:HiddenField ID="hdnSpecialty" runat="server" Value="0" />
@@ -502,36 +501,36 @@
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" CssClass="errormsg" runat="server" ErrorMessage="Please select time slot" ControlToValidate="drpTimeSlot" InitialValue="0"
                                             Display="Dynamic" ValidationGroup="FAP" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblTimeSlotError" runat="server" CssClass="errormsg" Visible="false" ForeColor="Red"></asp:Label>
-                                       
+
                                     </div>
                                 </div>
-								<asp:HiddenField ID="hdnfollowup" runat="server" />
-                                    <asp:HiddenField ID="hdnconsulting" runat="server" />
+                                <asp:HiddenField ID="hdnfollowup" runat="server" />
+                                <asp:HiddenField ID="hdnconsulting" runat="server" />
                             </telerik:RadAjaxPanel>
                             <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Transparency="30">
                                 <div class="modal-dialog" style="vertical-align: middle; text-align: center; background-color: white; margin-top: 0px !important; height: 100%; width: 100%; padding-top: 10%;">
                                     <img alt="Loading..." src='/images/loading.gif' style="margin-top: 1%;" />
                                 </div>
                             </telerik:RadAjaxLoadingPanel>
-							<div class="form-group">
-                                        <label class="control-label col-sm-3 col-xs-3" for="drpSpecialty">Select Appointment type:<span style="color: red">*</span></label>
-                                        <div class="col-xs-12 col-sm-9 col-xs-8">
-                                            <asp:DropDownList runat="server" class="form-control" ID="drpAppointmentType" onchange="GetSelectedTextValue(this)">
-                                                 <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
-                                                 <asp:ListItem Text="Follow-Up" Value="Follow-Up"></asp:ListItem>
-                                                <asp:ListItem Text="New" Value="New"></asp:ListItem>
-                                            </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="rfvAppointmentType" CssClass="errormsg" runat="server" ErrorMessage="Please select appointment type" ControlToValidate="drpAppointmentType" InitialValue="0"
-                                                Display="Dynamic" ValidationGroup="FAP" ForeColor="Red"></asp:RequiredFieldValidator>
-                                           
-                                            
-                                        </div>
-                                    </div>
-									  <div id="divAppointmentType" class="form-group" style="display: none;"> 
+                            <div class="form-group">
+                                <label class="control-label col-sm-3 col-xs-3" for="drpSpecialty">Select Appointment type:<span style="color: red">*</span></label>
+                                <div class="col-xs-12 col-sm-9 col-xs-8">
+                                    <asp:DropDownList runat="server" class="form-control" ID="drpAppointmentType" onchange="GetSelectedTextValue(this)">
+                                        <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
+                                        <asp:ListItem Text="Follow-Up" Value="Follow-Up"></asp:ListItem>
+                                        <asp:ListItem Text="New" Value="New"></asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="rfvAppointmentType" CssClass="errormsg" runat="server" ErrorMessage="Please select appointment type" ControlToValidate="drpAppointmentType" InitialValue="0"
+                                        Display="Dynamic" ValidationGroup="FAP" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
+                                </div>
+                            </div>
+                            <div id="divAppointmentType" class="form-group" style="display: none;">
                                 <label class="control-label col-sm-3 col-xs-3" for="txtInquiry">Amount:<span style="color: red"></span></label>
                                 <div class="col-xs-12 col-sm-9 col-xs-8">
-                                    <asp:Label ID="lblAppointmentType"  runat="server" Style="font-weight:bold;color:black;font:12px;" ></asp:Label>
-                                    
+                                    <asp:Label ID="lblAppointmentType" runat="server" Style="font-weight: bold; color: black; font: 12px;"></asp:Label>
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -576,8 +575,7 @@
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
                             --%>
-                            <div class="form-group">&nbsp;</div>
-                            <div class="form-group">
+                            <div class="form-group" style="text-align:center;">
                                 <div class="col-xs-offset-0 col-sm-offset-3 col-xs-12 ">
                                     <asp:HiddenField ID="hdnUserId" Value='<%# CommonFn.UserID.ToString() %>' runat="server" />
                                     <asp:LinkButton ID="btnSubmitFAA" class="btn btn-primary" runat="server" ValidationGroup="FAP" OnClick="btnSubmit_Click">Pay Later</asp:LinkButton>
@@ -606,8 +604,8 @@
                 <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
             </div>
         </div>
-		
-		<div class="modal fade" id="permenantRegistration" role="dialog">
+
+        <div class="modal fade" id="permenantRegistration" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header" style="padding: 5px 50px;">
@@ -620,7 +618,7 @@
                 </div>
             </div>
         </div>
-		
+
     </div>
 </div>
 <JS:Testimonials runat="server" ID="Testimonials" />

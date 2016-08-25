@@ -43,7 +43,7 @@
                             </ul>
                         </div>
 
-                        <div class="hidden-lg hidden-md hidden-sm visible-xs">
+                        <div class="hidden-lg hidden-md hidden-sm">
                             <div class="socialdiv colored">
                                 <ul>
                                     <li><a class="" href="http://twitter.com/jaslokhospital" target="_blank"><img src="/images/tw.png" alt="twitter" title="twitter" class="img-responsive" /></a></li>

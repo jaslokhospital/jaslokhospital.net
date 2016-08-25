@@ -962,7 +962,7 @@ ul {
     text-decoration: none;
     float: right;
     position: relative;
-    bottom: 39px;
+    bottom: 40px;
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 13px;
@@ -1984,7 +1984,7 @@ a.accordion-toggle i {
 .carousel-caption.topheading .font-change { font-weight: 500 }
 .wrapper {
     max-width: 620px;
-    padding: 0 20px 40px;
+    padding: 0 20px 0;
     margin: auto;
 }
 .jcarousel-wrapper {
@@ -3796,7 +3796,8 @@ border: 0 none;
 @media screen and (min-width: 320px) and (max-width: 767px)
 {
     .footer-links-margin-mobile { margin-top: 10px !important; }
-}
+    .conect-icon .container-border { border-right: 0 !important; }
+    .captn button.know_more, .captn span.know_more { bottom: 0 !important; }
 @media screen and (min-width: 731px) and (max-device-width:1024px) {
 .OutStandingBillPayment .write-each {
     width: 100px;

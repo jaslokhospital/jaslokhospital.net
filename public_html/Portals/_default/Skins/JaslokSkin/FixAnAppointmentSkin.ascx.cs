@@ -75,19 +75,10 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             ds = (DataSet)objBusinessLogic.GetBannerPageContentDetail(id);
             if (ds.Tables[1].Rows.Count > 0)
             {
-				if (ds.Tables[1].Rows[0]["Content"].ToString() != String.Empty)
-					divScopeContent.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
-				else
-					divScopeContent.Style.Add("display", "none");
-
                 p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
                 p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();
                 p.Description = ds.Tables[1].Rows[0]["PageDescription"].ToString();
             }
-			else
-			{
-				divScopeContent.Style.Add("display", "none");
-			}
         }
         catch (Exception ex)
         {

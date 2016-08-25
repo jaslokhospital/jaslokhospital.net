@@ -46,8 +46,6 @@
         font-size: 12px;
         font-weight: normal;
     }
-
-   
 </style>
 <script type="text/javascript">
     function redirect() {
@@ -137,7 +135,7 @@
                         </li>
                         <li>
                             <button class="btn btn_number">
-                                <img src="/images/car.png" class="" />1800-22-1800</button>
+                                <img src="/images/car.png" class="" />022-2354 2354</button>
                         </li>
                         <li>
                             <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
@@ -252,7 +250,8 @@
                                     <a class="SubMenu">Out-Patient</a>
                                     <div class="sub-nav2">
                                         <div><a class="back-btn">Back To Main</a></div>
-                                        <div><a  class="SubMenu">Consultation Appointment</a>
+                                        <div>
+                                            <a class="SubMenu">Consultation Appointment</a>
                                             <div class="sub-nav3">
                                                 <div><a class="back-btn">Back To Main</a></div>
                                                 <div data-value="consultationappointment/new"><a>New Appointment</a></div>
@@ -263,7 +262,7 @@
                                         <div data-value="/"><a>View Lab Reports</a></div>
                                         <div data-value="health-check-up-comprehensive"><a>Health Check-up</a></div>
                                     </div>
-                               </div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -536,7 +535,7 @@
 </div>
 <asp:HiddenField ID="hdnMrNumberexist" runat="server" />
 <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
-    
+
     <script>
         ///////// mobile-nav
         $('.mobile-header .mobile-menu ul li>a').click(function (e) {
@@ -600,8 +599,10 @@
         //////// MOBILE MENU
 
         $(".mobile-toggle").click(function () {
+
             $(this).next(".mobile-menu").toggle();
             $(".mobile-toggle").toggleClass("down");
+
         });
 
     </script>
