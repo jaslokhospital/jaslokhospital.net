@@ -129,15 +129,14 @@ footer.full-size .bc{width:10%}
 .mobile-header .main-logo span{display:none;}
 .mobile-header .mobile-toggle{float:right;display:block;width:30px;height:30px;margin-top:6%;background-image:url('/images/mobile-menu-btn.png'); background-size:100%;}
 .mobile-header .mobile-menu{background:#000;position:absolute;top:60px;left:0;width:100%;/*border-bottom:10px solid #000;*/z-index:2000;display:none}
-.mobile-header .mobile-menu a{display:block;clear:both;font-family:'Oswald', sans-serif;/*font-size:1.250em;*/text-transform:uppercase;position:relative;padding:10px 15px}
+.mobile-header .mobile-menu a{display:block;clear:both;font-family:calibri !important;font-size:12px;text-transform:uppercase;position:relative;padding:10px 15px;font-weight:bold !important;letter-spacing: 0.06em;}
 .mobile-header .mobile-toggle.down{width:30px;height:30px;margin-top:6%;}
 .mobile-leader{display:block;}
-.mobile-header .mobile-menu ul{list-style:none;padding:0;margin:0;position:absolute;width:100%;right:0%;}
+.mobile-header .mobile-menu ul {list-style:none;padding:0;margin:0;position:absolute;width:100%;right:0%;box-shadow: 0px 3px 10px #888888;}
+.mobile-header .mobile-menu .sub-nav, .mobile-header .mobile-menu .sub-nav2, .mobile-header .mobile-menu .sub-nav3 { box-shadow: 0px 3px 10px #888888; }
 .mobile-header .mobile-menu ul li{}
 .mobile-header .mobile-menu ul li a{background:#fff;color:#000;border-top:#656565 1px solid !important;background-repeat:no-repeat;background-position:95% 50%;}
-.mobile-header .mobile-menu ul li:last-child a,.mobile-header .mobile-menu ul li a.SubMenu,.mobile-header .mobile-menu ul li .sub-nav2,.mobile-header .mobile-menu ul li .sub-nav3 { border-bottom:#656565 1px solid !important;}
 .mobile-header .mobile-menu ul li a.SubMenu{background:#fff;color:#000;background-image:url('/images/sub-nav-arrow.png');background-repeat:no-repeat;background-position:95% 50%;}
-/*.mobile-header .mobile-menu ul li a:hover{background-color:#363636;}*/
 .mobile-header .mobile-menu ul li .sub-nav{position:absolute;top:0;right:-100%;width:100%;display:none;}
 .mobile-header .mobile-menu ul li .sub-nav .tert-nav{position:absolute;top:0;right:-100%;width:100%;display:none;}
 .mobile-header .mobile-menu ul li .sub-nav{}

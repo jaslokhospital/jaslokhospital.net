@@ -1037,7 +1037,7 @@ DOWNLOADCOPYRETURN*/
         left: 0!important;
         min-width: auto!important;
     }
-    .header { padding: 0 10px!important }
+    .header { padding: 0; }
     .navbar.navbar-inverse.mainnav {
         margin-left: -10px;
         margin-right: -10px;

@@ -321,25 +321,6 @@ if ($(window).width() < 1025) {
         $(".quick-connect-hover").toggle();
     });
 }
-document.getElementById("idHome").className = "";
-document.getElementById("licorporateProfile").className = "";
-document.getElementById("lispecialties").className = "";
-document.getElementById("lipatients").className = "";
-document.getElementById("liinternational").className = "";
-document.getElementById("lieducational").className = "";
-
-if (window.location.pathname == "/")
-    $("#idHome").closest("li").addClass("active");
-else if (window.location.pathname.indexOf("/corporate-profile") != -1)
-    $("#licorporateProfile").closest("li").addClass("active");
-else if (window.location.pathname.indexOf("/specialties") != -1)
-    $("#lispecialties").closest("li").addClass("active");
-else if (window.location.pathname.indexOf("/patients") != -1)
-    $("#lipatients").closest("li").addClass("active");
-else if (window.location.pathname.indexOf("/international-patients") != -1)
-    $("#liinternational").closest("li").addClass("active");
-else if (window.location.pathname.indexOf("/education-and-research") != -1)
-    $("#lieducational").closest("li").addClass("active");
 
 $("#myBtn").click(function () {
     loadUserPopup();
