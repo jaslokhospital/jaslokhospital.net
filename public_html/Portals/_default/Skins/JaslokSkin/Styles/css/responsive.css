@@ -562,8 +562,8 @@ DOWNLOADCOPYRETURN*/
         margin-left: 5px;
     }
     #dnn_divcontentpane {
-        margin-top: 20px;
-        padding: 5;
+        /*margin-top: 20px;*/
+        padding: 5px;
     }
     .line4 {
         -moz-border-bottom-colors: none;
@@ -985,7 +985,7 @@ DOWNLOADCOPYRETURN*/
   
 #nav-drop1{display: none;}
 #nav-drop{display: block;}       
-    .conect-icon{width:auto;}
+    .conect-icon{width:auto !important;}
     .footerlogo {
         float: left;
         width: 29%;

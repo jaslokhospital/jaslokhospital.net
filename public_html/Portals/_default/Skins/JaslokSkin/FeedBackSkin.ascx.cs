@@ -24,7 +24,11 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
             //FillCapctha();
             BindPageDetail(121);
             h3header.InnerHtml = "Feedback Form";
-            //divcontentpane.Controls.Add(LoadControl("~/JSControls/MiddleContent/Feedback.ascx"));
+            if (Request.QueryString["name"] != null && Request.QueryString["email"] != null)
+            {
+                txtName.Text = Convert.ToString(Request.QueryString["name"]);
+                txtEmail.Text = Convert.ToString(Request.QueryString["email"]);
+            }
 
         }
     }
@@ -40,7 +44,7 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
             ds = (DataSet)objBusinessLogic.GetBannerPageContentDetail(id);
             if (ds.Tables[1].Rows.Count > 0)
             {
-                innerParagraph.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
+                //innerParagraph.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
 
                 p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
                 p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();

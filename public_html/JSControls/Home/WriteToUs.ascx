@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WriteToUs.ascx.cs" Inherits="JSControls_Home_WriteToUs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WriteToUs.ascx.cs" Inherits="JSControls_Home_WriteToUs" ClientIDMode="Static" %>
 <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
     <div class="contact-left writeusform">
         <div role="form" class="form-horizontal right_part">

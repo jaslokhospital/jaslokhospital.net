@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftPaneFindDoctor.ascx.cs" Inherits="JSControls_MiddleContent_LeftPaneFindDoctor" EnableViewState="true" ViewStateMode="Enabled" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftPaneFindDoctor.ascx.cs" Inherits="JSControls_MiddleContent_LeftPaneFindDoctor" EnableViewState="true" ViewStateMode="Enabled" ClientIDMode="Static" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
