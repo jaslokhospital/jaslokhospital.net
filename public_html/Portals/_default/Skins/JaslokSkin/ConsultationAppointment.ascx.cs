@@ -230,7 +230,11 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         {
             UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
            // DataSet dsUsername = objBusinessLogic.IsExistMRNumber(objuser.Username);
-            bool check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+            bool check = false;
+            if (!string.IsNullOrEmpty(objuser.Username))
+            {
+                check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+            }
             //int count=dsUsername.Tables[0].Rows.Count;
             //if (dsUsername.Tables[0].Rows.Count > 0)
             //{

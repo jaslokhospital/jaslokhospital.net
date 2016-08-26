@@ -52,11 +52,12 @@
                 <asp:Panel ID="divcontentpane" runat="server"></asp:Panel>
 
                 
-                <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
-                </div>
+                
             </div>
         </div>
+        <div class="left_form hidden-lg visible-xs">
+                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
+                </div>
     </div>
 </div>
 

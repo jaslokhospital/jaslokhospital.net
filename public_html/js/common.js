@@ -535,7 +535,7 @@ function ValidationWTU() {
     var textemail = document.getElementById("txtemail").value; 
 
     if ($('#radioWTU input[type=radio]:checked').val() != 'feedback' && $('#radioWTU input[type=radio]:checked').val() != 'complaint') {
-        alert("Please select Feedback or Compaint option");
+        alert("Please select Feedback or Complaint option");
         return false;
     }
     else if (txtname == "" || textemail == "") {
