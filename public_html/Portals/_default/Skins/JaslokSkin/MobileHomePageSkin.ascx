@@ -20,7 +20,7 @@
         <JS:HomePageSlider runat="server" ID="HomePageSlider" />
     </div>
 </div>
-<div style="height:40px;"></div>
+<%--<div style="height:40px;"></div>--%>
 <JS:Testimonials runat="server" ID="Testimonials" />
 <div class="row top">
     <div class="container containerspace">

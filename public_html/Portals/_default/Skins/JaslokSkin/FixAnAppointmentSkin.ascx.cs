@@ -456,7 +456,11 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         try
         {
             UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-            bool check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+             bool check = false;
+             if (!string.IsNullOrEmpty(objuser.Username))
+             {
+                 check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+             }
             /*if (Captcha1.UserValidated)
             {*/
 
