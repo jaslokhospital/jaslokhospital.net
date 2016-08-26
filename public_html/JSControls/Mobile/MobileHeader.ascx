@@ -84,8 +84,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">1800 221
-                            800</span>
+                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
                     </div>
                 </div>
             </div>
