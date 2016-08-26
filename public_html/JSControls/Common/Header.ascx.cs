@@ -686,24 +686,24 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 ddlCountryCode.SelectedIndex = 0;
                 try
                 {
-                    #region CSV Generation Code
+                    //#region CSV Generation Code
 
-                    DataTable dtUser = new DataTable();
-                    dtUser.Columns.Add("UserName", typeof(string));
-                    dtUser.Columns.Add("Email", typeof(string));
-                    dtUser.Columns.Add("Password", typeof(string));
-                    dtUser.Rows.Add(lsUserName, oUser.Email, lsPassword);
-                    string PortalName = PortalSettings.Current.HomeDirectory;
-                    if (!Directory.Exists(Server.MapPath(PortalName + "CsvFile")))
-                        Directory.CreateDirectory(Server.MapPath(PortalName + "CsvFile"));
-                    string virtualFolder = PortalName + "CsvFile/";
-                    string FilePath = virtualFolder + "sample.csv";
-                    if (File.Exists(Server.MapPath(FilePath)))
-                        File.Delete(Server.MapPath(FilePath));
+                    //DataTable dtUser = new DataTable();
+                    //dtUser.Columns.Add("UserName", typeof(string));
+                    //dtUser.Columns.Add("Email", typeof(string));
+                    //dtUser.Columns.Add("Password", typeof(string));
+                    //dtUser.Rows.Add(lsUserName, oUser.Email, lsPassword);
+                    //string PortalName = PortalSettings.Current.HomeDirectory;
+                    //if (!Directory.Exists(Server.MapPath(PortalName + "CsvFile")))
+                    //    Directory.CreateDirectory(Server.MapPath(PortalName + "CsvFile"));
+                    //string virtualFolder = PortalName + "CsvFile/";
+                    //string FilePath = virtualFolder + "sample.csv";
+                    //if (File.Exists(Server.MapPath(FilePath)))
+                    //    File.Delete(Server.MapPath(FilePath));
 
-                    CreateCSVFile(dtUser, Server.MapPath(FilePath));
+                    //CreateCSVFile(dtUser, Server.MapPath(FilePath));
 
-                    #endregion
+                    //#endregion
                 }
                 catch (Exception ex)
                 {
