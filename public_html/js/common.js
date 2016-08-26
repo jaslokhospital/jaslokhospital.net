@@ -435,24 +435,15 @@ function PermanentRegReminderBox() {
 
 }
 
-
-$(".online-payment a").click(function () {
+$(".online-payment a, .online-facilities a, .online-facilities ul li, .online-payment ul li").click(function () {
     var _value = $(this).attr("data-value");
     if (typeof _value !== typeof undefined && _value !== false) {
         selectOption1Change(_value);
         $(".mobile-menu").toggle();
         $(".mobile-toggle").toggleClass("down");
     }
-})
+});
 
-$(".online-facilities a").click(function () {
-    var _value = $(this).attr("data-value");
-    if (typeof _value !== typeof undefined && _value !== false){
-        selectOption1Change(_value);
-        $(".mobile-menu").toggle();
-        $(".mobile-toggle").toggleClass("down");
-    }
-})
 function selectOption1Change(selectControl, hdnValue) {
 
 
