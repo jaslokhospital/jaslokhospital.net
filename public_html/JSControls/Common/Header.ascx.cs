@@ -604,11 +604,15 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 lblForgotPassError.Text = "Password has been sent to your email address.";
                 lblForgotPassError.CssClass = "successText";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
             }
             else
             {
                 lblForgotPassError.Text = "Problem in sending email";
                 lblForgotPassError.CssClass = "errorText";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
             }
             txtForgotPasswordUserName.Text = "";
             //lblGeneratedPassword.Text = lsPassword;
@@ -733,12 +737,16 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 lblSignUp.CssClass = "errorText";
                 lblSignUp.Text = "Problem in creating user. Please check all fields";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divSignUp.Attributes.Add("style", "display:block;");
             }
         }
         else
         {
             lblSignUp.CssClass = "errorText";
             lblSignUp.Text = "User with same mobile number already exists.";
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divSignUp.Attributes.Add("style", "display:block;");
         }
     }
 
@@ -770,18 +778,26 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 {
                     lblOTPError.CssClass = "errorText";
                     lblOTPError.Text = "No user is registered with above mobile number";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divOTPVerification.Attributes.Add("style", "display:block;");
                     break;
                 }
                 else if (!lbIsVerified)
                 {
                     lblOTPError.CssClass = "errorText";
                     lblOTPError.Text = "Invalid OTP code";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divOTPVerification.Attributes.Add("style", "display:block;");
                     break;
                 }
                 else if (lbIsOtpExpired)
                 {
                     lblOTPError.CssClass = "errorText";
                     lblOTPError.Text = "OTP code is expired";
+
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divOTPVerification.Attributes.Add("style", "display:block;");
+
                     break;
                 }
                 _returnValue = lbIsOtpExpired;
