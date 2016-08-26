@@ -322,7 +322,8 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
         }
         catch (Exception ex)
         {
-            Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

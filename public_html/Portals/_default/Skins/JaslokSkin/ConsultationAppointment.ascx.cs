@@ -109,7 +109,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindPageBanner(int id)
@@ -140,6 +141,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindDetails()
@@ -183,6 +186,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -340,7 +345,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         }
         catch (Exception ex)
         {
-            //Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void Clear()

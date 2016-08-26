@@ -52,6 +52,8 @@ public partial class JSControls_MiddleContent_ApplySeminar : PortalModuleBase
         catch (Exception ex)
         {
             lblMessage.Text = ex.Message;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

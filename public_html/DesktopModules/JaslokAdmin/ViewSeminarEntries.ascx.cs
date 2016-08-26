@@ -51,7 +51,8 @@ public partial class DesktopModules_JaslokAdmin_ViewSeminarEntries : PortalModul
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindSeminarDtl(int id)
@@ -68,7 +69,8 @@ public partial class DesktopModules_JaslokAdmin_ViewSeminarEntries : PortalModul
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgSeminarEntries_PageIndexChanging(object source, DataGridPageChangedEventArgs e)

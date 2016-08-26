@@ -88,9 +88,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Image already exists!!!');", true);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                ;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
 
@@ -120,9 +121,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 }
 
             }
-            catch 
+            catch(Exception ex) 
             {
-                ;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
 
@@ -223,9 +225,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Images size too small!!!');", false);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                ;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
             return strDBImagePath;
         }

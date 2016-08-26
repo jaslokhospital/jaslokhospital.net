@@ -36,6 +36,7 @@ public partial class JSControls_MiddleContent_HealthTipsDetails : PortalModuleBa
     {
         try
         {
+            
             DataSet ds = new DataSet();
             ds = null;
             objDAEntities.HealthTipId = HealthtipId;
@@ -50,7 +51,8 @@ public partial class JSControls_MiddleContent_HealthTipsDetails : PortalModuleBa
         }
         catch (Exception ex)
         {
-            //lblMessage.Text = ex.Message;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

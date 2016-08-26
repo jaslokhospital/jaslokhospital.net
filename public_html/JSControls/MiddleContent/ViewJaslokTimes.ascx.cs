@@ -47,7 +47,8 @@ public partial class JSControls_MiddleContent_ViewJaslokTimes : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }

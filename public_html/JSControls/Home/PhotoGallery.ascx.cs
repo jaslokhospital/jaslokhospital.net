@@ -28,6 +28,7 @@ public partial class JSControls_Home_PhotoGallery : PortalModuleBase
     {
         try
         {
+           
             DataSet ds = new DataSet();
             ds = null;
             //objDAEntities.PhotoID = AppGlobal.PhotoID;
@@ -49,6 +50,8 @@ public partial class JSControls_Home_PhotoGallery : PortalModuleBase
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

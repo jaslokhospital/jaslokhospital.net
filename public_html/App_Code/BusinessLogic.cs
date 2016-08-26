@@ -18,7 +18,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -39,7 +41,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -61,7 +65,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -90,7 +96,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -111,7 +119,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -133,7 +143,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -154,7 +166,10 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
+               
             }
             finally
             {
@@ -171,7 +186,8 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
             finally
             {
@@ -187,7 +203,8 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
             finally
             {
@@ -206,7 +223,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -228,7 +247,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -251,7 +272,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -272,7 +295,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -293,7 +318,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -316,7 +343,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -337,7 +366,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -363,7 +394,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -389,7 +422,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -409,7 +444,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -450,7 +487,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -470,7 +509,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -490,7 +531,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -511,7 +554,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -531,7 +576,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -551,7 +598,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -572,7 +621,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -599,7 +650,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -619,7 +672,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -639,7 +694,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -659,7 +716,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -679,7 +738,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -699,7 +760,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -720,7 +783,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -741,7 +806,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -761,7 +828,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -781,7 +850,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -801,7 +872,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -821,7 +894,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -841,7 +916,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -861,7 +938,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -881,7 +960,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -901,7 +982,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -921,7 +1004,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -942,7 +1027,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -962,7 +1049,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -983,7 +1072,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1004,7 +1095,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1024,7 +1117,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1045,7 +1140,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1066,7 +1163,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1086,7 +1185,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1107,7 +1208,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1127,7 +1230,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1147,7 +1252,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1164,7 +1271,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
             finally
             {
@@ -1184,7 +1293,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1204,7 +1315,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1224,7 +1337,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1243,7 +1358,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1262,7 +1379,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1282,7 +1401,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1302,7 +1423,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1322,7 +1445,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1342,7 +1467,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1363,7 +1490,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1383,7 +1512,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1403,7 +1534,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1423,7 +1556,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1443,7 +1578,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1464,7 +1601,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1483,7 +1622,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1500,7 +1641,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1518,7 +1661,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1536,7 +1681,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1558,7 +1705,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1580,7 +1729,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1603,7 +1754,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1626,7 +1779,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1645,7 +1800,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
             finally
             {
@@ -1665,7 +1822,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1686,7 +1845,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1703,7 +1864,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
             finally
             {
@@ -1722,7 +1885,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1742,7 +1907,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1762,7 +1929,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1783,7 +1952,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1803,7 +1974,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1823,7 +1996,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1844,7 +2019,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1864,7 +2041,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1882,7 +2061,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
 
         }
@@ -1899,7 +2080,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1920,7 +2103,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1941,7 +2126,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -1962,7 +2149,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
             finally
             {
@@ -1982,7 +2171,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2003,7 +2194,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2023,7 +2216,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2041,7 +2236,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
 
         }
@@ -2059,7 +2256,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2079,7 +2278,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2099,7 +2300,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2119,7 +2322,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2141,7 +2346,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2161,7 +2368,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2182,7 +2391,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2203,7 +2414,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2237,7 +2450,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2256,7 +2471,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2274,7 +2491,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2295,7 +2514,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2316,7 +2537,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2337,7 +2560,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -2353,7 +2578,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetCountry()
@@ -2367,7 +2594,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -2384,7 +2613,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2401,7 +2632,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2419,7 +2652,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2440,7 +2675,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2459,7 +2696,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
             finally
             {
@@ -2482,7 +2721,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2504,7 +2745,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
             finally
             {
@@ -2525,7 +2768,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2546,7 +2791,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2564,7 +2811,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
         public void SaveComplaint(DataAccessEntities Slist)
@@ -2577,7 +2826,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
         public void SaveQuickEnquiry(DataAccessEntities Slist)
@@ -2590,7 +2841,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
 
@@ -2608,7 +2861,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2630,7 +2885,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2653,7 +2910,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2673,7 +2932,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2690,7 +2951,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2705,7 +2968,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
             finally
             {
@@ -2725,7 +2990,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2746,7 +3013,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
             finally
             {
@@ -2769,7 +3038,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2791,7 +3062,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2815,7 +3088,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2838,7 +3113,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2861,7 +3138,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2882,7 +3161,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2902,7 +3183,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2921,7 +3204,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2942,7 +3227,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2974,7 +3261,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -2994,7 +3283,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -3013,7 +3304,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
             finally
             {
@@ -3033,7 +3326,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {
@@ -3053,7 +3348,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
             finally
             {
@@ -3072,7 +3369,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
             finally
             {

@@ -44,9 +44,10 @@ using System.Text;
 
             }
 
-            catch
+            catch (Exception ex)
             {
-                throw;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
 
         }

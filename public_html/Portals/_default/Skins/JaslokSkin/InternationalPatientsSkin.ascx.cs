@@ -149,6 +149,7 @@ public partial class Portals__default_Skins_JaslokSkin_InternationalPatientsSkin
     {
         try
         {
+           
             DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
 
             DataSet ds = new DataSet();
@@ -188,7 +189,8 @@ public partial class Portals__default_Skins_JaslokSkin_InternationalPatientsSkin
         }
         catch (Exception ex)
         {
-            //Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

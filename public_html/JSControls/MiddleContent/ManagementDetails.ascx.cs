@@ -51,7 +51,8 @@ public partial class JSControls_MiddleContent_ManagementDetails : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
    

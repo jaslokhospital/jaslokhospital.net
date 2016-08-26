@@ -54,6 +54,7 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesSkin : DotNetN
     {
         try
         {
+            
             DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
             objDAEntities.PageTypeId = id;
             dsBindPageDetail = Cache["SpecialtyPage_BindPageDetailCache"] as DataSet;
@@ -80,6 +81,8 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesSkin : DotNetN
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindSpecialties(int id)
@@ -118,6 +121,8 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesSkin : DotNetN
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

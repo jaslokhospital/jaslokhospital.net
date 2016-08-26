@@ -26,6 +26,7 @@ public partial class JSControls_MiddleContent_JaslokNewsDetails : System.Web.UI.
     {
         try
         {
+           
             DataSet ds = new DataSet();
             ds = null;
             int id = Convert.ToInt32(Request.QueryString["newsid"]);
@@ -48,7 +49,8 @@ public partial class JSControls_MiddleContent_JaslokNewsDetails : System.Web.UI.
         }
         catch (Exception ex)
         {
-            //Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

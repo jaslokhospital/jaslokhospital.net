@@ -28,7 +28,7 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
             else
             {
                 ContentPane.Visible = true;
-                PlaceHolder1.Visible = false;
+                PlaceHolder1.Visible = false; 
                 lblPatientName.Text = user.FirstName;
                 lblLastName.Text = user.LastName;
                 lblMrNumber.Text = user.Username;
@@ -42,7 +42,8 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -82,7 +83,8 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
 
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

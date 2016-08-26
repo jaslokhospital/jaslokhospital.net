@@ -50,7 +50,8 @@ public partial class JSControls_MiddleContent_HealthTips : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

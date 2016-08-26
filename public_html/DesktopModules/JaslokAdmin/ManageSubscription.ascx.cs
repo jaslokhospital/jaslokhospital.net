@@ -44,6 +44,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSubscription : System.Web.
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgSubscription_PageIndexChanged(object source, DataGridPageChangedEventArgs e)

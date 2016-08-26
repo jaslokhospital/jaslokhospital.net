@@ -44,6 +44,7 @@ namespace DotNetNuke.Modules.JaslokAdmin
         {
             try
             {
+
                 //if (UploadImages.PostedFile.FileName != "")
                 //{
                 //    listofuploadedfiles.Text = SaveImage();
@@ -82,7 +83,9 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
 
         }
@@ -113,7 +116,9 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
 

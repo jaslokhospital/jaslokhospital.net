@@ -63,7 +63,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         //public void BindEnquiry(int id,int Tid)
@@ -273,7 +274,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         protected void btnCancel_Click(object sender, EventArgs e)

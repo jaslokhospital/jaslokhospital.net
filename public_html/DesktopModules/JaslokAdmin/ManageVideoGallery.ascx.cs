@@ -97,7 +97,8 @@ public partial class DesktopModules_JaslokAdmin_ManageVideoGallery : PortalModul
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -120,7 +121,8 @@ public partial class DesktopModules_JaslokAdmin_ManageVideoGallery : PortalModul
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindVideo(int id)
@@ -152,7 +154,8 @@ public partial class DesktopModules_JaslokAdmin_ManageVideoGallery : PortalModul
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -271,7 +274,8 @@ public partial class DesktopModules_JaslokAdmin_ManageVideoGallery : PortalModul
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }
@@ -305,7 +309,8 @@ public partial class DesktopModules_JaslokAdmin_ManageVideoGallery : PortalModul
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }

@@ -45,6 +45,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSAchievements : PortalModu
         {
             lblMessage.CssClass = "errorlbl";
             lblMessage.Text = ex.Message;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void btnCancel_Click(object sender, EventArgs e)

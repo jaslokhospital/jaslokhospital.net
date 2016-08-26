@@ -40,7 +40,8 @@ public partial class JSControls_MiddleContent_InnerPhotoGallery : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindPhotoGallery()
@@ -60,7 +61,8 @@ public partial class JSControls_MiddleContent_InnerPhotoGallery : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

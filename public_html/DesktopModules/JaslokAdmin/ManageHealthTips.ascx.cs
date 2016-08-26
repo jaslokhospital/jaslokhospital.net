@@ -66,7 +66,8 @@ public partial class DesktopModules_JaslokAdmin_ManageHealthTips : PortalModuleB
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
@@ -117,7 +118,8 @@ public partial class DesktopModules_JaslokAdmin_ManageHealthTips : PortalModuleB
             }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void Clear()
@@ -210,9 +212,10 @@ public partial class DesktopModules_JaslokAdmin_ManageHealthTips : PortalModuleB
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only Image file allowed!!!');", true);
             }
         }
-        catch
+        catch(Exception ex)
         {
-            //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only Image file allowed!!!');", true);
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }

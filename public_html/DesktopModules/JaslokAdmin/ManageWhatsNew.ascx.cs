@@ -53,6 +53,8 @@ public partial class DesktopModules_JaslokAdmin_ManageWhatsNew : PortalModuleBas
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
 
         }
 
@@ -88,7 +90,11 @@ public partial class DesktopModules_JaslokAdmin_ManageWhatsNew : PortalModuleBas
                         {
                             CommonFn.CreateFolder(strServerPath, FolderName);
                         }
-                        catch { }
+                        catch(Exception ex)
+                        {
+                            Logging objlog = new Logging();
+                            objlog.LogError(ex);
+                        }
                     }
                     string strFileNameOnly = CommonFn.GetFileName(FileNameWEx);
                     strSaveImagePath = strServerPath + FolderName + "\\" + strFileNameOnly + "_" + DateTime.Now.Ticks + FileExtension;
@@ -129,7 +135,8 @@ public partial class DesktopModules_JaslokAdmin_ManageWhatsNew : PortalModuleBas
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

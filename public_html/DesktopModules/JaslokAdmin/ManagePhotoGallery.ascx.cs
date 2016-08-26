@@ -85,9 +85,10 @@ public partial class DesktopModules_JaslokAdmin_ManagePhotoGallery : PortalModul
                 ShowView();
                
             }
-            catch (Exception)
-            {                
-                throw;
+            catch (Exception ex)
+            {
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }  
         }
         public void BindAlbum()
@@ -114,7 +115,8 @@ public partial class DesktopModules_JaslokAdmin_ManagePhotoGallery : PortalModul
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         public void BindPhoto(int id)
@@ -156,7 +158,8 @@ public partial class DesktopModules_JaslokAdmin_ManagePhotoGallery : PortalModul
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
 
@@ -255,7 +258,11 @@ public partial class DesktopModules_JaslokAdmin_ManagePhotoGallery : PortalModul
                             {
                                 CommonFn.CreateFolder(strServerPath, FolderName);
                             }
-                            catch { }
+                            catch(Exception ex)
+                            {
+                                Logging objlog = new Logging();
+                                objlog.LogError(ex);
+                            }
                         }
 
                         //string strFileNameOnly = CommonFn.GetFileName(fileName);
@@ -273,7 +280,8 @@ public partial class DesktopModules_JaslokAdmin_ManagePhotoGallery : PortalModul
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
             return strDBImagePath;
         }

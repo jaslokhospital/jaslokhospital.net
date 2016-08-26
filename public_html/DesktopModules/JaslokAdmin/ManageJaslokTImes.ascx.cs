@@ -66,7 +66,8 @@ public partial class DesktopModules_JaslokAdmin_ManageJaslokTImes : PortalModule
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -124,7 +125,8 @@ public partial class DesktopModules_JaslokAdmin_ManageJaslokTImes : PortalModule
         }
         catch (Exception ex)
         {
-            Response.Write(ex.StackTrace);
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

@@ -48,7 +48,8 @@ public partial class JSControls_Common_PressRelease : System.Web.UI.UserControl
         }
         catch (Exception ex)
         {
-            //Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

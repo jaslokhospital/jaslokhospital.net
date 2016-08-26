@@ -174,12 +174,14 @@ namespace DotNetNuke.Services.Exceptions
                         ErrorPlaceHolder.Controls.Add(new ErrorContainer(portalSettings, localizedMessage, lex).Container);
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
                     //No exception was found...you shouldn't end up here
                     //unless you go to this aspx page URL directly
                     localizedMessage = Localization.Localization.GetString("UnhandledError.Text", Localization.Localization.GlobalResourceFile);
                     ErrorPlaceHolder.Controls.Add(new LiteralControl(localizedMessage));
+                    Logging objlog = new Logging();
+                    objlog.LogError(ex);
                 }
 
                 Response.StatusCode = 500;

@@ -62,7 +62,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         public void Clear()
@@ -132,7 +133,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message.ToString());
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         

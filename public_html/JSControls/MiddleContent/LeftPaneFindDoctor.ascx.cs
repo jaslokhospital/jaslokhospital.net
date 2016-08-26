@@ -52,7 +52,8 @@ public partial class JSControls_MiddleContent_LeftPaneFindDoctor : PortalModuleB
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }        
     }
     protected void ddlSpecialtyLPD_SelectedIndexChanged(object sender, EventArgs e)

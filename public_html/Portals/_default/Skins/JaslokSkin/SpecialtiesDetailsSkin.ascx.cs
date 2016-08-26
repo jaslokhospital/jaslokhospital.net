@@ -147,6 +147,8 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesDetailsSkin : 
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }   
     protected void datalistOurSpecialtyDs_ItemDataBound(object sender, RepeaterItemEventArgs e)

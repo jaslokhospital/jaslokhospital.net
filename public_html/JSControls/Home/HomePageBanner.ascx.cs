@@ -49,6 +49,8 @@ public partial class JSControls_Home_HomePageBanner : System.Web.UI.UserControl
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

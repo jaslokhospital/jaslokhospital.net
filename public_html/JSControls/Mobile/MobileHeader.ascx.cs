@@ -78,7 +78,8 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         }
         catch (Exception ex)
         {
-            // Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -219,8 +220,10 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
             Double.Parse(str);
             return true;
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
             return false;
         }
     }
@@ -462,7 +465,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
                     UserInfo objUser = new UserInfo();
                     //objUser.Username = ds.Tables[0].Rows[0]["Username"].ToString();
-                    // objUser.Username = txtLoginUsername.Text.Trim();
+                    objUser.Username = txtLoginUsername.Text.Trim();
                     UserMembership objMembership = new UserMembership(objUser);
                     objMembership.Username = objUser.Username.Trim();
                     objMembership.Password = txtLoginPassword.Text;
@@ -778,7 +781,8 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    Logging objlog = new Logging();
+                    objlog.LogError(ex);
                 }
 
                 /*UserInfo objUser = new UserInfo();
@@ -935,7 +939,8 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }

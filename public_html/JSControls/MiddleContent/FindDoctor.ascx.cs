@@ -48,7 +48,8 @@ public partial class JSControls_MiddleContent_FindDoctor : PortalModuleBase
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

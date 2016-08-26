@@ -114,7 +114,9 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
         public void BindPage()
@@ -144,7 +146,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         protected void dgCareer_PageIndexChanging(object source, DataGridPageChangedEventArgs e)

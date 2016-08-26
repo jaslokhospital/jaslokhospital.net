@@ -114,7 +114,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         protected void dgSpecialityClinics_ItemCommand(object source, DataGridCommandEventArgs e)

@@ -24,6 +24,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
     protected void Page_Load(object sender, EventArgs e)
     {
         txtdob.MaxDate = DateTime.Now;
+        txtdob.MinDate = Convert.ToDateTime("01/01/1900");
         contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
         if (Request.RawUrl.Contains("fix-an-appointment"))
         {
@@ -91,6 +92,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindDetails()
@@ -125,6 +128,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -229,7 +234,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         }
         catch (Exception ex)
         {
-            //Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void Clear()
@@ -520,7 +526,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         }
         catch (Exception ex)
         {
-            //Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         
     }

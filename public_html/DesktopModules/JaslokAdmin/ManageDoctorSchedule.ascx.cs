@@ -40,7 +40,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctorSchedule : PortalMod
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -176,7 +177,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctorSchedule : PortalMod
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 

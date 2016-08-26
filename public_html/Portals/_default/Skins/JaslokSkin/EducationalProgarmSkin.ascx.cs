@@ -127,6 +127,7 @@ public partial class Portals__default_Skins_JaslokSkin_EducationalProgarmSkin : 
     {
         try
         {
+           
             DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
 
             DataSet ds = new DataSet();
@@ -166,7 +167,8 @@ public partial class Portals__default_Skins_JaslokSkin_EducationalProgarmSkin : 
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     

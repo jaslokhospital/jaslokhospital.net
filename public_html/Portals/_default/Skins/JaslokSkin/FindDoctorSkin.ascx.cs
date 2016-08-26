@@ -81,6 +81,8 @@ public partial class Portals__default_Skins_JaslokSkin_FindDoctorSkin : DotNetNu
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void lbtnFAD_Click(object sender, EventArgs e)

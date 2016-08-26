@@ -54,7 +54,8 @@ public partial class DesktopModules_JaslokAdmin_ViewCareerApplications : PortalM
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindAppDT(int id)
@@ -71,7 +72,8 @@ public partial class DesktopModules_JaslokAdmin_ViewCareerApplications : PortalM
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgApplication_ItemCommand(object source, DataGridCommandEventArgs e)

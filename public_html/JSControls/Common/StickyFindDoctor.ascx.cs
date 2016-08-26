@@ -41,8 +41,9 @@ public partial class JSControls_Common_StickyFindDoctor : PortalModuleBase
         }
         catch (Exception ex)
         {
-
-        }        
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
+        }      
     }
     protected void ddlSpecialtySFD_SelectedIndexChanged(object sender, EventArgs e)
     {

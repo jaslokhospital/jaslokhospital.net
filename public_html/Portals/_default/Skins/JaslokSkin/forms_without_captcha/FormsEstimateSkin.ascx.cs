@@ -45,6 +45,8 @@ public partial class Portals__default_Skins_JaslokSkin_FormsEstimateSkin : DotNe
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     //void FillCapctha()

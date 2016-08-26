@@ -49,8 +49,9 @@ public class JaslokMailer
         }
         catch (Exception ex)
         {
-            return ex.Message.ToString();
-          //HttpContext.Current.Response.Write(ex.StackTrace.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
+            return null;          
         }
         
     }

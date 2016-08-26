@@ -49,7 +49,8 @@ public partial class JSControls_Home_FindDoctor : System.Web.UI.UserControl
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     private void bindDoctor()

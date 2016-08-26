@@ -44,7 +44,8 @@ public partial class JSControls_Common_Testimonials : System.Web.UI.UserControl
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void rptTestimonials_ItemDataBound(object sender, RepeaterItemEventArgs e)

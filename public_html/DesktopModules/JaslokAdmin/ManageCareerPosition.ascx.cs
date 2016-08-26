@@ -57,7 +57,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         public void BindPosition()
@@ -87,7 +88,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
-
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
 
@@ -157,6 +159,8 @@ namespace DotNetNuke.Modules.JaslokAdmin
             }
             catch (Exception ex)
             {
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         protected void dgCareerPosition_ItemCommand(object source, DataGridCommandEventArgs e)

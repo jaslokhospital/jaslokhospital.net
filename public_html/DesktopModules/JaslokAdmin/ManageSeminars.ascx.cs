@@ -79,6 +79,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSeminars : PortalModuleBas
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public DataSet BindSeminars()
@@ -109,7 +111,9 @@ public partial class DesktopModules_JaslokAdmin_ManageSeminars : PortalModuleBas
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
+            return null;
         }
     }
     //public void BindSeminarDetails(int id)
@@ -223,7 +227,11 @@ public partial class DesktopModules_JaslokAdmin_ManageSeminars : PortalModuleBas
                     {
                         CommonFn.CreateFolder(strServerPath, FolderName);
                     }
-                    catch { }
+                    catch(Exception ex)
+                    {
+                        Logging objlog = new Logging();
+                        objlog.LogError(ex);
+                    }
                 }
                 string strFileNameOnly = CommonFn.GetFileName(FileNameWEx);
                 strSaveImagePath = strServerPath + FolderName + "\\" + strFileNameOnly + FileExtension;
@@ -246,11 +254,13 @@ public partial class DesktopModules_JaslokAdmin_ManageSeminars : PortalModuleBas
                 ViewState["optype"] = "INSERT";
             }
         }
-        catch
+        catch(Exception ex)
         {
             lblMessage.CssClass = "errorlbl";
             lblMessage.Text = "Something worng!!!!";
             ViewState["optype"] = "INSERT";
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }

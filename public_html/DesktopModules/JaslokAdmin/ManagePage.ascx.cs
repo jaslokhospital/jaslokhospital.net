@@ -44,7 +44,8 @@ public partial class DesktopModules_JaslokAdmin_ManagePage : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgPage_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -148,7 +149,8 @@ public partial class DesktopModules_JaslokAdmin_ManagePage : PortalModuleBase
         }
         catch (Exception ex)
         {
-			;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindPage(int pageid)
@@ -176,7 +178,8 @@ public partial class DesktopModules_JaslokAdmin_ManagePage : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgPage_PageIndexChanging(object source, DataGridPageChangedEventArgs e)

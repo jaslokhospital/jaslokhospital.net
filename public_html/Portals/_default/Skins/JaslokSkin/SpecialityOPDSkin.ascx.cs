@@ -63,6 +63,8 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialityOPDSkin : DotNe
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindSpecialityWiseOpd()
@@ -94,6 +96,8 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialityOPDSkin : DotNe
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
  

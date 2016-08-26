@@ -51,6 +51,8 @@ public partial class JSControls_Home_VideoGallery : PortalModuleBase
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     

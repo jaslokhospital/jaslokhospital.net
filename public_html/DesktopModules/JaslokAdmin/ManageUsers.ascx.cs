@@ -93,7 +93,8 @@ public partial class DesktopModules_JaslokAdmin_ManageUsers : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public DataSet BindUsers(int id)
@@ -124,7 +125,8 @@ public partial class DesktopModules_JaslokAdmin_ManageUsers : PortalModuleBase
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgUsers_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -202,8 +204,10 @@ public partial class DesktopModules_JaslokAdmin_ManageUsers : PortalModuleBase
             ddlUserType.Items.Insert(0, new ListItem("-Select-", "0"));
 
         }
-        catch
+        catch(Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void btnCancel_Click(object sender, EventArgs e)
@@ -239,7 +243,11 @@ public partial class DesktopModules_JaslokAdmin_ManageUsers : PortalModuleBase
                         {
                             CommonFn.CreateFolder(strServerPath, FolderName);
                         }
-                        catch { }
+                        catch(Exception ex)
+                        {
+                            Logging objlog = new Logging();
+                            objlog.LogError(ex);
+                        }
                     }
 
                     string strFileNameOnly = CommonFn.GetFileName(fileName);
@@ -255,9 +263,11 @@ public partial class DesktopModules_JaslokAdmin_ManageUsers : PortalModuleBase
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Images size is more than 1.035 mb!!!');", true);
             }
         }
-        catch
+        catch(Exception ex)
         {
             ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Something worng!!!');", true);
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }

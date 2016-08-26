@@ -80,7 +80,8 @@ public partial class Portals__default_Skins_JaslokSkin_PatientsSkin : DotNetNuke
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     

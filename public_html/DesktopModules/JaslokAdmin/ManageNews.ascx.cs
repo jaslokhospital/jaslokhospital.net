@@ -157,7 +157,8 @@ public partial class DesktopModules_JaslokAdmin_ManageNews : PortalModuleBase
         }
         catch (Exception ex)
         {
-         // Response.Write(ex.Message.ToString()+ex.StackTrace.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected string SaveImage(FileUpload fUpload)
@@ -182,7 +183,8 @@ public partial class DesktopModules_JaslokAdmin_ManageNews : PortalModuleBase
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }
@@ -230,7 +232,8 @@ public partial class DesktopModules_JaslokAdmin_ManageNews : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     //protected void dgNews_ItemDataBound(object sender, DataGridItemEventArgs e)   

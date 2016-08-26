@@ -88,9 +88,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 BindBanner();
                 ShowView();
             }
-            catch
+            catch(Exception ex)
             {
-                ;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         
@@ -98,6 +99,7 @@ namespace DotNetNuke.Modules.JaslokAdmin
         {
             try
             {
+               
                 DataSet ds = new DataSet();
                 ds = null;
                 objDAEntities.PageTabId = 0;
@@ -120,9 +122,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
-                ;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
         }
         protected void dgBanner_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -206,9 +209,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 strDBImagePath = CommonFn.DbSave + CommonFn.DbBannerFolder;
                 strDBImagePath = strDBImagePath + strFileNameOnly;
             }
-            catch
+            catch (Exception ex)
             {
-                ;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
             }
             return strDBImagePath;
         }

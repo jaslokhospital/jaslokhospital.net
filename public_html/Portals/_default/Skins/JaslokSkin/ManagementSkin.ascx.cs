@@ -29,6 +29,7 @@ public partial class Portals__default_Skins_JaslokSkin_ManagementSkin : DotNetNu
     {
         try
         {
+           
             DataSet ds = new DataSet();
             ds = null;
             objDAEntities.PageTypeId = id;
@@ -44,6 +45,8 @@ public partial class Portals__default_Skins_JaslokSkin_ManagementSkin : DotNetNu
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     
     }   

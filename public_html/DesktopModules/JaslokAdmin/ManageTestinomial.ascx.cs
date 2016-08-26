@@ -104,7 +104,8 @@ public partial class DesktopModules_JaslokAdmin_ManageTestinomial : PortalModule
 
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -142,7 +143,8 @@ public partial class DesktopModules_JaslokAdmin_ManageTestinomial : PortalModule
         }
         catch (Exception ex)
         {
-            Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgTesti_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -229,7 +231,8 @@ public partial class DesktopModules_JaslokAdmin_ManageTestinomial : PortalModule
         }
         catch (Exception ex)
         {
-            throw ex;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }

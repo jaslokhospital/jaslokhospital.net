@@ -44,6 +44,7 @@ public partial class JSControls_Home_BookAppointment : PortalModuleBase
     {
         try
         {
+           
             ddlSpecialtyB.DataSource = dtSpeciality;
             ddlSpecialtyB.DataValueField = "SpecialtyId";
             ddlSpecialtyB.DataTextField = "SpecialtyName";
@@ -52,6 +53,8 @@ public partial class JSControls_Home_BookAppointment : PortalModuleBase
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     private void bindDoctor()

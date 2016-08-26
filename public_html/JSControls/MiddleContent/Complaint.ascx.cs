@@ -33,9 +33,10 @@ public partial class JSControls_MiddleContent_Complaint : PortalModuleBase
             Session["captcha"] = captcha.ToString();
             //imgCaptcha.ImageUrl = "GenerateCaptcha.ascx?" + DateTime.Now.Ticks.ToString();
         }
-        catch
+        catch(Exception ex)
         {
-            throw;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void ValidateCaptcha(object sender, ServerValidateEventArgs e)

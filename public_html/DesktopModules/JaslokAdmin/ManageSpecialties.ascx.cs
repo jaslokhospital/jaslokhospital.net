@@ -55,8 +55,10 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialties : PortalModule
             drpspecialCategory.Items.Insert(0, new ListItem("-Select-", "0"));
 
         }
-        catch
+        catch(Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgSpecialty_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -185,7 +187,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialties : PortalModule
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     static DataSet ds = new DataSet();
@@ -212,7 +215,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialties : PortalModule
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void drpspecialCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -259,9 +263,11 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialties : PortalModule
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Images size is more than 1.03 mb=1035000!!!');", true);
             }
         }
-        catch
+        catch (Exception ex)
         {
             ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Something worng!!!');", true);
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
 
@@ -296,7 +302,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialties : PortalModule
         }
         catch (Exception ex)
         {
-            Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

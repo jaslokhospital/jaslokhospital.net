@@ -56,7 +56,8 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void BindDoctor()
@@ -72,7 +73,8 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex); 
         }
     }
 
@@ -169,7 +171,8 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 }

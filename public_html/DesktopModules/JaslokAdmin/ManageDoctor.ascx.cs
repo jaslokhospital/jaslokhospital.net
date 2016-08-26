@@ -112,7 +112,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     static DataSet ds = new DataSet();
@@ -141,6 +142,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgDoctor_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -261,9 +264,10 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only Image file allowed!!!');", true);
             }
         }
-        catch
+        catch(Exception ex)
         {
-            //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only Image file allowed!!!');", true);
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         return strDBImagePath;
     }
@@ -305,38 +309,55 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
     }
     public void lbselectedSpecialtyRemove()
     {
-        if (listspecialitySel.SelectedIndex >= 0)
+        try
         {
-            for (int i = 0; i < listspecialitySel.Items.Count; i++)
+            if (listspecialitySel.SelectedIndex >= 0)
             {
-                if (listspecialitySel.Items[i].Selected)
+                for (int i = 0; i < listspecialitySel.Items.Count; i++)
                 {
-                    if (!arraylist1.Contains(listspecialitySel.Items[i]))
+                    if (listspecialitySel.Items[i].Selected)
                     {
-                        arraylist1.Add(listspecialitySel.Items[i]);
+                        if (!arraylist1.Contains(listspecialitySel.Items[i]))
+                        {
+                            arraylist1.Add(listspecialitySel.Items[i]);
+                        }
                     }
                 }
-            }
-            for (int i = 0; i < arraylist1.Count; i++)
-            {
-                if (!listspecialityAvl.Items.Contains(((ListItem)arraylist1[i])))
+                for (int i = 0; i < arraylist1.Count; i++)
                 {
-                    listspecialityAvl.Items.Add(((ListItem)arraylist1[i]));
+                    if (!listspecialityAvl.Items.Contains(((ListItem)arraylist1[i])))
+                    {
+                        listspecialityAvl.Items.Add(((ListItem)arraylist1[i]));
+                    }
+                    listspecialitySel.Items.Remove(((ListItem)arraylist1[i]));
                 }
-                listspecialitySel.Items.Remove(((ListItem)arraylist1[i]));
+                listspecialityAvl.SelectedIndex = -1;
             }
-            listspecialityAvl.SelectedIndex = -1;
+        }
+        catch (Exception ex)
+        {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void btnRemoveAll_Click(object sender, EventArgs e)
     {
-        while (listspecialitySel.Items.Count != 0)
+        try
         {
-            for (int i = 0; i < listspecialitySel.Items.Count; i++)
+            while (listspecialitySel.Items.Count != 0)
             {
-                listspecialityAvl.Items.Add(listspecialitySel.Items[i]);
-                listspecialitySel.Items.Remove(listspecialitySel.Items[i]);
+                for (int i = 0; i < listspecialitySel.Items.Count; i++)
+                {
+                    listspecialityAvl.Items.Add(listspecialitySel.Items[i]);
+                    listspecialitySel.Items.Remove(listspecialitySel.Items[i]);
+                }
             }
+        }
+
+        catch(Exception ex)
+        {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void btnSearch_Click(object sender, EventArgs e)
@@ -358,7 +379,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
         }
         catch (Exception ex)
         {
-            Response.Write(ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void btnAddJaslokTimes_Click(object sender, EventArgs e)

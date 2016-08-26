@@ -45,8 +45,10 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping : Port
             drpspecialCategory.Items.Insert(0, new ListItem("-Select-", "0"));
 
         }
-        catch
+        catch(Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void BindTabs()
@@ -66,8 +68,10 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping : Port
             lbSpecialtytabs.Items.Insert(0, new ListItem("-Select-", "0"));
 
         }
-        catch
+        catch(Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -96,6 +100,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping : Port
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     public void Clear()
@@ -147,6 +153,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping : Port
         catch (Exception ex)
         {
           ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Something went wrong!!!');", true);
+          Logging objlog = new Logging();
+          objlog.LogError(ex);
         }
     }
     protected void dgSpecialtyTab_ItemCommand(object source, DataGridCommandEventArgs e)
@@ -222,7 +230,8 @@ public partial class DesktopModules_JaslokAdmin_ManageSpecialtyTabMapping : Port
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void dgSpecialtyTabs_PageIndexChanging(object source, DataGridPageChangedEventArgs e)

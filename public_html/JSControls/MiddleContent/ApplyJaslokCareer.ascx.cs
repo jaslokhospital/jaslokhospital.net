@@ -68,7 +68,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -89,6 +90,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -105,7 +108,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -121,7 +125,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -138,7 +143,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -154,7 +160,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
 
     }
@@ -171,6 +178,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
             return null;
         }
 
@@ -328,6 +337,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
 
@@ -340,6 +351,7 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
 
         try
         {
+            
             Upload();
 
             DataSet ds = new DataSet();
@@ -517,8 +529,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-            lblMessage.CssClass = "errorlbl";
-            lblMessage.Text = ex.Message;
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
         finally
         {
@@ -601,7 +613,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
-            Response.Write(ex.Message.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
 
         }
 

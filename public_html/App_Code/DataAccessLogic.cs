@@ -32,7 +32,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
 
         }
@@ -46,7 +48,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
 
         }
@@ -60,7 +64,10 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
+
             }
 
         }
@@ -74,7 +81,10 @@ namespace BusinessDataLayer
             }
             catch(Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return false;
+                
             }
         }
 
@@ -87,7 +97,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -106,7 +118,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -120,7 +134,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -139,7 +155,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
         }
 
@@ -152,7 +170,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
 
@@ -167,7 +187,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
 
         }
@@ -179,7 +201,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -193,7 +217,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -207,7 +233,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -220,7 +248,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }           
         }
 
@@ -233,7 +263,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -246,7 +278,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -259,7 +293,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -276,7 +312,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -288,7 +326,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetEnquiry(DataAccessEntities SList)
@@ -299,7 +339,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -311,7 +353,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -323,7 +367,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet DeleteEnquiryAdmin(DataAccessEntities Slist)
@@ -334,7 +380,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetPageType()
@@ -345,7 +393,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
        
@@ -357,7 +407,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet SaveBanner(DataAccessEntities Slist)
@@ -369,7 +421,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -383,7 +437,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -395,7 +451,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetPageDetails(DataAccessEntities Slist)
@@ -406,7 +464,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetPageDescription(int Pageid)
@@ -417,7 +477,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet Savepage(DataAccessEntities Slist)
@@ -429,7 +491,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet UpdateDeletePage(DataAccessEntities Slist)
@@ -440,7 +504,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -452,7 +518,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetAlbumList()
@@ -463,7 +531,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet SaveAlbum(DataAccessEntities Slist)
@@ -475,7 +545,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet UpdateDeleteAlbum(DataAccessEntities Slist)
@@ -486,7 +558,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
        
@@ -498,7 +572,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetPhotoDetailsByAlbumId(DataAccessEntities Slist)
@@ -509,7 +585,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet SavePhoto(DataAccessEntities Slist)
@@ -521,7 +599,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet UpdateDeletePhoto(DataAccessEntities Slist)
@@ -532,7 +612,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetVideoDetailByAlbumId(int AlbumID)
@@ -543,7 +625,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetVideoDetails(DataAccessEntities Slist)
@@ -554,7 +638,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet SaveVideo(DataAccessEntities Slist)
@@ -566,7 +652,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }              
         }
         public DataSet UpdateDeleteVideo(DataAccessEntities Slist)
@@ -577,7 +665,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }              
         }
         
@@ -589,7 +679,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetTestinomialDetails(DataAccessEntities Slist)
@@ -600,7 +692,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -612,7 +706,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -624,7 +720,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet DeleteTestinomial(DataAccessEntities Slist)
@@ -635,7 +733,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -648,7 +748,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -661,7 +763,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
            
         }
@@ -673,7 +777,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet SaveSpecialties(DataAccessEntities Slist)
@@ -684,7 +790,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }             
         }
         public void UpdateDeleteSpecialties(DataAccessEntities Slist)
@@ -695,7 +803,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }             
         }
         public DataSet GetDoctoDetailbySID(int sid)
@@ -706,7 +816,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }             
         }
 
@@ -719,7 +831,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetSpecialtyTabMapDetails()
@@ -730,7 +844,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }             
         }
         public DataSet GetTabsDetails()
@@ -741,7 +857,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetSpecialtiesById(DataAccessEntities Slist)
@@ -752,7 +870,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         //Doctor
@@ -764,7 +884,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet SaveDoctor(DataAccessEntities Slist)
@@ -775,7 +897,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet UpdateDeleteDoctor(DataAccessEntities Slist)
@@ -786,7 +910,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetDoctorIdName()
@@ -797,7 +923,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         //User
@@ -809,7 +937,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetUserTypeAllDetails(DataAccessEntities Slist)
@@ -820,7 +950,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetUserDetails(DataAccessEntities Slist)
@@ -831,7 +963,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public string SaveUser(DataAccessEntities Slist)
@@ -842,7 +976,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet UpdateDeleteUser(DataAccessEntities Slist)
@@ -853,7 +989,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
 
@@ -866,7 +1004,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }             
         }
         public DataSet GetSpecialtyMap(DataAccessEntities Slist)
@@ -877,7 +1017,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }            
         }
         public DataSet GetDoctorTabMapDetails()
@@ -888,7 +1030,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetSpeciality(bool IsFrontEnd = false)
@@ -899,7 +1043,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet AddSpecialtyMappingCtr(DataAccessEntities Slist)
@@ -910,7 +1056,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet UpdateDeleteDoctorTab(DataAccessEntities Slist)
@@ -921,7 +1069,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         //Career Category
@@ -933,7 +1083,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -946,7 +1098,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -959,7 +1113,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -973,7 +1129,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -986,7 +1144,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
         //Career Position
@@ -998,7 +1158,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public string SaveCareerPosition(DataAccessEntities Slist)
@@ -1009,7 +1171,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public void UpdateDeleteCareerPosition(DataAccessEntities Slist)
@@ -1020,7 +1184,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
         //DoctorSchedule
@@ -1032,7 +1198,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataTable GetScheduleDetail(int DoctorScheduleId)
@@ -1044,7 +1212,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet DSInsertUpdateDelete(DataAccessEntities Slist)
@@ -1055,7 +1225,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetDoctorSchedule(DataAccessEntities Slist)
@@ -1066,7 +1238,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1079,7 +1253,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet SaveHealthTips(DataAccessEntities Slist)
@@ -1090,7 +1266,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null; throw ex;
             }
         }
         public DataSet UpdateDeletHealthTips(DataAccessEntities Slist)
@@ -1101,7 +1279,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1115,7 +1295,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetSeminarsDetails(int Sid)
@@ -1126,7 +1308,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public void DeleteSeminars(DataAccessEntities Slist)
@@ -1137,7 +1321,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
 
@@ -1150,7 +1336,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1163,7 +1351,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public string SaveBookAppointment(DataAccessEntities Slist)
@@ -1174,7 +1364,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1188,7 +1380,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetHomeSliderDetails(int SliderId)
@@ -1199,7 +1393,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public void DeleteHomeSlider(DataAccessEntities Slist)
@@ -1210,7 +1406,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
         //News
@@ -1222,7 +1420,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetNewsDetails(DataAccessEntities Slist)
@@ -1233,7 +1433,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1245,7 +1447,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetSeminarEntries(DataAccessEntities slist)
@@ -1256,7 +1460,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1269,7 +1475,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetSpecialityClinicOPD()
@@ -1280,7 +1488,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1292,7 +1502,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1304,7 +1516,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1316,7 +1530,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }        
         //Home testimonial
@@ -1328,7 +1544,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetDoctorDetailsForPage(DataAccessEntities Slist)
@@ -1339,7 +1557,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1351,7 +1571,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1363,7 +1585,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1376,7 +1600,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1389,7 +1615,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetCountry()
@@ -1400,7 +1628,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1413,7 +1643,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetJaslokTimesById(int id)
@@ -1424,7 +1656,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetJaslokTimesDetails(DataAccessEntities Slist)
@@ -1435,12 +1669,23 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataTable GetDoctorScheduleDays(int DoctorId, int SpecialityId)
         {
-            return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "GetDoctorScheduleDays", new object[] { DoctorId, SpecialityId }).Tables[0];
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "GetDoctorScheduleDays", new object[] { DoctorId, SpecialityId }).Tables[0];
+            }
+            catch (Exception ex)
+            {
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
+            }
         }
 
         public string AddJaslokTimes(DataAccessEntities Slist)
@@ -1451,7 +1696,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1465,7 +1712,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
         }
 
@@ -1479,7 +1728,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
         }
 
@@ -1494,7 +1745,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1507,7 +1760,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1522,7 +1777,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1535,7 +1792,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
         public void SaveComplaint(DataAccessEntities Slist)
@@ -1546,7 +1805,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
         public void SaveQuickEnquiry(DataAccessEntities Slist)
@@ -1557,7 +1818,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
         public void SaveEstimate(DataAccessEntities Slist)
@@ -1568,7 +1831,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
 
@@ -1581,7 +1846,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1595,7 +1862,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1611,7 +1880,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1626,7 +1897,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1642,7 +1915,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1656,7 +1931,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1672,7 +1949,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return 0;
             }
             
         }
@@ -1686,7 +1965,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1700,7 +1981,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1714,7 +1997,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1728,7 +2013,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1741,7 +2028,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1753,7 +2042,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetDoctorWiseOpd()
@@ -1764,7 +2055,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1776,7 +2069,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1788,7 +2083,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public bool IstimeSlotEmpty(DateTime SelectedTimeSlot, int DoctorId, int SpecialtyId)
@@ -1799,7 +2096,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return false;
             }
             
         }
@@ -1811,7 +2110,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet GetFormsEmailDetail(int Id)
@@ -1822,7 +2123,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
         public DataSet DeleteFormsEmailDetail(int Id)
@@ -1833,7 +2136,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1846,7 +2151,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+               
             }
         }
 
@@ -1859,7 +2166,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1871,7 +2180,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
 
@@ -1883,7 +2194,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                
             }
         }
 
@@ -1895,7 +2208,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return false;
             }
            
         }
@@ -1908,7 +2223,9 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logging objlog = new Logging();
+                objlog.LogError(ex);
+                return null;
             }
         }
     }

@@ -35,7 +35,8 @@ public partial class JSControls_MiddleContent_NewsListing : System.Web.UI.UserCo
         }
         catch (Exception ex)
         {
-            //Response.Write("Total Records : " + ex.ToString());
+            Logging objlog = new Logging();
+            objlog.LogError(ex);
         }
     }
     protected void rptNews_ItemDataBound(object sender, RepeaterItemEventArgs e)
