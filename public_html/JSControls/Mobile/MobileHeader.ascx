@@ -84,8 +84,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">1800 221
-                            800</span>
+                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
                     </div>
                 </div>
             </div>
@@ -134,8 +133,8 @@
                                 <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
                         </li>
                         <li>
-                            <button class="btn btn_number">
-                                <img src="/images/car.png" class="" />022-2354 2354</button>
+                            <literal class="btn btn_number">
+                                <img src="/images/car.png" class="" />022-2354 2354</literal>
                         </li>
                         <li>
                             <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>

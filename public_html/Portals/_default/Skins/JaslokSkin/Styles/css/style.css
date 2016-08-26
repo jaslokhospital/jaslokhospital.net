@@ -2116,7 +2116,7 @@ ul.opdlisting li a {
     max-height: 111px;
 }
 .circle-testy{/*border: solid 5px #fbf0de;*/ max-width:150px; margin-top: -10px;}
-.facility_slidr { max-width: 351px }
+.facility_slidr { max-width: 351px !important; }
 .modal-backdrop { z-index: 0!important }
 #dnn_ctr430_ManagePage_redPageContent {
     height: auto;
