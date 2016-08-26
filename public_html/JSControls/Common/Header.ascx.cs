@@ -191,11 +191,15 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 lblOTPError.CssClass = "errorText";
                 lblOTPError.Text = "Mobile number is already verified.";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
             }
             else if (!_IsExpired)
             {
                 lblOTPError.CssClass = "errorText";
                 lblOTPError.Text = "Your last verification code is not yet expire.";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
             }
             else
             {
@@ -204,12 +208,16 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 CommonFn.SendSMS(oUser.Profile.GetPropertyValue("PhoneNumber").Replace("-", string.Empty), "Your one time verification code is: " + lsOtp + ".This code is valid for next 10mins only.");
                 lblOTPError.CssClass = "successText";
                 lblOTPError.Text = "OTP code successfully sent to mobile. Please enter OTP code and click on submit.";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
             }
         }
         else
         {
             lblOTPError.CssClass = "errorText";
             lblOTPError.Text = "No user is registered with above mobile number";
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divOTPVerification.Attributes.Add("style", "display:block;");
         }
     }
     protected string Messege = string.Empty;
