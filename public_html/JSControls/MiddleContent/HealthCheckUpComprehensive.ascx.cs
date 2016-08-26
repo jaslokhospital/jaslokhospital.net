@@ -17,9 +17,11 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
     public DataAccessLogic objDALogic = new DataAccessLogic();
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     UserInfo user = UserController.Instance.GetCurrentUserInfo();
+    bool check = false;
     protected void Page_Load(object sender, EventArgs e)
     {
-        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+        if (!String.IsNullOrEmpty(user.Username))
+            check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
         if (check == false && user.Username != "host")
         {
             ContentPane.Visible = false;

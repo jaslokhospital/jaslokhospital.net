@@ -17,10 +17,11 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
     UserInfo user = UserController.Instance.GetCurrentUserInfo();
 
     DataSet ds = new DataSet();
-
+    bool check = false;
     protected void Page_Load(object sender, EventArgs e)
     {
-        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+        if (!string.IsNullOrEmpty(user.Username))
+            check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
 
         if (check == false && user.Username != "host")
         {
