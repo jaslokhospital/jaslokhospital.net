@@ -216,8 +216,8 @@
                         </ul>
                     </div>
                     <div class="pull-right header_top  pulls">
-                        <button class="btn btn_number">
-                            <img src="/images/car.png" class="" />022-2354 2354</button>
+                        <literal class="btn btn_number">
+                            <img src="/images/car.png" class="" />022-2354 2354</literal>
                         <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
                     </div>
                     <div class="clearfix"></div>

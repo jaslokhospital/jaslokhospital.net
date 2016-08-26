@@ -191,11 +191,15 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 lblOTPError.CssClass = "errorText";
                 lblOTPError.Text = "Mobile number is already verified.";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
             }
             else if (!_IsExpired)
             {
                 lblOTPError.CssClass = "errorText";
                 lblOTPError.Text = "Your last verification code is not yet expire.";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
             }
             else
             {
@@ -204,12 +208,16 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 CommonFn.SendSMS(oUser.Profile.GetPropertyValue("PhoneNumber").Replace("-", string.Empty), "Your one time verification code is: " + lsOtp + ".This code is valid for next 10mins only.");
                 lblOTPError.CssClass = "successText";
                 lblOTPError.Text = "OTP code successfully sent to mobile. Please enter OTP code and click on submit.";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
             }
         }
         else
         {
             lblOTPError.CssClass = "errorText";
             lblOTPError.Text = "No user is registered with above mobile number";
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divOTPVerification.Attributes.Add("style", "display:block;");
         }
     }
     protected string Messege = string.Empty;
@@ -604,11 +612,15 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 lblForgotPassError.Text = "Password has been sent to your email address.";
                 lblForgotPassError.CssClass = "successText";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
             }
             else
             {
                 lblForgotPassError.Text = "Problem in sending email";
                 lblForgotPassError.CssClass = "errorText";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
             }
             txtForgotPasswordUserName.Text = "";
             //lblGeneratedPassword.Text = lsPassword;
@@ -682,24 +694,24 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 ddlCountryCode.SelectedIndex = 0;
                 try
                 {
-                    #region CSV Generation Code
+                    //#region CSV Generation Code
 
-                    DataTable dtUser = new DataTable();
-                    dtUser.Columns.Add("UserName", typeof(string));
-                    dtUser.Columns.Add("Email", typeof(string));
-                    dtUser.Columns.Add("Password", typeof(string));
-                    dtUser.Rows.Add(lsUserName, oUser.Email, lsPassword);
-                    string PortalName = PortalSettings.Current.HomeDirectory;
-                    if (!Directory.Exists(Server.MapPath(PortalName + "CsvFile")))
-                        Directory.CreateDirectory(Server.MapPath(PortalName + "CsvFile"));
-                    string virtualFolder = PortalName + "CsvFile/";
-                    string FilePath = virtualFolder + "sample.csv";
-                    if (File.Exists(Server.MapPath(FilePath)))
-                        File.Delete(Server.MapPath(FilePath));
+                    //DataTable dtUser = new DataTable();
+                    //dtUser.Columns.Add("UserName", typeof(string));
+                    //dtUser.Columns.Add("Email", typeof(string));
+                    //dtUser.Columns.Add("Password", typeof(string));
+                    //dtUser.Rows.Add(lsUserName, oUser.Email, lsPassword);
+                    //string PortalName = PortalSettings.Current.HomeDirectory;
+                    //if (!Directory.Exists(Server.MapPath(PortalName + "CsvFile")))
+                    //    Directory.CreateDirectory(Server.MapPath(PortalName + "CsvFile"));
+                    //string virtualFolder = PortalName + "CsvFile/";
+                    //string FilePath = virtualFolder + "sample.csv";
+                    //if (File.Exists(Server.MapPath(FilePath)))
+                    //    File.Delete(Server.MapPath(FilePath));
 
-                    CreateCSVFile(dtUser, Server.MapPath(FilePath));
+                    //CreateCSVFile(dtUser, Server.MapPath(FilePath));
 
-                    #endregion
+                    //#endregion
                 }
                 catch (Exception ex)
                 {
@@ -733,12 +745,16 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             {
                 lblSignUp.CssClass = "errorText";
                 lblSignUp.Text = "Problem in creating user. Please check all fields";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divSignUp.Attributes.Add("style", "display:block;");
             }
         }
         else
         {
             lblSignUp.CssClass = "errorText";
             lblSignUp.Text = "User with same mobile number already exists.";
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divSignUp.Attributes.Add("style", "display:block;");
         }
     }
 
@@ -770,18 +786,26 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 {
                     lblOTPError.CssClass = "errorText";
                     lblOTPError.Text = "No user is registered with above mobile number";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divOTPVerification.Attributes.Add("style", "display:block;");
                     break;
                 }
                 else if (!lbIsVerified)
                 {
                     lblOTPError.CssClass = "errorText";
                     lblOTPError.Text = "Invalid OTP code";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divOTPVerification.Attributes.Add("style", "display:block;");
                     break;
                 }
                 else if (lbIsOtpExpired)
                 {
                     lblOTPError.CssClass = "errorText";
                     lblOTPError.Text = "OTP code is expired";
+
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divOTPVerification.Attributes.Add("style", "display:block;");
+
                     break;
                 }
                 _returnValue = lbIsOtpExpired;

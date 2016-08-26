@@ -21,11 +21,13 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     UserInfo user = UserController.Instance.GetCurrentUserInfo();
     public static DataSet ds = new DataSet();
-
+    bool check = false;
     protected void Page_Load(object sender, EventArgs e)
     {
         contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
-        bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+        if (!String.IsNullOrEmpty(user.Username))
+            check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+
         if (check == false && user.Username != "host")
         {
             divContent.Visible = false;

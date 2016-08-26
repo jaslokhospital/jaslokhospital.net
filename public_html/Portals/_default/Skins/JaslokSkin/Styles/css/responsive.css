@@ -1484,11 +1484,14 @@ DOWNLOADCOPYRETURN*/
      .left_part {padding-top: 1%;}
     .feedback p { margin-bottom:0px;}
      .header_top .btn_number {margin-right:1px; }
+    .mgt-main-info { width: 73% !important; }
+    .mgt-main-space {width: 27% !important;}
 }
 @media (max-width:480px) {
     .right_part label {margin-bottom:0px;}
     .h3headernew {margin-left:0px; font-size:23px;}
     .specialtyBorder {margin-top:20px;}
+    .finddoc_left_form {margin-top:2px !important}
 }
 @media (max-width:360px) {
     .demo { margin-bottom: -46px; margin-top: 5px;}
