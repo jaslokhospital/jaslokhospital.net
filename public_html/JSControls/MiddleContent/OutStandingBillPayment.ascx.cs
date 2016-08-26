@@ -15,11 +15,14 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
     UserInfo user = UserController.Instance.GetCurrentUserInfo();
     public BusinessLogic objBusinessLogic = new BusinessLogic();
     // user = UserController.GetUserByName(user.Username);
+    bool check = false;
     protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
-            bool check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+            if (!String.IsNullOrEmpty(user.Username))
+                check = objBusinessLogic.IsExistMrNo(user.Username.Trim());
+
             if (check == false && user.Username != "host")
             {
                 ContentPane.Visible = false;
