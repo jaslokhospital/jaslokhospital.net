@@ -319,7 +319,7 @@
                     <h4>
                         <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
                 </div>
-                <div class="modal-body" style="padding: 40px 50px;">
+                <div class="modal-body" style="padding: 30px 40px;">
                     <div role="form">
                         <div id="divLoginForm" runat="server">
                             <div class="form-group">
@@ -362,7 +362,7 @@
                         </div>
                         <div id="divOTPVerification" runat="server" style="display: none;">
                             <div class="row">
-                                <div style="width: 16%; padding-right: 0px;" class="col-md-3">
+                                <div class="col-md-3 col-xs-5">
                                     <div class="form-group">
                                         <label for="psw">
                                             Mobile No</label>
@@ -371,9 +371,9 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-                                <div class="col-md-10" style="padding-left: 5px;">
+                                <div class="col-md-10 col-xs-7">
                                     <div class="form-group">
-                                        <label style="padding-bottom: 20px;">
+                                        <label style="padding-bottom: 17px;">
                                         </label>
                                         <asp:TextBox ID="txtOTPPhoneNumber" onkeypress="return Numeric(event);" MaxLength="10"
                                             runat="server" class="form-control"></asp:TextBox>
