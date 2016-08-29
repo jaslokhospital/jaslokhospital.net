@@ -947,13 +947,13 @@ ul {
     font-size: 26px;
     width: 60%;
 }
-.team-grids a:hover .captn {
+/*.team-grids a:hover .captn {
     width: 96%;
     bottom: 0;
     padding: 40% 10%;
     right: 0;
     left: 0;
-}
+}*/
 .captn button.know_more,
 .captn span.know_more {
     background: #fff;
