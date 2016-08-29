@@ -73,8 +73,8 @@
                         <img src="/images/quick-connect-icon3.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">AMBULANCE NUMBER</span> <span class="content-line">022 6657
-                            3010</span>
+                        <span class="email-line">AMBULANCE NUMBER</span>  <a href="tel:02266573010"> <span class="content-line">022 6657
+                            3010</span></a>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
+                        <span class="email-line">EMERGENCY NUMBER</span>  <a href="tel:02223542354"> <span class="content-line">022-2354 2354</span></a>
                     </div>
                 </div>
             </div>
@@ -95,8 +95,7 @@
                             <img src="/images/blood-bank-icon.png" alt="quick-connect-icon" />
                         </div>
                         <div class="icon-content">
-                            <span class="email-line">BLOOD BANK (24x7)</span> <span class="content-line">+91-022-
-                                66573434</span>
+                            <span class="email-line">BLOOD BANK (24x7)</span> <a href="tel:+9102266573434"> <span class="content-line">+91-022-66573434</span></a>
                         </div>
                     </a>
                 </div>
@@ -134,7 +133,7 @@
                         </li>
                         <li>
                             <literal class="btn btn_number">
-                                <img src="/images/car.png" class="" />022-2354 2354</literal>
+                                <img src="/images/car.png" class="" /><span><a href="tel:02223542354">022-2354 2354</a></span></literal>
                         </li>
                         <li>
                             <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
