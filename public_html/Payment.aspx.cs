@@ -17,7 +17,9 @@ public partial class Payment : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //Need to replace the last part of URL("your-vanityUrlPart") with your Testing/Live URL
-        formPostUrl = "https://sandbox.citruspay.com/sslperf/jaslokhospital";
+
+        formPostUrl = "/comingsoon";
+        //formPostUrl = "https://sandbox.citruspay.com/sslperf/jaslokhospital";
         //Need to change with your Secret Key
         string secret_key = "66fc8c3cca181b8954338bb5d5bd0cbb18b99b6d";
         //Need to change with your Vanity URL Key from the citrus panel
