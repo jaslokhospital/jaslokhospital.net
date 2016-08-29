@@ -124,18 +124,9 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
             ds = (DataSet)objBusinessLogic.GetBannerPageContentDetail(objDAEntities.PageTypeId);
             if (ds.Tables[1].Rows.Count > 0)
             {
-                if (ds.Tables[1].Rows[0]["Content"].ToString() != String.Empty)
-                    divScopeContent.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
-                else
-                    divScopeContent.Style.Add("display", "none");
-
                 p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
                 p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();
                 p.Description = ds.Tables[1].Rows[0]["PageDescription"].ToString();
-            }
-            else
-            {
-                divScopeContent.Style.Add("display", "none");
             }
         }
         catch (Exception ex)
@@ -230,7 +221,11 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         {
             UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
            // DataSet dsUsername = objBusinessLogic.IsExistMRNumber(objuser.Username);
-            bool check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+            bool check = false;
+            if (!string.IsNullOrEmpty(objuser.Username))
+            {
+                check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+            }
             //int count=dsUsername.Tables[0].Rows.Count;
             //if (dsUsername.Tables[0].Rows.Count > 0)
             //{

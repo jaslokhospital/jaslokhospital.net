@@ -43,7 +43,7 @@
                             </ul>
                         </div>
 
-                        <div class="hidden-lg hidden-md hidden-sm visible-xs">
+                        <div class="hidden-lg hidden-md hidden-sm">
                             <div class="socialdiv colored">
                                 <ul>
                                     <li><a class="" href="http://twitter.com/jaslokhospital" target="_blank"><img src="/images/tw.png" alt="twitter" title="twitter" class="img-responsive" /></a></li>
@@ -71,10 +71,10 @@
                             <li class="border"><a href="/about-us">About us </a></li>
                             <li class="border"><a href="/complaint">Complaint </a></li>
                             <li class="border"><a href="http://webmail.jaslokhospital.net/appsuite/signin">Webmail</a></li>
-                            <li class="border"><a href="/photo-gallery"> Media Centre </a></li>
+                            <li class="border footer-links-margin-mobile"><a href="/photo-gallery"> Media Centre </a></li>
                             <li class="border"><a href="/career">Career</a></li>
                             <li class="border"><a href="/contact-us">Contact us </a></li>
-                            <li class="border"><a href="/patients/quick-enquiry">Send a Query </a></li>
+                            <li class="border footer-links-margin-mobile"><a href="/patients/quick-enquiry">Send a Query </a></li>
                             <li class="border"><a href="/privacy-policy">Privacy Policy </a></li>
                             <li class="border"><a href="/sitemap"> Site Map</a></li>
                         </ul>

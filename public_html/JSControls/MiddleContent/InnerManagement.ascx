@@ -32,7 +32,7 @@
     Front row : Left to Right – Dr. Satyadeo Malik (Director Clinical Operation), Regina Raj (Head Quality), Dr. Tarang Gianchandani (CEO), Shatrujeet Rai (COO), Veepasha Kulkarni (Head ER), Sabina Sawliwala (Head Stores and Procurement).
 </p>
 <p>
-    Back row : Left to Right – George Alex (CMO), Viloo Williams (CIO), Jitendra Haryan (CFO)
+    Back row : Left to Right – George Alex (CMO), Viloo Williams (CIO), Jitendra Haryan (CFO), Mrs. Bobby Ramesh (Director Nursing Service)
 </p></div>
 <div  class="dicMobManagementPics">
    Front row – Left to Right:
@@ -50,7 +50,6 @@
         <li>George Alex (CMO)</li>
         <li>Viloo Williams (CIO)</li>
         <li>Jitendra Haryan (CFO)</li>
-        <li>Mrs. Bobby Ramesh (Director Nursing Service)</li>
       
     </ul>
 

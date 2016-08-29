@@ -462,7 +462,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
                     UserInfo objUser = new UserInfo();
                     //objUser.Username = ds.Tables[0].Rows[0]["Username"].ToString();
-                    // objUser.Username = txtLoginUsername.Text.Trim();
+                    objUser.Username = txtLoginUsername.Text.Trim();
                     UserMembership objMembership = new UserMembership(objUser);
                     objMembership.Username = objUser.Username.Trim();
                     objMembership.Password = txtLoginPassword.Text;
@@ -691,7 +691,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         }
         else
         {
-            Response.Redirect("/");
+            //Response.Redirect("/");
             lblForgotPassError.CssClass = "errorText";
             lblForgotPassError.Text = "Username does not exist.";
             txtForgotPasswordUserName.Text = "";

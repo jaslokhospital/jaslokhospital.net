@@ -77,6 +77,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
             objDAEntities.dMobileNo = txtMob.Text;
             objDAEntities.dPhno = txtPhn.Text;
             objDAEntities.dEmailId = txtEmail.Text;
+            objDAEntities.ConsultingCharge = Convert.ToInt32(txtConsultingCharge.Text);
+            objDAEntities.FollowUpCharge = Convert.ToInt32(txtFollowupCharge.Text);
 
             for (int i = 0; i < listspecialitySel.Items.Count; i++)
             {
@@ -100,6 +102,7 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
                 lblMessage.Text = "Doctor updated successfully!!!";
             }
             Cache.Remove(AppGlobal.SpecialityDoctorCache);
+            Cache.Remove(AppGlobal.DoctorsNameCache);
 
             ViewState["optype"] = "INSERT";
             BindDoctor(objDAEntities);
@@ -164,6 +167,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
             redAwards.Content = Convert.ToString(ds.Tables[0].Rows[0]["Awards"]);
             hdnImagePath.Value = Convert.ToString(ds.Tables[0].Rows[0]["ImageUrl"]);
             listofuploadedfiles.Text = hdnImagePath.Value.Replace("/Content/Doctor/", "");
+            txtConsultingCharge.Text = Convert.ToString(ds.Tables[0].Rows[0]["ConsultingCharge"]);	
+            txtFollowupCharge.Text = Convert.ToString(ds.Tables[0].Rows[0]["FollowUpCharge"]);
 
             listspecialitySel.DataSource = ds.Tables[2];
             listspecialitySel.DataValueField = "SpecialityId";
@@ -194,6 +199,7 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
             listspecialitySel.ClearSelection();
             Clear();
             Cache.Remove(AppGlobal.SpecialityDoctorCache);
+            Cache.Remove(AppGlobal.DoctorsNameCache);
 
         }
         BindDoctor(objDAEntities);
@@ -214,6 +220,8 @@ public partial class DesktopModules_JaslokAdmin_ManageDoctor : PortalModuleBase
         listspecialityAvl.ClearSelection();
         listspecialitySel.Items.Clear();
         hdnImagePath.Value = null;
+        txtConsultingCharge.Text = null;	
+        txtFollowupCharge.Text = null;
     }
 
     protected void btnCancel_Click(object sender, EventArgs e)

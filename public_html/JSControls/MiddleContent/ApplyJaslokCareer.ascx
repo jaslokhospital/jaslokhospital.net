@@ -2,7 +2,20 @@
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 
-    
+<%--<script lang="javascript" type="text/javascript" src="/DesktopModules/JaslokCareer/Scripts/valjavavalidate.js"></script>--%>
+    <link href="~/css/jdpicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.jdpicker.js"></script>
+ <%--   <script src="/DesktopModules/JaslokCareer/Scripts/ValidateCommon.js"></script>--%>
+ <script>
+     function getFileData(myFile) {
+         debugger;
+         var file = myFile.files[0];
+         var filename = file.name;
+         var lbl = document.getElementById("<%= listofuploadedResume.ClientID %>");
+         lbl.innerHTML = filename;
+     }
+</script>   
 <style type="text/css">
     .table trHeader {
     background-color: #EBF2F6!important;
@@ -33,9 +46,9 @@
     <div class="right_part">
         
         <div style="text-align:right !important;"><asp:Button ID="btnBack" runat="server" Text="Back" class="btn-primary2-back" OnClick="btnBack_Click" />  </div> <br />
-        <asp:Label ID="lblMessage" runat="server"></asp:Label>
-        <div class="form-horizontal">
 
+        <div class="form-horizontal">
+             <asp:Label ID="lblMessage" runat="server"></asp:Label>
             <div class="form-group">
                 <label class="control-label col-xs-3" for="PageTitle">Function Applied For:<span style="color: red">*</span></label>
                 <div class="col-xs-9">
@@ -80,7 +93,7 @@
                 <label class="control-label col-xs-3" for="redPageContent">Date Of Birth:<span style="color: red">*</span></label>
                 <div class="col-xs-9">                   
                     <telerik:RadDatePicker ID="rdpDOB" runat="server" class="form-control"></telerik:RadDatePicker>
-                   <asp:TextBox ID="txtDOB" runat="server" class="datePickerTextBox" Visible="false"></asp:TextBox>
+                   <asp:TextBox ID="txtDOB" runat="server" class="datePickerTextBoxAJC" Visible="false"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter DOB" ControlToValidate="rdpDOB"
                             Display="Dynamic" ValidationGroup="career" ForeColor="Red"></asp:RequiredFieldValidator>
                     <asp:CompareValidator ControlToValidate="rdpDOB" Display="Dynamic" style="font-size:12px; color: red;"
@@ -616,7 +629,7 @@
 
             </div>
             <div class="form-group">
-                <label class="control-label col-xs-3" for="redPageContent">Locatiopn:</label>
+                <label class="control-label col-xs-3" for="redPageContent">Location:</label>
                 <div class="col-xs-9">                   
                     <asp:TextBox ID="txtLocation" runat="server" class="form-control"></asp:TextBox>
                 </div>
@@ -659,9 +672,9 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ControlToValidate="rdpFromDate"
                             Display="Dynamic"  ValidationGroup="careerWorkExp" ForeColor="Red"></asp:RequiredFieldValidator>
                                      
-                    <asp:TextBox ID="txtFromDate" runat="server" class="datePickerTextBox" Visible="false"></asp:TextBox>
+                    <asp:TextBox ID="txtFromDate" runat="server" class="datePickerTextBoxAJC" Visible="false"></asp:TextBox>
                     
-                    <asp:TextBox ID="txtToDate" runat="server" class="datePickerTextBox" Visible="false"></asp:TextBox>
+                    <asp:TextBox ID="txtToDate" runat="server" class="datePickerTextBoxAJC" Visible="false"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;                    
                     <asp:Label ID="lblToDate" runat="server" Text="To Date" Font-Bold="true"></asp:Label><span style="color: red">*</span>
                     <telerik:RadDatePicker ID="rdpToDate" runat="server" class="form-control"></telerik:RadDatePicker> 
@@ -739,8 +752,16 @@
              <div class="form-group">
                 <label class="control-label col-xs-3" for="redPageContent">Upload CV:</label>
                 <div class="col-xs-9">                   
-                    <input id="Myfile" type="file" runat="server" name="Myfile" accept="image/jpeg,image/png,application/pdf,doc" data-max-size="20971520" data-buttontext="Upload..">
-                </div>
+                    <%--<input id="Myfile" type="file" runat="server" name="Myfile" accept="image/jpeg,image/png,application/pdf,doc" data-max-size="20971520" data-buttontext="Upload..">--%>
+               
+                     <asp:FileUpload ID="UploadResume" runat="server" onchange="getFileData(this);" Style="color: transparent;" />
+                    <asp:Label ID="listofuploadedResume" runat="server" />
+                    <asp:RequiredFieldValidator CssClass="small" ID="rfvImgupload" runat="server" ErrorMessage="Please Upload CV" ControlToValidate="UploadResume"
+                        Display="Dynamic" ValidationGroup="career" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator CssClass="small" ID="rexp" runat="server" ControlToValidate="UploadResume" ForeColor="Red" ValidationGroup="career" ErrorMessage="Only .gif, .jpg,.doc,.pdf .png and .jpeg"
+                        ValidationExpression="(.*\.([Gg][Ii][Ff])|.*\.([Jj][Pp][Gg])|.*\.([Dd][Oo][Cc][Xx])|.*\.([Dd][Oo][Cc])|.*\.([pP][nN][gG])|.*\.([Jj][Pp][Ee][Gg])|.*\.([pP][dD][fF])$)"></asp:RegularExpressionValidator>
+               
+                     </div>
 
             </div>
             <div class="form-group">
@@ -752,7 +773,7 @@
             </div>
             <br />
     <br />
-    <b>Declaration  :</b>
+   <%-- <b>Declaration  :</b>--%>
             <div class="form-group">
                 <label class="control-label col-xs-3" for="redPageContent">Declaration:</label>
                 <div class="col-xs-9">                   
@@ -771,12 +792,7 @@
                 </div>
                  
             </div>
-            <div class="form-group">
-                <label class="control-label col-xs-3" for="redPageContent"></label>
-                <div class="col-xs-9">                                       
-                </div>
-                 
-            </div>
+            
          
         </div>
     </div>
@@ -785,7 +801,14 @@
 
 <script type="text/javascript">
 
-    
+    //$(document).ready(function () {
+    //    $(".datePickerTextBoxAJC").jdPicker({
+    //        date_format: "dd/MM/YYYY"
+    //    });
+    //});
+
+
+
     function CopyAddress(strflag) {
         if (strflag == true)
             document.getElementById("<%= txtPermanentAddress.ClientID %>").value = document.getElementById("<%= txtCurrentAddress.ClientID %>").value;
@@ -793,7 +816,7 @@
             document.getElementById("<%= txtPermanentAddress.ClientID %>").value = "";
 
     }
-    
+
     function ShowFloorPlan() {
         debugger;
         if (document.getElementById("<%=img1.ClientID %>").src.includes("plus.gif") == true) {

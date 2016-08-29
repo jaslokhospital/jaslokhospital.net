@@ -23,6 +23,11 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
             contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
             BindPageDetail(131);
             //h3header.InnerText = "Complaint Form";
+            if (Request.QueryString["name"] != null && Request.QueryString["email"] != null)
+            {
+                txtName.Text = Convert.ToString(Request.QueryString["name"]);
+                txtEmail.Text = Convert.ToString(Request.QueryString["email"]); 
+            }
         }
     }
     public void BindPageDetail(int id)

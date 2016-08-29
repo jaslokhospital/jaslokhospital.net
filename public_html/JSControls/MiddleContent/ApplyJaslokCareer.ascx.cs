@@ -18,9 +18,10 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     string pathForSaving = "";
     int JobId = 0;
-
+    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+        rdpDOB.MaxDate = DateTime.Now;
         CompareValidator2.ValueToCompare = DateTime.Now.ToShortDateString();
 
         if (Request.QueryString["JobId"] != null)
@@ -63,7 +64,7 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
                 txtFunction.ReadOnly = true;
                 txtPost.ReadOnly = true;
             }
-            
+
         }
         catch (Exception ex)
         {
@@ -76,7 +77,6 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
     {
         try
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString);
             SqlDataAdapter da = new SqlDataAdapter("JH_SP_getNationality", con);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataSet ds = new DataSet();
@@ -162,7 +162,6 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
     {
         try
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString);
             SqlDataAdapter da = new SqlDataAdapter("JH_SP_getQualification", con);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataSet ds = new DataSet();
@@ -276,28 +275,59 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
     public void Upload()
     {
 
-        HttpPostedFile MyFile = Request.Files["MyFile"];
+        ////HttpPostedFile MyFile = Request.Files["MyFile"];
+        //string fileName = Path.GetFileName(UploadResume.PostedFile.FileName);
         ViewState["FilePath"] = "";
 
-        for (int i = 0; i < Request.Files.Count; i++)
+        //for (int i = 0; i < Request.Files.Count; i++)
+        //{
+        //    var myFile = Request.Files[i];
+        //    if (myFile != null && myFile.ContentLength != 0)
+        //    {
+        //        pathForSaving = Server.MapPath("~/uploadedfiles/");
+        //        string pathForSavingFile = "/uploadedfiles/";
+        //        try
+        //        {
+        //            string strFileNameOnly = CommonFn.GetFileName(myFile.FileName);
+        //            ViewState["FilePath"] = Path.Combine(pathForSavingFile, strFileNameOnly);
+        //            string strFileName= Path.Combine(pathForSavingFile, strFileNameOnly);
+        //            MyFile = Request.Files[CommonFn.GetFileName(myFile.FileName)];
+        //            MyFile.SaveAs(Path.Combine(pathForSaving, strFileName));
+
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+
+        //        }
+
+        //    }
+        //}
+        string strDBImagePath = string.Empty;
+        try
         {
-            var myFile = Request.Files[i];
-            if (myFile != null && myFile.ContentLength != 0)
+            if (UploadResume.HasFile)
             {
-                pathForSaving = Server.MapPath("~/UploadedFiles/");
-                string pathForSavingFile = "/UploadedFiles/";
-                try
-                {    
-                    ViewState["FilePath"] = Path.Combine(pathForSavingFile, myFile.FileName);
-                    myFile.SaveAs(Path.Combine(pathForSaving, myFile.FileName));
+                string strServerPath = Server.MapPath(CommonFn.Image_Save_Path);
+                string strSaveImagePath = string.Empty;
+                string fileName = Path.GetFileName(UploadResume.PostedFile.FileName);
 
-                }
-                catch (Exception ex)
-                {
+                string FolderName = CommonFn.UploadedResumeFolder;
 
-                }
+                string strFileNameOnly = CommonFn.GetFileName(fileName);
 
+                strSaveImagePath = strServerPath + FolderName + "\\" + strFileNameOnly;
+
+                UploadResume.SaveAs(strSaveImagePath);
+
+                strDBImagePath = CommonFn.DbSave + CommonFn.DbUploadedResume;
+                strDBImagePath = strDBImagePath + strFileNameOnly;
+
+                ViewState["FilePath"] = strDBImagePath;
             }
+        }
+        catch (Exception ex)
+        {
         }
     }
 
@@ -388,17 +418,24 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
                         dsnew = null;
 
                         objDAEntities.ApplicantID = objDAEntities.ApplicantID;
-                        objDAEntities.CompanyName = dt.Rows[i]["CompanyName"].ToString();
-                        objDAEntities.empDesignation = dt.Rows[i]["empDesignation"].ToString();
-                        objDAEntities.CompanyTurnOver = dt.Rows[i]["CompanyTurnOver"].ToString();
-                        objDAEntities.NoOfEmployee = Convert.ToInt32(dt.Rows[i]["NoOfEmployee"]);
-                        objDAEntities.JobResponsibilities = dt.Rows[i]["JobResponsibilities"].ToString();
-                        objDAEntities.Location = dt.Rows[i]["Location"].ToString();
-                        objDAEntities.FromDate = dt.Rows[i]["FromDate"].ToString();
-                        objDAEntities.ToDate = dt.Rows[i]["ToDate"].ToString();
-                        objDAEntities.Reporting = dt.Rows[i]["Reporting"].ToString();
-                        objDAEntities.SalaryInlacs = dt.Rows[i]["SalaryInlacs"].ToString();
-                        objDAEntities.ReasonForLeaving = dt.Rows[i]["ReasonForLeaving"].ToString();
+                        objDAEntities.CompanyName = Convert.ToString(dt.Rows[i]["CompanyName"]);
+                        objDAEntities.empDesignation = Convert.ToString(dt.Rows[i]["empDesignation"]);
+                        objDAEntities.CompanyTurnOver = Convert.ToString(dt.Rows[i]["CompanyTurnOver"]);
+                        if (!string.IsNullOrEmpty(Convert.ToString(dt.Rows[i]["NoOfEmployee"])))
+                        {
+                            objDAEntities.NoOfEmployee = Convert.ToInt32(dt.Rows[i]["NoOfEmployee"]);
+                        }
+                        objDAEntities.JobResponsibilities = Convert.ToString(dt.Rows[i]["JobResponsibilities"]);
+                        objDAEntities.Location = Convert.ToString(dt.Rows[i]["Location"].ToString());
+                        objDAEntities.FromDate = Convert.ToString(dt.Rows[i]["FromDate"]);
+                        objDAEntities.ToDate = Convert.ToString(dt.Rows[i]["ToDate"]);
+                        objDAEntities.Reporting = Convert.ToString(dt.Rows[i]["Reporting"]);
+                        if (!string.IsNullOrEmpty(Convert.ToString(dt.Rows[i]["SalaryInlacs"])))
+                        {
+                            objDAEntities.SalaryInlacs = Convert.ToDouble(dt.Rows[i]["SalaryInlacs"]);
+                        }
+                        // objDAEntities.SalaryInlacs =(!string.IsNullOrEmpty(Convert.ToString(dt.Rows[i]["SalaryInlacs"])))?Convert.ToDouble(dt.Rows[i]["SalaryInlacs"]):;
+                        objDAEntities.ReasonForLeaving = Convert.ToString(dt.Rows[i]["ReasonForLeaving"]);
 
                         string msg = objBusinessLogic.SaveWorkExpByApplicant(objDAEntities);
 
@@ -407,7 +444,7 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
                 }
 
 
-                
+
                 // Add Qualification
 
                 for (int i = 1; i <= 5; i++)
@@ -429,10 +466,10 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
 
                             string strSpecialization = "txtSpecialization" + i.ToString();
                             TextBox txtSpecialization = (TextBox)this.FindControl(strSpecialization);
-                            
+
                             string strGrade = "txtGrade" + i.ToString();
                             TextBox txtGrade = (TextBox)this.FindControl(strGrade);
-                            
+
 
                             objDAEntities.ApplicantID = objDAEntities.ApplicantID;
                             objDAEntities.AppQualification = ddlQualID.SelectedItem.Text;
@@ -446,7 +483,7 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
                         }
 
                     }
-                    
+
                 }
 
 
@@ -455,22 +492,25 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
 
             JaslokMailer objMailer = new JaslokMailer();
             List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Post", ShortCodeValue = txtPost.Text.Trim()});
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtFirstName.Text.Trim() + " " + (!string.IsNullOrEmpty(txtMiddleName.Text.Trim()) ? (txtMiddleName.Text.Trim() + " ") : string.Empty) + txtLastName.Text.Trim()});
+            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Post", ShortCodeValue = txtPost.Text.Trim() });
+            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtFirstName.Text.Trim() + " " + (!string.IsNullOrEmpty(txtMiddleName.Text.Trim()) ? (txtMiddleName.Text.Trim() + " ") : string.Empty) + txtLastName.Text.Trim() });
             lstParameters.Add(new EmailParaMeters { ShortCodeName = "DateOfBirth", ShortCodeValue = Convert.ToDateTime(rdpDOB.SelectedDate).ToString("dd/MM/yyyy") });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Gender", ShortCodeValue = ddlGender.SelectedValue});
+            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Gender", ShortCodeValue = ddlGender.SelectedValue });
             lstParameters.Add(new EmailParaMeters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
             lstParameters.Add(new EmailParaMeters { ShortCodeName = "Permanent", ShortCodeValue = txtPermanentAddress.Text.Trim() });
 
-            
-            ds = (DataSet)objBusinessLogic.GetFormsEmailDetail((int)AppGlobal.JaslokEmailHandler.ApplyJaslokCareer);
+            DataSet objds = new DataSet();
+            objds = null;
+            objds = (DataSet)objBusinessLogic.GetFormsEmailDetail((int)AppGlobal.JaslokEmailHandler.ApplyJaslokCareer);
 
-            string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-            string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+            string EmailToId = Convert.ToString(objds.Tables[0].Rows[0]["EmailToId"]);
+            string EmailCCId = Convert.ToString(objds.Tables[0].Rows[0]["EmailCCId"]);
 
             objMailer.SendEmail("career", lstParameters, EmailToId, EmailCCId);
+
+            //objMailer.SendEmail("career", lstParameters, AppGlobal.CareerEmailAddress);
             lblMessage.CssClass = "successlbl";
-            lblMessage.Text = "Data Save successfully!!!";
+            lblMessage.Text = "Application saved successfully!!!";
 
             clear();
 
@@ -485,7 +525,7 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
             ViewState["WorkExpData"] = null;
         }
 
-            
+
 
     }
     protected void btnSaveAdd_Click(object sender, EventArgs e)
@@ -507,10 +547,14 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
                         dr["CompanyName"] = txtComapnyName.Text;
                         dr["empDesignation"] = txtDesignation.Text;
                         dr["Location"] = txtLocation.Text;
-                        dr["FromDate"] = Convert.ToDateTime(rdpFromDate.SelectedDate).ToShortDateString().ToString();
-                        dr["ToDate"] = Convert.ToDateTime(rdpToDate.SelectedDate).ToShortDateString().ToString();
+                        dr["FromDate"] = Convert.ToString(Convert.ToDateTime(rdpFromDate.SelectedDate).ToShortDateString());
+                        dr["ToDate"] = Convert.ToString(Convert.ToDateTime(rdpToDate.SelectedDate).ToShortDateString());
                         dr["CompanyTurnOver"] = txtTurnOver.Text;
-                        dr["NoOfEmployee"] = Convert.ToInt32(txtNoOfEmployees.Text);
+                        if (!string.IsNullOrEmpty(txtNoOfEmployees.Text))
+                        {
+                            dr["NoOfEmployee"] = Convert.ToInt32(txtNoOfEmployees.Text);
+                        }
+                        //dr["NoOfEmployee"] = Convert.ToInt32(txtNoOfEmployees.Text);
                         dr["JobResponsibilities"] = txtReason.Text;
                         dr["Reporting"] = txtReporting.Text;
                         dr["SalaryInLacs"] = txtSalPA.Text;
@@ -527,17 +571,20 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
             {
                 dr = dtWork.NewRow();
 
-                dr["CompanyName"] = txtComapnyName.Text;
-                dr["empDesignation"] = txtDesignation.Text;
-                dr["Location"] = txtLocation.Text;
-                dr["FromDate"] = Convert.ToDateTime(rdpFromDate.SelectedDate).ToShortDateString().ToString();
-                dr["ToDate"] = Convert.ToDateTime(rdpToDate.SelectedDate).ToShortDateString().ToString();
-                dr["CompanyTurnOver"] = txtTurnOver.Text;
-                dr["NoOfEmployee"] = Convert.ToInt32(txtNoOfEmployees.Text);
-                dr["JobResponsibilities"] = txtReason.Text;
-                dr["Reporting"] = txtReporting.Text;
-                dr["SalaryInLacs"] = txtSalPA.Text;
-                dr["ReasonForLeaving"] = txtReason.Text;
+                dr["CompanyName"] = Convert.ToString(txtComapnyName.Text);
+                dr["empDesignation"] = Convert.ToString(txtDesignation.Text);
+                dr["Location"] = Convert.ToString(txtLocation.Text);
+                dr["FromDate"] = Convert.ToString(Convert.ToDateTime(rdpFromDate.SelectedDate).ToShortDateString());
+                dr["ToDate"] = Convert.ToString(Convert.ToDateTime(rdpToDate.SelectedDate).ToShortDateString());
+                dr["CompanyTurnOver"] = Convert.ToString(txtTurnOver.Text);
+                if (!string.IsNullOrEmpty(txtNoOfEmployees.Text))
+                {
+                    dr["NoOfEmployee"] = Convert.ToInt32(txtNoOfEmployees.Text);
+                }
+                dr["JobResponsibilities"] = Convert.ToString(txtReason.Text);
+                dr["Reporting"] = Convert.ToString(txtReporting.Text);
+                dr["SalaryInLacs"] = txtSalPA.Text.ToString();
+                dr["ReasonForLeaving"] = Convert.ToString(txtReason.Text);
 
                 dtWork.Rows.Add(dr);
 
@@ -554,9 +601,10 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         }
         catch (Exception ex)
         {
+            Response.Write(ex.Message.ToString());
 
         }
-               
+
 
     }
 
@@ -638,7 +686,8 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
         txtCurrSal.Text = "";
         txtExpSal.Text = "";
         chkDeclaration.Checked = false;
-        Myfile.Attributes.Clear();
+        //UploadResume.FileName = null;
+        listofuploadedResume.Text = null;
 
         ddlQualification1.ClearSelection();
         ddlQualification1.SelectedValue = "0";

@@ -21,11 +21,11 @@
         }
     }
 
-    function GetSelectedTextValue(drpAppointmentType) {
+    /*function GetSelectedTextValue(drpAppointmentType) {
         var selectedText = drpAppointmentType.options[drpAppointmentType.selectedIndex].innerHTML;
         if (selectedText == "Follow-Up") {
 
-            var id = document.getElementById('<%= hdnfollowup.ClientID %>').value;
+            var id = document.getElementById('<= hdnfollowup.ClientID %>').value;
 
             if (id != "") {
                 divAppointmentType.style.display = 'block';
@@ -34,7 +34,7 @@
         }
 
         else if (selectedText == "New") {
-            var id = document.getElementById('<%= hdnconsulting.ClientID %>').value;
+            var id = document.getElementById('<= hdnconsulting.ClientID %>').value;
             if (id != "") {
                 divAppointmentType.style.display = 'block';
 
@@ -45,21 +45,21 @@
             divAppointmentType.style.display = 'none';
         }
 
-        $('#<%= lblAppointmentType.ClientID %>').html(id);
+        $('#<= lblAppointmentType.ClientID %>').html(id);
 
-    }
+    }*/
    
 
 
 
-    //function CitrusSubmit() {
-    //   var myForm = document.getElementById("Form");
-    //   console.log(myForm);
-    //   myForm.action = 'https://sandbox.citruspay.com/sslperf/jaslokhospital';
-    //   //myForm.method = "POST";
-    //   myForm.submit();
-    //}
-    // CitrusSubmit();
+   /* function CitrusSubmit() {
+       var myForm = document.getElementById("Form");
+       console.log(myForm);
+       myForm.action = 'https://sandbox.citruspay.com/sslperf/jaslokhospital';
+       //myForm.method = "POST";
+       myForm.submit();
+    }
+     CitrusSubmit();*/
 </script>
 <style>
     .rbl {
@@ -160,7 +160,6 @@
             <asp:PlaceHolder ID="placeRightPart" runat="server">
                 <div class="right_part">
                     <h3>Consultation Appointment</h3>
-                    <p id="divScopeContent" runat="server"></p>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
@@ -188,7 +187,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-3 col-xs-3" for="txtdob">Date of Birth:<span style="color: red">*</span></label>
                                 <div class="col-xs-12 col-sm-9 col-xs-8 cal-text">
-                                    <telerik:RadDateTimePicker ID="txtdob" DateInput-ReadOnly="true" DateInput-DateFormat="dd/MM/yyyy" runat="server" TimePopupButton-Visible="false" Width="200px"></telerik:RadDateTimePicker>
+                                    <telerik:RadDateTimePicker MinDate="1/1/1900" ID="txtdob" DateInput-ReadOnly="true" DateInput-DateFormat="dd/MM/yyyy" runat="server" TimePopupButton-Visible="false" Width="200px"></telerik:RadDateTimePicker>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="errormsg" ControlToValidate="txtdob" runat="server" ForeColor="Red" Display="Dynamic" ValidationGroup="CA" ErrorMessage="<br />Please Enter Date of Birth"></asp:RequiredFieldValidator>
 
                                 </div>
@@ -620,8 +619,7 @@
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
                             --%>
-                            <div class="form-group">&nbsp;</div>
-                            <div class="form-group">
+                            <div class="form-group" style="text-align:center;">
                                 <div class="col-xs-offset-0 col-sm-offset-3 col-xs-12 ">
                                     <asp:HiddenField ID="hdnUserId" Value='<%# CommonFn.UserID.ToString() %>' runat="server" />
                                     <asp:LinkButton ID="btnSubmitFAA" class="btn btn-primary" runat="server" ValidationGroup="CA" OnClick="btnSubmit_Click">Pay Later</asp:LinkButton>

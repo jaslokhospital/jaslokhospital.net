@@ -38,11 +38,12 @@
                 <div class="border-3"></div>
                 <p id="innerParagraph" runat="server" style="width: 100%"></p>
                 <asp:Panel ID="divcontentpane" runat="server"></asp:Panel>
-                <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
-                </div>
+               
             </div>
         </div>
+         <div class="left_form hidden-lg visible-xs">
+                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
+                </div>
     </div>
 </div>
 
@@ -54,7 +55,7 @@
 <JS:Footer runat="server" ID="Footer" />
  <div id="contentpane" runat="server">
                 </div> 
-<script type="text/javascript">
+<%--<script type="text/javascript">
     $(document).ready(function () {
         if (window.location.pathname.includes("/international-patients/hospital-facilities")) {
             $("#liHospitalFacilities").closest("li").addClass("active");
@@ -90,5 +91,5 @@
         }
 
     });
-</script>
+</script>--%>
 

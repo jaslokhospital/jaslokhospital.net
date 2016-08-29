@@ -34,17 +34,15 @@
         </div>
 
         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-            <div class="right_part">
+            <div class="right_part feedback">
                 <div id="contentpane" runat="server"></div>
                 <h3 id="h3header" runat="server"></h3>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
-                <div class="search-form">
-
+                <%--<div class="search-form">
                     <p id="innerParagraph" runat="server"></p>
-
-                </div>
+                </div>--%>
                
                 <asp:Panel ID="divcontentpane" runat="server">
                      <div id="fdback">The fields marked as * are mandatory</div></br>
@@ -118,7 +116,7 @@
                             </div>
                         </div>
 
-                        <br>
+                       
                         <div class="form-group">
                             <div class="col-xs-offset-0 col-sm-offset-3 col-xs-9">
                                 <asp:Button ID="btnSubmitFeedbck" runat="server" class="btn btn-primary" Text="Submit" ValidationGroup="FedbckSubmit" OnClick="btnSubmitFeedbck_Click" />

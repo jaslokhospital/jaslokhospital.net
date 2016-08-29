@@ -5,6 +5,9 @@
         string rawURL = HttpContext.Current.Request.RawUrl.ToLower();
 
         string agent = Request.UserAgent.ToLower();
+        int width = Request.Browser.ScreenPixelsWidth;
+        int height = Request.Browser.ScreenPixelsHeight;
+        
         if (agent.Contains("iphone") ||
             agent.Contains("symbianos") ||
             //agent.Contains("ipad") ||
@@ -20,21 +23,22 @@
             agent.Contains("motor") ||
             agent.Contains("symbian"))
         {
+            
             if (Request.RawUrl == "/")
             {
-                int width = Request.Browser.ScreenPixelsWidth;
-                int height = Request.Browser.ScreenPixelsHeight;
-
                 if (Request.Browser.IsMobileDevice && width < 720 && height < 1280)
                 {
                     redirect301("/mobilehome");
                 }
-                
             }
+            
         }
-        else
+        else if (Request.RawUrl == "/mobilehome")
         {
-            // do your logic here for PC/Mac requests
+            if (!Request.Browser.IsMobileDevice)
+            {
+                redirect301("/");
+            }
         }
 
 

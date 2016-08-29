@@ -75,19 +75,10 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             ds = (DataSet)objBusinessLogic.GetBannerPageContentDetail(id);
             if (ds.Tables[1].Rows.Count > 0)
             {
-				if (ds.Tables[1].Rows[0]["Content"].ToString() != String.Empty)
-					divScopeContent.InnerHtml = ds.Tables[1].Rows[0]["Content"].ToString();
-				else
-					divScopeContent.Style.Add("display", "none");
-
                 p.Title = ds.Tables[1].Rows[0]["PageTitle"].ToString();
                 p.KeyWords = ds.Tables[1].Rows[0]["PageKeywords"].ToString();
                 p.Description = ds.Tables[1].Rows[0]["PageDescription"].ToString();
             }
-			else
-			{
-				divScopeContent.Style.Add("display", "none");
-			}
         }
         catch (Exception ex)
         {
@@ -107,16 +98,16 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             if (dsDoctorDetail.Tables[0].Rows.Count > 0)
             {
                 //imgDoctor.ImageUrl = string.IsNullOrEmpty(ds.Tables[0].Rows[0]["ImageUrl"].ToString()) ? CommonFn.DefaultImagePath : ds.Tables[0].Rows[0]["ImageUrl"].ToString();
-                lblDoctorName.Text = dsDoctorDetail.Tables[0].Rows[0]["Name"].ToString();
+                lblDoctorName.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["Name"]);
                 litDoctormname.Text = lblFixDoctor.Text = lblDoctorName.Text;
                 objDAEntities.dName = litDoctormname.Text;
-                lblDocotrSpecialty.Text = dsDoctorDetail.Tables[0].Rows[0]["Specialization"].ToString();
-                lblDEmail.Text = dsDoctorDetail.Tables[0].Rows[0]["EmailId"].ToString();
-                lblDMobile.Text = dsDoctorDetail.Tables[0].Rows[0]["MobileNo"].ToString() + "  " + dsDoctorDetail.Tables[0].Rows[0]["PhoneNo"].ToString();
-                divDesignation.InnerText = dsDoctorDetail.Tables[0].Rows[0]["Designation"].ToString();
-				
-				 hdnfollowup.Value = dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"].ToString();
-                hdnconsulting.Value = dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"].ToString();
+                lblDocotrSpecialty.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["Specialization"]);
+                lblDEmail.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["EmailId"]);
+                lblDMobile.Text = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["MobileNo"]) + "  " + Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["PhoneNo"]);
+                divDesignation.InnerText = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["Designation"]);
+
+                hdnfollowup.Value = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
+                hdnconsulting.Value = Convert.ToString(dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"]);
                 // FixlabelBookingdate.Text = objDAEntities.Day;
             }
 			bindDoctorSpeciality(dsDoctorDetail.Tables[3]);
@@ -464,9 +455,12 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         string lsEmailStatus = string.Empty;
         try
         {
-		UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-            DataSet dsUsername = objBusinessLogic.IsExistMRNumber(objuser.Username);
-            int count = dsUsername.Tables[0].Rows.Count;
+            UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+             bool check = false;
+             if (!string.IsNullOrEmpty(objuser.Username))
+             {
+                 check = objBusinessLogic.IsExistMrNo(objuser.Username.Trim());
+             }
             /*if (Captcha1.UserValidated)
             {*/
 
@@ -501,9 +495,9 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             Session["AppointmentDetail"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){showPopupWindow();});", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
             }
-			 else if (count > 0)
+            else if (check == true)
             {               
                 PlaceMessage.Visible = true;
                 placeRightPart.Visible = false;
