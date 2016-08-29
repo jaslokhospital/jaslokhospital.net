@@ -64,6 +64,13 @@
     }
 
 </script>
+<script>
+    $(document).ready(function () {
+        $("#myBtn2").click(function () {
+            $("#myModal").modal();
+        });
+    });
+</script> 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <%@ Register Src="~/JSControls/Common/StickyFindDoctor.ascx" TagPrefix="JS" TagName="StickyFindDoctor" %>
 
@@ -144,10 +151,15 @@
                <div class="row">
                    <div class="col-sm-12 col-md-12 col-lg-12 pading45"> 
                 <div class="collapse navbar-collapse a" id="Div1">
+                    <ul class="nav navbar-nav menu " style="padding-top:4px;">                        
+                        
+                        <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                              
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="myBtn2" role="button" aria-haspopup="true" aria-expanded="false">SignUp</a>                            
+                        </li>
+
+                    </ul>
                     <ul class="nav navbar-nav menu " style="padding-top:4px;">
-
-                  
-
                         <li class="dropdown main-menu-bar online-facilities" role="presentation">
                               
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
@@ -489,13 +501,13 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                    <button id="Button1" type="button" class="close" onclick="javascript:window.location.reload()" runat="server" data-dismiss="modal">&times;</button>
                     <h4>
-                        <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
+                        <asp:Label ID="litPopUpTitle" runat="server" Text="SignUp"></asp:Label></h4>
                 </div>
                 <div class="modal-body" style="padding: 40px 50px;">
                     <div role="form">
-                        <div id="divLoginForm" runat="server">
+                        <div id="divLoginForm" runat="server" style="display:none;">
                             <div class="form-group">
                                 <label for="usrname">Visitor ID</label>
                                 <asp:TextBox ID="txtLoginUsername" runat="server" class="form-control"></asp:TextBox>
@@ -558,7 +570,7 @@
 
 
 
-                        <div id="divSignUp" runat="server" style="display: none;">
+                        <div id="divSignUp" runat="server">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -638,11 +650,11 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p id="pSignUp" runat="server">
+                    <p id="pSignUp" runat="server"  style="display: none;">
                         Not a member?
                         <asp:LinkButton ID="lnkSignUp" runat="server" OnClick="lnkSignUp_Click" Text="Pre-Register"></asp:LinkButton>
                     </p>
-                    <p id="pSignIn" runat="server" style="display: none;">
+                    <p id="pSignIn" runat="server">
                         Already User?
                         <asp:LinkButton ID="lnkBtnSignIn" runat="server" Text="Sign In" OnClick="lnkBtnSignIn_Click"></asp:LinkButton>
                     </p>

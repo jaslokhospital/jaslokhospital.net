@@ -53,6 +53,13 @@
     }
 
 </script>
+<script>
+    $(document).ready(function () {
+        $("#myBtn2").click(function () {
+            $("#myModal").modal();
+        });
+    });
+</script> 
 <div class="container-fluid quick-connect-hover">
     <div class="container">
         <div class="row">
@@ -73,8 +80,8 @@
                         <img src="/images/quick-connect-icon3.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">AMBULANCE NUMBER</span>  <a href="tel:02266573010"> <span class="content-line">022 6657
-                            3010</span></a>
+                        <span class="email-line">AMBULANCE NUMBER</span> <span class="content-line">022 6657
+                            3010</span>
                     </div>
                 </div>
             </div>
@@ -84,7 +91,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span>  <a href="tel:02223542354"> <span class="content-line">022-2354 2354</span></a>
+                        <span class="email-line">EMERGENCY NUMBER</span> <span class="content-line">022-2354 2354</span>
                     </div>
                 </div>
             </div>
@@ -95,7 +102,8 @@
                             <img src="/images/blood-bank-icon.png" alt="quick-connect-icon" />
                         </div>
                         <div class="icon-content">
-                            <span class="email-line">BLOOD BANK (24x7)</span> <a href="tel:+9102266573434"> <span class="content-line">+91-022-66573434</span></a>
+                            <span class="email-line">BLOOD BANK (24x7)</span> <span class="content-line">+91-022-
+                                66573434</span>
                         </div>
                     </a>
                 </div>
@@ -126,14 +134,16 @@
                     <ul class="list cl-effect-2 listMobile">
                         <li id="liLogin" visible="false" runat="server">
                             <a href="#" id="myBtn">
-                                <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
+                                <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a></li>
+                         <li id="liSignup" visible="false" runat="server">
+                            <a href="#" id="myBtn2">SignUp</a></li>
                         <li id="liLogout" runat="server">
                             <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
                                 <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
                         </li>
                         <li>
                             <literal class="btn btn_number">
-                                <img src="/images/car.png" class="" /><span><a href="tel:02223542354">022-2354 2354</a></span></literal>
+                                <img src="/images/car.png" class="" />022-2354 2354</literal>
                         </li>
                         <li>
                             <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
@@ -289,8 +299,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="padding: 5px 50px;">
-                <button type="button" class="close" data-dismiss="modal">
-                    &times;</button>
+                <button type="button" class="close" data-dismiss="modal"  onclick="sessionclear_Click">&times;</button>
                 <h4>Permanent Registration</h4>
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
@@ -313,14 +322,13 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;</button>
+                    <button type="button" class="close" data-dismiss="modal" onclick="javascript:window.location.reload()">&times;</button>
                     <h4>
-                        <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
+                        <asp:Label ID="litPopUpTitle" runat="server" Text="SignUp"></asp:Label></h4>
                 </div>
                 <div class="modal-body" style="padding: 30px 40px;">
                     <div role="form">
-                        <div id="divLoginForm" runat="server">
+                        <div id="divLoginForm" runat="server"  style="display: none;">
                             <div class="form-group">
                                 <label for="usrname">
                                     Visitor ID</label>
@@ -395,7 +403,7 @@
                                 OnClick="btnOTPVerification_Click" runat="server" Text="Submit" />
                             <asp:Label ID="lblOTPError" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
                         </div>
-                        <div id="divSignUp" runat="server" style="display: none;">
+                        <div id="divSignUp" runat="server">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -494,11 +502,11 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p id="pSignUp" runat="server">
+                    <p id="pSignUp" runat="server"  style="display: none;">
                         Not a member?
                         <asp:LinkButton ID="lnkSignUp" runat="server" OnClick="lnkSignUp_Click" Text="Pre-Register"></asp:LinkButton>
                     </p>
-                    <p id="pSignIn" runat="server" style="display: none;">
+                    <p id="pSignIn" runat="server">
                         Already User?
                         <asp:LinkButton ID="lnkBtnSignIn" runat="server" Text="Sign In" OnClick="lnkBtnSignIn_Click"></asp:LinkButton>
                     </p>
