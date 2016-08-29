@@ -53,6 +53,13 @@
     }
 
 </script>
+<script>
+    $(document).ready(function () {
+        $("#myBtn2").click(function () {
+            $("#myModal").modal();
+        });
+    });
+</script> 
 <div class="container-fluid quick-connect-hover">
     <div class="container">
         <div class="row">
@@ -127,6 +134,8 @@
                         <li id="liLogin" visible="false" runat="server">
                             <a href="#" id="myBtn">
                                 <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
+                         <li id="liSignup" visible="false" runat="server">
+                            <a href="#" id="myBtn2">SignUp</a></li>
                         <li id="liLogout" runat="server">
                             <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
                                 <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
@@ -313,14 +322,14 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" data-dismiss="modal" onclick="javascript:window.location.reload()">
                         &times;</button>
                     <h4>
-                        <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
+                        <asp:Label ID="litPopUpTitle" runat="server" Text="SignUp"></asp:Label></h4>
                 </div>
                 <div class="modal-body" style="padding: 30px 40px;">
                     <div role="form">
-                        <div id="divLoginForm" runat="server">
+                        <div id="divLoginForm" runat="server"  style="display: none;">
                             <div class="form-group">
                                 <label for="usrname">
                                     Visitor ID</label>
@@ -395,7 +404,7 @@
                                 OnClick="btnOTPVerification_Click" runat="server" Text="Submit" />
                             <asp:Label ID="lblOTPError" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
                         </div>
-                        <div id="divSignUp" runat="server" style="display: none;">
+                        <div id="divSignUp" runat="server">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -494,11 +503,11 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p id="pSignUp" runat="server">
+                    <p id="pSignUp" runat="server" style="display: none;">
                         Not a member?
                         <asp:LinkButton ID="lnkSignUp" runat="server" OnClick="lnkSignUp_Click" Text="Pre-Register"></asp:LinkButton>
                     </p>
-                    <p id="pSignIn" runat="server" style="display: none;">
+                    <p id="pSignIn" runat="server" >
                         Already User?
                         <asp:LinkButton ID="lnkBtnSignIn" runat="server" Text="Sign In" OnClick="lnkBtnSignIn_Click"></asp:LinkButton>
                     </p>

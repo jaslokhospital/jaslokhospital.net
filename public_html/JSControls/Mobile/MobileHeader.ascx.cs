@@ -53,6 +53,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
             {
                 //anchlogin.Visible = true;
                 liLogin.Visible = true;
+                liSignup.Visible = true;
                 liLogout.Visible = false;
                 //Response.Write(user.UserID);
                // liAhome.Visible = false;
@@ -60,6 +61,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
             else
             {
                 liLogin.Visible = false;
+                liSignup.Visible = false;
                 liLogout.Visible = true;
                 //anchlogin.Visible = false;z
 
