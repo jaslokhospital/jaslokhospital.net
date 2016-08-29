@@ -3760,7 +3760,7 @@ border: 0 none;
 .modal-content {
     border: none !important;
 }
-
+.btn.btn_number span a {color: white;}
 /**  added for mobile device (payment reponce page) **/
 @media screen and (max-width: 449px){
  .paymentresponse .dotted_box {
