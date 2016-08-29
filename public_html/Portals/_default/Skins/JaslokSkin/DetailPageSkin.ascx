@@ -5,7 +5,7 @@
 <%@ Register Src="~/JSControls/MiddleContent/InnerTestimonials.ascx" TagPrefix="JS" TagName="InnerTestimonials" %>
 <%--<%@ Register Src="~/JSControls/MiddleContent/LeftPaneFindDoctor.ascx" TagPrefix="JS" TagName="LeftPaneFindDoctor" %>--%>
 <%@ Register Src="~/JSControls/Common/LeftNavigation.ascx" TagPrefix="JS" TagName="LeftNavigation" %>
-<%@ Register Src="~/JSControls/Common/Contactus.ascx" TagPrefix="JS" TagName="Contactus" %>
+<%--<%@ Register Src="~/JSControls/Common/Contactus.ascx" TagPrefix="JS" TagName="Contactus" %>--%>
 
 
 <%--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -65,7 +65,6 @@
             </div>
             <div class="left_form hidden-xs">
                 <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
-              
                 <%--<JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />--%>
             </div>
             </div>
@@ -85,8 +84,8 @@
 
             </div>
         </div>
-        <div style="padding-top:5px" ></div>
-         <JS:Contactus runat="server" ID="Contactus"/>
+<%--        <div style="padding-top:5px" ></div>
+         <JS:Contactus runat="server" ID="Contactus"/>--%>
         <div class="left_form hidden-lg visible-xs">
             <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
         </div>
