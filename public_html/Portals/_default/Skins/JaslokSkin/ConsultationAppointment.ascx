@@ -623,7 +623,7 @@
                                 <div class="col-xs-offset-0 col-sm-offset-3 col-xs-12 ">
                                     <asp:HiddenField ID="hdnUserId" Value='<%# CommonFn.UserID.ToString() %>' runat="server" />
                                     <asp:LinkButton ID="btnSubmitFAA" class="btn btn-primary" runat="server" ValidationGroup="CA" OnClick="btnSubmit_Click">Pay Later</asp:LinkButton>
-                                    <asp:LinkButton ID="btnPayNow" runat="server" class="btn btn-primary" OnClick="btnSubmit_Click" Visible=false ValidationGroup="CA">Pay Now</asp:LinkButton>
+                                    <asp:LinkButton ID="btnPayNow" runat="server" class="btn btn-primary" OnClick="btnSubmit_Click"  ValidationGroup="CA">Pay Now</asp:LinkButton>
                                     <asp:LinkButton ID="btnResetFAA" class="btn btn-primary" runat="server" OnClick="btnResetFAA_Click">Reset</asp:LinkButton>
                                 </div>
                             </div>

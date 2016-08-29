@@ -5,6 +5,24 @@
 <%@ Register Src="~/JSControls/MiddleContent/InnerTestimonials.ascx" TagPrefix="JS" TagName="InnerTestimonials" %>
 <%--<%@ Register Src="~/JSControls/MiddleContent/LeftPaneFindDoctor.ascx" TagPrefix="JS" TagName="LeftPaneFindDoctor" %>--%>
 <%@ Register Src="~/JSControls/Common/LeftNavigation.ascx" TagPrefix="JS" TagName="LeftNavigation" %>
+<%@ Register Src="~/JSControls/Common/Contactus.ascx" TagPrefix="JS" TagName="Contactus" %>
+
+
+<%--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    
+
+<script type="text/javascript"> function init_map() {
+     var myOptions = { zoom: 14, center: new google.maps.LatLng(18.97147, 72.80949), mapTypeId: google.maps.MapTypeId.ROADMAP };
+     map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(19.1915971, 73.20093459999998) });
+     infowindow = new google.maps.InfoWindow({ content: "<b>The Circle</b><br/>jaslok hospital<br/>411014 mumbai" }); google.maps.event.addListener(marker, "click",
+         function () { infowindow.open(map, marker); }); infowindow.open(map, marker);
+ } google.maps.event.addDomListener(window, 'load', init_map);
+
+
+</script>--%>
+
+
 <style type="text/css">
     .bjqs-markers {
         display: none;
@@ -47,11 +65,12 @@
             </div>
             <div class="left_form hidden-xs">
                 <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
+              
                 <%--<JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />--%>
             </div>
             </div>
 
-        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12" style="width:38%">
             <div class="right_part">
 
                 <h3 id="h3header" runat="server"></h3>
@@ -60,18 +79,21 @@
                 <div class="border-3"></div>
                 <div id="contentpane" class="inner-content" runat="server">
                 </div>
-
+                
                 <asp:Panel ID="divcontentpane" runat="server"></asp:Panel>
                
 
             </div>
         </div>
-         <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
-                </div>
+        <div style="padding-top:5px" ></div>
+         <JS:Contactus runat="server" ID="Contactus"/>
+        <div class="left_form hidden-lg visible-xs">
+            <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
+        </div>
     </div>
 </div>
-
+   
+<%--<div style="overflow:hidden;height:500px;width:600px;padding-left:30%"><div id="gmap_canvas" style="height:500px;width:600px;"><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">wordpress themes</a></div></div>--%>
 
 <!------testimonail start-------->
 <JS:Testimonials runat="server" ID="Testimonials" />
