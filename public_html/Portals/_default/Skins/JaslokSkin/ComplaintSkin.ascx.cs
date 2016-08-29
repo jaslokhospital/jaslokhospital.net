@@ -17,10 +17,10 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     protected void Page_Load(object sender, EventArgs e)
     {
+        contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
         if (!IsPostBack)
         {
-            //FillCapctha();
-            contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
+            //FillCapctha();           
             BindPageDetail(131);
             //h3header.InnerText = "Complaint Form";
             if (Request.QueryString["name"] != null && Request.QueryString["email"] != null)
