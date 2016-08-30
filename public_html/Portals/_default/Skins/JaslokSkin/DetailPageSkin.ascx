@@ -69,7 +69,7 @@
             </div>
             </div>
 
-        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12" style="width:38%">
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part">
 
                 <h3 id="h3header" runat="server"></h3>
