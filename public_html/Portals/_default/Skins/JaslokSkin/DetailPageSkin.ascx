@@ -10,7 +10,7 @@
 
 <%--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-    
+    <
 
 <script type="text/javascript"> function init_map() {
      var myOptions = { zoom: 14, center: new google.maps.LatLng(18.97147, 72.80949), mapTypeId: google.maps.MapTypeId.ROADMAP };
@@ -21,7 +21,12 @@
 
 
 </script>--%>
+<script type="text/javascript">
+    function SetWidth() {
 
+        document.getElementById('divContactus').style.width = "38%";
+    }
+</script>
 
 <style type="text/css">
     .bjqs-markers {
@@ -69,7 +74,7 @@
             </div>
             </div>
 
-        <div id="divContactus" runat="server" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        <div id="divContactus" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part">
 
                 <h3 id="h3header" runat="server"></h3>
@@ -90,7 +95,7 @@
         </div>
     </div>
 </div>
-   
+
 <%--<div style="overflow:hidden;height:500px;width:600px;padding-left:30%"><div id="gmap_canvas" style="height:500px;width:600px;"><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">wordpress themes</a></div></div>--%>
 
 <!------testimonail start-------->

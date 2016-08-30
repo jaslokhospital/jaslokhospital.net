@@ -146,7 +146,10 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
             h3header.InnerText = "Contact Us";
             BindPageDetail(137);
             SubRootSpan.InnerText = "Contact Us";
-            divContactus.Style.Add("width","38%");
+
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "myScript", "SetWidth();", true);
+
+            //divContactus.Style.Add("width","38%");
             divMap.Style.Add("padding-top", "5px");
             divMap.Visible = true;
             divMap.Controls.Add(LoadControl("~/JSControls/Common/Contactus.ascx"));
@@ -274,7 +277,6 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
             SubRootSpan.InnerText = "Outstanding Bill Payment";
         }
 
-       
     }
     public void BindPageDetail(int id)
     {
@@ -322,7 +324,6 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
             {
                 contentpane.Visible = false;
             }
-
         }
         catch (Exception ex)
         {
