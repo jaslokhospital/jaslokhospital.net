@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Feedback</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    <style>
+    .tblDetail td{padding:3px;}
+    </style>
+     <p>Dear [Username]  <br />Your feedback are as follows:</p>
+    <table border="2" class="tblDetail" cellpadding="0" cellspacing ="0" width="75%">
+            <tr>
+                <td style="width:25%;">Name</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[Username]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Gender</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[Gender]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Mobile Number</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[MobileNo]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Email Address</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[EmailAdd]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Feedback Detail</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[Feedback]</td>
+            </tr>
+        </table>
+    ]]>
+  </content>
+</emailcontent>
