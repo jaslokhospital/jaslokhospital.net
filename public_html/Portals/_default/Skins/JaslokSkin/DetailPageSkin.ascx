@@ -21,12 +21,6 @@
 
 
 </script>--%>
-<script type="text/javascript">
-    function SetWidth() {
-
-        document.getElementById('divContactus').style.width = "38%";
-    }
-</script>
 
 <style type="text/css">
     .bjqs-markers {
