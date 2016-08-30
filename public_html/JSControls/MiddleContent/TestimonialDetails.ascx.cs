@@ -45,6 +45,10 @@ public partial class JSControls_MiddleContent_TestimonialDetails : PortalModuleB
                     imgTestimonial.ImageUrl = ds.Tables[0].Rows[0]["ImageUrl"].ToString();
 
                 }
+
+                DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
+                if (!string.IsNullOrEmpty(h4testimonialName.InnerHtml))
+                    p.Title = h4testimonialName.InnerHtml + " - Testimonial | Jaslok Hospital";
             }
              
            

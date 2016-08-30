@@ -37,17 +37,22 @@ public partial class JSControls_MiddleContent_ManagementDetails : PortalModuleBa
             ds = (DataSet)objBusinessLogic.GetUserDetails(objDAEntities);
             if (ds.Tables[0].Rows.Count > 0)
             {
-            imgProfile.ImageUrl =Convert.ToString(ds.Tables[0].Rows[0]["ImageUrl"]);
-            FindDName.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Name"]);
-            lblDoctorDesignation.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Designation"]);
-            //pbodyDesignation.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Designation"]);
-            pbodyDescription.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["Description"]);
+                imgProfile.ImageUrl = Convert.ToString(ds.Tables[0].Rows[0]["ImageUrl"]);
+                FindDName.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Name"]);
+                lblDoctorDesignation.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Designation"]);
+                //pbodyDesignation.InnerText = Convert.ToString(ds.Tables[0].Rows[0]["Designation"]);
+                pbodyDescription.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["Description"]);
+
+                DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
+                if (!string.IsNullOrEmpty(FindDName.InnerText))
+                    p.Title = FindDName.InnerText + " | Jaslok Hospital";
             }
             else
             {
                 DivNotfound.Visible = true;
                 DivDetail.Visible = false;
             }
+
         }
         catch (Exception ex)
         {
