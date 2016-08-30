@@ -146,7 +146,10 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
             h3header.InnerText = "Contact Us";
             BindPageDetail(137);
             SubRootSpan.InnerText = "Contact Us";
-            //divcontentpane.Controls.Add(LoadControl("~/JSControls/Common/Contactus.ascx"));
+            divContactus.Style.Add("width","38%");
+            divMap.Style.Add("padding-top", "5px");
+            divMap.Visible = true;
+            divMap.Controls.Add(LoadControl("~/JSControls/Common/Contactus.ascx"));
         }
         else if (Request.RawUrl.ToLower().Contains("frequently-asked-questions"))
         {

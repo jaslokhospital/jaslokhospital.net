@@ -69,7 +69,7 @@
             </div>
             </div>
 
-        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        <div id="divContactus" runat="server" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part">
 
                 <h3 id="h3header" runat="server"></h3>
@@ -84,8 +84,7 @@
 
             </div>
         </div>
-<%--        <div style="padding-top:5px" ></div>
-         <JS:Contactus runat="server" ID="Contactus"/>--%>
+         <asp:Panel ID="divMap" runat="server" Visible="false"></asp:Panel>
         <div class="left_form hidden-lg visible-xs">
             <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
         </div>
