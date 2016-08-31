@@ -21,7 +21,7 @@
                     </div>
             
             <div class="form-group finddoc_pt97">
-                <asp:LinkButton ID="btnSubmitLPFD" runat="server" class="btn btn_submit" OnClientClick="return ValHomeLPFD();" OnClick="btnSubmitLPFD_Click">Submit<i class="glyphicon glyphicon-chevron-right"></i></asp:LinkButton>
+                <asp:LinkButton ID="btnSubmitLPFD1" runat="server" class="btn btn_submit" OnClientClick="return ValHomeLPFD();" OnClick="btnSubmitLPFD1_Click">Submit<i class="glyphicon glyphicon-chevron-right"></i></asp:LinkButton>
             </div>
         </div>
 

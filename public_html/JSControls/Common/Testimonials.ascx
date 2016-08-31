@@ -4,7 +4,7 @@
         <div class="container containerspace">
             <div class="carouseller row-fluid for-car">
                 <h2 class="testheading">
-                    <img src="/Portals/_default/Skins/JaslokSkin/images/chat.png" />
+                    <img src="/Portals/_default/Skins/JaslokSkin/images/chat.png" alt="chat" />
                     Testimonials</h2>
 
                 <span class="line4">
@@ -20,7 +20,7 @@
                                             <div class="carousel-block" style="width:100%">
                                                <div class='<%#string.IsNullOrEmpty(Eval("ProfileImageUrl").ToString())?"":"col-lg-3 col-md-3 col-sm-4 col-xs-5"%>'>
                                                     <%--<img alt="testimonials" title="testimonials" src='<%#Eval("ProfileImageUrl")%>' class="img-responsive img-circle">--%>
-                                                   <asp:Image ImageUrl='<%#Eval("ProfileImageUrl")+"?scale=both&maxwidth=111&maxheight=111"%>' Visible='<%#string.IsNullOrEmpty(Eval("ProfileImageUrl").ToString())?false:true%>' runat="server" class="img-responsive img-circle" />
+                                                   <asp:Image ImageUrl='<%#Eval("ProfileImageUrl")+"?scale=both&maxwidth=111&maxheight=111"%>' Visible='<%#string.IsNullOrEmpty(Eval("ProfileImageUrl").ToString())?false:true%>' alt='<%#Eval("Name")%>' runat="server" class="img-responsive img-circle" />
                                                 </div>
 
 
