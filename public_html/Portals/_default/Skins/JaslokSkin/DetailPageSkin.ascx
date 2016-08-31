@@ -83,7 +83,7 @@
 
             </div>
         </div>
-         <asp:Panel ID="divMap" runat="server" Visible="false"></asp:Panel>
+         <asp:Panel ID="divMap" class="col-lg-9" runat="server" Visible="false"></asp:Panel>
         <div class="left_form hidden-lg visible-xs">
             <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
         </div>
