@@ -22,6 +22,7 @@
     <asp:placeholder id="SCRIPTS" runat="server" />
      <link href="Portals/_default/Skins/JaslokSkin/Styles/css/font-awesome.min.css" rel="stylesheet">
     <link href="Portals/_default/Skins/JaslokSkin/Styles/css/style.css" rel="stylesheet">
+    <link href="Portals/_default/Skins/JaslokSkin/Styles/css/common.css" rel="stylesheet">
     <link href="Portals/_default/Skins/JaslokSkin/Styles/css/responsive.css" rel="stylesheet">
     <link href="Portals/_default/Skins/JaslokSkin/Styles/css/carousel.css" rel="stylesheet"> 
        <link rel="stylesheet"  href="Portals/_default/Skins/JaslokSkin/Styles/css/lightslider.css"/>

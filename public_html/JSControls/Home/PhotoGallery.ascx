@@ -8,11 +8,12 @@
                
                 <asp:Repeater ID="rptPhotogallery" runat="server">
                     <ItemTemplate>
-                        <a href="/photo-gallery.aspx">
+                        
                         <li data-thumb="">
-                            <img class="second-slide" src='<%#Eval("PhotoImageUrl")+"?scale=both&maxwidth=302&maxheight=201"%>'/>
-                        </li>
+                            <a href="/photo-gallery.aspx">
+                                <img class="second-slide" alt="<%# String.IsNullOrEmpty(Convert.ToString(Eval("PhotoTitle"))) ? Convert.ToString(Eval("AlbumTitle")) : Convert.ToString(Eval("PhotoTitle")) %>" src='<%#Eval("PhotoImageUrl")+"?scale=both&maxwidth=302&maxheight=201"%>'/>
                             </a>
+                        </li> 
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>
