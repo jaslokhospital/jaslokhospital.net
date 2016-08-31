@@ -33,7 +33,14 @@ public partial class JSControls_Common_JaslokTimesSubscription : System.Web.UI.U
         objMailer.SendEmail("jasloktimes", lstParameters, EmailToId, EmailCCId);
         objMailer.SendEmail("jasloktimes_user", lstParameters, objDAEntities.Email, EmailCCId);
 
-        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('You have subscribe Successfully!!!');", true);
+        string message = "You have subscribe Successfully!";
+        //dialog.Visible = true;
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "Popup", "ShowPopup('" + message + "');", true);
+        // ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('You have subscribe Successfully!!!');", true);
         txtemail.Text = "";
+
+
+
+        //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('You have subscribe Successfully!!!');", true);
     }
 }
