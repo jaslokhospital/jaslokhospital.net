@@ -19,15 +19,15 @@
 
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
 
- <!-- Carousel    ================================================== -->
+ <!-- Carousel -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="item active">
                 <%--<asp:Image ID="imgbanner" runat="server" CssClass="img-div" />--%>
-                <asp:Image id="imgAbout" runat="server" class="img-div" />
+                <asp:Image id="imgAbout" alt="specialtydetail" runat="server" class="img-div" />
                <%-- <img id="imgFacilities" src="/images/inner-slider2.jpg" class="img-div" style="display:none;" />
                 <img id="imgSpecialities" src="/images/inner-slider3.jpg" class="img-div" style="display:none;" />--%>
             </div>
@@ -74,13 +74,13 @@
 
                 <asp:Panel ID="divcontentpane" runat="server">
                    <%-- <h3 id="aboutheader" runat="server"></h3>--%>
-                    <p id="PAboutSD" runat="server"></p>
+                    <div id="PAboutSD" class="specialityDetailContent" runat="server"></div>
                     <asp:Label ID="lblAboutmsg" runat="server" Text="No Records Found" style="color:red; font-size:16px; padding-top:10px;"></asp:Label>
                 </asp:Panel>
 
                 <asp:Panel ID="divFacilities" runat="server" Style="display: none">  
                                    
-                    <p id="PFacilities" runat="server"></p>
+                    <div id="PFacilities" class="specialityDetailContent" runat="server"></div>
                      <asp:Label ID="lblFacilitiesMsg" runat="server" Text="No Records Found" style="color:red; font-size:16px; padding-top:10px;" Visible="false"></asp:Label>
                 </asp:Panel>
 
@@ -94,7 +94,7 @@
                             <div class="media">
                                 <div class="media-left media-top col-sm-3 col-xs-12" >
 
-                                    <a data-toggle="collapse" data-parent="#accordion" href="" aria-expanded="true" aria-controls="media-collapse-1">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="" aria-expanded="true">
                                         <asp:Image style="width: 150px !important;" runat="server" class="media-object media-border img-responsive" ID="imgDoctorSDSkin" AlternateText=' <%#Eval("Title")%>' ImageUrl='<%#(string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))? CommonFn.DefaultImagePath : Eval("ImageUrl")) %>' />
                                     </a>
                                 </div>

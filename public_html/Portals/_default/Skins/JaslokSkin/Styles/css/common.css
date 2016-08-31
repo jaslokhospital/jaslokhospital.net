@@ -112,3 +112,8 @@
 .specialtyopddata div {
     padding-bottom: 40px;
 }
+.specialityDetailContent {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+}
