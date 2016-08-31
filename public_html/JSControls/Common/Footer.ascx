@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <!-- ----footerbottom----- -->
+        <!-- footerbottom -->
         <div class="container-fluid footer-inner">
             <div class="container">
 
