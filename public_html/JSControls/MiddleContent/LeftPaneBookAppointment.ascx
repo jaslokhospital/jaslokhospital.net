@@ -42,7 +42,7 @@
                 </asp:DropDownList>
             </div>
             <div class="form-group">
-                <asp:DropDownList class="form-control appoint_form app_doctor" ValidationGroup="btnLPBA" data-select-validator="app_doctor" name="appoint_form" runat="server" ID="ddlDoctorLPBA" AutoPostBack="true" OnSelectedIndexChanged="ddlDoctorLPBA_SelectedIndexChanged">
+                <asp:DropDownList class="form-control appoint_form app_doctor" ValidationGroup="btnLPBA" data-select-validator="app_doctor" runat="server" ID="ddlDoctorLPBA" AutoPostBack="true" OnSelectedIndexChanged="ddlDoctorLPBA_SelectedIndexChanged">
                 </asp:DropDownList>
             </div>
             <div class="form-group">
