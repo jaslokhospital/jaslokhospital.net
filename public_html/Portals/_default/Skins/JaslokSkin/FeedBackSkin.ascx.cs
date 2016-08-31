@@ -118,6 +118,8 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
             string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
             lsEmailStatus = objMailer.SendEmail("feedback", lstParameters, EmailToId, EmailCCId);
+
+            lsEmailStatus = objMailer.SendEmail("feedback_user", lstParameters, objDAEntities.Email, EmailCCId);
             //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", true);
             // fdback.Visible = false;
             divcontentpane.Visible = false;

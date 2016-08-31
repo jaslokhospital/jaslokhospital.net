@@ -137,6 +137,9 @@ public partial class Portals__default_Skins_JaslokSkin_FormsEstimateSkin : DotNe
             string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
             lsEmailStatus = objMailer.SendEmail("estimate", lstParameters, EmailToId, EmailCCId);
+
+            lsEmailStatus = objMailer.SendEmail("estimate_user", lstParameters, objDAEntities.Email, EmailCCId);
+
             //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", false);
             // ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", true);
 

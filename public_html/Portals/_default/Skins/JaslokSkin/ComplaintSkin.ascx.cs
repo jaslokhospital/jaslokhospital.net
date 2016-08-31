@@ -129,6 +129,8 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
 
             lsEmailStatus = objMailer.SendEmail("complaint", lstParameters, EmailToId, EmailCCId);
 
+            lsEmailStatus = objMailer.SendEmail("complaint_user", lstParameters, objDAEntities.Email, EmailCCId);
+
             divcontentpane.Visible = false;
             PanelMessage.Visible = true;
 
