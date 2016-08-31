@@ -139,6 +139,8 @@ public partial class Portals__default_Skins_JaslokSkin_QuickEnquirySkin : DotNet
 
             lsEmailStatus = objMailer.SendEmail("quickenquiry", lstParameters, EmailToId, EmailCCId);
 
+            lsEmailStatus = objMailer.SendEmail("quickenquiry_user", lstParameters, objDAEntities.Email, EmailCCId);
+
             divcontentpane.Visible = false;
             PanelMessage.Visible = true;
 

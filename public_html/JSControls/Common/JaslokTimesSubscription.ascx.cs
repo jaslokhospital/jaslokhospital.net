@@ -31,6 +31,7 @@ public partial class JSControls_Common_JaslokTimesSubscription : System.Web.UI.U
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
         objMailer.SendEmail("jasloktimes", lstParameters, EmailToId, EmailCCId);
+        objMailer.SendEmail("jasloktimes_user", lstParameters, objDAEntities.Email, EmailCCId);
 
         ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('You have subscribe Successfully!!!');", true);
         txtemail.Text = "";

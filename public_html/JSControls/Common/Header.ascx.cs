@@ -671,6 +671,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 oUser.Profile.SetProfileProperty("Address", txtAddress.Text);
                 oUser.Profile.SetProfileProperty("Age", txtAge.Text);
                 oUser.Profile.SetProfileProperty("PhoneNumber", ddlCountryCode.SelectedValue + "-" + txtMobileNumber.Text.Trim());
+                oUser.Profile.SetProfileProperty("Email", txtEmail.Text);
                 oUser.Profile.SetProfileProperty("OTP", lsOtp);
                 oUser.Profile.SetProfileProperty("OTPCreatedDate", DateTime.Now.ToString());
 
@@ -718,28 +719,13 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                     throw ex;
                 }
 
-                /*UserInfo objUser = new UserInfo();
-                objUser.Username = lsUserName;
-                UserMembership objMembership = new UserMembership(objUser);
-                objMembership.Username = lsUserName;
-                objMembership.Password = lsPassword;
-                objMembership.Email = txtEmail.Text;
-                objUser.Membership = objMembership;
-                PortalSettings po = new PortalSettings();
-                UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                UserInfo objUserInfo = UserController.ValidateUser(0, lsUserName, lsPassword, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-                if (loginStatus == UserLoginStatus.LOGIN_SUCCESS || loginStatus == UserLoginStatus.LOGIN_SUPERUSER)
-                {
-                    UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-                    lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = lsUserName });
-                    lsEmailStatus = objMailer.SendEmail("registration", lstParameters, txtEmail.Text);
-                    if (string.IsNullOrEmpty(lsEmailStatus))
-                    {
-                        lblError.Text = "Password has been sent to your email address.";
-                        lblError.CssClass = "successText"Green;
-                    }
-                    Response.Redirect("/");
-                }*/
+
+
+               
+
+
+
+
             }
             else
             {
@@ -834,6 +820,17 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             setLoginFields();
             lblLoginError.CssClass = "successText";
             lblLoginError.Text = "User login details that has been sent to your registered mobile number";
+
+
+            JaslokMailer objMailer = new JaslokMailer();
+            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+            string lsEmailStatus = string.Empty;
+
+
+            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = objUserInfo.Username });
+            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Password", ShortCodeValue = LsPassword });
+            lsEmailStatus = objMailer.SendEmail("registration", lstParameters, objUserInfo.Email);
+
         }
     }
 

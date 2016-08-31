@@ -141,7 +141,10 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesDetailsSkin : 
 
 
            DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
-           p.Title = "Specialties | Jaslok Hospital";
+           if (!string.IsNullOrEmpty(h3header1.InnerHtml))
+               p.Title = h3header1.InnerHtml + " | Jaslok Hospital";
+           else
+               p.Title = "Specialties | Jaslok Hospital";
            p.KeyWords =Convert.ToString(ds.Tables[0].Rows[0]["keyword"]);
           // p.Description = ds.Tables[1].Rows[0]["PageDescription"].ToString();
         }
