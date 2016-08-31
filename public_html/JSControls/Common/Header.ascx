@@ -1,63 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Header.ascx.cs" Inherits="JSControls_Home_Header" ClientIDMode="Static" %>
-<!--//// FEATURED ARTICLES /////-->
-<style type="text/css">
-    .modal-footer p {
-        margin-bottom: 2px !important;
-    }
-
-    .close {
-        position: absolute;
-        right: 5px;
-        top: 0px;
-        color: #fff !important;
-        font-size: 40px;
-        opacity: 1 !important;
-    }
-
-    .errorText {
-        color: #fff !important;
-        font-size: 13px !important;
-        display: block;
-        text-align: center;
-        background-color: red;
-        margin-top: 10px;
-        padding: 8px;
-    }
-
-    .successText {
-        color: #fff !important;
-        font-size: 13px !important;
-        display: block;
-        text-align: center;
-        background-color: darkgreen;
-        margin-top: 10px;
-        padding: 8px;
-    }
-
-    #SelectPayment option {
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    #SelectPayment optgroup option {
-        font-size: 12px;
-        font-weight: normal;
-
-    }
-
-   li:hover {
-    cursor: pointer;
-}
-    .pading45 {padding-right:45px;    }
-    @media only screen and (max-width:767px) { 
-        .pading45 {padding-right:0px; padding-left:0px;    }
-        .pading45 > .collapse { display:block; }
-        .container-menu {padding-left: 0px; padding-right: 0px;        }
-
-    }
-   
-</style>
-
 <script type="text/javascript">
     function redirect() {
         location.href = '/Payment.aspxamount=100';
@@ -216,8 +157,8 @@
                         </ul>
                     </div>
                     <div class="pull-right header_top  pulls">
-                        <literal class="btn btn_number">
-                            <img src="/images/car.png" class="" />022-2354 2354</literal>
+                        <span class="btn btn_number">
+                            <img src="/images/car.png" alt="car" class="" />022-2354 2354</span>
                         <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
                     </div>
                     <div class="clearfix"></div>
@@ -465,7 +406,7 @@
 
 
 
-<JS:StickyFindDoctor runat="server" ID="StickyFindDoctor" />
+<%--<JS:StickyFindDoctor runat="server" ID="StickyFindDoctor" />--%>
 <div class="modal fade" id="permenantRegistrationModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -485,7 +426,7 @@
 
     <div class="modal-dialog">
         <!-- Modal content-->
-        <telerik:RadAjaxPanel ID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel1" runat="server" RestoreOriginalRenderDelegate="false">
+        <telerik:RadAjaxPanel ID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel2" runat="server" RestoreOriginalRenderDelegate="false">
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
@@ -497,12 +438,12 @@
                     <div role="form">
                         <div id="divLoginForm" runat="server">
                             <div class="form-group">
-                                <label for="usrname">Visitor ID</label>
+                                <label>Visitor ID</label>
                                 <asp:TextBox ID="txtLoginUsername" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Visitor ID" ControlToValidate="txtLoginUsername" ValidationGroup="loginVal"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group">
-                                <label for="psw">Password</label>
+                                <label>Password</label>
                                 <asp:TextBox ID="txtLoginPassword" TextMode="Password" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Password" ControlToValidate="txtLoginPassword" ValidationGroup="loginVal"></asp:RequiredFieldValidator>
                             </div>
@@ -512,22 +453,22 @@
                                     Remember me</label>
                             </div>
                             <asp:Button CssClass="btn btn-success btn-block" ID="LoginBtn" ValidationGroup="loginVal" OnClick="LoginBtn_Click" runat="server" Text="Login" />
-                            <asp:Label ID="lblLoginError" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
+                            <asp:Label ID="lblLoginError" runat="server"></asp:Label>
                         </div>
                         <div id="divForgotPassword" style="display: none;" runat="server">
                             <div class="form-group">
-                                <label for="usrname">Visitor ID</label>
+                                <label>Visitor ID</label>
                                 <asp:TextBox ID="txtForgotPasswordUserName" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Visitor ID" ControlToValidate="txtForgotPasswordUserName" ValidationGroup="forgotpassVal"></asp:RequiredFieldValidator>
                             </div>
                             <asp:Button CssClass="btn btn-success btn-block" ID="btnForgotPasword" ValidationGroup="forgotpassVal" OnClick="btnForgotPasword_Click" runat="server" Text="Submit" />
-                            <asp:Label ID="lblForgotPassError" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
+                            <asp:Label ID="lblForgotPassError" runat="server"></asp:Label>
                         </div>
                         <div id="divOTPVerification" runat="server" style="display: none;">
                             <div class="row">
                                 <div style="width: 16%; padding-right: 0px;" class="col-md-3">
                                     <div class="form-group">
-                                        <label for="psw">Mobile No</label>
+                                        <label>Mobile No</label>
                                         <asp:DropDownList ID="ddlOTPCountryCode" DataSourceID="xmlDatasource1" DataTextField="text" DataValueField="value" class="form-control" runat="server">
                                         </asp:DropDownList>
                                     </div>
@@ -544,13 +485,13 @@
                                 </div>
                             </div>
                             <div id="divOtp" class="form-group">
-                                <label for="psw">OTP</label>
+                                <label>OTP</label>
                                 <asp:TextBox ID="txtOTP" Style="text-transform: uppercase;" runat="server" class="form-control"></asp:TextBox>
 
                                 <asp:LinkButton ID="lnkResendOTP" runat="server" Text="Resend OTP" OnClick="lnkResendOTP_Click"></asp:LinkButton>
                             </div>
                             <asp:Button CssClass="btn btn-success btn-block" ID="btnOTPVerification" ValidationGroup="otpval" OnClick="btnOTPVerification_Click" runat="server" Text="Submit" />
-                            <asp:Label ID="lblOTPError" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
+                            <asp:Label ID="lblOTPError" runat="server"></asp:Label>
                         </div>
 
 
@@ -562,7 +503,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="firstname">First Name</label>
+                                        <label>First Name</label>
                                         <asp:TextBox ID="txtFirstName" runat="server" MaxLength="50" class="form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="reqFirstname" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic"
                                             ErrorMessage="Enter First Name" ControlToValidate="txtFirstName" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
@@ -572,7 +513,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="firstname">Last Name</label>
+                                        <label>Last Name</label>
                                         <asp:TextBox ID="txtLastName" MaxLength="50" runat="server" class="form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="reqLastname" ForeColor="Red" Font-Size="11px" runat="server"
                                             Display="Dynamic" ErrorMessage="Enter Last Name" ControlToValidate="txtLastName" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
@@ -584,7 +525,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="gender">Gender</label>
+                                        <label>Gender</label>
                                         <asp:DropDownList ID="ddlGender" class="form-control" runat="server">
                                             <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
                                             <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
@@ -593,7 +534,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="Age">Age</label>
+                                        <label>Age</label>
                                         <asp:TextBox ID="txtAge" onkeypress="return Numeric(event);" runat="server" MaxLength="3" class="form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvAge" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Age"
                                             ControlToValidate="txtAge" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
@@ -602,7 +543,7 @@
                                 </div>
                                 <div class="col-md-3 col-xs-4 mob1">
                                     <div class="form-group">
-                                        <label for="gender">Mobile No</label>
+                                        <label>Mobile No</label>
                                         <asp:DropDownList ID="ddlCountryCode" DataSourceID="xmlDatasource1" DataTextField="text" DataValueField="value" class="form-control" runat="server">
                                         </asp:DropDownList>
                                         <asp:XmlDataSource ID="xmlDatasource1" runat="server" DataFile="~/CountryCodes.xml" XPath="CountryCodes/code"></asp:XmlDataSource>
@@ -610,7 +551,7 @@
                                 </div>
                                 <div class="col-md-3 col-xs-8 mob2" style="padding-left: 3px;">
                                     <div class="form-group">
-                                        <label style="color: #fff;" for="PhoneNumber">a</label>
+                                        <label style="color: #fff;">a</label>
                                         <asp:TextBox ID="txtMobileNumber" onkeypress="return Numeric(event);" runat="server" MaxLength="10" class="form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvMobileNumber" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Mobile Number"
                                             ControlToValidate="txtMobileNumber" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
@@ -620,7 +561,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="psw">Email Address</label>
+                                <label>Email Address</label>
                                 <asp:TextBox ID="txtEmail" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="reqEmailAddress" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic"
                                     ErrorMessage="Enter Emailaddress" ControlToValidate="txtEmail" ValidationGroup="valSignup"></asp:RequiredFieldValidator>
@@ -628,11 +569,11 @@
                                     Font-Size="11px" runat="server" Display="Dynamic" ValidationGroup="valSignup" ErrorMessage="Enter Valid Email address" ControlToValidate="txtEmail"></asp:RegularExpressionValidator>
                             </div>
                             <div class="form-group">
-                                <label for="Address">Address</label>
+                                <label>Address</label>
                                 <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" class="form-control midiafor"></asp:TextBox>
                             </div>
                             <asp:Button CssClass="btn btn-success btn-block" ID="btnSignUp" ValidationGroup="valSignup" OnClick="btnSignUp_Click" runat="server" Text="Register" />
-                            <asp:Label ID="lblSignUp" ForeColor="Red" Font-Size="13px" runat="server"></asp:Label>
+                            <asp:Label ID="lblSignUp" runat="server"></asp:Label>
                         </div>
 
                     </div>
@@ -659,7 +600,7 @@
         </telerik:RadAjaxPanel>
     </div>
 
-    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Transparency="30">
+    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel2" runat="server" Transparency="30">
         <div class="modal-dialog" style="vertical-align: middle; text-align: center; background-color: white; height: 440px; margin-top: 0px !important;">
             <img alt="Loading..." src='/images/loading.gif' style="padding-top: 30% !important;" />
         </div>
@@ -669,7 +610,7 @@
         <AjaxSettings>
             <telerik:AjaxSetting AjaxControlID="RadSearchPanel">
                 <UpdatedControls>
-                    <telerik:AjaxUpdatedControl ControlID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel1" />
+                    <telerik:AjaxUpdatedControl ControlID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel2" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
         </AjaxSettings>

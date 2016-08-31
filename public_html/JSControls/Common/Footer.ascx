@@ -1,11 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Footer.ascx.cs" Inherits="JSControls_Home_Footer" %>
 <%@ Register Src="~/JSControls/Common/PressRelease.ascx" TagPrefix="JS" TagName="PressRelease" %>
 <%@ Register Src="~/JSControls/Common/JaslokTimesSubscription.ascx" TagPrefix="JS" TagName="Subscription" %>
-<style>
-	.nav1 li a {font-size: 13px;}
-</style>
-<!----------Footerstart----------->
-    <!----------Footerstart----------->
         <div class="container-fluid footer">
             <div class="container">
                 <div class="row">
@@ -17,8 +12,7 @@
                         <div class="title">Contact</div>
                         <span class="subtitle">Jaslok Hospital & Research Centre</span>
                         <div class="contactlist">
-                            <p><i class="glyphicon glyphicon-map-marker icon-color"></i> 15 - Dr. Deshmukh Marg,<br>
-                <span>Pedder Road, Mumbai- 400026</span></p>
+                            <p><i class="glyphicon glyphicon-map-marker icon-color"></i> 15 - Dr. Deshmukh Marg,<br><span>Pedder Road, Mumbai- 400026</span></p>
                             <p><i class="glyphicon glyphicon-envelope icon-color"></i> <a href="mailto:online@jaslokhospital.net">online@jaslokhospital.net</a></p>
 
                             
@@ -58,7 +52,7 @@
             </div>
         </div>
 
-        <!------footerbottom------->
+        <!-- ----footerbottom----- -->
         <div class="container-fluid footer-inner">
             <div class="container">
 
@@ -67,7 +61,7 @@
                         <img src="/images/footer_logo.png" class="" alt="footer_logo" title="footer_logo">
                     </div>
                     <div class="col-md-8 col-sm-12 col-xs-12">
-                        <ul class="nav1" style="width: 100%;">
+                        <ul id="footernav1" class="nav1" style="width: 100%;">
                             <li class="border"><a href="/about-us">About us </a></li>
                             <li class="border"><a href="/complaint">Complaint </a></li>
                             <li class="border"><a href="http://webmail.jaslokhospital.net/appsuite/signin">Webmail</a></li>

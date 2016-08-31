@@ -88,7 +88,7 @@ public partial class JSControls_MiddleContent_LeftPaneFindDoctor : PortalModuleB
     //{
     //    Response.Write("sfd");
     //}
-    protected void btnSubmitLPFD_Click(object sender, EventArgs e)
+    protected void btnSubmitLPFD1_Click(object sender, EventArgs e)
     {
         int Did=Convert.ToInt32(ddlDoctorLPD.SelectedValue);
         string DoctorName = Convert.ToString(ddlDoctorLPD.SelectedItem.Text);
