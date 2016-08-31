@@ -4,9 +4,9 @@
 <%@ Register Src="~/JSControls/MiddleContent/LeftPaneBookAppointment.ascx" TagPrefix="JS" TagName="LeftPaneBookAppointment" %>
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
             
-    <!-- Carousel    ================================================== -->
+    <!-- Carousel -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -64,22 +64,22 @@
                                         <div class="opddoctors">
 
 
-                                            <div class="panel-body" id="DoctorDetails">
+                                            <div class="panel-body">
 
                                                 <%#string.IsNullOrEmpty(Convert.ToString(Eval("Designation")))?""+Eval("Designation"):"<p><b>Qualification & Experience</b></p><p>"+Eval("Designation")+"</p>" %>
 
 
                                                 <div class="bs-example scopeofservices">
-                                                    <div class="panel-group" id="accordion">
-                                                        <p id="divDescription" runat="server" visible='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("Description")))?true:false%>'><%# Eval("Description") %></p>
-                                                        <p id="divBriefWriteUp" runat="server" visible='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("BriefWriteUp")))?true:false%>'><%# Eval("BriefWriteUp") %></p>
-                                                        <p id="divAwards" runat="server" visible='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("Awards")))?true:false%>'><%# Eval("Awards") %></p>
+                                                    <div class="panel-group specialtyopddata">
+                                                        <div id="divDescription" runat="server" visible='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("Description")))?true:false%>'><%# Eval("Description") %></div>
+                                                        <div id="divBriefWriteUp" runat="server" visible='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("BriefWriteUp")))?true:false%>'><%# Eval("BriefWriteUp") %></div>
+                                                        <div id="divAwards" runat="server" visible='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("Awards")))?true:false%>'><%# Eval("Awards") %></div>
                                                     </div>
                                                 </div>
                                             </div>
 
 
-                                            <a data-parent="#media-accordion" target="_blank" style="margin-top: 5px;" href='<%#"/fix-appointment/"+CommonFn.RemoveSpecialCharacters(Convert.ToString(Eval("Name")))+"/"+(Eval("DoctorId"))%>' aria-expanded="true" aria-controls="collapseOne" class="btn btn-orange">Fix an Appointment &gt;
+                                            <a data-parent="#media-accordion" target="_blank" style="margin-top: 5px;" href='<%#"/fix-appointment/"+CommonFn.RemoveSpecialCharacters(Convert.ToString(Eval("Name")))+"/"+(Eval("DoctorId"))%>' class="btn btn-orange">Fix an Appointment &gt;
                                             </a>
 
                                         </div>
@@ -106,9 +106,9 @@
 </div>
 
 
-<!------testimonail start-------->
+<!-- testimonail start -->
 <JS:Testimonials runat="server" ID="Testimonials" />
-<!----------Testimonial end---->
+<!-- Testimonial end -->
 
 <JS:Footer runat="server" ID="Footer" />
 

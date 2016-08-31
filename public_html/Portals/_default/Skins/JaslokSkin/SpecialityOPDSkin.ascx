@@ -4,9 +4,9 @@
 <%@ Register Src="~/JSControls/MiddleContent/LeftPaneBookAppointment.ascx" TagPrefix="JS" TagName="LeftPaneBookAppointment" %>
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
             
-    <!-- Carousel    ================================================== -->
+    <!-- Carousel -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -91,14 +91,14 @@
                                             <ul class="media-list">
                                                 <li class="media">
                                                     <div class="media-left">
-                                                        <a href="/UploadedFiles/TestFile.pdf">
+                                                        <a href="/pdf/OPD_schedule_Final_071015.pdf">
                                                             <img class="media-object" src="images/pdf.png" alt="...">
                                                         </a>
                                                     </div>
                                                     <div class="media-body">
                                                         <h4 class="media-heading">Download PDF</h4>
                                                         <p>
-                                                            <a href="/pdf/OPD schedule Final 071015.pdf" target="_blank">
+                                                            <a href="/pdf/OPD_schedule_Final_071015.pdf" target="_blank">
                                                             <i class="glyphicon glyphicon-download"></i>
                                                             <span>Download </span>
                                                             </a>
@@ -130,9 +130,9 @@
 </div>
 
 
-<!------testimonail start-------->
+<!-- testimonail start -->
 <JS:Testimonials runat="server" ID="Testimonials" />
-<!----------Testimonial end---->
+<!-- Testimonial end -->
 
 <JS:Footer runat="server" ID="Footer" />
 
