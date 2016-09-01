@@ -9,9 +9,9 @@
 <%--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--%>
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
             
-    <!-- Carousel    ================================================== -->
+    <!-- Carousel -->
 
 <%--<img src="/images/icon.jpg" alt="Icon" class="icon-right hidden-xs">--%>
 
@@ -36,7 +36,7 @@
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
-                <p id="innerParagraph" runat="server" style="width: 100%"></p>
+                <div id="innerParagraph" runat="server" style="width: 100%"></div>
                 <asp:Panel ID="divcontentpane" runat="server"></asp:Panel>
                
             </div>
@@ -48,9 +48,9 @@
 </div>
 
 
-<!------testimonail start-------->
+<!-- testimonail start -->
 <JS:Testimonials runat="server" ID="Testimonials" />
-<!----------Testimonial end---->
+<!-- Testimonial end -->
 
 <JS:Footer runat="server" ID="Footer" />
  <div id="contentpane" runat="server">

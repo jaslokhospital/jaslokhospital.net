@@ -8,11 +8,6 @@
         return false;
     }
 </script>
-<style>
-    .displayPosition {
-        display: inline-block !important;
-    }
-</style>
 
 <div class="all-categories">
 
@@ -21,7 +16,7 @@
             <%--<asp:Literal ID="litTopDiv" Text="<div class='row'>" runat="server" Visible="false"></asp:Literal>--%>
 
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <a class="img-border" data-target='<%# ".pop-up-"+ (Container.ItemIndex+1).ToString() %>' data-toggle="modal" href="images/testimonial-1.jpg">
+                <a class="img-border" id="lnkTestimonial" runat="server" visible='<%#string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl"))) ? false : true %>' data-target='<%# ".pop-up-"+ (Container.ItemIndex+1).ToString() %>' data-toggle="modal" href="images/testimonial-1.jpg">
                     <img class="img-responsive" title="Testimonial-1" alt="Testimonial-1" style='<%#string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl"))) ? "display:none" : "display:block"%>' src='<%#Eval("ImageUrl")%>'>
                 </a>
                 <div class="appreciation_title">
@@ -39,11 +34,11 @@
             </div>
             <%--<asp:Literal ID="litBottomDiv" runat="server" Text="</div>" Visible="false"></asp:Literal>--%>
             <div id="divNewLine" runat="server" visible="false" style="clear:both"></div>
-            <div aria-hidden="true" aria-labelledby="myLargeModalLabel-1" role="dialog" tabindex="-1" class='<%# "modal fade pop-up-"+ (Container.ItemIndex+1).ToString() %>' style="display: none;">
+            <div aria-hidden="true" role="dialog" tabindex="-1" class='<%# "modal fade pop-up-"+ (Container.ItemIndex+1).ToString() %>' style="display: none;">
                 <div class="modal-dialog modal-lg">
                     <button data-dismiss="modal" class="close close-pb" type="button">×</button>
                     <div class="modal-body">
-                        <img class="img-responsive" title="Testimonial-1" alt="Testimonial-1" src='<%#Eval("ImageUrl")%>'>
+                        <img id="imgtestimonial" runat="server" visible='<%#string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl"))) ? false : true %>' class="img-responsive" title="Testimonial-1" alt="Testimonial-1" src='<%#Eval("ImageUrl")%>'>
                         <p></p>
 
                     </div>

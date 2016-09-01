@@ -35,14 +35,14 @@
 
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
 
- <!-- Carousel    ================================================== -->
+ <!-- Carousel -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="item active">
-                <asp:Image ID="imgbanner" ImageUrl="/Content/Banner/opd-web-banner-150216-20160215114721383.jpg" runat="server" CssClass="img-div" />
+                <asp:Image ID="imgbanner" ImageUrl="/Content/Banner/opd-web-banner-150216-20160215114721383.jpg" alt="Bed booking" runat="server" CssClass="img-div" />
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
                                 <div class='<%# String.Format("appreciation_title_grey {0}", ((Container.ItemIndex + 1) % 3 != 0)? "":"app_ttl_none") %>'>
                                     <%-- <asp:Label ID="lblBedType" runat="server" Text='<%#Eval("Room")%>' Style="text-align: center"></asp:Label>--%>
                                     <span style="color: 8a8b8a;"><%#Eval("Room")%></span><br>
-                                    <img src='<%#"content/photogallery/"+Eval("Images")%>' class="bed-res-img"> <br>
+                                    <img src='<%#"content/photogallery/"+Eval("Images")%>' alt="<%#Eval("Room")%>" class="bed-res-img"> <br>
                                     <div id="Div1" class="clearfix" runat="server" visible='<%#(Container.ItemIndex+1%3==0)?true:false %>'></div>
                                    <%-- <br>
                                     <asp:RadioButton ID="rdbPrice" GroupName="rdb" title='<%# DataBinder.Eval(Container.DataItem, "Room")%>' runat="server" CssClass="a_idc lable_box" Text='<%# "Price: ₹   "+ DataBinder.Eval(Container.DataItem,"Terrif") %>' value='<%# DataBinder.Eval(Container.DataItem, "Admission")%>'

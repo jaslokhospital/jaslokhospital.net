@@ -21,17 +21,6 @@
 
 
 </script>--%>
-
-<style type="text/css">
-    .bjqs-markers {
-        display: none;
-    }
-
-    #certification-banner-slider {
-        margin-left: 16.6667%;
-    }
-</style>
-
 <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/bjqs-1.3.js" ></script>
 <link rel="stylesheet" href="/Portals/_default/Skins/JaslokSkin/Styles/css/bjqs.css" />
 

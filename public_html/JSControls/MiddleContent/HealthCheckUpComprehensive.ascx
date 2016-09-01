@@ -13,9 +13,9 @@
 
      
 
-    <div class="panel-group" id="accordion">
+    <div class="panel-group" role="tablist" id="accordion">
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div role="tab" class="panel-heading">
                 <div class="panel-title mypanel-title">
                    <%-- <input type="radio" id="rdoPackageA" title="Package A" name="quality" value="5000" aria-valuetext="5000">--%>
                     <label class="a_idc" for="rdoPackageA">
@@ -33,7 +33,7 @@
               <span class="lable_box"> </span>--%>
                 </div>
             </div>
-            <div class="panel-collapse collapse" id="collapseOne" aria-expanded="false">
+            <div class="panel-collapse collapse" role="tabpanel" id="collapseOne" aria-expanded="false">
                 <div class="panel-body myPanelBody">
 
                     <div class="row">
@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>BLOOD</h5>
+                                        <li class="firsthd"><h5>BLOOD</h5></li>
                                         <li>CBC</li>
                                         <li>ESR</li>
                                         <li>Fasting Blood Sugar</li>
@@ -52,7 +52,7 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>LIVER PROFILE</h5>
+                                        <li class="firsthd"><h5>LIVER PROFILE</h5></li>
                                         <li>Total bilirubin</li>
                                         <li>SGOT</li>
                                         <li>SGPT</li>
@@ -65,7 +65,7 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>RENAL PROFILE</h5>
+                                        <li class="firsthd"><h5>RENAL PROFILE</h5></li>
                                         <li>Urea Nitrogen </li>
                                         <li>Serum Creatinine </li>
                                         <li>Uric Acid </li>
@@ -77,11 +77,11 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>ELECTROLYTES</h5>
+                                        <li class="firsthd"><h5>ELECTROLYTES</h5></li>
                                         <li>Serum Sodium</li>
                                         <li>Serum Potassium</li>
                                         <li>Serum Chloride </li>
-                                        <h5>LIPID PROFILE </h5>
+                                        <li class="firsthd"><h5>LIPID PROFILE </h5></li>
                                         <li>Serum Cholesterol </li>
                                         <li>HDL Cholesterol </li>
                                         <li>Cholesterol/HDL Ratio </li>
@@ -110,7 +110,7 @@
         </div>
         <div class="clearfix"></div>
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div role="tab" class="panel-heading">
                 <div class="panel-title mypanel-title">
                    <%-- <input type="radio" id="rdoPackageB" title="Package B" name="quality" value="6500" aria-valuetext="6500">--%>
                     <label class="a_idc" for="rdoPackageB">
@@ -123,7 +123,7 @@
                     </a>
                 </div>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
+            <div id="collapseTwo" role="tabpanel" class="panel-collapse collapse" aria-expanded="false">
                 <div class="panel-body myPanelBody">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12">
@@ -140,19 +140,19 @@
 
                                 <div class="col-lg-4 col-md-4 col-sm-12 box-l">
                                     <ul class="panel-list none-list" style="margin: 0; padding: 0px;">
-                                        <h5>ADDITIONAL TESTS </h5>
+                                        <li class="firsthd"><h5>ADDITIONAL TESTS </h5>
                                         <p>
                                             The following additional tests
 				if recommended by the physican
 			are offered at half the OPD rates.
                                         </p>
-
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <div class="col-lg-4 col-md-4 col-sm-12 box-l">
                                     <ul class="none-list" style="margin: 0; padding: 0px;">
-                                        <h5>Concessional rates are as under: </h5>
+                                        <li class="firsthd"><h5>Concessional rates are as under: </h5></li>
                                         <li>2-D ECHOCARDIOGRAPHY <span>&#8377; 660/- </span></li>
                                         <li>HOLTER MONITORING <span> &#8377; 770/- </span></li>
                                         <li>GLYCOSYLATED HB G6PD <span> &#8377; 370/- </span></li>
@@ -199,7 +199,7 @@
         </div>
          <div class="clearfix"></div>
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div role="tab" class="panel-heading">
                 <div class="panel-title mypanel-title">
                     <%--<input type="radio" id="rdoPackagec" title="Package C" name="quality" value="1500" aria-valuetext="1500">--%>
                     <label class="a_idc" for="rdoPackageC">
@@ -211,14 +211,14 @@
                     </a>
                 </div>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse in" aria-expanded="true">
+            <div id="collapseThree" role="tabpanel" class="panel-collapse collapse in" aria-expanded="true">
                 <div class="panel-body myPanelBody">
                     <div class="row  ">
                         <div class="col-lg-10 col-md-9 col-xs-12">
                             <div class="row">
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>BLOOD</h5>
+                                        <li class="firsthd"><h5>BLOOD</h5></li>
                                         <li>CBC</li>
                                         <li>ESR</li>
                                         <li>Fasting Blood Sugar</li>
@@ -228,7 +228,7 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>LIVER PROFILE</h5>
+                                        <li class="firsthd"><h5>LIVER PROFILE</h5></li>
                                         <li>Total bilirubin</li>
                                         <li>SGOT</li>
 
@@ -237,7 +237,7 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>RENAL PROFILE</h5>
+                                        <li class="firsthd"><h5>RENAL PROFILE</h5></li>
                                         <li>Urea Nitrogen </li>
                                         <li>Serum Creatinine </li>
 
@@ -246,7 +246,7 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <ul class="panel-list">
-                                        <h5>LIPID PROFILE</h5>
+                                       <li> <h5>LIPID PROFILE</h5></li>
                                         <li>Serum Cholesterol</li>
 
 

@@ -10,9 +10,9 @@
 
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
             
-    <!-- Carousel    ================================================== -->
+    <!-- Carousel -->
 <%--<div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -47,7 +47,7 @@
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="search-form">
-                    <p id="contentpane" runat="server" style="width: 100%"></p>
+                    <div id="contentpane" runat="server" style="width: 100%"></div>
                 </div>
                 <asp:Panel ID="divcontentpane" runat="server"></asp:Panel>
 
@@ -62,13 +62,11 @@
 </div>
 
 
-<!------testimonail start-------->
+<!-- testimonail start -->
 <JS:Testimonials runat="server" ID="Testimonials" />
-<!----------Testimonial end---->
+<!-- Testimonial end -->
 
 <JS:Footer runat="server" ID="Footer" />
-
-</div>
 <%--
 <script type="text/javascript">
 

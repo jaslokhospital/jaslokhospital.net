@@ -11,9 +11,9 @@
 <%--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--%>
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
 
- <!-- Carousel    ================================================== -->
+ <!-- Carousel -->
 <%--<img src="/images/icon.jpg" alt="Icon" class="icon-right">--%>
 <div class="row">
     <div class="container containerspace">
@@ -44,7 +44,7 @@
                 </div>
               
                 <asp:Panel ID="divcontentpane" runat="server">
-                     <div id="fdback">The fields marked as * are mandatory</div></br>
+                     <div id="fdback">The fields marked as * are mandatory</div><br/>
                     <div class="form-horizontal">
                          
                        <%-- <div>
@@ -52,7 +52,7 @@
                         </div>--%>
                         
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Name">Name:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Name:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <%--  <input type="text" class="form-control" id="Name" placeholder="Name">--%>
                                 <asp:TextBox ID="txtName" type="text" class="form-control" placeholder="Name" MaxLength="200" runat="server"></asp:TextBox>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Email">Email Address:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Email Address:<span style="color: red">*</span></label>
 
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtEmail" class="form-control" placeholder="Email Address" runat="server"></asp:TextBox>
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="phoneNumber">Complaint Details:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Complaint Details:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtComplaint" runat="server" placeholder="Complaint Details" class="form-control" TextMode="MultiLine"></asp:TextBox>
                                 <asp:RequiredFieldValidator Display="Dynamic" ID="rfvQues" runat="server" ControlToValidate="txtComplaint" ValidationGroup="vgSubmit" ForeColor="Red" ErrorMessage="Please Enter FeedBack"></asp:RequiredFieldValidator>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="phoneNumber">Enter text:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Enter text:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <telerik:RadCaptcha ID="cptchComplaint" ForeColor="Red" EnableRefreshImage="true" ValidationGroup="vgSubmit" ErrorMessage="Enter valid captcha" runat="server"></telerik:RadCaptcha>
                             </div>
