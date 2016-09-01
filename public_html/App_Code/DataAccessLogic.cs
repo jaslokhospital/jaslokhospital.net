@@ -379,7 +379,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "CREATEUSER", new object[] { Username, FName, LName, Email, DisplayName, Password, AppGlobal.PortalId, true, Gender, Address, Age, Telephone, MRNO, OTP });
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "CREATEUSER", new object[] { Username, FName, LName, Email, DisplayName, Password, AppGlobal.PortalId, true, Gender, Address, Age, Telephone, MRNO,OTP,MRNO});
             }
             catch (Exception ex)
             {
@@ -809,7 +809,7 @@ namespace BusinessDataLayer
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw ex; 
             }            
         }
         public DataSet GetUserTypeAllDetails(DataAccessEntities Slist)
@@ -1836,20 +1836,18 @@ namespace BusinessDataLayer
                 throw ex;
             }
         }
-
         //BookBed
         public void SavePaymentBedSurgery(DataAccessEntities Slist)
         {
             try
             {
-                 Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBedSurgery", new object[] { Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.FacilityName, Slist.Category, Slist.AdmissionCharge, objInfo.UserID, Slist.DoctorId, Slist.BookinDateTime, Slist.JeevaStatus }));
+                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBedSurgery", new object[] { Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.FacilityName, Slist.Category, objInfo.UserID, Slist.DoctorId, Slist.BookinDateTime, Slist.JeevaStatus }));
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-
         //BookBedDetail
         public DataSet GetBedDetails()
         {
