@@ -41,7 +41,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                     UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
                     if (!string.IsNullOrEmpty(objuser.Username))
                     {
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "PermanentRegReminderBox()", true);
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){PermanentRegReminderBox();});", true);	
                         Session["IsVisitor"] = null;
                     }
                 }
