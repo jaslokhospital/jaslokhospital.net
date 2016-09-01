@@ -124,13 +124,13 @@ public partial class PaymentResponse : System.Web.UI.Page
                     {
                         sessionData = (DataAccessEntities)Session["OutstandingBillPayment"];
                     }
+                    else if (Session["permenantRegistration"] != null)
+                    {
+                        sessionData = (DataAccessEntities)Session["permenantRegistration"];
+                    }
                     else if (Session["ConsultationAppointment"] != null)
                     {
                         sessionData = (DataAccessEntities)Session["ConsultationAppointment"];
-                    }
-                    else
-                    {
-                        sessionData = (DataAccessEntities)Session["permenantRegistration"];
                     }
 
 

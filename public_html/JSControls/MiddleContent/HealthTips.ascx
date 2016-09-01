@@ -21,7 +21,7 @@
     <asp:Repeater ID="rptHealthTips" runat="server">
         <ItemTemplate>
             <div class='<%#Container.ItemIndex==0?"categories cat-1 healtspacing":"categories healtspacing"%>'>     
-           <table cellpadding="5" cellspacing="5" width="100%" border="0" >
+           <table class="healthTip-table" >
                <tr>
                    <td> 
                        <%-- <a href="/healthdetails.aspx?HealthTipId=<%#Eval("HealthTipId")%>"><%#Eval("Title")%></a>--%>

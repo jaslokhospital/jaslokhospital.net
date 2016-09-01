@@ -4,8 +4,8 @@
     <ItemTemplate>
         <div class='<%#Container.ItemIndex==0?"media trustees-accordion":"media" %>'>
             <div class='<%#Container.ItemIndex+1%2==0?"media-left media-top col-sm-3 col-xs-12":"media-left col-sm-3 col-xs-12 mgt-main-space" %>' >
-                <a data-toggle="collapse" data-parent="#accordion" href="#media-collapse-1" aria-expanded="true"  aria-controls="media-collapse-1" >
-                    <img class="media-object media-border img-responsive profile-bg" style="width:150px" src='<%#Eval("ImageUrl")%>'>
+                <a data-toggle="collapse" data-parent="#accordion" href="#media-collapse-1" aria-expanded="true" >
+                    <img class="media-object media-border img-responsive profile-bg" alt="<%#Eval("Name")%>" style="width:150px" src='<%#Eval("ImageUrl")%>'>
                 </a>
             </div>
             <div class="media-body col-sm-9 col-xs-12 mgt-main-info" >
@@ -26,7 +26,7 @@
     </ItemTemplate>
 </asp:Repeater>
 
-<img src="../../Content/UsersGallery/M-1.jpg" class="img-responsive" style="margin-bottom:1%;" />
+<img src="../../Content/UsersGallery/M-1.jpg" alt="Management Team" class="img-responsive" style="margin-bottom:1%;" />
 <div class="divManagementPics">
 <p>
     Front row : Left to Right – Dr. Satyadeo Malik (Director Clinical Operation), Regina Raj (Head Quality), Dr. Tarang Gianchandani (CEO), Shatrujeet Rai (COO), Veepasha Kulkarni (Head ER), Sabina Sawliwala (Head Stores and Procurement).

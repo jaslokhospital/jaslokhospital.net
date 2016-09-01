@@ -298,8 +298,8 @@
                     You have not yet permanently registerd with Jaslok hospital, please go for the permanent
                     registration to get premium benifits.
                 </p>
-                Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn"
-                    target="_blank">Submit</a>
+               <p> Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn"
+                    target="_blank">Submit</a></p>
                 <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
             </div>
         </div>

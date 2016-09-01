@@ -1,16 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftNavigation.ascx.cs" Inherits="JSControls_Common_LeftNavigation" %>
 
-<style>
-    .nav-list.bs-docs-sidenav .active a {
-        background-color: #00bcd4;
-        color: #fff !important;
-    }
+<!--<style>
+    
 
     .left_part {
         padding-top: 0;
     }
 </style>
-<!--<script type="text/javascript">
+<script type="text/javascript">
 	$(document).ready(function(){
 		$("dropdown-menu").click(function(){
 			$(".dropdown-menu li a").slideTogle();             
