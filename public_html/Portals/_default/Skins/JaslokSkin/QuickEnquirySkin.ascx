@@ -122,11 +122,11 @@
                     </div>
                 </asp:Panel>
 
-                 <asp:Panel ID="PanelMessage" runat="server" Visible="false">
+                 <%--<asp:Panel ID="PanelMessage" runat="server" Visible="false">
                      <div class="form-horizontal">
                         <h3 style="color:green;text-align:center">We have received your inquiry, you should receive a reply or a call shortly!!!</h3>
                          </div>
-                    </asp:Panel>
+                    </asp:Panel>--%>
 
                 <div class="left_form hidden-lg visible-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />

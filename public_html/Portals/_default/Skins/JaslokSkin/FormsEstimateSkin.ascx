@@ -141,11 +141,11 @@
                     </div>
                 </asp:Panel>
 
-                 <asp:Panel ID="PanelMessage" runat="server" Visible="false">
+                 <%--<asp:Panel ID="PanelMessage" runat="server" Visible="false">
                      <div class="form-horizontal">
                         <h3 style="color:green;text-align:center">Thank you for your request, you should receive a reply or a call shortly!!!</h3>
                          </div>
-                    </asp:Panel>
+                    </asp:Panel>--%>
 
 
                 <div class="left_form hidden-lg visible-xs">
