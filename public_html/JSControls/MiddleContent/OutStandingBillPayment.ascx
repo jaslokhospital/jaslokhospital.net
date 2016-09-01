@@ -1,42 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="OutStandingBillPayment.ascx.cs" Inherits="JSControls_MiddleContent_OutStandingBillPayment" ClientIDMode="Static" %>
 
-<style>
-
-    .left-inner-addon {
-    position: relative;
-}
-.left-inner-addon input {
-    padding-left: 22px;    
-}
-.left-inner-addon span {
-    position: absolute;
-    padding: 7px 12px;
-    pointer-events: none;
-}
-
-.right-inner-addon {
-    position: relative;
-}
-.right-inner-addon input {
-    padding-right: 30px;    
-}
-.right-inner-addon span {
-    position: absolute;
-    right: 0px;
-    padding: 7px 12px;
-    pointer-events: none;
-}
-
-
-
-
-    /*.currencyinput {
-    border: 1px inset #ccc;
-}
-.currencyinput input {
-    border: 0;
-}*/
-</style>
 <%--<img src="/images/icon.jpg" alt="Icon" class="icon-right">--%>
 <div class="row">
     <div class="OutStandingBillPayment">

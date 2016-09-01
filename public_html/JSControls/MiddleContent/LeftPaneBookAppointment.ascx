@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LeftPaneBookAppointment.ascx.cs" Inherits="JSControls_MiddleContent_LeftPaneBookAppointment" EnableViewState="true" ViewStateMode="Enabled" ClientIDMode="Static" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
-<style type="text/css">
+<%--<style type="text/css">
     .table-condensed {
         display: none;
     }
@@ -17,16 +17,13 @@
     .RadPicker {
         width: 72% !important;
     }
-    .left_form {
-        padding-bottom: 0px;
-        margin-top: 0px !important;
-    }
     
-</style>
+    
+</style>--%>
 
 
 
-<div class="left_form">
+<div class="divBookApp_left_form">
 
     <telerik:RadAjaxPanel ID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel1" runat="server" RestoreOriginalRenderDelegate="false">
         <div class="form-horizontal">
