@@ -11,9 +11,9 @@
 
 <%--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--%>
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
 
- <!-- Carousel    ================================================== -->
+ <!-- Carousel -->
 <%--<img src="/images/icon.jpg" alt="Icon" class="icon-right">--%>
 <div class="row">
     <div class="container containerspace">
@@ -45,11 +45,11 @@
                 </div>--%>
                
                 <asp:Panel ID="divcontentpane" runat="server">
-                     <div id="fdback">The fields marked as * are mandatory</div></br>
+                     <div id="fdback">The fields marked as * are mandatory</div><br/>
                     <div class="form-horizontal">
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Name">Name:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Name:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <%--  <input type="text" class="form-control" id="Name" placeholder="Name">--%>
                                 <asp:TextBox ID="txtName" type="text" class="form-control" MaxLength="200" runat="server"></asp:TextBox>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Mobile">Mobile:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Mobile:<span style="color: red">*</span></label>
 
                             <div class="col-xs-12 col-sm-9">
                                 <%-- <asp:TextBox ID="txtMobile" class="form-control" runat="server" MaxLength="10" ></asp:TextBox>--%>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Email">Email Id:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Email Id:<span style="color: red">*</span></label>
 
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtEmail" class="form-control" runat="server"></asp:TextBox>
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="phoneNumber">Feed Back:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Feed Back:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtFeedBack" runat="server" class="form-control" TextMode="MultiLine"></asp:TextBox>
                                 <asp:RequiredFieldValidator Display="Dynamic" ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFeedBack" ValidationGroup="FedbckSubmit" ForeColor="Red" ErrorMessage="Please Enter FeedBack"></asp:RequiredFieldValidator>
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="phoneNumber">Enter text:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Enter text:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <telerik:RadCaptcha ID="cptchFeedback" ForeColor="Red" EnableRefreshImage="true" ValidationGroup="FedbckSubmit" ErrorMessage="Enter valid captcha" runat="server"></telerik:RadCaptcha>
                             </div>

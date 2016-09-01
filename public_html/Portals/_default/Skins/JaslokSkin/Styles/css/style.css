@@ -1121,7 +1121,9 @@ select option {
     font-family: Sansation-Bold;
     font-size: 22px;
 }
-.right_part h4 {
+.right_part h4,
+.right_part th span
+ {
     color: #00bcd4;
     font-family: 'Sansation-Bold';
     font-size: 18px;
@@ -2239,7 +2241,9 @@ p.video_caption {
     width: 100%;
     overflow: auto;
 }
-.package_table h4 {
+.package_table h4, 
+.package_table th span
+ {
     color: #00bcd4;
     font-family: 'Sansation-Bold';
     font-size: 17px;
@@ -3457,6 +3461,12 @@ a.press-anq {
     margin-left: -11px;
 }
 
+.healthCheckup .myPanelBody ul.panel-list li.firsthd::before {
+    content: " ";
+    color: #858586;
+    margin-left: 0;
+}
+
 .healthCheckup .myPanelBody ul.panel-list-none li::before {
     content: "";
     color: #858586;
@@ -3512,7 +3522,7 @@ a.press-anq {
     float: left;
     color: #f5f5f5;
     background-color: #00bcd4;
-    padding: 10; 
+    padding: 10px; 
 	width:43px; 
 	text-align:center;
 	

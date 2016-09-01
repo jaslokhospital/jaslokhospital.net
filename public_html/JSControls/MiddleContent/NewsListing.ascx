@@ -22,7 +22,7 @@
             </div>
             <%--<asp:Literal ID="litBottomDiv" runat="server" Text="</div>" Visible="false"></asp:Literal>--%>
              <div id="divNewLine" runat="server" visible="false" style="clear:both"></div>
-            <div aria-hidden="true" aria-labelledby="myLargeModalLabel-1" role="dialog" tabindex="-1" class='<%# "modal fade pop-up-"+ (Container.ItemIndex+1).ToString() %>' style="display: none;">
+            <div aria-hidden="true" role="dialog" tabindex="-1" class='<%# "modal fade pop-up-"+ (Container.ItemIndex+1).ToString() %>' style="display: none;">
                 <div class="modal-dialog modal-lg">
                     <button data-dismiss="modal" class="close close-pb" type="button">×</button>
                     <div class="modal-body">

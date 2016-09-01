@@ -11,9 +11,9 @@
 <%--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--%>
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
 
- <!-- Carousel    ================================================== -->
+ <!-- Carousel -->
 
 <%--<img src="/images/icon.jpg" alt="Icon" class="icon-right">--%>
 <div class="row">
@@ -43,10 +43,10 @@
                 </div>
                  
                 <asp:Panel ID="divcontentpane" runat="server">
-                    <div id="fdback">The fields marked as * are mandatory</div></br>
+                    <div id="fdback">The fields marked as * are mandatory</div><br/>
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Name">Name: <span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Name: <span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <%--  <input type="text" class="form-control" id="Name" placeholder="Name">--%>
                                 <asp:TextBox ID="txtName" type="text" class="form-control" MaxLength="200" runat="server"></asp:TextBox>
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Age">Age: <span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Age: <span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <%-- <asp:TextBox ID="txtMobile" class="form-control" runat="server" MaxLength="10" ></asp:TextBox>--%>
                                 <asp:TextBox ID="txtAge" runat="server" class="form-control" onkeypress="return Numeric(event);" MaxLength="2" ondrop="return false;" onpaste="return false;"></asp:TextBox>
@@ -74,7 +74,7 @@
                                 </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Mobile">Mobile: <span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Mobile: <span style="color: red">*</span></label>
 
                             <div class="col-xs-12 col-sm-9">
                                 <%-- <asp:TextBox ID="txtMobile" class="form-control" runat="server" MaxLength="10" ></asp:TextBox>--%>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="Email">Email: <span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Email: <span style="color: red">*</span></label>
 
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtEmail" class="form-control" runat="server"></asp:TextBox>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="txtQuestion">Question: <span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Question: <span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <asp:TextBox ID="txtQuestion" runat="server" class="form-control" TextMode="MultiLine"></asp:TextBox>
                                 <asp:RequiredFieldValidator Display="Dynamic" ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtQuestion" ValidationGroup="QuickEnqSubmit" ForeColor="Red" ErrorMessage="Please Enter FeedBack"></asp:RequiredFieldValidator>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12" for="phoneNumber">Enter text:<span style="color: red">*</span></label>
+                            <label class="control-label col-sm-3 col-xs-12">Enter text:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
                                 <telerik:RadCaptcha ID="cptchQuickEnquiry" ForeColor="Red" EnableRefreshImage="true" ValidationGroup="QuickEnqSubmit" ErrorMessage="Enter valid captcha" runat="server"></telerik:RadCaptcha>
                             </div>
