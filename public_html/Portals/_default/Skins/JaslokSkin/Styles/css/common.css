@@ -109,3 +109,11 @@
     }*/
     .carosual_widthright {width:auto;    }
     .carosual_widthleft {width:1%!important;    }
+.specialtyopddata div {
+    padding-bottom: 40px;
+}
+.specialityDetailContent {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+}
