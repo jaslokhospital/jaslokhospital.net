@@ -125,11 +125,11 @@
                         </div>
                     </div>
                 </asp:Panel>
-                <asp:Panel ID="PanelMessage" runat="server" Visible="false">
+                <%--<asp:Panel ID="PanelMessage" runat="server" Visible="false">
                      <div class="form-horizontal">
                         <h3 style="color:green;text-align:center">Thank you for your feedback</h3>
                          </div>
-                    </asp:Panel>
+                    </asp:Panel>--%>
 
                 <div class="left_form hidden-lg visible-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
