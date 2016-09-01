@@ -37,9 +37,9 @@
 
 
 <div id="contentpaneHeader" runat="server"></div>
-<!-----header end->
+<!-- header end -->
             
-    <!-- Carousel    ================================================== -->
+    <!-- Carousel -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -92,9 +92,9 @@
 
 <%--<div style="overflow:hidden;height:500px;width:600px;padding-left:30%"><div id="gmap_canvas" style="height:500px;width:600px;"><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">wordpress themes</a></div></div>--%>
 
-<!------testimonail start-------->
+<!-- testimonail start -->
 <JS:Testimonials runat="server" ID="Testimonials" />
-<!----------Testimonial end---->
+<!-- Testimonial end -->
 
 <JS:Footer runat="server" ID="Footer" />
 

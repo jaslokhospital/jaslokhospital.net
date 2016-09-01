@@ -83,7 +83,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12 col-spacing ">
                                     <div class="speciality-icons equal">
                                         <a id="A3" href='<%#"/specialties/"+CommonFn.RemoveSpecialCharacters(Convert.ToString(Eval("SpecialtyName"))) +"/"+ Eval("SpecialtyId")%>' runat="server">
-                                           <img src='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?Eval("ImageUrl"):"../../../../Content/SpecialtiesGallery/default-img.png"%>'/>
+                                           <img alt='<%# Eval("SpecialtyName") %>' src='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?Eval("ImageUrl"):"../../../../Content/SpecialtiesGallery/default-img.png"%>'/>
                                            <%--<div class='<%#"specialties specialties-" + Eval("SpecialtyAliasName")%>' style="float:left"></div>--%>
                                            <span> <%#Eval("SpecialtyName")%></span>
                                         </a>
@@ -101,7 +101,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12 col-spacing">
                                     <div class="speciality-icons" style="height:50px">
 										<a id="A3" href='<%# (Eval("SpecialtyID").ToString() == "33") ? "/specialitywise-opd" : "/specialties"+"/"+CommonFn.RemoveSpecialCharacters(Convert.ToString(Eval("SpecialtyName")))+"/" + Eval("SpecialtyId") %>' runat="server">
-                                         <img src='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?Eval("ImageUrl"):"../../../../Content/SpecialtiesGallery/default-img.png"%>'/>
+                                         <img alt='<%# Eval("SpecialtyName") %>' src='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?Eval("ImageUrl"):"../../../../Content/SpecialtiesGallery/default-img.png"%>'/>
                                              <%-- <div class='<%#"specialties specialties-" + Eval("SpecialtyAliasName")%>' style="float:left"></div>--%>
                                             <span><%#Eval("SpecialtyName")%></span>
                                         </a>
@@ -119,7 +119,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12 col-spacing ">
                                     <div class="speciality-icons equal">
                                         <a id="A3" href='<%#"/specialties"+"/"+CommonFn.RemoveSpecialCharacters(Convert.ToString(Eval("SpecialtyName")))+"/" + Eval("SpecialtyId")%>' runat="server">
-                                            <img src='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?Eval("ImageUrl"):"../../../../Content/SpecialtiesGallery/default-img.png"%>'/>
+                                            <img alt='<%# Eval("SpecialtyName") %>' src='<%#!string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))?Eval("ImageUrl"):"../../../../Content/SpecialtiesGallery/default-img.png"%>'/>
                                            <%--<div class='<%#"specialties specialties-" + Eval("SpecialtyAliasName")%>' style="float:left"></div>--%>
                                             <span> <%#Eval("SpecialtyName")%></span>
                                         </a>

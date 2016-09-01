@@ -957,11 +957,20 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
     //}
     public void IsMNumberExist()
     {
-        bool check = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());		
-       
+        UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+        bool check = false;
+        if (objuser.UserID > 0)
+            check = objBusinessLogic.IsExistMrNo(objuser.Username);
+        else
+            check = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());
+
         if (check == false)
         {
             hdnMrNumberexist.Value = "NotExist";
+        }
+        else
+        {
+            hdnMrNumberexist.Value = "Exist";
         }
     }
 }
