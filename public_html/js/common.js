@@ -483,9 +483,9 @@ function selectOption1Change(selectControl, hdnValue) {
 
         if (hdnUserId != null && hdnUserId.value > 0) {
 
-
+            var MRNumber = document.getElementById("hdnMrNumberexist").value;
             if (selectControl == "bed-booking" || selectControl == "outstandingbillpayment" || selectControl == "health-check-up-comprehensive" || selectControl == "surgery-booking") {
-                var MRNumber = document.getElementById("hdnMrNumberexist").value;
+                
                 //alert(MRNumber);
                 if (MRNumber == "NotExist") {
                     PermanentRegReminderBox();
@@ -497,6 +497,10 @@ function selectOption1Change(selectControl, hdnValue) {
             }
             else if (selectControl == "PatientRegistration") {
                 PermanentRegReminderBox();
+                if (MRNumber != "NotExist") {
+                    $("#permenantRegistrationModal .modal-body p").html("You are already a Registered Member on this Portal.");
+                    $("#permenantRegistrationModal .modal-body p").next("p").hide();
+                }
                 return;
             }
             else {
