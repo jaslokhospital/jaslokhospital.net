@@ -131,10 +131,11 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
 
             lsEmailStatus = objMailer.SendEmail("complaint_user", lstParameters, objDAEntities.Email, EmailCCId);
 
-            divcontentpane.Visible = false;
-            PanelMessage.Visible = true;
+           // divcontentpane.Visible = false;
+           // PanelMessage.Visible = true;
 
             clear();
+            Response.Redirect("/complaint/success");
             // }
             // else
             // {            // Label1.ForeColor = System.Drawing.Color.Red;

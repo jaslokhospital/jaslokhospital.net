@@ -2921,7 +2921,7 @@ a.press-anq {
         margin-left: -9px;     
              }
 
-.conect-icon{width: 20% !important;}
+.conect-icon{width: 20% !important; padding-left: 0;}
 
 .fa-quote-right {
     font-size: 24px;
