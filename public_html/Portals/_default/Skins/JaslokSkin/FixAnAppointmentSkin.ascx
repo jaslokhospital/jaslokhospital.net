@@ -126,7 +126,7 @@
         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <asp:PlaceHolder ID="placeRightPart" runat="server">
                 <div class="right_part">
-                    <h3>Fix An Appointment</h3>
+                    <h1>Fix An Appointment</h1>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
                     <div class="border-3"></div>

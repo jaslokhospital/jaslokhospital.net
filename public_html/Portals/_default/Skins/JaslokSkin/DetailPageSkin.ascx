@@ -60,7 +60,7 @@
         <div id="divContactus" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part">
 
-                <h3 id="h3header" runat="server"></h3>
+                <h1 id="h3header" runat="server"></h1>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>

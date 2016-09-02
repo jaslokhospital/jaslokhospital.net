@@ -34,7 +34,7 @@
         </div>
         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part" style="margin-top: -10px;">
-                <h3>Find Doctor</h3>
+                <h1>Find Doctor</h1>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
