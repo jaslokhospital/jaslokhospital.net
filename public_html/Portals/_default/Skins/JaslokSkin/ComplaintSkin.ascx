@@ -35,7 +35,7 @@
             <div class="right_part">
                 <div id="contentpane" runat="server"></div>
                 <%--<h3 id="h3header" runat="server" class="desk">Complain <span class="desk1">Form</span></h3>--%>
-                <h3 id="h3header" runat="server">Complaint Form</h3>
+                <h1 id="h3header" runat="server">Complaint Form</h1>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
