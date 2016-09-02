@@ -66,7 +66,7 @@
             <div class="right_part specialty_header">
 
                 <%--<h3 id="h3header" class="desk" runat="server">Medical <span class='desk1'>Specialties</span></h3> --%>
-                <h3 id="h3header" runat="server" style="padding: 10px 0;">Medical Specialties</h3> 
+                <h1 id="h3header" runat="server" style="padding: 10px 0;">Medical Specialties</h1> 
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>

@@ -53,7 +53,7 @@
         </div>
         <div class="col-lg-8 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part specialitywiseOPD" id="content">
-                <h3 class="desk">Speciality  <span class="desk1">Clinics OPD</span></h3>
+                <h1 class="desk">Speciality  <span class="desk1">Clinics OPD</span></h1>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
                 <div class="border-3"></div>
