@@ -32,8 +32,7 @@ public partial class JSControls_MiddleContent_InnerVideoGallery : PortalModuleBa
         {
             DataSet ds = new DataSet();
             ds = null;
-            objDAEntities.AlbumID = id;
-            ds = (DataSet)objBusinessLogic.GetVideoDetailByAlbumId(objDAEntities);
+            ds = (DataSet)objBusinessLogic.GetVideoDetailByAlbumId(id);
 
             rptVideoGALLERY.DataSource = ds;
             rptVideoGALLERY.DataBind();
@@ -43,7 +42,7 @@ public partial class JSControls_MiddleContent_InnerVideoGallery : PortalModuleBa
         }
         catch (Exception ex)
         {
-
+            //Response.Write(ex.ToString());
         }
     }
 }

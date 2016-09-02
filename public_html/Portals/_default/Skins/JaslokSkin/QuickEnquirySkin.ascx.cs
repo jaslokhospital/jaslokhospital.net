@@ -141,12 +141,13 @@ public partial class Portals__default_Skins_JaslokSkin_QuickEnquirySkin : DotNet
 
             lsEmailStatus = objMailer.SendEmail("quickenquiry_user", lstParameters, objDAEntities.Email, EmailCCId);
 
-            divcontentpane.Visible = false;
-            PanelMessage.Visible = true;
+            //divcontentpane.Visible = false;
+            //PanelMessage.Visible = true;
 
 
             //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", true);
             clear();
+            Response.Redirect("/quick-inquiry/success");
             // }
             // else
             // {            // Label1.ForeColor = System.Drawing.Color.Red;

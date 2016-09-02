@@ -122,12 +122,13 @@ public partial class Portals__default_Skins_JaslokSkin_FeedBackSkin : DotNetNuke
             lsEmailStatus = objMailer.SendEmail("feedback_user", lstParameters, objDAEntities.Email, EmailCCId);
             //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", true);
             // fdback.Visible = false;
-            divcontentpane.Visible = false;
+           /// divcontentpane.Visible = false;
 
-            PanelMessage.Visible = true;
+            //PanelMessage.Visible = true;
 
             //Response.Write(lsEmailStatus);
             clear();
+            Response.Redirect("/feedback/success");
         }
         //}
 

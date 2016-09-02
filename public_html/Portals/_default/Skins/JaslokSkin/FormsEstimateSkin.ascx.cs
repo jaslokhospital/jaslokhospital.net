@@ -143,10 +143,11 @@ public partial class Portals__default_Skins_JaslokSkin_FormsEstimateSkin : DotNe
             //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", false);
             // ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", true);
 
-            divcontentpane.Visible = false;
+           // divcontentpane.Visible = false;
 
-            PanelMessage.Visible = true;
+           // PanelMessage.Visible = true;
             clear();
+            Response.Redirect("/estimate-request/success");
             // }
             //else
             // {  
