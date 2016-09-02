@@ -481,6 +481,11 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
                         if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
                         {
+                            if (hdnRedirectUrl.Value.ToLower() == "patientregistration")
+                            {
+                                Response.Redirect("/");
+                            }
+                            else
                             Response.Redirect("/" + hdnRedirectUrl.Value);
                         }
                         else
