@@ -1111,7 +1111,7 @@ select option {
     font-family: 'Sansation-Bold';
     font-size: 18px;
 }
-.right_part h3 {
+.right_part h1,.right_part h3 {
     color: #3a3c41;
     font-family: 'Sansation-Bold';
     font-size: 25px;

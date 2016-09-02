@@ -116,7 +116,7 @@
                  <div id="divContent" runat="server">
 
                 <div class="right_part bedBooking">
-                    <h3 id="dnn_h3header">Bed Reservation</h3>
+                    <h1 id="dnn_h3header">Bed Reservation</h1>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
                     <div class="border-3"></div>
