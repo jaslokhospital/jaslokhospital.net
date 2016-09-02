@@ -1,0 +1,437 @@
+﻿.sprite {
+    background-image: url(/images/jaslok/spritesheet.png);
+
+    background-repeat: no-repeat;
+    display: block;
+        display: inline-block;
+    height: 30px !important;
+    width: 30px !important;
+    vertical-align: top;
+}
+
+.sprite-1-20151218044328400 {
+    width: 39px;
+    height: 38px;
+    background-position: -1px -1px;
+}
+
+.sprite-10-20151218043050611 {
+    width: 30px;
+    height: 33px;
+    background-position: -42px -1px;
+}
+
+.sprite-11-20151218042936165 {
+    width: 30px;
+    height: 33px;
+    background-position: -74px -1px;
+}
+
+.sprite-13-20151218042740395 {
+    width: 29px;
+    height: 37px;
+    background-position: -106px -1px;
+}
+
+.sprite-14-20151218042552221 {
+    width: 34px;
+    height: 25px;
+    background-position: -137px -1px;
+}
+
+.sprite-15-20151218042455768 {
+    width: 36px;
+    height: 32px;
+    background-position: -173px -1px;
+}
+
+.sprite-16-20151218042427056 {
+    width: 29px;
+    height: 25px;
+    background-position: -211px -1px;
+}
+
+.sprite-3-20151230204910015 {
+    width: 40px;
+    height: 40px;
+    background-position: -211px -28px;
+}
+
+.sprite-4-20151218043919677 {
+    width: 34px;
+    height: 33px;
+    background-position: -1px -70px;
+}
+
+.sprite-5-20151218043823127 {
+    width: 30px;
+    height: 32px;
+    background-position: -37px -70px;
+}
+
+.sprite-6-20151218043730285 {
+    width: 38px;
+    height: 34px;
+    background-position: -69px -70px;
+}
+
+.sprite-9-20151218043352723 {
+    width: 31px;
+    height: 32px;
+    background-position: -109px -70px;
+}
+
+.sprite-accupressure-20160119162606338 {
+    width: 30px;
+    height: 30px;
+    background-position: -142px -70px;
+}
+
+.sprite-anesthesia-20160125174018513 {
+    width: 30px;
+    height: 30px;
+    background-position: -174px -70px;
+}
+
+.sprite-assisted-reproduction-_ivf_-clinic-20160119163548471 {
+    width: 30px;
+    height: 30px;
+    background-position: -206px -70px;
+}
+
+.sprite-cardiac-surgery-20160128145044218 {
+    width: 30px;
+    height: 30px;
+    background-position: -238px -70px;
+}
+
+.sprite-cardiology_icon-20160119165104711 {
+    width: 30px;
+    height: 30px;
+    background-position: -142px -102px;
+}
+
+.sprite-com_polwarthmedical_chestx_raytraining-w250-20160119170524123 {
+    width: 30px;
+    height: 30px;
+    background-position: -174px -102px;
+}
+
+.sprite-critical-care_icon-20160119163100296 {
+    width: 30px;
+    height: 30px;
+    background-position: -206px -102px;
+}
+
+.sprite-default-img {
+    width: 30px;
+    height: 30px;
+    background-position: -238px -102px;
+}
+
+.sprite-default-img-20160119180056441 {
+    width: 30px;
+    height: 30px;
+    background-position: -1px -134px;
+}
+
+.sprite-dental-surgeons-20160119165041301 {
+    width: 30px;
+    height: 30px;
+    background-position: -33px -134px;
+}
+
+.sprite-dental-surgeons-20160119165041301-_1_ {
+    width: 30px;
+    height: 30px;
+    background-position: -65px -134px;
+}
+
+.sprite-dermatologists-20160119165027005 {
+    width: 30px;
+    height: 30px;
+    background-position: -97px -134px;
+}
+
+.sprite-dermatologists-20160119165027005-_1_ {
+    width: 30px;
+    height: 30px;
+    background-position: -129px -134px;
+}
+
+.sprite-endocrinologists-20160119165009778 {
+    width: 30px;
+    height: 30px;
+    background-position: -161px -134px;
+}
+
+.sprite-endocrinologists-20160119165009778-_1_ {
+    width: 30px;
+    height: 30px;
+    background-position: -193px -134px;
+}
+
+.sprite-ent-surgeons-20160119164951007 {
+    width: 30px;
+    height: 30px;
+    background-position: -225px -134px;
+}
+
+.sprite-epilepsy-clinic-20160128145202801 {
+    width: 30px;
+    height: 30px;
+    background-position: -1px -166px;
+}
+
+.sprite-footcare-_-co2-laser-clinic-20160119163812968 {
+    width: 30px;
+    height: 30px;
+    background-position: -33px -166px;
+}
+
+.sprite-gastroentrologists-20160119164916000 {
+    width: 30px;
+    height: 30px;
+    background-position: -65px -166px;
+}
+
+.sprite-general-surgeons-20160119164855784 {
+    width: 30px;
+    height: 30px;
+    background-position: -97px -166px;
+}
+
+.sprite-gi-surgeons-20160119164647661 {
+    width: 30px;
+    height: 30px;
+    background-position: -129px -166px;
+}
+
+.sprite-haematologists-20160120132559267 {
+    width: 30px;
+    height: 30px;
+    background-position: -161px -166px;
+}
+
+.sprite-headache-clinic-20160128145515462 {
+    width: 30px;
+    height: 30px;
+    background-position: -193px -166px;
+}
+
+.sprite-healthy-heart-clinic-20160119173827020 {
+    width: 30px;
+    height: 30px;
+    background-position: -225px -166px;
+}
+
+.sprite-hepatology_-gastroenterology-_-liver-clinic-20160119173959340 {
+    width: 30px;
+    height: 30px;
+    background-position: -1px -198px;
+}
+
+.sprite-hyperbaric-oxygen-treatment-clinic-20160119163623386 {
+    width: 30px;
+    height: 30px;
+    background-position: -33px -198px;
+}
+
+.sprite-ivf-20160119165131207 {
+    width: 30px;
+    height: 30px;
+    background-position: -65px -198px;
+}
+
+.sprite-ivf-20160119165131207-_1_ {
+    width: 30px;
+    height: 30px;
+    background-position: -97px -198px;
+}
+
+.sprite-laparoscopy-surgeons-20160119165921854 {
+    width: 30px;
+    height: 30px;
+    background-position: -129px -198px;
+}
+
+.sprite-molecular-medicine-and-biology-20160125182402853 {
+    width: 30px;
+    height: 30px;
+    background-position: -161px -198px;
+}
+
+.sprite-nephrologists-20160119164602157 {
+    width: 30px;
+    height: 30px;
+    background-position: -193px -198px;
+}
+
+.sprite-neurologists-20160119164546462 {
+    width: 30px;
+    height: 30px;
+    background-position: -225px -198px;
+}
+
+.sprite-neurosurgeons-20160119164526872 {
+    width: 30px;
+    height: 30px;
+    background-position: -1px -230px;
+}
+
+.sprite-neurosurgeons-20160119171843876 {
+    width: 30px;
+    height: 30px;
+    background-position: -33px -230px;
+}
+
+.sprite-nuclear-medicine-20160125174137284 {
+    width: 30px;
+    height: 30px;
+    background-position: -65px -230px;
+}
+
+.sprite-obstetric-_-gynaecologists-20160119173010797 {
+    width: 30px;
+    height: 30px;
+    background-position: -97px -230px;
+}
+
+.sprite-onco-surgeons-20160119172712864 {
+    width: 30px;
+    height: 30px;
+    background-position: -129px -230px;
+}
+
+.sprite-ophthalmologists-20160119164413858 {
+    width: 30px;
+    height: 30px;
+    background-position: -161px -230px;
+}
+
+.sprite-orthopedic-surgeons-20160120112726251 {
+    width: 30px;
+    height: 30px;
+    background-position: -193px -230px;
+}
+
+.sprite-paediatric-liver-clinic-20160119163433915 {
+    width: 30px;
+    height: 30px;
+    background-position: -225px -230px;
+}
+
+.sprite-paediatric-nephrology-clinic-20160119163409319 {
+    width: 30px;
+    height: 30px;
+    background-position: -253px -1px;
+}
+
+.sprite-paediatric-rheumatology-clinic-20160119163334535 {
+    width: 30px;
+    height: 30px;
+    background-position: -137px -33px;
+}
+
+.sprite-paediatric-surgeons-20160119164247669 {
+    width: 30px;
+    height: 30px;
+    background-position: -253px -33px;
+}
+
+.sprite-paediatric-surgeons-20160119164315651 {
+    width: 30px;
+    height: 30px;
+    background-position: -270px -65px;
+}
+
+.sprite-paediatricians-20160119172231088 {
+    width: 30px;
+    height: 30px;
+    background-position: -270px -97px;
+}
+
+.sprite-pain-management-20160119174626760 {
+    width: 30px;
+    height: 30px;
+    background-position: -270px -129px;
+}
+
+.sprite-pelvic-floor-clinic-_urology_-colorectal-surgery_-gynaecology_-20160119163212822 {
+    width: 30px;
+    height: 30px;
+    background-position: -257px -161px;
+}
+
+.sprite-plastic-surgeons-20160119164126422 {
+    width: 30px;
+    height: 30px;
+    background-position: -257px -193px;
+}
+
+.sprite-psychiatrists-20160119164109502 {
+    width: 30px;
+    height: 30px;
+    background-position: -257px -225px;
+}
+
+.sprite-radiation-oncologists-20160119163942337 {
+    width: 30px;
+    height: 30px;
+    background-position: -257px -257px;
+}
+
+.sprite-radiology-_-imaging-20160125174226380 {
+    width: 30px;
+    height: 30px;
+    background-position: -285px -1px;
+}
+
+.sprite-rheumatism-_-arthritis-clinic-20160119163309368 {
+    width: 30px;
+    height: 30px;
+    background-position: -285px -33px;
+}
+
+.sprite-rheumatism-_-arthritis-clinic-20160119164012881 {
+    width: 30px;
+    height: 30px;
+    background-position: -302px -65px;
+}
+
+.sprite-sonology-20160125174254545 {
+    width: 30px;
+    height: 30px;
+    background-position: -302px -97px;
+}
+
+.sprite-spasticity-clinic-20151229043721925 {
+    width: 25px;
+    height: 25px;
+    background-position: -302px -129px;
+}
+
+.sprite-speech-audio-therapy-20151229043301752 {
+    width: 25px;
+    height: 25px;
+    background-position: -302px -156px;
+}
+
+.sprite-sports-injury-clinic-20151229043752537 {
+    width: 25px;
+    height: 25px;
+    background-position: -289px -183px;
+}
+
+.sprite-urologists-20160120112525621 {
+    width: 30px;
+    height: 30px;
+    background-position: -289px -210px;
+}
+
+.sprite-varicose-vein-clinic-20160119170156510 {
+    width: 30px;
+    height: 30px;
+    background-position: -289px -242px;
+}
+
