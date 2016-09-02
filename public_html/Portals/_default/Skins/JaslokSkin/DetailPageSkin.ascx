@@ -7,7 +7,7 @@
 <%@ Register Src="~/JSControls/Common/LeftNavigation.ascx" TagPrefix="JS" TagName="LeftNavigation" %>
 <%--<%@ Register Src="~/JSControls/Common/Contactus.ascx" TagPrefix="JS" TagName="Contactus" %>--%>
 
-
+<script src="../../../../js/BookAppointment.js"></script>
 <%--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
     <
@@ -51,11 +51,13 @@
             <div class="left_part">
                 <JS:LeftNavigation ID="leftNav" runat="server" />  
             </div>
-            <div class="left_form hidden-xs">
-                <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
-                <%--<JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />--%>
+            <div id="desktop-position1">
+                <div class="left_form">
+                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
+                    <%--<JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />--%>
+                </div>
             </div>
-            </div>
+        </div>
 
         <div id="divContactus" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
             <div class="right_part">
@@ -73,9 +75,11 @@
             </div>
         </div>
          <asp:Panel ID="divMap" class="col-lg-9" runat="server" Visible="false"></asp:Panel>
-        <div class="left_form hidden-lg visible-xs">
+
+        <div id="mobile-tablet-position1"></div>
+       <%-- <div class="left_form hidden-lg visible-xs">
             <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
-        </div>
+        </div>--%>
     </div>
 </div>
 
