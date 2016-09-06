@@ -551,16 +551,15 @@ function ValidationWTU() {
 }
 
 /*middle/LPBA*/
-function ValidationLPBA() {
-    
-    if ($(".app_doctor option:selected").index() > 0)
+function ValidationLPBA() {    
+    //if ($(".app_doctor option:selected").index() > 0)
+        //return true;
+    if ($("#ddlSpecialtyLPB option:selected").index() > 0 && $("#ddlDoctorLPBA option:selected").index() > 0)
         return true;
-    else if ($("#ddlSpecialtyLPB option:selected").index() > 0)
-        return true;
-    else if ($("#ddlDoctorLPBA option:selected").index() > 0)
-        return true;
+    //else if ($("#ddlDoctorLPBA option:selected").index() > 0)
+   //     return true;
     else {
-        alert("Please select doctor name");
+        alert("Please select Specialty and Doctor name");
         return false;
     }
 }
