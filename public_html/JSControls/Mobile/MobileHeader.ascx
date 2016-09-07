@@ -167,6 +167,7 @@
                             <a class="SubMenu">CORPORATE PROFILE</a>
                             <div class="sub-nav">
                                 <div><a class="back-btn">Back To Main</a></div>
+                                 <div><a href="/corporate-profile">Corporate Profile</a></div>
                                 <div><a href="/corporate-profile/from-the-chairmans-desk">From The Chairman's Desk</a></div>
                                 <div><a href="/corporate-profile/vision-and-mission">Vision And Mission</a></div>
                                 <div><a href="/corporate-profile/trustees">Trustees</a></div>
