@@ -892,7 +892,10 @@ DOWNLOADCOPYRETURN*/
 
 @media only screen and (max-width:767px) and (orientation:landscape) {
   .arrow {
-    left: 68% !important;
+    right: 2px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 12px !important;
 }
     #carousel-example-generic .carousel-indicators {
     bottom: 0;
@@ -948,8 +951,8 @@ DOWNLOADCOPYRETURN*/
         width: 100%;
     }
     select option {
-        background: #fff!important;
-        width: 150px!important;
+       background: #fff none repeat scroll 0 0 !important;
+    width: 100% !important;
     }
     .navbar-inverse .navbar-toggle .icon-bar {
         background-color: #00bcd4 !important;
