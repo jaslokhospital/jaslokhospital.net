@@ -22,7 +22,8 @@ public partial class PaymentResponse : System.Web.UI.Page
     public DataAccessLogic objDALogic = new DataAccessLogic();
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     JaslokMailer objMailer = new JaslokMailer();
-    string lsEmailStatus = string.Empty;
+    string lsEmailStatus = string.Empty;   
+    string lsSmsStatus = string.Empty;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -146,8 +147,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                     lblTxtnId.Text = sessionData.Transactionid = Convert.ToString(txnId);
                     lblPaidAgainst.Text = sessionData.FacilityName;
                     lblDateTime.Text = Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"));
-                    lblAmount.Text = Convert.ToString(Session["Amount"]) + ".00&nbsp; INR";
-
+                    lblAmount.Text = Convert.ToString(Session["Amount"]) + ".00 INR";
+                   
                     if (txnStatus != null)
                     {
                         PatIndex objDeposit = new PatIndex();
@@ -163,6 +164,7 @@ public partial class PaymentResponse : System.Web.UI.Page
 
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "BedBookingPayment");
+                            ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "BedBookingPayment_user");
                             Session["Bed"] = null;
                         }
 
@@ -176,6 +178,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                             }
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "SurgeryBookingPayment");
+                            ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "SurgeryBookingPayment_user");
                             Session["Surgery"] = null;
                         }
                         else if (Session["HealthCheck-upComprehensive"] != null)
@@ -188,6 +191,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                             }
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "HealthCheckPayment");
+                            ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "HealthCheckPayment_user");
                             Session["HealthCheck-upComprehensive"] = null;
                         }
                         else if (Session["OutstandingBillPayment"] != null)
@@ -372,7 +376,8 @@ public partial class PaymentResponse : System.Web.UI.Page
 
                             }
                             objBusinessLogic.SavePaymentBookAppointment(sessionData);
-                            AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.TimeDate), Convert.ToString(lblAmount.Text), Convert.ToString(sessionData.Description), "AppointmentPayment");
+                            AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.TimeDate), Convert.ToString(lblAmount.Text), Convert.ToString(sessionData.Description), "ConsultationAppointment");
+                            AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.TimeDate), Convert.ToString(lblAmount.Text), Convert.ToString(sessionData.Description), "ConsultationAppointment_user");
                             Session["ConsultationAppointment"] = null;
                         }
                         else if (Session["AppointmentDetail"] != null)
@@ -481,6 +486,7 @@ public partial class PaymentResponse : System.Web.UI.Page
     public void PermanentUserSendEmail(string Username, string Email, string MRNO, string Password, string MobileNo)
     {
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+        List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
 
 
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
@@ -496,14 +502,16 @@ public partial class PaymentResponse : System.Web.UI.Page
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
         lsEmailStatus = objMailer.SendEmail("PermanentRegistration", lstParameters, EmailToId, EmailCCId);
-
-        CommonFn.SendSMS(MobileNo, "You are now the permenant user! Please login with Id(MR Number)= " + MRNO + "  and Password=" + Password);
+        lsEmailStatus = objMailer.SendEmail("PermanentRegistration_user", lstParameters, user.Email, EmailCCId);
+        lsSmsStatus = objMailer.SendSms("PermanentRegistration_user", lstsmsParameters, MobileNo);
+        //CommonFn.SendSMS(MobileNo, "You are now the permenant user! Please login with Id(MR Number)= " + MRNO + "  and Password=" + Password);
         lstParameters = null;
     }
 
     public void ServiceBookingSendEmail(string Username, string Email, string ServiceName, string ServicePackage, string BookingDateTime, string DepositAmount, string TemplateName)
     {
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+        List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
 
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Email", ShortCodeValue = user.Email });
@@ -523,8 +531,11 @@ public partial class PaymentResponse : System.Web.UI.Page
        
 
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-        string val=lstParameters[5].ShortCodeValue.Replace("&nbsp;"," ");
-        CommonFn.SendSMS(PhoneNumber, " Your payment Rs." + val + " was completed Successfully for '" + ServiceName + "'!");
+       // string val=lstParameters[5].ShortCodeValue.Replace("&nbsp;"," ");
+        lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
+        lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount }); 
+        lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+       // CommonFn.SendSMS(PhoneNumber, " Your payment Rs." + val + " was completed Successfully for '" + ServiceName + "'!");
 
         lstParameters = null;
     }
@@ -532,6 +543,7 @@ public partial class PaymentResponse : System.Web.UI.Page
     public void OutStandingSendEmail(string ServiceName, string DepositAmount)
     {
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+        List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
 
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Email", ShortCodeValue = user.Email });
@@ -546,11 +558,14 @@ public partial class PaymentResponse : System.Web.UI.Page
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
         lsEmailStatus = objMailer.SendEmail("OutstandingPayment", lstParameters, EmailToId, EmailCCId);
+        lsEmailStatus = objMailer.SendEmail("OutstandingPayment_user", lstParameters, user.Email, EmailCCId);
 
         string val = lstParameters[3].ShortCodeValue.Replace("&nbsp;", " ");
 
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-        CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
+        lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
+        lsSmsStatus = objMailer.SendSms("OutstandingPayment_user", lstsmsParameters, PhoneNumber);
+       // CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
 
         lstParameters = null;
     }
@@ -558,6 +573,8 @@ public partial class PaymentResponse : System.Web.UI.Page
     public void AppointmentSendEmail(string PhoneNo, string MobileNo, string Location, string Address, string TimeDate, string lblAmount, string Description,string TemplateName)
     {
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+        List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
+       
 
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Email", ShortCodeValue = user.Email });
@@ -579,7 +596,9 @@ public partial class PaymentResponse : System.Web.UI.Page
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         string val = lstParameters[7].ShortCodeValue.Replace("&nbsp;", " ");
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-        CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
+        lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
+        lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+       // CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
 
         lstParameters = null;
     }

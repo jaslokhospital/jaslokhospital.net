@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <emailcontent>
-  <subject>Fix an appointment acknowledge</subject>
+  <subject>Bed Booking Payment acknowledge</subject>
   <from>online@jaslokhospital.net</from>
   <content>
     <![CDATA[
     Hi [Username], <br/><br/>
-    Your appointment has been successfully Done.
+    Your Bed Booking Payament has been successfully done.
     <br/><br/>
     Thanks,<br/>
     Jaslok
@@ -14,7 +14,7 @@
   <sms>
     <content>
       <![CDATA[
-   Your appointment date is: [Date]
+   Your payment Rs.[DepositAmount] was completed Successfully for [ServiceName]
     ]]>
     </content>    
   </sms>

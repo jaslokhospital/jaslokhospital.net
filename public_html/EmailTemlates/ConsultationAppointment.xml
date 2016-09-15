@@ -4,7 +4,7 @@
   <from>online@jaslokhospital.net</from>
   <content>
     <![CDATA[
-  <style>
+     <style>
     .tblDetail td{padding:3px;}
     </style>
  <table border="2" class="tblDetail" cellpadding="0" cellspacing ="0" width="75%">
@@ -59,7 +59,7 @@
      <td>[Description]</td>
    </tr>
   
-  </table>
+  </table>   
     ]]>
-  </content>
+  </content> 
 </emailcontent>
