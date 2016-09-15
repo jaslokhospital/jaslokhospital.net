@@ -1,4 +1,23 @@
-a:focus{outline:none !important; outline:none !important; outline-offset:0}
+body a:focus {
+    outline: none;
+    outline: none;
+    outline-offset: 0;
+}
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {
+    width: 100%;
+    line-height: 1;
+}
+#carousel_slider_certification .carousel-control {
+  height: 60px;
+  margin-top: -30px;
+  top: 50% !important;
+}
+#carousel_slider_certification .carousel-control span img {
+  background-color: #fff;
+}
+#certification-banner-slider{
+    margin:0 auto;
+}
 @font-face {
     font-family: 'Sansation-light-italic';
     src: url(../font/SansationLightItalic.eot);
@@ -3872,6 +3891,7 @@ border: 0 none;
 
     .carousel-inner > .item > a > img, .carousel-inner > .item > img {
         width: 100%;
+        line-height: 1;
     }
 
     .header_top {
