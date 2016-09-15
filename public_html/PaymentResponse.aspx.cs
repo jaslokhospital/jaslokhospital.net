@@ -203,7 +203,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                                  
                             }
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                            OutStandingSendEmail(sessionData.FacilityName, lblAmount.Text);
+                            OutStandingSendEmail(sessionData.FacilityName, lblAmount.Text, "OutstandingPayment");
+                            OutStandingSendEmail(sessionData.FacilityName, lblAmount.Text, "OutstandingPayment_user");
                             Session["OutstandingBillPayment"] = null;
                         }
                         else if (Session["permenantRegistration"] != null)
@@ -319,7 +320,8 @@ public partial class PaymentResponse : System.Web.UI.Page
 
                                              try
                                              {
-                                                 PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber);
+                                                 PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration");
+                                                 PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration_user");
                                                  lblMsg.Text = "You are now the permanent user! Please login with your MR Number that has been sent to your registered mobile number";
                                                  lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#008000");
                                              }
@@ -483,7 +485,7 @@ public partial class PaymentResponse : System.Web.UI.Page
 
 
 
-    public void PermanentUserSendEmail(string Username, string Email, string MRNO, string Password, string MobileNo)
+    public void PermanentUserSendEmail(string Username, string Email, string MRNO, string Password, string MobileNo,string TemplateName)
     {
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
         List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
@@ -503,7 +505,10 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         lsEmailStatus = objMailer.SendEmail("PermanentRegistration", lstParameters, EmailToId, EmailCCId);
         lsEmailStatus = objMailer.SendEmail("PermanentRegistration_user", lstParameters, user.Email, EmailCCId);
-        lsSmsStatus = objMailer.SendSms("PermanentRegistration_user", lstsmsParameters, MobileNo);
+        if (TemplateName == "PermanentRegistration_user")
+        {
+            lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, MobileNo);
+        }
         //CommonFn.SendSMS(MobileNo, "You are now the permenant user! Please login with Id(MR Number)= " + MRNO + "  and Password=" + Password);
         lstParameters = null;
     }
@@ -533,14 +538,17 @@ public partial class PaymentResponse : System.Web.UI.Page
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
        // string val=lstParameters[5].ShortCodeValue.Replace("&nbsp;"," ");
         lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
-        lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount }); 
-        lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+        lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
+        if (TemplateName == "BedBookingPayment_user" || TemplateName == "SurgeryBookingPayment_user" || TemplateName == "HealthCheckPayment_user")
+        {
+            lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+        }
        // CommonFn.SendSMS(PhoneNumber, " Your payment Rs." + val + " was completed Successfully for '" + ServiceName + "'!");
 
         lstParameters = null;
     }
 
-    public void OutStandingSendEmail(string ServiceName, string DepositAmount)
+    public void OutStandingSendEmail(string ServiceName, string DepositAmount, string TemplateName)
     {
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
         List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
@@ -564,7 +572,10 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
         lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
-        lsSmsStatus = objMailer.SendSms("OutstandingPayment_user", lstsmsParameters, PhoneNumber);
+        if (TemplateName == "OutstandingPayment_user")
+        {
+            lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+        }
        // CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
 
         lstParameters = null;
@@ -597,7 +608,10 @@ public partial class PaymentResponse : System.Web.UI.Page
         string val = lstParameters[7].ShortCodeValue.Replace("&nbsp;", " ");
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
         lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
-        lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+        if (TemplateName == "ConsultationAppointment_user")
+        {
+            lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
+        }
        // CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
 
         lstParameters = null;
