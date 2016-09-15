@@ -32,7 +32,7 @@ public partial class JSControls_Common_LeftNavigation : System.Web.UI.UserContro
             menus.Add(new MenuItems { MenuText = "Frequently Asked Questions", MenuLink = "/corporate-profile/frequently-asked-questions" });
             menus.Add(new MenuItems { MenuText = "Quality Corner", MenuLink = "/corporate-profile/quality-corner" });
         }
-        else if (Request.RawUrl.Contains("/patients"))
+        else if (Request.RawUrl.Contains("/patients") || Request.RawUrl.Contains("/success"))
         {
             menus.Add(new MenuItems { MenuText = "Patient Facilities", MenuLink = "/patients/patient-facilities" });
             menus.Add(new MenuItems { MenuText = "View Billing Details", MenuLink = "/patients/vision-and-mission" });
