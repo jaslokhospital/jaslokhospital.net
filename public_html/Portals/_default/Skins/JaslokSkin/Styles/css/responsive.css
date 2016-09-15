@@ -259,7 +259,6 @@ DOWNLOADCOPYRETURN*/
     background-color: #fbf0de;
     background: url(../images/testimonial_bg.png);
     height: auto;
-    margin-top: -20px !important;
     margin-bottom: 30px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -891,10 +890,13 @@ DOWNLOADCOPYRETURN*/
 }
 
 @media only screen and (max-width:767px) and (orientation:landscape) {
-  .arrow {
-    left: 68% !important;
+.arrow {
+    right: 2px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 12px !important;
 }
-    #carousel-example-generic .carousel-indicators {
+#carousel-example-generic .carousel-indicators {
     bottom: 0;
     top: 145px;
     position: relative;
@@ -1447,6 +1449,10 @@ DOWNLOADCOPYRETURN*/
 @media only screen and (max-width: 767px){
 .arrow {
     left: 82%;
+    position: absolute !important;
+    left: auto;
+    right: 4px;
+    top: 12px !important;
 }
     .header-top-select {
         width:100%;

@@ -109,5 +109,16 @@
 
     });
 </script>--%>
+<script src="/js/swipe.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#carousel_slider_certification").swiperight(function () {
+            $(this).carousel('prev');
+        });
+        $("#carousel_slider_certification").swipeleft(function () {
+            $(this).carousel('next');
+        });
+    });
+</script>
 <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/libs/jquery.secret-source.min.js"></script>
 
