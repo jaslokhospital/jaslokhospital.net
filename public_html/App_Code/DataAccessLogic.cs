@@ -1229,7 +1229,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetNewsDetails", new object[] { Slist.NewId, Slist.IsActive });
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetNewsDetails", new object[] { Slist.NewId, Slist.IsActive,Slist.jcPageSize, Slist.jcCurrentPageIndex });
             }
             catch (Exception ex)
             {
