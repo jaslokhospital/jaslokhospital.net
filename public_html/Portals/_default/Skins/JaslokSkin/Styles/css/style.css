@@ -3971,3 +3971,5 @@ border: 0 none;
 }
 .pager {clear:both; text-align:center;
 }
+.articles-pager { background:#317ba8; padding: 10px !important;  }
+/*.goto-page, .paginglink {border-radius: 50px; margin: 0 5px;}*/
