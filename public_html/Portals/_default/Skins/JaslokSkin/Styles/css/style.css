@@ -3969,3 +3969,5 @@ border: 0 none;
 	text-shadow: 1px 1.732px 2px rgba(0, 0, 0, 0.5);
 	color:#FFF;
 }
+.pager {clear:both; text-align:center;
+}
