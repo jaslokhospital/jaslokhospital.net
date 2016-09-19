@@ -10,6 +10,8 @@ public partial class TL_Controls_Common_PagingControl : System.Web.UI.UserContro
         /// <summary>
         /// Number of records per page
         /// </summary>
+        int Linkcount = 10;
+
         public int PageSize
         {
             get
@@ -177,8 +179,12 @@ public partial class TL_Controls_Common_PagingControl : System.Web.UI.UserContro
         public void BuildPages()
         {
             PagesPlaceHolder.Controls.Clear();
+            if (CommonFn.IsMobileDevice())
+            {
+                Linkcount = 2;
+            }
             //If pages are less than 25 show all page numbers
-            if (Pages < 10)
+            if (Pages < Linkcount)
             {
                 for (int i = 1; i <= Pages; i++)
                 {
