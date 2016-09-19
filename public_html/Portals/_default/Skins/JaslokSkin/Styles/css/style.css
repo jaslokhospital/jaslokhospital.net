@@ -2138,7 +2138,7 @@ ul.opdlisting li a {
     max-height: 111px;
 }
 .circle-testy{/*border: solid 5px #fbf0de;*/ max-width:150px; margin-top: -10px;}
-.facility_slidr { max-width: 360px; }
+.facility_slidr { max-width: 480px; }
 .modal-backdrop { z-index: 0!important }
 #dnn_ctr430_ManagePage_redPageContent {
     height: auto;
@@ -3969,3 +3969,7 @@ border: 0 none;
 	text-shadow: 1px 1.732px 2px rgba(0, 0, 0, 0.5);
 	color:#FFF;
 }
+.pager {clear:both; text-align:center;
+}
+.articles-pager { background:#317ba8; padding: 10px !important;  }
+/*.goto-page, .paginglink {border-radius: 50px; margin: 0 5px;}*/
