@@ -13,7 +13,7 @@ public partial class JSControls_MiddleContent_NewsListing : System.Web.UI.UserCo
     public BusinessLogic objBusinessLogic = new BusinessLogic();
     public DataAccessLogic objDALogic = new DataAccessLogic();
     public DataAccessEntities objDAEntities = new DataAccessEntities();
-	 int PageSize = 10;
+	 int PageSize = 9;
     protected void Page_Load(object sender, EventArgs e)
     {
         
@@ -111,22 +111,5 @@ public partial class JSControls_MiddleContent_NewsListing : System.Web.UI.UserCo
         }
 
         return base.OnBubbleEvent(source, e);
-    }
-        
-        if ((e.Item.ItemIndex + 1) % 3 == 0)
-        {
-            HtmlGenericControl divNewLine = (HtmlGenericControl)e.Item.FindControl("divNewLine");
-            divNewLine.Visible = true;
-        }
-
-       /* Literal litTopDiv = (Literal)e.Item.FindControl("litTopDiv");
-        Literal litBottomDiv = (Literal)e.Item.FindControl("litBottomDiv");
-
-        if ((e.Item.ItemIndex + 1) % 3 == 0)
-        {
-            litTopDiv.Visible = true;
-            litBottomDiv.Visible = true;
-        }*/
-
     }
 }
