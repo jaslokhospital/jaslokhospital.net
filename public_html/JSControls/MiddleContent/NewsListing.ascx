@@ -11,7 +11,7 @@
         <ItemTemplate>
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <a class="img-border" data-target='<%# ".pop-up-"+ (Container.ItemIndex+1).ToString() %>' data-toggle="modal" href="images/testimonial-1.jpg">
-                    <img class="img-responsive" title="Testimonial-1" style="max-height:248px;" alt="Testimonial-1" src='<%#Eval("Thumbnail")+"?w=180&h=180"%>'>
+                    <img class="img-responsive newsimg" title="Testimonial-1" style="max-height:248px;" alt="Testimonial-1" src='<%#Eval("Thumbnail")+"?w=180&h=180"%>'>
                 </a>
                 <div class="appreciation_title">
                     <%#Eval("NewsTitle")%>                

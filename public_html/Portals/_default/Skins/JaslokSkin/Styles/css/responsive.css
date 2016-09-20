@@ -1542,6 +1542,8 @@ DOWNLOADCOPYRETURN*/
 	.content p {
 	  font-size: 30px;
 	}
+    .newsimg { margin:auto;
+    }
 }
 
 @media (max-width:480px) {
