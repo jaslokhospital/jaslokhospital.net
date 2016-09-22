@@ -30,7 +30,7 @@ public partial class JSControls_Common_PressRelease : System.Web.UI.UserControl
             DataSet dsPressRelease = new DataSet();
             dsPressRelease = null;
             objDAEntities.IsActive = true;
-
+            objDAEntities.jcPageSize = 5;
             dsPressRelease = (DataSet)Cache[AppGlobal.HomePressReleaseCache];
             if (dsPressRelease == null)
             {
