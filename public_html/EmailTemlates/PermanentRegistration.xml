@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Permanent Registration acknowledge</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    <style>
+    .tblDetail td{padding:3px;}
+    </style>
+    <table border="2" class="tblDetail" cellpadding="0" cellspacing ="0" width="75%">
+            <tr>
+                <td style="width:25%;">Username</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[Username]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Email</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[Email]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">MRNO</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[MRNO]</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Password</td>
+                <td align="center" width="3%"><b>:</b></td>
+                <td>[Password]</td>
+            </tr>           
+        </table>
+    ]]>
+  </content>  
+</emailcontent>
