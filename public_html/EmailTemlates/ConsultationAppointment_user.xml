@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <emailcontent>
-  <subject>Fix an appointment acknowledge</subject>
+  <subject>Consultation Appointment Payment Response !</subject>
   <from>online@jaslokhospital.net</from>
   <content>
     <![CDATA[
-    Hi [Username], <br/><br/>
-    Your appointment has been successfully Done.
+  Hi [Username], <br/><br/>
+    Your Consultation Appointment Payament has been successfully done.
     <br/><br/>
     Thanks,<br/>
     Jaslok
@@ -14,8 +14,8 @@
   <sms>
     <content>
       <![CDATA[
-   Your appointment date is: [Date]
+   Your payment Rs.[AppointmentTypeCharge] was completed Successfully
     ]]>
-    </content>    
+    </content>
   </sms>
 </emailcontent>

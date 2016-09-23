@@ -217,7 +217,10 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         Boolean DSFlag = false;
         JaslokMailer objMailer = new JaslokMailer();
         List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+        List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
         string lsEmailStatus = string.Empty;
+        string lsSmsStatus = string.Empty;
+        
         try
         {
             UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
@@ -258,8 +261,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                 {
                     case "pay later":
                         objBusinessLogic.SaveBookAppointment(objDAEntities);
-
-                        CommonFn.SendSMS(txtMobileNo.Text, "Your appointment date is: " + ddlAppointMentDate.SelectedValue);
+                        lsSmsStatus = objMailer.SendSms("fixanappointment", lstsmsParameters, txtMobileNo.Text);
+                       // CommonFn.SendSMS(txtMobileNo.Text, "Your appointment date is: " + ddlAppointMentDate.SelectedValue);
                         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
                         //lsEmailStatus = objMailer.SendEmail("fixanappointment", lstParameters, txtEmail.Text);
                         lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
@@ -284,8 +287,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
                         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
-                        //lsEmailStatus = objMailer.SendEmail("fixanappointment_Admin", lstParameters, EmailToId, EmailCCId);
-
+                        lsEmailStatus = objMailer.SendEmail("fixanappointment", lstParameters, objDAEntities.Email, EmailCCId);
                         lsEmailStatus = objMailer.SendEmail("fixanappointment_Admin", lstParameters, AppGlobal.FixAppointmentEmailAddress);
                         //ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('We have received your appointment request, you should receive a reply or a call shortly');", true);
                         PlaceMessage.Visible = true;
