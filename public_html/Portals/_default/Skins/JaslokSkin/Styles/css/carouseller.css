@@ -26,8 +26,8 @@
 .for-car .carousel-control-block > .carousel-button-left > a:hover, .for-car .carousel-control-block > .carousel-button-right > a:hover{opacity:0.8;}
 .carousel-block{text-align:center;font-size:15px;font-weight:bold;}
 .left_arrow a, .right_arrow a{position:absolute;top:-12px;left:10px;z-index:9999;color:#fff;}
-.carousel-control-block .left_arrow{position:absolute;top:0;right:0;width:30px;border-left:1px solid #ddd;height:30px;cursor:pointer;background:#00cdcd url(images/caousel-next.png) no-repeat 0 0;}
-.carousel-control-block .right_arrow{position:absolute;top:0px;right:34px;border-right:1px solid #ddd;width:30px;height:30px;cursor:pointer;background:#00cdcd url(images/caousel-prev.png) no-repeat 0 0;}
+.carousel-control-block .left_arrow{position:absolute;top:0;right:0;width:30px;border-left:1px solid #ddd;height:30px;cursor:pointer;/*background:#00cdcd url(/images/caousel-next.png) no-repeat 0 0;*/}
+.carousel-control-block .right_arrow{position:absolute;top:0px;right:34px;border-right:1px solid #ddd;width:30px;height:30px;cursor:pointer;/*background:#00cdcd url(/images/caousel-prev.png) no-repeat 0 0;*/}
 h1{font-size:40px;margin-bottom:30px;}
 @media (min-width:768px) and (max-width:979px){.row-fluid.for-car > .carousel-wrapper > .carousel-items > .span_by5,
 .row-fluid.for-car > .carousel-wrapper > .carousel-items > .span12,

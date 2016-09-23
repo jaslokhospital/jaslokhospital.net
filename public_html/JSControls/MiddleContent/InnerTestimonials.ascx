@@ -16,7 +16,7 @@
             <%--<asp:Literal ID="litTopDiv" Text="<div class='row'>" runat="server" Visible="false"></asp:Literal>--%>
 
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <a class="img-border" id="lnkTestimonial" runat="server" visible='<%#string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl"))) ? false : true %>' data-target='<%# ".pop-up-"+ (Container.ItemIndex+1).ToString() %>' data-toggle="modal" href="images/testimonial-1.jpg">
+                <a class="img-border" id="lnkTestimonial" runat="server" visible='<%#string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl"))) ? false : true %>' data-target='<%# ".pop-up-"+ (Container.ItemIndex+1).ToString() %>' data-toggle="modal" href="/images/testimonial-1.jpg">
                     <img class="img-responsive" title="Testimonial-1" alt="Testimonial-1" style='<%#string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl"))) ? "display:none" : "display:block"%>' src='<%#Eval("ImageUrl")%>'>
                 </a>
                 <div class="appreciation_title">

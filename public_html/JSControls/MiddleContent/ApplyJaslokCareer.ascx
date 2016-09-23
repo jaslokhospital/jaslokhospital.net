@@ -3,9 +3,9 @@
 
 
 <%--<script lang="javascript" type="text/javascript" src="/DesktopModules/JaslokCareer/Scripts/valjavavalidate.js"></script>--%>
-    <link href="~/css/jdpicker.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="~/js/jquery.min.js"></script>
-    <script src="~/js/jquery.jdpicker.js"></script>
+    <%--<link href="/css/jdpicker.css" rel="stylesheet" type="text/css" />--%>
+    <%--<script type="text/javascript" src="/js/jquery.min.js"></script>--%>
+    <%--<script src="/js/jquery.jdpicker.js"></script>--%>
  <%--   <script src="/DesktopModules/JaslokCareer/Scripts/ValidateCommon.js"></script>--%>
  <script>
      function getFileData(myFile) {

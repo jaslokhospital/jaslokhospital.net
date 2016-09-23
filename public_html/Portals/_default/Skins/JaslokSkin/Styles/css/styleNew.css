@@ -1414,7 +1414,7 @@ address {
 }
 
 #cardiology-banner {
-    background: url(../images/inner-banner.png) no-repeat;
+    /*background: url(../images/inner-banner.png) no-repeat;*/
     height: 136px;
     background-size: 100%;
 }

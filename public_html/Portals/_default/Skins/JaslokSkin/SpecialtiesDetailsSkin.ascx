@@ -178,8 +178,8 @@
 <JS:Testimonials runat="server" ID="Testimonials" />
 <JS:Footer runat="server" ID="Footer" />
 
-<script src="../../Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.min.js" defer="defer"></script>
-<script src="../../Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.js"></script>
+<script src="/Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.min.js" defer="defer"></script>
+<script src="/Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.js"></script>
 <script type="text/javascript">
  //   var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
  //    var keyCode = e.which ? e.which : e.keyCode

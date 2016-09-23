@@ -51,8 +51,8 @@
 </asp:UpdatePanel>--%>
  
 
-        <script src="../../Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.min.js" defer="defer"></script>
-        <script src="../../Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.js"></script>
+        <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.min.js" defer="defer"></script>
+        <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/pgwslideshow.js"></script>
         
         <script>
             $(document).ready(function () {

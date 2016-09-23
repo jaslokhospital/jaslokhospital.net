@@ -20,7 +20,7 @@
 
 
 
-<script type='text/javascript' src='../../Portals/_default/Skins/JaslokSkin/Styles/js/amazingslider.js'></script>
+<script type='text/javascript' src='/Portals/_default/Skins/JaslokSkin/Styles/js/amazingslider.js'></script>
 <style>
     ul {
         padding: 0;
@@ -62,11 +62,11 @@
                     </asp:Repeater>
                 </ul>
             </div>
-            <script src="../../Portals/_default/Skins/JaslokSkin/Styles/js/initslider.js"></script>
+            <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/initslider.js"></script>
         </div>
     </div>
 </div>
-<script src="../../FlowPlayer/flowplayer-3.2.12.min.js"></script>
+<script src="/FlowPlayer/flowplayer-3.2.12.min.js"></script>
 
 <script type="text/javascript">
     flowplayer("a.player", "../../FlowPlayer/flowplayer-3.2.16.swf", {
