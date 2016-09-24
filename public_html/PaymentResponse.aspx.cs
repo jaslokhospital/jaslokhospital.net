@@ -27,13 +27,12 @@ public partial class PaymentResponse : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
         try
         {
             spnStatus.Visible = true;
 
             lblMsg.Visible = false;
-            string secret_key = "66fc8c3cca181b8954338bb5d5bd0cbb18b99b6d";
+            string secret_key = "ed70df7a017654499542ff0a5515812824b74142";
             string data = "";
             string txnId = Request["TxId"];
             string txnStatus = Request["TxStatus"];
@@ -100,7 +99,7 @@ public partial class PaymentResponse : System.Web.UI.Page
             }
             if (flag == true)
             {
-
+           
                 //Response.Write("Thank You for using citrus payment Your Unique Transaction Status:" + Convert.ToString(txnStatus));
                 if (Session["Bed"] != null || Session["Surgery"] != null || Session["AppointmentDetail"] != null || Session["HealthCheck-upComprehensive"] != null || Session["OutstandingBillPayment"] != null || Session["permenantRegistration"] != null || Session["ConsultationAppointment"] != null)
                 {
@@ -152,7 +151,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                     if (txnStatus != null)
                     {
                         PatIndex objDeposit = new PatIndex();
-
                         if (Session["Bed"] != null)
                         {
                             if (txnStatus == "CANCELED")
@@ -174,7 +172,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                             {
                                 Session["Surgery"] = null;
                                 Response.Redirect("/surgery-booking");
-
                             }
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, lblAmount.Text, "SurgeryBookingPayment");
@@ -437,7 +434,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            throw ex;
+            Response.Write(ex.ToString());
         }
 
     }
@@ -532,13 +529,20 @@ public partial class PaymentResponse : System.Web.UI.Page
         string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
-       
-
+        
+        if (TemplateName.Contains("_user"))
+        {
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, Email, EmailCCId);
+        }
+        else
+        {
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
+        }
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-       // string val=lstParameters[5].ShortCodeValue.Replace("&nbsp;"," ");
+      
         lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
         lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
+
         if (TemplateName == "BedBookingPayment_user" || TemplateName == "SurgeryBookingPayment_user" || TemplateName == "HealthCheckPayment_user")
         {
             lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
@@ -576,8 +580,6 @@ public partial class PaymentResponse : System.Web.UI.Page
         {
             lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
         }
-       // CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
-
         lstParameters = null;
     }
 
@@ -604,7 +606,9 @@ public partial class PaymentResponse : System.Web.UI.Page
         string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
 
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
+        objMailer.SendEmail("ConsultationAppointment", lstParameters, EmailToId, EmailCCId);
+        objMailer.SendEmail("ConsultationAppointment_user", lstParameters, user.Email, EmailCCId);
+
         string val = lstParameters[7].ShortCodeValue.Replace("&nbsp;", " ");
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
         lstsmsParameters.Add(new SmsParaMeters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
@@ -612,8 +616,6 @@ public partial class PaymentResponse : System.Web.UI.Page
         {
             lsSmsStatus = objMailer.SendSms(TemplateName, lstsmsParameters, PhoneNumber);
         }
-       // CommonFn.SendSMS(PhoneNumber, "Your payment Rs." + val + " was completed Successfully !");
-
         lstParameters = null;
     }
 
