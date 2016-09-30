@@ -46,8 +46,12 @@ public class CommonFn
 {
     private const string ImageSaveKey = "Image_Save_Path";
    
+   
+   
     //public static string DB_Image_Save_Path = ConfigurationManager.AppSettings["DB_Image_Save_Path"].ToString();
     public static string Image_Save_Path = ConfigurationManager.AppSettings[ImageSaveKey].ToString();
+   
+    
 
     public static string domainName = "http://" + HttpContext.Current.Request.Url.Host.ToString();
 
@@ -71,6 +75,10 @@ public class CommonFn
     public const string VideoThumbnailFolder = "\\VideoThumbnailGallery";
     public const string UploadedResumeFolder = "\\uploadedresume";
     public const string JaslokTimesPdf = "\\JaslokTimesPDF";
+    public const string ResearchPaperPdf = "/ResearchPaper";
+    public const string ResearchPaperThumbnail = "/ResearchPaper/Images";
+    public const string DbResearchPaperPDF = "/ResearchPaper/";
+    public const string DbResearchPaperThumbnailFolder = "/ResearchPaper/Images/";
 
     public const string DbBannerFolder = "/Banner/";
     public const string DbTestimonialFolder = "/Testimonial/";
@@ -89,7 +97,8 @@ public class CommonFn
     public const string DbSave = "/Content";
     public const string DbWhatsNew = "/WhatsNew";
     public const string DbUploadedResume = "/uploadedresume";
-    public const string DbJaslokTimesPDF = "/JaslokTimesPDF";
+    public const string DbJaslokTimesPDF = "/JaslokTimesPDF/";
+
     
 
     public static bool folderExists(string FolderPath, string FolderName)

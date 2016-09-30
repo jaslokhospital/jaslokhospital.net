@@ -26,9 +26,13 @@ public partial class Portals__default_Skins_JaslokSkin_InnerPagesSkin : DotNetNu
             // Footer.Visible = false;
             contentpane.Controls.Add(LoadControl("~/DesktopModules/JaslokAdmin/ManageSubscription.ascx"));
         }
-	else if (currentUrl.Contains("/jaslokadmin/manageformsemail"))
+	    else if (currentUrl.Contains("/jaslokadmin/manageformsemail"))
         {
             contentpane.Controls.Add(LoadControl("~/DesktopModules/JaslokAdmin/ManageFormEmailId.ascx"));
+        }
+        else if (currentUrl.Contains("/JaslokAdmin/ManageResearchPapers"))
+        {
+            contentpane.Controls.Add(LoadControl("~/DesktopModules/JaslokAdmin/ManageResearchPapers.ascx"));
         }
     }
 }

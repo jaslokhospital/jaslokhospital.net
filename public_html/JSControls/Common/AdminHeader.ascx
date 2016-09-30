@@ -64,7 +64,7 @@
                                         <li><a href="Manage-News.aspx">Manage News</a></li>
                                         <li><a href="ManageBookAppointment.aspx">Manage Booked Appointments</a></li>
                                         <li><a href="ManageJaslokTimes.aspx">Manage Jaslok Times</a></li>
-<li><a href="/jaslokadmin/manageformsemail">Manage Forms Email</a></li>
+                                        <li><a href="/jaslokadmin/manageformsemail">Manage Forms Email</a></li>
                                       <%--  <li><a href="WhatsNew.aspx">Manage What's New</a></li>--%>
                                     </ul>
                                 </li>
@@ -94,6 +94,12 @@
                                         <li><a href="ManageCareerCategory.aspx">Manage Job Category</a></li>
                                         <li><a href="ManageCareerPosition.aspx">Manage Positions</a></li>
                                         <li><a href="ViewCareerApplication.aspx">View Application</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Education & Research<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/JaslokAdmin/ManageResearchPapers">Manage Research Papers</a></li>                                       
                                     </ul>
                                 </li>
                                 <%--<li class="dropdown">

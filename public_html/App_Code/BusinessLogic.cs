@@ -3080,6 +3080,62 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
+        //Research Papers
+        public DataSet AddResearchPapers(DataAccessEntities Slist)
+        {
+            DataSet dsResearchPaper = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                dsResearchPaper = objDataAccessLogic.AddResearchPapers(Slist);
+                return dsResearchPaper;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsResearchPaper = null;
+                objDataAccessLogic = null;
+            }
+        }
+        //Detail Research Papers page manage
+        public DataSet GetResearchPapersPageContentDetail()
+        {
+            DataSet ds = new DataSet();
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.GetResearchPapersPageContentDetail();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet DeleteResearchPapers(DataAccessEntities SList)
+        {
+            DataSet dsTest = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                dsTest = objDataAccessLogic.DeleteResearchPapers(SList);
+                return dsTest;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsTest = null;
+                objDataAccessLogic = null;
+            }
+        }
     }
     public class DoctorSchedule
     {
@@ -3088,4 +3144,5 @@ namespace BusinessDataLayer
         public int TimeSlot { get; set; }
         public int SpecialtyId { get; set; }
     }
+   
 }
