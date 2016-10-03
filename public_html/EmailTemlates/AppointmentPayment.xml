@@ -5,16 +5,16 @@
   <content>
     <![CDATA[
     Hi [Username], <br/><br/>
-    Your appointment has been successfully Done.
+    Your Appointment Payament has been successfully done.
     <br/><br/>
     Thanks,<br/>
-    Jaslok
+    Jaslok=
     ]]>
   </content>
   <sms>
     <content>
       <![CDATA[
-   Your appointment date is: [Date]
+   Your payment Rs.[DepositAmount] was completed Successfully for [ServiceName]
     ]]>
     </content>    
   </sms>

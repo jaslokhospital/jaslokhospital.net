@@ -51,6 +51,10 @@ public partial class DesktopModules_JaslokAdmin_ManageNews : PortalModuleBase
                 ShowAdd();
                 int newsid = Convert.ToInt32(e.CommandArgument);
                 objDAEntities.NewId = newsid;
+
+                objDAEntities.IsActive = false;
+                objDAEntities.jcPageSize = 1;
+
                 ds = (DataSet)objBusinessLogic.GetNewsDetails(objDAEntities);
 
                 txtNewsTitle.Text = Convert.ToString(ds.Tables[0].Rows[0]["NewsTitle"]);
@@ -208,7 +212,8 @@ public partial class DesktopModules_JaslokAdmin_ManageNews : PortalModuleBase
         {
             objDAEntities.NewId = 0;
             DataSet ds = new DataSet();
-            ds = null;
+            objDAEntities.IsActive = false;
+
             ds = (DataSet)objBusinessLogic.GetNewsDetails(objDAEntities);
 
 
