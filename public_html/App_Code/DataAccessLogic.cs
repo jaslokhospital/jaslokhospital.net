@@ -1916,7 +1916,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_AddResearchPapers", new object[] { Slist.ThumbnailImage, Slist.ResearchPaperPDF, Slist.CreatedBy, Slist.ThumbnailImageURL, Slist.ResearchPaperPDFURL });
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_AddResearchPapers", new object[] { Slist.ThumbnailImage, Slist.ResearchPaperPDF, Slist.CreatedBy, Slist.ThumbnailImageURL, Slist.ResearchPaperPDFURL, Slist.Title });
             }
             catch (Exception ex)
             {

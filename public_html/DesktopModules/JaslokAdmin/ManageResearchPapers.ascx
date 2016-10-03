@@ -31,6 +31,7 @@
                                 <asp:Image ID="ImageUrl" runat="server" Height="50px" />
                             </ItemTemplate>
                         </asp:TemplateColumn>
+                         <asp:BoundColumn DataField="Title" HeaderText="Title" ItemStyle-HorizontalAlign="Justify"></asp:BoundColumn>
                         <asp:BoundColumn DataField="ResearchPaperPDF" HeaderText="Research Papers PDF" ItemStyle-HorizontalAlign="Justify"></asp:BoundColumn>
 
 
@@ -63,6 +64,17 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
         <div class="form-horizontal">
+            <div class="row" style="width: 80%">
+                <div class="col-md-6" style="text-align: right;">
+                    <label for="">Title:</label>
+                </div>
+                <div class="col-md-6" style="text-align: left;">
+                   <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvtxtTitle" runat="server" ErrorMessage="Please Enter Title" ControlToValidate="txtTitle"
+                        Display="Dynamic" ValidationGroup="JHCat" ForeColor="Red"></asp:RequiredFieldValidator>                   
+
+                </div>
+            </div>
 
             <div class="row" style="width: 80%">
                 <div class="col-md-6" style="text-align: right;">

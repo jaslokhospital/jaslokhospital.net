@@ -53,7 +53,7 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
 
             dgResearchPapers.DataSource = dsResearchPapers;
             dgResearchPapers.DataBind();
-           
+
         }
         catch (Exception ex)
         {
@@ -92,15 +92,17 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
             }
 
 
-           
-            objDAEntities.CreatedBy = "1";
+
+            //objDAEntities.CreatedBy = "1";
+            objDAEntities.CreatedBy = Convert.ToString(CommonFn.UserID);
             objDAEntities.ThumbnailImage = hdnThumbnail.Value;
             objDAEntities.ResearchPaperPDF = hdnResearchPapersPDF.Value;
             objDAEntities.ThumbnailImageURL = listofuploadedfiles.Text;
             objDAEntities.ResearchPaperPDFURL = listofuploadedpdffiles.Text;
+            objDAEntities.Title = txtTitle.Text;
 
 
-            // objDAEntities.CreatedByUserID = CommonFn.UserID;
+
             objBusinessLogic.AddResearchPapers(objDAEntities);
 
 
@@ -109,6 +111,7 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
         {
 
         }
+        BindResearchPapers();
     }
     protected string SaveImage()
     {
@@ -253,6 +256,7 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
             Image imgThumbnail = (Image)e.Item.FindControl("ImageUrl");
             imgThumbnail.ImageUrl = !string.IsNullOrEmpty(DataBinder.Eval(e.Item.DataItem, "ThumbnailImageURL").ToString()) ? "~" + DataBinder.Eval(e.Item.DataItem, "ThumbnailImageURL").ToString() : CommonFn.DefaultImagePath;
         }
+
     }
 
 }

@@ -37,7 +37,7 @@
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <img class="img-responsive" src='<%#Eval("ThumbnailImageURL")%>' alt='<%#Eval("ThumbnailImage")%>' title='<%#Eval("ThumbnailImage")%>'>
                                 <div class="appreciation_title">
-                                    '<%#Eval("ResearchPaperPDF")%>'
+                                    '<%#Eval("Title")%>'
                                     <br />
                                 </div>
                                 <div class="appreciation_view">
