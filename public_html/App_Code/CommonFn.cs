@@ -71,6 +71,10 @@ public class CommonFn
     public const string VideoThumbnailFolder = "\\VideoThumbnailGallery";
     public const string UploadedResumeFolder = "\\uploadedresume";
     public const string JaslokTimesPdf = "\\JaslokTimesPDF";
+    public const string ResearchPaperPdf = "/ResearchPaper";
+    public const string ResearchPaperThumbnail = "/ResearchPaper/Images";
+    public const string DbResearchPaperPDF = "/ResearchPaper/";
+    public const string DbResearchPaperThumbnailFolder = "/ResearchPaper/Images/";
 
     public const string DbBannerFolder = "/Banner/";
     public const string DbTestimonialFolder = "/Testimonial/";
