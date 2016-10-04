@@ -1916,7 +1916,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_AddResearchPapers", new object[] { Slist.ThumbnailImage, Slist.ResearchPaperPDF, Slist.CreatedBy, Slist.ThumbnailImageURL, Slist.ResearchPaperPDFURL, Slist.Title });
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_AddResearchPapers", new object[] { Slist.ThumbnailImage, Slist.ResearchPaperPDF, Slist.CreatedBy, Slist.ThumbnailImageURL, Slist.ResearchPaperPDFURL, Slist.Title, Slist.UpdatedByUserID, Slist.Id, Slist.optype });
             }
             catch (Exception ex)
             {
@@ -1929,6 +1929,17 @@ namespace BusinessDataLayer
             try
             {
                 return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetResearchPapersPageContentDetail", new object[] { });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet GetManageResearchPapersContent(DataAccessEntities Slist)
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetManageResearchPapersContent", new object[] { Slist.Id });
             }
             catch (Exception ex)
             {
