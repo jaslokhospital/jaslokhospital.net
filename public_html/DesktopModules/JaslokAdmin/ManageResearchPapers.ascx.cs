@@ -62,6 +62,7 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
     }
     protected void btnAdd_Click(object sender, EventArgs e)
     {
+        Session["optype"] = "INSERT";
         ShowAdd();
     }
     protected void Upload(object sender, EventArgs e)
@@ -69,49 +70,70 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
 
         try
         {
-            if (FileUpload1.PostedFile.FileName != "")
+            if (!string.IsNullOrEmpty(FileUpload1.PostedFile.FileName))
             {
                 listofuploadedfiles.Text = SaveImage();
                 hdnThumbnail.Value = FileUpload1.PostedFile.FileName;
             }
             else
             {
-                rfvFileUpload1.Visible = false;
+
                 listofuploadedfiles.Text = hdnImagePath.Value.TrimStart('~');
             }
 
-            if (FileUpload2.PostedFile.FileName != "")
+            if (!string.IsNullOrEmpty(FileUpload2.PostedFile.FileName))
             {
                 listofuploadedpdffiles.Text = SavePDF();
                 hdnResearchPapersPDF.Value = FileUpload2.PostedFile.FileName;
             }
             else
             {
-                rfvFileUpload2.Visible = false;
+
                 listofuploadedpdffiles.Text = hdnPDFPath.Value.TrimStart('~');
             }
 
+            DataSet ds = new DataSet();
+            ds = null;
 
 
-            //objDAEntities.CreatedBy = "1";
-            objDAEntities.CreatedBy = Convert.ToString(CommonFn.UserID);
+            objDAEntities.Id = Convert.ToInt32(Session["Id"]);
+
             objDAEntities.ThumbnailImage = hdnThumbnail.Value;
             objDAEntities.ResearchPaperPDF = hdnResearchPapersPDF.Value;
             objDAEntities.ThumbnailImageURL = listofuploadedfiles.Text;
             objDAEntities.ResearchPaperPDFURL = listofuploadedpdffiles.Text;
             objDAEntities.Title = txtTitle.Text;
 
+            if (Session["optype"].ToString() == "INSERT")
+            {
+                objDAEntities.CreatedBy = Convert.ToString(CommonFn.UserID);
+                objDAEntities.Id = 0;
+                objDAEntities.optype = "INSERT";
+                objBusinessLogic.AddResearchPapers(objDAEntities);
+                lblMessage.CssClass = "successlbl";
+                lblMessage.Text = "Research Papers save successfully!!!";
+            }
+            else if (Session["optype"].ToString() == "UPDATE")
+            {
+                objDAEntities.UpdatedByUserID = CommonFn.UserID;
+                objDAEntities.optype = "UPDATE";
+                ds = (DataSet)objBusinessLogic.AddResearchPapers(objDAEntities);
+                lblMessage.CssClass = "successlbl";
+                lblMessage.Text = "Research Papers updated successfully!!!";
+            }
 
 
-            objBusinessLogic.AddResearchPapers(objDAEntities);
-
+            BindResearchPapers();
+            Clear();
+            ShowView();
+            lblMessage.Visible = true;
 
         }
         catch (Exception ex)
         {
 
         }
-        BindResearchPapers();
+
     }
     protected string SaveImage()
     {
@@ -226,21 +248,44 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
     }
     protected void dgResearchPapers_ItemCommand(object source, DataGridCommandEventArgs e)
     {
+        int Id = Convert.ToInt32(e.CommandArgument);
+        Session["Id"] = Id;
+        objDAEntities.Id = Id;
         lblMessage.Visible = true;
+        Session["optype"] = "UPDATE";
+        if (e.CommandName == "Update")
+        {
+            ShowAdd();
+            DataSet ds = new DataSet();
+
+            ds = (DataSet)objBusinessLogic.GetManageResearchPapersContent(objDAEntities);
+
+            txtTitle.Text = ds.Tables[0].Rows[0]["Title"].ToString();
+
+            hdnImagePath.Value = ds.Tables[0].Rows[0]["ThumbnailImageURL"].ToString();
+            hdnThumbnail.Value = ds.Tables[0].Rows[0]["ThumbnailImage"].ToString();
+            listofuploadedfiles.Text = hdnImagePath.Value.Replace("/Content/ResearchPaper/Images/", "");
+
+
+            hdnPDFPath.Value = ds.Tables[0].Rows[0]["ResearchPaperPDFURL"].ToString();
+            hdnResearchPapersPDF.Value = ds.Tables[0].Rows[0]["ResearchPaperPDF"].ToString();
+            listofuploadedpdffiles.Text = hdnPDFPath.Value.Replace("/Content/ResearchPaper/", "");
+
+
+        }
         if (e.CommandName == "Delete")
         {
             DataSet ds = new DataSet();
-            objDAEntities.optype = "DELETE";
             objDAEntities.Id = Convert.ToInt32(e.CommandArgument.ToString());
             ds = (DataSet)objBusinessLogic.DeleteResearchPapers(objDAEntities);
-            ViewState["optype"] = "DELETE";
+
 
 
             lblMessage.CssClass = "successlbl";
             lblMessage.Text = "Research Paper deleted successfully!!!";
 
         }
-        Cache.Remove(AppGlobal.HomeTestimonialCache);
+
         BindResearchPapers();
     }
     protected void dgResearchPapers_PageIndexChanging(object source, DataGridPageChangedEventArgs e)

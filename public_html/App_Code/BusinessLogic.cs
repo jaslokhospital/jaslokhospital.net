@@ -3115,7 +3115,32 @@ namespace BusinessDataLayer
             {
                 throw ex;
             }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
         }
+        public DataSet GetManageResearchPapersContent(DataAccessEntities Slist)
+        {
+            DataSet ds = new DataSet();
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.GetManageResearchPapersContent(Slist);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }    
+
         public DataSet DeleteResearchPapers(DataAccessEntities SList)
         {
             DataSet dsTest = new DataSet();
