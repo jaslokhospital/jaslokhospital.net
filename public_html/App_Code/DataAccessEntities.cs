@@ -459,6 +459,13 @@ namespace BusinessDataLayer
 
 
          #endregion
+
+         #region ResearchPaper
+         public string ThumbnailImage { get; set; }
+         public string ResearchPaperPDF { get; set; }
+         public string ThumbnailImageURL { get; set; }
+         public string ResearchPaperPDFURL { get; set; }
+         #endregion
     }
 
 }
