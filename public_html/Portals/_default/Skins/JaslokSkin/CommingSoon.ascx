@@ -24,7 +24,7 @@
 <div class="container-fluid" style="position: relative">
             <div class="content">
                 <p>We are working on something very interesting!</p>
-                <p>Coming soon by 1st Nov '16</p>
+                <p>Coming soon by 1<sup>st</sup> Nov '16</p>
             </div>
 
             <div id="particles-js"></div>
