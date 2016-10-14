@@ -81,13 +81,25 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
 
         }
 
-
+        GetUserInfo();
         //else
         //{
         //    divEmpty.Visible = true;
         //    divDoctorInfo.Visible = false;
         //}
     }
+
+
+    public void GetUserInfo()
+    {
+        UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
+        txtName.Text = objuser.FirstName;
+        txtEmail.Text = objuser.Email;
+        txtMobileNo.Text = objuser.Profile.GetPropertyValue("PhoneNumber");
+       // ddlCountry.SelectedValue = objuser.Profile.GetPropertyValue("Country");
+
+    }
+
     public void BindDoctor()
     {
         try
