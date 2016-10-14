@@ -7,7 +7,7 @@
 
 #particles-js{
   width: 100%;
-  height: 500px;
+  height: 400px;
   background-color: #00BCD4;
   background-image: url('../images/can_bg.png');
   background-size: contain;
@@ -24,7 +24,7 @@
 <div class="container-fluid" style="position: relative">
             <div class="content">
                 <p>We are working on something very interesting!</p>
-                <p>Coming soon by 15 Sep '16</p>
+                <p>Coming soon by 1<sup>st</sup> Nov '16</p>
             </div>
 
             <div id="particles-js"></div>

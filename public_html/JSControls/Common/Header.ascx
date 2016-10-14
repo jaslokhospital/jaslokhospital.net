@@ -101,7 +101,7 @@
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Out-Patient</li>
                                 <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
-                                <li data-value="#"><a>Diagnostics Appointment</a></li>
+                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
