@@ -101,7 +101,7 @@
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Out-Patient</li>
                                 <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
-                                <li data-value="#"><a>Diagnostics Appointment</a></li>
+                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
@@ -401,7 +401,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="padding: 5px 50px;">
-                <button type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                 <h4>Permanent Registration</h4>
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
@@ -420,7 +420,7 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                    <button id="Button2" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                     <h4>
                         <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
                 </div>
