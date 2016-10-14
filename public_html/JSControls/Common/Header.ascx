@@ -428,7 +428,7 @@
                     <div role="form">
                         <div id="divLoginForm" runat="server">
                             <div class="form-group">
-                                <label>Visitor ID</label>
+                                <label>Visitor ID/MRNumber</label>
                                 <asp:TextBox ID="txtLoginUsername" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Visitor ID" ControlToValidate="txtLoginUsername" ValidationGroup="loginVal"></asp:RequiredFieldValidator>
                             </div>
