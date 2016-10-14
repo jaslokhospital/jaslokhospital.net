@@ -105,7 +105,7 @@
                              <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
                                 <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; New Appointment</a></li>
                                 <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; Follow-up Appointment</a></li>
-                                <li data-value="#"><a>Diagnostics Appointment</a></li>
+                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
                                 <li data-value="#"><a>Lab Reports</a></li>
                                 <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
 
@@ -411,7 +411,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="padding: 5px 50px;">
-                <button type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                 <h4>Permanent Registration</h4>
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
@@ -430,7 +430,7 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                    <button id="Button2" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                     <h4>
                         <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
                 </div>

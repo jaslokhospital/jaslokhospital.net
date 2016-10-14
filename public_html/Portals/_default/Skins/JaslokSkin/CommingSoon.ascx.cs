@@ -10,5 +10,10 @@ public partial class Portals__default_Skins_JaslokSkin_CommingSoon : DotNetNuke.
     protected void Page_Load(object sender, EventArgs e)
     {
         contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
+
+        if (Request.RawUrl.ToLower() == "/diagnosticsappointment" || Request.RawUrl.ToLower() == "/diagnosticsappointment.aspx")
+        {
+            ContentPane.Controls.Add(LoadControl("~/JSControls/MiddleContent/DiagnosticsAppointment.ascx"));
+        }
     }
 }
