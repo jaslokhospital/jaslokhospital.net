@@ -489,6 +489,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.Description = txtInquiry.Text;
             objDAEntities.FacilityName = "BookAppointment";
             objDAEntities.AppointmentType = (drpAppointmentType.SelectedValue == "Follow-Up") ? "Follow-Up" : "New";
+            objDAEntities.MRNumber = objuser.Username;
 			objDAEntities.ConsultingCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"]);
             objDAEntities.FollowUpCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
             objDAEntities.dName = lblDoctorName.Text;
@@ -504,7 +505,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             {               
                 PlaceMessage.Visible = true;
                 placeRightPart.Visible = false;
-                Clear();             
+                Clear();
                 Response.Redirect("/Payment.aspx");
             }
             else

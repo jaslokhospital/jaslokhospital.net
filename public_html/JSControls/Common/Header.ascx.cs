@@ -370,7 +370,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         else
         {
             JaslokMailer objMailer = new JaslokMailer();
-            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+            List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
             PatIndex objPatIndex = new PatIndex();
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
@@ -595,7 +595,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     protected void btnForgotPasword_Click(object sender, EventArgs e)
     {
         JaslokMailer objMailer = new JaslokMailer();
-        List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+        List<Parameters> lstParameters = new List<Parameters>();
         MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
 
         string lsEmailStatus = string.Empty;
@@ -610,8 +610,8 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             //sendmail(objUser.Email, lsPassword);
             if (!string.IsNullOrEmpty(lsmobileNumber))
                 CommonFn.SendSMS(lsmobileNumber.Replace("-", ""), "Your password is: " + lsPassword);
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Password", ShortCodeValue = lsPassword });
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
+            lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = lsPassword });
             lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, objInfo.Email, null);
             if (string.IsNullOrEmpty(lsEmailStatus))
             {
@@ -828,12 +828,12 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
 
             JaslokMailer objMailer = new JaslokMailer();
-            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+            List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
 
 
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = objUserInfo.Username });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Password", ShortCodeValue = LsPassword });
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = objUserInfo.Username });
+            lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = LsPassword });
             lsEmailStatus = objMailer.SendEmail("registration", lstParameters, objUserInfo.Email);
 
         }

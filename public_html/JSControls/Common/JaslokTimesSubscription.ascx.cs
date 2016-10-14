@@ -21,8 +21,8 @@ public partial class JSControls_Common_JaslokTimesSubscription : System.Web.UI.U
         objDAEntities.Email = txtemail.Text.Trim();
         JaslokMailer objMailer = new JaslokMailer();
         objBusinessLogic.AddJaslokTimesSubscription(objDAEntities);
-        List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
-        lstParameters.Add(new EmailParaMeters { ShortCodeName = "email", ShortCodeValue = txtemail.Text.Trim() });
+        List<Parameters> lstParameters = new List<Parameters>();
+        lstParameters.Add(new Parameters { ShortCodeName = "email", ShortCodeValue = txtemail.Text.Trim() });
         
         DataSet ds = new DataSet();
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail((int)AppGlobal.JaslokEmailHandler.EmailFormJasloktimesSubscribe);

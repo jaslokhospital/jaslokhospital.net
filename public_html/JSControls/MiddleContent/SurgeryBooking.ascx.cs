@@ -149,9 +149,9 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
             objDAEntities.AdmissionCharge = hdnSurgeryFeeSB.Value;
             objDAEntities.MRNumber = user.Username;
 
-            objDAEntities.AdmissionCharge = Convert.ToString(9);
-            Session["Amount"] = objDAEntities.AdmissionCharge;
-
+            objDAEntities.AdmissionCharge = Convert.ToString(10);
+            //Session["Amount"] = objDAEntities.AdmissionCharge;
+            Session["Amount"] = "100";
             Session["Surgery"] = objDAEntities;
 
             clear();

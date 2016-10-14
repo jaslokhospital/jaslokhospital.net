@@ -21,6 +21,7 @@ public partial class Payment : System.Web.UI.Page
         //formPostUrl = "/comingsoon";
         //formPostUrl = "https://sandbox.citruspay.com/sslperf/jaslokhospital";
         formPostUrl = "https://www.citruspay.com/jaslokhospital";
+        
         //Need to change with your Secret Key
        // string secret_key = "66fc8c3cca181b8954338bb5d5bd0cbb18b99b6d";
         string secret_key = "ed70df7a017654499542ff0a5515812824b74142";
@@ -55,7 +56,7 @@ public partial class Payment : System.Web.UI.Page
         
 
         notifyUrl = returnUrl;
-       
+        //Response.Redirect("/PaymentResponse.aspx");
         //Response.Write("txm:" + merchantTxnId + "  " + securitySignature);
     }
 }

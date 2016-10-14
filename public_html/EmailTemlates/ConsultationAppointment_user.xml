@@ -5,7 +5,7 @@
   <content>
     <![CDATA[
   Hi [Username], <br/><br/>
-    Thank you we have received your appointment request, we will confirm your appointment time shortly.
+    We've received your payment of [AppointmentTypeCharge] against consultation appointment with [DoctorName]. We will confirm your appointment time shortly.
     <br/><br/>
     Thanks,<br/>
     Jaslok
@@ -14,7 +14,7 @@
   <sms>
     <content>
       <![CDATA[
-   Your payment Rs.[AppointmentTypeCharge] was completed Successfully. Thank you we have received your appointment request, we will confirm your appointment time shortly.
+   Hi [Username], We've received your payment of [AppointmentTypeCharge] against consultation appointment with [DoctorName]. We will confirm your appointment time shortly.
     ]]>
     </content>
   </sms>

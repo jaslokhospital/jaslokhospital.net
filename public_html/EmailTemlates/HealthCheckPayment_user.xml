@@ -5,16 +5,16 @@
   <content>
     <![CDATA[
     Hi [Username], <br/><br/>
-    Your Health checkup Payament has been successfully done.
+    We've received your payment of [DepositAmount] against Health Check-up for [ServicePackage].
     <br/><br/>
     Thanks,<br/>
-    Jaslok
+    Jaslok Hospital
     ]]>
   </content>
   <sms>
     <content>
       <![CDATA[
-  Your payment Rs.[DepositAmount] was completed Successfully for [ServiceName]
+      Hi [Username], We've received your payment of [DepositAmount] against Health Check-up for [ServicePackage].
     ]]>
     </content>    
   </sms>

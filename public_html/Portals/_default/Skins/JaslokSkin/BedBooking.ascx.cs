@@ -110,7 +110,7 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             objDAEntities.MRNumber = user.Username;
 
             //objDAEntities.AdmissionCharge = Convert.ToString(10);
-            Session["Amount"] = Convert.ToString(10);
+            Session["Amount"] = Convert.ToString(20);
 
             Session["Bed"] = objDAEntities;
             if (CommonFn.UserID <= 0)
