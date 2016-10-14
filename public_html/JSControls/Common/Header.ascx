@@ -3,6 +3,7 @@
     function redirect() {
         location.href = '/Payment.aspxamount=100';
     }
+
 </script>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <%@ Register Src="~/JSControls/Common/StickyFindDoctor.ascx" TagPrefix="JS" TagName="StickyFindDoctor" %>
@@ -92,21 +93,22 @@
                               
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-second-menu" style="margin-top:10px;" >
-                              
-                                <li data-value="PatientRegistration"><a >Patient Registration</a></li>
+                            <ul class="dropdown-menu dropdown-second-menu" style="width:200px;">
+                                <li data-value="PatientRegistration" style="font-weight:bold;padding-left:6px">Patient Registration</li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">In-Patient</li>
                                 <li data-value="bed-booking"><a>Bed Reservation</a></li>
-                                <li data-value="#"><a>Lab Reports</a></li>
-                                <li data-value="outstandingbillpayment"><a> Outstanding Bill (Interim Demand Note)</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Out-Patient</li>
+                                <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
+                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
                              <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
-                                <li data-value="consultationappointment/new" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; New Appointment</a></li>
-                                <li data-value="consultationappointment/follow-up" style="margin-left: 23px;"><a>&nbsp;&nbsp;&nbsp; Follow-up Appointment</a></li>
-                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
-                                <li data-value="#"><a>Lab Reports</a></li>
-                                <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
+                                <li data-value="consultationappointment/new"><a>New Appointment</a></li>
+                                <li data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></li>
+                                
 
                             </ul>
                         </li>
@@ -118,21 +120,10 @@
                         <li class="dropdown main-menu-bar online-facilities" role="presentation">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-second-menu">
-                                
-                                <li data-value="#" style="font-weight:bold;padding-left:6px;">Deposit</li>
-                                <li data-value="surgery-booking" style="font-weight:bold;padding-left:6px;">Surgery Deposit</li>
-                                <li data-value="outstandingbillpayment" style="font-weight:bold;padding-left:6px;">Outstanding Bill</li>
-                                <li data-value="#" style="font-weight:bold;padding-left:6px;">Doctor Consultation</li>
-                                <li data-value="bed-booking" style="margin-left: 23px;"><a>Bed Reservation/Admission</a></li>
-                                <li data-value="#" style="margin-left: 23px;"><a> View Lab Reports</a> </li>
-                                
-                                <li data-value="outstandingbillpayment" style="margin-left: 23px;"><a>View Outstanding Bill (Interim Demand Note)</a></li>
-                                <li data-value="#"  style="font-weight:bold;padding-left:6px;"> Diagnostic Services </li>
-
-                               
-                              
-
+                            <ul class="dropdown-menu dropdown-second-menu" style="width:300px;">
+                                <li data-value="#" style="font-weight:bold;padding-left:6px;">Deposit Payment</li>
+                                <li data-value="surgery-booking"><a>Surgery Deposit Payment</a></li>
+                                <li data-value="outstandingbillpayment"><a>Outstanding Bill (Interim Demand Note)</a></li>
                             </ul>
                         </li>
 
@@ -174,6 +165,8 @@
 =======
           <%--  <div class="container">
 >>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
+
+
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 headeronly">
                 <div class="pull-left header-top-select" id="divHeaderTopSelect" runat="server">
@@ -189,6 +182,8 @@
 =======
                     <asp:HiddenField ID="HiddenField1" runat="server" />
                     <asp:HiddenField ID="HiddenField2" runat="server" />
+
+
                   
                     <select name="" id="selectOption1" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list1">
                         <option value="">Online Facilities</option>
@@ -215,6 +210,7 @@
                                 </optgroup>
                             </optgroup>
                         </select>
+
                         <select name="" id="SelectPayment" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list2">
                             <option value="">Online Payment</option>
                             <option value="">Admission Deposit</option>
@@ -264,6 +260,7 @@
                                 <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
                                     <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
                             </li>
+
                             <li runat="server" id="liAhome">
                                 <a runat="server" id="anchorAhome">
                                     <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
@@ -275,6 +272,7 @@
                             <img src="/images/car.png" class="" />1800-22-1800</button>
                         <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
                     </div>
+
 </div>--%>
 
     <div class="line"></div>
@@ -403,7 +401,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="padding: 5px 50px;">
-                <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                 <h4>Permanent Registration</h4>
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
@@ -422,7 +420,7 @@
             <asp:HiddenField ID="hdnStatus" runat="server" Value="login" />
             <div id="divLogin" class="modal-content">
                 <div class="modal-header" style="padding: 5px 50px;">
-                    <button id="Button2" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
+                    <button id="Button1" type="button" class="close" onclick="sessionclear_Click" runat="server" data-dismiss="modal">&times;</button>
                     <h4>
                         <asp:Label ID="litPopUpTitle" runat="server" Text="Login"></asp:Label></h4>
                 </div>
@@ -430,7 +428,7 @@
                     <div role="form">
                         <div id="divLoginForm" runat="server">
                             <div class="form-group">
-                                <label>Visitor ID</label>
+                                <label>Visitor ID/MRNumber</label>
                                 <asp:TextBox ID="txtLoginUsername" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Visitor ID" ControlToValidate="txtLoginUsername" ValidationGroup="loginVal"></asp:RequiredFieldValidator>
                             </div>
@@ -609,3 +607,6 @@
     </telerik:RadAjaxManager>
 </div>
 <asp:HiddenField ID="hdnMrNumberexist" runat="server" />
+
+
+
