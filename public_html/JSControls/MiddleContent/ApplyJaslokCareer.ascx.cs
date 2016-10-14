@@ -491,13 +491,13 @@ public partial class JSControls_MiddleContent_ApplyJaslokCareer : PortalModuleBa
             }
 
             JaslokMailer objMailer = new JaslokMailer();
-            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Post", ShortCodeValue = txtPost.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtFirstName.Text.Trim() + " " + (!string.IsNullOrEmpty(txtMiddleName.Text.Trim()) ? (txtMiddleName.Text.Trim() + " ") : string.Empty) + txtLastName.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "DateOfBirth", ShortCodeValue = Convert.ToDateTime(rdpDOB.SelectedDate).ToString("dd/MM/yyyy") });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Gender", ShortCodeValue = ddlGender.SelectedValue });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Permanent", ShortCodeValue = txtPermanentAddress.Text.Trim() });
+            List<Parameters> lstParameters = new List<Parameters>();
+            lstParameters.Add(new Parameters { ShortCodeName = "Post", ShortCodeValue = txtPost.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtFirstName.Text.Trim() + " " + (!string.IsNullOrEmpty(txtMiddleName.Text.Trim()) ? (txtMiddleName.Text.Trim() + " ") : string.Empty) + txtLastName.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "DateOfBirth", ShortCodeValue = Convert.ToDateTime(rdpDOB.SelectedDate).ToString("dd/MM/yyyy") });
+            lstParameters.Add(new Parameters { ShortCodeName = "Gender", ShortCodeValue = ddlGender.SelectedValue });
+            lstParameters.Add(new Parameters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Permanent", ShortCodeValue = txtPermanentAddress.Text.Trim() });
 
             DataSet objds = new DataSet();
             objds = null;

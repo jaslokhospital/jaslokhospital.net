@@ -5,16 +5,16 @@
   <content>
     <![CDATA[
     Hi [Username], <br/><br/>
-    Your Outstanding Bill Payament has been successfully done.
+    We've received your payment of [DepositAmount] against your Outstanding Payment.
     <br/><br/>
     Thanks,<br/>
-    Jaslok
+    Jaslok Hospital
     ]]>
   </content>
   <sms>
     <content>
       <![CDATA[
-      Your payment Rs.[DepositAmount] was completed Successfully   
+      Hi [Username], We've received your payment of [DepositAmount] against your Outstanding Payment.
     ]]>
     </content>    
   </sms>

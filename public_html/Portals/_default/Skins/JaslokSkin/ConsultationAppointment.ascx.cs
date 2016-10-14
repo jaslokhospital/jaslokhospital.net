@@ -216,8 +216,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
 
         Boolean DSFlag = false;
         JaslokMailer objMailer = new JaslokMailer();
-        List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
-        List<SmsParaMeters> lstsmsParameters = new List<SmsParaMeters>();
+        List<Parameters> lstParameters = new List<Parameters>();
         string lsEmailStatus = string.Empty;
         string lsSmsStatus = string.Empty;
         
@@ -261,23 +260,23 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                 {
                     case "pay later":
                         objBusinessLogic.SaveBookAppointment(objDAEntities);
-                        lsSmsStatus = objMailer.SendSms("fixanappointment", lstsmsParameters, txtMobileNo.Text);
+                        lsSmsStatus = objMailer.SendSms("fixanappointment", lstParameters, txtMobileNo.Text);
                        // CommonFn.SendSMS(txtMobileNo.Text, "Your appointment date is: " + ddlAppointMentDate.SelectedValue);
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
                         //lsEmailStatus = objMailer.SendEmail("fixanappointment", lstParameters, txtEmail.Text);
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Day", ShortCodeValue = objDAEntities.Day });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Email", ShortCodeValue = txtEmail.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "PhoneNo", ShortCodeValue = txtPhoneNo.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "MobileNo", ShortCodeValue = txtMobileNo.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Location", ShortCodeValue = ddlCountry.SelectedItem.Text });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Address", ShortCodeValue = txtState.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Description", ShortCodeValue = txtInquiry.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Apponintment", ShortCodeValue = objDAEntities.TimeDate.ToString("dd-MMM-yyyy hh:mm tt") });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "DoctorName", ShortCodeValue = lblDoctorName.Text.Trim() });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "AppointmentType", ShortCodeValue = objDAEntities.AppointmentType });
-                        lstParameters.Add(new EmailParaMeters { ShortCodeName = "Speciality", ShortCodeValue = lblDocotrSpecialty.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Day", ShortCodeValue = objDAEntities.Day });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = txtEmail.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "PhoneNo", ShortCodeValue = txtPhoneNo.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "MobileNo", ShortCodeValue = txtMobileNo.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Location", ShortCodeValue = ddlCountry.SelectedItem.Text });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Address", ShortCodeValue = txtState.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Description", ShortCodeValue = txtInquiry.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Apponintment", ShortCodeValue = objDAEntities.TimeDate.ToString("dd-MMM-yyyy hh:mm tt") });
+                        lstParameters.Add(new Parameters { ShortCodeName = "DoctorName", ShortCodeValue = lblDoctorName.Text.Trim() });
+                        lstParameters.Add(new Parameters { ShortCodeName = "AppointmentType", ShortCodeValue = objDAEntities.AppointmentType });
+                        lstParameters.Add(new Parameters { ShortCodeName = "Speciality", ShortCodeValue = lblDocotrSpecialty.Text.Trim() });
 
 
                         DataSet ds = new DataSet();
@@ -296,12 +295,15 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         break;
 
                     case "pay now":
+                        
                         objDAEntities.FacilityName = "Consultation Appointment";
                         objDAEntities.ConsultingCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"]);
                         objDAEntities.FollowUpCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
                         objDAEntities.AppointmentTypeCharge = ((Request.RawUrl.ToLower().Contains("/consultationappointment/follow-up")) == true) ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
+                        objDAEntities.dName = lblDoctorName.Text;
                         objDAEntities.MRNumber = objuser.Username;
-                        Session["Amount"] = 10;
+                        //Session["Amount"] = lblAppointmentType.Text;
+                        Session["Amount"] = "10";
                         Session["ConsultationAppointment"] = objDAEntities;
                         if (CommonFn.UserID <= 0)
                         {
@@ -595,7 +597,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
     //{
     //    Boolean DSFlag = false;
     //    JaslokMailer objMailer = new JaslokMailer();
-    //    List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+    //    List<Parameters> lstParameters = new List<Parameters>();
     //    string lsEmailStatus = string.Empty;
     //    try
     //    {

@@ -103,8 +103,8 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
 
         objDAEntities.MRNumber = user.Username;
         //objDAEntities.AdmissionCharge = Convert.ToString(10);
-        Session["Amount"] = Convert.ToString(10);
-
+        //Session["Amount"] = Convert.ToString(10);
+        Session["Amount"] = "50";
         Session["HealthCheck-upComprehensive"] = objDAEntities;
 
 

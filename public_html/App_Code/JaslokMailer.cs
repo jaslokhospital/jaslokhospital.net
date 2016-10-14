@@ -26,7 +26,7 @@ public class JaslokMailer
 
     }
 
-    public string SendEmail(string FileName, List<EmailParaMeters> lstParameters, string fsEmailAddress, string CcMailId = "")
+    public string SendEmail(string FileName, List<Parameters> lstParameters, string fsEmailAddress, string CcMailId = "")
     {
         try
         {
@@ -58,7 +58,7 @@ public class JaslokMailer
 
     }
 
-    public void EmailBody(string FileName, List<EmailParaMeters> lstParameters)
+    public void EmailBody(string FileName, List<Parameters> lstParameters)
     {
         XmlDocument doc = new XmlDocument();
         doc.Load(System.Web.HttpContext.Current.Server.MapPath("~/EmailTemlates/" + FileName + ".xml"));
@@ -73,19 +73,19 @@ public class JaslokMailer
 
         if (lstParameters.Count > 0)
         {
-            foreach (EmailParaMeters objParameters in lstParameters)
+            foreach (Parameters objParameters in lstParameters)
             {
                 this.Body = this.Body.Replace("[" + objParameters.ShortCodeName + "]", objParameters.ShortCodeValue);
             }
         }
     }
-    public string SendSms(string FileName, List<SmsParaMeters> lstsmsParameters, string contact)
+    public string SendSms(string FileName, List<Parameters> lstParameters, string contact)
     {
         try
         {
             string strMessege = string.Empty;
 
-            strMessege = SmsBody(FileName, lstsmsParameters);
+            strMessege = SmsBody(FileName, lstParameters);
             WebClient client = new WebClient();
             string baseurl = "http://smsapi.cellapps.com/api/v3/?method=sms&api_key=A316202f45dd36422fdbd773f33a3a44e&to=" + contact + "&sender=Jaslok&message=" + strMessege;
             Stream data = client.OpenRead(baseurl);
@@ -102,16 +102,16 @@ public class JaslokMailer
 
     }
 
-    public string SmsBody(string FileName, List<SmsParaMeters> lstsmsParameters)
+    public string SmsBody(string FileName, List<Parameters> lstParameters)
     {
         XmlDocument doc = new XmlDocument();
         doc.Load(System.Web.HttpContext.Current.Server.MapPath("~/EmailTemlates/" + FileName + ".xml"));
         XmlNode BodyNode = doc.DocumentElement.SelectSingleNode("/emailcontent/sms/content");
         this.Body = BodyNode.InnerText.Trim();
 
-        if (lstsmsParameters.Count > 0)
+        if (lstParameters.Count > 0)
         {
-            foreach (SmsParaMeters objParameters in lstsmsParameters)
+            foreach (Parameters objParameters in lstParameters)
             {
                 this.Body = this.Body.Replace("[" + objParameters.ShortCodeName + "]", objParameters.ShortCodeValue);
             }
@@ -120,12 +120,7 @@ public class JaslokMailer
     }
 }
 
-public class EmailParaMeters
-{
-    public string ShortCodeName { get; set; }
-    public string ShortCodeValue { get; set; }
-}
-public class SmsParaMeters
+public class Parameters
 {
     public string ShortCodeName { get; set; }
     public string ShortCodeValue { get; set; }

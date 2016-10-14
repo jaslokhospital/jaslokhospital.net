@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <emailcontent>
-  <subject>Consultation Appointment Payment Response !</subject>
+  <subject>Appointment Request Received</subject>
   <from>online@jaslokhospital.net</from>
   <content>
     <![CDATA[
   Hi [Username], <br/><br/>
-    Your Consultation Appointment Payament has been successfully done.
+    We've received your payment of [AppointmentTypeCharge] against consultation appointment with [DoctorName]. We will confirm your appointment time shortly.
     <br/><br/>
     Thanks,<br/>
     Jaslok
@@ -14,7 +14,7 @@
   <sms>
     <content>
       <![CDATA[
-   Your payment Rs.[AppointmentTypeCharge] was completed Successfully
+   Hi [Username], We've received your payment of [AppointmentTypeCharge] against consultation appointment with [DoctorName]. We will confirm your appointment time shortly.
     ]]>
     </content>
   </sms>

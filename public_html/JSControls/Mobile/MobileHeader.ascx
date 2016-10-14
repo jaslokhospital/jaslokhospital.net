@@ -240,26 +240,27 @@
                                     <a class="SubMenu">In-Patient</a>
                                     <div class="sub-nav2">
                                         <div><a class="back-btn">Back To Main</a></div>
-                                        <div><a data-value="bed-booking" href="javascript:void(0)">Bed Reservation/Admission</a></div>
-                                        <div><a>View Lab Reports</a></div>
-                                        <div><a data-value="outstandingbillpayment" href="javascript:void(0)">View Outstanding Bill (Interim Demand Note)</a></div>
+                                        <div><a data-value="bed-booking" href="javascript:void(0)">Bed Reservation</a></div>
+                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></div>
+                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></div>
                                     </div>
                                 </div>
                                 <div>
                                     <a class="SubMenu">Out-Patient</a>
                                     <div class="sub-nav2">
                                         <div><a class="back-btn">Back To Main</a></div>
-                                        <div>
-                                            <a class="SubMenu">Consultation Appointment</a>
-                                            <div class="sub-nav3">
-                                                <div><a class="back-btn">Back To Main</a></div>
-                                                <div><a data-value="consultationappointment/new" href="javascript:void(0)">New Appointment</a></div>
-                                                <div><a data-value="consultationappointment/follow-up" href="javascript:void(0)">Follow-up Appointment</a></div>
-                                            </div>
-                                        </div>
-                                        <div><a>Diagnostics Appointment</a></div>
-                                        <div><a>View Lab Reports</a></div>
                                         <div><a data-value="health-check-up-comprehensive" href="javascript:void(0)">Health Check-up</a></div>
+                                        <div><a>Diagnostics Appointment</a></div>
+                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></div>
+                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a class="SubMenu">Consultation Appointment</a>
+                                    <div class="sub-nav2">
+                                        <div><a class="back-btn">Back To Main</a></div>
+                                        <div><a data-value="consultationappointment/new" href="javascript:void(0)">New Appointment</a></div>
+                                        <div><a data-value="consultationappointment/follow-up" href="javascript:void(0)">Follow-up Appointment</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -268,13 +269,14 @@
                             <a class="SubMenu">ONLINE PAYMENT</a>
                             <div class="sub-nav">
                                 <div><a class="back-btn">Back To Main</a></div>
-                                <div><a data-value="surgery-booking" href="javascript:void(0)">Surgery Deposit</a></div>
-                                <div><a data-value="outstandingbillpayment" href="javascript:void(0)">Outstanding Bill</a></div>
-                                <div><a>Doctor Consultation</a></div>
-                                <div><a data-value="bed-booking" href="javascript:void(0)">Bed Reservation/Admission</a></div>
-                                <div><a>View Lab Reports</a></div>
-                                <div><a data-value="outstandingbillpayment" href="javascript:void(0)">View Outstanding Bill (Interim Demand Note)</a></div>
-                                <div><a>Diagnostic Services</a></div>
+                                <div>
+                                    <a class="SubMenu">Deposit Payments</a>
+                                    <div class="sub-nav2">
+                                        <div><a class="back-btn">Back To Main</a></div>
+                                        <div><a data-value="surgery-booking" href="javascript:void(0)">Surgery Deposit Payment</a></div>
+                                        <div><a data-value="outstandingbillpayment" href="javascript:void(0)">Outstanding Bill Payment</a></div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -324,7 +326,7 @@
                         <div id="divLoginForm" runat="server">
                             <div class="form-group">
                                 <label for="usrname">
-                                    Visitor ID</label>
+                                    Visitor ID/MRNumber</label>
                                 <asp:TextBox ID="txtLoginUsername" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" Font-Size="11px"
                                     runat="server" Display="Dynamic" ErrorMessage="Enter Visitor ID" ControlToValidate="txtLoginUsername"
