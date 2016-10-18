@@ -511,8 +511,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.FollowUpCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
             objDAEntities.dName = lblDoctorName.Text;
             objDAEntities.AppointmentTypeCharge = (drpAppointmentType.SelectedValue == "Follow-Up") ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
-			
-            Session["Amount"] = 10;
+
+            Session["Amount"] = objDAEntities.AppointmentTypeCharge;
             Session["AppointmentDetail"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {

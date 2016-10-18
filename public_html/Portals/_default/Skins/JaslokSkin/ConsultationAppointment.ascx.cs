@@ -314,8 +314,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         objDAEntities.AppointmentTypeCharge = ((Request.RawUrl.ToLower().Contains("/consultationappointment/follow-up")) == true) ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
                         objDAEntities.dName = lblDoctorName.Text;
                         objDAEntities.MRNumber = objuser.Username;
-                        //Session["Amount"] = lblAppointmentType.Text;
-                        Session["Amount"] = "10";
+                        Session["Amount"] = lblAppointmentType.Text;
+                        //Session["Amount"] = "10";
                         Session["ConsultationAppointment"] = objDAEntities;
                         if (CommonFn.UserID <= 0)
                         {
