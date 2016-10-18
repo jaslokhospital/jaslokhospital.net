@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Health Check Payment acknowledge</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    Hi [Username], <br/><br/>
+    We've received your payment of [DepositAmount] against Health Check-up for [ServicePackage].
+    <br/><br/>
+    Thanks,<br/>
+    Jaslok Hospital
+    ]]>
+  </content>
+  <sms>
+    <content>
+      <![CDATA[
+      Hi [Username], We've received your payment of [DepositAmount] against Health Check-up for [ServicePackage].
+    ]]>
+    </content>    
+  </sms>
+</emailcontent>

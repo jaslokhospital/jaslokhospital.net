@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Fix an appointment acknowledge</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    Hi [Username], <br/><br/>
+    Your Appointment Payament has been successfully done.
+    <br/><br/>
+    Thanks,<br/>
+    Jaslok=
+    ]]>
+  </content>
+  <sms>
+    <content>
+      <![CDATA[
+   Your payment Rs.[DepositAmount] was completed Successfully for [ServiceName]
+    ]]>
+    </content>    
+  </sms>
+</emailcontent>

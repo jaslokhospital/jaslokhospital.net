@@ -1877,7 +1877,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBookAppointment", new object[] { Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.SpecialtyId, Slist.DoctorId, Slist.TimeDate, Slist.Name, Slist.Day, Slist.Email, Slist.PhoneNo, Slist.MobileNo, Slist.Location, Slist.Address, Slist.Description, Slist.DoctorScheduleId, Slist.AppointmentType }));
+                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBookAppointment", new object[] {Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.SpecialtyId, Slist.DoctorId, Slist.TimeDate, Slist.Name, Slist.Day, Slist.Email, Slist.PhoneNo, Slist.MobileNo, Slist.Location, Slist.Address, Slist.Description, Slist.DoctorScheduleId, Slist.AppointmentType,Slist.JeevaStatus}));
             }
             catch (Exception ex)
             {
@@ -1903,6 +1903,54 @@ namespace BusinessDataLayer
             try
             {
                 return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetBookingPaymentInfo", new object[] { });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Research Papers
+
+        public DataSet AddResearchPapers(DataAccessEntities Slist)
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_AddResearchPapers", new object[] { Slist.ThumbnailImage, Slist.ResearchPaperPDF, Slist.CreatedBy, Slist.ThumbnailImageURL, Slist.ResearchPaperPDFURL, Slist.Title, Slist.UpdatedByUserID, Slist.Id, Slist.optype });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataSet GetResearchPapersPageContentDetail()
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetResearchPapersPageContentDetail", new object[] { });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet GetManageResearchPapersContent(DataAccessEntities Slist)
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetManageResearchPapersContent", new object[] { Slist.Id });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet DeleteResearchPapers(DataAccessEntities Slist)
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_DeleteResearchPapers", new object[] { Slist.Id });
             }
             catch (Exception ex)
             {

@@ -104,7 +104,7 @@ public partial class Portals__default_Skins_JaslokSkin_FormsEstimateSkin : DotNe
         if (cptchEstimate.IsValid)
         {
             JaslokMailer objMailer = new JaslokMailer();
-            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+            List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
             // if (Captcha1.UserValidated)
             //{
@@ -120,15 +120,15 @@ public partial class Portals__default_Skins_JaslokSkin_FormsEstimateSkin : DotNe
             objDAEntities.Comment = txtComment.Text;
 
             objBusinessLogic.SaveEstimate(objDAEntities);
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Age", ShortCodeValue = txtAge.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Gender", ShortCodeValue = rdoGenderCom.SelectedItem.Text });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "MobileNo", ShortCodeValue = txtMobile.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "HealthCheckOptFor", ShortCodeValue = txtWhichHealth.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "IndividualPkgNumber", ShortCodeValue = txtNumberofPackage.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "PreferredDay", ShortCodeValue = txt1stPreffed.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Comments", ShortCodeValue = txtComment.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Age", ShortCodeValue = txtAge.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Gender", ShortCodeValue = rdoGenderCom.SelectedItem.Text });
+            lstParameters.Add(new Parameters { ShortCodeName = "MobileNo", ShortCodeValue = txtMobile.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "HealthCheckOptFor", ShortCodeValue = txtWhichHealth.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "IndividualPkgNumber", ShortCodeValue = txtNumberofPackage.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "PreferredDay", ShortCodeValue = txt1stPreffed.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Comments", ShortCodeValue = txtComment.Text.Trim() });
 
             DataSet ds = new DataSet();
             ds = (DataSet)objBusinessLogic.GetFormsEmailDetail((int)AppGlobal.JaslokEmailHandler.EmailFormEstimate);

@@ -92,19 +92,18 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-      
         objDAEntities.FacilityName = "Health";
         objDAEntities.DoctorId = Convert.ToInt32(ddlDoctorbedbook.SelectedValue);
         objDAEntities.BookinDateTime = Convert.ToDateTime(txtdatetime.SelectedDate);
 
-        objDAEntities.AdmissionCharge = txtAdmissionCharge.Text;
+        objDAEntities.AdmissionCharge = Request.Form[txtAdmissionCharge.UniqueID];
 
         objDAEntities.Category = hdnDeposit.Value.Split(',')[1];
 
         objDAEntities.MRNumber = user.Username;
         //objDAEntities.AdmissionCharge = Convert.ToString(10);
-        Session["Amount"] = Convert.ToString(10);
-
+        //Session["Amount"] = Convert.ToString(10);
+        Session["Amount"] = objDAEntities.AdmissionCharge;
         Session["HealthCheck-upComprehensive"] = objDAEntities;
 
 

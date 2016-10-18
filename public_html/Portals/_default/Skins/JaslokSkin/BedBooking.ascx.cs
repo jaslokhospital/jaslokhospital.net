@@ -109,8 +109,7 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             objDAEntities.Category = hdnDepositBB.Value.Split(',')[1];
             objDAEntities.MRNumber = user.Username;
 
-            //objDAEntities.AdmissionCharge = Convert.ToString(10);
-            Session["Amount"] = Convert.ToString(10);
+            Session["Amount"] = objDAEntities.AdmissionCharge;
 
             Session["Bed"] = objDAEntities;
             if (CommonFn.UserID <= 0)

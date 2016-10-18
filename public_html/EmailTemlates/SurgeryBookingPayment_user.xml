@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcontent>
+  <subject>Surgery Booking Acknowledge</subject>
+  <from>online@jaslokhospital.net</from>
+  <content>
+    <![CDATA[
+    Hi [Username], <br/><br/>
+    We've received your payment of [DepositAmount] against Surgery Deposit for [ServiceName] with [ServicePackage] facility.
+    <br/><br/>
+    Thanks,<br/>
+    Jaslok Hospital
+    ]]>
+  </content>
+  <sms>
+    <content>
+      <![CDATA[
+      Hi [Username], We've received your payment of [DepositAmount] against Surgery Deposit for [ServiceName] with [ServicePackage] facility.
+    ]]>
+    </content>    
+  </sms>
+</emailcontent>

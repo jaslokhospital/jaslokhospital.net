@@ -105,7 +105,7 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
         if (cptchComplaint.IsValid)
         {
             JaslokMailer objMailer = new JaslokMailer();
-            List<EmailParaMeters> lstParameters = new List<EmailParaMeters>();
+            List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
             //if (Captcha1.UserValidated)
             // {
@@ -117,9 +117,9 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
             objBusinessLogic.SaveComplaint(objDAEntities);
 
             //            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Save Successfully!!!');", false);
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
-            lstParameters.Add(new EmailParaMeters { ShortCodeName = "Complaint", ShortCodeValue = txtComplaint.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "EmailAdd", ShortCodeValue = txtEmail.Text.Trim() });
+            lstParameters.Add(new Parameters { ShortCodeName = "Complaint", ShortCodeValue = txtComplaint.Text.Trim() });
 
             DataSet ds = new DataSet();
             ds = (DataSet)objBusinessLogic.GetFormsEmailDetail((int)AppGlobal.JaslokEmailHandler.EmailFormComplaint);
