@@ -69,9 +69,12 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
     public void GetUserInfo()
     {
         UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-        txtName.Text = objuser.FirstName+" "+ objuser.LastName;
-        txtEmail.Text = objuser.Email;
-        txtMobileNo.Text = objuser.Profile.GetPropertyValue("PhoneNumber");
+        if (objuser.UserID > 0)
+        {
+            txtName.Text = objuser.FirstName + " " + objuser.LastName;
+            txtEmail.Text = objuser.Email;
+            txtMobileNo.Text = objuser.Profile.GetPropertyValue("PhoneNumber");
+        }
       //  ddlCountry.SelectedItem.Text = objuser.Profile.GetPropertyValue("Country");
 
 
@@ -201,7 +204,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objBusinessLogic.SaveBookAppointment(objDAEntities);
 
             lstParameters.Add(new Parameters { ShortCodeName = "Date", ShortCodeValue = objDAEntities.TimeDate.ToString() });            
-            lsSmsStatus = objMailer.SendSms("fixanappointment", lstParameters, txtMobileNo.Text);
+            //lsSmsStatus = objMailer.SendSms("fixanappointment", lstParameters, txtMobileNo.Text);
            // CommonFn.SendSMS(txtMobileNo.Text, "Your appointment date is: " + ddlAppointMentDate.SelectedValue);
 
 
@@ -220,6 +223,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             lstParameters.Add(new Parameters { ShortCodeName = "DoctorName", ShortCodeValue = lblDoctorName.Text.Trim() });
             lstParameters.Add(new Parameters { ShortCodeName = "AppointmentType", ShortCodeValue = objDAEntities.AppointmentType });
             lstParameters.Add(new Parameters { ShortCodeName = "Speciality", ShortCodeValue = lblDocotrSpecialty.Text.Trim() });
+            lsSmsStatus = objMailer.SendSms("fixanappointment", lstParameters, txtMobileNo.Text);
 
 
             DataSet ds = new DataSet();

@@ -93,9 +93,12 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
     public void GetUserInfo()
     {
         UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
-        txtName.Text = objuser.FirstName;
-        txtEmail.Text = objuser.Email;
-        txtMobileNo.Text = objuser.Profile.GetPropertyValue("PhoneNumber");
+        if (objuser.UserID > 0)
+        {
+            txtName.Text = objuser.FirstName;
+            txtEmail.Text = objuser.Email;
+            txtMobileNo.Text = objuser.Profile.GetPropertyValue("PhoneNumber");
+        }
        // ddlCountry.SelectedValue = objuser.Profile.GetPropertyValue("Country");
 
     }
@@ -272,7 +275,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                 {
                     case "pay later":
                         objBusinessLogic.SaveBookAppointment(objDAEntities);
-                        lsSmsStatus = objMailer.SendSms("fixanappointment", lstParameters, txtMobileNo.Text);
+                        
                        // CommonFn.SendSMS(txtMobileNo.Text, "Your appointment date is: " + ddlAppointMentDate.SelectedValue);
                         lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtName.Text.Trim() });
                         //lsEmailStatus = objMailer.SendEmail("fixanappointment", lstParameters, txtEmail.Text);
@@ -289,7 +292,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         lstParameters.Add(new Parameters { ShortCodeName = "DoctorName", ShortCodeValue = lblDoctorName.Text.Trim() });
                         lstParameters.Add(new Parameters { ShortCodeName = "AppointmentType", ShortCodeValue = objDAEntities.AppointmentType });
                         lstParameters.Add(new Parameters { ShortCodeName = "Speciality", ShortCodeValue = lblDocotrSpecialty.Text.Trim() });
-
+                        lsSmsStatus = objMailer.SendSms("fixanappointment", lstParameters, txtMobileNo.Text);
 
                         DataSet ds = new DataSet();
                         ds = null;
