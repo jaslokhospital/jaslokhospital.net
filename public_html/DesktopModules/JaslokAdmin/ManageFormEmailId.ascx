@@ -20,9 +20,14 @@
                         <asp:ListItem>Estimate Request</asp:ListItem>
                         <asp:ListItem>FeedBack</asp:ListItem>
                         <asp:ListItem>Quick Enquiry</asp:ListItem>
-                         <asp:ListItem>Fix An Appointment</asp:ListItem>
-                         <asp:ListItem>Jaslok Times Subscription</asp:ListItem>
-<asp:ListItem>Apply Jaslok Career</asp:ListItem>
+                        <asp:ListItem>Fix An Appointment</asp:ListItem>
+                        <asp:ListItem>Jaslok Times Subscription</asp:ListItem>
+                        <asp:ListItem>Apply Jaslok Career</asp:ListItem>
+                        <asp:ListItem>Bed Reservation</asp:ListItem>
+                        <asp:ListItem>Permanent Registration</asp:ListItem>
+                        <asp:ListItem>Health Checkup</asp:ListItem>
+                        <asp:ListItem>Other Payment Forms</asp:ListItem>
+
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvformType" runat="server" ErrorMessage="Please Select Form Type" ControlToValidate="ddlFormType" InitialValue="--Select--"
                         Display="Dynamic" ValidationGroup="JHCat" ForeColor="Red"></asp:RequiredFieldValidator>
