@@ -275,6 +275,34 @@ public static class AppGlobal
             return 9;
         }
     }
+    public static int EmailFormBedReservation
+    {
+        get
+        {
+            return 11;
+        }
+    }
+    public static int EmailFormPermanentRegistration
+    {
+        get
+        {
+            return 12;
+        }
+    }
+    public static int EmailFormHealthCheckup
+    {
+        get
+        {
+            return 13;
+        }
+    }
+    public static int EmailFormOtherPaymentForms
+    {
+        get
+        {
+            return 14;
+        }
+    }
     public enum JaslokEmailHandler
     {
         EmailFormJasloktimesSubscribe = 1,
