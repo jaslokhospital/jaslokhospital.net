@@ -22,7 +22,11 @@
                         <asp:ListItem>Quick Enquiry</asp:ListItem>
                          <asp:ListItem>Fix An Appointment</asp:ListItem>
                          <asp:ListItem>Jaslok Times Subscription</asp:ListItem>
-<asp:ListItem>Apply Jaslok Career</asp:ListItem>
+                        <asp:ListItem>Apply Jaslok Career</asp:ListItem>
+                        <asp:ListItem>Bed reservations</asp:ListItem>
+                         <asp:ListItem>Permanent registration</asp:ListItem>
+                         <asp:ListItem>Health Checkup</asp:ListItem>
+                        <asp:ListItem>All Payment Gateway</asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvformType" runat="server" ErrorMessage="Please Select Form Type" ControlToValidate="ddlFormType" InitialValue="--Select--"
                         Display="Dynamic" ValidationGroup="JHCat" ForeColor="Red"></asp:RequiredFieldValidator>
