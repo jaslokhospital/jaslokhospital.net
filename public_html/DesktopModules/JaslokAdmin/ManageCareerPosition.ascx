@@ -75,7 +75,7 @@
             </div>
 
              <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label  for="PageTitle">Max Exp:</label>
                 
                      <asp:TextBox ID="txtMaxExp" runat="server" class="form-control"></asp:TextBox>
@@ -84,13 +84,22 @@
                         ValidationExpression="^\d+$" style="font-size:10px; color: red;" ValidationGroup="JHCat"></asp:RegularExpressionValidator> 
              
             </div>
-                    <div class="col-md-4">
+             <div class="col-md-3">
+                    <label for="PageTitle">Total Exp:</label>
+
+                    <asp:TextBox ID="txtTotalExp" runat="server" class="form-control"></asp:TextBox>
+                    <span style="font-size: 10px;">(Enter in year)</span>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtTotalExp" Display="Dynamic" ErrorMessage="Only numbers"
+                        ValidationExpression="^\d+$" Style="font-size: 10px; color: red;" ValidationGroup="JHCat"></asp:RegularExpressionValidator>
+
+                </div>               
+                    <div class="col-md-3">
                 <label for="PageTitle">Expiry Date:</label>
                
                      <telerik:RadDateTimePicker ID="datetimepick" runat="server" class="form-control"></telerik:RadDateTimePicker>
               
             </div>
-             <div class="col-md-4">
+             <div class="col-md-3">
                 <label for="PageTitle">Salary:</label>
                
                      <asp:TextBox ID="txtSalary" runat="server" class="form-control"></asp:TextBox>
@@ -178,6 +187,7 @@
                     <asp:BoundColumn DataField="TotalVacantPosition" HeaderText="TotalVacantPosition" Visible="false"></asp:BoundColumn>
                      <asp:BoundColumn DataField="MinExp" HeaderText="MinExp"></asp:BoundColumn>
                     <asp:BoundColumn DataField="MaxExp" HeaderText="Max Exp"></asp:BoundColumn>
+                    <asp:BoundColumn DataField="TotalExperience" HeaderText="Total Exp"></asp:BoundColumn>
                     <asp:BoundColumn DataField="Job_Role" HeaderText="Role"></asp:BoundColumn>
                     <asp:BoundColumn DataField="ProfessionalRequirement" HeaderText="Professional Requirement"></asp:BoundColumn>
                      <asp:BoundColumn DataField="Education" HeaderText="Education" Visible="false"></asp:BoundColumn>

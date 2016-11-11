@@ -121,6 +121,10 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 {
                     objDAEntities.MaxExp = txtMaxExp.Text.Replace("&nbsp;", "");
                 }               
+                if (txtTotalExp.Text.Length > 0)
+                {
+                    objDAEntities.TotalExperience = txtTotalExp.Text.Replace("&nbsp;", "");
+                }
                 objDAEntities.Job_Role = conJob_Role.Content;
                 objDAEntities.ProfessionalRequirement = conProfessionalRequirement.Content.Replace("&nbsp;", ""); 
                 objDAEntities.Education = conEducation.Content;
@@ -179,16 +183,17 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 txtLocation.Text = e.Item.Cells[4].Text.Replace("&nbsp;", "");
                 txtTotalVacantPosition.Text = e.Item.Cells[5].Text.Replace("&nbsp;", ""); 
                 txtMinExp.Text = e.Item.Cells[6].Text;
-                txtMaxExp.Text = e.Item.Cells[7].Text.Replace("&nbsp;", ""); 
-                conJob_Role.Content = e.Item.Cells[8].Text;
-                conProfessionalRequirement.Content = e.Item.Cells[9].Text.Replace("&nbsp;", "");
-                conEducation.Content = e.Item.Cells[10].Text;
-                if (Convert.ToDateTime(e.Item.Cells[11].Text) > datetimepick.MinDate)
+                txtMaxExp.Text = e.Item.Cells[7].Text.Replace("&nbsp;", "");
+                txtTotalExp.Text = e.Item.Cells[8].Text.Replace("&nbsp;", "");
+                conJob_Role.Content = e.Item.Cells[9].Text;
+                conProfessionalRequirement.Content = e.Item.Cells[10].Text.Replace("&nbsp;", "");
+                conEducation.Content = e.Item.Cells[11].Text;
+                if (Convert.ToDateTime(e.Item.Cells[12].Text) > datetimepick.MinDate)
                 {
-                    datetimepick.SelectedDate = Convert.ToDateTime(e.Item.Cells[11].Text);
+                    datetimepick.SelectedDate = Convert.ToDateTime(e.Item.Cells[12].Text);
                 }
-                txtSalary.Text = e.Item.Cells[12].Text.Replace("&nbsp;", "");
-                txtSubmittedAt.Text = e.Item.Cells[13].Text.Replace("&nbsp;", "");
+                txtSalary.Text = e.Item.Cells[13].Text.Replace("&nbsp;", "");
+                txtSubmittedAt.Text = e.Item.Cells[14].Text.Replace("&nbsp;", "");
 
                 //if (e.Item.Cells[14].Text == "True")
                 //{
