@@ -1005,7 +1005,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                return Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SaveCareerPosition", new object[] { Slist.PositionName, Slist.FunctionId, Slist.ReportTo, Slist.Location, Slist.TotalVacantPosition, Slist.MinExp, Slist.MaxExp, Slist.Job_Role, Slist.ProfessionalRequirement, Slist.Education, Slist.ExpiryDate, Slist.Salary, Slist.SubmittedAt, Slist.IsApproved, Slist.CreatedByUserID }));
+                return Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SaveCareerPosition", new object[] { Slist.PositionName, Slist.FunctionId, Slist.ReportTo, Slist.Location, Slist.TotalVacantPosition, Slist.MinExp, Slist.MaxExp, Slist.Job_Role, Slist.ProfessionalRequirement, Slist.Education, Slist.ExpiryDate, Slist.Salary, Slist.SubmittedAt, Slist.IsApproved, Slist.CreatedByUserID, Slist.TotalExperience }));
             }
             catch (Exception ex)
             {
@@ -1016,7 +1016,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_UpdateDeleteCareerPosition", new object[] { Slist.PositionName, Slist.FunctionId, Slist.ReportTo, Slist.Location, Slist.TotalVacantPosition, Slist.MinExp, Slist.MaxExp, Slist.Job_Role, Slist.ProfessionalRequirement, Slist.Education, Slist.ExpiryDate, Slist.Salary, Slist.SubmittedAt, Slist.IsApproved, Slist.UpdatedByUserID, Slist.optype, Slist.JobId });
+                SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_UpdateDeleteCareerPosition", new object[] { Slist.PositionName, Slist.FunctionId, Slist.ReportTo, Slist.Location, Slist.TotalVacantPosition, Slist.MinExp, Slist.MaxExp, Slist.Job_Role, Slist.ProfessionalRequirement, Slist.Education, Slist.ExpiryDate, Slist.Salary, Slist.SubmittedAt, Slist.IsApproved, Slist.UpdatedByUserID, Slist.optype, Slist.JobId, Slist.TotalExperience });
             }
             catch (Exception ex)
             {
