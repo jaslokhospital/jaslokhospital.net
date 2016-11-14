@@ -643,7 +643,8 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         {
             PatIndex objPatIndex = new PatIndex();
             var PatientDetails = objPatIndex.GetPatientDetails(txtForgotPasswordUserName.Text.Trim());
-            if (PatientDetails != null)
+            
+            if (PatientDetails.WEBPWD != null)
             {
                 if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
                     CommonFn.SendSMS(PatientDetails.PatMobile.Replace("-", ""), "Your password is: " + PatientDetails.WEBPWD);
@@ -665,6 +666,13 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                     divForgotPassword.Attributes.Add("style", "display:block;");
                 }
                 txtForgotPasswordUserName.Text = "";
+            }
+            else
+            {
+                lblForgotPassError.Text = "MRNumber not found, Please enter valid MRNumber.";
+                lblForgotPassError.CssClass = "errorText";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
             }
         }
     }
