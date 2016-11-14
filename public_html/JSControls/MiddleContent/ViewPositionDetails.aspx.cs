@@ -43,6 +43,9 @@ public partial class JSControls_MiddleContent_ViewPositionDetails : System.Web.U
                 lblRolesAndResp.Text = ds.Tables[0].Rows[0]["Job_Role"].ToString();
                 lblEducation.Text = ds.Tables[0].Rows[0]["Education"].ToString();
                 lblSubmittedAt.Text = ds.Tables[0].Rows[0]["SubmittedAt"].ToString();
+                lblMinExp.Text = ds.Tables[0].Rows[0]["MinExp"].ToString();
+                lblMaxExp.Text = ds.Tables[0].Rows[0]["MaxExp"].ToString();
+
                 
             }
         }

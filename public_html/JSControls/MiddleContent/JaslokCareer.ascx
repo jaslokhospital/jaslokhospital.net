@@ -101,7 +101,7 @@
                         </td>
                         <td class="rptHeader">Location
                         </td>
-                        <td class="rptHeader">Total Experience<br />
+                        <td class="rptHeader">Experience<br />
                             (Years)
                         </td>
                         <td class="rptHeader">Total Vancany

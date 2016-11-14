@@ -70,6 +70,27 @@
                     <asp:Label ID="lblTotalVacancy" runat="server"></asp:Label>&nbsp;
                 </td>
             </tr>
+
+             <tr>
+                <td class="normaltableheadercelluser">
+                    Min Exp.
+                </td>
+            </tr>
+             <tr>
+                <td class="normaltableInputcelluser">
+                    <asp:Label ID="lblMinExp" runat="server"></asp:Label>&nbsp;
+                </td>
+            </tr>
+             <tr>
+                <td class="normaltableheadercelluser">
+                    Max Exp.
+                </td>
+            </tr>
+             <tr>
+                <td class="normaltableInputcelluser">
+                    <asp:Label ID="lblMaxExp" runat="server"></asp:Label>&nbsp;
+                </td>
+            </tr>
             <tr>
                 <td class="normaltableheadercelluser">
                     Total Experience Required
