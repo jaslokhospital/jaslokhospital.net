@@ -252,7 +252,7 @@
                                         <div><a data-value="health-check-up-comprehensive" href="javascript:void(0)">Health Check-up</a></div>
                                         <div><a data-value="diagnosticsappointment" href="javascript:void(0)">Diagnostics Appointment</a></div>
                                         <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></div>
-                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></div>
+                                        <%--<div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></div>--%>
                                     </div>
                                 </div>
                                 <div>
