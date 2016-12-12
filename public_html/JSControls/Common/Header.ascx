@@ -103,7 +103,7 @@
                                 <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
                                 <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
                                 <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
+                                <%--<li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>--%>
                                 <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
                              <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
                                 <li data-value="consultationappointment/new"><a>New Appointment</a></li>
@@ -447,7 +447,7 @@
                         </div>
                         <div id="divForgotPassword" style="display: none;" runat="server">
                             <div class="form-group">
-                                <label>Visitor ID</label>
+                                <label>Visitor ID/MRNumber</label>
                                 <asp:TextBox ID="txtForgotPasswordUserName" runat="server" class="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" Font-Size="11px" runat="server" Display="Dynamic" ErrorMessage="Enter Visitor ID" ControlToValidate="txtForgotPasswordUserName" ValidationGroup="forgotpassVal"></asp:RequiredFieldValidator>
                             </div>

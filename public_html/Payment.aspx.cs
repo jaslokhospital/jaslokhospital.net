@@ -36,7 +36,7 @@ public partial class Payment : System.Web.UI.Page
             objDAEntities.FacilityName = "PermenantRegistration";
             objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
             Session["permenantRegistration"] = objDAEntities;
-            Session["Amount"] = 10;
+            Session["Amount"] = 100;
         }
 
 

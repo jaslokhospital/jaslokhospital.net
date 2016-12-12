@@ -596,47 +596,84 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     {
         JaslokMailer objMailer = new JaslokMailer();
         List<Parameters> lstParameters = new List<Parameters>();
-        MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
-
         string lsEmailStatus = string.Empty;
-        if (objUser != null)
+        if (!IsNumber(txtForgotPasswordUserName.Text))
         {
-            UserInfo objInfo = new UserInfo();
-
-            objInfo = UserController.GetUserByName(objUser.UserName);
-            string lsmobileNumber = objInfo.Profile.GetPropertyValue("PhoneNumber");
-            string lsPassword;
-            lsPassword = objUser.GetPassword();
-            //sendmail(objUser.Email, lsPassword);
-            if (!string.IsNullOrEmpty(lsmobileNumber))
-                CommonFn.SendSMS(lsmobileNumber.Replace("-", ""), "Your password is: " + lsPassword);
-            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
-            lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = lsPassword });
-            lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, objInfo.Email, null);
-            if (string.IsNullOrEmpty(lsEmailStatus))
+            MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
+            if (objUser != null)
             {
-                lblForgotPassError.Text = "Password has been sent to your email address.";
-                lblForgotPassError.CssClass = "successText";
-                divLoginForm.Attributes.Add("style", "display:none;");
-                divForgotPassword.Attributes.Add("style", "display:block;");
+                UserInfo objInfo = new UserInfo();
+                objInfo = UserController.GetUserByName(objUser.UserName);
+                string lsmobileNumber = objInfo.Profile.GetPropertyValue("PhoneNumber");
+                string lsPassword;
+                lsPassword = objUser.GetPassword();
+                //sendmail(objUser.Email, lsPassword);
+                if (!string.IsNullOrEmpty(lsmobileNumber))
+                    CommonFn.SendSMS(lsmobileNumber.Replace("-", ""), "Your password is: " + lsPassword);
+                lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
+                lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = lsPassword });
+                lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, objInfo.Email, null);
+                if (string.IsNullOrEmpty(lsEmailStatus))
+                {
+                    lblForgotPassError.Text = "Password has been sent to your email address.";
+                    lblForgotPassError.CssClass = "successText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                else
+                {
+                    lblForgotPassError.Text = "Problem in sending email";
+                    lblForgotPassError.CssClass = "errorText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                txtForgotPasswordUserName.Text = "";
+                //lblGeneratedPassword.Text = lsPassword;
             }
             else
             {
-                lblForgotPassError.Text = "Problem in sending email";
+                lblForgotPassError.CssClass = "errorText";
+                lblForgotPassError.Text = "Username does not exist.";
+                txtForgotPasswordUserName.Text = "";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
+            }
+        }
+        else
+        {
+            PatIndex objPatIndex = new PatIndex();
+            var PatientDetails = objPatIndex.GetPatientDetails(txtForgotPasswordUserName.Text.Trim());
+            
+            if (PatientDetails.WEBPWD != null)
+            {
+                if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
+                    CommonFn.SendSMS(PatientDetails.PatMobile.Replace("-", ""), "Your password is: " + PatientDetails.WEBPWD);
+                lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
+                lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = PatientDetails.WEBPWD });
+                lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, PatientDetails.PatEmail, null);
+                if (string.IsNullOrEmpty(lsEmailStatus))
+                {
+                    lblForgotPassError.Text = "Password has been sent to your email address.";
+                    lblForgotPassError.CssClass = "successText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                else
+                {
+                    lblForgotPassError.Text = "Problem in sending email";
+                    lblForgotPassError.CssClass = "errorText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                txtForgotPasswordUserName.Text = "";
+            }
+            else
+            {
+                lblForgotPassError.Text = "MRNumber not found, Please enter valid MRNumber.";
                 lblForgotPassError.CssClass = "errorText";
                 divLoginForm.Attributes.Add("style", "display:none;");
                 divForgotPassword.Attributes.Add("style", "display:block;");
             }
-            txtForgotPasswordUserName.Text = "";
-            //lblGeneratedPassword.Text = lsPassword;
-        }
-        else
-        {
-            lblForgotPassError.CssClass = "errorText";
-            lblForgotPassError.Text = "Username does not exist.";
-            txtForgotPasswordUserName.Text = "";
-            divLoginForm.Attributes.Add("style", "display:none;");
-            divForgotPassword.Attributes.Add("style", "display:block;");
         }
     }
     protected void btnSignUp_Click(object sender, EventArgs e)

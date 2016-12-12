@@ -146,12 +146,9 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
             }
             objDAEntities.BookinDateTime = Convert.ToDateTime(txtdatetime.SelectedDate);
             objDAEntities.Category = hdnCategorySB.Value;
-            objDAEntities.AdmissionCharge = hdnSurgeryFeeSB.Value;
+            objDAEntities.AdmissionCharge = txtSurgeryFee.Text;
             objDAEntities.MRNumber = user.Username;
-
-            objDAEntities.AdmissionCharge = Convert.ToString(10);
-            //Session["Amount"] = objDAEntities.AdmissionCharge;
-            Session["Amount"] = "100";
+            Session["Amount"] = objDAEntities.AdmissionCharge;
             Session["Surgery"] = objDAEntities;
 
             clear();

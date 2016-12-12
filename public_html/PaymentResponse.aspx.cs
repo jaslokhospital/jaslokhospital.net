@@ -394,6 +394,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                             if (txnStatus == "CANCELED")
                             {
                                 Session["ConsultationAppointment"] = null;
+                                Session["AppointmentDetail"] = null;
                                 Response.Redirect("/");
 
                             }
@@ -489,7 +490,7 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         ds = null;
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
+        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormPermanentRegistration);
 
         string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
@@ -516,11 +517,17 @@ public partial class PaymentResponse : System.Web.UI.Page
         string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
 
         DataSet ds = new DataSet();
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
+        int _emailTemplateID = -1;
+        if (TemplateName.ToLower() == "bedbookingpayment")
+            _emailTemplateID = 11;
+        else if (TemplateName.ToLower() == "healthcheckpayment")
+            _emailTemplateID = 13;
+        else
+            _emailTemplateID = 14;
 
+        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(_emailTemplateID);
         string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, Email, EmailCCId);
@@ -540,7 +547,7 @@ public partial class PaymentResponse : System.Web.UI.Page
 
 
         DataSet ds = new DataSet();
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
+        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormOtherPaymentForms);
 
         string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
         string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
