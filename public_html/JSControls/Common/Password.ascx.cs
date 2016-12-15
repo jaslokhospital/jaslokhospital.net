@@ -39,7 +39,8 @@ public partial class JSControls_Common_Password : System.Web.UI.UserControl
     protected void btnSubmit_Click1(object sender, EventArgs e)
     {
             string password = HttpUtility.UrlEncode(Encrypt(txtPassword.Text.Trim()));
-            lblPassword.Text = "Congratulations! Your password has been encrypted:" + "  " + password;           
+            lblPassword.CssClass = "dnnFormMessage dnnFormSuccess";
+            lblPassword.Text = "<span style='font-size:10px;font-weight:bold;text-transform:uppercase;'>Your Encrypted Password is:</span><br /><span style='font-size:16px;'>" + password + "</span>";
             txtPassword.Text = "";
     }
 }

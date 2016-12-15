@@ -1,30 +1,24 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Password.ascx.cs" Inherits="JSControls_Common_Password" %>
 <style>
-    .btnSub {
+    .btnSub
+    {
         margin-top: 10px;
         margin-left: 16px;
     }
-   
 </style>
-<div style="padding-left: 663px; margin-top: 40px;">
-    <table>
-        <tr >
-            <td >Enter Password:</td>
-            <td >
-                <asp:TextBox ID="txtPassword" runat="server" required="requied"></asp:TextBox></td>
-        </tr>
-        <tr >
-            <td >
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click1" CssClass="btnSub" /></td>
-        </tr>
-        <tr >
-            <td ></td>
-            <td ></td>
-        </tr>
-        
-    </table><br />
-   
-        <asp:Label ID="lblPassword" runat="server" ForeColor="Green" ></asp:Label>
-        
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center" style="margin: 10%; margin-left: 25%;">
+            <div class="input-group">
+                <asp:TextBox ID="txtPassword" CssClass="form-control" placeholder="Please enter your plain password for MailBox"
+                    runat="server" required="requied"></asp:TextBox>
+                <span class="input-group-btn">
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click1"
+                        CssClass="btn btn-default" />
+                </span>
+            </div>
+            <br />
+            <asp:Label ID="lblPassword" runat="server"></asp:Label>
+        </div>
     </div>
-<br /><br /><br /><br />
+</div>
