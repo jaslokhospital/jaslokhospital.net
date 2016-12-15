@@ -13,6 +13,7 @@ using net.jaslokhospital.jaslokwebserver;
 using System.Web.Security;
 using System.Net.Mail;
 using DotNetNuke.Security;
+using DotNetNuke.Services.Exceptions;
 
 public partial class PaymentResponse : System.Web.UI.Page
 {
@@ -164,7 +165,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                         }
                         catch (Exception ex)
                         {
-                            sessionData.JeevaStatus = "Service Unavailable";
+                            Exceptions.LogException(ex);
+                            //sessionData.JeevaStatus = "Service Unavailable";
                         }
 
                         if (details != null && !string.IsNullOrEmpty(details.MRNO))
@@ -236,146 +238,161 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/");
 
                             }
-                            Session["permenantRegistration"] = null;
-                            lblMsg.Visible = true;
-
-
-
-                            string Gender = user.Profile.GetPropertyValue("Gender");
-                            if (Gender == "Male")
+                            if (string.IsNullOrEmpty(sessionData.JeevaStatus))
                             {
-                                Gender = "M";
-                            }
-                            else { Gender = "F"; }
-                            string Age = user.Profile.GetPropertyValue("Age");
-                            string Address = user.Profile.GetPropertyValue("Address");
-                            string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-
-                            string[] X = PhoneNumber.Split('-');
-                            PhoneNumber = X[1];
-
-                            string Username;
-                            string Fname;
-                            string Lname;
-                            string Email;
-
-                            if (user.Username.Length > 20)
-                            {
-                                Username = user.Username.Substring(0, 20);
+                                Clear();
+                                lblMsg.Visible = true;
+                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact with Hospital!";
+                                plcDivSucces.Visible = false;
+                                plcDivError.Visible = true;
+                                spnStatus.Attributes["Class"] = "highlight";
+                                spnStatus.InnerText = "Payment Fail !";
                             }
                             else
                             {
-                                Username = user.Username;
-                            }
+                                Session["permenantRegistration"] = null;
+                                lblMsg.Visible = true;
 
-                            if (user.FirstName.Length > 30)
-                            {
-                                Fname = user.FirstName.Substring(0, 30);
-                            }
-                            else
-                            {
-                                Fname = user.FirstName;
-                            }
-
-                            if (user.LastName.Length > 30)
-                            {
-                                Lname = user.LastName.Substring(0, 30);
-                            }
-                            else
-                            {
-                                Lname = user.LastName;
-                            }
-                            if (user.Email.Length > 50)
-                            {
-                                Email = user.Email.Substring(0, 50);
-                            }
-                            else
-                            {
-                                Email = user.Email;
-
-                            }
-                            if (Address.Length > 30)
-                            {
-                                Address = Address.Substring(0, 30);
-                            }
-
-                            if (PhoneNumber.Length > 12)
-                            {
-                                PhoneNumber = PhoneNumber.Substring(0, 12);
-                            }
-
-
-                            var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
-
-                            if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
-                            {
-
-                                DataSet ds = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
-                                if (ds.Tables[0].Rows.Count > 0)
+                                string Gender = user.Profile.GetPropertyValue("Gender");
+                                if (Gender == "Male")
                                 {
-                                    Clear();
-                                    lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                    lblMsg.Text = "You Are Allready Registered As A permanent User!";
+                                    Gender = "M";
+                                }
+                                else { Gender = "F"; }
+                                string Age = user.Profile.GetPropertyValue("Age");
+                                string Address = user.Profile.GetPropertyValue("Address");
+                                string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
+
+                                string[] X = PhoneNumber.Split('-');
+                                PhoneNumber = X[1];
+
+                                string Username;
+                                string Fname;
+                                string Lname;
+                                string Email;
+
+                                if (user.Username.Length > 20)
+                                {
+                                    Username = user.Username.Substring(0, 20);
                                 }
                                 else
                                 {
-                                    bool IsUserExist = objBusinessLogic.IsUserExist(PatientDetails.MRNO);
-                                    if (!IsUserExist)
-                                    {
-                                        if (PatientDetails.PatSex == "M")
-                                        {
-                                            PatientDetails.PatSex = "Male";
-                                        }
-                                        else
-                                        {
-                                            PatientDetails.PatSex = "Female";
-                                        }
-                                        DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
-                                        lblMNo.Text = PatientDetails.MRNO;
+                                    Username = user.Username;
+                                }
 
-                                        objBusinessLogic.SavePaymentBedSurgery(sessionData);
+                                if (user.FirstName.Length > 30)
+                                {
+                                    Fname = user.FirstName.Substring(0, 30);
+                                }
+                                else
+                                {
+                                    Fname = user.FirstName;
+                                }
+
+                                if (user.LastName.Length > 30)
+                                {
+                                    Lname = user.LastName.Substring(0, 30);
+                                }
+                                else
+                                {
+                                    Lname = user.LastName;
+                                }
+                                if (user.Email.Length > 50)
+                                {
+                                    Email = user.Email.Substring(0, 50);
+                                }
+                                else
+                                {
+                                    Email = user.Email;
+
+                                }
+                                if (Address.Length > 30)
+                                {
+                                    Address = Address.Substring(0, 30);
+                                }
+
+                                if (PhoneNumber.Length > 12)
+                                {
+                                    PhoneNumber = PhoneNumber.Substring(0, 12);
+                                }
 
 
-                                        if (dsVal.Tables[0].Rows.Count > 0)
-                                        {
-                                            // SendMail & MSG
+                                var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
 
-                                            try
-                                            {
-                                                PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration");
-                                                lblMsg.Text = "You are now the permanent user! Please login with your MR Number that has been sent to your registered mobile number";
-                                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#008000");
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                                lblMsg.Text = "SMS Service is stoped Due to technical problem!";
-                                            }
-                                            UserController.DeleteUser(ref user, false, false);
-                                            UserController.RemoveUser(user);
-                                            if (user.UserID != -1)
-                                            {
-                                                secure.SignOut();
-                                            }
-                                        }
-                                    }
-                                    else
+                                if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
+                                {
+
+                                    DataSet ds = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
+                                    if (ds.Tables[0].Rows.Count > 0)
                                     {
                                         Clear();
                                         lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                        lblMsg.Text = "UserName allready exist!";
+                                        lblMsg.Text = "You Are Allready Registered As A permanent User!";
+                                    }
+                                    else
+                                    {
+                                        bool IsUserExist = objBusinessLogic.IsUserExist(PatientDetails.MRNO);
+                                        if (!IsUserExist)
+                                        {
+                                            if (PatientDetails.PatSex == "M")
+                                            {
+                                                PatientDetails.PatSex = "Male";
+                                            }
+                                            else
+                                            {
+                                                PatientDetails.PatSex = "Female";
+                                            }
+                                            DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
+                                            lblMNo.Text = PatientDetails.MRNO;
 
+                                            objBusinessLogic.SavePaymentBedSurgery(sessionData);
+
+
+                                            if (dsVal.Tables[0].Rows.Count > 0)
+                                            {
+                                                // SendMail & MSG
+
+                                                try
+                                                {
+                                                    PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration");
+
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                                    lblMsg.Text = "SMS Service is stoped Due to technical problem!";
+
+                                                    Exceptions.LogException(ex);
+                                                }
+
+                                                lblMsg.Text = "You are now the permanent user! Please login with your MR Number that has been sent to your registered mobile number";
+                                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#008000");
+                                                UserController.DeleteUser(ref user, false, false);
+                                                UserController.RemoveUser(user);
+                                                if (user.UserID != -1)
+                                                {
+                                                    secure.SignOut();
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Clear();
+                                            lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                            lblMsg.Text = "UserName allready exist!";
+
+                                        }
                                     }
                                 }
-                            }
-                            else
-                            {
-                                Clear();
-                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                lblMsg.Text = "You are already register as a permanent user, Please login with MR Number";
-                            }
+                                else
+                                {
+                                    Clear();
+                                    lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                    lblMsg.Text = "You are already register as a permanent user, Please login with MR Number";
+                                }
 
-
+                            }
                         }
                         else if (Session["ConsultationAppointment"] != null || Session["AppointmentDetail"] != null)
                         {
@@ -420,7 +437,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            Response.Write(ex.ToString());
+            Exceptions.LogException(ex);
         }
 
     }
@@ -455,6 +472,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         }
         catch (Exception ex)
         {
+            Exceptions.LogException(ex);
             throw ex;
         }
 
