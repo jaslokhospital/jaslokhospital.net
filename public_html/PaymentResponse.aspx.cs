@@ -25,6 +25,7 @@ public partial class PaymentResponse : System.Web.UI.Page
     string lsEmailStatus = string.Empty;
     string lsSmsStatus = string.Empty;
     PatIndex objPatIndex = new PatIndex();
+ 
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -115,6 +116,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                     else if (Session["AppointmentDetail"] != null)
                     {
                         sessionData = (DataAccessEntities)Session["AppointmentDetail"];
+                        sessionData.FacilityName = "Appointment";
                     }
                     else if (Session["HealthCheck-upComprehensive"] != null)
                     {
@@ -131,6 +133,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                     else if (Session["ConsultationAppointment"] != null)
                     {
                         sessionData = (DataAccessEntities)Session["ConsultationAppointment"];
+                        sessionData.FacilityName = "Appointment";
                     }
 
                     //double Damount = Convert.ToDouble(amount);
@@ -149,7 +152,26 @@ public partial class PaymentResponse : System.Web.UI.Page
 
                     if (txnStatus != null)
                     {
+                        
                         PatIndex objDeposit = new PatIndex();
+                        var details = (dynamic)null;
+                        try
+                        {
+                            if (txnStatus != "CANCELED")
+                            {
+                               details = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            sessionData.JeevaStatus = "Service Unavailable";
+                        }
+
+                        if (details != null && !string.IsNullOrEmpty(details.MRNO))
+                        {
+                            sessionData.JeevaStatus = details.MRNO;
+                        }
+
                         if (Session["Bed"] != null)
                         {
                             if (txnStatus == "CANCELED")
@@ -158,13 +180,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/Bed-Booking");
 
                             }
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
-
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "BedBookingPayment");
                             Session["Bed"] = null;
@@ -177,13 +192,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Session["Surgery"] = null;
                                 Response.Redirect("/surgery-booking");
                             }
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
-
+                           
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "SurgeryBookingPayment");
                             Session["Surgery"] = null;
@@ -195,12 +204,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Session["HealthCheck-upComprehensive"] = null;
                                 Response.Redirect("/health-check-up-comprehensive");
 
-                            }
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
                             }
 
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
@@ -219,13 +222,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Session["OutstandingBillPayment"] = null;
                                 Response.Redirect("/outstandingbillpayment");
 
-                            }
-
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
                             }
 
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
@@ -337,14 +333,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                         DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
                                         lblMNo.Text = PatientDetails.MRNO;
 
-
-                                        var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                                        if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                                        {
-                                            sessionData.JeevaStatus = detaisl.MRNO;
-                                        }
-
                                         objBusinessLogic.SavePaymentBedSurgery(sessionData);
 
 
@@ -391,6 +379,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                         }
                         else if (Session["ConsultationAppointment"] != null || Session["AppointmentDetail"] != null)
                         {
+                           
                             if (txnStatus == "CANCELED")
                             {
                                 Session["ConsultationAppointment"] = null;
@@ -398,13 +387,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/");
 
                             }
-                            sessionData.FacilityName = "Appointment";
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
+                           
                             sessionData.FacilityName = "Consultation Appointment";
                             objBusinessLogic.SavePaymentBookAppointment(sessionData);
                             AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.TimeDate), Convert.ToString(Session["Amount"]) + ".00 INR", Convert.ToString(sessionData.Description), sessionData.dName, "ConsultationAppointment");
