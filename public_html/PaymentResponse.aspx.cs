@@ -384,7 +384,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Clear();
                                 lblMsg.Visible = true;
                                 lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact with Jaslok Hospital!";
+                                lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact Jaslok Hospital!";
                                 plcDivSucces.Visible = true;
                                 plcDivError.Visible = false;
                             }
