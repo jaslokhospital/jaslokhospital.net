@@ -468,7 +468,6 @@ public partial class PaymentResponse : System.Web.UI.Page
         catch (Exception ex)
         {
             Exceptions.LogException(ex);
-            throw ex;
         }
 
 
