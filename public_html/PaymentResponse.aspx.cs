@@ -13,6 +13,7 @@ using net.jaslokhospital.jaslokwebserver;
 using System.Web.Security;
 using System.Net.Mail;
 using DotNetNuke.Security;
+using DotNetNuke.Services.Exceptions;
 
 public partial class PaymentResponse : System.Web.UI.Page
 {
@@ -25,6 +26,7 @@ public partial class PaymentResponse : System.Web.UI.Page
     string lsEmailStatus = string.Empty;
     string lsSmsStatus = string.Empty;
     PatIndex objPatIndex = new PatIndex();
+ 
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -115,6 +117,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                     else if (Session["AppointmentDetail"] != null)
                     {
                         sessionData = (DataAccessEntities)Session["AppointmentDetail"];
+                        sessionData.FacilityName = "Appointment";
                     }
                     else if (Session["HealthCheck-upComprehensive"] != null)
                     {
@@ -131,6 +134,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                     else if (Session["ConsultationAppointment"] != null)
                     {
                         sessionData = (DataAccessEntities)Session["ConsultationAppointment"];
+                        sessionData.FacilityName = "Appointment";
                     }
 
                     //double Damount = Convert.ToDouble(amount);
@@ -149,7 +153,27 @@ public partial class PaymentResponse : System.Web.UI.Page
 
                     if (txnStatus != null)
                     {
+                        
                         PatIndex objDeposit = new PatIndex();
+                        var details = (dynamic)null;
+                        try
+                        {
+                            if (txnStatus != "CANCELED")
+                            {
+                               details = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Exceptions.LogException(ex);
+                            sessionData.JeevaStatus = "Service Unavailable";
+                        }
+
+                        if (details != null && !string.IsNullOrEmpty(details.MRNO))
+                        {
+                            sessionData.JeevaStatus = details.MRNO;
+                        }
+
                         if (Session["Bed"] != null)
                         {
                             if (txnStatus == "CANCELED")
@@ -158,13 +182,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/Bed-Booking");
 
                             }
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
-
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "BedBookingPayment");
                             Session["Bed"] = null;
@@ -177,13 +194,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Session["Surgery"] = null;
                                 Response.Redirect("/surgery-booking");
                             }
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
-
+                           
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "SurgeryBookingPayment");
                             Session["Surgery"] = null;
@@ -195,12 +206,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Session["HealthCheck-upComprehensive"] = null;
                                 Response.Redirect("/health-check-up-comprehensive");
 
-                            }
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
                             }
 
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
@@ -221,13 +226,6 @@ public partial class PaymentResponse : System.Web.UI.Page
 
                             }
 
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
-
                             objBusinessLogic.SavePaymentBedSurgery(sessionData);
                             OutStandingSendEmail(sessionData.FacilityName, Convert.ToString(Session["Amount"]) + ".00 INR", "OutstandingPayment");
                             Session["OutstandingBillPayment"] = null;
@@ -240,10 +238,9 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/");
 
                             }
+
                             Session["permenantRegistration"] = null;
                             lblMsg.Visible = true;
-
-
 
                             string Gender = user.Profile.GetPropertyValue("Gender");
                             if (Gender == "Male")
@@ -308,89 +305,93 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 PhoneNumber = PhoneNumber.Substring(0, 12);
                             }
 
+                            objBusinessLogic.SavePaymentBedSurgery(sessionData);
 
                             var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
 
-                            if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
+                            if (!string.IsNullOrEmpty(PatientDetails.MRNO))
                             {
-
-                                DataSet ds = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
-                                if (ds.Tables[0].Rows.Count > 0)
+                                if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
                                 {
-                                    Clear();
-                                    lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                    lblMsg.Text = "You Are Allready Registered As A permanent User!";
-                                }
-                                else
-                                {
-                                    bool IsUserExist = objBusinessLogic.IsUserExist(PatientDetails.MRNO);
-                                    if (!IsUserExist)
-                                    {
-                                        if (PatientDetails.PatSex == "M")
-                                        {
-                                            PatientDetails.PatSex = "Male";
-                                        }
-                                        else
-                                        {
-                                            PatientDetails.PatSex = "Female";
-                                        }
-                                        DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
-                                        lblMNo.Text = PatientDetails.MRNO;
-
-
-                                        var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-
-                                        if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                                        {
-                                            sessionData.JeevaStatus = detaisl.MRNO;
-                                        }
-
-                                        objBusinessLogic.SavePaymentBedSurgery(sessionData);
-
-
-                                        if (dsVal.Tables[0].Rows.Count > 0)
-                                        {
-                                            // SendMail & MSG
-
-                                            try
-                                            {
-                                                PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration");
-                                                lblMsg.Text = "You are now the permanent user! Please login with your MR Number that has been sent to your registered mobile number";
-                                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#008000");
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                                lblMsg.Text = "SMS Service is stoped Due to technical problem!";
-                                            }
-                                            UserController.DeleteUser(ref user, false, false);
-                                            UserController.RemoveUser(user);
-                                            if (user.UserID != -1)
-                                            {
-                                                secure.SignOut();
-                                            }
-                                        }
-                                    }
-                                    else
+                                    DataSet ds = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
+                                    if (ds.Tables[0].Rows.Count > 0)
                                     {
                                         Clear();
                                         lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                        lblMsg.Text = "UserName allready exist!";
-
+                                        lblMsg.Text = "You Are Allready Registered As A permanent User!";
                                     }
+                                    else
+                                    {
+                                        bool IsUserExist = objBusinessLogic.IsUserExist(PatientDetails.MRNO);
+                                        if (!IsUserExist)
+                                        {
+                                            if (PatientDetails.PatSex == "M")
+                                            {
+                                                PatientDetails.PatSex = "Male";
+                                            }
+                                            else
+                                            {
+                                                PatientDetails.PatSex = "Female";
+                                            }
+                                            DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
+                                            lblMNo.Text = PatientDetails.MRNO;
+
+                                            if (dsVal.Tables[0].Rows.Count > 0)
+                                            {
+                                                // SendMail & MSG
+
+                                                try
+                                                {
+                                                    PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration");
+
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                                    lblMsg.Text = "SMS Service is stoped Due to technical problem!";
+
+                                                    Exceptions.LogException(ex);
+                                                }
+
+                                                lblMsg.Text = "You are now the permanent user! Please login with your MR Number that has been sent to your registered mobile number";
+                                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#008000");
+                                                UserController.DeleteUser(ref user, false, false);
+                                                UserController.RemoveUser(user);
+                                                if (user.UserID != -1)
+                                                {
+                                                    secure.SignOut();
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Clear();
+                                            lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                            lblMsg.Text = "UserName already exist!";
+
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Clear();
+                                    lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                    lblMsg.Text = "You are already register as a permanent user, Please login with MR Number";
                                 }
                             }
                             else
                             {
                                 Clear();
+                                lblMsg.Visible = true;
                                 lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                lblMsg.Text = "You are already register as a permanent user, Please login with MR Number";
+                                lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact with Jaslok Hospital!";
+                                plcDivSucces.Visible = true;
+                                plcDivError.Visible = false;
                             }
-
-
                         }
                         else if (Session["ConsultationAppointment"] != null || Session["AppointmentDetail"] != null)
                         {
+
                             if (txnStatus == "CANCELED")
                             {
                                 Session["ConsultationAppointment"] = null;
@@ -398,13 +399,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/");
 
                             }
-                            sessionData.FacilityName = "Appointment";
-                            var detaisl = objPatIndex.SaveDeposit(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
 
-                            if (detaisl != null && !string.IsNullOrEmpty(detaisl.MRNO))
-                            {
-                                sessionData.JeevaStatus = detaisl.MRNO;
-                            }
                             sessionData.FacilityName = "Consultation Appointment";
                             objBusinessLogic.SavePaymentBookAppointment(sessionData);
                             AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.TimeDate), Convert.ToString(Session["Amount"]) + ".00 INR", Convert.ToString(sessionData.Description), sessionData.dName, "ConsultationAppointment");
@@ -437,7 +432,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            Response.Write(ex.ToString());
+            Exceptions.LogException(ex);
         }
 
     }
@@ -472,6 +467,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         }
         catch (Exception ex)
         {
+            Exceptions.LogException(ex);
             throw ex;
         }
 
