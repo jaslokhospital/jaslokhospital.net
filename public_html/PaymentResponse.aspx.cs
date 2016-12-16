@@ -166,7 +166,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                         catch (Exception ex)
                         {
                             Exceptions.LogException(ex);
-                            //sessionData.JeevaStatus = "Service Unavailable";
+                            sessionData.JeevaStatus = "Service Unavailable";
                         }
 
                         if (details != null && !string.IsNullOrEmpty(details.MRNO))
@@ -238,91 +238,81 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/");
 
                             }
-                            if (string.IsNullOrEmpty(sessionData.JeevaStatus))
+
+                            Session["permenantRegistration"] = null;
+                            lblMsg.Visible = true;
+
+                            string Gender = user.Profile.GetPropertyValue("Gender");
+                            if (Gender == "Male")
                             {
-                                Clear();
-                                lblMsg.Visible = true;
-                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact with Hospital!";
-                                plcDivSucces.Visible = false;
-                                plcDivError.Visible = true;
-                                spnStatus.Attributes["Class"] = "highlight";
-                                spnStatus.InnerText = "Payment Fail !";
+                                Gender = "M";
+                            }
+                            else { Gender = "F"; }
+                            string Age = user.Profile.GetPropertyValue("Age");
+                            string Address = user.Profile.GetPropertyValue("Address");
+                            string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
+
+                            string[] X = PhoneNumber.Split('-');
+                            PhoneNumber = X[1];
+
+                            string Username;
+                            string Fname;
+                            string Lname;
+                            string Email;
+
+                            if (user.Username.Length > 20)
+                            {
+                                Username = user.Username.Substring(0, 20);
                             }
                             else
                             {
-                                Session["permenantRegistration"] = null;
-                                lblMsg.Visible = true;
+                                Username = user.Username;
+                            }
 
-                                string Gender = user.Profile.GetPropertyValue("Gender");
-                                if (Gender == "Male")
-                                {
-                                    Gender = "M";
-                                }
-                                else { Gender = "F"; }
-                                string Age = user.Profile.GetPropertyValue("Age");
-                                string Address = user.Profile.GetPropertyValue("Address");
-                                string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
+                            if (user.FirstName.Length > 30)
+                            {
+                                Fname = user.FirstName.Substring(0, 30);
+                            }
+                            else
+                            {
+                                Fname = user.FirstName;
+                            }
 
-                                string[] X = PhoneNumber.Split('-');
-                                PhoneNumber = X[1];
+                            if (user.LastName.Length > 30)
+                            {
+                                Lname = user.LastName.Substring(0, 30);
+                            }
+                            else
+                            {
+                                Lname = user.LastName;
+                            }
+                            if (user.Email.Length > 50)
+                            {
+                                Email = user.Email.Substring(0, 50);
+                            }
+                            else
+                            {
+                                Email = user.Email;
 
-                                string Username;
-                                string Fname;
-                                string Lname;
-                                string Email;
+                            }
+                            if (Address.Length > 30)
+                            {
+                                Address = Address.Substring(0, 30);
+                            }
 
-                                if (user.Username.Length > 20)
-                                {
-                                    Username = user.Username.Substring(0, 20);
-                                }
-                                else
-                                {
-                                    Username = user.Username;
-                                }
+                            if (PhoneNumber.Length > 12)
+                            {
+                                PhoneNumber = PhoneNumber.Substring(0, 12);
+                            }
 
-                                if (user.FirstName.Length > 30)
-                                {
-                                    Fname = user.FirstName.Substring(0, 30);
-                                }
-                                else
-                                {
-                                    Fname = user.FirstName;
-                                }
+                            objBusinessLogic.SavePaymentBedSurgery(sessionData);
 
-                                if (user.LastName.Length > 30)
-                                {
-                                    Lname = user.LastName.Substring(0, 30);
-                                }
-                                else
-                                {
-                                    Lname = user.LastName;
-                                }
-                                if (user.Email.Length > 50)
-                                {
-                                    Email = user.Email.Substring(0, 50);
-                                }
-                                else
-                                {
-                                    Email = user.Email;
+                            var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
 
-                                }
-                                if (Address.Length > 30)
-                                {
-                                    Address = Address.Substring(0, 30);
-                                }
-
-                                if (PhoneNumber.Length > 12)
-                                {
-                                    PhoneNumber = PhoneNumber.Substring(0, 12);
-                                }
-
-
-                                var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
-
+                            if (!string.IsNullOrEmpty(PatientDetails.MRNO))
+                            {
                                 if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
                                 {
-
                                     DataSet ds = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
                                     if (ds.Tables[0].Rows.Count > 0)
                                     {
@@ -345,9 +335,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                             }
                                             DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
                                             lblMNo.Text = PatientDetails.MRNO;
-
-                                            objBusinessLogic.SavePaymentBedSurgery(sessionData);
-
 
                                             if (dsVal.Tables[0].Rows.Count > 0)
                                             {
@@ -380,7 +367,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                         {
                                             Clear();
                                             lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                            lblMsg.Text = "UserName allready exist!";
+                                            lblMsg.Text = "UserName already exist!";
 
                                         }
                                     }
@@ -391,12 +378,20 @@ public partial class PaymentResponse : System.Web.UI.Page
                                     lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
                                     lblMsg.Text = "You are already register as a permanent user, Please login with MR Number";
                                 }
-
+                            }
+                            else
+                            {
+                                Clear();
+                                lblMsg.Visible = true;
+                                lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                                lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact with Jaslok Hospital!";
+                                plcDivSucces.Visible = true;
+                                plcDivError.Visible = false;
                             }
                         }
                         else if (Session["ConsultationAppointment"] != null || Session["AppointmentDetail"] != null)
                         {
-                           
+
                             if (txnStatus == "CANCELED")
                             {
                                 Session["ConsultationAppointment"] = null;
@@ -404,7 +399,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/");
 
                             }
-                           
+
                             sessionData.FacilityName = "Consultation Appointment";
                             objBusinessLogic.SavePaymentBookAppointment(sessionData);
                             AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.TimeDate), Convert.ToString(Session["Amount"]) + ".00 INR", Convert.ToString(sessionData.Description), sessionData.dName, "ConsultationAppointment");
