@@ -78,12 +78,11 @@ namespace BusinessDataLayer
             }
         }
 
-        public DataSet IsExistMRNumber(string MRNumber)
+        public bool IsExistMRNumber(string MRNumber)
         {
-
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_uspIsExistsMRNumber", new object[] { MRNumber });
+                return Convert.ToBoolean(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_uspIsExistsMRNumber", new object[] { MRNumber }));
             }
             catch (Exception ex)
             {
@@ -375,17 +374,18 @@ namespace BusinessDataLayer
 
 
 
-        public DataSet SaveUserDetails(string MRNO,string Username, string FName, string LName, string Email, string DisplayName, string Password, string Telephone, string Gender, string Address, string Age, string OTP)
+        public DataSet SaveUserDetails(string MRNO, string Username, string FName, string LName, string Email, string DisplayName, string Password, string Telephone, string Gender, string Address, string Age, string OTP)
         {
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "CREATEUSER", new object[] { Username, FName, LName, Email, DisplayName, Password, AppGlobal.PortalId, true, Gender, Address, Age, Telephone, MRNO,OTP,MRNO});
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "CREATEUSER", new object[] { Username, FName, LName, Email, DisplayName, Password, AppGlobal.PortalId, true, Gender, Address, Age, Telephone, MRNO, OTP, MRNO });
             }
             catch (Exception ex)
             {
                 throw ex;
-            }            
+            }
         }
+
 
         public DataSet UpdateDeleteBanner(DataAccessEntities Slist)
         {
@@ -1842,6 +1842,7 @@ namespace BusinessDataLayer
             try
             {
                 Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBedSurgery", new object[] { Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.FacilityName, Slist.Category, objInfo.UserID, Slist.DoctorId, Slist.BookinDateTime, Slist.JeevaStatus }));
+               
             }
             catch (Exception ex)
             {
