@@ -78,15 +78,12 @@ namespace BusinessDataLayer
         }
 
 
-        public DataSet IsExistMRNumber(string MRNumber)
+        public bool IsExistMRNumber(string MRNumber)
         {
-            DataSet dsTest = new DataSet();
-
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-                dsTest = objDataAccessLogic.IsExistMRNumber(MRNumber);
-                return dsTest;
+               return objDataAccessLogic.IsExistMRNumber(MRNumber);
             }
             catch (Exception ex)
             {
@@ -94,7 +91,6 @@ namespace BusinessDataLayer
             }
             finally
             {
-                dsTest = null;
                 objDataAccessLogic = null;
             }
         }
@@ -559,15 +555,14 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
-
-        public DataSet SaveUserDetails(string MRNO,string Username, string FName, string LName, string Email, string DisplayName, string Password, string Telephone, string Gender, string Address, string Age, string OTP)
+        public DataSet SaveUserDetails(string MRNO, string Username, string FName, string LName, string Email, string DisplayName, string Password, string Telephone, string Gender, string Address, string Age, string OTP)
         {
             DataSet dsTest = new DataSet();
 
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-                dsTest = objDataAccessLogic.SaveUserDetails(MRNO,Username, FName, LName, Email, DisplayName, Password, Telephone, Gender, Address, Age, OTP);
+                dsTest = objDataAccessLogic.SaveUserDetails(MRNO, Username, FName, LName, Email, DisplayName, Password, Telephone, Gender, Address, Age, OTP);
                 return dsTest;
             }
             catch (Exception ex)
@@ -580,6 +575,7 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
+
 
 
         public bool IsUserExist(string Username)
