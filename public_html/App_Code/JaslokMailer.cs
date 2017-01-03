@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -8,6 +9,10 @@ using System.Web;
 using System.Xml;
 using BusinessDataLayer;
 using System.IO;
+using System.Text;
+using System.Security.Cryptography;
+using System.Xml.Serialization;
+using System.Data;
 
 /// <summary>
 /// Summary description for JaslokMailer
@@ -19,6 +24,9 @@ public class JaslokMailer
     public String ToEmailAddress;
     public String Subject;
     public String FileName;
+    public String UserName;
+    public String Password;
+    public String MailBox;
     public DataAccessEntities objDAEntities = new DataAccessEntities();
 
     public JaslokMailer()
@@ -31,6 +39,7 @@ public class JaslokMailer
         try
         {
             EmailBody(FileName, lstParameters);
+            UserCredentials();
             MailMessage msg = new MailMessage();
             msg.To.Add(fsEmailAddress);
             if (!string.IsNullOrEmpty(CcMailId))
@@ -41,20 +50,30 @@ public class JaslokMailer
             msg.IsBodyHtml = true;
             msg.Priority = MailPriority.High;
             msg.From = new MailAddress(this.FromEmailAddress);
-            SmtpClient smtp = new SmtpClient("smtp.jaslokhospital.net", 25);
-            smtp.Credentials = new System.Net.NetworkCredential("online@jaslokhospital.net", "jIKe%W*cK8");
-
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.jaslokhospital.net";
+            smtp.Port = 25;
+            smtp.Credentials = new System.Net.NetworkCredential(this.UserName, this.Password);
             smtp.EnableSsl = false;
-            //smtp.EnableSsl = true;
-            //tls
             smtp.Send(msg);
             return "";
         }
         catch (Exception ex)
         {
             return ex.Message.ToString();
-            //HttpContext.Current.Response.Write(ex.StackTrace.ToString());
+
         }
+    }
+    public void UserCredentials()
+    {
+        XmlDocument doc = new XmlDocument();
+        doc.Load(System.Web.HttpContext.Current.Server.MapPath("~/EmailTemlates/MailBox.xml"));
+        XmlNode UserNamenode = doc.DocumentElement.SelectSingleNode("/mailbox/username");
+        this.UserName = UserNamenode.InnerText.Trim();
+
+        XmlNode Passwordnode = doc.DocumentElement.SelectSingleNode("/mailbox/password");
+        this.Password = Passwordnode.InnerText.Trim();
+        this.Password = Decrypt(HttpUtility.UrlDecode(Password));
 
     }
 
@@ -79,6 +98,7 @@ public class JaslokMailer
             }
         }
     }
+
     public string SendSms(string FileName, List<Parameters> lstParameters, string contact)
     {
         try
@@ -117,6 +137,29 @@ public class JaslokMailer
             }
         }
         return this.Body.ToString();
+    }
+
+    private string Decrypt(string cipherText)
+    {
+        string EncryptionKey = "AVZMAKV2SPBNI9921200CBCZZSMGM";
+        cipherText = cipherText.Replace(" ", "+");
+        byte[] cipherBytes = Convert.FromBase64String(cipherText);
+        using (Aes encryptor = Aes.Create())
+        {
+            Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+            encryptor.Key = pdb.GetBytes(32);
+            encryptor.IV = pdb.GetBytes(16);
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                {
+                    cs.Write(cipherBytes, 0, cipherBytes.Length);
+                    cs.Close();
+                }
+                cipherText = Encoding.Unicode.GetString(ms.ToArray());
+            }
+        }
+        return cipherText;
     }
 }
 
