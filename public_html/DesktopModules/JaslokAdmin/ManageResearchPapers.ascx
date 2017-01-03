@@ -123,7 +123,8 @@
                 </div>
             </div>
             <div class="col-xs-12" style="text-align: center">
-                <asp:Button ID="btnUpload" runat="server" ValidationGroup="JHCat" Text="Upload" OnClick="Upload" />
+                <asp:Button ID="btnUpload" runat="server" ValidationGroup="JHCat" Text="Upload" OnClick="Upload" />&nbsp;&nbsp;
+                <asp:Button ID="btncancel" runat="server" Text="Cancel" OnClick="Cancel"/>
             </div>
             
             <asp:HiddenField ID="hdnThumbnail" runat="server" />
