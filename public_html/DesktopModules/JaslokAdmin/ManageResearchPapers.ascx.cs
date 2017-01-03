@@ -135,6 +135,11 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
         }
 
     }
+    protected void Cancel(object sender, EventArgs e)
+    {
+        Response.Redirect("/JaslokAdmin/ManageResearchPapers");
+       
+    }
     protected string SaveImage()
     {
 
@@ -166,8 +171,12 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
                         catch { }
                     }
 
+                   
                     strSaveImagePath = strServerPath + FolderName + "\\" + FileNameWEx + FileExtension;
-                    FileUpload1.SaveAs(strSaveImagePath);
+                    if (!File.Exists(strSaveImagePath))
+                    {
+                        FileUpload1.PostedFile.SaveAs(strSaveImagePath);
+                    }
 
                     strDBImagePath = CommonFn.DbSave + CommonFn.DbResearchPaperThumbnailFolder;
                     strDBImagePath = strDBImagePath + FileNameWEx + FileExtension;
@@ -195,7 +204,7 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
             if (FileUpload2.PostedFile.FileName != null)
             {
                 string strServerPath = Server.MapPath(CommonFn.Image_Save_Path);
-                string strSaveImagePath = string.Empty;
+                string strSavePDFPath = string.Empty;
                 string fileName = Path.GetFileName(FileUpload2.PostedFile.FileName);
 
                 string FileNameWEx = Path.GetFileNameWithoutExtension(fileName);
@@ -217,8 +226,13 @@ public partial class DesktopModules_JaslokAdmin_ManageResearchPapers : PortalMod
                         catch { }
                     }
 
-                    strSaveImagePath = strServerPath + FolderName + "\\" + FileNameWEx + FileExtension;
-                    FileUpload1.SaveAs(strSaveImagePath);
+                    strSavePDFPath = strServerPath + FolderName + "\\" + FileNameWEx + FileExtension;
+
+
+                    if (!File.Exists(strSavePDFPath))
+                    {
+                        FileUpload2.SaveAs(strSavePDFPath);                       
+                    }                   
 
                     strDBPDFPath = CommonFn.DbSave + CommonFn.DbResearchPaperPDF;
                     strDBPDFPath = strDBPDFPath + FileNameWEx + FileExtension;
