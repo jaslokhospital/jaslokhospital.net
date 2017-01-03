@@ -1,4 +1,4 @@
-body a:focus {
+﻿body a:focus {
     outline: none;
     outline: none;
     outline-offset: 0;
@@ -3973,3 +3973,4 @@ border: 0 none;
 }
 .articles-pager { background:#317ba8; padding: 10px !important;  }
 /*.goto-page, .paginglink {border-radius: 50px; margin: 0 5px;}*/
+.carousel_img {max-height:361px; height:361px !Important;}
