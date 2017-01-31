@@ -56,13 +56,13 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesSkin : DotNetN
         {
             DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
             objDAEntities.PageTypeId = id;
-            dsBindPageDetail = Cache["SpecialtyPage_BindPageDetailCache"] as DataSet;
+            dsBindPageDetail = Cache[AppGlobal.SpecialtyPage_BindSpecialtiesCache] as DataSet;
 
             if (dsBindPageDetail == null)
             {
                 dsBindPageDetail = new DataSet();
                 dsBindPageDetail = (DataSet)objBusinessLogic.GetBannerPageContentDetail(id);
-                Cache.Insert("SpecialtyPage_BindPageDetailCache", dsBindPageDetail);
+                Cache.Insert(AppGlobal.SpecialtyPage_BindSpecialtiesCache, dsBindPageDetail);
             }
 
             // HomePageBanner.Visible = (Request.RawUrl.ToLower() == "/specialties") ? true : false;
