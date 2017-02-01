@@ -56,16 +56,15 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesSkin : DotNetN
         {
             DotNetNuke.Framework.CDefault p = (DotNetNuke.Framework.CDefault)this.Page;
             objDAEntities.PageTypeId = id;
-            dsBindPageDetail = Cache[AppGlobal.SpecialtyPage_BindSpecialtiesCache] as DataSet;
+            dsBindPageDetail = Cache["SpecialtyPage_BindPageDetailCache"] as DataSet;
 
             if (dsBindPageDetail == null)
             {
                 dsBindPageDetail = new DataSet();
                 dsBindPageDetail = (DataSet)objBusinessLogic.GetBannerPageContentDetail(id);
-                Cache.Insert(AppGlobal.SpecialtyPage_BindSpecialtiesCache, dsBindPageDetail);
+                Cache.Insert("SpecialtyPage_BindPageDetailCache", dsBindPageDetail);
             }
 
-            // HomePageBanner.Visible = (Request.RawUrl.ToLower() == "/specialties") ? true : false;
             if (dsBindPageDetail.Tables[1].Rows.Count > 0)
             {
                 innerParagraph.InnerHtml = Convert.ToString(dsBindPageDetail.Tables[1].Rows[0]["Content"]);
@@ -86,18 +85,14 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesSkin : DotNetN
     {
         try
         {
-            DataSet dsBindSpecialties = Cache["BindSpecialtiesCache"] as DataSet;
+            DataSet dsBindSpecialties = Cache[AppGlobal.SpecialtyPage_BindSpecialtiesCache] as DataSet;
             //Response.Write((Cache["BindSpecialtiesCache"] == null).ToString() + "<br />");
             if (dsBindSpecialties == null)
             {
                 //Response.Write("from database");
                 dsBindSpecialties = objBusinessLogic.GetSpecialtiesDetails(id) as DataSet;
-                Cache["BindSpecialtiesCache"] = dsBindSpecialties;
+                Cache[AppGlobal.SpecialtyPage_BindSpecialtiesCache] = dsBindSpecialties;
             }
-            /*else
-            {
-                Response.Write("from cache");
-            }*/
 
             // ds = (DataSet)objBusinessLogic.GetSpecialtiesDetails(id);
             DataView dv = dsBindSpecialties.Tables[0].Select("CategoryId=" + AppGlobal.MedicalSpecialtiesId).CopyToDataTable().DefaultView;
