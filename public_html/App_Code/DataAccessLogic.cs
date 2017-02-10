@@ -1957,5 +1957,18 @@ namespace BusinessDataLayer
                 throw ex;
             }
         }
+
+
+        public DataSet GetPaymentDetails(int Param)
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetPaymentDetails", new object[] { Param });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

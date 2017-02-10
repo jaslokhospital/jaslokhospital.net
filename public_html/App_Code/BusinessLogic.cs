@@ -3161,6 +3161,29 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
+
+
+        public DataSet GetpaymentDetails(int Param)
+        {
+            DataSet dsTest = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                dsTest = objDataAccessLogic.GetPaymentDetails(Param);
+                return dsTest;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsTest = null;
+                objDataAccessLogic = null;
+            }
+        }
+
     }
     public class DoctorSchedule
     {

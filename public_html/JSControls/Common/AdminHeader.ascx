@@ -102,6 +102,13 @@
                                         <li><a href="/JaslokAdmin/ManageResearchPapers">Manage Research Papers</a></li>                                       
                                     </ul>
                                 </li>
+
+                                 <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Payment Details<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/JaslokAdmin/ViewPaymentDetails">View Payment Details</a></li>                                       
+                                    </ul>
+                                </li>
                                 <%--<li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seminars <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
