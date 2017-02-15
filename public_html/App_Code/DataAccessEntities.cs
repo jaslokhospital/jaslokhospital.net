@@ -456,7 +456,7 @@ namespace BusinessDataLayer
          public string Mrnumber { get; set; }
 
          public int Portalid { get; set; }
-
+         public string Guid { get; set; }
 
          #endregion
 

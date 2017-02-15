@@ -12,6 +12,7 @@ using BusinessDataLayer;
 
 public partial class Payment : System.Web.UI.Page
 {
+    public BusinessLogic objBusinessLogic = new BusinessLogic();
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     public string formPostUrl, vanityUrl, merchantTxnId, orderAmount, currency, UserName, returnUrl, notifyUrl, securitySignature = string.Empty;
     protected void Page_Load(object sender, EventArgs e)
@@ -20,7 +21,7 @@ public partial class Payment : System.Web.UI.Page
 
         //formPostUrl = "/comingsoon";
         //formPostUrl = "https://sandbox.citruspay.com/sslperf/jaslokhospital";
-        formPostUrl = "https://www.citruspay.com/jaslokhospital";
+        //formPostUrl = "https://www.citruspay.com/jaslokhospital";
         
         //Need to change with your Secret Key
        // string secret_key = "66fc8c3cca181b8954338bb5d5bd0cbb18b99b6d";
@@ -35,8 +36,12 @@ public partial class Payment : System.Web.UI.Page
         {
             objDAEntities.FacilityName = "PermenantRegistration";
             objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
-            Session["permenantRegistration"] = objDAEntities;
-            Session["Amount"] = 100;
+            //Session["permenantRegistration"] = objDAEntities;
+            //Session["Amount"] = 100;
+            objDAEntities.Amount = 100;
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] = "Reg-" + objDAEntities.Guid;
+            objBusinessLogic.SaveInfoGuid(objDAEntities);
         }
 
 
@@ -44,19 +49,19 @@ public partial class Payment : System.Web.UI.Page
         //Need to change with your Order Amount
        // orderAmount = "10.00";// Request.QueryString["Amount"];
         currency = "INR";
-        string data = vanityUrl + orderAmount + merchantTxnId + currency;
-        System.Security.Cryptography.HMACSHA1 myhmacsha1 = new System.Security.Cryptography.HMACSHA1(Encoding.ASCII.GetBytes(secret_key));
-        System.IO.MemoryStream stream = new System.IO.MemoryStream(Encoding.ASCII.GetBytes(data));
-        securitySignature = BitConverter.ToString(myhmacsha1.ComputeHash(stream)).Replace("-", "").ToLower();
-        UserInfo user = UserController.Instance.GetCurrentUserInfo();
-        UserName = user.Username;
+        //string data = vanityUrl + orderAmount + merchantTxnId + currency;
+        //System.Security.Cryptography.HMACSHA1 myhmacsha1 = new System.Security.Cryptography.HMACSHA1(Encoding.ASCII.GetBytes(secret_key));
+        //System.IO.MemoryStream stream = new System.IO.MemoryStream(Encoding.ASCII.GetBytes(data));
+        //securitySignature = BitConverter.ToString(myhmacsha1.ComputeHash(stream)).Replace("-", "").ToLower();
+        //UserInfo user = UserController.Instance.GetCurrentUserInfo();
+        //UserName = user.Username;
         //Session["Amount"] = null;
 
-        returnUrl = "http://" + Request.ServerVariables["SERVER_NAME"] + "/PaymentResponse.aspx";
+        //returnUrl = "http://" + Request.ServerVariables["SERVER_NAME"] + "/PaymentResponse.aspx";
         
 
-        notifyUrl = returnUrl;
-        //Response.Redirect("/PaymentResponse.aspx");
+        //notifyUrl = returnUrl;
+        Response.Redirect("/PaymentResponse.aspx");
         //Response.Write("txm:" + merchantTxnId + "  " + securitySignature);
     }
 }

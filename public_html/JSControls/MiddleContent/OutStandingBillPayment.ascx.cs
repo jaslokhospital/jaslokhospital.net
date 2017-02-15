@@ -64,14 +64,13 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
             amount = rgx.Replace(amount, "");
             amount = amount.Replace(" ", String.Empty);
 
-            Session["Amount"] = amount;
-
-
-            Session["Amount"] = amount;
+            //Session["Amount"] = amount;
             // Session["Amount"] = 10;
-         
 
-            Session["OutstandingBillPayment"] = objDAEntities;
+            objDAEntities.Amount = Convert.ToInt32(amount);
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] ="Out-"+objDAEntities.Guid;
+            objBusinessLogic.SaveInfoGuid(objDAEntities);
 
             if (CommonFn.UserID <= 0)
             {
@@ -79,7 +78,8 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
             }
             else
             {
-                Response.Redirect("/Payment.aspx",false);
+                //Response.Redirect("/Payment.aspx",false);
+                Response.Redirect("/PaymentResponse.aspx");
             }
         }
 
