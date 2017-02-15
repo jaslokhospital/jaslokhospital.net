@@ -479,6 +479,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
         Boolean DSFlag = false;
         JaslokMailer objMailer = new JaslokMailer();
         List<Parameters> lstParameters = new List<Parameters>();
+        UserInfo user = UserController.Instance.GetCurrentUserInfo();
         string lsEmailStatus = string.Empty;
         try
         {
@@ -502,6 +503,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.TimeDate = DateTime.ParseExact(ddlAppointMentDate.SelectedValue, "dd/MM/yyyy", CultureInfo.InvariantCulture) + time;
             objDAEntities.Name = txtName.Text;
             objDAEntities.Day = Convert.ToDateTime(txtdob.SelectedDate).ToString("dd/MM/yyyy");//Convert.ToString(txtdob.SelectedDate);
+
             objDAEntities.Email = txtEmail.Text;
             objDAEntities.PhoneNo = txtPhoneNo.Text;
             objDAEntities.MobileNo = txtMobileNo.Text;
@@ -515,9 +517,14 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.FollowUpCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
             objDAEntities.dName = lblDoctorName.Text;
             objDAEntities.AppointmentTypeCharge = (drpAppointmentType.SelectedValue == "Follow-Up") ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
-
-            Session["Amount"] = objDAEntities.AppointmentTypeCharge;
-            Session["AppointmentDetail"] = objDAEntities;
+            objDAEntities.Amount = objDAEntities.AppointmentTypeCharge;
+            //Session["Amount"] = objDAEntities.AppointmentTypeCharge;
+            //Session["AppointmentDetail"] = objDAEntities;
+            objDAEntities.FacilityName = "FixAppointment";
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] = "App-"+objDAEntities.Guid;
+            objDAEntities.MRNumber = user.Username;
+            objBusinessLogic.SaveAppointmentInfoGuid(objDAEntities);
             if (CommonFn.UserID <= 0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
@@ -527,7 +534,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
                 PlaceMessage.Visible = true;
                 placeRightPart.Visible = false;
                 Clear();
-                Response.Redirect("/Payment.aspx");
+               //Response.Redirect("/Payment.aspx");
+                Response.Redirect("/PaymentResponse.aspx");
             }
             else
             {

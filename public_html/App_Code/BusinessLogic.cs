@@ -1946,15 +1946,36 @@ namespace BusinessDataLayer
             }
         }
 
-        public void SavePaymentBedSurgery(DataAccessEntities Slist)
+        //public void SavePaymentBedSurgery(DataAccessEntities Slist)
+        //{
+        //    string dsBA = string.Empty;
+
+        //    DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+        //    try
+        //    {
+        //       objDataAccessLogic.SavePaymentBedSurgery(Slist);
+               
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        dsBA = null;
+        //        objDataAccessLogic = null;
+        //    }
+        //}
+
+        public DataSet SavePaymentDetails(string Guid, string txnId, string Tranrefid, string Transtatus)
         {
-            string dsBA = string.Empty;
+            DataSet ds = new DataSet();
 
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-               objDataAccessLogic.SavePaymentBedSurgery(Slist);
-               
+                ds = objDataAccessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+                return ds;
             }
             catch (Exception ex)
             {
@@ -1962,7 +1983,7 @@ namespace BusinessDataLayer
             }
             finally
             {
-                dsBA = null;
+                ds = null;
                 objDataAccessLogic = null;
             }
         }
@@ -3037,15 +3058,36 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
-        public void SavePaymentBookAppointment(DataAccessEntities Slist)
+        //public void SavePaymentBookAppointment(DataAccessEntities Slist)
+        //{
+        //    string dsBA = string.Empty;
+
+        //    DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+        //    try
+        //    {
+        //        objDataAccessLogic.SavePaymentBookAppointment(Slist);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        dsBA = null;
+        //        objDataAccessLogic = null;
+        //    }
+        //}
+
+        public DataSet SavePaymentBookAppointment(string txnId, string Tranrefid, string Transtatus, string Guid, string JeevaStatus)
         {
-            string dsBA = string.Empty;
+            DataSet ds = new DataSet();
 
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-                objDataAccessLogic.SavePaymentBookAppointment(Slist);
-
+                ds = objDataAccessLogic.SavePaymentBookAppointment(txnId, Tranrefid, Transtatus, Guid, JeevaStatus);
+                return ds;
             }
             catch (Exception ex)
             {
@@ -3053,7 +3095,7 @@ namespace BusinessDataLayer
             }
             finally
             {
-                dsBA = null;
+                ds = null;
                 objDataAccessLogic = null;
             }
         }
@@ -3157,6 +3199,61 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
+
+        public void SaveInfoGuid(DataAccessEntities Slist)
+        {
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                
+                objDataAccessLogic = null;
+            }
+        }
+
+        public void SaveAppointmentInfoGuid(DataAccessEntities Slist)
+        {
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveAppointmentInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                objDataAccessLogic = null;
+            }
+        }
+
+        public void UpdateJeevaStatus(string JeevaStatus,int paymentId)
+        {
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.UpdateJeevaStatus(JeevaStatus, paymentId);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                objDataAccessLogic = null;
+            }
+        }
     }
     public class DoctorSchedule
     {
@@ -3165,4 +3262,6 @@ namespace BusinessDataLayer
         public int TimeSlot { get; set; }
         public int SpecialtyId { get; set; }
     }
+
+
 }

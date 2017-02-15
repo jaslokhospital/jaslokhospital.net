@@ -105,13 +105,16 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             objDAEntities.BookinDateTime = Convert.ToDateTime(txtdatetime.SelectedDate);
 
             objDAEntities.AdmissionCharge = txtAdmissionCharge.Text;
-
             objDAEntities.Category = hdnDepositBB.Value.Split(',')[1];
             objDAEntities.MRNumber = user.Username;
+            objDAEntities.Amount = Convert.ToInt32(objDAEntities.AdmissionCharge);
+            //Session["Amount"] = objDAEntities.AdmissionCharge;
+            //Session["Bed"] = objDAEntities;
+            objDAEntities.MRNumber= user.Username;
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] = "Bed-"+objDAEntities.Guid;
+            objBusinessLogic.SaveInfoGuid(objDAEntities);
 
-            Session["Amount"] = objDAEntities.AdmissionCharge;
-
-            Session["Bed"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButtonBEDB('" + hdnDepositBB.Value + "', '" + txtAdmissionCharge.Text + "');", true);
@@ -119,7 +122,8 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             }
             else
             {
-                Response.Redirect("/Payment.aspx");
+               // Response.Redirect("/Payment.aspx");
+                Response.Redirect("/PaymentResponse.aspx");
             }
             // Clear();
         }

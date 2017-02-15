@@ -95,19 +95,22 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         objDAEntities.FacilityName = "Health";
         objDAEntities.DoctorId = Convert.ToInt32(ddlDoctorbedbook.SelectedValue);
         objDAEntities.BookinDateTime = Convert.ToDateTime(txtdatetime.SelectedDate);
-
         objDAEntities.AdmissionCharge = Request.Form[txtAdmissionCharge.UniqueID];
-
         objDAEntities.Category = hdnDeposit.Value.Split(',')[1];
-
         objDAEntities.MRNumber = user.Username;
-        //objDAEntities.AdmissionCharge = Convert.ToString(10);
-        //Session["Amount"] = Convert.ToString(10);
-        Session["Amount"] = objDAEntities.AdmissionCharge;
-        Session["HealthCheck-upComprehensive"] = objDAEntities;
-
-
-
+        //objDAEntities.Amount = Convert.ToInt32(Request.Form[txtAdmissionCharge.UniqueID]);
+        objDAEntities.Amount = Convert.ToInt32(objDAEntities.AdmissionCharge);
+        //Session["Amount"] = objDAEntities.AdmissionCharge;
+        //Session["HealthCheck-upComprehensive"] = objDAEntities;
+        string _categoryName = objDAEntities.Category;
+        if (_categoryName == "Male" || _categoryName == "Female")
+        {
+            _categoryName = "Package B (" + objDAEntities.Category + ")";
+        }
+        objDAEntities.Category = _categoryName;
+        objDAEntities.Guid = System.Guid.NewGuid().ToString();
+        Session["Guid"] = "Hea-"+objDAEntities.Guid;
+        objBusinessLogic.SaveInfoGuid(objDAEntities);
 
         //Response.Redirect(@"/Payment.aspx");
         if (CommonFn.UserID <= 0)
@@ -118,7 +121,8 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         }
         else
         {
-            Response.Redirect("/Payment.aspx");
+            Response.Redirect("/PaymentResponse.aspx");
+            //Response.Redirect("/Payment.aspx");
             //string pageurl = "/Payment.aspx";
             //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
         }
