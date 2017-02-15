@@ -511,7 +511,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 // If User enters MRNo. which we do not have
                 else
                 {
-                    var PatientDetails = objPatIndex.GetPatientDetails(txtLoginUsername.Text.Trim());
+                    var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
 
 
                     if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
@@ -642,7 +642,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         else
         {
             PatIndex objPatIndex = new PatIndex();
-            var PatientDetails = objPatIndex.GetPatientDetails(txtForgotPasswordUserName.Text.Trim());
+            var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
             
             if (PatientDetails.WEBPWD != null)
             {
