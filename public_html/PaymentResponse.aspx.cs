@@ -477,9 +477,13 @@ public partial class PaymentResponse : System.Web.UI.Page
         DataSet ds = new DataSet();
         ds = null;
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormPermanentRegistration);
-
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        string EmailToId = string.Empty;
+        string EmailCCId = string.Empty;
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+            EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        }
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
@@ -504,16 +508,19 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         int _emailTemplateID = -1;
-        if (TemplateName.ToLower() == "BedBookingPayment")
+        if (TemplateName.ToLower() == "bedbookingpayment")
             _emailTemplateID = 11;
-        else if (TemplateName.ToLower() == "HealthCheckPayment")
+        else if (TemplateName.ToLower() == "healthcheckpayment")
             _emailTemplateID = 13;
         else
             _emailTemplateID = 14;
 
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(_emailTemplateID);
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+            string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        }
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, Email, EmailCCId);
@@ -534,10 +541,13 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormOtherPaymentForms);
-
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-
+        string EmailToId=string.Empty;
+        string EmailCCId=string.Empty;
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+             EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+             EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        }
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
         string val = lstParameters[3].ShortCodeValue.Replace("&nbsp;", " ");
@@ -565,10 +575,13 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
-
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-
+        string EmailToId = string.Empty;
+        string EmailCCId = string.Empty;
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+             EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+             EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        }
         objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
         objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
