@@ -3237,12 +3237,12 @@ namespace BusinessDataLayer
             }
         }
 
-        public void UpdateJeevaStatus(string JeevaStatus,int paymentId)
+        public void UpdateJeevaStatus(string JeevaStatus,int paymentId,string MrNo)
         {
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-                objDataAccessLogic.UpdateJeevaStatus(JeevaStatus, paymentId);
+                objDataAccessLogic.UpdateJeevaStatus(JeevaStatus,paymentId,MrNo);
 
             }
             catch (Exception ex)

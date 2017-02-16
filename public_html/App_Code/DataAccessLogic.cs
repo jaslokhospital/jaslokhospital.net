@@ -2006,11 +2006,11 @@ namespace BusinessDataLayer
             }
         }
 
-        public void UpdateJeevaStatus(string JeevaStatus,int paymentId)
+        public void UpdateJeevaStatus(string JeevaStatus,int paymentId,string MrNo)
         {
             try
             {
-                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_UpdateJeevaStatus", new object[] { JeevaStatus, paymentId }));
+                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_UpdateJeevaStatus", new object[] { JeevaStatus, paymentId,MrNo}));
 
             }
             catch (Exception ex)
