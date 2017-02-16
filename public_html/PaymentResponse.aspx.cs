@@ -141,7 +141,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 // Code To Update Jeeva status in Payment Table
                                 if (!string.IsNullOrEmpty(JeevaStatus))
                                 {
-                                    objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId);
+                                    objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId,lblMNo.Text);
                                 }
                                 AppointmentSendEmail(Convert.ToString(AppointmentDs.Tables[0].Rows[0]["PhoneNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["MobileNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Country"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["StateName"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["BookedDate"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["AMOUNT"]) + ".00 INR", Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Description"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["DoctName"]), "ConsultationAppointment");
                                 AppointmentDs.Tables[0].Rows.Clear();
@@ -288,18 +288,18 @@ public partial class PaymentResponse : System.Web.UI.Page
                                         {
                                             double Amount = Convert.ToDouble(PayDs.Tables[0].Rows[0]["AMOUNT"]);
                                             string ServiceName = Convert.ToString(PayDs.Tables[0].Rows[0]["ServiceName"]);
-                                            int PaymentId = Convert.ToInt32(AppointmentDs.Tables[0].Rows[0]["PaymentId"]);
+                                            int PaymentId = Convert.ToInt32(PayDs.Tables[0].Rows[0]["PaymentId"]);
                                             lblPaidAgainst.Text = "PermenantRegistration";
                                             lblAmount.Text = Convert.ToString(100);
                                             // Send data to Napier Service for Save Deposit
                                             JeevaStatus = SaveDeposit(txnId,lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+                                            
                                             // Code To Update Jeeva status in Payment Table
                                             if (!string.IsNullOrEmpty(JeevaStatus))
                                             {
-                                                objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId);
+                                                objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text);
                                             }
                                         }
-
                                     }
                                     else
                                     {
@@ -338,7 +338,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 // Code To Update Jeeva status in Payment Table
                                 if (!string.IsNullOrEmpty(JeevaStatus))
                                 {
-                                    objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId);
+                                    objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text);
                                 }
                                 // Conditions For Email
                                 if (processName == "Bed" || processName == "Sur" || processName == "Hea")
@@ -351,6 +351,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 }
 
                                 ds.Tables[0].Rows.Clear();
+
                             }
                             Session["Guid"] = null;
                         }
