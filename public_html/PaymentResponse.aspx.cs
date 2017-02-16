@@ -343,7 +343,21 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 // Conditions For Email
                                 if (processName == "Bed" || processName == "Sur" || processName == "Hea")
                                 {
-                                    ServiceBookingSendEmail(user.DisplayName, user.Email, ServiceName, ServicePackage, BookDate, Amount + ".00 INR", ServiceName);
+                                    string TemplateName = string.Empty;
+                                    if (processName == "Bed")
+                                    {
+                                        TemplateName = "bedbookingpayment";
+                                    }
+                                    else if (processName == "Sur")
+                                    {
+                                        TemplateName = "SurgeryBookingPayment";
+                                    }
+                                    else if (processName == "Hea")
+                                    {
+                                        TemplateName = "HealthCheckPayment";
+                                    }
+
+                                    ServiceBookingSendEmail(user.DisplayName, user.Email, ServiceName, ServicePackage, BookDate, Amount + ".00 INR", TemplateName);
                                 }
                                 else if (processName == "Out")
                                 {
