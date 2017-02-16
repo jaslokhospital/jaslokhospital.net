@@ -516,10 +516,12 @@ public partial class PaymentResponse : System.Web.UI.Page
             _emailTemplateID = 14;
 
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(_emailTemplateID);
+        string EmailToId = string.Empty;
+        string EmailCCId = string.Empty;
         if (ds.Tables[0].Rows.Count > 0)
         {
-            string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-            string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+             EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+             EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
         }
         lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
