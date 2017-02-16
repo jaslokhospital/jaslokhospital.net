@@ -280,26 +280,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                                 lblMsg.Text = "UserName already exist!";
                                             }
                                         }
-
-                                        // code to save payment details of Per. Reg.
-                                        DataSet PayDs = objBusinessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
-
-                                        if (PayDs.Tables[0].Rows.Count > 0)
-                                        {
-                                            double Amount = Convert.ToDouble(PayDs.Tables[0].Rows[0]["AMOUNT"]);
-                                            string ServiceName = Convert.ToString(PayDs.Tables[0].Rows[0]["ServiceName"]);
-                                            int PaymentId = Convert.ToInt32(PayDs.Tables[0].Rows[0]["PaymentId"]);
-                                            lblPaidAgainst.Text = "PermenantRegistration";
-                                            lblAmount.Text = Convert.ToString(100);
-                                            // Send data to Napier Service for Save Deposit
-                                            JeevaStatus = SaveDeposit(txnId,lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
-                                            
-                                            // Code To Update Jeeva status in Payment Table
-                                            if (!string.IsNullOrEmpty(JeevaStatus))
-                                            {
-                                                objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text);
-                                            }
-                                        }
                                     }
                                     else
                                     {
@@ -316,6 +296,26 @@ public partial class PaymentResponse : System.Web.UI.Page
                                     lblMsg.Text = "Due to some technical problem MRNumber is not generated please contact Jaslok Hospital!";
                                     plcDivSucces.Visible = true;
                                     plcDivError.Visible = false;
+                                }
+
+                                // code to save payment details of Per. Reg.
+                                DataSet PayDs = objBusinessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+
+                                if (PayDs.Tables[0].Rows.Count > 0)
+                                {
+                                    double Amount = Convert.ToDouble(PayDs.Tables[0].Rows[0]["AMOUNT"]);
+                                    string ServiceName = Convert.ToString(PayDs.Tables[0].Rows[0]["ServiceName"]);
+                                    int PaymentId = Convert.ToInt32(PayDs.Tables[0].Rows[0]["PaymentId"]);
+                                    lblPaidAgainst.Text = "PermenantRegistration";
+                                    lblAmount.Text = Convert.ToString(100);
+                                    // Send data to Napier Service for Save Deposit
+                                    JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+
+                                    // Code To Update Jeeva status in Payment Table
+                                    if (!string.IsNullOrEmpty(JeevaStatus))
+                                    {
+                                        objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text);
+                                    }
                                 }
                         }
 
@@ -346,15 +346,17 @@ public partial class PaymentResponse : System.Web.UI.Page
                                     string TemplateName = string.Empty;
                                     if (processName == "Bed")
                                     {
-                                        TemplateName = "bedbookingpayment";
+                                        TemplateName = "BedBookingPayment";
+                                                        
                                     }
                                     else if (processName == "Sur")
                                     {
                                         TemplateName = "SurgeryBookingPayment";
+                                                        
                                     }
                                     else if (processName == "Hea")
                                     {
-                                        TemplateName = "HealthCheckPayment";
+                                        TemplateName = "HealthCheckPayment"; 
                                     }
 
                                     ServiceBookingSendEmail(user.DisplayName, user.Email, ServiceName, ServicePackage, BookDate, Amount + ".00 INR", TemplateName);
@@ -502,9 +504,9 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         DataSet ds = new DataSet();
         int _emailTemplateID = -1;
-        if (TemplateName.ToLower() == "bedbookingpayment")
+        if (TemplateName.ToLower() == "BedBookingPayment")
             _emailTemplateID = 11;
-        else if (TemplateName.ToLower() == "healthcheckpayment")
+        else if (TemplateName.ToLower() == "HealthCheckPayment")
             _emailTemplateID = 13;
         else
             _emailTemplateID = 14;
