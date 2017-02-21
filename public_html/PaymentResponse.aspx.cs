@@ -303,7 +303,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 int PaymentId = 0;
                                 int Amount = 100;
                                 string ServiceName = "PermenantRegistration";
-
+                                lblAmount.Text = Convert.ToString(Amount);
+                                lblPaidAgainst.Text = ServiceName;
                                 // Send data to Napier Service for Save Deposit
                                 JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
                             
