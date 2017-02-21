@@ -3237,12 +3237,14 @@ namespace BusinessDataLayer
             }
         }
 
-        public void UpdateJeevaStatus(string JeevaStatus,int paymentId,string MrNo)
+ 
+
+        public void InsertPermenentRegPayment(string JeevaStatus, int paymentId, string MrNo, DataTable dt = null)
         {
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-                objDataAccessLogic.UpdateJeevaStatus(JeevaStatus,paymentId,MrNo);
+                objDataAccessLogic.InsertPermenentRegPayment(JeevaStatus, paymentId, MrNo, dt);
 
             }
             catch (Exception ex)

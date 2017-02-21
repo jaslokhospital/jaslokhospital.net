@@ -34,18 +34,18 @@ public partial class Payment : System.Web.UI.Page
 
         if (Request.QueryString["reg"] != null)
         {
-            objDAEntities.FacilityName = "PermenantRegistration";
-            objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
+           // objDAEntities.FacilityName = "PermenantRegistration";
+            //objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
             //Session["permenantRegistration"] = objDAEntities;
             //Session["Amount"] = 100;
-            objDAEntities.Amount = 100;
+            //objDAEntities.Amount = 100;
             objDAEntities.Guid = System.Guid.NewGuid().ToString();
             Session["Guid"] = "Reg-" + objDAEntities.Guid;
-            objBusinessLogic.SaveInfoGuid(objDAEntities);
+            //objBusinessLogic.SaveInfoGuid(objDAEntities);
         }
 
 
-        orderAmount = Session["Amount"].ToString();
+        //orderAmount = Session["Amount"].ToString();
         //Need to change with your Order Amount
        // orderAmount = "10.00";// Request.QueryString["Amount"];
         currency = "INR";
