@@ -2006,16 +2006,37 @@ namespace BusinessDataLayer
             }
         }
 
-        public void UpdateJeevaStatus(string JeevaStatus,int paymentId,string MrNo)
+  
+      
+       
+        public void InsertPermenentRegPayment(string JeevaStatus, int paymentId, string MrNo, DataTable dt = null)
         {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString);
             try
             {
-                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_UpdateJeevaStatus", new object[] { JeevaStatus, paymentId,MrNo}));
-
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmdProc = new SqlCommand("JH_UpdateJeevaStatus", con);
+                cmdProc.CommandType = CommandType.StoredProcedure;
+                cmdProc.Parameters.AddWithValue("@JeevaStatus", JeevaStatus);
+                cmdProc.Parameters.AddWithValue("@PaymentId", paymentId);
+                cmdProc.Parameters.AddWithValue("@MrNo", MrNo);
+                cmdProc.Parameters.AddWithValue("@permanentregistration", dt);
+                cmdProc.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (SqlException e)
             {
-                throw ex;
+                
+            }
+            finally
+            {
+                if (con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                }
+
             }
         }
     }

@@ -141,7 +141,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 // Code To Update Jeeva status in Payment Table
                                 if (!string.IsNullOrEmpty(JeevaStatus))
                                 {
-                                    objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId,lblMNo.Text);
+                                    DataTable dt=null;
+                                    objBusinessLogic.InsertPermenentRegPayment(JeevaStatus, PaymentId, lblMNo.Text,dt);
                                 }
                                 AppointmentSendEmail(Convert.ToString(AppointmentDs.Tables[0].Rows[0]["PhoneNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["MobileNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Country"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["StateName"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["BookedDate"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["AMOUNT"]) + ".00 INR", Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Description"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["DoctName"]), "ConsultationAppointment");
                                 AppointmentDs.Tables[0].Rows.Clear();
@@ -214,10 +215,10 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 {
                                     PhoneNumber = PhoneNumber.Substring(0, 12);
                                 }
-                             
+
 
                                 var PatientDetails = NapierService(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
-                                 
+
                                 //var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
 
                                 if (!string.IsNullOrEmpty(PatientDetails.MRNO))
@@ -246,7 +247,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                                 }
                                                 DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
                                                 lblMNo.Text = PatientDetails.MRNO;
-                                                
+
                                                 if (dsVal.Tables[0].Rows.Count > 0)
                                                 {
                                                     // SendMail & MSG
@@ -299,24 +300,43 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 }
 
                                 // code to save payment details of Per. Reg.
-                                DataSet PayDs = objBusinessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+                                int PaymentId = 0;
+                                int Amount = 100;
+                                string ServiceName = "PermenantRegistration";
 
-                                if (PayDs.Tables[0].Rows.Count > 0)
+                                // Send data to Napier Service for Save Deposit
+                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+                            
+                                DataTable dt = new DataTable();
+                                dt.Columns.AddRange(new DataColumn[9] { new DataColumn("TRANSACTIONID"), new DataColumn("TRANREFID"), new DataColumn("TRANSTATUS"), new DataColumn("AMOUNT"),new DataColumn("USERID"), new DataColumn("PORTALID"), new DataColumn("JeevaStatus"), new DataColumn("MrNo"),new DataColumn("ServiceName")});
+                                
+
+                               //Add rows to DataTable.
+                                dt.Rows.Add(txnId, Tranrefid, Transtatus, Amount, user.UserID, AppGlobal.PortalId, JeevaStatus, lblMNo.Text, ServiceName);
+
+                                if (dt.Rows.Count > 0)
                                 {
-                                    double Amount = Convert.ToDouble(PayDs.Tables[0].Rows[0]["AMOUNT"]);
-                                    string ServiceName = Convert.ToString(PayDs.Tables[0].Rows[0]["ServiceName"]);
-                                    int PaymentId = Convert.ToInt32(PayDs.Tables[0].Rows[0]["PaymentId"]);
-                                    lblPaidAgainst.Text = "PermenantRegistration";
-                                    lblAmount.Text = Convert.ToString(100);
-                                    // Send data to Napier Service for Save Deposit
-                                    JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
-
-                                    // Code To Update Jeeva status in Payment Table
-                                    if (!string.IsNullOrEmpty(JeevaStatus))
-                                    {
-                                        objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text);
-                                    }
+                                    objBusinessLogic.InsertPermenentRegPayment(JeevaStatus, PaymentId, lblMNo.Text, dt);
                                 }
+
+                               // DataSet PayDs = objBusinessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+
+                                //if (PayDs.Tables[0].Rows.Count > 0)
+                                //{
+                                //    double Amount = Convert.ToDouble(PayDs.Tables[0].Rows[0]["AMOUNT"]);
+                                //    string ServiceName = Convert.ToString(PayDs.Tables[0].Rows[0]["ServiceName"]);
+                                //    int PaymentId = Convert.ToInt32(PayDs.Tables[0].Rows[0]["PaymentId"]);
+                                //    lblPaidAgainst.Text = "PermenantRegistration";
+                                //    lblAmount.Text = Convert.ToString(100);
+                                //    // Send data to Napier Service for Save Deposit
+                                //    JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+
+                                //    // Code To Update Jeeva status in Payment Table
+                                //    if (!string.IsNullOrEmpty(JeevaStatus))
+                                //    {
+                                //        objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text, true);
+                                //    }
+                                //}
                         }
 
                   /**/else
@@ -338,7 +358,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 // Code To Update Jeeva status in Payment Table
                                 if (!string.IsNullOrEmpty(JeevaStatus))
                                 {
-                                    objBusinessLogic.UpdateJeevaStatus(JeevaStatus, PaymentId, lblMNo.Text);
+                                    DataTable dt=null;
+                                    objBusinessLogic.InsertPermenentRegPayment(JeevaStatus, PaymentId, lblMNo.Text,dt);
                                 }
                                 // Conditions For Email
                                 if (processName == "Bed" || processName == "Sur" || processName == "Hea")
