@@ -2681,7 +2681,7 @@ select::-ms-expand { display: none }
 .vission-mission p { color: #333 }
 .dnb-list li { color: #333 }
 .h100 {
-    height: 100%!important;
+    height: 100%!important; 
     max-height: 365px!important;
 }
 .top-bt { margin: 0 0 20px }
@@ -2703,7 +2703,7 @@ select::-ms-expand { display: none }
 .all-categories .categories a { color: #00bcd4 }
 .healtspacing { padding: 10px }
 #dnn_ctl00_lblTitle { font-size: 14px }
-.glyphicon { margin: 0 4px 0 0 }
+.glyphicon { margin: 0 }
 #dnn_divcontentpane h3 { margin-top: 0 }
 .press-release-content { width: 89% }
 .keyword-txt {
@@ -2780,7 +2780,7 @@ select::-ms-expand { display: none }
 .all-categories .categories a { color: #00bcd4 }
 .healtspacing { padding: 10px }
 #dnn_ctl00_lblTitle { font-size: 14px }
-.glyphicon { margin: 0 4px 0 0 }
+.glyphicon { margin: 0 }
 #dnn_divcontentpane h3 { margin-top: 0 }
 .press-release-content { width: 89% }
 .faqdeposite {
