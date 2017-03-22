@@ -509,7 +509,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 // If User enters MRNo. which we do not have
                 else
                 {
-                    var PatientDetails = objPatIndex.GetPatientDetails(txtLoginUsername.Text.Trim());
+                    var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
 
 
                     if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)

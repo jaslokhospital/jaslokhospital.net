@@ -7,6 +7,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BusinessDataLayer;
 
 public partial class JSControls_Common_Password : System.Web.UI.UserControl
 {
@@ -38,9 +39,12 @@ public partial class JSControls_Common_Password : System.Web.UI.UserControl
 
     protected void btnSubmit_Click1(object sender, EventArgs e)
     {
-            string password = HttpUtility.UrlEncode(Encrypt(txtPassword.Text.Trim()));
-            lblPassword.CssClass = "dnnFormMessage dnnFormSuccess";
-            lblPassword.Text = "<span style='font-size:10px;font-weight:bold;text-transform:uppercase;'>Your Encrypted Password is:</span><br /><span style='font-size:16px;'>" + password + "</span>";
-            txtPassword.Text = "";
+        string password = HttpUtility.UrlEncode(Encrypt(txtPassword.Text.Trim()));
+        BusinessLogic objBusinessLogic = new BusinessLogic();
+        objBusinessLogic.UpdateSmtpCredential(password);
+        lblPassword.CssClass = "dnnFormMessage dnnFormSuccess";
+        lblPassword.Text = "<span style='font-size:10px;font-weight:bold;text-transform:uppercase;'>Your password updated successfully</span>";
+        txtPassword.Text = "";
+        Cache.Remove("SMTPCred");
     }
 }

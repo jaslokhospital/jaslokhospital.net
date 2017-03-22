@@ -47,6 +47,12 @@
         {
             redirect301(objRedirect.NewUrl);
         }
+        //HttpContext.Current.Response.AddHeader("X-FRAME-OPTIONS ", "DENY");
+        var application = sender as HttpApplication;
+        if (application != null && application.Context != null)
+        {
+            application.Context.Response.Headers.Remove("Server");
+        }
     }
     private void redirect301(string path)
     {

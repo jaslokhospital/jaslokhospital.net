@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using DotNetNuke.Entities.Users;
 public partial class Portals__default_Skins_JaslokSkin_HomePageSkin : DotNetNuke.UI.Skins.Skin
 {
     protected void Page_Load(object sender, EventArgs e)

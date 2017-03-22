@@ -78,12 +78,12 @@ namespace BusinessDataLayer
             }
         }
 
-        public DataSet IsExistMRNumber(string MRNumber)
+        public bool IsExistMRNumber(string MRNumber)
         {
 
             try
             {
-                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_uspIsExistsMRNumber", new object[] { MRNumber });
+                return Convert.ToBoolean(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_uspIsExistsMRNumber", new object[] { MRNumber }));
             }
             catch (Exception ex)
             {
@@ -1956,6 +1956,23 @@ namespace BusinessDataLayer
             {
                 throw ex;
             }
+        }
+
+        public DataSet GetSmtpCredential()
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetSmtpCredentials", new object[] { });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void UpdateSmtpCredential(string Password)
+        {
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_UpdateSmtpCredentials", new object[] { Password });
         }
     }
 }

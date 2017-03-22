@@ -73,8 +73,7 @@
                         <img src="/images/quick-connect-icon3.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">AMBULANCE NUMBER</span>  <a href="tel:02266573010"> <span class="content-line">022 6657
-                            3010</span></a>
+                        <span class="email-line">JASLOK HELPDESK</span>  <a href="tel:02266573010"> <span class="content-line">022-66573010</span></a>
                     </div>
                 </div>
             </div>

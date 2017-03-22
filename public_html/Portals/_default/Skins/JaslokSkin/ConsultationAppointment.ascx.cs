@@ -52,6 +52,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
         if (!IsPostBack)
         {
             BindDoctor();
+            GetUserInfo();
         }
         if (ddlDoctorName.SelectedIndex > 0)
         {
@@ -77,11 +78,12 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                 }
                 divEmpty.Visible = false;
                 divDoctorInfo.Visible = true;
+                
             }
 
         }
 
-        GetUserInfo();
+        
         //else
         //{
         //    divEmpty.Visible = true;

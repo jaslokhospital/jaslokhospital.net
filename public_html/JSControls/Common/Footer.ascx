@@ -15,10 +15,12 @@
                             <p><i class="glyphicon glyphicon-map-marker icon-color"></i> 15 - Dr. Deshmukh Marg,<br><span>Pedder Road, Mumbai- 400026</span></p>
                             <p><i class="glyphicon glyphicon-envelope icon-color"></i> <a href="mailto:online@jaslokhospital.net">online@jaslokhospital.net</a></p>
 
-                            
-
-                            <p><i class="glyphicon glyphicon-earphone icon-color"></i>+91-022-66573333 / +91-22-66573010</p>
-
+                            <p>
+                               <i class="glyphicon glyphicon-earphone icon-color" style="display: inline; top: 20px;"></i>
+                               <span style="">+91-22-66573333</span><br>
+                                <span>+91-22-2353-3333</span><br>
+                                 <span>+91-22-66573010</span><br>
+                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 foot">

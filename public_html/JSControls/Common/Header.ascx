@@ -28,8 +28,8 @@
                         <img src="/images/quick-connect-icon3.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">AMBULANCE NUMBER</span>
-                        <span class="content-line">022 6657 3010</span>
+                        <span class="email-line">JASLOK HELPDESK</span>
+                        <span class="content-line">022-66573010</span>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="icon-content">
                         <span class="email-line">EMERGENCY NUMBER</span>
-                        <span class="content-line">022-2354 23540</span>
+                        <span class="content-line">022-2354 2354</span>
                     </div>
                 </div>
             </div>
@@ -143,6 +143,11 @@
                             <li runat="server" id="liAhome">
                                 <a runat="server" id="anchorAhome">
                                     <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
+                            </li>
+                            
+                            <li runat="server" id="limBox" visible="false">
+                                <a runat="server" id="amBox">
+                                    <asp:Label ID="lblmBox" runat="server"></asp:Label></a>
                             </li>
                         </ul>
                     </div>

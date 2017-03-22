@@ -198,7 +198,7 @@
                                 <div class="col-xs-12 col-sm-9 col-xs-8">
                                     <asp:TextBox ID="txtEmail" class="form-control" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" CssClass="errormsg" ValidationGroup="CA" ForeColor="Red" ErrorMessage="Please Enter Email ID" Display="Dynamic"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" CssClass="errormsg" ErrorMessage="Please Enter Valid Email ID" ValidationGroup="vgSubmit" Display="Dynamic" ControlToValidate="txtEmail"
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" CssClass="errormsg" ErrorMessage="Please Enter Valid Email ID" ValidationGroup="CA" Display="Dynamic" ControlToValidate="txtEmail"
                                         ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
                                     </asp:RegularExpressionValidator>
                                 </div>

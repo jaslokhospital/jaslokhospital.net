@@ -78,24 +78,16 @@ namespace BusinessDataLayer
         }
 
 
-        public DataSet IsExistMRNumber(string MRNumber)
+        public bool IsExistMRNumber(string MRNumber)
         {
-            DataSet dsTest = new DataSet();
-
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-                dsTest = objDataAccessLogic.IsExistMRNumber(MRNumber);
-                return dsTest;
+                return objDataAccessLogic.IsExistMRNumber(MRNumber);
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                dsTest = null;
-                objDataAccessLogic = null;
             }
         }
 
@@ -3160,6 +3152,30 @@ namespace BusinessDataLayer
                 dsTest = null;
                 objDataAccessLogic = null;
             }
+        }
+
+        public DataSet GetSmtpCredential()
+        {
+            DataSet dsSmtpCredentials = new DataSet();
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                dsSmtpCredentials = objDataAccessLogic.GetSmtpCredential();
+                return dsSmtpCredentials;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+            }
+        }
+
+        public void UpdateSmtpCredential(string fnPassword)
+        {
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            objDataAccessLogic.UpdateSmtpCredential(fnPassword);
         }
     }
     public class DoctorSchedule

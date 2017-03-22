@@ -66,6 +66,26 @@ public class JaslokMailer
     }
     public void UserCredentials()
     {
+
+        BusinessLogic objBusiness = new BusinessLogic();
+        DataSet ds = new DataSet();
+        //ds = objBusiness.GetSmtpCredential();
+        if (HttpContext.Current.Cache["SMTPCred"] == null)
+        {
+            ds = objBusiness.GetSmtpCredential();
+            HttpContext.Current.Cache.Insert("SMTPCred", ds);
+        }
+        else
+        {
+            ds = HttpContext.Current.Cache["SMTPCred"] as DataSet;
+        }
+        if (ds != null)
+        {
+            this.UserName = ds.Tables[0].Rows[0]["CredUname"].ToString();
+            this.Password = ds.Tables[0].Rows[0]["CredPwd"].ToString();
+            this.Password = Decrypt(HttpUtility.UrlDecode(Password));
+        }
+        /*
         XmlDocument doc = new XmlDocument();
         doc.Load(System.Web.HttpContext.Current.Server.MapPath("~/EmailTemlates/MailBox.xml"));
         XmlNode UserNamenode = doc.DocumentElement.SelectSingleNode("/mailbox/username");
@@ -73,7 +93,7 @@ public class JaslokMailer
 
         XmlNode Passwordnode = doc.DocumentElement.SelectSingleNode("/mailbox/password");
         this.Password = Passwordnode.InnerText.Trim();
-        this.Password = Decrypt(HttpUtility.UrlDecode(Password));
+        this.Password = Decrypt(HttpUtility.UrlDecode(Password));*/
 
     }
 

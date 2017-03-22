@@ -274,6 +274,11 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
             divcontentpane.Controls.Add(LoadControl("~/JSControls/MiddleContent/OutStandingBillPayment.ascx"));
             SubRootSpan.InnerText = "Outstanding Bill Payment";
         }
+        else if (Request.RawUrl.ToLower().Contains("jhrcstent"))
+        {
+            BindPageDetail(198);
+            h3header.InnerText = "Jaslok Hospital and Research Center Stent Prices";
+        }
 
     }
     public void BindPageDetail(int id)
