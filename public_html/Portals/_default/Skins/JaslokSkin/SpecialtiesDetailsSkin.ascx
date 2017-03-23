@@ -115,27 +115,28 @@
                                             </tr>
                                         </table>
                                         </asp:Panel>
-                                        <asp:Panel visible="false" runat="server" ID="pnlBriefWriteUp">
-                                             <table>
-                                            <tr>
-                                                <td>
-                                                    <asp:Literal ID="litBriefWriteUp" runat="server" Text='<%#Eval("BriefWriteUp")%>'></asp:Literal>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        </asp:Panel> 
-                                         <asp:Panel visible="false" runat="server" ID="panelAwards">
-                                             <table>
-                                            <tr>
-                                                <td>
-                                                    <asp:Literal ID="litAwards" runat="server" Text='<%#Eval("Awards")%>'></asp:Literal>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        </asp:Panel>                                       
+                                        <div class="collapse" id='<%# "divReadMoreContent_" + (Container.ItemIndex + 1).ToString()%>'>
+                                            <asp:Panel visible="false" runat="server" ID="pnlBriefWriteUp">
+                                                 <table style="margin-top:15px;">
+                                                <tr>
+                                                    <td>
+                                                        <asp:Literal ID="litBriefWriteUp" runat="server" Text='<%#Eval("BriefWriteUp")%>'></asp:Literal>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            </asp:Panel> 
+                                             <asp:Panel visible="false" runat="server" ID="panelAwards">
+                                                 <table style="margin-top:15px;">
+                                                <tr>
+                                                    <td>
+                                                        <asp:Literal ID="litAwards" runat="server" Text='<%#Eval("Awards")%>'></asp:Literal>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            </asp:Panel>   
+                                        </div>                                    
                                      <br>
-                                        <a href='<%#"/find-doctor/"+CommonFn.RemoveSpecialCharacters(Convert.ToString(Eval("Name")))+"/"+(Eval("DoctorId"))%>' style="text-align:right;" class="read-more pull-right">Read More <i class="fa fa-chevron-circle-right"></i>
-                                        </a>
+                                        <a href='<%# "#divReadMoreContent_" + (Container.ItemIndex + 1).ToString()%>' style="text-align:right;" data-toggle="collapse" aria-expanded="false" class="accordian-text read-more pull-right">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                     </div>
                                     <%--<div id="divEmail" runat="server" visible='<%# !string.IsNullOrEmpty(Convert.ToString(Eval("EmailId")))%>' class="col-lg-12 col-md-12 col-sm-12">
                                         <label>Email    : </label>
@@ -187,6 +188,9 @@
  //}
     $(document).ready(function () {
         $('.pgwSlideshow').pgwSlideshow();
+        $(".accordian-text").click(function () {
+            $(this).html($(this).html() == 'Read More <i class="fa fa-chevron-circle-right"></i>' ? 'Close <i class="fa fa-chevron-circle-right"></i>' : 'Read More <i class="fa fa-chevron-circle-right"></i>');
+        });
     });
     function openPanel(val) {
         document.getElementById('<%=divcontentpane.ClientID%>').style.display = 'none';
@@ -219,7 +223,7 @@
             document.getElementById('<%=h3subheader.ClientID%>').innerHTML = "<b> - Our Specialists</b>";
             //document.getElementById('imgSpecialities').style.display = 'block';
             }
-}
+    }
 </script>
  
         
