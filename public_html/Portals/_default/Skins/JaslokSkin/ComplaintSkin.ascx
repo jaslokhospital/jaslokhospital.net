@@ -72,6 +72,17 @@
                                 </asp:RegularExpressionValidator>
                             </div>
                         </div>
+                         <div class="form-group">
+                            <label class="control-label col-sm-3 col-xs-12">Phone No.:<span style="color: red">*</span></label>
+
+                            <div class="col-xs-12 col-sm-9">
+                                <asp:TextBox ID="txtPhoneNo" class="form-control" placeholder="Telephone No" runat="server" MaxLength="13"></asp:TextBox>
+                                <asp:RequiredFieldValidator Display="Dynamic" ID="rfvPhone" runat="server" ControlToValidate="txtPhoneNo" ValidationGroup="vgSubmit" ForeColor="Red" ErrorMessage="Please Enter Phone Number"></asp:RequiredFieldValidator>
+                                   <asp:RegularExpressionValidator Display="Dynamic" ID="revPgone" runat="server" ErrorMessage="Please Enter Valid Phone Number" ValidationGroup="vgSubmit" ControlToValidate="txtPhoneNo" 
+                                    ForeColor="Red" CssClass="requiredFieldValidateStyle"  ValidationExpression="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$">
+                                </asp:RegularExpressionValidator>                               
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="control-label col-sm-3 col-xs-12">Complaint Details:<span style="color: red">*</span></label>
                             <div class="col-xs-12 col-sm-9">
