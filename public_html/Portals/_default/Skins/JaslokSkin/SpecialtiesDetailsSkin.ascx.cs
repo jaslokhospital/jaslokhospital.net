@@ -170,12 +170,15 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesDetailsSkin : 
             {
                 panelArea.Visible = true;
             }
-            else if (!String.IsNullOrEmpty(litBriefWriteUp.Text))
+
+            if (!String.IsNullOrEmpty(litBriefWriteUp.Text))
             {
                 pnlBriefWriteUp.Visible = true;
             }
-            else
+            if (!String.IsNullOrEmpty(litAwards.Text))
+            {
                 panelAwards.Visible = true;
+            }
 
         }
     }
