@@ -136,7 +136,9 @@
                                             </asp:Panel>   
                                         </div>                                    
                                      <br>
-                                        <a href='<%# "#divReadMoreContent_" + (Container.ItemIndex + 1).ToString()%>' style="text-align:right;" data-toggle="collapse" aria-expanded="false" class="accordian-text read-more pull-right">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                                        <div style="text-align:right;">
+                                        <a href='<%# "#divReadMoreContent_" + (Container.ItemIndex + 1).ToString()%>' style="float:none !important;" data-toggle="collapse" aria-expanded="false" class="accordian-text read-more pull-right">Read More</a>&nbsp;<i style="color:#00bbcd!important;" class="fa fa-chevron-circle-right"></i>
+                                        </div>
                                     </div>
                                     <%--<div id="divEmail" runat="server" visible='<%# !string.IsNullOrEmpty(Convert.ToString(Eval("EmailId")))%>' class="col-lg-12 col-md-12 col-sm-12">
                                         <label>Email    : </label>
@@ -189,7 +191,7 @@
     $(document).ready(function () {
         $('.pgwSlideshow').pgwSlideshow();
         $(".accordian-text").click(function () {
-            $(this).html($(this).html() == 'Read More <i class="fa fa-chevron-circle-right"></i>' ? 'Close <i class="fa fa-chevron-circle-right"></i>' : 'Read More <i class="fa fa-chevron-circle-right"></i>');
+            $(this).html($(this).html() == 'Read More' ? 'Close' : 'Read More');
         });
     });
     function openPanel(val) {
