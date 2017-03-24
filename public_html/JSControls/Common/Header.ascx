@@ -7,7 +7,7 @@
 </script>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <%@ Register Src="~/JSControls/Common/StickyFindDoctor.ascx" TagPrefix="JS" TagName="StickyFindDoctor" %>
-
+<telerik:RadScriptBlock ID="RadScriptHeader" runat="server">
 <div class="container-fluid quick-connect-hover">
     <div class="container">
         <div class="row">
@@ -17,8 +17,8 @@
                         <img src="/images/quick-connect-icon2.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMAIL ID </span>
-                        <span class="content-line"><a href="mailto:online@jaslokhospital.net" style="color: #ffffff;">online@jaslokhospital.net</a></span>
+                        <span class="email-line"><%= GetKey("Em") %></span>
+                        <span class="content-line"><a href="mailto:<%= GetValue("Em") %>" style="color: #ffffff;"><%= GetValue("Em") %></a></span>
                     </div>
                 </div>
             </div>
@@ -28,8 +28,8 @@
                         <img src="/images/quick-connect-icon3.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">JASLOK HELPDESK</span>
-                        <span class="content-line">022-66573010</span>
+                        <span class="email-line"><%= GetKey("AmbNo") %></span>
+                        <span class="content-line"><%= GetValue("AmbNo") %></span>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span>
-                        <span class="content-line">022-2354 2354</span>
+                        <span class="email-line"><%= GetKey("EmNo") %></span>
+                        <span class="content-line"><%= GetValue("EmNo") %></span>
                     </div>
                 </div>
             </div>
@@ -53,8 +53,8 @@
                             <img src="/images/blood-bank-icon.png" alt="quick-connect-icon" />
                         </div>
                         <div class="icon-content">
-                            <span class="email-line">BLOOD BANK (24x7)</span>
-                            <span class="content-line">+91-022- 66573434</span>
+                            <span class="email-line"><%= GetKey("BB") %></span>
+                            <span class="content-line"><%= GetValue("BB") %></span>
 
                         </div>
                     </a>
@@ -68,7 +68,7 @@
                             <img src="/images/quick-connect-icon2.jpg" alt="quick-connect-icon" />
                         </div>
                         <div class="icon-content">
-                            <span class="email-line feedback-last">FEEDBACK</span>
+                            <span class="email-line feedback-last"><%= GetKey("FB") %></span>
 
                         </div>
                     </a>
@@ -80,86 +80,87 @@
 </div>
 <div class="container-fluid header">
     <div class="container">
-        <nav id="Nav1" class="navbar navbar-inverse mainnav container-menu" style="margin-bottom:0%;">
+        <nav id="Nav1" class="navbar navbar-inverse mainnav container-menu" style="margin-bottom: 0%;">
             <div class="container">
-               <div class="row">
-                   <div class="col-sm-12 col-md-12 col-lg-12 pading45"> 
-                <div class="collapse navbar-collapse a" id="Div1">
-                    <ul class="nav navbar-nav menu " style="padding-top:4px;">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 pading45">
+                        <div class="collapse navbar-collapse a" id="Div1">
+                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
 
-                  
 
-                        <li class="dropdown main-menu-bar online-facilities" role="presentation">
-                              
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-second-menu" style="width:200px;">
-                                <li data-value="PatientRegistration" style="font-weight:bold;padding-left:6px">Patient Registration</li>
-                                <li data-value="#" style="font-weight:bold;padding-left:6px">In-Patient</li>
-                                <li data-value="bed-booking"><a>Bed Reservation</a></li>
-                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
-                                <li data-value="#" style="font-weight:bold;padding-left:6px">Out-Patient</li>
-                                <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
-                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
-                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                                <%--<li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>--%>
-                                <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
-                             <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
-                                <li data-value="consultationappointment/new"><a>New Appointment</a></li>
-                                <li data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></li>
-                                
+
+                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
+
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-second-menu" style="width: 200px;">
+                                        <li data-value="PatientRegistration" style="font-weight: bold; padding-left: 6px">Patient Registration</li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">In-Patient</li>
+                                        <li data-value="bed-booking"><a>Bed Reservation</a></li>
+                                        <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
+                                        <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Out-Patient</li>
+                                        <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
+                                        <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
+                                        <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
+                                        <%--<li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>--%>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Consultation Appointment</li>
+                                        <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
+                                        <li data-value="consultationappointment/new"><a>New Appointment</a></li>
+                                        <li data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></li>
+
+
+                                    </ul>
+                                </li>
 
                             </ul>
-                        </li>
 
-                    </ul>
+                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
 
-                    <ul class="nav navbar-nav menu " style="padding-top:4px;">
+                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-second-menu" style="width: 300px;">
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Deposit Payment</li>
+                                        <li data-value="surgery-booking"><a>Surgery Deposit Payment</a></li>
+                                        <li data-value="outstandingbillpayment"><a>Outstanding Bill (Interim Demand Note)</a></li>
+                                    </ul>
+                                </li>
 
-                        <li class="dropdown main-menu-bar online-facilities" role="presentation">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-second-menu" style="width:300px;">
-                                <li data-value="#" style="font-weight:bold;padding-left:6px;">Deposit Payment</li>
-                                <li data-value="surgery-booking"><a>Surgery Deposit Payment</a></li>
-                                <li data-value="outstandingbillpayment"><a>Outstanding Bill (Interim Demand Note)</a></li>
                             </ul>
-                        </li>
-
-                    </ul>
 
 
-                    <div class="pull-left" style="padding-left: 10px;">
-                        <ul class="list cl-effect-2">
-                            <li id="liLogin" visible="false" runat="server">
-                                <a href="#" id="myBtn">
-                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
-                            <li id="liLogout" runat="server">
-                                <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
-                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
-                            </li>
+                            <div class="pull-left" style="padding-left: 10px;">
+                                <ul class="list cl-effect-2">
+                                    <li id="liLogin" visible="false" runat="server">
+                                        <a href="#" id="myBtn">
+                                            <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
+                                    <li id="liLogout" runat="server">
+                                        <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
+                                            <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
+                                    </li>
 
-                            <li runat="server" id="liAhome">
-                                <a runat="server" id="anchorAhome">
-                                    <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
-                            </li>
-                            
-                            <li runat="server" id="limBox" visible="false">
-                                <a runat="server" id="amBox">
-                                    <asp:Label ID="lblmBox" runat="server"></asp:Label></a>
-                            </li>
-                        </ul>
+                                    <li runat="server" id="liAhome">
+                                        <a runat="server" id="anchorAhome">
+                                            <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
+                                    </li>
+
+                                    <li runat="server" id="limBox" visible="false">
+                                        <a runat="server" id="amBox">
+                                            <asp:Label ID="lblmBox" runat="server"></asp:Label></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pull-right header_top  pulls">
+                                <span class="btn btn_number">
+                                    <img src="/images/car.png" alt="car" class="" />022-2354 2354</span>
+                                <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
-                    <div class="pull-right header_top  pulls">
-                        <span class="btn btn_number">
-                            <img src="/images/car.png" alt="car" class="" />022-2354 2354</span>
-                        <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
-                    </div>
-                    <div class="clearfix"></div>
                 </div>
-                 </div> 
-               </div><!-- row closed -->
+                <!-- row closed -->
                 <!--/.nav-collapse -->
             </div>
         </nav>
@@ -399,7 +400,7 @@
     </nav>
 </div>
 
-
+</telerik:RadScriptBlock>
 
 <%--<JS:StickyFindDoctor runat="server" ID="StickyFindDoctor" />--%>
 <div class="modal fade" id="permenantRegistrationModal" role="dialog">
@@ -411,7 +412,8 @@
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
                 <p>You have not yet permanently registerd with Jaslok hospital, please go for the permanent registration to get premium benifits.</p>
-               <p> Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a></p> <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
+                <p>Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a></p>
+                <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
             </div>
         </div>
     </div>
