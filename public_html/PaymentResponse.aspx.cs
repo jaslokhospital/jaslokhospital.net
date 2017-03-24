@@ -25,8 +25,12 @@ public partial class PaymentResponse : System.Web.UI.Page
     JaslokMailer objMailer = new JaslokMailer();
     string lsEmailStatus = string.Empty;
     string lsSmsStatus = string.Empty;
-    PatIndex objPatIndex = new PatIndex();
     DataAccessEntities sessionData = new DataAccessEntities();
+
+    net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
+    localhost.PatIndex objlocalPatIndex = new localhost.PatIndex();
+    string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
+
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -173,7 +177,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                             }
                            
                             //objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                            ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "SurgeryBookingPayment");
+                           ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "SurgeryBookingPayment");
                             Session["Surgery"] = null;
                         }
                         else if (Session["HealthCheck-upComprehensive"] != null)
@@ -191,7 +195,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                             {
                                 _categoryName = "Package B (" + sessionData.Category + ")";
                             }
-                            ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, _categoryName, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "HealthCheckPayment");
+                           ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, _categoryName, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "HealthCheckPayment");
                             Session["HealthCheck-upComprehensive"] = null;
                         }
                         else if (Session["OutstandingBillPayment"] != null)
@@ -202,7 +206,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 Response.Redirect("/outstandingbillpayment");
                             }
                            // objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                            OutStandingSendEmail(sessionData.FacilityName, Convert.ToString(Session["Amount"]) + ".00 INR", "OutstandingPayment");
+                          OutStandingSendEmail(sessionData.FacilityName, Convert.ToString(Session["Amount"]) + ".00 INR", "OutstandingPayment");
                             Session["OutstandingBillPayment"] = null;
                         }
                         else if (Session["permenantRegistration"] != null)
@@ -437,14 +441,32 @@ public partial class PaymentResponse : System.Web.UI.Page
     private dynamic NapierService(string TxtnId, string MRNO, double Amount, string ReceiptDate, string Remark)
     {
         var details = (dynamic)null;
-        details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+
+        if (host.StartsWith("www."))
+        {
+            details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+        }
+        else
+        {
+            details = objlocalPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+        }
+
         return details;
     }
 
     private dynamic NapierService(string UserName, string FirstName, string LastName, string Gender, string Age, string DOB, string Add1, string Add2, string Add3, string MobNo, string Email)
     {
         var PatientDetails = (dynamic)null;
-        PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+        if (host.StartsWith("www."))
+        {
+            PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+        }
+        else
+        {
+            PatientDetails = objlocalPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+        }
+
+        
         return PatientDetails;
     }
 
