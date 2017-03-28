@@ -1974,5 +1974,19 @@ namespace BusinessDataLayer
         {
             SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_UpdateSmtpCredentials", new object[] { Password });
         }
+
+
+        public DataTable GetAll_HeaderMenu()
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetHeaderMenu", new object[] { }).Tables[0];
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
