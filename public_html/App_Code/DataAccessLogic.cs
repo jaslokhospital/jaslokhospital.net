@@ -1974,5 +1974,27 @@ namespace BusinessDataLayer
         {
             SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_UpdateSmtpCredentials", new object[] { Password });
         }
+
+        public IDataReader GetAllMenuItems()
+        {
+            try
+            {
+                return SqlHelper.ExecuteReader(Config.GetConnectionString(), "JH_GetAllMenuItems", new object[] { });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ManageMenuItem(MenuItems objItem)
+        {
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_ManageMenuItems", new object[] { objItem.Id, objItem.ParentId, objItem.Name, objItem.Url });
+        }
+
+        public void DeleteMenuItem(int PageId)
+        {
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_DeleteMenuItems", new object[] { PageId });
+        }
     }
 }
