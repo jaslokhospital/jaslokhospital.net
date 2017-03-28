@@ -1,14 +1,17 @@
-﻿using DotNetNuke.Entities.Users;
+﻿using BusinessDataLayer;
+using DotNetNuke.Entities.Users;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Web.Caching;
 
 public static class Extensions
 {
@@ -316,5 +319,14 @@ public class CommonFn
             }
         }
         return _isMobile;
+    }
+
+    public static void InsertCacheData(object CacheData, string CacheName)
+    {
+        System.Web.HttpContext.Current.Cache.Insert(CacheName, CacheData, new CacheDependency(System.Web.HttpContext.Current.Server.MapPath("~/CacheFiles/" + CacheName + ".txt")));
+    }
+    public static DataTable GetCacheData(string CacheName)
+    {
+        return (DataTable)System.Web.HttpContext.Current.Cache[CacheName];
     }
 }

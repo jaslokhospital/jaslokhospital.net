@@ -1986,6 +1986,18 @@ namespace BusinessDataLayer
                 throw ex;
             }
         }
+        public DataTable GetAll_HeaderMenu()
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_GetHeaderMenu", new object[] { }).Tables[0];
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public void ManageMenuItem(MenuItems objItem)
         {

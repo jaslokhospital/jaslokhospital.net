@@ -4,10 +4,12 @@ using DotNetNuke.Entities.Modules.Definitions;
 using DotNetNuke.Entities.Portals;
 using DotNetNuke.Entities.Tabs;
 using DotNetNuke.Security.Permissions;
+using DotNetNuke.Entities.Urls;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Web;
+using System.Web.Caching;
 
 namespace BusinessDataLayer
 {
@@ -3344,8 +3346,35 @@ namespace BusinessDataLayer
             };
 
             TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
-        }
+		}
+
+// for Header Menu
+      
+        public DataTable GetAll_HeaderMenu()
+        {
+            DataTable dt = new DataTable();
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                dt = CommonFn.GetCacheData(AppGlobal.Cache_HeaderMenu);
+                if (dt == null)
+                {
+                    dt = objDataAccessLogic.GetAll_HeaderMenu();
+                    CommonFn.InsertCacheData(dt, AppGlobal.Cache_HeaderMenu);
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dt = null;
+            }
+		}
     }
+
     public class DoctorSchedule
     {
         public string Day { get; set; }
@@ -3353,4 +3382,5 @@ namespace BusinessDataLayer
         public int TimeSlot { get; set; }
         public int SpecialtyId { get; set; }
     }
+   
 }

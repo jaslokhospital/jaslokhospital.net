@@ -86,9 +86,6 @@
                     <div class="col-sm-12 col-md-12 col-lg-12 pading45">
                         <div class="collapse navbar-collapse a" id="Div1">
                             <ul class="nav navbar-nav menu " style="padding-top: 4px;">
-
-
-
                                 <li class="dropdown main-menu-bar online-facilities" role="presentation">
 
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
@@ -167,120 +164,6 @@
     </div>
 
 
-    <%-- <div class="container">
-=======
-          <%--  <div class="container">
->>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
-
-
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 headeronly">
-                <div class="pull-left header-top-select" id="divHeaderTopSelect" runat="server">
-<<<<<<< HEAD
-                    <asp:HiddenField ID="hdnUserId" runat="server" />
-                    <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
-                 
-                        <select name="" id="selectOption1" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list1">
-                            <option value="">Online Facilities</option>
-                            <option value="PatientRegistration" runat="server" id="drpPatient">Patient Registration</option>
-                            <optgroup label="In-Patient">
-                                <option value="bed-booking">Bed Reservation/Admission</option>
-=======
-                    <asp:HiddenField ID="HiddenField1" runat="server" />
-                    <asp:HiddenField ID="HiddenField2" runat="server" />
-
-
-                  
-                    <select name="" id="selectOption1" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list1">
-                        <option value="">Online Facilities</option>
-                        <option value="PatientRegistration" runat="server" id="drpPatient">Patient Registration</option>
-                        <optgroup label="In-Patient">
-                            <option value="bed-booking">Bed Reservation/Admission</option>
-                            <option value="">View Lab Reports</option>
-                            <option value="outstandingbillpayment">View Outstanding Bill (Interim Demand Note)</option>
-                            <optgroup label="Out-Patient">
-                                <option value="consultationappointment">Consultation Appointment</option>
-                                <option value="consultationappointment/new" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;New Appointment</option>
-                                <option value="consultationappointment/follow-up" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;Follow-up Appointment</option>
-                                <option value="">Diagnostics Appointment</option>
->>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
-                                <option value="">View Lab Reports</option>
-                                <option value="outstandingbillpayment">View Outstanding Bill (Interim Demand Note)</option>
-                                <optgroup label="Out-Patient">
-                                    <option value="consultationappointment">Consultation Appointment</option>
-                                    <option value="consultationappointment/new" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;New Appointment</option>
-                                    <option value="consultationappointment/follow-up" style="margin-left: 23px;">&nbsp;&nbsp;&nbsp;Follow-up Appointment</option>
-                                    <option value="">Diagnostics Appointment</option>
-                                    <option value="">View Lab Reports</option>
-                                    <option value="health-check-up-comprehensive">Health Check-up</option>
-                                </optgroup>
-                            </optgroup>
-                        </select>
-
-                        <select name="" id="SelectPayment" onchange="selectOption1Change(this)" class="form-control js_appoint_form js-select-list2">
-                            <option value="">Online Payment</option>
-                            <option value="">Admission Deposit</option>
-                            <option value="surgery-booking">Surgery Deposit</option>
-                            <option value="outstandingbillpayment">Outstanding Bill</option>
-                            <optgroup label="Doctor Consultation">
-                                <option value="bed-booking" style="margin-left: 23px;">Bed Reservation/Admission</option>
-                                <option value="" style="margin-left: 23px;">View Lab Reports</option>
-                                <option value="outstandingbillpayment" style="margin-left: 23px;">View Outstanding Bill (Interim Demand Note)</option>
-                            </optgroup>
-                            <optgroup label="Diagnostic Services"></optgroup>
-<<<<<<< HEAD
-                        </select>
-                   
-                </div>
-                <div class="pull-left">
-                    <ul class="list cl-effect-2">
-                        <li id="liLogin" visible="false" runat="server">
-                            <a href="#" id="myBtn">
-                                <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
-                        <li id="liLogout" runat="server">
-                            <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
-                                <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
-                        </li>
-                       
-                        <li runat="server" id="liAhome">
-                            <a runat="server" id="anchorAhome">
-                                <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pull-right header_top">
-                    <button class="btn btn_number">
-                        <img src="/images/car.png" class="" />022-2354 2354</button>
-                    <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
-=======
-                    </select>
-                    
->>>>>>> 9c48161bc79bc03a9b4969c24bd48dc072c35ae3
-                </div>
-                 <div class="pull-left">
-                        <ul class="list cl-effect-2">
-                            <li id="liLogin" visible="false" runat="server">
-                                <a href="#" id="myBtn">
-                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Login</a> </li>
-                            <li id="liLogout" runat="server">
-                                <a id="anchlogout" runat="server" href="/" causesvalidation="false" onserverclick="SignIn">
-                                    <img src="/images/lock2.png" alt="Login" class="login_icon">Logout</a>
-                            </li>
-
-                            <li runat="server" id="liAhome">
-                                <a runat="server" id="anchorAhome">
-                                    <asp:Label ID="lblAhome" runat="server" Visible="false"></asp:Label></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pull-right header_top  pulls">
-                        <button class="btn btn_number">
-                            <img src="/images/car.png" class="" />1800-22-1800</button>
-                        <span class="quick_connect hideonmobile"><a href="#" id="quick_connect01" style="vertical-align: middle;">Quick Connect <i class="glyphicon glyphicon-chevron-up"></i></a></span>
-                    </div>
-
-</div>--%>
-
     <div class="line"></div>
 
     <nav id="header" class="navbar navbar-inverse mainnav container-menu">
@@ -300,104 +183,35 @@
             </div>
             <asp:HiddenField ID="hdnUserId" runat="server" />
             <asp:HiddenField ID="hdnRedirectUrl" runat="server" />
+
+            <%--Start For Dynamic Menu--%>
             <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav menu menu_fr">
-
-                    <li class="dropdown main-menu-bar" role="presentation">
-                        <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false">HOME
-                        </a>
-                    </li>
-
-                    <li class="dropdown main-menu-bar" role="presentation">
-                        <a class="dropdown-toggle" data-toggle="dropdown" id="licorporateProfile" href="/corporate-profile" role="button" aria-haspopup="true" aria-expanded="false">CORPORATE PROFILE<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/corporate-profile/from-the-chairmans-desk">From The Chairman's Desk</a></li>
-                            <li><a href="/corporate-profile/vision-and-mission">Vision And Mission</a></li>
-                            <li><a href="/corporate-profile/trustees">Trustees</a></li>
-                            <li><a href="/corporate-profile/management-team">Management</a></li>
-                            <li><a href="/corporate-profile/hospital-facilities">Hospital Facilities</a></li>
-                            <li><a href="/corporate-profile/certifications">Certifications</a></li>
-                            <li><a href="/corporate-profile/jaslok-news">Jaslok in News</a></li>
-                            <%--  <li><a href="/jasloktimes">Jaslok Times</a></li>--%>
-                            <li><a href="/corporate-profile/scope-of-services">Scope Of Services</a></li>
-                            <%--  <li><a href="/testimonial">Testimonial</a></li>--%>
-                            <li><a href="/corporate-profile/frequently-asked-questions">Frequently Asked Questions</a></li>
-                            <li><a href="/corporate-profile/quality-corner">Quality Corner</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a class="dropdown-toggle" id="lispecialties" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">SPECIALTIES <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/specialties">Specialties</a></li>
-                            <li><a href="/specialties/speciality-clinic">Speciality Clinic</a></li>
-                            <li><a href="/health-check-up">Health Check up</a></li>
-                            <li><a href="/specialitywise-opd">OPD Scheduler</a></li>
-                            <li><a href="/doctorwise-opd">Our Specialists</a></li>
-                        </ul>
-
-                        <%-- <ul class="dropdown-menu dropdown-second-menu">
-                                        <li><a href="/health-check-up">Health Check up</a></li>
-                                        <li><a href="/specialties">Facilities & Services</a></li>
-                                        <li><a href="/specialties">Doctors in attendance</a></li>
-                                        <li><a href="/specialitywise-opd">Speciality OPD</a></li>
-                                        <li><a href="/doctorwise-opd">Doctor OPD</a></li>
-                                        <li><a href="/speciality-clinic-opd">Speciality Clinic OPD</a></li>
-                                    </ul>--%>
-
-                    </li>
-
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a class="dropdown-toggle" id="lipatients" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PATIENTS CARE & VISITORS <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/patients/patient-facilities">Patient Facilities</a></li>
-                            <li><a href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></li>
-                            <li><a href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                            <li><a href="/patients/feedback">Feedback Form</a></li>
-                            <li><a href="/patients/complaint">Complaint Form</a></li>
-                            <li><a href="/patients/quick-enquiry">Quick Inquiry</a></li>
-                            <li><a href="/patients/estimate-request">Estimate request</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a id="liinternational" class="dropdown-toggle" data-toggle="dropdown" href="/international-patients" role="button" aria-haspopup="true" aria-expanded="false">INTERNATIONAL PATIENTS <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/international-patients">Hospital Facilities for International patients</a></li>
-                            <%--<li><a href="/international-patients/hospital-facilities">Hospital Facilities</a></li>
-                                        <li><a href="/international-patients/facilities-for-international-patients">Hospital Facilities for International patients</a></li>--%>
-                            <li><a href="/international-patients/doctors-availability">Doctors Availability</a></li>
-                            <li><a href="/international-patients/virtual-tour">Virtual Tour</a></li>
-                            <li><a href="/international-patients/feedback">Feedback</a></li>
-                            <li><a href="/international-patients/testimonial">Testimonials</a></li>
-                            <li><a href="/international-patients/estimate-request">Estimate request</a></li>
-                        </ul>
-                    </li>
-
-                    <li role="presentation" class="dropdown main-menu-bar">
-                        <a id="lieducational" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EDUCATION & RESEARCH <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-second-menu">
-                            <li><a href="/education-and-research/dnb-program">DNB Program</a></li>
-                            <li><a href="/education-and-research/fellowship">Fellowship</a></li>
-                            <li><a href="/education-and-research/internship">Internship</a></li>
-                            <li><a href="/education-and-research/advance-courses">Advance Courses</a></li>
-                            <li><a href="/education-and-research/nursing-program">Nursing Program</a></li>
-                            <li><a href="/education-and-research/health-tips">Health Tips</a></li>
-                            <li><a href="/education-and-research/research-paper">Research Paper</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <asp:Repeater ID="rptMenu" runat="server" OnItemDataBound="rptMenu_ItemDataBound">
+                    <HeaderTemplate>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="nav navbar-nav menu menu_fr" style="padding-left:0">
+				<li class="dropdown main-menu-bar" role="presentation">
+                            <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
+                        </li>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <li class="dropdown main-menu-bar" role="presentation">
+                            <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false"><%#Eval("Name") %>
+<span class="caret"></span></a>
+                            <asp:Literal ID="ltrlSubMenu" runat="server"></asp:Literal>
+                        </li>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        </ul></div>
+                    </FooterTemplate>
+                </asp:Repeater>
             </div>
+            <%--End of Dynamic Menu--%>
             <!--/.nav-collapse -->
         </div>
 
-
-
-
     </nav>
+
 </div>
 
 </telerik:RadScriptBlock>

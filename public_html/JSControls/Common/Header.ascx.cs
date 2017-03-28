@@ -21,6 +21,8 @@ using System.Configuration;
 using DotNetNuke.Entities.Host;
 using System.Xml;
 using System.Xml.Linq;
+using System.Text;
+
 public partial class JSControls_Home_Header : System.Web.UI.UserControl
 {
     PortalSecurity secure = new PortalSecurity();
@@ -32,7 +34,11 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     DataTable ds = new DataTable();
 
     UserLoginStatus loginStatus = new UserLoginStatus();
-
+    DataTable AllMenus = new DataTable();
+    /*net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
+    localhost.PatIndex objlocalPatIndex = new localhost.PatIndex();
+    string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
+	*/
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -48,6 +54,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                         Session["IsVisitor"] = null;
                     }
                 }
+                LoadMenus();
             }
 
             this.Page.Form.DefaultButton = LoginBtn.UniqueID;
@@ -625,8 +632,6 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
     }
 
-
-
     protected void btnForgotPasword_Click(object sender, EventArgs e)
     {
         JaslokMailer objMailer = new JaslokMailer();
@@ -1026,4 +1031,49 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         return _node;
     }
 
+
+    private void LoadMenus()
+    {
+      AllMenus = objBusinessLogic.GetAll_HeaderMenu();
+
+      DataTable ParentMenu = AllMenus.AsEnumerable()
+                     .Where(r => r.Field<int>("PARENTID") == 0)
+                     .CopyToDataTable();
+
+      rptMenu.DataSource = ParentMenu;
+      rptMenu.DataBind();
+    }
+   
+    protected void rptMenu_ItemDataBound(object sender, RepeaterItemEventArgs e)
+    {
+        try
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                if (AllMenus != null)
+                {
+                    DataRowView drv = e.Item.DataItem as DataRowView;
+                    string ID = drv["ID"].ToString();
+                    DataRow[] rows = AllMenus.Select("PARENTID=" + ID, "Name");
+                    if (rows.Length > 0)
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append(" <ul class=dropdown-menu dropdown-second-menu>");
+                        foreach (var item in rows)
+                        {
+                            sb.Append("<li><a href='" + item["Url"]+ "'>" +
+                            item["Name"] + "</a></li>");
+                        }
+                        sb.Append("</ul>");
+                        (e.Item.FindControl("ltrlSubMenu") as Literal).Text = sb.ToString();
+                    }
+                }
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
 }
