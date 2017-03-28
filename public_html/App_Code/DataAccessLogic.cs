@@ -1989,7 +1989,7 @@ namespace BusinessDataLayer
 
         public void ManageMenuItem(MenuItems objItem)
         {
-            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_ManageMenuItems", new object[] { objItem.Id, objItem.ParentId, objItem.Name, objItem.Url });
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_ManageMenuItems", new object[] { objItem.Id, objItem.ParentId, objItem.Name, objItem.Url, objItem.Published });
         }
 
         public void DeleteMenuItem(int PageId)

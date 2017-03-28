@@ -69,6 +69,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
             objMenuItem.ParentId = Convert.ToInt32(drpParentItem.SelectedValue);
             objMenuItem.Name = txtPageName.Text.Trim();
             objMenuItem.Url = txtPageUrl.Text.Trim();
+            objMenuItem.Published = chkPublished.Checked;
             if (ItemId > 0)
             {
                 if (tabId > 0)
@@ -145,6 +146,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
             drpParentItem.SelectedValue = objItem.ParentId.ToString();
             txtPageName.Text = objItem.Name;
             txtPageUrl.Text = objItem.Url;
+            chkPublished.Checked = objItem.Published;
             btnAdd.Text = "Update Page";
         }
     }
@@ -157,6 +159,8 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
         drpParentItem.DataValueField = "Id";
         drpParentItem.DataTextField = "Name";
         drpParentItem.DataBind();
+
+        drpParentItem.SelectedValue = ddlParentMenuItem.SelectedValue;
     }
 
     public void ClearContent()
@@ -167,7 +171,6 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
         txtPageUrl.Text = string.Empty;
         hdnPageId.Value = string.Empty;
         hdnPageId.Value = string.Empty;
-        BindMenuItem();
         BindPage();
     }
 }

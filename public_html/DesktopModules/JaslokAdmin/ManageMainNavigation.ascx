@@ -1,4 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ManageMainNavigation.ascx.cs" Inherits="DesktopModules_JaslokAdmin_ManageMainNavigation" %>
+<style>
+    .small {
+        font-size: 11px;
+        color: red;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+</style>
 <h2>Manage Menu Items</h2>
 <div class="border-3"></div>
 <div class="border-3"></div>
@@ -23,6 +31,7 @@
                                 <tr class="normaltableheadercelluser">
                                     <td>Page Name</td>
                                     <td>Path</td>
+                                    <td>Published</td>
                                     <td>Action</td>
                                 </tr>
                             </HeaderTemplate>
@@ -33,6 +42,9 @@
                                     </td>
                                     <td>
                                         <%# Eval("Url") %>
+                                    </td>
+                                    <td>
+                                        <asp:CheckBox ID="chkPublished" Enabled="false" runat="server" Checked='<%# Eval("Published") %>' />
                                     </td>
                                     <td>
                                         <asp:ImageButton ID="imgEdit" ToolTip="Edit" runat="server" CommandArgument='<%# Eval("Id") %>' ImageUrl="/images/edit.gif" CommandName="editpage" />&nbsp;
@@ -68,6 +80,8 @@
             </div>
             <div class="col-md-10">
                 <asp:TextBox ID="txtPageName" Style="width: 55%;" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter Page name" ControlToValidate="txtPageName"
+                    Display="Dynamic" ValidationGroup="JHCat" CssClass="small"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="row">
@@ -76,12 +90,22 @@
             </div>
             <div class="col-md-10">
                 <i>https://www.jaslokhospital.net</i>
-                <asp:TextBox ID="txtPageUrl" Text="/" Style="width: 35%; display: inline;" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtPageUrl" Style="width: 35%; display: inline;" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please set page url" ControlToValidate="txtPageUrl"
+                    Display="Dynamic" ValidationGroup="JHCat" CssClass="small"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2">
-                <asp:Button ID="btnAdd" runat="server" Text="Add Page" CssClass="btn btn-info btn-sm" OnClick="btnAdd_Click" />&nbsp;
+                <label>Published:</label>
+            </div>
+            <div class="col-md-10">
+                <asp:CheckBox ID="chkPublished" runat="server"/> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <asp:Button ID="btnAdd" ValidationGroup="JHCat" runat="server" Text="Add Page" CssClass="btn btn-info btn-sm" OnClick="btnAdd_Click" />&nbsp;
                <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-info btn-sm" OnClick="btnCancel_Click" />
             </div>
         </div>
