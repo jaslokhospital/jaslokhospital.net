@@ -91,7 +91,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
 
             }
             Cache.Remove("MenuItemCache");
-
+            ddlParentMenuItem.SelectedValue = drpParentItem.SelectedValue;
             ClearContent();
         }
         catch (Exception ex)
