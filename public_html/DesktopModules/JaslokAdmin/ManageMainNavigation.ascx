@@ -114,7 +114,7 @@
 <script type="text/javascript">
     $("#<%= txtPageName.ClientID %>").keyup(function (event) {
         var urlContent = $("#<%= txtPageName.ClientID %>").val().toLowerCase();
-        urlContent = urlContent.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
+        urlContent = urlContent.replace(/[^a-z0-9\s-]/gi, '').replace(/[_\s]/g, '-');
         if ($("#<%= hdnPageId.ClientID %>").val() == "") {
             $("#<%= txtPageUrl.ClientID %>").val("/" + urlContent);
         }
@@ -123,4 +123,10 @@
             event.preventDefault();
         }
     });*/
+
+    $("#<%= txtPageUrl.ClientID %>").keyup(function (event) {
+        var urlContent = $("#<%= txtPageUrl.ClientID %>").val().toLowerCase();
+        urlContent = urlContent.replace(/[^a-z0-9\s-/]/gi, '').replace(/[_\s]/g, '-');
+        $("#<%= txtPageUrl.ClientID %>").val(urlContent);
+    });
 </script>

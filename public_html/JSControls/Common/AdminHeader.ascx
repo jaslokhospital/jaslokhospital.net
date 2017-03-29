@@ -65,6 +65,7 @@
                                         <li><a href="ManageBookAppointment.aspx">Manage Booked Appointments</a></li>
                                         <li><a href="ManageJaslokTimes.aspx">Manage Jaslok Times</a></li>
                                         <li><a href="/jaslokadmin/manageformsemail">Manage Forms Email</a></li>
+                                        <li><a href="/jaslokadmin/managemenuitems">Manage Navigation Menu</a></li>
                                         <li><a href="/JaslokAdmin/ManageHeaderTop">Manage Header Top Content</a></li>
                                       <%--  <li><a href="WhatsNew.aspx">Manage What's New</a></li>--%>
                                     </ul>
