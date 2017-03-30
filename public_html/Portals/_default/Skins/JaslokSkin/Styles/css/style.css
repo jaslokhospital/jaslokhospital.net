@@ -2195,6 +2195,10 @@ hr {
     padding: 0;
     margin-bottom: 20px;
 }
+.right_part > .media > .media-body.right_section_media {
+    width: 82%;
+    padding: 0;
+}
 .opddoctors { margin-top: 10px }
 .right_part .media-body .opddoctors .btn-orange {
     padding: 4px;
