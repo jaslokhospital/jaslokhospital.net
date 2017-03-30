@@ -68,8 +68,8 @@
                 <div class="border-3"></div>
                 <div id="contentpane" class="inner-content" runat="server">
                 </div>
-                
                 <asp:Panel ID="divcontentpane" runat="server"></asp:Panel>
+                <div id="divContent" runat="server" visible="false"></div>
                
 
             </div>
