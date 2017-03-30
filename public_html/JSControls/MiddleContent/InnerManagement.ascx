@@ -26,33 +26,4 @@
     </ItemTemplate>
 </asp:Repeater>
 
-<img src="../../Content/UsersGallery/M-1.jpg" alt="Management Team" class="img-responsive" style="margin-bottom:1%;" />
-<div class="divManagementPics">
-<p>
-    Front row : Left to Right – Dr. Satyadeo Malik (Director Clinical Operation), Regina Raj (Head Quality), Dr. Tarang Gianchandani (CEO), Shatrujeet Rai (COO), Veepasha Kulkarni (Head ER), Sabina Sawliwala (Head Stores and Procurement).
-</p>
-<p>
-    Back row : Left to Right – George Alex (CMO), Viloo Williams (CIO), Jitendra Haryan (CFO)
-</p></div>
-<div  class="dicMobManagementPics">
-   Front row – Left to Right:
-    <ul style="list-style:disc; margin-left:14px;">
-       
-        <li>Dr. Satyadeo Malik (Director Clinical Operation)</li>
-        <li>Regina Raj (Head Quality)</li>
-        <li>Dr. Tarang Gianchandani</li>
-        <li>Shatrujeet Rai (COO)</li>
-        <li>Veepasha Kulkarni (Head ER)</li>
-        <li>Sabina Sawliwala (Head Stores and Procurement).</li>
-    </ul>
-    Back row – Left to Right:
-    <ul style="list-style:disc; margin-left:14px;">      
-        <li>George Alex (CMO)</li>
-        <li>Viloo Williams (CIO)</li>
-        <li>Jitendra Haryan (CFO)</li>
-      
-    </ul>
 
-
-
-</div>
