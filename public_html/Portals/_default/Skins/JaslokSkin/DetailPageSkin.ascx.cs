@@ -317,11 +317,19 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
 
             if (ds.Tables[1].Rows.Count > 0)
             {
-                contentpane.InnerHtml = Convert.ToString(ds.Tables[1].Rows[0]["Content"]);
+                if (id == 123)
+                {
+                    divContent.Visible = true;
+                    divContent.InnerHtml = Convert.ToString(ds.Tables[1].Rows[0]["Content"]);
+                }
+                else
+                {
+                    contentpane.InnerHtml = Convert.ToString(ds.Tables[1].Rows[0]["Content"]);
 
-                p.Title = Convert.ToString(ds.Tables[1].Rows[0]["PageTitle"]);
-                p.KeyWords = Convert.ToString(ds.Tables[1].Rows[0]["PageKeywords"]);
-                p.Description = Convert.ToString(ds.Tables[1].Rows[0]["PageDescription"]);
+                    p.Title = Convert.ToString(ds.Tables[1].Rows[0]["PageTitle"]);
+                    p.KeyWords = Convert.ToString(ds.Tables[1].Rows[0]["PageKeywords"]);
+                    p.Description = Convert.ToString(ds.Tables[1].Rows[0]["PageDescription"]);
+                }
             }
             else
             {
