@@ -7,7 +7,7 @@
     <div class="col-md-12">
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </div>
-    <asp:GridView ID="gvContent" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" ShowFooter="true" Style="margin-left: 50px" Width="1049px" OnRowCancelingEdit="gvContent_RowCancelingEdit"
+    <asp:GridView ID="gvContent" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" Style="margin-left: 50px" Width="1049px" OnRowCancelingEdit="gvContent_RowCancelingEdit"
         OnRowDeleting="gvContent_RowDeleting" OnRowEditing="gvContent_RowEditing" OnRowUpdating="gvContent_RowUpdating" OnPageIndexChanging="gvContent_PageIndexChanging">
         <Columns>
             <asp:TemplateField HeaderText="Label" HeaderStyle-Width="30%" HeaderStyle-CssClass="headerstyle" ItemStyle-CssClass="Itemstyle">

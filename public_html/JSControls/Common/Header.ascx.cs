@@ -298,9 +298,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                     {
 
                         lblLoginError.CssClass = "errorText";
-
                         lblLoginError.Visible = true;
-
                         lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
 
                         return;
@@ -351,9 +349,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                     {
 
                         lblLoginError.CssClass = "errorText";
-
                         lblLoginError.Visible = true;
-
                         lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
 
                         return;
@@ -438,9 +434,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                         {
 
                             lblLoginError.CssClass = "errorText";
-
                             lblLoginError.Visible = true;
-
                             lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
 
                             return;
@@ -451,11 +445,13 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                         {
                             if (Host.AutoAccountUnlockDuration > 0)
                             {
+                                lblLoginError.CssClass = "errorText";
                                 lblLoginError.Visible = true;
                                 lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Password Reminder option before contacting an Administrator.";
                             }
                             else
                             {
+                                lblLoginError.CssClass = "errorText";
                                 lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please contact your administrator.";
                             }
                         }
@@ -524,6 +520,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
                         if (Host.AutoAccountUnlockDuration > 0)
                         {
+                            lblLoginError.CssClass = "errorText";
                             lblLoginError.Visible = true;
                             lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Password Reminder option before contacting an Administrator.";
                         }
