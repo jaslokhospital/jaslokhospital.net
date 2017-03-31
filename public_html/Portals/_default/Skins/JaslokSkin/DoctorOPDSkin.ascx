@@ -51,13 +51,18 @@
                 <div class="border-3"></div>
                 <asp:Repeater ID="rptDoctorMainOpd" OnItemDataBound="rptDoctorMainOpd_ItemDataBound" runat="server">
                     <ItemTemplate>
-                        <div class="media doctorcontent leftmenuweb_scroll1" style="display: none;" id='<%# Eval("DoctorId")%>'>
+                        <div class="media doctorcontent" style="display: none;" id='<%# Eval("DoctorId")%>'>
                             <asp:HiddenField ID="hdnDoctorOPDId" runat="server" Value='<%# Eval("DoctorId") %>' />
                             <asp:Repeater ID="rptInnerDoctor" runat="server">
                                 <ItemTemplate>
-                                    <asp:HiddenField ID="hdnDoctorId" runat="server" Value='<%# Eval("DoctorId") %>' />
-                                   
-                                    <div class="media-body col-sm-12 col-xs-12">
+                                    <div class="media-left media-top col-sm-3 col-xs-12 right0" >
+
+                                    <a data-toggle="collapse" data-parent="#accordion" href="" aria-expanded="true">
+                                        <asp:Image style="width: 150px !important;" runat="server" class="media-object media-border img-responsive" ID="imgDoctorSDSkin" AlternateText=' <%#Eval("Title")%>' ImageUrl='<%#(string.IsNullOrEmpty(Convert.ToString(Eval("ImageUrl")))? CommonFn.DefaultImagePath : Eval("ImageUrl")) %>' />
+                                    </a>
+                                </div>
+                                    <asp:HiddenField ID="hdnDoctorId" runat="server" Value='<%# Eval("DoctorId") %>' />                                   
+                                    <div class="media-body col-sm-9 col-xs-12 leftmenuweb_scroll1 right_section_media">
                                         <footer class="panel-footer">
                                             <i class="fa fa-user-md"></i><span style="padding-left: 3%;" class="s-bold"><%# Eval("Name") %></span><span class="s-regular"></span>
                                         </footer>
