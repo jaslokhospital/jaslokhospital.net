@@ -103,6 +103,7 @@ public partial class DesktopModules_JaslokAdmin_ManagePage : PortalModuleBase
         txtPageTitle.Text = "";
         txtPageKeyword.Text = "";
         redPageContent.Content = "";
+        txtthumbnail.Text = "";
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
