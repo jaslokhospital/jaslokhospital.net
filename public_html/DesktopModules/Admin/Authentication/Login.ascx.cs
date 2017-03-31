@@ -1181,6 +1181,7 @@ namespace DotNetNuke.Modules.Admin.Authentication
                     if (Host.AutoAccountUnlockDuration > 0)
                     {
                         AddLocalizedModuleMessage(string.Format(Localization.GetString("UserLockedOut", LocalResourceFile), Host.AutoAccountUnlockDuration), ModuleMessage.ModuleMessageType.RedError, true);
+                        lblErrorMessage.CssClass = "errorText";
                         lblErrorMessage.Visible = true;
                         lblErrorMessage.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Password Reminder option before contacting an Administrator.";
                     }
@@ -1235,6 +1236,7 @@ namespace DotNetNuke.Modules.Admin.Authentication
 						if (string.IsNullOrEmpty(e.Message))
 						{
 							AddModuleMessage("LoginFailed", ModuleMessage.ModuleMessageType.RedError, true);
+                            lblErrorMessage.CssClass = "errorText";
                             lblErrorMessage.Visible = true;
                             lblErrorMessage.Text = "User Name Or Password are Invalid!!!";
 						}
