@@ -34,5 +34,9 @@ public partial class Portals__default_Skins_JaslokSkin_InnerPagesSkin : DotNetNu
         {
             contentpane.Controls.Add(LoadControl("~/DesktopModules/JaslokAdmin/ManageResearchPapers.ascx"));
         }
+        else if (currentUrl.Contains("/JaslokAdmin/ManageHeaderTop"))
+        {
+            contentpane.Controls.Add(LoadControl("~/DesktopModules/JaslokAdmin/ManageHeaderTop.ascx"));
+        }
     }
 }
