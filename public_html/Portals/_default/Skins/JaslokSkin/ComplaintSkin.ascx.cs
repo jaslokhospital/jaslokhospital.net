@@ -23,10 +23,11 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
             //FillCapctha();           
             BindPageDetail(131);
             //h3header.InnerText = "Complaint Form";
-            if (Request.QueryString["name"] != null && Request.QueryString["email"] != null)
+            if (Request.QueryString["name"] != null && Request.QueryString["email"] != null && Request.QueryString["phone"] != null)
             {
                 txtName.Text = Convert.ToString(Request.QueryString["name"]);
-                txtEmail.Text = Convert.ToString(Request.QueryString["email"]); 
+                txtEmail.Text = Convert.ToString(Request.QueryString["email"]);
+                txtPhoneNo.Text = Convert.ToString(Request.QueryString["phone"]);
             }
         }
     }
@@ -95,6 +96,7 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
     {
         txtName.Text = String.Empty;
         txtEmail.Text = String.Empty;
+        txtPhoneNo.Text = String.Empty;
         txtComplaint.Text = String.Empty;
         // txtCaptcha.Text = String.Empty;
     }
@@ -111,8 +113,8 @@ public partial class Portals__default_Skins_JaslokSkin_ComplaintSkin : DotNetNuk
             // {
             // objDAEntities.EnquiryTypeId = AppGlobal.FeedbackId;
             objDAEntities.Name = txtName.Text.Trim();
-
             objDAEntities.Email = txtEmail.Text;
+            objDAEntities.PhoneNo = txtPhoneNo.Text;
             objDAEntities.Description = txtComplaint.Text;
             objBusinessLogic.SaveComplaint(objDAEntities);
 

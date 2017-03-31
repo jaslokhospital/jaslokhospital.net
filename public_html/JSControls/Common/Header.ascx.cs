@@ -18,6 +18,9 @@ using System.IO;
 using net.jaslokhospital.jaslokwebserver;
 using System.Data.SqlClient;
 using System.Configuration;
+using DotNetNuke.Entities.Host;
+using System.Xml;
+using System.Xml.Linq;
 public partial class JSControls_Home_Header : System.Web.UI.UserControl
 {
     PortalSecurity secure = new PortalSecurity();
@@ -41,7 +44,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                     UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
                     if (!string.IsNullOrEmpty(objuser.Username))
                     {
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){PermanentRegReminderBox();});", true);	
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){PermanentRegReminderBox();});", true);
                         Session["IsVisitor"] = null;
                     }
                 }
@@ -50,14 +53,14 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             this.Page.Form.DefaultButton = LoginBtn.UniqueID;
             UserInfo user = UserController.Instance.GetCurrentUserInfo();
             hdnUserId.Value = user.UserID.ToString();
-            
+
             if (user.Username == "host")
             {
                 lblmBox.Text = "Reset MailBox";
                 amBox.HRef = "/reset-mailbox";
                 limBox.Visible = true;
             }
-            
+
             if (user.UserID == -1)
             {
                 //anchlogin.Visible = true;
@@ -444,10 +447,25 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
                         }
 
-                        lblLoginError.CssClass = "errorText";
-                        lblLoginError.Visible = true;
-                        lblLoginError.Text = "Please enter correct password!";
-                        return;
+                        else if (loginStatus == UserLoginStatus.LOGIN_USERLOCKEDOUT)
+                        {
+                            if (Host.AutoAccountUnlockDuration > 0)
+                            {
+                                lblLoginError.Visible = true;
+                                lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Password Reminder option before contacting an Administrator.";
+                            }
+                            else
+                            {
+                                lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please contact your administrator.";
+                            }
+                        }
+                        else
+                        {
+                            lblLoginError.CssClass = "errorText";
+                            lblLoginError.Visible = true;
+                            lblLoginError.Text = "Please enter correct password!";
+                            return;
+                        }
 
 
                     }
@@ -495,11 +513,20 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                                 Response.Redirect("/");
                             }
                             else
-                            Response.Redirect("/" + hdnRedirectUrl.Value);
+                                Response.Redirect("/" + hdnRedirectUrl.Value);
                         }
                         else
                             Response.Redirect("/redirect");
 
+                    }
+                    else if (loginStatus == UserLoginStatus.LOGIN_USERLOCKEDOUT)
+                    {
+
+                        if (Host.AutoAccountUnlockDuration > 0)
+                        {
+                            lblLoginError.Visible = true;
+                            lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Password Reminder option before contacting an Administrator.";
+                        }
                     }
                     else
                     {
@@ -507,6 +534,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                         lblLoginError.Visible = true;
                         lblLoginError.Text = "Please enter correct password!";
                         return;
+
                     }
 
                     //UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
@@ -650,7 +678,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         {
             PatIndex objPatIndex = new PatIndex();
             var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
-            
+
             if (PatientDetails.WEBPWD != null)
             {
                 if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
@@ -770,7 +798,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
 
 
-               
+
 
 
 
@@ -936,7 +964,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     }
 
     #endregion
-    
+
     public void IsMNumberExist()
     {
         UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
@@ -955,4 +983,47 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             hdnMrNumberexist.Value = "Exist";
         }
     }
+
+    public string GetKey(string Alias)
+    {
+        string _node = string.Empty;
+        try
+        {
+            XmlDocument doc = new XmlDocument();
+            string xmlpath = Server.MapPath("~/EmailTemlates/ManageHeaderTop.xml");
+            doc.Load(xmlpath);
+            XmlNode node = doc.SelectSingleNode("/Data/add[@alias='" + Alias + "']");
+            if (node != null)
+                _node = node.Attributes["key"].Value.ToString();
+            else
+                _node = string.Empty;
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.ToString());
+        }
+        return _node;
+    }
+
+    public string GetValue(string Alias)
+    {
+        string _node = string.Empty;
+        try
+        {
+            XmlDocument doc = new XmlDocument();
+            string xmlpath = Server.MapPath("~/EmailTemlates/ManageHeaderTop.xml");
+            doc.Load(xmlpath);
+            XmlNode node = doc.SelectSingleNode("/Data/add[@alias='" + Alias + "']");
+            if (node != null)
+                _node = node.Attributes["value"].Value.ToString();
+            else
+                _node = string.Empty;
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.ToString());
+        }
+        return _node;
+    }
+
 }
