@@ -42,6 +42,7 @@ DOWNLOADCOPYRETURN*/
         margin-right: 1%;
         width: 17%;
     }
+    .right_part > .media > .media-left.right0 {margin-right: 0%;width: 18%;}
     .right_part > .media > .media-body { width: 81% }
     .line4 { width: 80% }
     .left_form h3 { font-size: 20px }
@@ -745,6 +746,7 @@ DOWNLOADCOPYRETURN*/
     .right_part > .media > .media-left { width: 100% }
     .right_part > .media > .media-left img { margin: 0 auto }
     .right_part > .media > .media-body { width: 100% }
+    .right_part > .media > .media-body.right_section_media {width: 100%;}
     .right_part > #dnn_divcontentpaneSpecialty > .media > .media-left { width: 100% }
     .right_part > #dnn_divcontentpaneSpecialty > .media > .media-left img { margin: 0 auto }
     .right_part > #dnn_divcontentpaneSpecialty > .media > .media-body { width: 100% }

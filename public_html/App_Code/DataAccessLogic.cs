@@ -1542,7 +1542,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                SqlHelper.ExecuteScalar(Config.GetConnectionString(), "jh_Forms_SaveComplaint", new object[] { Slist.Name, Slist.Email, Slist.Description });
+                SqlHelper.ExecuteScalar(Config.GetConnectionString(), "jh_Forms_SaveComplaint", new object[] { Slist.Name, Slist.Email, Slist.Description,Slist.PhoneNo });
             }
             catch (Exception ex)
             {
@@ -1973,6 +1973,28 @@ namespace BusinessDataLayer
         public void UpdateSmtpCredential(string Password)
         {
             SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_UpdateSmtpCredentials", new object[] { Password });
+        }
+
+        public IDataReader GetAllMenuItems()
+        {
+            try
+            {
+                return SqlHelper.ExecuteReader(Config.GetConnectionString(), "JH_GetAllMenuItems", new object[] { });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ManageMenuItem(MenuItems objItem)
+        {
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_ManageMenuItems", new object[] { objItem.Id, objItem.ParentId, objItem.Name, objItem.Url, objItem.Published });
+        }
+
+        public void DeleteMenuItem(int PageId)
+        {
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_DeleteMenuItems", new object[] { PageId });
         }
     }
 }

@@ -1,0 +1,7 @@
+  <Data>
+    <add key="EMAIL ID" value="online@jaslokhospital.net" alias="Em" />
+    <add key="AMBULANCE NUMBER" value="022 6657 3010" alias="AmbNo" />
+    <add key="EMERGENCY NUMBER" value="022-2354 23540" alias="EmNo"/>
+    <add key="BLOOD BANK (24x7)" value="+91-022- 66573434" alias="BB"/>
+    <add key="FEEDBACK" value="" alias="FB"/>
+  </Data>

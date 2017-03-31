@@ -1,5 +1,13 @@
-﻿using System;
+﻿using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Modules.Definitions;
+using DotNetNuke.Entities.Portals;
+using DotNetNuke.Entities.Tabs;
+using DotNetNuke.Security.Permissions;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Web;
 
 namespace BusinessDataLayer
 {
@@ -3176,6 +3184,166 @@ namespace BusinessDataLayer
         {
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             objDataAccessLogic.UpdateSmtpCredential(fnPassword);
+        }
+
+        public List<MenuItems> GetAllMenuItems()
+        {
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            List<MenuItems> lstSections = new List<MenuItems>();
+            //DataCache.RemoveCache("Section_Categories");
+            var items = HttpContext.Current.Cache["MenuItemCache"];
+
+            if (items == null)
+            {
+                lstSections = CBO.FillCollection<MenuItems>(objDataAccessLogic.GetAllMenuItems());
+                HttpContext.Current.Cache.Insert("MenuItemCache", lstSections);
+            }
+            else
+            {
+                lstSections = (List<MenuItems>)items;
+            }
+            return lstSections;
+        }
+
+        public void ManageMenuItem(MenuItems objItems)
+        {
+            DataAccessLogic objDataAccess = new DataAccessLogic();
+            objDataAccess.ManageMenuItem(objItems);
+        }
+
+        public void DeleteMenuItem(int PageId)
+        {
+            DataAccessLogic objDataAccess = new DataAccessLogic();
+            objDataAccess.DeleteMenuItem(PageId);
+        }
+
+        public void DeleteTab(int TabId)
+        {
+            int portalId = 0;
+            TabController tabController = new TabController();
+            tabController.DeleteTab(TabId, portalId);
+        }
+
+        public void UpdateTabs(int TabId, string stTabName, string PageUrl)
+        {
+            int portalId = 0;
+            TabController tabController = new TabController();
+            TabInfo tab = new TabInfo();
+            tab = tabController.GetTab(TabId, portalId);
+            string pageSkin = string.Empty;
+            pageSkin = tab.SkinSrc;
+
+            tab = new TabInfo();
+            tab.PortalID = portalId;
+            tab.TabID = TabId;
+            tab.TabName = stTabName;
+            tab.Title = stTabName;
+            tab.Description = stTabName;
+            tab.KeyWords = stTabName;
+            //works for include in menu option. if true, will be shown in menus, else will not be shown, we have to redirect internally
+            tab.IsVisible = false;
+            tab.DisableLink = false;
+            tab.IsDeleted = false;
+            tab.Url = "";
+            tab.IsSuperTab = false;//if true, it has no parents, else false
+            tab.SkinSrc = pageSkin;//provide skin src, else will take default skin
+            tabController.UpdateTab(tab);
+
+            TabUrlInfo tabUrl = new TabUrlInfo()
+            {
+                TabId = TabId,
+                SeqNum = 0,
+                PortalAliasId = -1,
+                PortalAliasUsage = PortalAliasUsageType.Default,
+                QueryString = String.Empty,
+                Url = PageUrl,
+                HttpStatus = "200",
+                CultureCode = String.Empty,
+                IsSystem = true
+            };
+
+            TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
+        }
+
+        public int GetTabId(string stTabName)
+        {
+            TabController tabController = new TabController();
+            TabInfo tab = new TabInfo();
+            tab = tabController.GetTabByName(stTabName, 0);
+            if (tab != null)
+                return tab.TabID;
+            else
+                return 0;
+        }
+
+        public void CreateTabWithModule(string stTabName, string PageUrl)
+        {
+            //Create Tab
+            PortalSettings portalSettings = new PortalSettings();
+            int portalId = 0;
+
+            TabController tabController = new TabController();
+            //TabInfo parentTab = tabController.GetTabByName("Questionnaires", portalId);
+
+            TabInfo tab = new TabInfo();
+            tab.PortalID = portalId;
+            tab.TabName = stTabName;
+            tab.Title = stTabName;
+            tab.Description = stTabName;
+            tab.KeyWords = stTabName;
+            //works for include in menu option. if true, will be shown in menus, else will not be shown, we have to redirect internally
+            tab.IsVisible = false;
+            tab.DisableLink = false;
+            //if this tab has any parents provide parent tab id, so that it will be shown in parent tab menus sub menu list, else is NULL         //and will be in main menu list
+            //tab.ParentId = parentTab.TabID;
+            tab.IsDeleted = false;
+            tab.Url = "";
+            tab.IsSuperTab = false;//if true, it has no parents, else false
+            tab.SkinSrc = "[G]Skins/JaslokSkin/CommonSkin.ascx";//provide skin src, else will take default skin
+            int tabId = tabController.AddTab(tab, true);//true to load defalut modules
+
+            //Set Tab Permission
+            ModuleDefinitionInfo moduleDefinitionInfo = new ModuleDefinitionInfo();
+            TabPermissionController objTPC = new TabPermissionController();
+
+            TabPermissionInfo tpi = new TabPermissionInfo();
+            tpi.TabID = tabId;
+            tpi.PermissionID = 3;//for view
+            tpi.PermissionKey = "VIEW";
+            tpi.PermissionName = "View Tab";
+            tpi.AllowAccess = true;
+            tpi.RoleID = -1; //Role ID of administrator         
+            objTPC.AddTabPermission(tpi);
+
+            ModuleInfo moduleInfo = new ModuleInfo();
+            moduleInfo.PortalID = portalId;
+            moduleInfo.TabID = tabId;
+            moduleInfo.ModuleOrder = 1;
+            moduleInfo.ModuleTitle = "Module title comes here";
+            moduleInfo.PaneName = "ContentPane";
+            moduleInfo.ModuleDefID = 117;
+            moduleInfo.CacheTime = moduleDefinitionInfo.DefaultCacheTime;
+            moduleInfo.InheritViewPermissions = true;
+            moduleInfo.AllTabs = false;
+            moduleInfo.Alignment = "Top";
+
+            ModuleController moduleController = new ModuleController();
+            int moduleId = moduleController.AddModule(moduleInfo);
+
+            TabUrlInfo tabUrl = new TabUrlInfo()
+            {
+                TabId = tabId,
+                SeqNum = 0,
+                PortalAliasId = -1,
+                PortalAliasUsage = PortalAliasUsageType.Default,
+                QueryString = String.Empty,
+                Url = PageUrl,
+                HttpStatus = "200",
+                CultureCode = String.Empty,
+                IsSystem = true
+            };
+
+            TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
         }
     }
     public class DoctorSchedule
