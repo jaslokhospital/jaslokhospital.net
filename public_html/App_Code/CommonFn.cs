@@ -1,5 +1,6 @@
 ﻿using DotNetNuke.Entities.Users;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -105,6 +106,37 @@ public class CommonFn
         }
         return false;
 
+    }
+
+    public ArrayList GetArticleThumbnails(int portalID, string ImgType, string id)
+    {
+        ArrayList arrayList = new ArrayList();
+        ArrayList arrayList1 = new ArrayList();
+        DateTime filecreationdate = DateTime.Now;
+        string ImgPath = string.Empty;
+        if (ImgType != "" && id != "")
+        {
+            ImgPath = HttpContext.Current.Server.MapPath("/Portals/" + portalID + "/" + ImgType + "/" + id);
+        }
+        else if (ImgType != "")
+        {
+            ImgPath = HttpContext.Current.Server.MapPath("/Portals/" + portalID + "/" + ImgType);
+        }
+        else
+        {
+            ImgPath = HttpContext.Current.Server.MapPath("/Portals/" + portalID);
+        }
+
+        DirectoryInfo dir = new DirectoryInfo(ImgPath);
+
+        FileInfo[] SortedFiles = dir.GetFiles().OrderByDescending(file => file.CreationTime).ThenBy(file => file.Name).ToArray();
+
+        foreach (FileInfo info in SortedFiles)
+        {
+            if (info.Extension.ToLower() == ".jpg" || info.Extension.ToLower() == ".jpeg" || info.Extension.ToLower() == ".png" || info.Extension.ToLower() == ".gif")
+                arrayList.Add(info.Name);
+        }
+        return arrayList;
     }
     public static string RemoveBadCharForFolder(string f)
     {
