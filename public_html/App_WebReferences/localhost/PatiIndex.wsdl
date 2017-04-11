@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPatientDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MRNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientDetailsResult" type="tns:MstPaintx" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MstPaintx">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MRNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatFName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatLName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatAge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatSex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PATDOB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatAddr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatAddr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatAdd3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatOPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatRPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgeUpdated" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WEBPWD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecptAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScrollNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPNO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateorInsertPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VisitID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Age" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobileno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateorInsertPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateorInsertPatientResult" type="tns:MstPaintx" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDeposit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefTranno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MRNO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RcptDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveDepositResult" type="tns:ReceiptDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReceiptDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RcptNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MRNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MstPaintx" nillable="true" type="tns:MstPaintx" />
+      <s:element name="ReceiptDetails" nillable="true" type="tns:ReceiptDetails" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPatientDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateorInsertPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateorInsertPatient" />
+  </wsdl:message>
+  <wsdl:message name="UpdateorInsertPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateorInsertPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDepositSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDeposit" />
+  </wsdl:message>
+  <wsdl:message name="SaveDepositSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientDetailsHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="MRNO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:MstPaintx" />
+  </wsdl:message>
+  <wsdl:message name="UpdateorInsertPatientHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="VisitID" type="s:string" />
+    <wsdl:part name="FirstName" type="s:string" />
+    <wsdl:part name="LastName" type="s:string" />
+    <wsdl:part name="Gender" type="s:string" />
+    <wsdl:part name="Age" type="s:string" />
+    <wsdl:part name="DOB" type="s:string" />
+    <wsdl:part name="Address1" type="s:string" />
+    <wsdl:part name="Address2" type="s:string" />
+    <wsdl:part name="Address3" type="s:string" />
+    <wsdl:part name="Mobileno" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateorInsertPatientHttpGetOut">
+    <wsdl:part name="Body" element="tns:MstPaintx" />
+  </wsdl:message>
+  <wsdl:message name="SaveDepositHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RefTranno" type="s:string" />
+    <wsdl:part name="MRNO" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="RcptDate" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveDepositHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReceiptDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientDetailsHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="MRNO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:MstPaintx" />
+  </wsdl:message>
+  <wsdl:message name="UpdateorInsertPatientHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="VisitID" type="s:string" />
+    <wsdl:part name="FirstName" type="s:string" />
+    <wsdl:part name="LastName" type="s:string" />
+    <wsdl:part name="Gender" type="s:string" />
+    <wsdl:part name="Age" type="s:string" />
+    <wsdl:part name="DOB" type="s:string" />
+    <wsdl:part name="Address1" type="s:string" />
+    <wsdl:part name="Address2" type="s:string" />
+    <wsdl:part name="Address3" type="s:string" />
+    <wsdl:part name="Mobileno" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateorInsertPatientHttpPostOut">
+    <wsdl:part name="Body" element="tns:MstPaintx" />
+  </wsdl:message>
+  <wsdl:message name="SaveDepositHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RefTranno" type="s:string" />
+    <wsdl:part name="MRNO" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="RcptDate" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SaveDepositHttpPostOut">
+    <wsdl:part name="Body" element="tns:ReceiptDetails" />
+  </wsdl:message>
+  <wsdl:portType name="PatIndexSoap">
+    <wsdl:operation name="GetPatientDetails">
+      <wsdl:input message="tns:GetPatientDetailsSoapIn" />
+      <wsdl:output message="tns:GetPatientDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <wsdl:input message="tns:UpdateorInsertPatientSoapIn" />
+      <wsdl:output message="tns:UpdateorInsertPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <wsdl:input message="tns:SaveDepositSoapIn" />
+      <wsdl:output message="tns:SaveDepositSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PatIndexHttpGet">
+    <wsdl:operation name="GetPatientDetails">
+      <wsdl:input message="tns:GetPatientDetailsHttpGetIn" />
+      <wsdl:output message="tns:GetPatientDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <wsdl:input message="tns:UpdateorInsertPatientHttpGetIn" />
+      <wsdl:output message="tns:UpdateorInsertPatientHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <wsdl:input message="tns:SaveDepositHttpGetIn" />
+      <wsdl:output message="tns:SaveDepositHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PatIndexHttpPost">
+    <wsdl:operation name="GetPatientDetails">
+      <wsdl:input message="tns:GetPatientDetailsHttpPostIn" />
+      <wsdl:output message="tns:GetPatientDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <wsdl:input message="tns:UpdateorInsertPatientHttpPostIn" />
+      <wsdl:output message="tns:UpdateorInsertPatientHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <wsdl:input message="tns:SaveDepositHttpPostIn" />
+      <wsdl:output message="tns:SaveDepositHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PatIndexSoap" type="tns:PatIndexSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientDetails">
+      <soap:operation soapAction="http://tempuri.org/GetPatientDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <soap:operation soapAction="http://tempuri.org/UpdateorInsertPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <soap:operation soapAction="http://tempuri.org/SaveDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PatIndexSoap12" type="tns:PatIndexSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <soap12:operation soapAction="http://tempuri.org/UpdateorInsertPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <soap12:operation soapAction="http://tempuri.org/SaveDeposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PatIndexHttpGet" type="tns:PatIndexHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetPatientDetails">
+      <http:operation location="/GetPatientDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <http:operation location="/UpdateorInsertPatient" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <http:operation location="/SaveDeposit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PatIndexHttpPost" type="tns:PatIndexHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetPatientDetails">
+      <http:operation location="/GetPatientDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateorInsertPatient">
+      <http:operation location="/UpdateorInsertPatient" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeposit">
+      <http:operation location="/SaveDeposit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PatIndex">
+    <wsdl:port name="PatIndexSoap" binding="tns:PatIndexSoap">
+      <soap:address location="https://jaslokwebserver.jaslokhospital.net/JeevaPGTest/PatiIndex.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PatIndexSoap12" binding="tns:PatIndexSoap12">
+      <soap12:address location="https://jaslokwebserver.jaslokhospital.net/JeevaPGTest/PatiIndex.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PatIndexHttpGet" binding="tns:PatIndexHttpGet">
+      <http:address location="https://jaslokwebserver.jaslokhospital.net/JeevaPGTest/PatiIndex.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PatIndexHttpPost" binding="tns:PatIndexHttpPost">
+      <http:address location="https://jaslokwebserver.jaslokhospital.net/JeevaPGTest/PatiIndex.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

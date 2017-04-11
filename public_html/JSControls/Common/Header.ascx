@@ -82,35 +82,35 @@
     <div class="container">
         <nav id="Nav1" class="navbar navbar-inverse mainnav container-menu" style="margin-bottom: 0%;">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 pading45">
-                        <div class="collapse navbar-collapse a" id="Div1">
-                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
-                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
+               <div class="row">
+                   <div class="col-sm-12 col-md-12 col-lg-12 pading45"> 
+                <div class="collapse navbar-collapse a" id="Div1">
+                    <ul class="nav navbar-nav menu " style="padding-top:4px;">
 
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-second-menu" style="width: 200px;">
-                                        <li data-value="PatientRegistration" style="font-weight: bold; padding-left: 6px">Patient Registration</li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">In-Patient</li>
-                                        <li data-value="bed-booking"><a>Bed Reservation</a></li>
-                                        <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                                        <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></li>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Out-Patient</li>
-                                        <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
-                                        <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
-                                        <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
-                                        <%--<li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>--%>
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px">Consultation Appointment</li>
-                                        <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
-                                        <li data-value="consultationappointment/new"><a>New Appointment</a></li>
-                                        <li data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></li>
-
-
-                                    </ul>
-                                </li>
+                        <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                              
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:100% ! important;" id="A2" role="button" aria-haspopup="true" aria-expanded="false">Online Facilities<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-second-menu" style="width:200px;">
+                                <li data-value="PatientRegistration" style="font-weight:bold;padding-left:6px">Patient Registration</li>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px">In-Patient</li>
+                                <li data-value="bed-booking"><a>Bed Reservation</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px">Out-Patient</li>
+                                <li data-value="health-check-up-comprehensive"><a>Health Check-up</a></li>
+                                <li data-value="diagnosticsappointment"><a>Diagnostics Appointment</a></li>
+                                <li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></li>
+                                <%--<li data-value="#"><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></li>--%>
+                                <li data-value="#" style="font-weight:bold;padding-left:6px">Consultation Appointment</li>
+                             <%--   <li data-value="#"><a>Consultation Appointment</a></li>--%>
+                                <li data-value="consultationappointment/new"><a>New Appointment</a></li>
+                                <li data-value="consultationappointment/follow-up"><a>Follow-up Appointment</a></li>
+                                
 
                             </ul>
+</li>
+</ul>
 
                             <ul class="nav navbar-nav menu " style="padding-top: 4px;">
 
@@ -211,10 +211,8 @@
         </div>
 
     </nav>
-
-</div>
-
 </telerik:RadScriptBlock>
+</div>
 
 <%--<JS:StickyFindDoctor runat="server" ID="StickyFindDoctor" />--%>
 <div class="modal fade" id="permenantRegistrationModal" role="dialog">

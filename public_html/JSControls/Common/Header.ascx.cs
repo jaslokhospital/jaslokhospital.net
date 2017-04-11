@@ -16,6 +16,7 @@ using BusinessDataLayer;
 using System.Data;
 using System.IO;
 using net.jaslokhospital.jaslokwebserver;
+using localhost;
 using System.Data.SqlClient;
 using System.Configuration;
 using DotNetNuke.Entities.Host;
@@ -34,11 +35,12 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     DataTable ds = new DataTable();
 
     UserLoginStatus loginStatus = new UserLoginStatus();
+
     DataTable AllMenus = new DataTable();
-    /*net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
+    net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
     localhost.PatIndex objlocalPatIndex = new localhost.PatIndex();
     string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
-	*/
+
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -385,7 +387,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             JaslokMailer objMailer = new JaslokMailer();
             List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
-            PatIndex objPatIndex = new PatIndex();
+            
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
 
             if (IsNum == false)
@@ -550,16 +552,20 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 // If User enters MRNo. which we do not have
                 else
                 {
-                    var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                    var PatientDetails = (dynamic)null;
 
-
+                    if (host.StartsWith("www."))
+                    {
+                        PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                    }
+                    else
+                    {
+                        PatientDetails = objlocalPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                    }
+                    
                     if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
                     {
-
-
-
                         DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
-
 
                         if (dsVal.Tables[0].Rows.Count == 1)
                         {
@@ -678,9 +684,17 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         }
         else
         {
-            PatIndex objPatIndex = new PatIndex();
-            var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+            var PatientDetails = (dynamic)null;
 
+            if (host.StartsWith("www."))
+            {
+                PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+            }
+            else
+            {
+                PatientDetails = objlocalPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+            }
+            
             if (PatientDetails.WEBPWD != null)
             {
                 if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
