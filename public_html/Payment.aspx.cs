@@ -13,24 +13,40 @@ using BusinessDataLayer;
 public partial class Payment : System.Web.UI.Page
 {
     public DataAccessEntities objDAEntities = new DataAccessEntities();
-    public string formPostUrl, vanityUrl, merchantTxnId, orderAmount, currency, UserName, returnUrl, notifyUrl, securitySignature = string.Empty;
+    public string formPostUrl, vanityUrl, merchantTxnId, orderAmount, currency, UserName, returnUrl, notifyUrl, securitySignature = string.Empty, secret_key;
     protected void Page_Load(object sender, EventArgs e)
     {
         //Need to replace the last part of URL("your-vanityUrlPart") with your Testing/Live URL
 
         //formPostUrl = "/comingsoon";
         //formPostUrl = "https://sandbox.citruspay.com/sslperf/jaslokhospital";
-        formPostUrl = "https://www.citruspay.com/jaslokhospital";
-        
-        //Need to change with your Secret Key
-       // string secret_key = "66fc8c3cca181b8954338bb5d5bd0cbb18b99b6d";
-        string secret_key = "ed70df7a017654499542ff0a5515812824b74142";
-        //Need to change with your Vanity URL Key from the citrus panel
-        vanityUrl = "jaslokhospital";
-        //Should be unique for every transaction
+        //formPostUrl = "https://www.citruspay.com/jaslokhospital";
+
+        string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
+
+        if (host.StartsWith("www."))
+        {
+            formPostUrl = System.Configuration.ConfigurationManager.AppSettings["fromPostUrl"];
+
+             secret_key = System.Configuration.ConfigurationManager.AppSettings["secretkey_fromPostUrl"];
+        }
+        else
+        {
+            formPostUrl = System.Configuration.ConfigurationManager.AppSettings["fromSandBoxPostUrl"];
+            secret_key = System.Configuration.ConfigurationManager.AppSettings["secretkey_fromSandBoxPostUrl"];
+        }
+
+        vanityUrl = System.Configuration.ConfigurationManager.AppSettings["VanityUrl"];
+
         merchantTxnId = System.DateTime.Now.ToString("yyyyMMddHHmmssffff");
 
-
+       //Need to change with your Secret Key
+       // string secret_key = "66fc8c3cca181b8954338bb5d5bd0cbb18b99b6d";
+       // string secret_key = "ed70df7a017654499542ff0a5515812824b74142";
+       //Need to change with your Vanity URL Key from the citrus panel
+        
+        //Should be unique for every transaction
+     
         if (Request.QueryString["reg"] != null)
         {
             objDAEntities.FacilityName = "PermenantRegistration";
