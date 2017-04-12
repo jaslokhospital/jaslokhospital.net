@@ -38,7 +38,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         {
             spnStatus.Visible = true;
             lblMsg.Visible = false;
-            string secret_key = "ed70df7a017654499542ff0a5515812824b74142";
+            string secret_key = (host.StartsWith("www.")) ? System.Configuration.ConfigurationManager.AppSettings["secretkey_fromPostUrl"] : System.Configuration.ConfigurationManager.AppSettings["secretkey_fromSandBoxPostUrl"];//"ed70df7a017654499542ff0a5515812824b74142";
             string data = "";
             string txnId = Request["TxId"];
             string txnStatus = Request["TxStatus"];
@@ -51,6 +51,7 @@ public partial class PaymentResponse : System.Web.UI.Page
             string pgRespCode = Request["pgRespCode"];
             string zipCode = Request["addressZip"];
             string resSignature = Request["signature"];
+            string _mrNumber = Request["MrNumber"];
 
             bool flag = true;
             if (txnId != null)
