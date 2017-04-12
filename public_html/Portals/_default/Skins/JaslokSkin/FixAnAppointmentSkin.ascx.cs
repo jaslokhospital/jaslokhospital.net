@@ -534,7 +534,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
                 PlaceMessage.Visible = true;
                 placeRightPart.Visible = false;
                 Clear();
-                Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+                string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                Response.Redirect("/Payment.aspx?amount=" + amount);
                // Response.Redirect("/PaymentResponse.aspx");
             }
             else

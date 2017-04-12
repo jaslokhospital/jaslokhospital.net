@@ -335,7 +335,8 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                             PlaceMessage.Visible = true;
                             placeRightPart.Visible = false;
                             Clear();
-                            Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+                            string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                            Response.Redirect("/Payment.aspx?amount=" + amount);
                            // Response.Redirect("/PaymentResponse.aspx");
 							 //string pageurl = "/Payment.aspx";
                         //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");

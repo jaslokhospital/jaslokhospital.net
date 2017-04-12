@@ -80,7 +80,8 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
             else
             {
                 //Response.Redirect("/PaymentResponse.aspx", false);
-                Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+                string Payamount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                Response.Redirect("/Payment.aspx?amount=" + Payamount);
             }
         }
 

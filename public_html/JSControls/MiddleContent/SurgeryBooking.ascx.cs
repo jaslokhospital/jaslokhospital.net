@@ -166,7 +166,8 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
             }
             else
             {
-                Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+                string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                Response.Redirect("/Payment.aspx?amount=" + amount);
                //Response.Redirect("/PaymentResponse.aspx");
             }
 

@@ -121,8 +121,8 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             }
             else
             {
-                //Response.Redirect(string.Format("/Payment.aspx?amount=" + objDAEntities.Amount));
-                Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+                string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                Response.Redirect("/Payment.aspx?amount=" + amount);
                 //Response.Redirect("/PaymentResponse.aspx");
             }
             // Clear();
@@ -133,6 +133,7 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
 
         }
     }
+
     public void Clear()
     {
         ddlDoctorbedbook.ClearSelection();

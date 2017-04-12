@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 using DotNetNuke;
 using DotNetNuke.Entities.Users;
 using BusinessDataLayer;
+using System.Security.Cryptography;
+using System.IO;
 
 
 public partial class Payment : System.Web.UI.Page
@@ -60,10 +62,11 @@ public partial class Payment : System.Web.UI.Page
             Session["permenantRegistrationGuid"] = "Reg-"+objDAEntities.Guid;
             objBusinessLogic.SaveInfoGuid(objDAEntities);
         }
-
+       
         if (Request.QueryString["amount"] != null)
         {
             orderAmount = Request.QueryString["amount"];
+            orderAmount = objBusinessLogic.Decrypt(HttpUtility.UrlDecode(orderAmount));
         }
         //orderAmount = Session["Amount"].ToString();
         //Need to change with your Order Amount
@@ -84,4 +87,5 @@ public partial class Payment : System.Web.UI.Page
         //Response.Redirect("/PaymentResponse.aspx");
         //Response.Write("txm:" + merchantTxnId + "  " + securitySignature);
     }
+
 }

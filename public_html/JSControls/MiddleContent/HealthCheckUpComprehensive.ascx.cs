@@ -127,9 +127,8 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         }
         else
         {
-            Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
-            //Response.Redirect("/PaymentResponse.aspx");
-            //string pageurl = "/Payment.aspx";
+            string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+            Response.Redirect("/Payment.aspx?amount=" + amount);
             //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
         }
     }
