@@ -1952,15 +1952,14 @@ namespace BusinessDataLayer
             }
         }
 
-        public void SavePaymentBedSurgery(DataAccessEntities Slist)
-        {
-            string dsBA = string.Empty;
 
+        public void UpdateStatus(string JeevaStatus, int paymentId, string MrNo, DataTable dt = null)
+        {
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-               objDataAccessLogic.SavePaymentBedSurgery(Slist);
-               
+                objDataAccessLogic.UpdateStatus(JeevaStatus, paymentId, MrNo, dt);
+
             }
             catch (Exception ex)
             {
@@ -1968,10 +1967,51 @@ namespace BusinessDataLayer
             }
             finally
             {
-                dsBA = null;
                 objDataAccessLogic = null;
             }
         }
+        public DataSet SavePaymentBookAppointment(string txnId, string Tranrefid, string Transtatus, string Guid, string JeevaStatus)
+        {
+            DataSet ds = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.SavePaymentBookAppointment(txnId, Tranrefid, Transtatus, Guid, JeevaStatus);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+        public DataSet SavePaymentDetails(string Guid, string txnId, string Tranrefid, string Transtatus)
+        {
+            DataSet ds = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }
+
         public DataSet GetBedDetails()
         {
             DataSet dsHomeSlider = new DataSet();
@@ -3043,26 +3083,7 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
-        public void SavePaymentBookAppointment(DataAccessEntities Slist)
-        {
-            string dsBA = string.Empty;
-
-            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
-            try
-            {
-                objDataAccessLogic.SavePaymentBookAppointment(Slist);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                dsBA = null;
-                objDataAccessLogic = null;
-            }
-        }
+       
         public DataSet GetBookingPaymentDetails()
         {
             DataSet ds = null;
@@ -3371,6 +3392,48 @@ namespace BusinessDataLayer
             finally
             {
                 dt = null;
+            }
+        }
+
+        public void SaveInfoGuid(DataAccessEntities Slist)
+        {
+            string dsBA = string.Empty;
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsBA = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+        public void SaveAppointmentInfoGuid(DataAccessEntities Slist)
+        {
+            string dsBA = string.Empty;
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveAppointmentInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsBA = null;
+                objDataAccessLogic = null;
             }
         }
     }

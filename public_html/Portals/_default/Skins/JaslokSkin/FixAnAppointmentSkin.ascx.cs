@@ -502,6 +502,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.TimeDate = DateTime.ParseExact(ddlAppointMentDate.SelectedValue, "dd/MM/yyyy", CultureInfo.InvariantCulture) + time;
             objDAEntities.Name = txtName.Text;
             objDAEntities.Day = Convert.ToDateTime(txtdob.SelectedDate).ToString("dd/MM/yyyy");//Convert.ToString(txtdob.SelectedDate);
+            objDAEntities.DOB = Convert.ToDateTime(txtdob.SelectedDate);
             objDAEntities.Email = txtEmail.Text;
             objDAEntities.PhoneNo = txtPhoneNo.Text;
             objDAEntities.MobileNo = txtMobileNo.Text;
@@ -516,8 +517,14 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.dName = lblDoctorName.Text;
             objDAEntities.AppointmentTypeCharge = (drpAppointmentType.SelectedValue == "Follow-Up") ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
 
-            Session["Amount"] = objDAEntities.AppointmentTypeCharge;
-            Session["AppointmentDetail"] = objDAEntities;
+            objDAEntities.Amount = objDAEntities.AppointmentTypeCharge;
+            objDAEntities.FacilityName = "FixAppointment";
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] = "App-" + objDAEntities.Guid;
+            objBusinessLogic.SaveAppointmentInfoGuid(objDAEntities);
+
+           // Session["Amount"] = objDAEntities.AppointmentTypeCharge;
+           // Session["AppointmentDetail"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
@@ -527,7 +534,8 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
                 PlaceMessage.Visible = true;
                 placeRightPart.Visible = false;
                 Clear();
-                Response.Redirect("/Payment.aspx");
+                Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+               // Response.Redirect("/PaymentResponse.aspx");
             }
             else
             {

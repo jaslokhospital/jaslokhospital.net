@@ -13,6 +13,7 @@ using System.Text;
 using System.Globalization;
 using System.IO;
 using DotNetNuke.Entities.Users;
+using System.Security.Cryptography;
 
 public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.UI.Skins.Skin
 {
@@ -60,8 +61,6 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             ds.Tables[0].Rows[i]["Images"] = Convert.ToString(ds.Tables[0].Rows[i]["Room"]).Replace(" ", "_") + ".jpg";
         }
 
-
-
         rptBedReservation.DataSource = ds;
         rptBedReservation.DataBind();
     }
@@ -99,7 +98,6 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
     {
         try
         {
-
             objDAEntities.FacilityName = "Bed Reservation";
             objDAEntities.DoctorId = Convert.ToInt32(ddlDoctorbedbook.SelectedValue);
             objDAEntities.BookinDateTime = Convert.ToDateTime(txtdatetime.SelectedDate);
@@ -108,10 +106,14 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
 
             objDAEntities.Category = hdnDepositBB.Value.Split(',')[1];
             objDAEntities.MRNumber = user.Username;
+            objDAEntities.Amount = Convert.ToInt32(txtAdmissionCharge.Text);
+            //Session["Amount"] = objDAEntities.AdmissionCharge;
+            //Session["Bed"] = objDAEntities;
 
-            Session["Amount"] = objDAEntities.AdmissionCharge;
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] = "Bed-" + objDAEntities.Guid;
+            objBusinessLogic.SaveInfoGuid(objDAEntities);
 
-            Session["Bed"] = objDAEntities;
             if (CommonFn.UserID <= 0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "ResetRadio", "setRadioButtonBEDB('" + hdnDepositBB.Value + "', '" + txtAdmissionCharge.Text + "');", true);
@@ -119,7 +121,9 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             }
             else
             {
-                Response.Redirect("/Payment.aspx");
+                //Response.Redirect(string.Format("/Payment.aspx?amount=" + objDAEntities.Amount));
+                Response.Redirect("/Payment.aspx?amount=" + objDAEntities.Amount);
+                //Response.Redirect("/PaymentResponse.aspx");
             }
             // Clear();
         }

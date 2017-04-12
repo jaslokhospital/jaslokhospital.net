@@ -190,9 +190,9 @@
                     <HeaderTemplate>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav menu menu_fr" style="padding-left:0">
-				<li class="dropdown main-menu-bar" role="presentation">
-                            <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
-                        </li>
+                                <li class="dropdown main-menu-bar" role="presentation">
+                                    <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
+                                </li>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <li class="dropdown main-menu-bar" role="presentation">
@@ -224,7 +224,7 @@
             </div>
             <div class="modal-body mymodal" style="padding: 40px 50px;">
                 <p>You have not yet permanently registerd with Jaslok hospital, please go for the permanent registration to get premium benifits.</p>
-                <p>Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a></p>
+                <p>Click on Submit Button for permanent registration<a href="/Payment.aspx?reg=pr" class="ble-btn" target="_blank">Submit</a></p>
                 <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
             </div>
         </div>
