@@ -148,8 +148,13 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
             objDAEntities.Category = hdnCategorySB.Value;
             objDAEntities.AdmissionCharge = txtSurgeryFee.Text;
             objDAEntities.MRNumber = user.Username;
-            Session["Amount"] = objDAEntities.AdmissionCharge;
-            Session["Surgery"] = objDAEntities;
+            //Session["Amount"] = objDAEntities.AdmissionCharge;
+            //Session["Surgery"] = objDAEntities;
+
+            objDAEntities.Amount = Convert.ToInt32(txtSurgeryFee.Text);
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["Guid"] = "Sur-" + objDAEntities.Guid;
+            objBusinessLogic.SaveInfoGuid(objDAEntities);
 
             clear();
 
@@ -161,7 +166,9 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
             }
             else
             {
-               Response.Redirect("/Payment.aspx");
+                string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                Response.Redirect("/Payment.aspx?amount=" + amount);
+               //Response.Redirect("/PaymentResponse.aspx");
             }
 
         }

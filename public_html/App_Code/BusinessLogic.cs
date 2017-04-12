@@ -10,6 +10,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Web.Caching;
+using System.Security.Cryptography;
+using System.Text;
+using System.IO;
 
 namespace BusinessDataLayer
 {
@@ -1952,15 +1955,14 @@ namespace BusinessDataLayer
             }
         }
 
-        public void SavePaymentBedSurgery(DataAccessEntities Slist)
-        {
-            string dsBA = string.Empty;
 
+        public void UpdateStatus(string JeevaStatus, int paymentId, string MrNo, DataTable dt = null)
+        {
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-               objDataAccessLogic.SavePaymentBedSurgery(Slist);
-               
+                objDataAccessLogic.UpdateStatus(JeevaStatus, paymentId, MrNo, dt);
+
             }
             catch (Exception ex)
             {
@@ -1968,10 +1970,51 @@ namespace BusinessDataLayer
             }
             finally
             {
-                dsBA = null;
                 objDataAccessLogic = null;
             }
         }
+        public DataSet SavePaymentBookAppointment(string txnId, string Tranrefid, string Transtatus, string Guid, string JeevaStatus)
+        {
+            DataSet ds = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.SavePaymentBookAppointment(txnId, Tranrefid, Transtatus, Guid, JeevaStatus);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+        public DataSet SavePaymentDetails(string Guid, string txnId, string Tranrefid, string Transtatus)
+        {
+            DataSet ds = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }
+
         public DataSet GetBedDetails()
         {
             DataSet dsHomeSlider = new DataSet();
@@ -3043,26 +3086,7 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
-        public void SavePaymentBookAppointment(DataAccessEntities Slist)
-        {
-            string dsBA = string.Empty;
-
-            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
-            try
-            {
-                objDataAccessLogic.SavePaymentBookAppointment(Slist);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                dsBA = null;
-                objDataAccessLogic = null;
-            }
-        }
+       
         public DataSet GetBookingPaymentDetails()
         {
             DataSet ds = null;
@@ -3372,6 +3396,95 @@ namespace BusinessDataLayer
             {
                 dt = null;
             }
+        }
+
+        public void SaveInfoGuid(DataAccessEntities Slist)
+        {
+            string dsBA = string.Empty;
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsBA = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+        public void SaveAppointmentInfoGuid(DataAccessEntities Slist)
+        {
+            string dsBA = string.Empty;
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveAppointmentInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsBA = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+
+        public string Decrypt(string cipherText)
+        {
+            string EncryptionKey = "AVZMAKV2SPBNI9921200CBCZZSMGM";
+            cipherText = cipherText.Replace(" ", "+");
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(cipherBytes, 0, cipherBytes.Length);
+                        cs.Close();
+                    }
+                    cipherText = Encoding.Unicode.GetString(ms.ToArray());
+                }
+            }
+            return cipherText;
+        }
+
+
+        public string Encrypt(string clearText)
+        {
+            string EncryptionKey = "AVZMAKV2SPBNI9921200CBCZZSMGM";
+            byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Close();
+                    }
+                    clearText = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+            return clearText;
         }
     }
 

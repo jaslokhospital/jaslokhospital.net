@@ -166,6 +166,7 @@ namespace BusinessDataLayer
         public string About { get; set; }
         public string Facilities { get; set; }
         public DateTime TimeDate { get; set; }
+        public DateTime DOB { get; set; }
         public int Age { get; set; }
         public int CreatedByUserID { get; set; }
         public int UpdatedByUserID { get; set; }
@@ -420,7 +421,7 @@ namespace BusinessDataLayer
         public string Option2 { get; set; }
         public string Option3 { get; set; }
         public string Option4 { get; set; }
-
+        public string Guid { get; set; }
 
         #region FormsEmailDetail
         public string FormType { get; set; }

@@ -1836,12 +1836,54 @@ namespace BusinessDataLayer
                 throw ex;
             }
         }
-        //BookBed
-        public void SavePaymentBedSurgery(DataAccessEntities Slist)
+       
+        public void UpdateStatus(string JeevaStatus, int paymentId, string MrNo, DataTable dt = null)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString);
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmdProc = new SqlCommand("JH_UpdateJeevaStatus", con);
+                cmdProc.CommandType = CommandType.StoredProcedure;
+                cmdProc.Parameters.AddWithValue("@JeevaStatus", JeevaStatus);
+                cmdProc.Parameters.AddWithValue("@PaymentId", paymentId);
+                cmdProc.Parameters.AddWithValue("@MrNo", MrNo);
+                cmdProc.Parameters.AddWithValue("@permanentregistration", dt);
+                cmdProc.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+
+            }
+            finally
+            {
+                if (con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                }
+
+            }
+        }
+        public DataSet SavePaymentBookAppointment(string txnId, string Tranrefid, string Transtatus, string Guid, string JeevaStatus)
         {
             try
             {
-                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBedSurgery", new object[] { Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.FacilityName, Slist.Category, objInfo.UserID, Slist.DoctorId, Slist.BookinDateTime, Slist.JeevaStatus }));
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_SavePaymentBookAppointment_New", new object[] { txnId, Tranrefid, Transtatus, Guid, JeevaStatus, AppGlobal.PortalId });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataSet SavePaymentDetails(string Guid, string txnId, string Tranrefid, string Transtatus)
+        {
+            try
+            {
+                return SqlHelper.ExecuteDataset(Config.GetConnectionString(), "JH_SavePaymentBedSurgery_New", new object[] { Guid, txnId, Tranrefid, Transtatus, AppGlobal.PortalId });
             }
             catch (Exception ex)
             {
@@ -1873,17 +1915,6 @@ namespace BusinessDataLayer
             }
         }
 
-        public void SavePaymentBookAppointment(DataAccessEntities Slist)
-        {
-            try
-            {
-                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SavePaymentBookAppointment", new object[] {Slist.Transactionid, Slist.Tranrefid, Slist.Transtatus, Slist.Amount, Slist.FacilityName, objInfo.UserID, AppGlobal.PortalId, Slist.SpecialtyId, Slist.DoctorId, Slist.TimeDate, Slist.Name, Slist.Day, Slist.Email, Slist.PhoneNo, Slist.MobileNo, Slist.Location, Slist.Address, Slist.Description, Slist.DoctorScheduleId, Slist.AppointmentType,Slist.JeevaStatus}));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         public bool IsUserExist(string username)
         {
@@ -2008,6 +2039,31 @@ namespace BusinessDataLayer
         public void DeleteMenuItem(int PageId)
         {
             SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_DeleteMenuItems", new object[] { PageId });
+        }
+
+        public void SaveInfoGuid(DataAccessEntities Slist)
+        {
+            try
+            {
+                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SaveInfoGuid", new object[] { Slist.FacilityName, Slist.Category, Slist.DoctorId, Slist.Amount, Slist.BookinDateTime, objInfo.UserID, Slist.Guid,Slist.MRNumber }));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void SaveAppointmentInfoGuid(DataAccessEntities Slist)
+        {
+            try
+            {
+                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SAVEAPPOINTMENTINFOGUID", new object[] { Slist.FacilityName, Slist.Category, Slist.DoctorId, Slist.Amount, Convert.ToDateTime(Slist.TimeDate), objInfo.UserID, Slist.SpecialtyId, Slist.Name, Slist.Email, Slist.PhoneNo, Slist.MobileNo, Slist.Location, Slist.Address, Slist.Description, Slist.DoctorScheduleId, Slist.AppointmentType, Slist.DOB, Slist.Guid, Slist.MRNumber }));
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

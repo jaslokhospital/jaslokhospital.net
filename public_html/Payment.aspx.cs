@@ -8,10 +8,13 @@ using System.Web.UI.WebControls;
 using DotNetNuke;
 using DotNetNuke.Entities.Users;
 using BusinessDataLayer;
+using System.Security.Cryptography;
+using System.IO;
 
 
 public partial class Payment : System.Web.UI.Page
 {
+    public BusinessLogic objBusinessLogic = new BusinessLogic();
     public DataAccessEntities objDAEntities = new DataAccessEntities();
     public string formPostUrl, vanityUrl, merchantTxnId, orderAmount, currency, UserName, returnUrl, notifyUrl, securitySignature = string.Empty, secret_key;
     protected void Page_Load(object sender, EventArgs e)
@@ -51,14 +54,23 @@ public partial class Payment : System.Web.UI.Page
         {
             objDAEntities.FacilityName = "PermenantRegistration";
             objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
-            Session["permenantRegistration"] = objDAEntities;
-            Session["Amount"] = 100;
+            //Session["permenantRegistration"] = objDAEntities;
+            //Session["Amount"] = 100;
+            objDAEntities.Amount = 100;
+            orderAmount = Convert.ToString(objDAEntities.Amount);
+            objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            Session["permenantRegistrationGuid"] = "Reg-"+objDAEntities.Guid;
+            objBusinessLogic.SaveInfoGuid(objDAEntities);
         }
-
-
-        orderAmount = Session["Amount"].ToString();
+       
+        if (Request.QueryString["amount"] != null)
+        {
+            orderAmount = Request.QueryString["amount"];
+            orderAmount = objBusinessLogic.Decrypt(HttpUtility.UrlDecode(orderAmount));
+        }
+        //orderAmount = Session["Amount"].ToString();
         //Need to change with your Order Amount
-       // orderAmount = "10.00";// Request.QueryString["Amount"];
+       
         currency = "INR";
         string data = vanityUrl + orderAmount + merchantTxnId + currency;
         System.Security.Cryptography.HMACSHA1 myhmacsha1 = new System.Security.Cryptography.HMACSHA1(Encoding.ASCII.GetBytes(secret_key));
@@ -75,4 +87,5 @@ public partial class Payment : System.Web.UI.Page
         //Response.Redirect("/PaymentResponse.aspx");
         //Response.Write("txm:" + merchantTxnId + "  " + securitySignature);
     }
+
 }

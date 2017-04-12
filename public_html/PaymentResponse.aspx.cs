@@ -25,6 +25,7 @@ public partial class PaymentResponse : System.Web.UI.Page
     JaslokMailer objMailer = new JaslokMailer();
     string lsEmailStatus = string.Empty;
     string lsSmsStatus = string.Empty;
+    string JeevaStatus = string.Empty;
     DataAccessEntities sessionData = new DataAccessEntities();
 
     net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
@@ -104,123 +105,60 @@ public partial class PaymentResponse : System.Web.UI.Page
             }
             if (flag == true)
             {
-               
-                //Response.Write("Thank You for using citrus payment Your Unique Transaction Status:" + Convert.ToString(txnStatus));
-                if (Session["Bed"] != null || Session["Surgery"] != null || Session["AppointmentDetail"] != null || Session["HealthCheck-upComprehensive"] != null || Session["OutstandingBillPayment"] != null || Session["permenantRegistration"] != null || Session["ConsultationAppointment"] != null)
+                string Tranrefid = Convert.ToString(issuerRefNo);
+                string Transtatus = Convert.ToString(txnStatus);
+                //sessionData.Amount = Convert.ToInt32(Session["Amount"]);
+                int UserId = user.UserID;
+                lblUserName.Text = user.DisplayName;
+                lblMNo.Text = user.Username; //= Convert.ToString(user.UserID);
+                lblTxtnId.Text = Convert.ToString(txnId);
+                lblPaidAgainst.Text = string.Empty;
+                lblDateTime.Text = Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"));
+                lblAmount.Text = string.Empty;
+               // PR();
+                if (txnStatus != null)
                 {
-                   
-                    if (Session["Bed"] != null)
+                    if (Session["Guid"] != null)
                     {
-                        sessionData = (DataAccessEntities)Session["Bed"];
-                    }
-                    else if (Session["Surgery"] != null)
-                    {
-                        sessionData = (DataAccessEntities)Session["Surgery"];
-                    }
-                    else if (Session["AppointmentDetail"] != null)
-                    {
-                        sessionData = (DataAccessEntities)Session["AppointmentDetail"];
-                        sessionData.FacilityName = "Appointment";
-                    }
-                    else if (Session["HealthCheck-upComprehensive"] != null)
-                    {
-                        sessionData = (DataAccessEntities)Session["HealthCheck-upComprehensive"];
-                    }
-                    else if (Session["OutstandingBillPayment"] != null)
-                    {
-                        sessionData = (DataAccessEntities)Session["OutstandingBillPayment"];
-                    }
-                    else if (Session["permenantRegistration"] != null)
-                    {
-                        sessionData = (DataAccessEntities)Session["permenantRegistration"];
-                    }
-                    else if (Session["ConsultationAppointment"] != null)
-                    {
-                        sessionData = (DataAccessEntities)Session["ConsultationAppointment"];
-                        sessionData.FacilityName = "Appointment";
-                    }
-
-                    //double Damount = Convert.ToDouble(amount);
-
-                    sessionData.Tranrefid = Convert.ToString(issuerRefNo);
-                    sessionData.Transtatus = Convert.ToString(txnStatus);
-                    sessionData.Amount = Convert.ToInt32(Session["Amount"]);
-                    sessionData.UserId = user.UserID;
-
-                    lblUserName.Text = user.DisplayName;
-                    lblMNo.Text = user.Username; //= Convert.ToString(user.UserID);
-                    lblTxtnId.Text = sessionData.Transactionid = Convert.ToString(txnId);
-                    lblPaidAgainst.Text = sessionData.FacilityName;
-                    lblDateTime.Text = Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"));
-                    lblAmount.Text = Convert.ToString(Session["Amount"]) + ".00 INR";
-
-                    if (txnStatus != null)
-                    {
-                        if (Session["Bed"] != null)
+                        DataSet AppointmentDs = new DataSet();
+                        if (txnStatus == "CANCELED")
                         {
-                            if (txnStatus == "CANCELED")
+                            Session["Guid"] = null;
+                            Response.Redirect("/");
+                        }
+                        string Guid = Session["Guid"].ToString();
+
+                        string PageName = Guid.Substring(0, 3);
+
+                        if (PageName == "App")
+                        {
+                            AppointmentDs = objBusinessLogic.SavePaymentBookAppointment(txnId, Tranrefid, Transtatus, Guid, JeevaStatus);
+                            if (AppointmentDs.Tables[0].Rows.Count > 0)
                             {
-                                Session["Bed"] = null;
-                                Response.Redirect("/Bed-Booking");
+                                double Amount = Convert.ToDouble(AppointmentDs.Tables[0].Rows[0]["AMOUNT"]);
+                                string ServiceName = Convert.ToString(AppointmentDs.Tables[0].Rows[0]["ServiceName"]);
+                                int PaymentId = Convert.ToInt32(AppointmentDs.Tables[0].Rows[0]["PaymentId"]);
+                                lblAmount.Text = Convert.ToString(Amount);
+                                lblPaidAgainst.Text = ServiceName;
+                                // Send data to Napier Service for Save Deposit
+                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+                                // Code To Update Jeeva status in Payment Table
+                                if (!string.IsNullOrEmpty(JeevaStatus))
+                                {
+                                    DataTable dt = null;
+                                    objBusinessLogic.UpdateStatus(JeevaStatus, PaymentId, lblMNo.Text, dt);
+                                }
+                                AppointmentSendEmail(Convert.ToString(AppointmentDs.Tables[0].Rows[0]["PhoneNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["MobileNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Country"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["StateName"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["BookedDate"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["AMOUNT"]) + ".00 INR", Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Description"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["DoctName"]), "ConsultationAppointment");
+                                AppointmentDs.Tables[0].Rows.Clear();
                             }
-                            //objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                            ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "BedBookingPayment");
-                            Session["Bed"] = null;
+                            Session["Guid"] = null;
                         }
 
-                        else if (Session["Surgery"] != null)
+                        else if (PageName == "Reg")
                         {
-                            if (txnStatus == "CANCELED")
-                            {
-                                Session["Surgery"] = null;
-                                Response.Redirect("/surgery-booking");
-                            }
+
                            
-                            //objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                           ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, sessionData.Category, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "SurgeryBookingPayment");
-                            Session["Surgery"] = null;
-                        }
-                        else if (Session["HealthCheck-upComprehensive"] != null)
-                        {
-                            if (txnStatus == "CANCELED")
-                            {
-                                Session["HealthCheck-upComprehensive"] = null;
-                                Response.Redirect("/health-check-up-comprehensive");
-
-                            }
-
-                           // objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                            string _categoryName = sessionData.Category;
-                            if (_categoryName == "Male" || _categoryName == "Female")
-                            {
-                                _categoryName = "Package B (" + sessionData.Category + ")";
-                            }
-                           ServiceBookingSendEmail(user.DisplayName, user.Email, sessionData.FacilityName, _categoryName, lblDateTime.Text, Convert.ToString(Session["Amount"]) + ".00 INR", "HealthCheckPayment");
-                            Session["HealthCheck-upComprehensive"] = null;
-                        }
-                        else if (Session["OutstandingBillPayment"] != null)
-                        {
-                            if (txnStatus == "CANCELED")
-                            {
-                                Session["OutstandingBillPayment"] = null;
-                                Response.Redirect("/outstandingbillpayment");
-                            }
-                           // objBusinessLogic.SavePaymentBedSurgery(sessionData);
-                          OutStandingSendEmail(sessionData.FacilityName, Convert.ToString(Session["Amount"]) + ".00 INR", "OutstandingPayment");
-                            Session["OutstandingBillPayment"] = null;
-                        }
-                        else if (Session["permenantRegistration"] != null)
-                        {
-                            if (txnStatus == "CANCELED")
-                            {
-                                Session["permenantRegistration"] = null;
-                                Response.Redirect("/");
-
-                            }
-
-                            Session["permenantRegistration"] = null;
                             lblMsg.Visible = true;
-
                             string Gender = user.Profile.GetPropertyValue("Gender");
                             if (Gender == "Male")
                             {
@@ -284,7 +222,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 PhoneNumber = PhoneNumber.Substring(0, 12);
                             }
 
-                           // objBusinessLogic.SavePaymentBedSurgery(sessionData);
 
                             var PatientDetails = NapierService(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
 
@@ -294,12 +231,12 @@ public partial class PaymentResponse : System.Web.UI.Page
                             {
                                 if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
                                 {
-                                    bool _isMrNumberExists = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
-                                    if (_isMrNumberExists)
+                                    bool IsExistMRNumber = objBusinessLogic.IsExistMRNumber(PatientDetails.MRNO);
+                                    if (IsExistMRNumber == true)
                                     {
                                         Clear();
                                         lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                        lblMsg.Text = "You are already registered as a permanent User!";
+                                        lblMsg.Text = "You Are Allready Registered As A permanent User!";
                                     }
                                     else
                                     {
@@ -348,7 +285,6 @@ public partial class PaymentResponse : System.Web.UI.Page
                                             Clear();
                                             lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
                                             lblMsg.Text = "UserName already exist!";
-
                                         }
                                     }
                                 }
@@ -368,56 +304,83 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 plcDivSucces.Visible = true;
                                 plcDivError.Visible = false;
                             }
-                        }
-                        else if (Session["ConsultationAppointment"] != null || Session["AppointmentDetail"] != null)
-                        {
 
-                            if (txnStatus == "CANCELED")
+                            // code to save payment details of Per. Reg.
+                            int PaymentId = 0;
+                            int Amount = 100;
+                            string ServiceName = "PermenantRegistration";
+                            lblAmount.Text = Convert.ToString(Amount);
+                            lblPaidAgainst.Text = ServiceName;
+                            // Send data to Napier Service for Save Deposit
+                            JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+
+                            DataTable dt = new DataTable();
+                            dt.Columns.AddRange(new DataColumn[9] { new DataColumn("TRANSACTIONID"), new DataColumn("TRANREFID"), new DataColumn("TRANSTATUS"), new DataColumn("AMOUNT"), new DataColumn("USERID"), new DataColumn("PORTALID"), new DataColumn("JeevaStatus"), new DataColumn("MrNo"), new DataColumn("ServiceName") });
+
+
+                            //Add rows to DataTable.
+                            dt.Rows.Add(txnId, Tranrefid, Transtatus, Amount, user.UserID, AppGlobal.PortalId, JeevaStatus, lblMNo.Text, ServiceName);
+
+                            if (dt.Rows.Count > 0)
                             {
-                                Session["ConsultationAppointment"] = null;
-                                Session["AppointmentDetail"] = null;
-                                Response.Redirect("/");
+                                objBusinessLogic.UpdateStatus(JeevaStatus, PaymentId, lblMNo.Text, dt);
                             }
-                            sessionData.FacilityName = "Consultation Appointment";
-                            objBusinessLogic.SavePaymentBookAppointment(sessionData);
-                            AppointmentSendEmail(Convert.ToString(sessionData.PhoneNo), Convert.ToString(sessionData.MobileNo), Convert.ToString(sessionData.Location), Convert.ToString(sessionData.Address), Convert.ToString(sessionData.Email), Convert.ToString(sessionData.TimeDate), Convert.ToString(Session["Amount"]) + ".00 INR", Convert.ToString(sessionData.AppointmentType), Convert.ToString(sessionData.Description), sessionData.dName, "ConsultationAppointment");
-                            Session["ConsultationAppointment"] = null;
-                            Session["AppointmentDetail"] = null;
                         }
-                        // Save Deposit
 
-                        var details = (dynamic)null;
-                        try
+                        else
                         {
-                            details = NapierService(lblTxtnId.Text, lblMNo.Text, Convert.ToDouble(Session["Amount"]), Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), sessionData.FacilityName);
-                        }
-                        catch (Exception ex)
-                        {
-                            Exceptions.LogException(ex);
-                            sessionData.JeevaStatus = "Service Unavailable";
-                        }
-                        if (details != null && !string.IsNullOrEmpty(details.MRNO))
-                        {
-                            sessionData.JeevaStatus = details.MRNO;
-                        }
-                        //End of Save Deposit
+                            DataSet ds = objBusinessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+                            if (ds.Tables[0].Rows.Count > 0)
+                            {
+                                double Amount = Convert.ToDouble(ds.Tables[0].Rows[0]["Amount"]);
+                                string ServiceName = Convert.ToString(ds.Tables[0].Rows[0]["ServiceName"]);
+                                string ServicePackage = Convert.ToString(ds.Tables[0].Rows[0]["ServicePackage"]);
+                                string BookDate = Convert.ToString(ds.Tables[0].Rows[0]["BEDBOOKINDATETIME"]);
+                                int PaymentId = Convert.ToInt32(ds.Tables[0].Rows[0]["PaymentId"]);
+                                string processName = Convert.ToString(ds.Tables[0].Rows[0]["processName"]);
+                                lblAmount.Text = Convert.ToString(Amount);
+                                lblPaidAgainst.Text = ServiceName;
+                                // Send data to Napier Service for Save Deposit
+                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
 
-                        // insert payment details
-                        if (sessionData.FacilityName != "Consultation Appointment")
-                        {
-                            InsertPaymentDetails();
+                                // Code To Update Jeeva status in Payment Table
+                                if (!string.IsNullOrEmpty(JeevaStatus))
+                                {
+                                    DataTable dt = null;
+                                    objBusinessLogic.UpdateStatus(JeevaStatus, PaymentId, lblMNo.Text, dt);
+                                }
+                                // Conditions For Email
+                                if (processName == "Bed" || processName == "Sur" || processName == "Hea")
+                                {
+                                    string TemplateName = string.Empty;
+                                    if (processName == "Bed")
+                                    {
+                                        TemplateName = "BedBookingPayment";
+
+                                    }
+                                    else if (processName == "Sur")
+                                    {
+                                        TemplateName = "SurgeryBookingPayment";
+
+                                    }
+                                    else if (processName == "Hea")
+                                    {
+                                        TemplateName = "HealthCheckPayment";
+                                    }
+
+                                    ServiceBookingSendEmail(user.DisplayName, user.Email, ServiceName, ServicePackage, BookDate, Amount + ".00 INR", TemplateName);
+                                }
+                                else if (processName == "Out")
+                                {
+                                    OutStandingSendEmail(sessionData.FacilityName, Amount + ".00 INR", "OutstandingPayment");
+                                }
+
+                                ds.Tables[0].Rows.Clear();
+
+                            }
+                            Session["Guid"] = null;
                         }
-                        // end of insert payment details
                     }
-                    else
-                    {
-                        plcDivSucces.Visible = false;
-                        plcDivError.Visible = true;
-                        spnStatus.Attributes["Class"] = "highlight";
-                        spnStatus.InnerText = "Payment Fail !";
-                    }
-                    Session["Amount"] = null;
-
                 }
                 else
                 {
@@ -432,11 +395,25 @@ public partial class PaymentResponse : System.Web.UI.Page
                 Response.Write("Citrus Response Signature and Our (Merchant)Signature Mis - Match");
             }
         }
+
         catch (Exception ex)
         {
             Exceptions.LogException(ex);
         }
     }
+
+
+    //private void PR()
+    //{
+    //    objDAEntities.FacilityName = "PermenantRegistration";
+    //    objDAEntities.BookinDateTime = Convert.ToDateTime(DateTime.Now.ToString());
+    //    //Session["permenantRegistration"] = objDAEntities;
+    //    //Session["Amount"] = 100;
+    //    objDAEntities.Amount = 100;
+    //    objDAEntities.Guid = System.Guid.NewGuid().ToString();
+    //    Session["Guid"] = "Reg-" + objDAEntities.Guid;
+    //    objBusinessLogic.SaveInfoGuid(objDAEntities);
+    //}
 
     private dynamic NapierService(string TxtnId, string MRNO, double Amount, string ReceiptDate, string Remark)
     {
@@ -444,7 +421,7 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         if (host.StartsWith("www."))
         {
-            details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+           // details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
         }
         else
         {
@@ -459,7 +436,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         var PatientDetails = (dynamic)null;
         if (host.StartsWith("www."))
         {
-            PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+           // PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
         }
         else
         {
@@ -470,9 +447,23 @@ public partial class PaymentResponse : System.Web.UI.Page
         return PatientDetails;
     }
 
-    private void InsertPaymentDetails()
+    private string SaveDeposit(string TxtnId, string MrNo, double Amount, string ReceiptDate, string remark)
     {
-        objBusinessLogic.SavePaymentBedSurgery(sessionData);
+        var details = (dynamic)null;
+        try
+        {
+            details = NapierService(TxtnId, MrNo, Amount, ReceiptDate, remark);
+        }
+        catch (Exception ex)
+        {
+            Exceptions.LogException(ex);
+            JeevaStatus = "Service Unavailable";
+        }
+        if (details != null && !string.IsNullOrEmpty(details.MRNO))
+        {
+            JeevaStatus = details.MRNO;
+        }
+        return JeevaStatus;
     }
 
     public void Clear()
@@ -594,12 +585,12 @@ public partial class PaymentResponse : System.Web.UI.Page
         lstParameters = null;
     }
 
-    public void AppointmentSendEmail(string PhoneNo, string MobileNo, string Location, string Address, string stEmail, string TimeDate, string lblAmount, string AppointMentType, string Description, string doctorName, string TemplateName)
+    public void AppointmentSendEmail(string PhoneNo, string MobileNo, string Location, string Address, string TimeDate, string lblAmount, string Description, string doctorName, string TemplateName)
     {
         List<Parameters> lstParameters = new List<Parameters>();
 
         lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
-        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = stEmail });
+        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
         lstParameters.Add(new Parameters { ShortCodeName = "PhoneNo", ShortCodeValue = PhoneNo });
         lstParameters.Add(new Parameters { ShortCodeName = "MobileNo", ShortCodeValue = MobileNo });
         lstParameters.Add(new Parameters { ShortCodeName = "Location", ShortCodeValue = Location });
@@ -608,19 +599,22 @@ public partial class PaymentResponse : System.Web.UI.Page
         lstParameters.Add(new Parameters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
         lstParameters.Add(new Parameters { ShortCodeName = "Description", ShortCodeValue = Description });
         lstParameters.Add(new Parameters { ShortCodeName = "DoctorName", ShortCodeValue = doctorName });
-        lstParameters.Add(new Parameters { ShortCodeName = "AppointmentType", ShortCodeValue = AppointMentType });
+
 
         DataSet ds = new DataSet();
         ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
-
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-
+        string EmailToId = string.Empty;
+        string EmailCCId = string.Empty;
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+            EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+        }
         objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
         TemplateName = TemplateName + "_user";
-        objMailer.SendEmail(TemplateName, lstParameters, stEmail, EmailCCId);
+        objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
         string val = lstParameters[7].ShortCodeValue.Replace("&nbsp;", " ");
-        string PhoneNumber = MobileNo;
+        string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
         lstParameters.Add(new Parameters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
         if (TemplateName == "ConsultationAppointment_user")
         {
