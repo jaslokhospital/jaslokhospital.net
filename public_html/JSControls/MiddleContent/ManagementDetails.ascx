@@ -1,11 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ManagementDetails.ascx.cs" Inherits="JSControls_MiddleContent_ManagementDetails" %>
 <div class="media">
-    <div class="media-left media-top col-sm-3 col-xs-5 mgt-bg-space">
+    <div class="media-left media-top col-sm-2 col-xs-5 mgt-bg-space" style="padding-right:0;">
         <a data-toggle="collapse" data-parent="#accordion" href="#media-collapse-1" aria-expanded="true" aria-controls="media-collapse-1">
             <asp:Image ID="imgProfile" runat="server" class="media-object media-border img-responsive profile-bg" ImageUrl='<%#Eval("ImageUrl")%>' />
         </a>
     </div>
-    <div class="media-body col-sm-9 col-xs-7 managemant-bg mgt-info-space" id="DivDetail" runat="server">
+    <div class="col-sm-10 col-xs-7 managemant-bg mgt-info-space" id="DivDetail" runat="server" style="padding:0;">
         <footer class="panel-footer ft-space">
            <%-- <img src="../../images/Dicon.png" />--%>
             <span runat="server" id="FindDName" class="s-bold"><%#Eval("Name")%>'</span>
