@@ -188,7 +188,7 @@
 
                         <div class="left-inner-addon">
                             <span>₹</span>
-                            <input type="text" id="txtAmount" runat="server" class="riEmpty form-control price_bx text-right" onkeypress="return Numeric(event);" />
+                            <input type="text" id="txtAmount" maxlength="6" runat="server" class="riEmpty form-control price_bx text-right" onkeypress="return Numeric(event);" />
                               <asp:RequiredFieldValidator ID="rfvAmount" runat="server" CssClass="errormsg" ErrorMessage="Please Enter Amount" ControlToValidate="txtAmount" Display="Dynamic" ValidationGroup="OBP"  ForeColor="Red"></asp:RequiredFieldValidator><br />
          
                         </div>

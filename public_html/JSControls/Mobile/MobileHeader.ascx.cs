@@ -30,6 +30,10 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
      UserLoginStatus loginStatus = new UserLoginStatus();
 
+     net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
+     localhost.PatIndex objlocalPatIndex = new localhost.PatIndex();
+     string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
+
     protected void Page_Load(object sender, EventArgs e)    
     {
         try
@@ -364,9 +368,6 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
             string lsEmailStatus = string.Empty;
 
 
-            PatIndex objPatIndex = new PatIndex();
-
-
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
 
             if (IsNum == false)
@@ -499,19 +500,24 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                         lblLoginError.Text = "Please enter correct password!";
                         return;
                     }
-
                     //UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
                     //Response.Redirect("/redirect");
-
-
-
                 }
                 // If User enters MRNo. which we do not have
                 else
                 {
-                    var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                    var PatientDetails = (dynamic)null;
 
-
+                    if (host.StartsWith("www."))
+                    {
+                         PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                    }
+                    else
+                    {
+                        PatientDetails = objlocalPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                    }
+                   
+                   
                     if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
                     {
 
