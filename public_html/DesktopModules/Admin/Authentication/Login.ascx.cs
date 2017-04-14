@@ -1011,14 +1011,7 @@ namespace DotNetNuke.Modules.Admin.Authentication
 				}
 				else //make module container invisible if user is not a page admin
 				{
-					if (TabPermissionController.CanAdminPage())
-					{
-						ShowPanel();
-					}
-					else
-					{
-						ContainerControl.Visible = false;
-					}
+					Response.Redirect("/");
 				}
 			}
 			divCaptcha.Visible = UseCaptcha;

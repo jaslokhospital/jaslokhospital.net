@@ -1065,7 +1065,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 {
                     DataRowView drv = e.Item.DataItem as DataRowView;
                     string ID = drv["ID"].ToString();
-                    DataRow[] rows = AllMenus.Select("PARENTID=" + ID, "Name");
+                    DataRow[] rows = AllMenus.Select("PARENTID=" + ID, "Name").OrderBy(u => u["SortOrder"]).ToArray();
                     if (rows.Length > 0)
                     {
                         StringBuilder sb = new StringBuilder();

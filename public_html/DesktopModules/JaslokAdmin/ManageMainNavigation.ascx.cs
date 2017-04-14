@@ -91,6 +91,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
 
             }
             Cache.Remove("MenuItemCache");
+            Cache.Remove(AppGlobal.Cache_HeaderMenu);
             ddlParentMenuItem.SelectedValue = drpParentItem.SelectedValue;
             ClearContent();
         }
@@ -129,6 +130,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
             objBusinessLogic.DeleteMenuItem(PageId);
             lblMessage.Visible = true;
             Cache.Remove("MenuItemCache");
+            Cache.Remove(AppGlobal.Cache_HeaderMenu);
             //BindMenuItem();
             BindPage();
             lblMessage.CssClass = "successlbl";

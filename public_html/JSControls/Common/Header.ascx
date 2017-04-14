@@ -191,12 +191,12 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav menu menu_fr" style="padding-left:0">
                                 <li class="dropdown main-menu-bar" role="presentation">
-                                    <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
+                                    <a class="dropdown-toggle" id="idHome" role="button" href="/" aria-haspopup="true" aria-expanded="false">HOME</a>
                                 </li>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <li class="dropdown main-menu-bar" role="presentation">
-                            <a class="dropdown-toggle" id="idHome" href="/" role="button" aria-haspopup="true" aria-expanded="false"><%#Eval("Name") %>
+                            <a class="dropdown-toggle" id="idHome" href='<%# Eval("Url") %>' role="button" aria-haspopup="true" aria-expanded="false"><%#Eval("Name") %>
 <span class="caret"></span></a>
                             <asp:Literal ID="ltrlSubMenu" runat="server"></asp:Literal>
                         </li>

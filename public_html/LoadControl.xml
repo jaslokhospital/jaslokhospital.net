@@ -24,7 +24,7 @@
   <add key="/corporate-profile/jasloktimes" value="~/JSControls/MiddleContent/ViewJaslokTimes.ascx" Title="Jaslok Times"/>
   <add key="/corporate-profile/seminars" value="~/JSControls/MiddleContent/SemminarListing.ascx" Title="Seminars" />
   <add key="/corporate-profile/applyseminar" value="~/JSControls/MiddleContent/ApplySeminar.ascx" Title="Apply Seminar"/>
-  <add key="/corporate-profile/health-check-up" value="" Title="Health Checkup"/>
+  <add key="/specialties/health-check-up" value="" Title="Health Checkup"/>
   <add key="/corporate-profile/technological-milestone" value="" Title="Technological Milestone"/>
   <add key="/corporate-profile/hospital-facilities" value="" Title="Hospital Facilities"/>
   <add key="/corporate-profile" value="" Title="Corporate Profile"/>

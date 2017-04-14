@@ -3370,6 +3370,7 @@ namespace BusinessDataLayer
             };
 
             TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
+            CommonFn.DeleteCacheData(AppGlobal.Cache_HeaderMenu);
 	}
 
 // for Header Menu

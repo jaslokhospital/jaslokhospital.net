@@ -59,7 +59,7 @@ public partial class Payment : System.Web.UI.Page
             objDAEntities.Amount = 100;
             orderAmount = Convert.ToString(objDAEntities.Amount);
             objDAEntities.Guid = System.Guid.NewGuid().ToString();
-            Session["permenantRegistrationGuid"] = "Reg-"+objDAEntities.Guid;
+            Session["Guid"] = "Reg-"+objDAEntities.Guid;
             objBusinessLogic.SaveInfoGuid(objDAEntities);
         }
        

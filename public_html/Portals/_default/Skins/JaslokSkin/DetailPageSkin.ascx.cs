@@ -71,6 +71,7 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
 
             if (ds.Tables[1].Rows.Count > 0)
             {
+
                 if (id == 123)
                 {
                     divContent.Visible = true;

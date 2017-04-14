@@ -325,6 +325,10 @@ public class CommonFn
     {
         System.Web.HttpContext.Current.Cache.Insert(CacheName, CacheData, new CacheDependency(System.Web.HttpContext.Current.Server.MapPath("~/CacheFiles/" + CacheName + ".txt")));
     }
+    public static void DeleteCacheData(string CacheName)
+    {
+        System.Web.HttpContext.Current.Cache.Remove(CacheName);
+    }
     public static DataTable GetCacheData(string CacheName)
     {
         return (DataTable)System.Web.HttpContext.Current.Cache[CacheName];
