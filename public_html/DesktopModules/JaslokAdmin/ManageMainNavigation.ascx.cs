@@ -15,11 +15,17 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
-        if (!IsPostBack)
+        try
         {
-            BindMenuItem();
-            BindPage();
+            if (!IsPostBack)
+            {
+                BindMenuItem();
+                BindPage();
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.ToString());
         }
             //
         //}
@@ -83,7 +89,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
             }
             else
             {
-                objBusinessLogic.CreateTabWithModule(txtPageName.Text, txtPageUrl.Text);
+                objMenuItem.TabID = objBusinessLogic.CreateTabWithModule(txtPageName.Text, txtPageUrl.Text);
                 objBusinessLogic.ManageMenuItem(objMenuItem);
                 lblMessage.Visible = true;
                 lblMessage.CssClass = "successlbl";
@@ -99,7 +105,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
         {
             lblMessage.Visible = true;
             lblMessage.CssClass = "errorlbl";
-            lblMessage.Text = "Page with same name already exists!!";
+            lblMessage.Text = "Page with same name already exists!!" + ex.ToString();
         }
     }
     protected void btnCancel_Click(object sender, EventArgs e)
@@ -144,7 +150,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
         objItem = objBusinessLogic.GetAllMenuItems().FirstOrDefault(Q => Q.Id == Convert.ToInt32(hdnPageId.Value));
         if (objItem != null)
         {
-            hdnTabId.Value = objBusinessLogic.GetTabId(objItem.Name).ToString();
+            hdnTabId.Value = objItem.TabID.ToString(); //objBusinessLogic.GetTabId(objItem.Name).ToString();
             drpParentItem.SelectedValue = objItem.ParentId.ToString();
             txtPageName.Text = objItem.Name;
             txtPageUrl.Text = objItem.Url;

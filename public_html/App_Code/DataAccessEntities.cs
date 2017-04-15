@@ -477,6 +477,7 @@ namespace BusinessDataLayer
         public string Name { get; set; }
         public string Url { get; set; }
         public bool Published { get; set; }
+        public int TabID { get; set; }
     }
 
 }

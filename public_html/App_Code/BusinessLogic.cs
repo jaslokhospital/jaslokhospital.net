@@ -3302,7 +3302,7 @@ namespace BusinessDataLayer
                 return 0;
         }
 
-        public void CreateTabWithModule(string stTabName, string PageUrl)
+        public int CreateTabWithModule(string stTabName, string PageUrl)
         {
             //Create Tab
             PortalSettings portalSettings = new PortalSettings();
@@ -3371,6 +3371,8 @@ namespace BusinessDataLayer
 
             TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
             CommonFn.DeleteCacheData(AppGlobal.Cache_HeaderMenu);
+
+            return tabId;
 	}
 
 // for Header Menu
