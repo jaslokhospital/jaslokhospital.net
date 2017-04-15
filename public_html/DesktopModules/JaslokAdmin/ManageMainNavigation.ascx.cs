@@ -15,19 +15,12 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        try
+        if (!IsPostBack)
         {
-            if (!IsPostBack)
-            {
-                BindMenuItem();
-                BindPage();
-            }
+            BindMenuItem();
+            BindPage();
         }
-        catch (Exception ex)
-        {
-            Response.Write(ex.ToString());
-        }
-            //
+        //
         //}
     }
 
@@ -105,7 +98,7 @@ public partial class DesktopModules_JaslokAdmin_ManageMainNavigation : PortalMod
         {
             lblMessage.Visible = true;
             lblMessage.CssClass = "errorlbl";
-            lblMessage.Text = "Page with same name already exists!!" + ex.ToString();
+            lblMessage.Text = "Page with same name already exists!!";
         }
     }
     protected void btnCancel_Click(object sender, EventArgs e)
