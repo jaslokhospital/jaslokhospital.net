@@ -2033,7 +2033,7 @@ namespace BusinessDataLayer
 
         public void ManageMenuItem(MenuItems objItem)
         {
-            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_ManageMenuItems", new object[] { objItem.Id, objItem.ParentId, objItem.Name, objItem.Url, objItem.Published });
+            SqlHelper.ExecuteNonQuery(Config.GetConnectionString(), "JH_ManageMenuItems", new object[] { objItem.Id, objItem.ParentId, objItem.Name, objItem.Url, objItem.Published, objItem.TabID });
         }
 
         public void DeleteMenuItem(int PageId)

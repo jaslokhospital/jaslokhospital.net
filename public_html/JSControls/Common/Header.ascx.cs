@@ -531,7 +531,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                         {
                             lblLoginError.CssClass = "errorText";
                             lblLoginError.Visible = true;
-                            lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Password Reminder option before contacting an Administrator.";
+                            lblLoginError.Text = "This account has been locked out after too many unsuccessful login attempts. Please wait 10 minutes before trying to login again. If you have forgotten your password, please try the Forgot Password option before contacting an Administrator.";
                         }
                     }
                     else

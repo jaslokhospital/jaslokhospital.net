@@ -20,19 +20,29 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
 
     protected void Page_Load(object sender, EventArgs e)
     {
+	string rawUrl = Request.RawUrl.ToLower();
         contentpaneHeader.Controls.Add(LoadControl(CommonFn.IsMobileDevice() ? "~/JSControls/Mobile/MobileHeader.ascx" : "~/JSControls/Common/Header.ascx"));
 
         XmlDocument xmldoc = new XmlDocument();
         xmldoc.Load(Server.MapPath("~/LoadControl.xml"));
         XmlNode node = xmldoc.SelectSingleNode("/Data/add[@key='"+Request.RawUrl.ToLower()+"']");
-
-        if (node != null)
-        {
-            if (node.Attributes["value"].Value != string.Empty)
+	contentpane.Style.Add("display", "none");
+	if (node == null)
+	{
+	    node = xmldoc.SelectSingleNode("/Data/add[@startswith='" + rawUrl.Split('/')[1] + "']");
+	    if (node.Attributes["value"].Value != string.Empty)
                 divcontentpane.Controls.Add(LoadControl(node.Attributes["value"].Value));
             BindPageDetail(TabController.CurrentPage.TabID);
             h3header.InnerText = node.Attributes["Title"].Value;
-            SubRootSpan.InnerText = node.Attributes["Title"].Value;
+            SubRootSpan.InnerText = node.Attributes["Title"].Value;            
+	}
+        else
+        {
+	    if (node.Attributes["value"].Value != string.Empty)
+                divcontentpane.Controls.Add(LoadControl(node.Attributes["value"].Value));
+            BindPageDetail(TabController.CurrentPage.TabID);
+            h3header.InnerText = node.Attributes["Title"].Value;
+            SubRootSpan.InnerText = node.Attributes["Title"].Value;            
         }
     }
     public void BindPageDetail(int id)
@@ -79,6 +89,7 @@ public partial class Portals__default_Skins_JaslokSkin_DetailPageSkin : DotNetNu
                 }
                 else
                 {
+			contentpane.Style.Add("display", "block");
                     contentpane.InnerHtml = Convert.ToString(ds.Tables[1].Rows[0]["Content"]);
 
                     p.Title = Convert.ToString(ds.Tables[1].Rows[0]["PageTitle"]);

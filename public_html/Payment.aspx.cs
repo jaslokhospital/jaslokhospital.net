@@ -80,7 +80,7 @@ public partial class Payment : System.Web.UI.Page
         UserName = user.Username;
         //Session["Amount"] = null;
 
-        returnUrl = "http://43.242.214.219:8080/PaymentResponse.aspx";
+        returnUrl = "http://" + Request.ServerVariables["SERVER_NAME"] + "/PaymentResponse.aspx";
         
 
         notifyUrl = returnUrl;
