@@ -250,7 +250,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
     protected void LoginBtn_Click(object sender, EventArgs e)
     {
-        bool isPermanentUser = objBusinessLogic.IsExistMRNumber(txtLoginUsername.Text.Trim().ToString());
+        bool isPermanentUser = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());
         #region Session AppointmentDetails
         if (Session["AppointmentDetail"] != null)
         {
@@ -531,7 +531,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         JaslokMailer objMailer = new JaslokMailer();
         List<Parameters> lstParameters = new List<Parameters>();
         string lsEmailStatus = string.Empty;
-        bool isPermanentUser = objBusinessLogic.IsExistMRNumber(txtForgotPasswordUserName.Text.Trim().ToString());
+        bool isPermanentUser = objBusinessLogic.IsExistMrNo(txtForgotPasswordUserName.Text.Trim());
         if (!isPermanentUser)
         {
             MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
