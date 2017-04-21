@@ -573,17 +573,12 @@ namespace BusinessDataLayer
             try
             {
                 dsTest = objDataAccessLogic.SaveUserDetails(MRNO,Username, FName, LName, Email, DisplayName, Password, Telephone, Gender, Address, Age, OTP);
-                return dsTest;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            finally
-            {
-                dsTest = null;
-                objDataAccessLogic = null;
-            }
+            return dsTest;
         }
 
 
