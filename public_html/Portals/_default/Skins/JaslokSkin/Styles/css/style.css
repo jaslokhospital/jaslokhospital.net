@@ -2195,6 +2195,10 @@ hr {
     padding: 0;
     margin-bottom: 20px;
 }
+.right_part > .media > .media-body.right_section_media {
+    width: 82%;
+    padding: 0;
+}
 .opddoctors { margin-top: 10px }
 .right_part .media-body .opddoctors .btn-orange {
     padding: 4px;
@@ -2500,8 +2504,8 @@ select#doc > option {
     overflow-y: scroll;
 }
 .navbar-collapse {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
 .leftmenuweb_scroll::-webkit-scrollbar-track { background-color: #F5F5F5 }
 .leftmenuweb_scroll::-webkit-scrollbar {
@@ -2597,7 +2601,7 @@ select#doc > option {
 }
 .managemant-bg p { color: #333 }
 .panel-leftside { border-width: 0!important }
-.menu li a { font-size: 13px!important }
+.menu li a { font-size: 14px!important }
 .nav > li > a { padding: 10px 8px!important }
 .myModal { z-index: 9999 }
 #header {

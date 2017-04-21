@@ -5,6 +5,7 @@
 <%@ Register TagPrefix="dnn" TagName="Profile" Src="~/DesktopModules/Admin/Security/Profile.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Password" Src="~/DesktopModules/Admin/Security/Password.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="User" Src="~/DesktopModules/Admin/Security/User.ascx" %>
+<asp:Label ID="lblErrorMessage" runat="server" Visible="false"></asp:Label>
 <div class="dnnForm dnnLogin dnnClear">
     <asp:panel id="pnlLogin" runat="server" Visible="false">
         <div class="loginContent">

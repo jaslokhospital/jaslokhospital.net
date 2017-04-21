@@ -1,6 +1,18 @@
-﻿using System;
+﻿using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Modules.Definitions;
+using DotNetNuke.Entities.Portals;
+using DotNetNuke.Entities.Tabs;
+using DotNetNuke.Security.Permissions;
+using DotNetNuke.Entities.Urls;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Web;
+using System.Web.Caching;
+using System.Security.Cryptography;
+using System.Text;
+using System.IO;
 
 namespace BusinessDataLayer
 {
@@ -1937,15 +1949,14 @@ namespace BusinessDataLayer
             }
         }
 
-        public void SavePaymentBedSurgery(DataAccessEntities Slist)
-        {
-            string dsBA = string.Empty;
 
+        public void UpdateStatus(string JeevaStatus, int paymentId, string MrNo, DataTable dt = null)
+        {
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
-               objDataAccessLogic.SavePaymentBedSurgery(Slist);
-               
+                objDataAccessLogic.UpdateStatus(JeevaStatus, paymentId, MrNo, dt);
+
             }
             catch (Exception ex)
             {
@@ -1953,10 +1964,51 @@ namespace BusinessDataLayer
             }
             finally
             {
-                dsBA = null;
                 objDataAccessLogic = null;
             }
         }
+        public DataSet SavePaymentBookAppointment(string txnId, string Tranrefid, string Transtatus, string Guid, string JeevaStatus)
+        {
+            DataSet ds = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.SavePaymentBookAppointment(txnId, Tranrefid, Transtatus, Guid, JeevaStatus);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+        public DataSet SavePaymentDetails(string Guid, string txnId, string Tranrefid, string Transtatus)
+        {
+            DataSet ds = new DataSet();
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                ds = objDataAccessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ds = null;
+                objDataAccessLogic = null;
+            }
+        }
+
         public DataSet GetBedDetails()
         {
             DataSet dsHomeSlider = new DataSet();
@@ -3028,26 +3080,7 @@ namespace BusinessDataLayer
                 objDataAccessLogic = null;
             }
         }
-        public void SavePaymentBookAppointment(DataAccessEntities Slist)
-        {
-            string dsBA = string.Empty;
-
-            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
-            try
-            {
-                objDataAccessLogic.SavePaymentBookAppointment(Slist);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                dsBA = null;
-                objDataAccessLogic = null;
-            }
-        }
+       
         public DataSet GetBookingPaymentDetails()
         {
             DataSet ds = null;
@@ -3172,7 +3205,286 @@ namespace BusinessDataLayer
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             objDataAccessLogic.UpdateSmtpCredential(fnPassword);
         }
+
+        public List<MenuItems> GetAllMenuItems()
+        {
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            List<MenuItems> lstSections = new List<MenuItems>();
+            //DataCache.RemoveCache("Section_Categories");
+            var items = HttpContext.Current.Cache["MenuItemCache"];
+
+            if (items == null)
+            {
+                lstSections = CBO.FillCollection<MenuItems>(objDataAccessLogic.GetAllMenuItems());
+                HttpContext.Current.Cache.Insert("MenuItemCache", lstSections);
+            }
+            else
+            {
+                lstSections = (List<MenuItems>)items;
+            }
+            return lstSections;
+        }
+
+        public void ManageMenuItem(MenuItems objItems)
+        {
+            DataAccessLogic objDataAccess = new DataAccessLogic();
+            objDataAccess.ManageMenuItem(objItems);
+        }
+
+        public void DeleteMenuItem(int PageId)
+        {
+            DataAccessLogic objDataAccess = new DataAccessLogic();
+            objDataAccess.DeleteMenuItem(PageId);
+        }
+
+        public void DeleteTab(int TabId)
+        {
+            int portalId = 0;
+            TabController tabController = new TabController();
+            tabController.DeleteTab(TabId, portalId);
+        }
+
+        public void UpdateTabs(int TabId, string stTabName, string PageUrl)
+        {
+            int portalId = 0;
+            TabController tabController = new TabController();
+            TabInfo tab = new TabInfo();
+            tab = tabController.GetTab(TabId, portalId);
+            string pageSkin = string.Empty;
+            pageSkin = tab.SkinSrc;
+
+            tab = new TabInfo();
+            tab.PortalID = portalId;
+            tab.TabID = TabId;
+            tab.TabName = stTabName;
+            tab.Title = stTabName;
+            tab.Description = stTabName;
+            tab.KeyWords = stTabName;
+            //works for include in menu option. if true, will be shown in menus, else will not be shown, we have to redirect internally
+            tab.IsVisible = false;
+            tab.DisableLink = false;
+            tab.IsDeleted = false;
+            tab.Url = "";
+            tab.IsSuperTab = false;//if true, it has no parents, else false
+            tab.SkinSrc = pageSkin;//provide skin src, else will take default skin
+            tabController.UpdateTab(tab);
+
+            TabUrlInfo tabUrl = new TabUrlInfo()
+            {
+                TabId = TabId,
+                SeqNum = 0,
+                PortalAliasId = -1,
+                PortalAliasUsage = PortalAliasUsageType.Default,
+                QueryString = String.Empty,
+                Url = PageUrl,
+                HttpStatus = "200",
+                CultureCode = String.Empty,
+                IsSystem = true
+            };
+
+            TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
+        }
+
+        public int GetTabId(string stTabName)
+        {
+            TabController tabController = new TabController();
+            TabInfo tab = new TabInfo();
+            tab = tabController.GetTabByName(stTabName, 0);
+            if (tab != null)
+                return tab.TabID;
+            else
+                return 0;
+        }
+
+        public int CreateTabWithModule(string stTabName, string PageUrl)
+        {
+            //Create Tab
+            PortalSettings portalSettings = new PortalSettings();
+            int portalId = 0;
+
+            TabController tabController = new TabController();
+            //TabInfo parentTab = tabController.GetTabByName("Questionnaires", portalId);
+
+            TabInfo tab = new TabInfo();
+            tab.PortalID = portalId;
+            tab.TabName = stTabName;
+            tab.Title = stTabName;
+            tab.Description = stTabName;
+            tab.KeyWords = stTabName;
+            //works for include in menu option. if true, will be shown in menus, else will not be shown, we have to redirect internally
+            tab.IsVisible = false;
+            tab.DisableLink = false;
+            //if this tab has any parents provide parent tab id, so that it will be shown in parent tab menus sub menu list, else is NULL         //and will be in main menu list
+            //tab.ParentId = parentTab.TabID;
+            tab.IsDeleted = false;
+            tab.Url = "";
+            tab.IsSuperTab = false;//if true, it has no parents, else false
+            tab.SkinSrc = "[G]Skins/JaslokSkin/CommonSkin.ascx";//provide skin src, else will take default skin
+            int tabId = tabController.AddTab(tab, true);//true to load defalut modules
+
+            //Set Tab Permission
+            ModuleDefinitionInfo moduleDefinitionInfo = new ModuleDefinitionInfo();
+            TabPermissionController objTPC = new TabPermissionController();
+
+            TabPermissionInfo tpi = new TabPermissionInfo();
+            tpi.TabID = tabId;
+            tpi.PermissionID = 3;//for view
+            tpi.PermissionKey = "VIEW";
+            tpi.PermissionName = "View Tab";
+            tpi.AllowAccess = true;
+            tpi.RoleID = -1; //Role ID of administrator         
+            objTPC.AddTabPermission(tpi);
+
+            ModuleInfo moduleInfo = new ModuleInfo();
+            moduleInfo.PortalID = portalId;
+            moduleInfo.TabID = tabId;
+            moduleInfo.ModuleOrder = 1;
+            moduleInfo.ModuleTitle = "Module title comes here";
+            moduleInfo.PaneName = "ContentPane";
+            moduleInfo.ModuleDefID = 117;
+            moduleInfo.CacheTime = moduleDefinitionInfo.DefaultCacheTime;
+            moduleInfo.InheritViewPermissions = true;
+            moduleInfo.AllTabs = false;
+            moduleInfo.Alignment = "Top";
+
+            ModuleController moduleController = new ModuleController();
+            int moduleId = moduleController.AddModule(moduleInfo);
+
+            TabUrlInfo tabUrl = new TabUrlInfo()
+            {
+                TabId = tabId,
+                SeqNum = 0,
+                PortalAliasId = -1,
+                PortalAliasUsage = PortalAliasUsageType.Default,
+                QueryString = String.Empty,
+                Url = PageUrl,
+                HttpStatus = "200",
+                CultureCode = String.Empty,
+                IsSystem = true
+            };
+
+            TabController.Instance.SaveTabUrl(tabUrl, portalId, true);
+            CommonFn.DeleteCacheData(AppGlobal.Cache_HeaderMenu);
+
+            return tabId;
+	}
+
+// for Header Menu
+      
+        public DataTable GetAll_HeaderMenu()
+        {
+            DataTable dt = new DataTable();
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                dt = CommonFn.GetCacheData(AppGlobal.Cache_HeaderMenu);
+                if (dt == null)
+                {
+                    dt = objDataAccessLogic.GetAll_HeaderMenu();
+                    CommonFn.InsertCacheData(dt, AppGlobal.Cache_HeaderMenu);
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dt = null;
+            }
+        }
+
+        public void SaveInfoGuid(DataAccessEntities Slist)
+        {
+            string dsBA = string.Empty;
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsBA = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+        public void SaveAppointmentInfoGuid(DataAccessEntities Slist)
+        {
+            string dsBA = string.Empty;
+
+            DataAccessLogic objDataAccessLogic = new DataAccessLogic();
+            try
+            {
+                objDataAccessLogic.SaveAppointmentInfoGuid(Slist);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dsBA = null;
+                objDataAccessLogic = null;
+            }
+        }
+
+
+        public string Decrypt(string cipherText)
+        {
+            string EncryptionKey = "AVZMAKV2SPBNI9921200CBCZZSMGM";
+            cipherText = cipherText.Replace(" ", "+");
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(cipherBytes, 0, cipherBytes.Length);
+                        cs.Close();
+                    }
+                    cipherText = Encoding.Unicode.GetString(ms.ToArray());
+                }
+            }
+            return cipherText;
+        }
+
+
+        public string Encrypt(string clearText)
+        {
+            string EncryptionKey = "AVZMAKV2SPBNI9921200CBCZZSMGM";
+            byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Close();
+                    }
+                    clearText = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+            return clearText;
+        }
     }
+
     public class DoctorSchedule
     {
         public string Day { get; set; }
@@ -3180,4 +3492,5 @@ namespace BusinessDataLayer
         public int TimeSlot { get; set; }
         public int SpecialtyId { get; set; }
     }
+   
 }

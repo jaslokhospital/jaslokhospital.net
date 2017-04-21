@@ -103,10 +103,19 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         objDAEntities.MRNumber = user.Username;
         //objDAEntities.AdmissionCharge = Convert.ToString(10);
         //Session["Amount"] = Convert.ToString(10);
-        Session["Amount"] = objDAEntities.AdmissionCharge;
-        Session["HealthCheck-upComprehensive"] = objDAEntities;
+        //Session["Amount"] = objDAEntities.AdmissionCharge;
+        //Session["HealthCheck-upComprehensive"] = objDAEntities;
 
-
+        objDAEntities.Amount = Convert.ToInt32(objDAEntities.AdmissionCharge);
+        string _categoryName = objDAEntities.Category;
+        if (_categoryName == "Male" || _categoryName == "Female")
+        {
+            _categoryName = "Package B (" + objDAEntities.Category + ")";
+        }
+        objDAEntities.Category = _categoryName;
+        objDAEntities.Guid = System.Guid.NewGuid().ToString();
+        Session["Guid"] = "Hea-" + objDAEntities.Guid;
+        objBusinessLogic.SaveInfoGuid(objDAEntities);
 
 
         //Response.Redirect(@"/Payment.aspx");
@@ -118,8 +127,8 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         }
         else
         {
-            Response.Redirect("/Payment.aspx");
-            //string pageurl = "/Payment.aspx";
+            string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+            Response.Redirect("/Payment.aspx?amount=" + amount);
             //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
         }
     }

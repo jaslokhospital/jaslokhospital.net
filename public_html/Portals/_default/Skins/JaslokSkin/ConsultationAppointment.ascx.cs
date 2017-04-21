@@ -228,9 +228,6 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-       
-
-
         Boolean DSFlag = false;
         JaslokMailer objMailer = new JaslokMailer();
         List<Parameters> lstParameters = new List<Parameters>();
@@ -263,6 +260,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                 objDAEntities.TimeDate = DateTime.ParseExact(ddlAppointMentDate.SelectedValue, "dd/MM/yyyy", CultureInfo.InvariantCulture) + time;
                 objDAEntities.Name = txtName.Text;
                 objDAEntities.Day = Convert.ToDateTime(txtdob.SelectedDate).ToString("dd/MM/yyyy");//Convert.ToString(txtdob.SelectedDate);
+                objDAEntities.DOB=Convert.ToDateTime(txtdob.SelectedDate);
                 objDAEntities.Email = txtEmail.Text;
                 objDAEntities.PhoneNo = txtPhoneNo.Text;
                 objDAEntities.MobileNo = txtMobileNo.Text;
@@ -319,9 +317,15 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         objDAEntities.AppointmentTypeCharge = ((Request.RawUrl.ToLower().Contains("/consultationappointment/follow-up")) == true) ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
                         objDAEntities.dName = lblDoctorName.Text;
                         objDAEntities.MRNumber = objuser.Username;
-                        Session["Amount"] = lblAppointmentType.Text;
+                        //Session["Amount"] = lblAppointmentType.Text;
                         //Session["Amount"] = "10";
-                        Session["ConsultationAppointment"] = objDAEntities;
+                        //Session["ConsultationAppointment"] = objDAEntities;
+                        objDAEntities.Amount = Convert.ToInt32(lblAppointmentType.Text);
+                        objDAEntities.FacilityName = "Consultation Appointment";
+                        objDAEntities.Guid = System.Guid.NewGuid().ToString();
+                        Session["Guid"] = "App-" + objDAEntities.Guid;
+                        objBusinessLogic.SaveAppointmentInfoGuid(objDAEntities);
+
                         if (CommonFn.UserID <= 0)
                         {
                             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){loadUserPopup();});", true);
@@ -331,7 +335,9 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                             PlaceMessage.Visible = true;
                             placeRightPart.Visible = false;
                             Clear();
-                            Response.Redirect("/Payment.aspx");
+                            string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(objDAEntities.Amount.ToString()));
+                            Response.Redirect("/Payment.aspx?amount=" + amount);
+                           // Response.Redirect("/PaymentResponse.aspx");
 							 //string pageurl = "/Payment.aspx";
                         //Response.Write("<script> window.open('" + pageurl + "','_blank'); </script>");
                         }
