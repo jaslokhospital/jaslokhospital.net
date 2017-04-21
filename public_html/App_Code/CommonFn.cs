@@ -269,7 +269,7 @@ public class CommonFn
     public static string SendSMS(string contact, string message)
     {
         WebClient client = new WebClient();
-        string baseurl = "http://smsapi.cellapps.com/api/v3/?method=sms&api_key=A316202f45dd36422fdbd773f33a3a44e&to=" + contact + "&sender=Jaslok&message=" + message;
+        string baseurl = "http://backup.cellapps.com/api/v3/?method=sms&api_key=Afa078bba2cc96e0a71649e1af4f893a1&to=" + contact + "&sender=Jaslok&message=" + message;
         Stream data = client.OpenRead(baseurl);
         StreamReader reader = new StreamReader(data);
         string s = reader.ReadToEnd();
