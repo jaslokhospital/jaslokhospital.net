@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Web;
 
 namespace BusinessDataLayer
 {
@@ -555,22 +556,16 @@ namespace BusinessDataLayer
         public DataSet SaveUserDetails(string MRNO,string Username, string FName, string LName, string Email, string DisplayName, string Password, string Telephone, string Gender, string Address, string Age, string OTP)
         {
             DataSet dsTest = new DataSet();
-
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
                 dsTest = objDataAccessLogic.SaveUserDetails(MRNO,Username, FName, LName, Email, DisplayName, Password, Telephone, Gender, Address, Age, OTP);
-                return dsTest;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            finally
-            {
-                dsTest = null;
-                objDataAccessLogic = null;
-            }
+            return dsTest;
         }
 
 

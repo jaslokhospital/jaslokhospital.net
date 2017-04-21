@@ -34,6 +34,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
     {
         try
         {
+            //Membership.DeleteUser("JH171078707");
             if (!IsPostBack)
             {
                 if (Session["IsVisitor"] != null)
@@ -249,26 +250,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
     protected void LoginBtn_Click(object sender, EventArgs e)
     {
-
-        //#region CSV Updation For User
-        //DataSet dsUser = new DataSet();
-        //DataAccessEntities oEntities = new DataAccessEntities();
-        //oEntities.Email = "";
-        //oEntities.MRNumber = txtLoginUsername.Text;
-        //oEntities.UserName = "";
-        //dsUser = objBusinessLogic.GetUserNameByMRNumber(oEntities);
-        //string visitorId = string.Empty;
-        //string AvailableMR = string.Empty;
-        //if (dsUser != null && dsUser.Tables[0].Rows.Count > 0)
-        //{
-        //    visitorId = dsUser.Tables[0].Rows[0]["UserName"].ToString();
-        //    Messege = dsUser.Tables[0].Rows[0]["Messege"].ToString();
-        //    AvailableMR = dsUser.Tables[0].Rows[0]["AvailableMR"].ToString();
-        //    Session["IsMR"] = Convert.ToString(AvailableMR);
-        //}
-        //#endregion
-
-
+        #region Session AppointmentDetails
         if (Session["AppointmentDetail"] != null)
         {
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
@@ -322,6 +304,9 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 return;
             }
         }
+        #endregion
+
+        #region Session ConsultationAppointment
         else if (Session["ConsultationAppointment"] != null)
         {
             bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
@@ -374,208 +359,152 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
                 return;
             }
         }
+        #endregion
+
+        #region Fresh Login
         else
         {
             JaslokMailer objMailer = new JaslokMailer();
             List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
             PatIndex objPatIndex = new PatIndex();
-            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-
-            if (IsNum == false)
+            bool _isPermanentUser = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text);
+            if (!_isPermanentUser)
             {
-
-                // check for visitor id and MRNO
-                string MRNumber;
-                string Username;
-                DataSet ds = objBusinessLogic.GetMRNumberByUserName(txtLoginUsername.Text.Trim());
-
-                if (ds.Tables[0].Rows.Count > 0)
+                #region Check MrNumber in JEEVA
+                var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
                 {
-                    MRNumber = ds.Tables[0].Rows[0]["MRNumber"].ToString();
-                    Username = ds.Tables[0].Rows[0]["Username"].ToString();
-                }
-                else
-                {
-                    lblLoginError.CssClass = "errorText";
-                    lblLoginError.Visible = true;
-                    lblLoginError.Text = "Please enter correct Id and Password!";
-                    return;
-
-                }
-                if (string.IsNullOrEmpty(MRNumber) && !string.IsNullOrEmpty(Username))
-                {
-                    //loginStatus = UserLoginStatus.LOGIN_SUCCESS;
-
-
-                    UserInfo objUser = new UserInfo();
-                    objUser.Username = txtLoginUsername.Text.Trim();
-                    UserMembership objMembership = new UserMembership(objUser);
-                    objMembership.Username = txtLoginUsername.Text.Trim();
-                    objMembership.Password = txtLoginPassword.Text;
-                    objUser.Membership = objMembership;
-
-                    PortalSettings po = new PortalSettings();
-                    UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                    UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-                    if (objUserInfo != null)
+                    DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
+                    if (dsVal.Tables[0].Rows.Count == 1)
                     {
-                        UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+                        Session["IsVisitor"] = null;
+                        UserInfo objUser = new UserInfo();
+                        objUser.Username = txtLoginUsername.Text.Trim();
+                        UserMembership objMembership = new UserMembership(objUser);
+                        objMembership.Username = txtLoginUsername.Text.Trim();
+                        objMembership.Password = txtLoginPassword.Text;
+                        objUser.Membership = objMembership;
 
-                        Session["IsVisitor"] = true;
-
-                        Response.Redirect("/redirect");
-
-                        //Response.Redirect("/redirect");
-
-                    }
-                    else
-                    {
-                        if (loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
+                        PortalSettings po = new PortalSettings();
+                        UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                        UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+                        if (objUserInfo != null)
                         {
-
-                            lblLoginError.CssClass = "errorText";
-
-                            lblLoginError.Visible = true;
-
-                            lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
-
-                            return;
-
-                        }
-
-                        lblLoginError.CssClass = "errorText";
-                        lblLoginError.Visible = true;
-                        lblLoginError.Text = "Please enter correct password!";
-                        return;
-
-
-                    }
-
-                }
-
-                if (!string.IsNullOrEmpty(MRNumber))
-                {
-                    lblLoginError.CssClass = "errorText";
-                    lblLoginError.Visible = true;
-                    lblLoginError.Text = "Please Enter MR Number To Login!";
-                    return;
-                }
-
-            }
-            if (IsNum == true)
-            {
-                // check for Mr Number in db
-                bool check = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text.Trim());
-
-                if (check == true)
-                {
-                    UserInfo objUser = new UserInfo();
-                    objUser.Username = txtLoginUsername.Text.Trim();
-                    UserMembership objMembership = new UserMembership(objUser);
-                    objMembership.Username = objUser.Username.Trim();
-                    objMembership.Password = txtLoginPassword.Text;
-                    objUser.Membership = objMembership;
-
-
-                    PortalSettings po = new PortalSettings();
-                    UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                    UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-                    if (objUserInfo != null)
-                    {
-
-                        UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-
-
-
-                        if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
-                        {
-                            if (hdnRedirectUrl.Value.ToLower() == "patientregistration")
-                            {
-                                Response.Redirect("/");
-                            }
-                            else
-                            Response.Redirect("/" + hdnRedirectUrl.Value);
+                            UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+                            Response.Redirect("/redirect");
                         }
                         else
-                            Response.Redirect("/redirect");
-
+                        {
+                            lblLoginError.CssClass = "errorText";
+                            lblLoginError.Visible = true;
+                            lblLoginError.Text = "Please enter correct password!";
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    // check for visitor id and MRNO
+                    string MRNumber;
+                    string Username;
+                    DataSet ds = objBusinessLogic.GetMRNumberByUserName(txtLoginUsername.Text.Trim());
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        MRNumber = ds.Tables[0].Rows[0]["MRNumber"].ToString();
+                        Username = ds.Tables[0].Rows[0]["Username"].ToString();
                     }
                     else
                     {
                         lblLoginError.CssClass = "errorText";
                         lblLoginError.Visible = true;
-                        lblLoginError.Text = "Please enter correct password!";
+                        lblLoginError.Text = "Please enter correct Id and Password!";
                         return;
                     }
-
-                    //UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-                    //Response.Redirect("/redirect");
-
-
-
-                }
-                // If User enters MRNo. which we do not have
-                else
-                {
-                    var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
-
-
-                    if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
+                    if (string.IsNullOrEmpty(MRNumber) && !string.IsNullOrEmpty(Username))
                     {
+                        UserInfo objUser = new UserInfo();
+                        objUser.Username = txtLoginUsername.Text.Trim();
+                        UserMembership objMembership = new UserMembership(objUser);
+                        objMembership.Username = txtLoginUsername.Text.Trim();
+                        objMembership.Password = txtLoginPassword.Text;
+                        objUser.Membership = objMembership;
 
-
-
-                        DataSet dsVal = InsertUpdateUserDetails(PatientDetails.MRNO, PatientDetails.PatFName, PatientDetails.PatLName, PatientDetails.PatEmail, PatientDetails.WEBPWD, PatientDetails.PatMobile, PatientDetails.PatSex, PatientDetails.PatAddr1, PatientDetails.PatAge);
-
-
-                        if (dsVal.Tables[0].Rows.Count == 1)
+                        PortalSettings po = new PortalSettings();
+                        UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                        UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+                        if (objUserInfo != null)
                         {
-                            // loginStatus = UserLoginStatus.LOGIN_SUCCESS;
-
-                            Session["IsVisitor"] = null;
-                            UserInfo objUser = new UserInfo();
-                            objUser.Username = txtLoginUsername.Text.Trim();
-                            UserMembership objMembership = new UserMembership(objUser);
-                            objMembership.Username = txtLoginUsername.Text.Trim();
-                            objMembership.Password = txtLoginPassword.Text;
-                            objUser.Membership = objMembership;
-
-                            PortalSettings po = new PortalSettings();
-                            UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                            UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-                            if (objUserInfo != null)
-                            {
-
-                                UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-
-
-                                //if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
-                                //{
-                                //    Response.Redirect("/" + hdnRedirectUrl.Value);
-                                //}
-                                //else
-                                Response.Redirect("/redirect");
-
-                            }
-                            else
+                            UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+                            Session["IsVisitor"] = true;
+                            Response.Redirect("/redirect");
+                        }
+                        else
+                        {
+                            if (loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
                             {
                                 lblLoginError.CssClass = "errorText";
                                 lblLoginError.Visible = true;
-                                lblLoginError.Text = "Please enter correct password!";
+                                lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
                                 return;
                             }
+                            lblLoginError.CssClass = "errorText";
+                            lblLoginError.Visible = true;
+                            lblLoginError.Text = "Please enter correct password!";
+                            return;
                         }
                     }
-                    else
+                    if (!string.IsNullOrEmpty(MRNumber))
                     {
                         lblLoginError.CssClass = "errorText";
                         lblLoginError.Visible = true;
-                        lblLoginError.Text = "Login Failed! You are not authorized to access Jaslok Portal!";
+                        lblLoginError.Text = "Please Enter MR Number To Login!";
+                        return;
                     }
+                    lblLoginError.CssClass = "errorText";
+                    lblLoginError.Visible = true;
+                    lblLoginError.Text = "Login Failed! You are not authorized to access Jaslok Portal!";
+                }
+                #endregion
+            }
+            else
+            {
+                UserInfo objUser = new UserInfo();
+                objUser.Username = txtLoginUsername.Text.Trim();
+                UserMembership objMembership = new UserMembership(objUser);
+                objMembership.Username = objUser.Username.Trim();
+                objMembership.Password = txtLoginPassword.Text;
+                objUser.Membership = objMembership;
+
+
+                PortalSettings po = new PortalSettings();
+                UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+                if (objUserInfo != null)
+                {
+                    UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
+                    if (!string.IsNullOrEmpty(hdnRedirectUrl.Value))
+                    {
+                        if (hdnRedirectUrl.Value.ToLower() == "patientregistration")
+                        {
+                            Response.Redirect("/");
+                        }
+                        else
+                            Response.Redirect("/" + hdnRedirectUrl.Value);
+                    }
+                    else
+                        Response.Redirect("/redirect");
+                }
+                else
+                {
+                    lblLoginError.CssClass = "errorText";
+                    lblLoginError.Visible = true;
+                    lblLoginError.Text = "Please enter correct password!";
+                    return;
                 }
             }
         }
+        #endregion
     }
 
 
