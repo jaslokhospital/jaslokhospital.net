@@ -250,11 +250,11 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
 
     protected void LoginBtn_Click(object sender, EventArgs e)
     {
+        bool isPermanentUser = objBusinessLogic.IsExistMRNumber(txtLoginUsername.Text.Trim().ToString());
         #region Session AppointmentDetails
         if (Session["AppointmentDetail"] != null)
         {
-            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-            if (IsNum == true)
+            if (isPermanentUser)
             {
                 UserInfo objUser = new UserInfo();
                 objUser.Username = txtLoginUsername.Text.Trim();
@@ -309,8 +309,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         #region Session ConsultationAppointment
         else if (Session["ConsultationAppointment"] != null)
         {
-            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-            if (IsNum == true)
+            if (isPermanentUser)
             {
                 UserInfo objUser = new UserInfo();
                 objUser.Username = txtLoginUsername.Text.Trim();
@@ -368,8 +367,7 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
             List<Parameters> lstParameters = new List<Parameters>();
             string lsEmailStatus = string.Empty;
             PatIndex objPatIndex = new PatIndex();
-            bool _isPermanentUser = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text);
-            if (!_isPermanentUser)
+            if (!isPermanentUser)
             {
                 #region Check MrNumber in JEEVA
                 var PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
@@ -533,7 +531,8 @@ public partial class JSControls_Home_Header : System.Web.UI.UserControl
         JaslokMailer objMailer = new JaslokMailer();
         List<Parameters> lstParameters = new List<Parameters>();
         string lsEmailStatus = string.Empty;
-        if (!IsNumber(txtForgotPasswordUserName.Text))
+        bool isPermanentUser = objBusinessLogic.IsExistMRNumber(txtForgotPasswordUserName.Text.Trim().ToString());
+        if (!isPermanentUser)
         {
             MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
             if (objUser != null)
