@@ -568,7 +568,6 @@ namespace BusinessDataLayer
         public DataSet SaveUserDetails(string MRNO,string Username, string FName, string LName, string Email, string DisplayName, string Password, string Telephone, string Gender, string Address, string Age, string OTP)
         {
             DataSet dsTest = new DataSet();
-
             DataAccessLogic objDataAccessLogic = new DataAccessLogic();
             try
             {
