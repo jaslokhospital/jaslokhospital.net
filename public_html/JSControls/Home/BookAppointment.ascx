@@ -2,6 +2,20 @@
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 <style>
 .btn-widget-container {margin:0;}
+/*.btn-widget a.green-lg	{background: #fff;
+    color: #e04c56;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;}
+a.green-lg span{
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+}
+a.green-lg:hover{background:#d39caf; color:#fff;}*/
 </style>
 
 <div class="row top">
@@ -16,6 +30,7 @@
 		var e=document.createElement("script");
 		e.type="text/javascript",e.src="https://www.qikwell.com/qikwell-widget.js?"+n,document.getElementsByTagName("head")[0].appendChild(e);
 	}();
+//setTimeout(function(){$("a.green-lg").append("<span>Book Appointment</span>")}, "1000");
 </script>
 <a id="qikwell-widget-container" data-widget-id="e990c7ef-f1c0-4036-8b49-720f77d31fbd" data-sub-source="1" name="qikwell-widget-container" data-entity-type="clinic" data-entity-id="c78e8bf6-78ba-4e5b-87dc-e4efd5079ac9" >
 Book Appointment at Jaslok Hospital and Research Centre,Peddar Road,Mumbai</a>
