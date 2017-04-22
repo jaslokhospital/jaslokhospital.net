@@ -1,14 +1,25 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BookAppointment.ascx.cs" Inherits="JSControls_Home_BookAppointment" EnableViewState="true" ViewStateMode="Enabled" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
-<%--<style>
-    .datetimepicker-minutes .table-condensed td, .datetimepicker-hours .table-condensed td, .datetimepicker-days  .table-condensed td{font-size:12px !important; } 
-</style>--%>
+<style>
+.btn-widget-container {margin:0;}
+</style>
 
 <div class="row top">
     <telerik:RadAjaxPanel ID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel1" runat="server" RestoreOriginalRenderDelegate="false">
     <div class="container">
         <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-            <div class="book-now">
+            <div class="book-now" style="text-align:center;">
+<script type="text/javascript">
+	!function(){
+		var d = new Date();
+		var n = d.getTime();
+		var e=document.createElement("script");
+		e.type="text/javascript",e.src="https://www.qikwell.com/qikwell-widget.js?"+n,document.getElementsByTagName("head")[0].appendChild(e);
+	}();
+</script>
+<a id="qikwell-widget-container" data-widget-id="e990c7ef-f1c0-4036-8b49-720f77d31fbd" data-sub-source="1" name="qikwell-widget-container" data-entity-type="clinic" data-entity-id="c78e8bf6-78ba-4e5b-87dc-e4efd5079ac9" >
+Book Appointment at Jaslok Hospital and Research Centre,Peddar Road,Mumbai</a>
+<div style="display:none;">
                         <div class="bookappointmentie">
                         <asp:DropDownList CssClass="sort-by col-md-3" runat="server" ID="ddlSpecialtyB" OnSelectedIndexChanged="ddlSpecialtyB_SelectedIndexChanged" AutoPostBack="true" EnableViewState="true" ViewStateMode="Enabled">
                         </asp:DropDownList>
@@ -33,7 +44,7 @@
                    
 
                 <%--  <button class="btn">BOOK NOW</button>--%>
-                
+</div>
             </div>
         </div>
     </div>

@@ -756,8 +756,8 @@ DOWNLOADCOPYRETURN*/
     }
     .logo4 { margin: 0 }
     .book-now {
-        /*padding: 23px 13px 0px;*/  padding: 10px 13px 0px 10px;
-       height: 150px;
+        /*padding: 23px 13px 0px;*/  padding: 18px 10px 0px 10px;
+	/*height: 150px;*/
     position: relative;
     }
     select.sort-by { /*width: 100%*/height: 30px; width: 25%;font-size: 14px; font-family: calibri;}
