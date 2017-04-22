@@ -26,7 +26,7 @@ public partial class Payment : System.Web.UI.Page
         //formPostUrl = "https://www.citruspay.com/jaslokhospital";
 
         string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
-
+        string _httpProtocol = host.StartsWith("www.") ? "https://" : "http://";
         if (host.StartsWith("www."))
         {
             formPostUrl = System.Configuration.ConfigurationManager.AppSettings["fromPostUrl"];
@@ -80,7 +80,7 @@ public partial class Payment : System.Web.UI.Page
         UserName = user.Username;
         //Session["Amount"] = null;
 
-        returnUrl = "http://" + Request.ServerVariables["SERVER_NAME"] + "/PaymentResponse.aspx";
+        returnUrl = _httpProtocol + Request.ServerVariables["SERVER_NAME"] + "/PaymentResponse.aspx";
         
 
         notifyUrl = returnUrl;
