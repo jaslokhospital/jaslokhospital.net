@@ -1,13 +1,17 @@
-﻿using DotNetNuke.Entities.Users;
+﻿using BusinessDataLayer;
+using DotNetNuke.Entities.Users;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Web.Caching;
 
 public static class Extensions
 {
@@ -105,6 +109,37 @@ public class CommonFn
         }
         return false;
 
+    }
+
+    public ArrayList GetArticleThumbnails(int portalID, string ImgType, string id)
+    {
+        ArrayList arrayList = new ArrayList();
+        ArrayList arrayList1 = new ArrayList();
+        DateTime filecreationdate = DateTime.Now;
+        string ImgPath = string.Empty;
+        if (ImgType != "" && id != "")
+        {
+            ImgPath = HttpContext.Current.Server.MapPath("/Portals/" + portalID + "/" + ImgType + "/" + id);
+        }
+        else if (ImgType != "")
+        {
+            ImgPath = HttpContext.Current.Server.MapPath("/Portals/" + portalID + "/" + ImgType);
+        }
+        else
+        {
+            ImgPath = HttpContext.Current.Server.MapPath("/Portals/" + portalID);
+        }
+
+        DirectoryInfo dir = new DirectoryInfo(ImgPath);
+
+        FileInfo[] SortedFiles = dir.GetFiles().OrderByDescending(file => file.CreationTime).ThenBy(file => file.Name).ToArray();
+
+        foreach (FileInfo info in SortedFiles)
+        {
+            if (info.Extension.ToLower() == ".jpg" || info.Extension.ToLower() == ".jpeg" || info.Extension.ToLower() == ".png" || info.Extension.ToLower() == ".gif")
+                arrayList.Add(info.Name);
+        }
+        return arrayList;
     }
     public static string RemoveBadCharForFolder(string f)
     {
@@ -284,5 +319,18 @@ public class CommonFn
             }
         }
         return _isMobile;
+    }
+
+    public static void InsertCacheData(object CacheData, string CacheName)
+    {
+        System.Web.HttpContext.Current.Cache.Insert(CacheName, CacheData, new CacheDependency(System.Web.HttpContext.Current.Server.MapPath("~/CacheFiles/" + CacheName + ".txt")));
+    }
+    public static void DeleteCacheData(string CacheName)
+    {
+        System.Web.HttpContext.Current.Cache.Remove(CacheName);
+    }
+    public static DataTable GetCacheData(string CacheName)
+    {
+        return (DataTable)System.Web.HttpContext.Current.Cache[CacheName];
     }
 }

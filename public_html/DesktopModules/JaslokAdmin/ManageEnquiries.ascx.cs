@@ -217,8 +217,7 @@ namespace DotNetNuke.Modules.JaslokAdmin
                 {
 
                     dgEnquiry.Columns[2].Visible = false;
-                    dgEnquiry.Columns[3].Visible = false;
-                    dgEnquiry.Columns[4].Visible = false;
+                    dgEnquiry.Columns[3].Visible = false;                    
                     dgEnquiry.Columns[6].Visible = false;
                     dgEnquiry.Columns[8].Visible = false;
                     dgEnquiry.Columns[9].Visible = false;

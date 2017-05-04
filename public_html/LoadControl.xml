@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <add key="/corporate-profile/scope-of-services" value="" Title="Scope of Services"/>
+  <add key="/corporate-profile/vision-and-mission" value="" Title="Vision and Mission" />
+  <add key="/corporate-profile/from-the-chairmans-desk" value="" Title="From The Chairman’s Desk"/>
+  <add key="/photo-gallery" value="~/JSControls/MiddleContent/InnerPhotoGallery.ascx" Title="Photo Gallery"/>
+  <add key="/corporate-profile/video-gallery" value="~/JSControls/MiddleContent/InnerVideoGallery.ascx" Title="Video Gallery" />
+  
+  <add key="/corporate-profile/management-team" value="~/JSControls/MiddleContent/InnerManagement.ascx" Title="Management"/>
+  <add key="" startswith="management" value="~/JSControls/MiddleContent/ManagementDetails.ascx" Title="Management Details"/>
+  <add key="/corporate-profile/jaslok-news" value="~/JSControls/MiddleContent/NewsListing.ascx" Title="Jaslok in News" />
+  <add key="/corporate-profile/press" value="~/JSControls/MiddleContent/JaslokNewsDetails.ascx" Title="Jaslok in News" />
+
+  <add key="/corporate-profile/trustees" value="~/JSControls/MiddleContent/InnerTrustees.ascx" Title="Trustees"/>
+  <add key="/corporate-profile/certifications" value="" Title="Certifications"/>
+  <add key="/corporate-profile/jaslok-news" value="~/JSControls/MiddleContent/NewsListing.ascx"  Title="Jaslok in News"/>
+  <add key="/trustees" value="~/JSControls/MiddleContent/ManagementDetails.ascx" Title="Trustees" />
+  <add key="/corporate-profile/mediaroom" value="~/JSControls/MiddleContent/InnerMediaRoom.ascx" Title="Media Room"/>
+  <add key="/corporate-profile/tenders" value="~/JSControls/MiddleContent/InnerTenders.ascx" Title="Tenders" />
+  <add key="/corporate-profile/quality-corner" value="" Title="Quality Corner"/>
+  <add key="" startswith="trustees" value="~/JSControls/MiddleContent/ManagementDetails.ascx" Title="Trustees Details"/>
+  <add key="/contact-us" value="~/JSControls/Common/Contactus.ascx" Title="Contact Us"/>
+
+  <add key="/corporate-profile/frequently-asked-questions" value="~/JSControls/MiddleContent/InnerTenders.ascx" Title="FAQs"/>
+  <add key="/corporate-profile/jasloktimes" value="~/JSControls/MiddleContent/ViewJaslokTimes.ascx" Title="Jaslok Times"/>
+  <add key="/corporate-profile/seminars" value="~/JSControls/MiddleContent/SemminarListing.ascx" Title="Seminars" />
+  <add key="/corporate-profile/applyseminar" value="~/JSControls/MiddleContent/ApplySeminar.ascx" Title="Apply Seminar"/>
+  <add key="/specialties/health-check-up" value="" Title="Health Checkup"/>
+  <add key="/corporate-profile/technological-milestone" value="" Title="Technological Milestone"/>
+  <add key="/corporate-profile/hospital-facilities" value="" Title="Hospital Facilities"/>
+  <add key="/corporate-profile" value="" Title="Corporate Profile"/>
+  
+  <add key="/about-us" value="" Title="About Us"/>
+  <add key="/career" value="~/JSControls/MiddleContent/JaslokCareer.ascx" Title="Career" />
+  <add key="/applytojaslok" value="~/JSControls/MiddleContent/ApplyJaslokCareer.ascx" Title="Apply to Jaslok"/>
+  <add key="/sitemap" value="~/JSControls/MiddleContent/Sitemap.ascx" Title="sitemap" />
+  <add key="/privacy-policy" value="" Title="Privacy Policy"/>
+
+
+  <add key="/surgery-booking" value="~/JSControls/MiddleContent/SurgeryBooking.ascx" Title="Surgery Grade Wise" />
+  <add key="/outstandingbillpayment" value="~/JSControls/MiddleContent/OutStandingBillPayment.ascx" Title="Outstanding Bill Payment"/>
+  <add key="/jhrcstent" value="" Title="Jaslok Hospital and Research Center Stent Prices"/>
+
+</Data>

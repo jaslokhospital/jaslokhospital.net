@@ -46,6 +46,17 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-8">                
+                <asp:TextBox ID="txtthumbnail" class="form-control" runat="server"></asp:TextBox>               
+            </div>
+            <div class="col-md-4">
+                <input type="button" style="height:38px;" class="btn btn-primary2" value="Pick a file" onclick="var NewThumb = '<%= txtthumbnail.ClientID %>';var ImgCaption='<%= hdnCaption.ClientID %>'; var popup = window.open('/thumbnail_browse.aspx?txtName=' + NewThumb + '&ImageCaption='+ImgCaption+'&Image=', 'Thumbnail Repository', 'width=500,height=600,scrollbars=1'); popup.focus();" />
+            &nbsp;
+			<input type="button" style="height:38px;" class="btn btn-primary2" onclick="generateImage('<%= txtthumbnail.ClientID %>','<%= hdnCaption.ClientID %>')" value="Add Image" />
+            <asp:HiddenField ID="hdnCaption" runat="server" />
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
                 <label>Page Content:</label>
                 <telerik:RadEditor ContentAreaCssFile="~/Portals/_default/Skins/JaslokSkin/Styles/css/EditorStyle.css" runat="server" ID="redPageContent" CssClass="form-control" Width="100%">
@@ -119,3 +130,26 @@
         </td>
     </tr>
 </table>
+<script>
+    function generateImage(imgSrc,imagecaption)
+    {
+        var imgPath = document.getElementById(imgSrc).value;
+        var imagecaption = document.getElementById(imagecaption).value;
+        var editor = $find("<%= redPageContent.ClientID %>");
+    var generatedHTML="";
+    if(imgPath !="")
+    {
+        if(imagecaption=="")
+        {
+            generatedHTML = "<table><tr><td><img style='width:100%;' src='" + imgPath + "' /></td></tr></table>";
+        }
+        else
+        {
+            generatedHTML = "<table><tr><td><img style='width:100%;' src='" + imgPath + "' /></td></tr><tr><td>"+imagecaption+"</td></tr></table>";
+        }
+        editor.pasteHtml(generatedHTML);
+    }
+        
+
+}
+</script>

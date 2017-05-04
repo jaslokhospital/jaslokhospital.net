@@ -35,6 +35,8 @@
         <input type="hidden" name="returnUrl" value="<%= returnUrl %>" />
         <input type="hidden" id="notifyUrl" name="notifyUrl" value="<%= returnUrl %>" />
         <input type="hidden" id="secSignature" name="secSignature" value="<%=securitySignature%>" />
+        <input type="hidden" name="customParams[0].name" value="MrNumber" />
+        <input type="hidden" name="customParams[0].value" value='<%= UserName %>' />
         <div style="display: none;">
             <input type="submit" value="Pay Now" />
         </div>
