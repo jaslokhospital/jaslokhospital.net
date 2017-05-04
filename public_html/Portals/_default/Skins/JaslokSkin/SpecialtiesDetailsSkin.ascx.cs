@@ -130,6 +130,15 @@ public partial class Portals__default_Skins_JaslokSkin_SpecialtiesDetailsSkin : 
                 }
                 if (ds.Tables[1].Rows.Count > 0)
                 {
+                    if (objDAEntities.SpecialtyId == 220)
+                    {
+                        DataRow selectedRow = ds.Tables[1].Rows[0];
+                        DataRow newRow = ds.Tables[1].NewRow();
+                        newRow.ItemArray = selectedRow.ItemArray;
+                        ds.Tables[1].Rows.Remove(selectedRow);
+                        ds.Tables[1].Rows.InsertAt(newRow, objDAEntities.DoctorId + 1 / 1);
+
+                    }
                     datalistOurSpecialtyDs.DataSource = ds.Tables[1];
                     datalistOurSpecialtyDs.DataBind();
                 }
