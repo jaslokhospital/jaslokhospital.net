@@ -25,7 +25,7 @@
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
             <div class="left_part hidden-xs">
                 <JS:LeftNavigation ID="leftNav" runat="server" />
-                <div class="left_form hidden-xs">
+                <div id="desktop-bookandapp" class="left_form hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment2" />
 
 
@@ -131,8 +131,7 @@
                          </div>
                     </asp:Panel>--%>
 
-                <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
+                <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
                 </div>
             </div>
 
@@ -149,7 +148,9 @@
 
 <JS:Testimonials runat="server" ID="Testimonials" />
 <JS:Footer runat="server" ID="Footer" />
-
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
+</script>
 <%--
 <script type="text/javascript"> var specialKeys = new Array(); specialKeys.push(8); function Numeric(e) {
      var keyCode = e.which ? e.which : e.keyCode

@@ -134,6 +134,14 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         pSignIn.Attributes.Add("style", "display:block;");
         lblSignUp.Text = string.Empty;
         this.Page.Form.DefaultButton = btnSignUp.UniqueID;
+
+        txtFirstName.Text = string.Empty;
+        txtLastName.Text = string.Empty;
+        ddlGender.SelectedValue = "Male";
+        txtAge.Text = string.Empty;
+        txtMobileNumber.Text = string.Empty;
+        txtEmail.Text = string.Empty;
+        txtAddress.Text = string.Empty;
     }
     protected void lnkVerifyUser_Click(object sender, EventArgs e)
     {
@@ -766,7 +774,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 txtOTPPhoneNumber.CssClass = "form-control";
                 ddlGender.SelectedValue = "Male";
                 ddlCountryCode.SelectedIndex = 0;
-                try
+                /*try
                 {
                     #region CSV Generation Code
 
@@ -790,7 +798,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 catch (Exception ex)
                 {
                     throw ex;
-                }
+                }*/
 
                 /*UserInfo objUser = new UserInfo();
                 objUser.Username = lsUserName;

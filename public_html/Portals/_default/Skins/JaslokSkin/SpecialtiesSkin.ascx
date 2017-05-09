@@ -55,7 +55,7 @@
                 <div id="divSpecialty" class="doc_attendence" style="cursor: pointer; margin-bottom:20px;" onclick="openSISPanel('Specialty')"><b>Specialty Clinics</b> <i class="fa fa-chevron-right"></i></div>
                
 
-                <div class="left_form  visible-lg visible-md  visible-sm hidden-xs">
+                <div id="desktop-bookandapp" class="left_form visible-lg visible-md  visible-sm hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
                 </div>
             </div>
@@ -139,9 +139,8 @@
 
 
         </div>
-        <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
-                </div>
+        <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">        
+        </div>
     </div>
 </div>
 
@@ -232,5 +231,6 @@
             document.getElementById('divPatient').className = 'about_dept';
             equalheight('.equal');
         }
-}
+    }
+    $("#desktop-bookandapp").dragDropPositions();
 </script>

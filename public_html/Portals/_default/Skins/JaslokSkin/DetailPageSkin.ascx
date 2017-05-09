@@ -51,12 +51,10 @@
             <div class="left_part">
                 <JS:LeftNavigation ID="leftNav" runat="server" />  
             </div>
-             <div id="desktop-position1">
-                <div class="left_form">
+                <div id="desktop-bookandapp" class="left_form hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
                     <%--<JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />--%>
                 </div>
-            </div>
        </div>
 
         <div id="divContactus" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
@@ -75,10 +73,8 @@
             </div>
         </div>
          <asp:Panel ID="divMap" class="col-lg-9" runat="server" Visible="false"></asp:Panel>
-         <div id="mobile-tablet-position1"></div>
-        <%--<div class="left_form hidden-lg visible-xs">
-            <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
-        </div>--%>
+        <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
+        </div>
     </div>
 </div>
 
@@ -121,4 +117,7 @@
     });
 </script>
 <script src="/Portals/_default/Skins/JaslokSkin/Styles/js/libs/jquery.secret-source.min.js"></script>
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
+</script>
 

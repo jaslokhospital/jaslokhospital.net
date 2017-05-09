@@ -413,19 +413,21 @@ function resetHover() {
 
 $(function () {
     // Check the initial Poistion of the Sticky Header
-    var stickyHeaderTop = $('#header').offset().top;
+    if ($('#header').offset() != undefined) {
+        var stickyHeaderTop = $('#header').offset().top;
 
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > stickyHeaderTop) {
-            $('#header').css({ position: 'fixed', top: '0px' });
-            $('#header').addClass("headerBorder");
-            $('#stickyalias').css('display', 'block');
-        } else {
-            $('#header').css({ position: 'static', top: '0px' });
-            $('#header').removeClass("headerBorder");
-            $('#stickyalias').css('display', 'none');
-        }
-    });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > stickyHeaderTop) {
+                $('#header').css({ position: 'fixed', top: '0px' });
+                $('#header').addClass("headerBorder");
+                $('#stickyalias').css('display', 'block');
+            } else {
+                $('#header').css({ position: 'static', top: '0px' });
+                $('#header').removeClass("headerBorder");
+                $('#stickyalias').css('display', 'none');
+            }
+        });
+    }
 });
 
 function PermanentRegReminderBox() {
