@@ -4,7 +4,7 @@
   <add key="/corporate-profile/vision-and-mission" value="" Title="Vision and Mission" />
   <add key="/corporate-profile/from-the-chairmans-desk" value="" Title="From The Chairman’s Desk"/>
   <add key="/photo-gallery" value="~/JSControls/MiddleContent/InnerPhotoGallery.ascx" Title="Photo Gallery"/>
-  <add key="/corporate-profile/video-gallery" value="~/JSControls/MiddleContent/InnerVideoGallery.ascx" Title="Video Gallery" />
+  <add key="/video-gallery" value="~/JSControls/MiddleContent/InnerVideoGallery.ascx" Title="Video Gallery" />
   
   <add key="/corporate-profile/management-team" value="~/JSControls/MiddleContent/InnerManagement.ascx" Title="Management"/>
   <add key="" startswith="management" value="~/JSControls/MiddleContent/ManagementDetails.ascx" Title="Management Details"/>

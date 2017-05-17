@@ -422,7 +422,7 @@ public partial class PaymentResponse : System.Web.UI.Page
 
         if (host.StartsWith("www."))
         {
-           // details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+            details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
         }
         else
         {
@@ -437,7 +437,7 @@ public partial class PaymentResponse : System.Web.UI.Page
         var PatientDetails = (dynamic)null;
         if (host.StartsWith("www."))
         {
-           // PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+            PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
         }
         else
         {
