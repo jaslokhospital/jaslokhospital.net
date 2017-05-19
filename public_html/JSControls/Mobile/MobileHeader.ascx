@@ -606,3 +606,13 @@
 
     </script>
 </telerik:RadCodeBlock>
+
+
+<script>
+    $(function () {
+        $('.ble-btn').click(function () {
+            $('#permenantRegistrationModal').hide();
+            jQuery('.modal-backdrop.in').css('opacity', '0');
+        });
+    });
+</script>

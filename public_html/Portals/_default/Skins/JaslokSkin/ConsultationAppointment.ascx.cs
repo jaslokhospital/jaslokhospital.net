@@ -310,7 +310,7 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         break;
 
                     case "pay now":
-                        
+                        Session["AppAmount"] = null;
                         objDAEntities.FacilityName = "Consultation Appointment";
                         objDAEntities.ConsultingCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["ConsultingCharge"]);
                         objDAEntities.FollowUpCharge = Convert.ToInt32(dsDoctorDetail.Tables[0].Rows[0]["FollowUpCharge"]);
@@ -321,9 +321,11 @@ public partial class Portals__default_Skins_JaslokSkin_ConsultationAppointment :
                         //Session["Amount"] = "10";
                         //Session["ConsultationAppointment"] = objDAEntities;
                         objDAEntities.Amount = Convert.ToInt32(lblAppointmentType.Text);
+                        Session["AppAmount"] = objDAEntities.Amount;
                         objDAEntities.FacilityName = "Consultation Appointment";
                         objDAEntities.Guid = System.Guid.NewGuid().ToString();
                         Session["Guid"] = "App-" + objDAEntities.Guid;
+                        Session["consultationApp"] = "App-" + objDAEntities.Guid;
                         objBusinessLogic.SaveAppointmentInfoGuid(objDAEntities);
 
                         if (CommonFn.UserID <= 0)

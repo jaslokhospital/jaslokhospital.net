@@ -31,7 +31,7 @@
             <div class="left_part">
                 <JS:LeftNavigation ID="leftNav" runat="server" />  
             </div>
-            <div class="left_form hidden-xs">
+            <div id="desktop-bookandapp" class="left_form hidden-xs">
                 <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
                 <%--<JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />--%>
             </div>
@@ -55,8 +55,7 @@
             </div>
         </div>
          <asp:Panel ID="divMap" class="col-lg-9" runat="server" Visible="false"></asp:Panel>
-        <div class="left_form hidden-lg visible-xs">
-            <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
+        <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
         </div>
     </div>
 </div>
@@ -68,7 +67,9 @@
 <!----------Testimonial end---->
 
 <JS:Footer runat="server" ID="Footer" />
-
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
+</script>
 <%--<script class="secret-source">
     jQuery(document).ready(function ($) {
         if (window.location.pathname.toLowerCase() == "/corporate-profile/certifications") {

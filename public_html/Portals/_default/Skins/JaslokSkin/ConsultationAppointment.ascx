@@ -109,7 +109,7 @@
 
                 <%--  <JS:LeftNavigation ID="leftNav" runat="server" />--%>
 
-                <div class="left_form hidden-xs">
+                <div id="desktop-bookandapp" class="left_form hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
                 </div>
             </div>
@@ -644,8 +644,7 @@
             </asp:PlaceHolder>
             <script type="text/javascript" src="&lt;?php echo $recaptcha_url; ?&gt;">
             </script>
-            <div class="left_form hidden-lg visible-xs">
-                <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
+            <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
             </div>
         </div>
 
@@ -746,3 +745,6 @@
         //}
     </script>--%>
 </telerik:RadScriptBlock>
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
+</script>

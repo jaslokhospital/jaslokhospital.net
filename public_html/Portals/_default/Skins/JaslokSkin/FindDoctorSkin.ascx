@@ -27,7 +27,7 @@
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
             <div class="left_part">
                 <div id="contentpane" runat="server"></div>
-                <div class="left_form hidden-xs">
+                <div id="desktop-bookandapp" class="left_form hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
                 </div>
             </div>
@@ -62,8 +62,7 @@
                         <asp:LinkButton Style="margin-bottom: 12px;" ID="lbtnFAD" class="btn btn-orange" runat="server" OnClientClick = "SetTarget();" OnClick="lbtnFAD_Click">Fix an Appointment ></asp:LinkButton>
                     </div>
                 </div>
-                <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
+                <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
                 </div>
             </div>
         </div>
@@ -76,6 +75,9 @@
     function SetTarget() {
         document.forms[0].target = "_blank";
     }
+</script>
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
 </script>
 
 
