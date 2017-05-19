@@ -38,6 +38,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic,100" rel="stylesheet" />
     <link href="/Portals/_default/Skins/JaslokSkin/Styles/css/mobilemenu.css?web" rel="stylesheet" />
     <link href="/Portals/_default/Skins/JaslokSkin/Styles/css/sprite.css?web" rel="stylesheet" />
+    <script src="/js/DropDrag.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#Carousel').carousel({

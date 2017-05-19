@@ -16,6 +16,7 @@ $(document).ready(function () {
     });
 
     $("#myBtn").click(function () {
+        $('#txtLoginUsername').attr("value", "");
         $("#myModal").modal();
     });
     $(function () {
