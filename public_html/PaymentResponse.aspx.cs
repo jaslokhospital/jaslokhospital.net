@@ -130,7 +130,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                         string Guid = Session["Guid"].ToString();
 
                         string PageName = Guid.Substring(0, 3);
-
+                        #region Appointment
                         if (PageName == "App")
                         {
                             AppointmentDs = objBusinessLogic.SavePaymentBookAppointment(txnId, Tranrefid, Transtatus, Guid, JeevaStatus);
@@ -142,23 +142,25 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 lblAmount.Text = Convert.ToString(Amount);
                                 lblPaidAgainst.Text = ServiceName;
                                 // Send data to Napier Service for Save Deposit
-                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName, txnStatus);
                                 // Code To Update Jeeva status in Payment Table
                                 if (!string.IsNullOrEmpty(JeevaStatus))
                                 {
                                     DataTable dt = null;
                                     objBusinessLogic.UpdateStatus(JeevaStatus, PaymentId, lblMNo.Text, dt);
                                 }
-                                AppointmentSendEmail(Convert.ToString(AppointmentDs.Tables[0].Rows[0]["PhoneNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["MobileNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Country"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["StateName"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["BookedDate"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["AMOUNT"]) + ".00 INR", Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Description"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["DoctName"]), "ConsultationAppointment");
+                                AppointmentSendEmail(Convert.ToString(AppointmentDs.Tables[0].Rows[0]["PhoneNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["MobileNo"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Country"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["StateName"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["BookedDate"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["AMOUNT"]) + ".00 INR", Convert.ToString(AppointmentDs.Tables[0].Rows[0]["Description"]), Convert.ToString(AppointmentDs.Tables[0].Rows[0]["DoctName"]), "ConsultationAppointment", txnStatus);
                                 AppointmentDs.Tables[0].Rows.Clear();
                             }
                             Session["Guid"] = null;
                         }
+                        #endregion
 
+                        #region Permanent Registration
                         else if (PageName == "Reg")
                         {
 
-                           
+
                             lblMsg.Visible = true;
                             string Gender = user.Profile.GetPropertyValue("Gender");
                             if (Gender == "Male")
@@ -224,7 +226,8 @@ public partial class PaymentResponse : System.Web.UI.Page
                             }
 
 
-                            var PatientDetails = NapierService(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
+                            dynamic PatientDetails = null;
+                            PatientDetails = NapierService(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email, txnStatus);
 
                             //var PatientDetails = objPatIndex.UpdateorInsertPatient(user.Username, user.FirstName, user.LastName, Gender, Age, "01/01/2000", Address, Address, Address, PhoneNumber, Email);
 
@@ -237,7 +240,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                     {
                                         Clear();
                                         lblMsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
-                                        lblMsg.Text = "You Are Allready Registered As A permanent User!";
+                                        lblMsg.Text = "You Are Already Registered As A permanent User!";
                                     }
                                     else
                                     {
@@ -260,7 +263,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                                 // SendMail & MSG
                                                 try
                                                 {
-                                                    PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration");
+                                                    PermanentUserSendEmail(PatientDetails.PatFName, PatientDetails.PatEmail, PatientDetails.MRNO, PatientDetails.WEBPWD, PhoneNumber, "PermanentRegistration", txnStatus);
 
                                                 }
                                                 catch (Exception ex)
@@ -313,7 +316,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                             lblAmount.Text = Convert.ToString(Amount);
                             lblPaidAgainst.Text = ServiceName;
                             // Send data to Napier Service for Save Deposit
-                            JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+                            JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName, txnStatus);
 
                             DataTable dt = new DataTable();
                             dt.Columns.AddRange(new DataColumn[9] { new DataColumn("TRANSACTIONID"), new DataColumn("TRANREFID"), new DataColumn("TRANSTATUS"), new DataColumn("AMOUNT"), new DataColumn("USERID"), new DataColumn("PORTALID"), new DataColumn("JeevaStatus"), new DataColumn("MrNo"), new DataColumn("ServiceName") });
@@ -327,7 +330,9 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 objBusinessLogic.UpdateStatus(JeevaStatus, PaymentId, lblMNo.Text, dt);
                             }
                         }
+                        #endregion
 
+                        #region Health Checkup/ Surgery/ Outstanding/ Bed
                         else
                         {
                             DataSet ds = objBusinessLogic.SavePaymentDetails(Guid, txnId, Tranrefid, Transtatus);
@@ -342,7 +347,7 @@ public partial class PaymentResponse : System.Web.UI.Page
                                 lblAmount.Text = Convert.ToString(Amount);
                                 lblPaidAgainst.Text = ServiceName;
                                 // Send data to Napier Service for Save Deposit
-                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName);
+                                JeevaStatus = SaveDeposit(txnId, lblMNo.Text, Amount, Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy")), ServiceName, txnStatus);
 
                                 // Code To Update Jeeva status in Payment Table
                                 if (!string.IsNullOrEmpty(JeevaStatus))
@@ -369,11 +374,11 @@ public partial class PaymentResponse : System.Web.UI.Page
                                         TemplateName = "HealthCheckPayment";
                                     }
 
-                                    ServiceBookingSendEmail(user.DisplayName, user.Email, ServiceName, ServicePackage, BookDate, Amount + ".00 INR", TemplateName);
+                                    ServiceBookingSendEmail(user.DisplayName, user.Email, ServiceName, ServicePackage, BookDate, Amount + ".00 INR", TemplateName, txnStatus);
                                 }
                                 else if (processName == "Out")
                                 {
-                                    OutStandingSendEmail(sessionData.FacilityName, Amount + ".00 INR", "OutstandingPayment");
+                                    OutStandingSendEmail(sessionData.FacilityName, Amount + ".00 INR", "OutstandingPayment", txnStatus);
                                 }
 
                                 ds.Tables[0].Rows.Clear();
@@ -381,6 +386,14 @@ public partial class PaymentResponse : System.Web.UI.Page
                             }
                             Session["Guid"] = null;
                         }
+                        #endregion
+                    }
+                    if (txnStatus != "SUCCESS")
+                    {
+                        plcDivSucces.Visible = false;
+                        plcDivError.Visible = true;
+                        spnStatus.Attributes["Class"] = "highlight";
+                        spnStatus.InnerText = "Payment Fail !";
                     }
                 }
                 else
@@ -416,53 +429,58 @@ public partial class PaymentResponse : System.Web.UI.Page
     //    objBusinessLogic.SaveInfoGuid(objDAEntities);
     //}
 
-    private dynamic NapierService(string TxtnId, string MRNO, double Amount, string ReceiptDate, string Remark)
+    private dynamic NapierService(string TxtnId, string MRNO, double Amount, string ReceiptDate, string Remark, string txnStatus)
     {
         var details = (dynamic)null;
-
-        if (host.StartsWith("www."))
+        if (txnStatus == "SUCCESS")
         {
-            details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+            if (host.StartsWith("www."))
+            {
+                details = objPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+            }
+            else
+            {
+            	details = objlocalPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
+            }
         }
-        else
-        {
-            details = objlocalPatIndex.SaveDeposit("JEEVAPG", "JEEVAPG@16", TxtnId, MRNO, Amount, ReceiptDate, Remark);
-        }
-
         return details;
     }
 
-    private dynamic NapierService(string UserName, string FirstName, string LastName, string Gender, string Age, string DOB, string Add1, string Add2, string Add3, string MobNo, string Email)
+    private dynamic NapierService(string UserName, string FirstName, string LastName, string Gender, string Age, string DOB, string Add1, string Add2, string Add3, string MobNo, string Email, string txnStatus)
     {
         var PatientDetails = (dynamic)null;
-        if (host.StartsWith("www."))
+        if (txnStatus == "SUCCESS")
         {
-            PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+            if (host.StartsWith("www."))
+            {
+                PatientDetails = objPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+            }
+            else
+            {
+            	PatientDetails = objlocalPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
+            }
         }
-        else
-        {
-            PatientDetails = objlocalPatIndex.UpdateorInsertPatient("JEEVAPG", "JEEVAPG@16", UserName, FirstName, LastName, Gender, Age, DOB, Add1, Add2, Add3, MobNo, Email);
-        }
-
-        
         return PatientDetails;
     }
 
-    private string SaveDeposit(string TxtnId, string MrNo, double Amount, string ReceiptDate, string remark)
+    private string SaveDeposit(string TxtnId, string MrNo, double Amount, string ReceiptDate, string remark, string txnStatus)
     {
-        var details = (dynamic)null;
-        try
+        if (txnStatus == "SUCCESS")
         {
-            details = NapierService(TxtnId, MrNo, Amount, ReceiptDate, remark);
-        }
-        catch (Exception ex)
-        {
-            Exceptions.LogException(ex);
-            JeevaStatus = "Service Unavailable";
-        }
-        if (details != null && !string.IsNullOrEmpty(details.MRNO))
-        {
-            JeevaStatus = details.MRNO;
+            var details = (dynamic)null;
+            try
+            {
+                details = NapierService(TxtnId, MrNo, Amount, ReceiptDate, remark, txnStatus);
+            }
+            catch (Exception ex)
+            {
+                Exceptions.LogException(ex);
+                JeevaStatus = "Service Unavailable";
+            }
+            if (details != null && !string.IsNullOrEmpty(details.MRNO))
+            {
+                JeevaStatus = details.MRNO;
+            }
         }
         return JeevaStatus;
     }
@@ -503,124 +521,136 @@ public partial class PaymentResponse : System.Web.UI.Page
 
 
     }
-    public void PermanentUserSendEmail(string Username, string Email, string MRNO, string Password, string MobileNo, string TemplateName)
+    public void PermanentUserSendEmail(string Username, string Email, string MRNO, string Password, string MobileNo, string TemplateName, string txnStatus)
     {
-        List<Parameters> lstParameters = new List<Parameters>();
-
-
-        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
-        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
-        lstParameters.Add(new Parameters { ShortCodeName = "MRNO", ShortCodeValue = MRNO });
-        lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = Password });
-
-        DataSet ds = new DataSet();
-        ds = null;
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormPermanentRegistration);
-
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
-        TemplateName = TemplateName + "_user";
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
-        if (TemplateName == "PermanentRegistration_user")
+        if (txnStatus == "SUCCESS")
         {
-            lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, MobileNo);
+            List<Parameters> lstParameters = new List<Parameters>();
+
+
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
+            lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
+            lstParameters.Add(new Parameters { ShortCodeName = "MRNO", ShortCodeValue = MRNO });
+            lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = Password });
+
+            DataSet ds = new DataSet();
+            ds = null;
+            ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormPermanentRegistration);
+
+            string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+            string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
+            TemplateName = TemplateName + "_user";
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
+            if (TemplateName == "PermanentRegistration_user")
+            {
+                lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, MobileNo);
+            }
+            lstParameters = null;
         }
-        lstParameters = null;
     }
 
-    public void ServiceBookingSendEmail(string Username, string Email, string ServiceName, string ServicePackage, string BookingDateTime, string DepositAmount, string TemplateName)
+    public void ServiceBookingSendEmail(string Username, string Email, string ServiceName, string ServicePackage, string BookingDateTime, string DepositAmount, string TemplateName, string txnStatus)
     {
-        List<Parameters> lstParameters = new List<Parameters>();
-
-        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
-        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
-        lstParameters.Add(new Parameters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
-        lstParameters.Add(new Parameters { ShortCodeName = "ServicePackage", ShortCodeValue = ServicePackage });
-        lstParameters.Add(new Parameters { ShortCodeName = "BookingDateTime", ShortCodeValue = BookingDateTime });
-        lstParameters.Add(new Parameters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
-        string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-
-        DataSet ds = new DataSet();
-        int _emailTemplateID = -1;
-        if (TemplateName.ToLower() == "bedbookingpayment")
-            _emailTemplateID = 11;
-        else if (TemplateName.ToLower() == "healthcheckpayment")
-            _emailTemplateID = 13;
-        else
-            _emailTemplateID = 14;
-
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(_emailTemplateID);
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
-        TemplateName = TemplateName + "_user";
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, Email, EmailCCId);
-        lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, PhoneNumber);
-
-        lstParameters = null;
-    }
-
-    public void OutStandingSendEmail(string ServiceName, string DepositAmount, string TemplateName)
-    {
-        List<Parameters> lstParameters = new List<Parameters>();
-
-        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
-        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
-        lstParameters.Add(new Parameters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
-        lstParameters.Add(new Parameters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
-
-
-        DataSet ds = new DataSet();
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormOtherPaymentForms);
-
-        string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-        string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
-        TemplateName = TemplateName + "_user";
-        string val = lstParameters[3].ShortCodeValue.Replace("&nbsp;", " ");
-        string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-        lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
-        lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, PhoneNumber);
-        lstParameters = null;
-    }
-
-    public void AppointmentSendEmail(string PhoneNo, string MobileNo, string Location, string Address, string TimeDate, string lblAmount, string Description, string doctorName, string TemplateName)
-    {
-        List<Parameters> lstParameters = new List<Parameters>();
-
-        lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
-        lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
-        lstParameters.Add(new Parameters { ShortCodeName = "PhoneNo", ShortCodeValue = PhoneNo });
-        lstParameters.Add(new Parameters { ShortCodeName = "MobileNo", ShortCodeValue = MobileNo });
-        lstParameters.Add(new Parameters { ShortCodeName = "Location", ShortCodeValue = Location });
-        lstParameters.Add(new Parameters { ShortCodeName = "Address", ShortCodeValue = Address });
-        lstParameters.Add(new Parameters { ShortCodeName = "TimeDate", ShortCodeValue = TimeDate });
-        lstParameters.Add(new Parameters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
-        lstParameters.Add(new Parameters { ShortCodeName = "Description", ShortCodeValue = Description });
-        lstParameters.Add(new Parameters { ShortCodeName = "DoctorName", ShortCodeValue = doctorName });
-
-
-        DataSet ds = new DataSet();
-        ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
-        string EmailToId = string.Empty;
-        string EmailCCId = string.Empty;
-        if (ds.Tables[0].Rows.Count > 0)
+        if (txnStatus == "SUCCESS")
         {
-            EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
-            EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
-        }
-        objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
-        TemplateName = TemplateName + "_user";
-        objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
-        string val = lstParameters[7].ShortCodeValue.Replace("&nbsp;", " ");
-        string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
-        lstParameters.Add(new Parameters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
-        if (TemplateName == "ConsultationAppointment_user")
-        {
+            List<Parameters> lstParameters = new List<Parameters>();
+
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
+            lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
+            lstParameters.Add(new Parameters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
+            lstParameters.Add(new Parameters { ShortCodeName = "ServicePackage", ShortCodeValue = ServicePackage });
+            lstParameters.Add(new Parameters { ShortCodeName = "BookingDateTime", ShortCodeValue = BookingDateTime });
+            lstParameters.Add(new Parameters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
+            string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
+
+            DataSet ds = new DataSet();
+            int _emailTemplateID = -1;
+            if (TemplateName.ToLower() == "bedbookingpayment")
+                _emailTemplateID = 11;
+            else if (TemplateName.ToLower() == "healthcheckpayment")
+                _emailTemplateID = 13;
+            else
+                _emailTemplateID = 14;
+
+            ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(_emailTemplateID);
+            string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+            string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
+            TemplateName = TemplateName + "_user";
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, Email, EmailCCId);
             lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, PhoneNumber);
+
+            lstParameters = null;
         }
-        lstParameters = null;
+    }
+
+    public void OutStandingSendEmail(string ServiceName, string DepositAmount, string TemplateName, string txnStatus)
+    {
+        if (txnStatus == "SUCCESS")
+        {
+            List<Parameters> lstParameters = new List<Parameters>();
+
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
+            lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
+            lstParameters.Add(new Parameters { ShortCodeName = "ServiceName", ShortCodeValue = ServiceName });
+            lstParameters.Add(new Parameters { ShortCodeName = "DepositAmount", ShortCodeValue = DepositAmount });
+
+
+            DataSet ds = new DataSet();
+            ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormOtherPaymentForms);
+
+            string EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+            string EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
+            TemplateName = TemplateName + "_user";
+            string val = lstParameters[3].ShortCodeValue.Replace("&nbsp;", " ");
+            string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
+            lsEmailStatus = objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
+            lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, PhoneNumber);
+            lstParameters = null;
+        }
+    }
+
+    public void AppointmentSendEmail(string PhoneNo, string MobileNo, string Location, string Address, string TimeDate, string lblAmount, string Description, string doctorName, string TemplateName, string txnStatus)
+    {
+        if (txnStatus == "SUCCESS")
+        {
+            List<Parameters> lstParameters = new List<Parameters>();
+
+            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = user.DisplayName });
+            lstParameters.Add(new Parameters { ShortCodeName = "Email", ShortCodeValue = user.Email });
+            lstParameters.Add(new Parameters { ShortCodeName = "PhoneNo", ShortCodeValue = PhoneNo });
+            lstParameters.Add(new Parameters { ShortCodeName = "MobileNo", ShortCodeValue = MobileNo });
+            lstParameters.Add(new Parameters { ShortCodeName = "Location", ShortCodeValue = Location });
+            lstParameters.Add(new Parameters { ShortCodeName = "Address", ShortCodeValue = Address });
+            lstParameters.Add(new Parameters { ShortCodeName = "TimeDate", ShortCodeValue = TimeDate });
+            lstParameters.Add(new Parameters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
+            lstParameters.Add(new Parameters { ShortCodeName = "Description", ShortCodeValue = Description });
+            lstParameters.Add(new Parameters { ShortCodeName = "DoctorName", ShortCodeValue = doctorName });
+
+
+            DataSet ds = new DataSet();
+            ds = (DataSet)objBusinessLogic.GetFormsEmailDetail(AppGlobal.EmailFormFixAnappointment);
+            string EmailToId = string.Empty;
+            string EmailCCId = string.Empty;
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                EmailToId = Convert.ToString(ds.Tables[0].Rows[0]["EmailToId"]);
+                EmailCCId = Convert.ToString(ds.Tables[0].Rows[0]["EmailCCId"]);
+            }
+            objMailer.SendEmail(TemplateName, lstParameters, EmailToId, EmailCCId);
+            TemplateName = TemplateName + "_user";
+            objMailer.SendEmail(TemplateName, lstParameters, user.Email, EmailCCId);
+            string val = lstParameters[7].ShortCodeValue.Replace("&nbsp;", " ");
+            string PhoneNumber = user.Profile.GetPropertyValue("PhoneNumber");
+            lstParameters.Add(new Parameters { ShortCodeName = "AppointmentTypeCharge", ShortCodeValue = lblAmount });
+            if (TemplateName == "ConsultationAppointment_user")
+            {
+                lsSmsStatus = objMailer.SendSms(TemplateName, lstParameters, PhoneNumber);
+            }
+            lstParameters = null;
+        }
     }
 }
