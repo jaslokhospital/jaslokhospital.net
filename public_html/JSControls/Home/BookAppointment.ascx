@@ -1,14 +1,75 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BookAppointment.ascx.cs" Inherits="JSControls_Home_BookAppointment" EnableViewState="true" ViewStateMode="Enabled" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
-<%--<style>
-    .datetimepicker-minutes .table-condensed td, .datetimepicker-hours .table-condensed td, .datetimepicker-days  .table-condensed td{font-size:12px !important; } 
-</style>--%>
+<style type="text/css">
+.btn-widget-container {margin:0;}
+.book-now .text{float: left;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    color: #fff;
+    position: relative;
+    left: 15%;}
+
+@media only screen and (max-width:400px) { 
+    .book-now .text{left: 0%; font-size: 10px;}
+	.book-now{padding: 0px 10px;}
+}
+
+@media only screen and (min-width:401px) and (max-width:640px)
+{
+    .book-now .text{left: 0%; font-size: 11px;}
+}
+
+@media only screen and (min-width:401px) and (max-width:755px)
+{
+    .book-now .text{left: 0%; font-size: 11px;}
+}
+
+@media only screen and (min-width:756px) and (max-width:1000px)
+{
+    .book-now .text{left: 10%;}
+}
+
+@media only screen and (min-width:1001px) and (max-width:1050px)
+{
+    .book-now .text{left: 10%;}
+}
+
+/*.btn-widget a.green-lg	{background: #fff;
+    color: #e04c56;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;}
+a.green-lg span{
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+}
+
+a.green-lg:hover{background:#d39caf; color:#fff;}*/
+</style>
 
 <div class="row top">
     <telerik:RadAjaxPanel ID="RadSearchPanel" LoadingPanelID="RadAjaxLoadingPanel1" runat="server" RestoreOriginalRenderDelegate="false">
     <div class="container">
         <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-            <div class="book-now">
+            <div class="book-now" style="text-align:center;">
+<div class="text">To book an appointment with our specialist click Book Now</div>
+<script type="text/javascript">
+	!function(){
+		var d = new Date();
+		var n = d.getTime();
+		var e=document.createElement("script");
+		e.type="text/javascript",e.src="https://www.qikwell.com/qikwell-widget.js?"+n,document.getElementsByTagName("head")[0].appendChild(e);
+	}();
+//setTimeout(function(){$("a.green-lg").append("<span>Book Appointment</span>")}, "1000");
+</script>
+<a id="qikwell-widget-container" data-widget-id="e990c7ef-f1c0-4036-8b49-720f77d31fbd" data-sub-source="1" name="qikwell-widget-container" data-entity-type="clinic" data-entity-id="c78e8bf6-78ba-4e5b-87dc-e4efd5079ac9" >
+Book Appointment at Jaslok Hospital and Research Centre,Peddar Road,Mumbai</a>
+<div style="display:none;">
                         <div class="bookappointmentie">
                         <asp:DropDownList CssClass="sort-by col-md-3" runat="server" ID="ddlSpecialtyB" OnSelectedIndexChanged="ddlSpecialtyB_SelectedIndexChanged" AutoPostBack="true" EnableViewState="true" ViewStateMode="Enabled">
                         </asp:DropDownList>
@@ -33,7 +94,7 @@
                    
 
                 <%--  <button class="btn">BOOK NOW</button>--%>
-                
+</div>
             </div>
         </div>
     </div>
