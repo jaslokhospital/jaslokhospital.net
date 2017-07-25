@@ -26,7 +26,7 @@
             <div class="left_part">
                 <JS:LeftNavigation ID="leftNav" runat="server" />
             </div>
-            <div class="left_form hidden-xs">
+            <div id="desktop-bookandapp" class="left_form hidden-xs">
                 <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
             </div>
         </div>
@@ -41,8 +41,7 @@
                
             </div>
         </div>
-         <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
+         <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
                 </div>
     </div>
 </div>
@@ -55,6 +54,9 @@
 <JS:Footer runat="server" ID="Footer" />
  <div id="contentpane" runat="server">
                 </div> 
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
+</script>
 <%--<script type="text/javascript">
     $(document).ready(function () {
         if (window.location.pathname.includes("/international-patients/hospital-facilities")) {

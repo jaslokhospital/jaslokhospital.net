@@ -91,6 +91,10 @@ public partial class JSControls_MiddleContent_LeftPaneFindDoctor : PortalModuleB
     protected void btnSubmitLPFD1_Click(object sender, EventArgs e)
     {
         int Did=Convert.ToInt32(ddlDoctorLPD.SelectedValue);
+        if (ddlSpecialtyLPD.SelectedValue != "0")
+        {
+            Session["SpecialityId"] = ddlSpecialtyLPD.SelectedValue;
+        }
         string DoctorName = Convert.ToString(ddlDoctorLPD.SelectedItem.Text);
         Response.Redirect("/find-doctor/" + CommonFn.RemoveSpecialCharacters(DoctorName) + "/" + Did);
     }

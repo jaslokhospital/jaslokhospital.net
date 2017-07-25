@@ -492,6 +492,7 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             {*/
 
             //objDAEntities.DoctorScheduleId = Convert.ToInt32(hdnDoctorId.Value);
+             Session["AppAmount"] = null;
             objDAEntities.DoctorId = Convert.ToInt32(Request.QueryString["DI"]);
             DataSet ds = new DataSet();
             ds = null;
@@ -518,9 +519,11 @@ public partial class Portals__default_Skins_JaslokSkin_FixAnAppointmentSkin : Do
             objDAEntities.AppointmentTypeCharge = (drpAppointmentType.SelectedValue == "Follow-Up") ? objDAEntities.FollowUpCharge : objDAEntities.ConsultingCharge;
 
             objDAEntities.Amount = objDAEntities.AppointmentTypeCharge;
+            Session["AppAmount"] = objDAEntities.AppointmentTypeCharge; // add to get amount in header page
             objDAEntities.FacilityName = "FixAppointment";
             objDAEntities.Guid = System.Guid.NewGuid().ToString();
             Session["Guid"] = "App-" + objDAEntities.Guid;
+            Session["fixApp"] = "App-" + objDAEntities.Guid;
             objBusinessLogic.SaveAppointmentInfoGuid(objDAEntities);
 
            // Session["Amount"] = objDAEntities.AppointmentTypeCharge;

@@ -51,7 +51,7 @@
                 </div>
                 <div class="doc_attendence" id="leftVideopane"><a href="/video-gallery"><b>Videos</b></a></div>
                     </asp:Panel>               
-                <div class="left_form  visible-lg visible-md  visible-sm hidden-xs">
+                <div id="desktop-bookandapp" class="left_form  visible-lg visible-md  visible-sm hidden-xs">
                     <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment" />
                 </div>
             </div>
@@ -169,8 +169,7 @@
                 </asp:Panel>
 
                  
-                <div class="left_form hidden-lg visible-xs">
-                    <JS:LeftPaneBookAppointment runat="server" ID="LeftPaneBookAppointment1" />
+                <div id="mobile-bookandapp" class="left_form hidden-lg visible-xs">
                 </div>
             </div>
 
@@ -226,6 +225,9 @@
             //document.getElementById('imgSpecialities').style.display = 'block';
             }
     }
+</script>
+<script type="text/javascript">
+    $("#desktop-bookandapp").dragDropPositions();
 </script>
  
         

@@ -1,7 +1,40 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BookAppointment.ascx.cs" Inherits="JSControls_Home_BookAppointment" EnableViewState="true" ViewStateMode="Enabled" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
-<style>
+<style type="text/css">
 .btn-widget-container {margin:0;}
+.book-now .text{float: left;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    color: #fff;
+    position: relative;
+    left: 15%;}
+
+@media only screen and (max-width:400px) { 
+    .book-now .text{left: 0%; font-size: 10px;}
+	.book-now{padding: 0px 10px;}
+}
+
+@media only screen and (min-width:401px) and (max-width:640px)
+{
+    .book-now .text{left: 0%; font-size: 11px;}
+}
+
+@media only screen and (min-width:401px) and (max-width:755px)
+{
+    .book-now .text{left: 0%; font-size: 11px;}
+}
+
+@media only screen and (min-width:756px) and (max-width:1000px)
+{
+    .book-now .text{left: 10%;}
+}
+
+@media only screen and (min-width:1001px) and (max-width:1050px)
+{
+    .book-now .text{left: 10%;}
+}
+
 /*.btn-widget a.green-lg	{background: #fff;
     color: #e04c56;
     font-family: 'Roboto';
@@ -15,6 +48,7 @@ a.green-lg span{
     top: 20%;
     left: 18%;
 }
+
 a.green-lg:hover{background:#d39caf; color:#fff;}*/
 </style>
 
@@ -23,6 +57,7 @@ a.green-lg:hover{background:#d39caf; color:#fff;}*/
     <div class="container">
         <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
             <div class="book-now" style="text-align:center;">
+<div class="text">To book an appointment with our specialist click Book Now</div>
 <script type="text/javascript">
 	!function(){
 		var d = new Date();

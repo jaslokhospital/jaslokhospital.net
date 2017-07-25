@@ -73,7 +73,7 @@
                         <img src="/images/quick-connect-icon3.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">JASLOK HELPDESK</span>  <a href="tel:02266573010"> <span class="content-line">022-66573010</span></a>
+                        <span class="email-line">JASLOK HELPDESK</span>  <a href="tel:02266573010"><span class="content-line">022-66573010</span></a>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         <img src="/images/quick-connect-icon1.jpg" alt="quick-connect-icon" />
                     </div>
                     <div class="icon-content">
-                        <span class="email-line">EMERGENCY NUMBER</span>  <a href="tel:02223542354"> <span class="content-line">022-2354 2354</span></a>
+                        <span class="email-line">EMERGENCY NUMBER</span>  <a href="tel:02223542354"><span class="content-line">022-2354 2354</span></a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                             <img src="/images/blood-bank-icon.png" alt="quick-connect-icon" />
                         </div>
                         <div class="icon-content">
-                            <span class="email-line">BLOOD BANK (24x7)</span> <a href="tel:+9102266573434"> <span class="content-line">+91-022-66573434</span></a>
+                            <span class="email-line">BLOOD BANK (24x7)</span> <a href="tel:+9102266573434"><span class="content-line">+91-022-66573434</span></a>
                         </div>
                     </a>
                 </div>
@@ -149,9 +149,7 @@
     <div class="line">
     </div>
 
-
-    <!-- /////// MOBILE HEADER /////// -->
-    <div class="mobile-header mobile-only">
+    <nav id="header" class="mobile-header mobile-only">
         <div class="wrapper">
             <div class="pad clearfix">
                 <div class="main-logo">
@@ -159,77 +157,22 @@
                         <img src="/images/logo3.png" class="hlogo"></a>
                 </div>
                 <div class="mobile-toggle down"></div>
-                <div class="mobile-menu">
 
-                    <ul class="main-nav">
-                        <li>
-                            <a class="SubMenu">CORPORATE PROFILE</a>
-                            <div class="sub-nav">
-                                <div><a class="back-btn">Back To Main</a></div>
-                                <div><a href="/corporate-profile">Corporate Profile</a></div>
-                                <div><a href="/corporate-profile/from-the-chairmans-desk">From The Chairman's Desk</a></div>
-                                <div><a href="/corporate-profile/vision-and-mission">Vision And Mission</a></div>
-                                <div><a href="/corporate-profile/trustees">Trustees</a></div>
-                                <div><a href="/corporate-profile/management-team">Management</a></div>
-                                <div><a href="/corporate-profile/hospital-facilities">Hospital Facilities</a></div>
-                                <div><a href="/corporate-profile/certifications">Certifications</a></div>
-                                <div><a href="/corporate-profile/jaslok-news">Jaslok in News</a></div>
-                                <div><a href="/corporate-profile/scope-of-services">Scope Of Services</a></div>
-                                <div><a href="/corporate-profile/frequently-asked-questions">Frequently Asked Questions</a></div>
-                                <div><a href="/corporate-profile/quality-corner">Quality Corner</a></div>
-                            </div>
-                        </li>
-                        <li>
-                            <a class="SubMenu">SPECIALTIES</a>
-                            <div class="sub-nav">
-                                <div><a class="back-btn">Back To Main</a></div>
-                                <div><a href="/specialties">Specialties</a></div>
-                                <div><a href="/specialties/speciality-clinic">Speciality Clinic</a></div>
-                                <div><a href="/health-check-up">Health Check up</a></div>
-                                <div><a href="/specialitywise-opd">OPD Scheduler</a></div>
-                                <div><a href="/doctorwise-opd">Our Specialists</a></div>
-                            </div>
-                        </li>
-                        <li>
-                            <a class="SubMenu">PATIENTS CARE & VISITORS</a>
-                            <div class="sub-nav">
-                                <div><a class="back-btn">Back To Main</a></div>
-                                <div><a href="/patients/patient-facilities">Patient Facilities</a></div>
-                                <div><a href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></div>
-                                <div><a href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></div>
-                                <div><a href="/patients/feedback">Feedback Form</a></div>
-                                <div><a href="/patients/complaint">Complaint Form</a></div>
-                                <div><a href="/patients/quick-enquiry">Quick Inquiry</a></div>
-                                <div><a href="/patients/estimate-request">Estimate request</a></div>
-                            </div>
 
-                        </li>
-                        <li>
-                            <a class="SubMenu">INTERNATIONAL PATIENTS</a>
-                            <div class="sub-nav">
-                                <div><a class="back-btn">Back To Main</a></div>
-                                <div><a href="/international-patients">Hospital Facilities for International patients</a></div>
-                                <div><a href="/international-patients/doctors-availability">Doctors Availability</a></div>
-                                <div><a href="/international-patients/virtual-tour">Virtual Tour</a></div>
-                                <div><a href="/international-patients/feedback">Feedback</a></div>
-                                <div><a href="/international-patients/testimonial">Testimonials</a></div>
-                                <div><a href="/international-patients/estimate-request">Estimate request</a></div>
-                            </div>
+                <%--Start For Dynamic Menu--%>
 
-                        </li>
+                <asp:Repeater ID="rptMenu" runat="server" OnItemDataBound="rptMenu_ItemDataBound">
+                    <HeaderTemplate>
+                        <div class="mobile-menu">
+                            <ul class="main-nav">
+                    </HeaderTemplate>
+                    <ItemTemplate>
                         <li>
-                            <a class="SubMenu">EDUCATION & RESEARCH</a>
-                            <div class="sub-nav">
-                                <div><a class="back-btn">Back To Main</a></div>
-                                <div><a href="/education-and-research/dnb-program">DNB Program</a></div>
-                                <div><a href="/education-and-research/fellowship">Fellowship</a></div>
-                                <div><a href="/education-and-research/internship">Internship</a></div>
-                                <div><a href="/education-and-research/advance-courses">Advance Courses</a></div>
-                                <div><a href="/education-and-research/nursing-program">Nursing Program</a></div>
-                                <div><a href="/education-and-research/health-tips">Health Tips</a></div>
-                                <div><a href="/education-and-research/research-paper">Research Paper</a></div>
-                            </div>
+                            <a class="SubMenu"><%#Eval("Name") %></a>
+                            <asp:Literal ID="ltrlSubMenu" runat="server"></asp:Literal>
                         </li>
+                    </ItemTemplate>
+                    <FooterTemplate>
                         <li class="online-facilities">
                             <a class="SubMenu">ONLINE FACILITIES</a>
                             <div class="sub-nav">
@@ -241,7 +184,7 @@
                                         <div><a class="back-btn">Back To Main</a></div>
                                         <div><a data-value="bed-booking" href="javascript:void(0)">Bed Reservation</a></div>
                                         <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslokwebreports/default.aspx">View Lab Reports</a></div>
-                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx"> View Billing Details</a></div>
+                                        <div><a target="_blank" href="https://jaslokwebserver.jaslokhospital.net/jaslok_bill/User_Login.aspx">View Billing Details</a></div>
                                     </div>
                                 </div>
                                 <div>
@@ -278,11 +221,18 @@
                                 </div>
                             </div>
                         </li>
-                    </ul>
-                </div>
+                        </ul></div>
+                    </FooterTemplate>
+                </asp:Repeater>
+
+                <%--End of Dynamic Menu--%>
+                <!--/.nav-collapse -->
             </div>
         </div>
-    </div>
+
+    </nav>
+    <!-- /////// MOBILE HEADER /////// -->
+    
 
     <!--========================== /HEADER =============================-->
 </div>
@@ -300,8 +250,10 @@
                     You have not yet permanently registerd with Jaslok hospital, please go for the permanent
                     registration to get premium benifits.
                 </p>
-               <p> Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn"
-                    target="_blank">Submit</a></p>
+                <p>
+                    Click on Submit Button for permanent registration<a href="/payment.aspx?reg=pr" class="ble-btn"
+                        target="_blank">Submit</a>
+                </p>
                 <%-- <asp:Button ID="btnSubmit" runat="server" CssClass="ble-btn"  Text="submit" OnClick="btnSubmit_Click" />--%>
             </div>
         </div>
@@ -606,3 +558,13 @@
 
     </script>
 </telerik:RadCodeBlock>
+
+
+<script>
+    $(function () {
+        $('.ble-btn').click(function () {
+            $('#permenantRegistrationModal').hide();
+            jQuery('.modal-backdrop.in').css('opacity', '0');
+        });
+    });
+</script>

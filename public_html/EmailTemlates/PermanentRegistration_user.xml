@@ -5,7 +5,8 @@
   <content>
     <![CDATA[
     Hi [Username], <br/><br/>
-    Your Permanent Registration has been successfully done.
+    Your Permanent Registration has been successfully done.<br/>
+    Please login with Id(MR Number)= " [MRNO] "  and Password="[Password]"
     <br/><br/>
     Thanks,<br/>
     Jaslok

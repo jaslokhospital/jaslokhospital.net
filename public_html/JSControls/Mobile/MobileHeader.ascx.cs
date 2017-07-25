@@ -18,6 +18,8 @@ using System.IO;
 using net.jaslokhospital.jaslokwebserver;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text;
+
 public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 {
     PortalSecurity secure = new PortalSecurity();
@@ -28,13 +30,13 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
     BusinessLogic objBusinessLogic = new BusinessLogic();
     DataTable ds = new DataTable();
 
-     UserLoginStatus loginStatus = new UserLoginStatus();
+    UserLoginStatus loginStatus = new UserLoginStatus();
 
-     net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
-     localhost.PatIndex objlocalPatIndex = new localhost.PatIndex();
-     string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
+    net.jaslokhospital.jaslokwebserver.PatIndex objPatIndex = new net.jaslokhospital.jaslokwebserver.PatIndex();
+    localhost.PatIndex objlocalPatIndex = new localhost.PatIndex();
+    string host = HttpContext.Current.Request.Url.GetComponents(UriComponents.HostAndPort, UriFormat.Unescaped);
 
-    protected void Page_Load(object sender, EventArgs e)    
+    protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
@@ -45,10 +47,11 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                     UserInfo objuser = UserController.Instance.GetCurrentUserInfo();
                     if (!string.IsNullOrEmpty(objuser.Username))
                     {
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){PermanentRegReminderBox();});", true);	
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$(document).ready(function(){PermanentRegReminderBox();});", true);
                         Session["IsVisitor"] = null;
                     }
                 }
+                LoadMenus();
             }
             this.Page.Form.DefaultButton = LoginBtn.UniqueID;
             UserInfo user = UserController.Instance.GetCurrentUserInfo();
@@ -59,7 +62,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 liLogin.Visible = true;
                 liLogout.Visible = false;
                 //Response.Write(user.UserID);
-               // liAhome.Visible = false;
+                // liAhome.Visible = false;
             }
             else
             {
@@ -67,7 +70,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 liLogout.Visible = true;
                 //anchlogin.Visible = false;z
 
-               // UserInfo userinfo = UserController.GetUserById(0, user.UserID);
+                // UserInfo userinfo = UserController.GetUserById(0, user.UserID);
                 //if (userinfo.IsInRole("Administrators"))
                 //{
                 //    lblAhome.Visible = true;
@@ -105,7 +108,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         divForgotPassword.Attributes.Add("style", "display:block;");
         litPopUpTitle.Text = "Forgot Password";
 
-        txtForgotPasswordUserName.Text = string.Empty;
+        txtForgotPasswordUserName.Text = txtLoginUsername.Text;
         pForgotPassWord.Attributes.Add("style", "display:none;");
         pVerifyUser.Attributes.Add("style", "display:block;");
         pSignUp.Attributes.Add("style", "display:block;");
@@ -121,7 +124,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
     }
     protected void lnkSignUp_Click(object sender, EventArgs e)
     {
-		lblSignUp.CssClass = "";
+        lblSignUp.CssClass = "";
         divSignUp.Attributes.Add("style", "display:block;");
         divLoginForm.Attributes.Add("style", "display:none;");
         divOTPVerification.Attributes.Add("style", "display:none;");
@@ -134,6 +137,14 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         pSignIn.Attributes.Add("style", "display:block;");
         lblSignUp.Text = string.Empty;
         this.Page.Form.DefaultButton = btnSignUp.UniqueID;
+
+        txtFirstName.Text = string.Empty;
+        txtLastName.Text = string.Empty;
+        ddlGender.SelectedValue = "Male";
+        txtAge.Text = string.Empty;
+        txtMobileNumber.Text = string.Empty;
+        txtEmail.Text = string.Empty;
+        txtAddress.Text = string.Empty;
     }
     protected void lnkVerifyUser_Click(object sender, EventArgs e)
     {
@@ -173,7 +184,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         pSignUp.Attributes.Add("style", "display:block;");
         pSignIn.Attributes.Add("style", "display:none;");
         lblLoginError.Text = string.Empty;
-        txtLoginUsername.Text = string.Empty;
+        txtLoginUsername.Text = txtForgotPasswordUserName.Text;
         txtLoginPassword.Text = string.Empty;
     }
 
@@ -228,15 +239,15 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
             return false;
         }
     }
-    protected void sessionclear_Click()
+    protected void sessionclear()
     {
-        Session["AppointmentDetail"] = null;
-        Session["ConsultationAppointment"] = null;
+        Session["fixApp"] = null;
+        Session["consultationApp"] = null;
     }
 
     protected void LoginBtn_Click(object sender, EventArgs e)
     {
-
+        bool _isPermanentUser = objBusinessLogic.IsExistMrNo(txtLoginUsername.Text);
         //#region CSV Updation For User
         //DataSet dsUser = new DataSet();
         //DataAccessEntities oEntities = new DataAccessEntities();
@@ -256,63 +267,34 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         //#endregion
 
 
-        if (Session["AppointmentDetail"] != null)
+        if (txtLoginUsername.Text.ToLower() == "host" || txtLoginUsername.Text.ToLower() == "admin")
         {
-            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-            if (IsNum == true)
+
+            UserInfo objUser = new UserInfo();
+            objUser.Username = txtLoginUsername.Text.Trim();
+            UserMembership objMembership = new UserMembership(objUser);
+            objMembership.Username = txtLoginUsername.Text.Trim();
+            objMembership.Password = txtLoginPassword.Text;
+            objUser.Membership = objMembership;
+
+            PortalSettings po = new PortalSettings();
+            UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
+            UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
+            if (objUserInfo != null)
             {
-                UserInfo objUser = new UserInfo();
-                objUser.Username = txtLoginUsername.Text.Trim();
-                UserMembership objMembership = new UserMembership(objUser);
-                objMembership.Username = txtLoginUsername.Text.Trim();
-                objMembership.Password = txtLoginPassword.Text;
-                objUser.Membership = objMembership;
+                UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
 
-                PortalSettings po = new PortalSettings();
-                UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
-                if (objUserInfo != null)
-                {
-                    UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-                    Response.Redirect("/Payment.aspx");
-                }
-                else
-                {
-                    if (loginStatus == UserLoginStatus.LOGIN_USERNOTAPPROVED)
-                    {
+                Session["IsVisitor"] = true;
 
-                        lblLoginError.CssClass = "errorText";
+                Response.Redirect("/redirect");
 
-                        lblLoginError.Visible = true;
+                //Response.Redirect("/redirect");
 
-                        lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
-
-                        return;
-
-                    }
-
-                    lblLoginError.CssClass = "errorText";
-                    lblLoginError.Visible = true;
-                    lblLoginError.Text = "Please enter correct password!";
-                    return;
-
-
-                }
-
-            }
-            else
-            {
-                Session["AppointmentDetail"] = null;
-                lblLoginError.CssClass = "errorText";
-                lblLoginError.Visible = true;
-                lblLoginError.Text = "Please Enter MR Number To Login!";
-                return;
             }
         }
-        else if (Session["ConsultationAppointment"] != null)
+        else if (Session["fixApp"] != null || Session["consultationApp"] != null)
         {
-            bool IsNum = IsNumber(txtLoginUsername.Text.Trim().ToString());
-            if (IsNum == true)
+            if (_isPermanentUser)
             {
                 UserInfo objUser = new UserInfo();
                 objUser.Username = txtLoginUsername.Text.Trim();
@@ -326,8 +308,11 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 UserInfo objUserInfo = UserController.ValidateUser(0, objMembership.Username, txtLoginPassword.Text, "DNN", "", po.PortalName, this.Request.UserHostAddress, ref loginStatus);
                 if (objUserInfo != null)
                 {
+                    string amount = HttpUtility.UrlEncode(objBusinessLogic.Encrypt(Convert.ToString(Session["AppAmount"])));
                     UserController.UserLogin(0, objUser, Request.ServerVariables["SERVER_NAME"], this.Request.UserHostAddress, true);
-                    Response.Redirect("/Payment.aspx");
+                    sessionclear();
+                    Response.Redirect("/Payment.aspx?amount=" + amount);
+
                 }
                 else
                 {
@@ -335,9 +320,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                     {
 
                         lblLoginError.CssClass = "errorText";
-
                         lblLoginError.Visible = true;
-
                         lblLoginError.Text = "You are not authorized to access Jaslok Portal. Authenticate your mobile number by clicking \"Please verify\" link below";
 
                         return;
@@ -348,18 +331,18 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                     lblLoginError.Visible = true;
                     lblLoginError.Text = "Please enter correct password!";
                     return;
-
-
                 }
             }
+
             else
             {
-                Session["ConsultationAppointment"] = null;
+                sessionclear();
                 lblLoginError.CssClass = "errorText";
                 lblLoginError.Visible = true;
-                lblLoginError.Text = "Please Enter MR Number To Login!";
+                lblLoginError.Text = "This feature required permanent Membership to make payment.";
                 return;
             }
+            sessionclear();
         }
         else
         {
@@ -487,7 +470,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                                 Response.Redirect("/");
                             }
                             else
-                            Response.Redirect("/" + hdnRedirectUrl.Value);
+                                Response.Redirect("/" + hdnRedirectUrl.Value);
                         }
                         else
                             Response.Redirect("/redirect");
@@ -510,14 +493,14 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
                     if (host.StartsWith("www."))
                     {
-                         PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
+                        PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
                     }
                     else
                     {
                         PatientDetails = objlocalPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtLoginUsername.Text.Trim());
                     }
-                   
-                   
+
+
                     if (PatientDetails.MRNO != null && PatientDetails.WEBPWD != null)
                     {
 
@@ -641,14 +624,14 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
 
 
-    public DataSet InsertUpdateUserDetails(string MRNO,string FName, string LName, string Email, string Password, string Telephone, string Gender, string Address, string Age)
+    public DataSet InsertUpdateUserDetails(string MRNO, string FName, string LName, string Email, string Password, string Telephone, string Gender, string Address, string Age)
     {
 
         string lsUserName = string.Empty;
 
         lsUserName = MRNO;
 
-  
+
         //lsUserName = FName.Substring(0, 1).ToLower() + LName.ToLower() + Telephone.Substring(Telephone.Length - 3, 3);
 
         //Password = EncryptPassword(Password);
@@ -657,11 +640,11 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
         Membership.CreateUser(lsUserName, Password);
 
-        DataSet ds = objBusinessLogic.SaveUserDetails(MRNO,lsUserName, FName, LName, Email, FName, Password, Telephone, Gender, Address, Age, lsOtp);
+        DataSet ds = objBusinessLogic.SaveUserDetails(MRNO, lsUserName, FName, LName, Email, FName, Password, Telephone, Gender, Address, Age, lsOtp);
 
-       return ds;
+        return ds;
 
-       
+
     }
 
 
@@ -670,49 +653,135 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
     {
         JaslokMailer objMailer = new JaslokMailer();
         List<Parameters> lstParameters = new List<Parameters>();
-        MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
-
         string lsEmailStatus = string.Empty;
-        if (objUser != null)
+        bool _isPermanentUser = objBusinessLogic.IsExistMrNo(txtForgotPasswordUserName.Text.Trim());
+        if (!_isPermanentUser)
         {
-            UserInfo objInfo = new UserInfo();
-
-            objInfo = UserController.GetUserByName(objUser.UserName);
-            string lsmobileNumber = objInfo.Profile.GetPropertyValue("PhoneNumber");
-            string lsPassword;
-            lsPassword = objUser.GetPassword();
-            //sendmail(objUser.Email, lsPassword);
-            if (!string.IsNullOrEmpty(lsmobileNumber))
-                CommonFn.SendSMS(lsmobileNumber.Replace("-", ""), "Your password is: " + lsPassword);
-            lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
-            lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = lsPassword });
-            lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, objInfo .Email,null);
-            if (string.IsNullOrEmpty(lsEmailStatus))
+            MembershipUser objUser = Membership.GetUser(txtForgotPasswordUserName.Text.Trim());
+            if (objUser != null)
             {
-                lblForgotPassError.Text = "Password has been sent to your email address.";
-                lblForgotPassError.CssClass = "successText";
+                UserInfo objInfo = new UserInfo();
+                objInfo = UserController.GetUserByName(objUser.UserName);
+                string lsmobileNumber = objInfo.Profile.GetPropertyValue("PhoneNumber");
+                string lsPassword;
+                lsPassword = objUser.GetPassword();
+                //sendmail(objUser.Email, lsPassword);
+                if (!string.IsNullOrEmpty(lsmobileNumber))
+                    CommonFn.SendSMS(lsmobileNumber.Replace("-", ""), "Your password is: " + lsPassword);
+                lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
+                lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = lsPassword });
+                lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, objInfo.Email, null);
+                if (string.IsNullOrEmpty(lsEmailStatus))
+                {
+                    lblForgotPassError.Text = "Password has been sent to your registered mobile number email address.";
+                    lblForgotPassError.CssClass = "successText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                else
+                {
+                    lblForgotPassError.Text = "Problem in sending email";
+                    lblForgotPassError.CssClass = "errorText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                //txtForgotPasswordUserName.Text = "";
+                //lblGeneratedPassword.Text = lsPassword;
             }
             else
             {
-                lblForgotPassError.Text = "Problem in sending email";
-                lblForgotPassError.CssClass = "errorText";
+                var PatientDetails = (dynamic)null;
+
+                if (host.StartsWith("www."))
+                {
+                    PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+                }
+                else
+                {
+                    PatientDetails = objlocalPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+                }
+
+                if (PatientDetails.WEBPWD != null)
+                {
+                    if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
+                        CommonFn.SendSMS(PatientDetails.PatMobile.Replace("-", ""), "Your password is: " + PatientDetails.WEBPWD);
+                    lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
+                    lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = PatientDetails.WEBPWD });
+                    lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, PatientDetails.PatEmail, null);
+                    if (string.IsNullOrEmpty(lsEmailStatus))
+                    {
+                        lblForgotPassError.Text = "Password has been sent to your email address.";
+                        lblForgotPassError.CssClass = "successText";
+                        divLoginForm.Attributes.Add("style", "display:none;");
+                        divForgotPassword.Attributes.Add("style", "display:block;");
+                    }
+                    else
+                    {
+                        lblForgotPassError.Text = "Problem in sending email";
+                        lblForgotPassError.CssClass = "errorText";
+                        divLoginForm.Attributes.Add("style", "display:none;");
+                        divForgotPassword.Attributes.Add("style", "display:block;");
+                    }
+                }
+                else
+                {
+                    lblForgotPassError.CssClass = "errorText";
+                    lblForgotPassError.Text = "Username does not exist.";
+                    txtForgotPasswordUserName.Text = "";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+
             }
-            txtForgotPasswordUserName.Text = "";
-            //lblGeneratedPassword.Text = lsPassword;
         }
         else
         {
-            //Response.Redirect("/");
-            lblForgotPassError.CssClass = "errorText";
-            lblForgotPassError.Text = "Username does not exist.";
-            txtForgotPasswordUserName.Text = "";
+            var PatientDetails = (dynamic)null;
+
+            if (host.StartsWith("www."))
+            {
+                PatientDetails = objPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+            }
+            else
+            {
+                PatientDetails = objlocalPatIndex.GetPatientDetails("JEEVAPG", "JEEVAPG@16", txtForgotPasswordUserName.Text.Trim());
+            }
+
+            if (PatientDetails.WEBPWD != null)
+            {
+                if (!string.IsNullOrEmpty(PatientDetails.WEBPWD))
+                    CommonFn.SendSMS(PatientDetails.PatMobile.Replace("-", ""), "Your password is: " + PatientDetails.WEBPWD);
+                lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = txtForgotPasswordUserName.Text });
+                lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = PatientDetails.WEBPWD });
+                lsEmailStatus = objMailer.SendEmail("forgotpassword", lstParameters, PatientDetails.PatEmail, null);
+                if (string.IsNullOrEmpty(lsEmailStatus))
+                {
+                    lblForgotPassError.Text = "Password has been sent to your email address.";
+                    lblForgotPassError.CssClass = "successText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+                else
+                {
+                    lblForgotPassError.Text = "Problem in sending email";
+                    lblForgotPassError.CssClass = "errorText";
+                    divLoginForm.Attributes.Add("style", "display:none;");
+                    divForgotPassword.Attributes.Add("style", "display:block;");
+                }
+            }
+            else
+            {
+                lblForgotPassError.Text = "MRNumber not found, Please enter valid MRNumber.";
+                lblForgotPassError.CssClass = "errorText";
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divForgotPassword.Attributes.Add("style", "display:block;");
+            }
         }
     }
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
-		lblSignUp.CssClass = "";
+        lblSignUp.CssClass = "";
         bool userExist = Convert.ToBoolean(objBusinessLogic.CheckUerExistence(ddlCountryCode.SelectedValue + "-" + txtMobileNumber.Text.Trim()).Rows[0]["MobileNumberExists"]);
-
         if (!userExist)
         {
             string lsUserName = string.Empty;
@@ -766,7 +835,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 txtOTPPhoneNumber.CssClass = "form-control";
                 ddlGender.SelectedValue = "Male";
                 ddlCountryCode.SelectedIndex = 0;
-                try
+                /*try
                 {
                     #region CSV Generation Code
 
@@ -790,7 +859,7 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
                 catch (Exception ex)
                 {
                     throw ex;
-                }
+                }*/
 
                 /*UserInfo objUser = new UserInfo();
                 objUser.Username = lsUserName;
@@ -878,24 +947,56 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
 
     protected void btnOTPVerification_Click(object sender, EventArgs e)
     {
-
-        int UserID = -1;
-        if (!OTPVerification(OTPCheck.Verification, out UserID))
+        if (!string.IsNullOrEmpty(txtOTPPhoneNumber.Text))
         {
-            UserInfo objUserInfo = new UserInfo();
-            objUserInfo = UserController.GetUserById(0, UserID);
-            objUserInfo.Membership.Approved = true;
+            if (!string.IsNullOrEmpty(txtOTP.Text))
+            {
+                int UserID = -1;
+                if (!OTPVerification(OTPCheck.Verification, out UserID))
+                {
+                    UserInfo objUserInfo = new UserInfo();
+                    objUserInfo = UserController.GetUserById(0, UserID);
+                    objUserInfo.Membership.Approved = true;
 
 
-            MembershipUser objUser = Membership.GetUser(objUserInfo.Username);
-            string LsPassword = objUser.GetPassword();
-            UserController.UpdateUser(0, objUserInfo);
+                    MembershipUser objUser = Membership.GetUser(objUserInfo.Username);
+                    string LsPassword = objUser.GetPassword();
+                    UserController.UpdateUser(0, objUserInfo);
 
-            CommonFn.SendSMS(objUserInfo.Profile.GetPropertyValue("PhoneNumber").Replace("-", string.Empty), "Thank you for verifying your mobile number, your login details for Jaslok is: Visitor ID- " + objUserInfo.Username + " and Password- " + LsPassword);
+                    CommonFn.SendSMS(objUserInfo.Profile.GetPropertyValue("PhoneNumber").Replace("-", string.Empty), "Thank you for verifying your mobile number, your login details for Jaslok is: Visitor ID- " + objUserInfo.Username + " and Password- " + LsPassword);
 
-            setLoginFields();
-            lblLoginError.CssClass = "successText";
-            lblLoginError.Text = "User login details that has been sent to your registered mobile number";
+                    setLoginFields();
+                    lblLoginError.CssClass = "successText";
+                    lblLoginError.Text = "User login details that has been sent to your registered mobile number";
+
+                    JaslokMailer objMailer = new JaslokMailer();
+                    List<Parameters> lstParameters = new List<Parameters>();
+                    string lsEmailStatus = string.Empty;
+
+
+                    lstParameters.Add(new Parameters { ShortCodeName = "Username", ShortCodeValue = objUserInfo.Username });
+                    lstParameters.Add(new Parameters { ShortCodeName = "Password", ShortCodeValue = LsPassword });
+                    lsEmailStatus = objMailer.SendEmail("registration", lstParameters, objUserInfo.Email);
+                }
+            }
+
+            else
+            {
+                lblOTPError.CssClass = "errorText";
+                lblOTPError.Text = "Please Enter OTP";
+
+                divLoginForm.Attributes.Add("style", "display:none;");
+                divOTPVerification.Attributes.Add("style", "display:block;");
+            }
+        }
+        else
+        {
+            lblOTPError.CssClass = "errorText";
+            lblOTPError.Text = "Please Enter Mobile Number";
+
+            divLoginForm.Attributes.Add("style", "display:none;");
+            divOTPVerification.Attributes.Add("style", "display:block;");
+
         }
     }
 
@@ -982,6 +1083,51 @@ public partial class JSControls_Home_MobileHeader : System.Web.UI.UserControl
         else
         {
             hdnMrNumberexist.Value = "Exist";
+        }
+    }
+    private void LoadMenus()
+    {
+        ds = objBusinessLogic.GetAll_HeaderMenu();
+
+        DataTable ParentMenu = ds.AsEnumerable()
+                       .Where(r => r.Field<int>("PARENTID") == 0)
+                       .CopyToDataTable();
+
+        rptMenu.DataSource = ParentMenu;
+        rptMenu.DataBind();
+    }
+    protected void rptMenu_ItemDataBound(object sender, RepeaterItemEventArgs e)
+    {
+        try
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                if (ds != null)
+                {
+                    DataRowView drv = e.Item.DataItem as DataRowView;
+                    string ID = drv["ID"].ToString();
+                    DataRow[] rows = ds.Select("PARENTID=" + ID, "Name").OrderBy(u => u["SortOrder"]).ToArray();
+                    if (rows.Length > 0)
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append(" <ul class=sub-nav>");
+                        sb.Append("<li> <a class='back-btn'>Back To Main</a></li>");
+
+                        foreach (var item in rows)
+                        {
+                            sb.Append("<li><a href='" + item["Url"] + "'>" +
+                            item["Name"] + "</a></li>");
+                        }
+                        sb.Append("</ul>");
+                        (e.Item.FindControl("ltrlSubMenu") as Literal).Text = sb.ToString();
+                    }
+                }
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
         }
     }
 }

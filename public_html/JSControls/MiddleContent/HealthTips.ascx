@@ -9,7 +9,7 @@
         </div>
         <div class="form-group">
             <%--<asp:Button ID="btnSearch" runat="server" Text="Submit" class="btn btn-default" OnClick="btnSearch_Click" />--%>
-            <button type="submit" name="submit" class="btn btn-default" onclick="btnSearch_Click">Submit</button>
+            <button type="submit" name="submits" class="btn btn-default" onclick="btnSearch_Click">Submit</button>
             <button type="reset" name="reset" class="btn btn-default" onclick="btnReset_Click">Reset</button>
             <button type="submit" name="archive" class="btn btn-default" onclick="btnArchive_Click">Archive</button>
         </div>
