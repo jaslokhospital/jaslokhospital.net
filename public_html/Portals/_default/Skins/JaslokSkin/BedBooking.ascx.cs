@@ -111,6 +111,7 @@ public partial class Portals__default_Skins_JaslokSkin_BedBooking : DotNetNuke.U
             //Session["Bed"] = objDAEntities;
 
             objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            objDAEntities.UserId = user.UserID;
             Session["Guid"] = "Bed-" + objDAEntities.Guid;
             objBusinessLogic.SaveInfoGuid(objDAEntities);
 

@@ -2045,7 +2045,7 @@ namespace BusinessDataLayer
         {
             try
             {
-                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SaveInfoGuid", new object[] { Slist.FacilityName, Slist.Category, Slist.DoctorId, Slist.Amount, Slist.BookinDateTime, objInfo.UserID, Slist.Guid,Slist.MRNumber }));
+                Convert.ToString(SqlHelper.ExecuteScalar(Config.GetConnectionString(), "JH_SaveInfoGuid", new object[] { Slist.FacilityName, Slist.Category, Slist.DoctorId, Slist.Amount, Slist.BookinDateTime, Slist.UserId, Slist.Guid, Slist.MRNumber }));
             }
             catch (Exception ex)
             {

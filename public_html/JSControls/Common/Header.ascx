@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Header.ascx.cs" Inherits="JSControls_Home_Header" ClientIDMode="Static" %>
 <script type="text/javascript">
     function redirect() {
-        location.href = '/Payment.aspxamount=100';
+        location.href = '/Payment.aspx?amount=100';
     }
 
 </script>
@@ -112,19 +112,33 @@
 </li>
 </ul>
 
-                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
+                             <ul class="nav navbar-nav menu " style="padding-top: 4px;">
 
                                 <li class="dropdown main-menu-bar online-facilities" role="presentation">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Online Payment<span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-second-menu" style="width: 300px;">
-                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;">Deposit Payment</li>
+                                        <li data-value="#" style="font-weight: bold; padding-left: 6px;"></li>
                                         <li data-value="surgery-booking"><a>Surgery Deposit Payment</a></li>
                                         <li data-value="outstandingbillpayment"><a>Outstanding Bill (Interim Demand Note)</a></li>
                                     </ul>
                                 </li>
 
                             </ul>
+
+                            <ul class="nav navbar-nav menu " style="padding-top: 4px;">
+
+                                <li class="dropdown main-menu-bar online-facilities" role="presentation">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 100% ! important;" id="A1" role="button" aria-haspopup="true" aria-expanded="false">Information On Consumables<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-second-menu" style="width: 300px;">
+                                        <li data-value="#"><a href="/jhrcstent">Stents</a></li>
+                                        <li data-value="#"><a href="/jhrcstent">Implants</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
 
 
                             <div class="pull-left" style="padding-left: 10px;">

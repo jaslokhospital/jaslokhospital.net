@@ -9,7 +9,7 @@
   <add key="/corporate-profile/management-team" value="~/JSControls/MiddleContent/InnerManagement.ascx" Title="Management"/>
   <add key="" startswith="management" value="~/JSControls/MiddleContent/ManagementDetails.ascx" Title="Management Details"/>
   <add key="/corporate-profile/jaslok-news" value="~/JSControls/MiddleContent/NewsListing.ascx" Title="Jaslok in News" />
-  <add key="/corporate-profile/press" value="~/JSControls/MiddleContent/JaslokNewsDetails.ascx" Title="Jaslok in News" />
+  <add key="" startswith="press" value="~/JSControls/MiddleContent/JaslokNewsDetails.ascx" Title="Jaslok in News" />
 
   <add key="/corporate-profile/trustees" value="~/JSControls/MiddleContent/InnerTrustees.ascx" Title="Trustees"/>
   <add key="/corporate-profile/certifications" value="" Title="Certifications"/>
@@ -22,11 +22,11 @@
   <add key="/contact-us" value="~/JSControls/Common/Contactus.ascx" Title="Contact Us"/>
 
   <add key="/corporate-profile/frequently-asked-questions" value="~/JSControls/MiddleContent/InnerTenders.ascx" Title="FAQs"/>
-  <add key="/corporate-profile/jasloktimes" value="~/JSControls/MiddleContent/ViewJaslokTimes.ascx" Title="Jaslok Times"/>
+  <add key="" startswith="jasloktimes" value="~/JSControls/MiddleContent/ViewJaslokTimes.ascx" Title="Jaslok Times"/>
   <add key="/corporate-profile/seminars" value="~/JSControls/MiddleContent/SemminarListing.ascx" Title="Seminars" />
   <add key="/corporate-profile/applyseminar" value="~/JSControls/MiddleContent/ApplySeminar.ascx" Title="Apply Seminar"/>
   <add key="/specialties/health-check-up" value="" Title="Health Checkup"/>
-  <add key="/corporate-profile/technological-milestone" value="" Title="Technological Milestone"/>
+  <add key="/technological-milestone" value="" Title="Technological Milestone"/>
   <add key="/corporate-profile/hospital-facilities" value="" Title="Hospital Facilities"/>
   <add key="/corporate-profile" value="" Title="Corporate Profile"/>
   
@@ -39,6 +39,6 @@
 
   <add key="/surgery-booking" value="~/JSControls/MiddleContent/SurgeryBooking.ascx" Title="Surgery Grade Wise" />
   <add key="/outstandingbillpayment" value="~/JSControls/MiddleContent/OutStandingBillPayment.ascx" Title="Outstanding Bill Payment"/>
-  <add key="/jhrcstent" value="" Title="Jaslok Hospital and Research Center Stent Prices"/>
+  <add key="/jhrcstent" value="" Title="Information on Consumables"/>
 
 </Data>

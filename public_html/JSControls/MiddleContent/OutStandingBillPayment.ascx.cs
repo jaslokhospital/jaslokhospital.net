@@ -70,6 +70,7 @@ public partial class JSControls_MiddleContent_OutStandingBillPayment : System.We
 
             objDAEntities.Amount = Convert.ToInt32(amount);
             objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            objDAEntities.UserId = user.UserID;
             Session["Guid"] = "Out-" + objDAEntities.Guid;
             objBusinessLogic.SaveInfoGuid(objDAEntities);
 

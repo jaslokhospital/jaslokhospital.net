@@ -7,8 +7,7 @@
   <property name="Width">680</property>
   <property name="EditModes">All</property>
   <property name="EnableResize">True</property>
-  <property name="Language">
-  </property>
+  <property name="Language">sma-NO</property>
   <property name="ContentFilters">DefaultFilters</property>
   <property name="CssFile">editor.css</property>
   <property name="NewLineBr">False</property>
@@ -18,13 +17,12 @@
   <property name="ShowPortalLinks">False</property>
   <property name="ContentAreaMode">Iframe</property>
   <property name="ToolbarMode">Default</property>
-  <property name="ToolsWidth">
-  </property>
+  <property name="ToolsWidth">5</property>
   <property name="DocumentsFilters">*.*</property>
   <property name="DocumentsPath">/</property>
-  <property name="MaxDocumentSize">1024000</property>
+  <property name="MaxDocumentSize">10244096</property>
   <property name="ImagesPath">/</property>
-  <property name="MaxImageSize">1024000</property>
+  <property name="MaxImageSize">10244096</property>
   <property name="ImagesFilters">
     <item>*.jpg</item>
     <item>*.png</item>
@@ -33,21 +31,19 @@
     <item>*.gif</item>
   </property>
   <property name="FlashPath">/</property>
-  <property name="MaxFlashSize">1024000</property>
-  <property name="FlashFilters">
-    <item>*.swf</item>
-  </property>
+  <property name="MaxFlashSize">10240000</property>
+  <property name="FlashFilters">*.swf</property>
   <property name="MediaPath">/</property>
-  <property name="MaxMediaSize">1024000</property>
+  <property name="MaxMediaSize">10240000</property>
   <property name="MediaFilters">
     <item>*.avi</item>
     <item>*.mpg</item>
   </property>
   <property name="SilverlightPath">/</property>
   <property name="SilverlightFilters">*.*</property>
-  <property name="MaxSilverlightSize">1024000</property>
+  <property name="MaxSilverlightSize">10240000</property>
   <property name="TemplatePath">/</property>
-  <property name="MaxTemplateSize">1024000</property>
+  <property name="MaxTemplateSize">10240000</property>
   <property name="TemplateFilters">
     <item>*.html</item>
     <item>*.htm</item>

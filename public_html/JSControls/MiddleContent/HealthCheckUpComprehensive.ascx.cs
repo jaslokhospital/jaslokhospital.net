@@ -114,6 +114,7 @@ public partial class JSControls_MiddleContent_HealthCheckUpComprehensive : Porta
         }
         objDAEntities.Category = _categoryName;
         objDAEntities.Guid = System.Guid.NewGuid().ToString();
+        objDAEntities.UserId = user.UserID;
         Session["Guid"] = "Hea-" + objDAEntities.Guid;
         objBusinessLogic.SaveInfoGuid(objDAEntities);
 

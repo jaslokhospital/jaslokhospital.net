@@ -104,7 +104,7 @@
                         <td class="rptHeader">Total Experience<br />
                             (Years)
                         </td>
-                        <td class="rptHeader">Total Vancany
+                        <td class="rptHeader">Total Vacancy
                         </td>
                         <td class="rptHeader">Apply
                         </td>

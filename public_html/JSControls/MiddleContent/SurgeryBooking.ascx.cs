@@ -153,6 +153,7 @@ public partial class JSControls_MiddleContent_SurgeryBooking : PortalModuleBase
 
             objDAEntities.Amount = Convert.ToInt32(txtSurgeryFee.Text);
             objDAEntities.Guid = System.Guid.NewGuid().ToString();
+            objDAEntities.UserId = user.UserID;
             Session["Guid"] = "Sur-" + objDAEntities.Guid;
             objBusinessLogic.SaveInfoGuid(objDAEntities);
 
